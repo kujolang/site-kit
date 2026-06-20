@@ -1,0 +1,72 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "Form Field",
+  "description": "A labeled input group with help, validation, and autocomplete support.",
+  "props": {
+    "id": "string",
+    "label": "string",
+    "type": "text|email|password|search|tel|url",
+    "required": "boolean",
+    "autocomplete": "string optional",
+    "error": "string optional"
+  },
+  "variants": [
+    "text",
+    "select",
+    "textarea",
+    "checkbox"
+  ],
+  "requiredFields": [
+    "label",
+    "control"
+  ],
+  "accessibility": {
+    "semantics": "Use native semantic elements in Form Field templates before ARIA.",
+    "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+    "focus": "Uses :focus-visible styles in component CSS.",
+    "notes": [
+      "Color is never the only communication channel.",
+      "Motion must respect prefers-reduced-motion where animation exists."
+    ]
+  },
+  "tokenDependencies": [
+    "surface.page",
+    "surface.card",
+    "text.primary",
+    "text.secondary",
+    "border.default",
+    "focus.ring",
+    "space.4",
+    "radius.1"
+  ],
+  "responsive": {
+    "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
+    "breakpoints": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "slots": [
+    "label",
+    "control",
+    "help",
+    "error"
+  ],
+  "examples": [
+    {
+      "name": "Default",
+      "props": {
+        "label": "Form Field",
+        "variant": "text"
+      },
+      "notes": "Use semantic landmarks and tokenized styling."
+    }
+  ],
+  "allowedChildren": [
+    "label",
+    "control",
+    "help",
+    "error"
+  ]
+}

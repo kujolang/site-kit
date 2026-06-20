@@ -1,0 +1,260 @@
+{
+  "generatedAt": "2026-06-20",
+  "componentCount": 25,
+  "components": [
+    {
+      "slug": "badge",
+      "name": "Badge",
+      "variants": [
+        "neutral",
+        "success",
+        "warning",
+        "danger",
+        "outline"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "button",
+      "name": "Button",
+      "variants": [
+        "primary",
+        "secondary",
+        "ghost",
+        "danger"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "card",
+      "name": "Card",
+      "variants": [
+        "plain",
+        "interactive",
+        "dense"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "checkout-summary",
+      "name": "Checkout Summary",
+      "variants": [
+        "default",
+        "compact",
+        "sticky"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "code-block",
+      "name": "Code Block",
+      "variants": [
+        "default",
+        "terminal",
+        "numbered"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "comparison-table",
+      "name": "Comparison Table",
+      "variants": [
+        "default",
+        "compact",
+        "sticky"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "cta",
+      "name": "CTA",
+      "variants": [
+        "band",
+        "inline",
+        "stacked"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "disclosure",
+      "name": "Disclosure FAQ",
+      "variants": [
+        "default",
+        "faq",
+        "compact"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "docs-nav",
+      "name": "Docs Nav",
+      "variants": [
+        "sidebar",
+        "inline",
+        "mobile"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "ecosystem-map",
+      "name": "Ecosystem Map",
+      "variants": [
+        "grid",
+        "radial",
+        "compact"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "empty-state",
+      "name": "Empty State",
+      "variants": [
+        "default",
+        "compact",
+        "commerce"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "error-state",
+      "name": "Error State",
+      "variants": [
+        "default",
+        "inline",
+        "critical"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "feature-grid",
+      "name": "Feature Grid",
+      "variants": [
+        "two-column",
+        "three-column",
+        "dense"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "footer",
+      "name": "Footer",
+      "variants": [
+        "simple",
+        "columns",
+        "product"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "form-field",
+      "name": "Form Field",
+      "variants": [
+        "text",
+        "select",
+        "textarea",
+        "checkbox"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "header",
+      "name": "Header",
+      "variants": [
+        "default",
+        "docs",
+        "commerce"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "hero",
+      "name": "Hero",
+      "variants": [
+        "split",
+        "centered",
+        "technical"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "loading-state",
+      "name": "Loading State",
+      "variants": [
+        "skeleton",
+        "inline",
+        "panel"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "modal",
+      "name": "Modal Dialog",
+      "variants": [
+        "default",
+        "danger",
+        "wide"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "pricing-table",
+      "name": "Pricing Table",
+      "variants": [
+        "monthly",
+        "annual",
+        "comparison"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "product-card",
+      "name": "Product Card",
+      "variants": [
+        "default",
+        "compact",
+        "featured"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "product-grid",
+      "name": "Product Grid",
+      "variants": [
+        "catalog",
+        "compact",
+        "comparison"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "promo-banner",
+      "name": "Promo Banner",
+      "variants": [
+        "info",
+        "success",
+        "warning"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "tabs",
+      "name": "Tabs",
+      "variants": [
+        "line",
+        "boxed",
+        "docs"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "trust-strip",
+      "name": "Trust Strip",
+      "variants": [
+        "default",
+        "compact",
+        "bordered"
+      ],
+      "examples": 1
+    }
+  ]
+}

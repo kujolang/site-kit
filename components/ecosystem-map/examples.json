@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Ecosystem Map",
+      "variant": "grid"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

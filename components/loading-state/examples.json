@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Loading State",
+      "variant": "skeleton"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

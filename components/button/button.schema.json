@@ -1,0 +1,69 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "Button",
+  "description": "A semantic action control for links, form submits, and interface commands.",
+  "props": {
+    "label": "string",
+    "variant": "primary|secondary|ghost|danger",
+    "href": "string optional",
+    "type": "button|submit|reset",
+    "disabled": "boolean",
+    "loading": "boolean"
+  },
+  "variants": [
+    "primary",
+    "secondary",
+    "ghost",
+    "danger"
+  ],
+  "requiredFields": [
+    "label"
+  ],
+  "accessibility": {
+    "semantics": "Use native semantic elements in Button templates before ARIA.",
+    "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+    "focus": "Uses :focus-visible styles in component CSS.",
+    "notes": [
+      "Color is never the only communication channel.",
+      "Motion must respect prefers-reduced-motion where animation exists."
+    ]
+  },
+  "tokenDependencies": [
+    "surface.page",
+    "surface.card",
+    "text.primary",
+    "text.secondary",
+    "border.default",
+    "focus.ring",
+    "space.4",
+    "radius.1"
+  ],
+  "responsive": {
+    "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
+    "breakpoints": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "slots": [
+    "label",
+    "icon-start",
+    "icon-end"
+  ],
+  "examples": [
+    {
+      "name": "Default",
+      "props": {
+        "label": "Button",
+        "variant": "primary"
+      },
+      "notes": "Use semantic landmarks and tokenized styling."
+    }
+  ],
+  "allowedChildren": [
+    "label",
+    "icon-start",
+    "icon-end"
+  ]
+}

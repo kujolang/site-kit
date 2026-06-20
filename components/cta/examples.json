@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "CTA",
+      "variant": "band"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

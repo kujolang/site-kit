@@ -1,0 +1,63 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "Promo Banner",
+  "description": "A dismissible commercial or release announcement banner.",
+  "props": {
+    "message": "string",
+    "action": "object optional",
+    "dismissible": "boolean"
+  },
+  "variants": [
+    "info",
+    "success",
+    "warning"
+  ],
+  "requiredFields": [
+    "message"
+  ],
+  "accessibility": {
+    "semantics": "Use native semantic elements in Promo Banner templates before ARIA.",
+    "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+    "focus": "Uses :focus-visible styles in component CSS.",
+    "notes": [
+      "Color is never the only communication channel.",
+      "Motion must respect prefers-reduced-motion where animation exists."
+    ]
+  },
+  "tokenDependencies": [
+    "surface.page",
+    "surface.card",
+    "text.primary",
+    "text.secondary",
+    "border.default",
+    "focus.ring",
+    "space.4",
+    "radius.1"
+  ],
+  "responsive": {
+    "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
+    "breakpoints": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "slots": [
+    "message",
+    "action"
+  ],
+  "examples": [
+    {
+      "name": "Default",
+      "props": {
+        "label": "Promo Banner",
+        "variant": "info"
+      },
+      "notes": "Use semantic landmarks and tokenized styling."
+    }
+  ],
+  "allowedChildren": [
+    "message",
+    "action"
+  ]
+}

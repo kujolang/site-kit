@@ -1,0 +1,59 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "Trust Strip",
+  "description": "A compact proof row for security, shipping, warranties, or social proof.",
+  "props": {
+    "items": "array"
+  },
+  "variants": [
+    "default",
+    "compact",
+    "bordered"
+  ],
+  "requiredFields": [
+    "items"
+  ],
+  "accessibility": {
+    "semantics": "Use native semantic elements in Trust Strip templates before ARIA.",
+    "keyboard": "No keyboard behavior required unless interactive content is slotted.",
+    "focus": "Inherits global focus styles for slotted links or controls.",
+    "notes": [
+      "Color is never the only communication channel.",
+      "Motion must respect prefers-reduced-motion where animation exists."
+    ]
+  },
+  "tokenDependencies": [
+    "surface.page",
+    "surface.card",
+    "text.primary",
+    "text.secondary",
+    "border.default",
+    "focus.ring",
+    "space.4",
+    "radius.1"
+  ],
+  "responsive": {
+    "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
+    "breakpoints": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "slots": [
+    "items"
+  ],
+  "examples": [
+    {
+      "name": "Default",
+      "props": {
+        "label": "Trust Strip",
+        "variant": "default"
+      },
+      "notes": "Use semantic landmarks and tokenized styling."
+    }
+  ],
+  "allowedChildren": [
+    "items"
+  ]
+}

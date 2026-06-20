@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Product Card",
+      "variant": "default"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

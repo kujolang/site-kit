@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/recipe.schema.json",
+  "name": "Product Page",
+  "description": "Composable product page recipe.",
+  "layout": "landing.html",
+  "components": [
+    "header",
+    "hero",
+    "product-card",
+    "feature-grid",
+    "trust-strip",
+    "cta",
+    "footer"
+  ],
+  "accessibility": [
+    "Use explicit product names and actions."
+  ]
+}

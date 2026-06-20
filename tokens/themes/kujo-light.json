@@ -1,0 +1,78 @@
+{
+  "name": "kujo-light",
+  "description": "High-contrast off-white Kujo foundation.",
+  "tokens": {
+    "surface": {
+      "page": {
+        "value": "{color.paper}"
+      },
+      "raised": {
+        "value": "{color.white}"
+      },
+      "card": {
+        "value": "{color.white}"
+      },
+      "inverse": {
+        "value": "{color.black}"
+      },
+      "subtle": {
+        "value": "{color.white}"
+      },
+      "accent": {
+        "value": "{color.black}"
+      }
+    },
+    "text": {
+      "primary": {
+        "value": "{color.black}"
+      },
+      "secondary": {
+        "value": "{color.gray.700}"
+      },
+      "muted": {
+        "value": "{color.gray.500}"
+      },
+      "inverse": {
+        "value": "{color.paper}"
+      },
+      "link": {
+        "value": "{color.blue.600}"
+      }
+    },
+    "action": {
+      "primary": {
+        "value": "{color.black}"
+      },
+      "primaryText": {
+        "value": "{color.paper}"
+      },
+      "secondary": {
+        "value": "{color.white}"
+      },
+      "secondaryText": {
+        "value": "{color.black}"
+      }
+    },
+    "border": {
+      "default": {
+        "value": "{color.black}"
+      },
+      "subtle": {
+        "value": "{color.gray.500}"
+      }
+    },
+    "focus": {
+      "ring": {
+        "value": "{color.blue.600}"
+      },
+      "ringOffset": {
+        "value": "{color.paper}"
+      }
+    },
+    "shadow": {
+      "color": {
+        "value": "{color.black}"
+      }
+    }
+  }
+}

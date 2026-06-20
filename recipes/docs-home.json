@@ -1,0 +1,17 @@
+{
+  "$schema": "../schemas/recipe.schema.json",
+  "name": "Docs Home",
+  "description": "Composable documentation home recipe.",
+  "layout": "docs.html",
+  "components": [
+    "header",
+    "docs-nav",
+    "hero",
+    "code-block",
+    "card",
+    "footer"
+  ],
+  "accessibility": [
+    "Preserve landmarks and heading order."
+  ]
+}

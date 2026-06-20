@@ -1,0 +1,2 @@
+#!/usr/bin/env node
+const s=require("./sitekit"); s.generateCss(); s.generateDesign();

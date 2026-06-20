@@ -1,0 +1,78 @@
+{
+  "name": "personal-dark",
+  "description": "Personal publishing dark theme with restrained contrast.",
+  "tokens": {
+    "surface": {
+      "page": {
+        "value": "#0f1115"
+      },
+      "raised": {
+        "value": "#171a20"
+      },
+      "card": {
+        "value": "#171a20"
+      },
+      "inverse": {
+        "value": "#f7f4ed"
+      },
+      "subtle": {
+        "value": "#171a20"
+      },
+      "accent": {
+        "value": "#f7f4ed"
+      }
+    },
+    "text": {
+      "primary": {
+        "value": "#f7f4ed"
+      },
+      "secondary": {
+        "value": "#d7d2c8"
+      },
+      "muted": {
+        "value": "#a69f94"
+      },
+      "inverse": {
+        "value": "#0f1115"
+      },
+      "link": {
+        "value": "#8cc9ff"
+      }
+    },
+    "action": {
+      "primary": {
+        "value": "#f7f4ed"
+      },
+      "primaryText": {
+        "value": "#0f1115"
+      },
+      "secondary": {
+        "value": "#171a20"
+      },
+      "secondaryText": {
+        "value": "#f7f4ed"
+      }
+    },
+    "border": {
+      "default": {
+        "value": "#f7f4ed"
+      },
+      "subtle": {
+        "value": "#a69f94"
+      }
+    },
+    "focus": {
+      "ring": {
+        "value": "#8cc9ff"
+      },
+      "ringOffset": {
+        "value": "#0f1115"
+      }
+    },
+    "shadow": {
+      "color": {
+        "value": "#f7f4ed"
+      }
+    }
+  }
+}

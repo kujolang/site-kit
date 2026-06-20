@@ -1,0 +1,1 @@
+@layer reset { *, *::before, *::after { box-sizing: border-box; } html { text-size-adjust: 100%; } body { margin: 0; min-block-size: 100vh; } img, svg, video { display: block; max-inline-size: 100%; } button, input, textarea, select { font: inherit; } table { border-collapse: collapse; inline-size: 100%; } }

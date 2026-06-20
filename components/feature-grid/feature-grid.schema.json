@@ -1,0 +1,60 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "Feature Grid",
+  "description": "A responsive list of capabilities or benefits.",
+  "props": {
+    "items": "array",
+    "columns": "2|3|auto"
+  },
+  "variants": [
+    "two-column",
+    "three-column",
+    "dense"
+  ],
+  "requiredFields": [
+    "items"
+  ],
+  "accessibility": {
+    "semantics": "Use native semantic elements in Feature Grid templates before ARIA.",
+    "keyboard": "No keyboard behavior required unless interactive content is slotted.",
+    "focus": "Inherits global focus styles for slotted links or controls.",
+    "notes": [
+      "Color is never the only communication channel.",
+      "Motion must respect prefers-reduced-motion where animation exists."
+    ]
+  },
+  "tokenDependencies": [
+    "surface.page",
+    "surface.card",
+    "text.primary",
+    "text.secondary",
+    "border.default",
+    "focus.ring",
+    "space.4",
+    "radius.1"
+  ],
+  "responsive": {
+    "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
+    "breakpoints": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "slots": [
+    "items"
+  ],
+  "examples": [
+    {
+      "name": "Default",
+      "props": {
+        "label": "Feature Grid",
+        "variant": "two-column"
+      },
+      "notes": "Use semantic landmarks and tokenized styling."
+    }
+  ],
+  "allowedChildren": [
+    "items"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "Code Block",
+  "description": "A readable code or command block with caption and copy action.",
+  "props": {
+    "language": "string",
+    "code": "string",
+    "caption": "string optional"
+  },
+  "variants": [
+    "default",
+    "terminal",
+    "numbered"
+  ],
+  "requiredFields": [
+    "code"
+  ],
+  "accessibility": {
+    "semantics": "Use native semantic elements in Code Block templates before ARIA.",
+    "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+    "focus": "Uses :focus-visible styles in component CSS.",
+    "notes": [
+      "Color is never the only communication channel.",
+      "Motion must respect prefers-reduced-motion where animation exists."
+    ]
+  },
+  "tokenDependencies": [
+    "surface.page",
+    "surface.card",
+    "text.primary",
+    "text.secondary",
+    "border.default",
+    "focus.ring",
+    "space.4",
+    "radius.1"
+  ],
+  "responsive": {
+    "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
+    "breakpoints": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "slots": [
+    "caption",
+    "code",
+    "actions"
+  ],
+  "examples": [
+    {
+      "name": "Default",
+      "props": {
+        "label": "Code Block",
+        "variant": "default"
+      },
+      "notes": "Use semantic landmarks and tokenized styling."
+    }
+  ],
+  "allowedChildren": [
+    "caption",
+    "code",
+    "actions"
+  ]
+}

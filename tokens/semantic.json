@@ -1,0 +1,155 @@
+{
+  "$schema": "../schemas/token.schema.json",
+  "surface": {
+    "page": {
+      "value": "{color.paper}"
+    },
+    "raised": {
+      "value": "{color.white}"
+    },
+    "card": {
+      "value": "{color.white}"
+    },
+    "inverse": {
+      "value": "{color.black}"
+    },
+    "subtle": {
+      "value": "{color.gray.50}"
+    },
+    "accent": {
+      "value": "{color.ink}"
+    }
+  },
+  "text": {
+    "primary": {
+      "value": "{color.black}"
+    },
+    "secondary": {
+      "value": "{color.gray.700}"
+    },
+    "muted": {
+      "value": "{color.gray.500}"
+    },
+    "inverse": {
+      "value": "{color.white}"
+    },
+    "link": {
+      "value": "{color.blue.600}"
+    },
+    "danger": {
+      "value": "{color.red.600}"
+    },
+    "success": {
+      "value": "{color.green.600}"
+    },
+    "warning": {
+      "value": "{color.yellow.500}"
+    }
+  },
+  "action": {
+    "primary": {
+      "value": "{color.black}"
+    },
+    "primaryText": {
+      "value": "{color.white}"
+    },
+    "secondary": {
+      "value": "{color.white}"
+    },
+    "secondaryText": {
+      "value": "{color.black}"
+    },
+    "danger": {
+      "value": "{color.red.600}"
+    },
+    "dangerText": {
+      "value": "{color.white}"
+    },
+    "ghost": {
+      "value": "transparent"
+    }
+  },
+  "border": {
+    "default": {
+      "value": "{color.black}"
+    },
+    "subtle": {
+      "value": "{color.gray.300}"
+    },
+    "strong": {
+      "value": "{color.black}"
+    },
+    "inverse": {
+      "value": "{color.white}"
+    }
+  },
+  "focus": {
+    "ring": {
+      "value": "{color.blue.600}"
+    },
+    "ringOffset": {
+      "value": "{color.paper}"
+    }
+  },
+  "shadow": {
+    "color": {
+      "value": "{color.black}"
+    }
+  },
+  "code": {
+    "surface": {
+      "value": "{color.black}"
+    },
+    "text": {
+      "value": "{color.white}"
+    },
+    "border": {
+      "value": "{color.gray.700}"
+    }
+  },
+  "state": {
+    "success": {
+      "value": "{color.green.600}"
+    },
+    "warning": {
+      "value": "{color.yellow.500}"
+    },
+    "danger": {
+      "value": "{color.red.600}"
+    },
+    "info": {
+      "value": "{color.cyan.600}"
+    }
+  },
+  "component": {
+    "button": {
+      "height": {
+        "value": "{size.control.md}"
+      },
+      "gap": {
+        "value": "{space.2}"
+      }
+    },
+    "card": {
+      "padding": {
+        "value": "{space.6}"
+      },
+      "gap": {
+        "value": "{space.4}"
+      }
+    },
+    "hero": {
+      "paddingBlock": {
+        "value": "{space.20}"
+      },
+      "maxWidth": {
+        "value": "{size.content.xl}"
+      }
+    },
+    "grid": {
+      "gap": {
+        "value": "{space.5}"
+      }
+    }
+  }
+}

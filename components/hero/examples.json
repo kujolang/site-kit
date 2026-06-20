@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Hero",
+      "variant": "split"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

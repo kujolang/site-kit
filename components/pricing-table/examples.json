@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Pricing Table",
+      "variant": "monthly"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

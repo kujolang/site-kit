@@ -1,0 +1,16 @@
+{
+  "$schema": "../schemas/recipe.schema.json",
+  "name": "Blog Index",
+  "description": "Composable blog index recipe.",
+  "layout": "blog.html",
+  "components": [
+    "header",
+    "badge",
+    "card",
+    "docs-nav",
+    "footer"
+  ],
+  "accessibility": [
+    "Article lists need headings."
+  ]
+}

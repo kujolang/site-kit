@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Tabs",
+      "variant": "line"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

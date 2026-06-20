@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/recipe.schema.json",
+  "name": "Pricing Page",
+  "description": "Composable pricing page recipe.",
+  "layout": "landing.html",
+  "components": [
+    "header",
+    "hero",
+    "pricing-table",
+    "comparison-table",
+    "disclosure",
+    "cta",
+    "footer"
+  ],
+  "accessibility": [
+    "Tables need captions and scopes."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "../schemas/recipe.schema.json",
+  "name": "Ecosystem Page",
+  "description": "Composable ecosystem map recipe.",
+  "layout": "landing.html",
+  "components": [
+    "header",
+    "hero",
+    "ecosystem-map",
+    "card",
+    "docs-nav",
+    "footer"
+  ],
+  "accessibility": [
+    "Relationships need readable labels."
+  ]
+}

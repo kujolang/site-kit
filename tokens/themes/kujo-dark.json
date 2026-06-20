@@ -1,0 +1,78 @@
+{
+  "name": "kujo-dark",
+  "description": "Dark Kujo technical interface theme.",
+  "tokens": {
+    "surface": {
+      "page": {
+        "value": "{color.black}"
+      },
+      "raised": {
+        "value": "{color.gray.900}"
+      },
+      "card": {
+        "value": "{color.gray.900}"
+      },
+      "inverse": {
+        "value": "{color.white}"
+      },
+      "subtle": {
+        "value": "{color.gray.900}"
+      },
+      "accent": {
+        "value": "{color.white}"
+      }
+    },
+    "text": {
+      "primary": {
+        "value": "{color.white}"
+      },
+      "secondary": {
+        "value": "{color.gray.100}"
+      },
+      "muted": {
+        "value": "{color.gray.300}"
+      },
+      "inverse": {
+        "value": "{color.black}"
+      },
+      "link": {
+        "value": "{color.cyan.600}"
+      }
+    },
+    "action": {
+      "primary": {
+        "value": "{color.white}"
+      },
+      "primaryText": {
+        "value": "{color.black}"
+      },
+      "secondary": {
+        "value": "{color.gray.900}"
+      },
+      "secondaryText": {
+        "value": "{color.white}"
+      }
+    },
+    "border": {
+      "default": {
+        "value": "{color.white}"
+      },
+      "subtle": {
+        "value": "{color.gray.300}"
+      }
+    },
+    "focus": {
+      "ring": {
+        "value": "{color.cyan.600}"
+      },
+      "ringOffset": {
+        "value": "{color.black}"
+      }
+    },
+    "shadow": {
+      "color": {
+        "value": "{color.white}"
+      }
+    }
+  }
+}

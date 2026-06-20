@@ -1,0 +1,67 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "Product Card",
+  "description": "A semantic commerce product summary with media, price, and actions.",
+  "props": {
+    "name": "string",
+    "price": "string",
+    "imageAlt": "string",
+    "availability": "string"
+  },
+  "variants": [
+    "default",
+    "compact",
+    "featured"
+  ],
+  "requiredFields": [
+    "name",
+    "price"
+  ],
+  "accessibility": {
+    "semantics": "Use native semantic elements in Product Card templates before ARIA.",
+    "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+    "focus": "Uses :focus-visible styles in component CSS.",
+    "notes": [
+      "Color is never the only communication channel.",
+      "Motion must respect prefers-reduced-motion where animation exists."
+    ]
+  },
+  "tokenDependencies": [
+    "surface.page",
+    "surface.card",
+    "text.primary",
+    "text.secondary",
+    "border.default",
+    "focus.ring",
+    "space.4",
+    "radius.1"
+  ],
+  "responsive": {
+    "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
+    "breakpoints": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "slots": [
+    "media",
+    "summary",
+    "actions"
+  ],
+  "examples": [
+    {
+      "name": "Default",
+      "props": {
+        "label": "Product Card",
+        "variant": "default"
+      },
+      "notes": "Use semantic landmarks and tokenized styling."
+    }
+  ],
+  "allowedChildren": [
+    "media",
+    "summary",
+    "actions"
+  ]
+}

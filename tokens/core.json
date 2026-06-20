@@ -1,0 +1,280 @@
+{
+  "$schema": "../schemas/token.schema.json",
+  "color": {
+    "black": {
+      "value": "#050505"
+    },
+    "white": {
+      "value": "#f7f4ed"
+    },
+    "paper": {
+      "value": "#fbfaf6"
+    },
+    "ink": {
+      "value": "#111111"
+    },
+    "gray": {
+      "50": {
+        "value": "#f4f2ed"
+      },
+      "100": {
+        "value": "#e7e1d6"
+      },
+      "300": {
+        "value": "#b8b0a4"
+      },
+      "500": {
+        "value": "#706b63"
+      },
+      "700": {
+        "value": "#343230"
+      },
+      "900": {
+        "value": "#151413"
+      }
+    },
+    "blue": {
+      "600": {
+        "value": "#1646d2"
+      }
+    },
+    "green": {
+      "600": {
+        "value": "#0f7a3b"
+      }
+    },
+    "yellow": {
+      "500": {
+        "value": "#b47805"
+      }
+    },
+    "red": {
+      "600": {
+        "value": "#b21d1d"
+      }
+    },
+    "cyan": {
+      "600": {
+        "value": "#0b7285"
+      }
+    }
+  },
+  "font": {
+    "sans": {
+      "value": "Inter, ui-sans-serif, system-ui, sans-serif"
+    },
+    "mono": {
+      "value": "IBM Plex Mono, SFMono-Regular, Consolas, monospace"
+    }
+  },
+  "type": {
+    "size": {
+      "xs": {
+        "value": "0.75rem"
+      },
+      "sm": {
+        "value": "0.875rem"
+      },
+      "md": {
+        "value": "1rem"
+      },
+      "lg": {
+        "value": "1.125rem"
+      },
+      "xl": {
+        "value": "1.375rem"
+      },
+      "2xl": {
+        "value": "1.75rem"
+      },
+      "3xl": {
+        "value": "2.25rem"
+      },
+      "4xl": {
+        "value": "3rem"
+      }
+    },
+    "line": {
+      "tight": {
+        "value": "1.1"
+      },
+      "normal": {
+        "value": "1.5"
+      },
+      "loose": {
+        "value": "1.7"
+      }
+    },
+    "weight": {
+      "regular": {
+        "value": "400"
+      },
+      "medium": {
+        "value": "520"
+      },
+      "bold": {
+        "value": "700"
+      }
+    }
+  },
+  "space": {
+    "0": {
+      "value": "0"
+    },
+    "1": {
+      "value": "0.25rem"
+    },
+    "2": {
+      "value": "0.5rem"
+    },
+    "3": {
+      "value": "0.75rem"
+    },
+    "4": {
+      "value": "1rem"
+    },
+    "5": {
+      "value": "1.25rem"
+    },
+    "6": {
+      "value": "1.5rem"
+    },
+    "8": {
+      "value": "2rem"
+    },
+    "10": {
+      "value": "2.5rem"
+    },
+    "12": {
+      "value": "3rem"
+    },
+    "16": {
+      "value": "4rem"
+    },
+    "20": {
+      "value": "5rem"
+    },
+    "24": {
+      "value": "6rem"
+    }
+  },
+  "size": {
+    "content": {
+      "sm": {
+        "value": "42rem"
+      },
+      "md": {
+        "value": "64rem"
+      },
+      "lg": {
+        "value": "78rem"
+      },
+      "xl": {
+        "value": "92rem"
+      }
+    },
+    "control": {
+      "sm": {
+        "value": "2rem"
+      },
+      "md": {
+        "value": "2.5rem"
+      },
+      "lg": {
+        "value": "3rem"
+      }
+    }
+  },
+  "border": {
+    "0": {
+      "value": "0"
+    },
+    "1": {
+      "value": "1px"
+    },
+    "2": {
+      "value": "2px"
+    },
+    "heavy": {
+      "value": "3px"
+    }
+  },
+  "radius": {
+    "0": {
+      "value": "0"
+    },
+    "1": {
+      "value": "2px"
+    },
+    "2": {
+      "value": "4px"
+    },
+    "3": {
+      "value": "6px"
+    }
+  },
+  "shadow": {
+    "none": {
+      "value": "none"
+    },
+    "hard": {
+      "value": "4px 4px 0 var(--sk-shadow-color)"
+    },
+    "hardSm": {
+      "value": "2px 2px 0 var(--sk-shadow-color)"
+    }
+  },
+  "motion": {
+    "fast": {
+      "value": "120ms"
+    },
+    "base": {
+      "value": "180ms"
+    },
+    "slow": {
+      "value": "260ms"
+    },
+    "ease": {
+      "value": "cubic-bezier(.2,0,0,1)"
+    }
+  },
+  "z": {
+    "base": {
+      "value": "0"
+    },
+    "dropdown": {
+      "value": "20"
+    },
+    "sticky": {
+      "value": "30"
+    },
+    "modal": {
+      "value": "80"
+    },
+    "toast": {
+      "value": "90"
+    }
+  },
+  "focus": {
+    "width": {
+      "value": "2px"
+    },
+    "offset": {
+      "value": "3px"
+    }
+  },
+  "breakpoint": {
+    "sm": {
+      "value": "36rem"
+    },
+    "md": {
+      "value": "48rem"
+    },
+    "lg": {
+      "value": "64rem"
+    },
+    "xl": {
+      "value": "80rem"
+    }
+  }
+}

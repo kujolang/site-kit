@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Product Grid",
+      "variant": "catalog"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

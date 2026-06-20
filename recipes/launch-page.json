@@ -1,0 +1,19 @@
+{
+  "$schema": "../schemas/recipe.schema.json",
+  "name": "Launch Page",
+  "description": "Composable launch page recipe using SiteKit components.",
+  "layout": "landing.html",
+  "components": [
+    "header",
+    "hero",
+    "badge",
+    "button",
+    "feature-grid",
+    "cta",
+    "footer"
+  ],
+  "accessibility": [
+    "Preserve landmarks and heading order.",
+    "Use native controls."
+  ]
+}

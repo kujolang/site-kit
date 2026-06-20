@@ -1,0 +1,17 @@
+{
+  "name": "@kujolang/sitekit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-readable, human-verifiable design system and component library for Kujo and semantic websites.",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node scripts/build",
+    "lint": "node scripts/lint",
+    "validate": "node scripts/validate-components",
+    "generate:css": "node scripts/generate-css",
+    "generate:design": "node scripts/generate-design-md",
+    "snapshot": "node scripts/snapshot-components",
+    "test": "npm run lint"
+  },
+  "license": "MIT"
+}

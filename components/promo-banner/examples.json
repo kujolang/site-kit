@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Promo Banner",
+      "variant": "info"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

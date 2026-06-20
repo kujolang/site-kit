@@ -1,0 +1,19 @@
+{
+  "$schema": "../schemas/recipe.schema.json",
+  "name": "Ecommerce Page",
+  "description": "Composable ecommerce recipe.",
+  "layout": "ecommerce.html",
+  "components": [
+    "header",
+    "promo-banner",
+    "product-grid",
+    "product-card",
+    "checkout-summary",
+    "trust-strip",
+    "disclosure",
+    "footer"
+  ],
+  "accessibility": [
+    "Prices, availability, and action labels must be explicit."
+  ]
+}

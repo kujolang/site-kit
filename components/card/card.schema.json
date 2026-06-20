@@ -1,0 +1,65 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "Card",
+  "description": "A bounded content region for a single object, summary, or grouped action.",
+  "props": {
+    "title": "string optional",
+    "body": "string",
+    "href": "string optional"
+  },
+  "variants": [
+    "plain",
+    "interactive",
+    "dense"
+  ],
+  "requiredFields": [
+    "body"
+  ],
+  "accessibility": {
+    "semantics": "Use native semantic elements in Card templates before ARIA.",
+    "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+    "focus": "Uses :focus-visible styles in component CSS.",
+    "notes": [
+      "Color is never the only communication channel.",
+      "Motion must respect prefers-reduced-motion where animation exists."
+    ]
+  },
+  "tokenDependencies": [
+    "surface.page",
+    "surface.card",
+    "text.primary",
+    "text.secondary",
+    "border.default",
+    "focus.ring",
+    "space.4",
+    "radius.1"
+  ],
+  "responsive": {
+    "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
+    "breakpoints": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "slots": [
+    "header",
+    "body",
+    "footer"
+  ],
+  "examples": [
+    {
+      "name": "Default",
+      "props": {
+        "label": "Card",
+        "variant": "plain"
+      },
+      "notes": "Use semantic landmarks and tokenized styling."
+    }
+  ],
+  "allowedChildren": [
+    "header",
+    "body",
+    "footer"
+  ]
+}
