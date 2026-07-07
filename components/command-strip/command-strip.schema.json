@@ -1,0 +1,58 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "Command Strip",
+  "description": "A compact operational metric strip for status, filters, or system state.",
+  "props": {
+    "items": "array",
+    "label": "string optional"
+  },
+  "variants": [
+    "default",
+    "compact",
+    "four-up"
+  ],
+  "requiredFields": [
+    "items"
+  ],
+  "accessibility": {
+    "semantics": "Use a semantic list or landmark label when the strip communicates grouped status.",
+    "keyboard": "No keyboard behavior required unless interactive content is slotted.",
+    "focus": "Inherits global focus styles for slotted links or controls.",
+    "notes": [
+      "Color is never the only communication channel.",
+      "Keep status text concise and readable when truncated."
+    ]
+  },
+  "tokenDependencies": [
+    "surface.card",
+    "text.primary",
+    "border.default",
+    "space.3",
+    "space.4",
+    "type.size.xs"
+  ],
+  "responsive": {
+    "strategy": "Four columns on wide containers, two on medium containers, and one column on narrow containers.",
+    "breakpoints": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "slots": [
+    "items"
+  ],
+  "examples": [
+    {
+      "name": "Default",
+      "props": {
+        "label": "Command metrics",
+        "variant": "default"
+      },
+      "notes": "Use for compact operational facts, not long explanatory copy."
+    }
+  ],
+  "allowedChildren": [
+    "items"
+  ]
+}

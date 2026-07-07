@@ -1,0 +1,59 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "Metadata Panel",
+  "description": "A compact key-value panel for operational metadata and object facts.",
+  "props": {
+    "label": "string optional",
+    "rows": "array"
+  },
+  "variants": [
+    "default",
+    "compact",
+    "sidecar"
+  ],
+  "requiredFields": [
+    "rows"
+  ],
+  "accessibility": {
+    "semantics": "Use a description list for key-value metadata whenever possible.",
+    "keyboard": "No keyboard behavior required unless interactive content is slotted.",
+    "focus": "Inherits global focus styles for slotted links or controls.",
+    "notes": [
+      "Do not rely on color alone for status.",
+      "Use clear row labels and values."
+    ]
+  },
+  "tokenDependencies": [
+    "surface.card",
+    "text.primary",
+    "text.muted",
+    "border.default",
+    "border.subtle",
+    "space.3",
+    "space.4"
+  ],
+  "responsive": {
+    "strategy": "Rows wrap intrinsically and keep labels readable on narrow screens.",
+    "breakpoints": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "slots": [
+    "rows"
+  ],
+  "examples": [
+    {
+      "name": "Default",
+      "props": {
+        "label": "Page metadata",
+        "variant": "default"
+      },
+      "notes": "Use for compact operational facts near headers or cards."
+    }
+  ],
+  "allowedChildren": [
+    "rows"
+  ]
+}

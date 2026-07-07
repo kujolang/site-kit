@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Page metadata",
+      "variant": "default"
+    },
+    "notes": "Use description-list rows for key-value metadata."
+  }
+]

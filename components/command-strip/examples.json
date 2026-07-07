@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Command metrics",
+      "variant": "default"
+    },
+    "notes": "Use semantic grouping and concise operational labels."
+  }
+]

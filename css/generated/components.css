@@ -196,6 +196,78 @@
 
 @layer components { .sk-code-block { background: var(--sk-code-surface); color: var(--sk-code-text); border: var(--sk-border-1) solid var(--sk-code-border); border-radius: var(--sk-radius-0); overflow: auto; } .sk-code-block figcaption { display: flex; justify-content: space-between; gap: var(--sk-space-3); padding: var(--sk-space-3); border-block-end: var(--sk-border-1) solid var(--sk-code-border); font-family: var(--sk-font-mono); font-size: var(--sk-type-size-sm); } .sk-code-block pre { margin: 0; padding: var(--sk-space-4); overflow: auto; } .sk-code-block a:focus-visible, .sk-code-block button:focus-visible, .sk-code-block input:focus-visible, .sk-code-block select:focus-visible, .sk-code-block textarea:focus-visible, .sk-code-block summary:focus-visible, .sk-code-block [role="tab"]:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } }
 
+@layer components {
+  .sk-command-strip {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-card);
+    color: var(--sk-text-primary);
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-xs);
+    line-height: var(--sk-type-line-tight);
+    text-transform: uppercase;
+    overflow: hidden;
+    container-type: inline-size;
+  }
+
+  .sk-command-strip > * {
+    min-inline-size: 0;
+    padding: var(--sk-space-3) var(--sk-space-4);
+    border-block-end: var(--sk-border-1) solid var(--sk-border-default);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .sk-command-strip > *:last-child {
+    border-block-end: 0;
+  }
+
+  .sk-command-strip a:focus-visible,
+  .sk-command-strip button:focus-visible,
+  .sk-command-strip input:focus-visible,
+  .sk-command-strip select:focus-visible,
+  .sk-command-strip textarea:focus-visible,
+  .sk-command-strip summary:focus-visible,
+  .sk-command-strip [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+
+  @container (min-width: 36rem) {
+    .sk-command-strip {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sk-command-strip > * {
+      border-inline-end: var(--sk-border-1) solid var(--sk-border-default);
+    }
+
+    .sk-command-strip > *:nth-child(2n) {
+      border-inline-end: 0;
+    }
+  }
+
+  @container (min-width: 64rem) {
+    .sk-command-strip {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .sk-command-strip > * {
+      border-block-end: 0;
+    }
+
+    .sk-command-strip > *:nth-child(2n) {
+      border-inline-end: var(--sk-border-1) solid var(--sk-border-default);
+    }
+
+    .sk-command-strip > *:nth-child(4n) {
+      border-inline-end: 0;
+    }
+  }
+}
+
 @layer components { .sk-comparison-table { overflow-x: auto; border: var(--sk-border-1) solid var(--sk-border-default); background: var(--sk-surface-raised); } .sk-comparison-table table { min-inline-size: 42rem; } .sk-comparison-table th, .sk-comparison-table td { border: var(--sk-border-1) solid var(--sk-border-subtle); padding: var(--sk-space-3); text-align: start; vertical-align: top; } .sk-comparison-table th { background: var(--sk-surface-subtle); font-family: var(--sk-font-mono); font-size: var(--sk-type-size-sm); } .sk-comparison-table a:focus-visible, .sk-comparison-table button:focus-visible, .sk-comparison-table input:focus-visible, .sk-comparison-table select:focus-visible, .sk-comparison-table textarea:focus-visible, .sk-comparison-table summary:focus-visible, .sk-comparison-table [role="tab"]:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } }
 
 @layer components {
@@ -687,6 +759,60 @@
 }
 
 @layer components { .sk-loading-state { display: grid; gap: var(--sk-space-3); color: var(--sk-text-muted); } .sk-loading-state [data-skeleton] { min-block-size: var(--sk-size-control-md); border: var(--sk-border-1) solid var(--sk-border-subtle); background: var(--sk-surface-raised); } }
+
+@layer components {
+  .sk-metadata-panel {
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-card);
+    color: var(--sk-text-primary);
+    padding: var(--sk-space-4);
+    container-type: inline-size;
+  }
+
+  .sk-metadata-panel dl {
+    display: grid;
+    gap: 0;
+    margin: 0;
+  }
+
+  .sk-metadata-panel div {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--sk-space-4);
+    padding-block: var(--sk-space-3);
+    border-block-end: var(--sk-border-1) dashed var(--sk-border-subtle);
+    font-size: var(--sk-type-size-sm);
+  }
+
+  .sk-metadata-panel div:last-child {
+    border-block-end: 0;
+  }
+
+  .sk-metadata-panel dt {
+    color: var(--sk-text-muted);
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-xs);
+    line-height: var(--sk-type-line-tight);
+    text-transform: uppercase;
+  }
+
+  .sk-metadata-panel dd {
+    margin: 0;
+    font-weight: var(--sk-type-weight-bold);
+    text-align: end;
+  }
+
+  .sk-metadata-panel a:focus-visible,
+  .sk-metadata-panel button:focus-visible,
+  .sk-metadata-panel input:focus-visible,
+  .sk-metadata-panel select:focus-visible,
+  .sk-metadata-panel textarea:focus-visible,
+  .sk-metadata-panel summary:focus-visible,
+  .sk-metadata-panel [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+}
 
 @layer components { .sk-modal { max-inline-size: min(100% - (2 * var(--sk-space-4)), 42rem); border: var(--sk-border-2) solid var(--sk-border-default); border-radius: var(--sk-radius-0); background: var(--sk-surface-raised); color: var(--sk-text-primary); padding: var(--sk-space-6); box-shadow: var(--sk-shadow-none); } .sk-modal::backdrop { background: color-mix(in srgb, var(--sk-surface-inverse) 72%, transparent); } .sk-modal .sk-modal__actions { display: flex; flex-wrap: wrap; gap: var(--sk-space-3); justify-content: flex-end; } .sk-modal a:focus-visible, .sk-modal button:focus-visible, .sk-modal input:focus-visible, .sk-modal select:focus-visible, .sk-modal textarea:focus-visible, .sk-modal summary:focus-visible, .sk-modal [role="tab"]:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } }
 

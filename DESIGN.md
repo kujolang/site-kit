@@ -43,6 +43,7 @@ Tokens are split into primitive tokens in tokens/core.json, semantic tokens in t
 - Card: A bounded content region for a single object, summary, or grouped action.
 - Checkout Summary: A commerce order summary with totals, taxes, discounts, and trust metadata.
 - Code Block: A readable code or command block with caption and copy action.
+- Command Strip: A compact operational metric strip for status, filters, or system state.
 - Comparison Table: A structured feature comparison table for commercial or docs pages.
 - CTA: A conversion block with a clear next action.
 - Disclosure FAQ: A progressive reveal component for FAQs and optional detail.
@@ -56,6 +57,7 @@ Tokens are split into primitive tokens in tokens/core.json, semantic tokens in t
 - Header: A top-level site header with navigation and primary action.
 - Hero: A first-viewport introduction for product, documentation, and launch pages.
 - Loading State: A non-blocking loading placeholder that respects reduced motion.
+- Metadata Panel: A compact key-value panel for operational metadata and object facts.
 - Modal Dialog: An interruptive dialog that requires deliberate focus management.
 - Pricing Table: A commercial pricing comparison layout with plans and features.
 - Product Card: A semantic commerce product summary with media, price, and actions.

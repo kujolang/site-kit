@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-06-20",
-  "componentCount": 25,
+  "componentCount": 27,
   "components": [
     {
       "slug": "badge",
@@ -52,6 +52,16 @@
         "default",
         "terminal",
         "numbered"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "command-strip",
+      "name": "Command Strip",
+      "variants": [
+        "default",
+        "compact",
+        "four-up"
       ],
       "examples": 1
     },
@@ -183,6 +193,16 @@
         "skeleton",
         "inline",
         "panel"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "metadata-panel",
+      "name": "Metadata Panel",
+      "variants": [
+        "default",
+        "compact",
+        "sidecar"
       ],
       "examples": 1
     },
