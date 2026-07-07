@@ -1,1 +1,63 @@
-@layer components { .sk-trust-strip { border: var(--sk-border-1) solid var(--sk-border-default); border-radius: var(--sk-radius-1); background: var(--sk-surface-card); color: var(--sk-text-primary); padding: var(--sk-component-card-padding); box-shadow: var(--sk-shadow-hard-sm); container-type: inline-size; } .sk-trust-strip > * + * { margin-block-start: var(--sk-component-card-gap); } .sk-trust-strip p { color: var(--sk-text-secondary); } .sk-trust-strip[aria-busy="true"] { cursor: progress; } .sk-trust-strip[data-state="error"] { border-color: var(--sk-state-danger); } .sk-trust-strip a:focus-visible, .sk-trust-strip button:focus-visible, .sk-trust-strip input:focus-visible, .sk-trust-strip select:focus-visible, .sk-trust-strip textarea:focus-visible, .sk-trust-strip summary:focus-visible, .sk-trust-strip [role="tab"]:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } }
+@layer components {
+  .sk-trust-strip {
+    position: relative;
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    border-radius: var(--sk-radius-0);
+    background: var(--sk-surface-card);
+    color: var(--sk-text-primary);
+    padding: var(--sk-component-card-padding);
+    box-shadow: var(--sk-shadow-none);
+    container-type: inline-size;
+  }
+
+  .sk-trust-strip::before,
+  .sk-trust-strip::after {
+    content: "";
+    position: absolute;
+    inline-size: var(--sk-space-4);
+    block-size: var(--sk-space-4);
+    border-color: var(--sk-border-default);
+    pointer-events: none;
+  }
+
+  .sk-trust-strip::before {
+    inset-block-start: var(--sk-space-2);
+    inset-inline-start: var(--sk-space-2);
+    border-block-start: var(--sk-border-1) solid;
+    border-inline-start: var(--sk-border-1) solid;
+  }
+
+  .sk-trust-strip::after {
+    inset-block-end: var(--sk-space-2);
+    inset-inline-end: var(--sk-space-2);
+    border-block-end: var(--sk-border-1) solid;
+    border-inline-end: var(--sk-border-1) solid;
+  }
+
+  .sk-trust-strip > * + * {
+    margin-block-start: var(--sk-component-card-gap);
+  }
+
+  .sk-trust-strip p {
+    color: var(--sk-text-secondary);
+  }
+
+  .sk-trust-strip[aria-busy="true"] {
+    cursor: progress;
+  }
+
+  .sk-trust-strip[data-state="error"] {
+    border-color: var(--sk-state-danger);
+  }
+
+  .sk-trust-strip a:focus-visible,
+  .sk-trust-strip button:focus-visible,
+  .sk-trust-strip input:focus-visible,
+  .sk-trust-strip select:focus-visible,
+  .sk-trust-strip textarea:focus-visible,
+  .sk-trust-strip summary:focus-visible,
+  .sk-trust-strip [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+}

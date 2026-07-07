@@ -1,1 +1,53 @@
-@layer components { .sk-hero { border-block-end: var(--sk-border-1) solid var(--sk-border-default); background: var(--sk-surface-page); padding-block: var(--sk-component-hero-padding-block); container-type: inline-size; } .sk-hero .sk-hero__inner { inline-size: min(100% - (2 * var(--sk-space-4)), var(--sk-component-hero-max-width)); margin-inline: auto; display: grid; gap: var(--sk-space-6); } .sk-hero h1, .sk-hero h2 { max-inline-size: 14ch; font-size: clamp(var(--sk-type-size-2xl), 2rem + 2vw, var(--sk-type-size-4xl)); } .sk-hero p { max-inline-size: 62ch; color: var(--sk-text-secondary); font-size: var(--sk-type-size-lg); } .sk-hero a:focus-visible, .sk-hero button:focus-visible, .sk-hero input:focus-visible, .sk-hero select:focus-visible, .sk-hero textarea:focus-visible, .sk-hero summary:focus-visible, .sk-hero [role="tab"]:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } @container (min-width: 56rem) { .sk-hero[data-layout="split"] .sk-hero__inner { grid-template-columns: minmax(0, 1.1fr) minmax(18rem, .9fr); align-items: center; } } }
+@layer components {
+  .sk-hero {
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    border-radius: var(--sk-radius-0);
+    background: var(--sk-surface-card);
+    padding-block: var(--sk-component-hero-padding-block);
+    container-type: inline-size;
+  }
+
+  .sk-hero .sk-hero__inner {
+    inline-size: min(100% - (2 * var(--sk-space-5)), var(--sk-component-hero-max-width));
+    margin-inline: auto;
+    display: grid;
+    gap: var(--sk-space-5);
+  }
+
+  .sk-hero h1,
+  .sk-hero h2 {
+    max-inline-size: 15ch;
+    font-size: var(--sk-type-size-4xl);
+    line-height: .9;
+  }
+
+  .sk-hero p {
+    max-inline-size: 67ch;
+    color: var(--sk-text-secondary);
+    font-size: var(--sk-type-size-md);
+    line-height: var(--sk-type-line-loose);
+  }
+
+  .sk-hero a:focus-visible,
+  .sk-hero button:focus-visible,
+  .sk-hero input:focus-visible,
+  .sk-hero select:focus-visible,
+  .sk-hero textarea:focus-visible,
+  .sk-hero summary:focus-visible,
+  .sk-hero [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+
+  @container (min-width: 56rem) {
+    .sk-hero h1,
+    .sk-hero h2 {
+      font-size: var(--sk-type-size-5xl);
+    }
+
+    .sk-hero[data-layout="split"] .sk-hero__inner {
+      grid-template-columns: minmax(0, 1.1fr) minmax(18rem, .9fr);
+      align-items: start;
+    }
+  }
+}

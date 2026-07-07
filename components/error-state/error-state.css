@@ -1,1 +1,63 @@
-@layer components { .sk-error-state { border: var(--sk-border-1) solid var(--sk-border-default); border-radius: var(--sk-radius-1); background: var(--sk-surface-card); color: var(--sk-text-primary); padding: var(--sk-component-card-padding); box-shadow: var(--sk-shadow-hard-sm); container-type: inline-size; } .sk-error-state > * + * { margin-block-start: var(--sk-component-card-gap); } .sk-error-state p { color: var(--sk-text-secondary); } .sk-error-state[aria-busy="true"] { cursor: progress; } .sk-error-state[data-state="error"] { border-color: var(--sk-state-danger); } .sk-error-state a:focus-visible, .sk-error-state button:focus-visible, .sk-error-state input:focus-visible, .sk-error-state select:focus-visible, .sk-error-state textarea:focus-visible, .sk-error-state summary:focus-visible, .sk-error-state [role="tab"]:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } }
+@layer components {
+  .sk-error-state {
+    position: relative;
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    border-radius: var(--sk-radius-0);
+    background: var(--sk-surface-card);
+    color: var(--sk-text-primary);
+    padding: var(--sk-component-card-padding);
+    box-shadow: var(--sk-shadow-none);
+    container-type: inline-size;
+  }
+
+  .sk-error-state::before,
+  .sk-error-state::after {
+    content: "";
+    position: absolute;
+    inline-size: var(--sk-space-4);
+    block-size: var(--sk-space-4);
+    border-color: var(--sk-border-default);
+    pointer-events: none;
+  }
+
+  .sk-error-state::before {
+    inset-block-start: var(--sk-space-2);
+    inset-inline-start: var(--sk-space-2);
+    border-block-start: var(--sk-border-1) solid;
+    border-inline-start: var(--sk-border-1) solid;
+  }
+
+  .sk-error-state::after {
+    inset-block-end: var(--sk-space-2);
+    inset-inline-end: var(--sk-space-2);
+    border-block-end: var(--sk-border-1) solid;
+    border-inline-end: var(--sk-border-1) solid;
+  }
+
+  .sk-error-state > * + * {
+    margin-block-start: var(--sk-component-card-gap);
+  }
+
+  .sk-error-state p {
+    color: var(--sk-text-secondary);
+  }
+
+  .sk-error-state[aria-busy="true"] {
+    cursor: progress;
+  }
+
+  .sk-error-state[data-state="error"] {
+    border-color: var(--sk-state-danger);
+  }
+
+  .sk-error-state a:focus-visible,
+  .sk-error-state button:focus-visible,
+  .sk-error-state input:focus-visible,
+  .sk-error-state select:focus-visible,
+  .sk-error-state textarea:focus-visible,
+  .sk-error-state summary:focus-visible,
+  .sk-error-state [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+}

@@ -1,1 +1,63 @@
-@layer components { .sk-card { border: var(--sk-border-1) solid var(--sk-border-default); border-radius: var(--sk-radius-1); background: var(--sk-surface-card); color: var(--sk-text-primary); padding: var(--sk-component-card-padding); box-shadow: var(--sk-shadow-hard-sm); container-type: inline-size; } .sk-card > * + * { margin-block-start: var(--sk-component-card-gap); } .sk-card p { color: var(--sk-text-secondary); } .sk-card[aria-busy="true"] { cursor: progress; } .sk-card[data-state="error"] { border-color: var(--sk-state-danger); } .sk-card a:focus-visible, .sk-card button:focus-visible, .sk-card input:focus-visible, .sk-card select:focus-visible, .sk-card textarea:focus-visible, .sk-card summary:focus-visible, .sk-card [role="tab"]:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } }
+@layer components {
+  .sk-card {
+    position: relative;
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    border-radius: var(--sk-radius-0);
+    background: var(--sk-surface-card);
+    color: var(--sk-text-primary);
+    padding: var(--sk-component-card-padding);
+    box-shadow: var(--sk-shadow-none);
+    container-type: inline-size;
+  }
+
+  .sk-card::before,
+  .sk-card::after {
+    content: "";
+    position: absolute;
+    inline-size: var(--sk-space-4);
+    block-size: var(--sk-space-4);
+    border-color: var(--sk-border-default);
+    pointer-events: none;
+  }
+
+  .sk-card::before {
+    inset-block-start: var(--sk-space-2);
+    inset-inline-start: var(--sk-space-2);
+    border-block-start: var(--sk-border-1) solid;
+    border-inline-start: var(--sk-border-1) solid;
+  }
+
+  .sk-card::after {
+    inset-block-end: var(--sk-space-2);
+    inset-inline-end: var(--sk-space-2);
+    border-block-end: var(--sk-border-1) solid;
+    border-inline-end: var(--sk-border-1) solid;
+  }
+
+  .sk-card > * + * {
+    margin-block-start: var(--sk-component-card-gap);
+  }
+
+  .sk-card p {
+    color: var(--sk-text-secondary);
+  }
+
+  .sk-card[aria-busy="true"] {
+    cursor: progress;
+  }
+
+  .sk-card[data-state="error"] {
+    border-color: var(--sk-state-danger);
+  }
+
+  .sk-card a:focus-visible,
+  .sk-card button:focus-visible,
+  .sk-card input:focus-visible,
+  .sk-card select:focus-visible,
+  .sk-card textarea:focus-visible,
+  .sk-card summary:focus-visible,
+  .sk-card [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+}
