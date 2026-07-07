@@ -37,7 +37,14 @@
   .sk-footer nav {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: var(--sk-space-4);
+  }
+
+  .sk-footer p,
+  .sk-footer small {
+    margin: 0;
+    line-height: var(--sk-type-line-tight);
   }
 
   .sk-footer a:focus-visible,

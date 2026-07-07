@@ -1,1 +1,50 @@
-@layer components { .sk-pricing-table { overflow-x: auto; border: var(--sk-border-1) solid var(--sk-border-default); background: var(--sk-surface-raised); } .sk-pricing-table table { min-inline-size: 42rem; } .sk-pricing-table th, .sk-pricing-table td { border: var(--sk-border-1) solid var(--sk-border-subtle); padding: var(--sk-space-3); text-align: start; vertical-align: top; } .sk-pricing-table th { background: var(--sk-surface-subtle); font-family: var(--sk-font-mono); font-size: var(--sk-type-size-sm); } .sk-pricing-table a:focus-visible, .sk-pricing-table button:focus-visible, .sk-pricing-table input:focus-visible, .sk-pricing-table select:focus-visible, .sk-pricing-table textarea:focus-visible, .sk-pricing-table summary:focus-visible, .sk-pricing-table [role="tab"]:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } }
+@layer components {
+  .sk-pricing-table {
+    overflow-x: visible;
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-raised);
+  }
+
+  .sk-pricing-table table {
+    inline-size: 100%;
+    min-inline-size: 0;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+
+  .sk-pricing-table caption {
+    padding: var(--sk-space-4);
+    border-block-end: var(--sk-border-1) solid var(--sk-border-default);
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-sm);
+    font-weight: var(--sk-type-weight-bold);
+    text-align: start;
+    text-transform: uppercase;
+  }
+
+  .sk-pricing-table th,
+  .sk-pricing-table td {
+    border: var(--sk-border-1) solid var(--sk-border-subtle);
+    padding: var(--sk-space-3);
+    text-align: start;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+  }
+
+  .sk-pricing-table th {
+    background: var(--sk-surface-subtle);
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-sm);
+  }
+
+  .sk-pricing-table a:focus-visible,
+  .sk-pricing-table button:focus-visible,
+  .sk-pricing-table input:focus-visible,
+  .sk-pricing-table select:focus-visible,
+  .sk-pricing-table textarea:focus-visible,
+  .sk-pricing-table summary:focus-visible,
+  .sk-pricing-table [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+}

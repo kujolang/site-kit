@@ -14,6 +14,19 @@
     gap: var(--sk-space-5);
   }
 
+  .sk-hero[data-layout="centered"] .sk-hero__inner {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .sk-hero .sk-button {
+    justify-self: start;
+  }
+
+  .sk-hero[data-layout="centered"] .sk-button {
+    justify-self: center;
+  }
+
   .sk-hero h1,
   .sk-hero h2 {
     max-inline-size: 15ch;

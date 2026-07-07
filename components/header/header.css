@@ -17,6 +17,25 @@
     text-decoration: underline;
   }
 
+  .sk-header a.sk-button {
+    color: var(--sk-action-primary-text);
+  }
+
+  .sk-header a.sk-button:hover {
+    color: var(--sk-action-secondary-text);
+    text-decoration: none;
+  }
+
+  .sk-header a.sk-button[data-variant="secondary"],
+  .sk-header a.sk-button[data-variant="ghost"] {
+    color: var(--sk-action-secondary-text);
+  }
+
+  .sk-header a.sk-button[data-variant="secondary"]:hover,
+  .sk-header a.sk-button[data-variant="ghost"]:hover {
+    color: var(--sk-action-primary-text);
+  }
+
   .sk-header a[aria-current="page"] {
     font-weight: var(--sk-type-weight-bold);
   }

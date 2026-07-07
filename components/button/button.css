@@ -54,7 +54,7 @@
   }
 
   .sk-button[data-variant="ghost"] {
-    background: var(--sk-action-ghost);
+    background: transparent;
     color: var(--sk-text-primary);
   }
 

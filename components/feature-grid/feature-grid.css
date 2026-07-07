@@ -2,8 +2,7 @@
   .sk-feature-grid {
     display: grid;
     gap: var(--sk-component-grid-gap);
-    grid-template-columns: 1fr;
-    container-type: inline-size;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
   }
 
   .sk-feature-grid > * {
@@ -24,19 +23,7 @@
     outline-offset: var(--sk-focus-offset);
   }
 
-  @container (min-width: 42rem) {
-    .sk-feature-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  @container (min-width: 64rem) {
-    .sk-feature-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .sk-feature-grid[data-density="dense"] {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+  .sk-feature-grid[data-density="dense"] {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
   }
 }

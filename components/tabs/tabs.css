@@ -1,1 +1,51 @@
-@layer components { .sk-tabs { display: grid; gap: var(--sk-space-4); } .sk-tabs [role="tablist"] { display: flex; flex-wrap: wrap; gap: var(--sk-space-2); border-block-end: var(--sk-border-1) solid var(--sk-border-subtle); } .sk-tabs [role="tab"] { border: var(--sk-border-1) solid var(--sk-border-default); border-block-end: 0; background: var(--sk-surface-subtle); color: var(--sk-text-primary); padding: var(--sk-space-2) var(--sk-space-3); cursor: pointer; } .sk-tabs [role="tab"][aria-selected="true"] { background: var(--sk-surface-raised); font-weight: var(--sk-type-weight-bold); } .sk-tabs [role="tabpanel"] { border: var(--sk-border-1) solid var(--sk-border-default); padding: var(--sk-space-4); } .sk-tabs a:focus-visible, .sk-tabs button:focus-visible, .sk-tabs input:focus-visible, .sk-tabs select:focus-visible, .sk-tabs textarea:focus-visible, .sk-tabs summary:focus-visible, .sk-tabs [role="tab"]:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } }
+@layer components {
+  .sk-tabs {
+    display: grid;
+    gap: 0;
+  }
+
+  .sk-tabs [role="tablist"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    border-block-end: 0;
+  }
+
+  .sk-tabs [role="tab"] {
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    border-inline-end: 0;
+    border-block-end: 0;
+    background: var(--sk-surface-subtle);
+    color: var(--sk-text-primary);
+    padding: var(--sk-space-2) var(--sk-space-3);
+    font-family: var(--sk-font-mono);
+    cursor: pointer;
+  }
+
+  .sk-tabs [role="tab"]:last-child {
+    border-inline-end: var(--sk-border-1) solid var(--sk-border-default);
+  }
+
+  .sk-tabs [role="tab"][aria-selected="true"] {
+    background: var(--sk-surface-raised);
+    font-weight: var(--sk-type-weight-bold);
+  }
+
+  .sk-tabs [role="tabpanel"] {
+    margin: 0;
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    padding: var(--sk-space-4);
+    background: var(--sk-surface-raised);
+  }
+
+  .sk-tabs a:focus-visible,
+  .sk-tabs button:focus-visible,
+  .sk-tabs input:focus-visible,
+  .sk-tabs select:focus-visible,
+  .sk-tabs textarea:focus-visible,
+  .sk-tabs summary:focus-visible,
+  .sk-tabs [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+}
