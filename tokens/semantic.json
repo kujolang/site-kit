@@ -14,7 +14,7 @@
       "value": "{color.black}"
     },
     "subtle": {
-      "value": "{color.gray.50}"
+      "value": "{color.white}"
     },
     "accent": {
       "value": "{color.ink}"
@@ -34,7 +34,7 @@
       "value": "{color.white}"
     },
     "link": {
-      "value": "{color.blue.600}"
+      "value": "{color.black}"
     },
     "danger": {
       "value": "{color.red.600}"
@@ -85,7 +85,7 @@
   },
   "focus": {
     "ring": {
-      "value": "{color.blue.600}"
+      "value": "{color.black}"
     },
     "ringOffset": {
       "value": "{color.paper}"
@@ -98,13 +98,13 @@
   },
   "code": {
     "surface": {
-      "value": "{color.black}"
-    },
-    "text": {
       "value": "{color.white}"
     },
+    "text": {
+      "value": "{color.black}"
+    },
     "border": {
-      "value": "{color.gray.700}"
+      "value": "{color.black}"
     }
   },
   "state": {
@@ -132,18 +132,18 @@
     },
     "card": {
       "padding": {
-        "value": "{space.6}"
+        "value": "{space.5}"
       },
       "gap": {
-        "value": "{space.4}"
+        "value": "{space.5}"
       }
     },
     "hero": {
       "paddingBlock": {
-        "value": "{space.20}"
+        "value": "{space.6}"
       },
       "maxWidth": {
-        "value": "{size.content.xl}"
+        "value": "{size.content.lg}"
       }
     },
     "grid": {

@@ -1,6 +1,6 @@
 {
   "name": "kujo-light",
-  "description": "High-contrast off-white Kujo foundation.",
+  "description": "Monochrome Kujo command surface with white panels and hard black structure.",
   "tokens": {
     "surface": {
       "page": {
@@ -36,7 +36,7 @@
         "value": "{color.paper}"
       },
       "link": {
-        "value": "{color.blue.600}"
+        "value": "{color.black}"
       }
     },
     "action": {
@@ -44,7 +44,7 @@
         "value": "{color.black}"
       },
       "primaryText": {
-        "value": "{color.paper}"
+        "value": "{color.white}"
       },
       "secondary": {
         "value": "{color.white}"
@@ -63,7 +63,7 @@
     },
     "focus": {
       "ring": {
-        "value": "{color.blue.600}"
+        "value": "{color.black}"
       },
       "ringOffset": {
         "value": "{color.paper}"

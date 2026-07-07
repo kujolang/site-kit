@@ -15,7 +15,7 @@ SiteKit is an AI-readable, human-verifiable design system and component library 
 
 ## Visual Identity
 
-Technical, architectural, blueprint-like, minimal, high contrast, black/off-white foundation, thin borders, hard mechanical shadows, monospace metadata labels, and near-square geometry.
+Technical, architectural, command-surface minimalism with high contrast, near-white page foundations, white panels, black linework, no decorative shadows, monospace metadata labels, and square geometry.
 
 ## Accessibility Standard
 
@@ -33,7 +33,7 @@ Tokens are split into primitive tokens in tokens/core.json, semantic tokens in t
 
 - bzby: Compact commercial theme with sharper signal states.
 - kujo-dark: Dark Kujo technical interface theme.
-- kujo-light: High-contrast off-white Kujo foundation.
+- kujo-light: Monochrome Kujo command surface with white panels and hard black structure.
 - personal-dark: Personal publishing dark theme with restrained contrast.
 
 ## Components

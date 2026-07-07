@@ -54,14 +54,14 @@
     --sk-text-secondary: var(--sk-color-gray-700);
     --sk-text-muted: var(--sk-color-gray-500);
     --sk-text-inverse: var(--sk-color-paper);
-    --sk-text-link: var(--sk-color-blue-600);
+    --sk-text-link: var(--sk-color-black);
     --sk-action-primary: var(--sk-color-black);
-    --sk-action-primary-text: var(--sk-color-paper);
+    --sk-action-primary-text: var(--sk-color-white);
     --sk-action-secondary: var(--sk-color-white);
     --sk-action-secondary-text: var(--sk-color-black);
     --sk-border-default: var(--sk-color-black);
     --sk-border-subtle: var(--sk-color-gray-500);
-    --sk-focus-ring: var(--sk-color-blue-600);
+    --sk-focus-ring: var(--sk-color-black);
     --sk-focus-ring-offset: var(--sk-color-paper);
     --sk-shadow-color: var(--sk-color-black);
   }

@@ -2,35 +2,35 @@
   "$schema": "../schemas/token.schema.json",
   "color": {
     "black": {
-      "value": "#050505"
+      "value": "#060606"
     },
     "white": {
-      "value": "#f7f4ed"
+      "value": "#ffffff"
     },
     "paper": {
-      "value": "#fbfaf6"
+      "value": "#f9f9f9"
     },
     "ink": {
-      "value": "#111111"
+      "value": "#060606"
     },
     "gray": {
       "50": {
-        "value": "#f4f2ed"
+        "value": "#f9f9f9"
       },
       "100": {
-        "value": "#e7e1d6"
+        "value": "#eeeeee"
       },
       "300": {
-        "value": "#b8b0a4"
+        "value": "#b8b8b8"
       },
       "500": {
-        "value": "#706b63"
+        "value": "#5d5d5d"
       },
       "700": {
-        "value": "#343230"
+        "value": "#2b2b2b"
       },
       "900": {
-        "value": "#151413"
+        "value": "#111111"
       }
     },
     "blue": {
@@ -61,10 +61,10 @@
   },
   "font": {
     "sans": {
-      "value": "Inter, ui-sans-serif, system-ui, sans-serif"
+      "value": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
     },
     "mono": {
-      "value": "IBM Plex Mono, SFMono-Regular, Consolas, monospace"
+      "value": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
     }
   },
   "type": {
@@ -92,6 +92,9 @@
       },
       "4xl": {
         "value": "3rem"
+      },
+      "5xl": {
+        "value": "5.375rem"
       }
     },
     "line": {
@@ -218,10 +221,10 @@
       "value": "none"
     },
     "hard": {
-      "value": "4px 4px 0 var(--sk-shadow-color)"
+      "value": "none"
     },
     "hardSm": {
-      "value": "2px 2px 0 var(--sk-shadow-color)"
+      "value": "none"
     }
   },
   "motion": {
