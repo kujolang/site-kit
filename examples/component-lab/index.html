@@ -24,15 +24,21 @@
       .token-swatch { inline-size: 2rem; block-size: 2rem; flex: 0 0 auto; border: var(--sk-border-1) solid var(--sk-border-default); }
       .lab-preview-modal { inline-size: min(100% - (2 * var(--sk-space-5)), 58rem); }
       .lab-preview-modal::backdrop { background: color-mix(in srgb, var(--sk-surface-inverse) 28%, transparent); }
-      .lab-preview-head { display: flex; align-items: start; justify-content: space-between; gap: var(--sk-space-4); margin-block-end: var(--sk-space-5); }
+      .lab-preview-modal:focus { outline: 0; }
+      .lab-preview-head { display: flex; align-items: center; justify-content: space-between; gap: var(--sk-space-4); margin-block-end: var(--sk-space-5); }
       .lab-preview-head h2 { margin: 0; }
+      .lab-icon-button { inline-size: var(--sk-size-control-md); padding-inline: 0; }
       .lab-preview-stage { border: var(--sk-border-1) solid var(--sk-border-default); background: var(--sk-surface-page); padding: var(--sk-space-5); }
       .lab-preview-stage > * { max-inline-size: 100%; }
       .lab-preview-code { margin-block-start: var(--sk-space-4); }
+      .lab-preview-code figcaption { align-items: center; }
       .lab-preview-code pre { white-space: pre-wrap; }
       .lab-sample-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sk-space-4); }
       .lab-sample-stack { display: grid; gap: var(--sk-space-3); }
       .lab-sample-row { display: flex; flex-wrap: wrap; gap: var(--sk-space-3); align-items: center; }
+      .lab-map-node { display: grid; gap: var(--sk-space-3); min-block-size: 10rem; }
+      .lab-map-node span { font-family: var(--sk-font-mono); font-size: var(--sk-type-size-xs); text-transform: uppercase; }
+      .lab-product-meta { display: grid; gap: var(--sk-space-3); }
       .lab-modal-static { position: static; display: block; inline-size: min(100%, 32rem); margin: 0; }
       @media (max-width: 76rem) { .lab-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } .token-list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
       @media (max-width: 44rem) { .lab-list, .lab-sample-grid { grid-template-columns: 1fr; } .token-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -50,17 +56,14 @@
     <section id="components" class="sk-stack"><h2>Components</h2><div class="lab-list" id="component-list"></div></section>
   </main>
 
-  <dialog class="sk-modal lab-preview-modal" id="component-preview" aria-labelledby="preview-title">
+  <dialog class="sk-modal lab-preview-modal" id="component-preview" aria-labelledby="preview-title" tabindex="-1">
     <div class="lab-preview-head">
-      <div>
-        <h2 id="preview-title">Component</h2>
-        <div class="sk-cluster" id="preview-variants" aria-label="Variants"></div>
-      </div>
-      <form method="dialog"><button class="sk-button" type="submit" data-variant="secondary">Close</button></form>
+      <h2 id="preview-title">Component</h2>
+      <form method="dialog"><button class="sk-button lab-icon-button" type="submit" data-variant="secondary" aria-label="Close preview">X</button></form>
     </div>
     <div class="lab-preview-stage" id="preview-stage"></div>
     <figure class="sk-code-block lab-preview-code">
-      <figcaption><span id="preview-code-title">Markup</span></figcaption>
+      <figcaption><span id="preview-code-title">Markup</span><button class="sk-button" type="button" data-variant="secondary" data-copy-markup>Copy</button></figcaption>
       <pre><code id="preview-code"></code></pre>
     </figure>
   </dialog>
@@ -73,39 +76,39 @@
       { slug: 'badge', name: 'Badge', description: 'A compact status, category, or metadata label.', variants: ['neutral', 'success', 'warning', 'danger', 'outline'], keyboard: 'No keyboard behavior required unless interactive content is slotted.', sample: '<div class="lab-sample-row"><span class="sk-badge">Neutral</span><span class="sk-badge" data-variant="success">Success</span><span class="sk-badge" data-variant="warning">Warning</span><span class="sk-badge" data-variant="danger">Danger</span></div>' },
       { slug: 'button', name: 'Button', description: 'A semantic action control for links, form submits, and interface commands.', variants: ['primary', 'secondary', 'ghost', 'danger'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<div class="lab-sample-row"><button class="sk-button" type="button">Primary</button><button class="sk-button" type="button" data-variant="secondary">Secondary</button><button class="sk-button" type="button" data-variant="ghost">Ghost</button><button class="sk-button" type="button" data-variant="danger">Danger</button></div>' },
       { slug: 'card', name: 'Card', description: 'A bounded content region for a single object, summary, or grouped action.', variants: ['plain', 'interactive', 'dense'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<section class="sk-card"><h2>Release Readiness</h2><p>Final checks are passing and artifacts are ready for review.</p><a class="sk-button" href="#components">Review</a></section>' },
-      { slug: 'checkout-summary', name: 'Checkout Summary', description: 'A commerce order summary with totals, taxes, discounts, and trust metadata.', variants: ['default', 'compact', 'sticky'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<section class="sk-checkout-summary"><h2>Order Summary</h2><p>Starter Kit License</p><dl class="lab-sample-stack"><div class="lab-sample-row"><dt>Subtotal</dt><dd>$49</dd></div><div class="lab-sample-row"><dt>Total</dt><dd>$49</dd></div></dl><button class="sk-button" type="button">Checkout</button></section>' },
-      { slug: 'code-block', name: 'Code Block', description: 'A readable code or command block with caption and copy action.', variants: ['default', 'terminal', 'numbered'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<figure class="sk-code-block"><figcaption><span>sitekit</span><button type="button">Copy</button></figcaption><pre><code>npm run build\\nnpm run lint</code></pre></figure>' },
+      { slug: 'checkout-summary', name: 'Checkout Summary', description: 'A commerce order summary with totals, taxes, discounts, and trust metadata.', variants: ['default', 'compact', 'sticky'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<section class="sk-checkout-summary"><h2>Order Summary</h2><p>Starter Kit License</p><dl><div><dt>Subtotal</dt><dd>$49</dd></div><div><dt>Discount</dt><dd>-$10</dd></div><div><dt>Tax</dt><dd>$0</dd></div><div data-total><dt>Total</dt><dd>$39</dd></div></dl><button class="sk-button" type="button">Checkout</button></section>' },
+      { slug: 'code-block', name: 'Code Block', description: 'A readable code or command block with caption and copy action.', variants: ['default', 'terminal', 'numbered'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<figure class="sk-code-block"><figcaption><span>sitekit</span><button type="button">Copy</button></figcaption><pre><code>npm run build\nnpm run lint</code></pre></figure>' },
       { slug: 'command-strip', name: 'Command Strip', description: 'A compact operational metric strip for status, filters, or system state.', variants: ['default', 'compact', 'four-up'], keyboard: 'No keyboard behavior required unless interactive content is slotted.', sample: '<section class="sk-command-strip" aria-label="Command metrics"><span>build: passing</span><span>snapshot: current</span><span>theme: kujo-light</span><span>status: ready</span></section>' },
       { slug: 'comparison-table', name: 'Comparison Table', description: 'A structured feature comparison table for commercial or docs pages.', variants: ['default', 'compact', 'sticky'], keyboard: 'No keyboard behavior required unless interactive content is slotted.', sample: '<div class="sk-comparison-table"><table><caption>Plan comparison</caption><thead><tr><th>Feature</th><th>Core</th><th>Pro</th></tr></thead><tbody><tr><td>Tokens</td><td>Included</td><td>Included</td></tr><tr><td>Recipes</td><td>3</td><td>All</td></tr></tbody></table></div>' },
       { slug: 'cta', name: 'CTA', description: 'A conversion block with a clear next action.', variants: ['band', 'inline', 'stacked'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<section class="sk-cta"><div class="sk-cta__inner"><h2>Ship the surface.</h2><p>Use the component contracts, generate CSS, and verify the result.</p><a class="sk-button" href="#components">Open</a></div></section>' },
       { slug: 'disclosure', name: 'Disclosure FAQ', description: 'A progressive reveal component for FAQs and optional detail.', variants: ['default', 'faq', 'compact'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<div class="sk-disclosure"><details open><summary>What is source-driven?</summary><div class="sk-disclosure__content">Tokens, schemas, examples, and components stay authoritative.</div></details></div>' },
       { slug: 'docs-nav', name: 'Docs Nav', description: 'A documentation navigation landmark for section trees and active states.', variants: ['sidebar', 'inline', 'mobile'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<nav class="sk-docs-nav" aria-label="Documentation"><div class="sk-docs-nav__inner"><a href="#tokens">Tokens</a><a href="#components" aria-current="page">Components</a><a href="#main">Recipes</a></div></nav>' },
-      { slug: 'ecosystem-map', name: 'Ecosystem Map', description: 'A semantic map of projects, packages, docs, and relationships.', variants: ['grid', 'radial', 'compact'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<section class="sk-ecosystem-map" aria-label="Ecosystem"><article><h2>Tokens</h2><p>Primitive and semantic values.</p></article><article><h2>Components</h2><p>Reusable contracts.</p></article><article><h2>Recipes</h2><p>Composable layouts.</p></article></section>' },
+      { slug: 'ecosystem-map', name: 'Ecosystem Map', description: 'A semantic map of projects, packages, docs, and relationships.', variants: ['grid', 'radial', 'compact'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<section class="sk-ecosystem-map" aria-label="Ecosystem"><article class="lab-map-node"><span>Source</span><h2>Tokens</h2><p>Primitive and semantic values.</p></article><article class="lab-map-node"><span>Output</span><h2>Components</h2><p>Reusable contracts with generated CSS.</p></article><article class="lab-map-node"><span>Pages</span><h2>Recipes</h2><p>Composable layouts that consume the same tokens.</p></article></section>' },
       { slug: 'empty-state', name: 'Empty State', description: 'A clear message for empty collections with optional recovery action.', variants: ['default', 'compact', 'commerce'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<section class="sk-empty-state"><h2>No components selected</h2><p>Choose a component to inspect the rendered state.</p><button class="sk-button" type="button">Reset</button></section>' },
       { slug: 'error-state', name: 'Error State', description: 'A recoverable error message with next steps and support context.', variants: ['default', 'inline', 'critical'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<section class="sk-error-state" data-state="error"><h2>Preview failed</h2><p>The component could not render with the current props.</p><button class="sk-button" type="button" data-variant="secondary">Retry</button></section>' },
       { slug: 'feature-grid', name: 'Feature Grid', description: 'A responsive list of capabilities or benefits.', variants: ['two-column', 'three-column', 'dense'], keyboard: 'No keyboard behavior required unless interactive content is slotted.', sample: '<section class="sk-feature-grid" aria-label="Features"><article><h2>Tokenized</h2><p>No raw component colors.</p></article><article><h2>Semantic</h2><p>Native markup first.</p></article><article><h2>Verifiable</h2><p>Build and lint cleanly.</p></article></section>' },
       { slug: 'footer', name: 'Footer', description: 'A semantic page footer for navigation, metadata, and legal links.', variants: ['simple', 'columns', 'product'], keyboard: 'No keyboard behavior required unless interactive content is slotted.', sample: '<footer class="sk-footer"><div class="sk-footer__inner"><p>SiteKit</p><nav aria-label="Footer"><a href="#tokens">Tokens</a><a href="#components">Components</a></nav><small>MIT</small></div></footer>' },
       { slug: 'form-field', name: 'Form Field', description: 'A labeled input group with help, validation, and autocomplete support.', variants: ['text', 'select', 'textarea', 'checkbox'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<div class="sk-form-field"><label for="preview-name">Component name</label><input id="preview-name" name="preview-name" type="text" value="Command Strip" autocomplete="off" aria-describedby="preview-name-help"><p class="sk-form-field__help" id="preview-name-help">Use clear labels and native controls.</p></div>' },
       { slug: 'header', name: 'Header', description: 'A top-level site header with navigation and primary action.', variants: ['default', 'docs', 'commerce'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<header class="sk-header"><div class="sk-header__inner"><a href="#main">SiteKit</a><nav aria-label="Primary"><a href="#tokens">Tokens</a><a href="#components">Components</a></nav><a class="sk-button" href="#components">Open</a></div></header>' },
-      { slug: 'hero', name: 'Hero', description: 'A first-viewport introduction for product, documentation, and launch pages.', variants: ['split', 'centered', 'technical'], keyboard: 'No keyboard behavior required unless interactive content is slotted.', sample: '<section class="sk-hero"><div class="sk-hero__inner"><h2>Command-ready components.</h2><p>High-contrast, tokenized, and built from reusable contracts.</p><a class="sk-button" href="#components">Review</a></div></section>' },
-      { slug: 'loading-state', name: 'Loading State', description: 'A non-blocking loading placeholder that respects reduced motion.', variants: ['skeleton', 'inline', 'panel'], keyboard: 'No keyboard behavior required unless interactive content is slotted.', sample: '<div class="sk-loading-state" role="status" aria-live="polite"><span>Loading components</span><span data-skeleton aria-hidden="true"></span></div>' },
+      { slug: 'hero', name: 'Hero', description: 'A first-viewport introduction for product, documentation, and launch pages.', variants: ['split', 'centered', 'technical'], keyboard: 'No keyboard behavior required unless interactive content is slotted.', sample: '<section class="sk-hero" data-layout="centered"><div class="sk-hero__inner"><h2>Command-ready components.</h2><p>High-contrast, tokenized, and built from reusable contracts.</p><a class="sk-button" href="#components">Review</a></div></section>' },
+      { slug: 'loading-state', name: 'Loading State', description: 'A non-blocking loading placeholder that respects reduced motion.', variants: ['skeleton', 'inline', 'panel'], keyboard: 'No keyboard behavior required unless interactive content is slotted.', sample: '<div class="sk-loading-state" role="status" aria-live="polite"><span>Loading components</span><span data-skeleton aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></div>' },
       { slug: 'metadata-panel', name: 'Metadata Panel', description: 'A compact key-value panel for operational metadata and object facts.', variants: ['default', 'compact', 'sidecar'], keyboard: 'No keyboard behavior required unless interactive content is slotted.', sample: '<aside class="sk-metadata-panel" aria-label="Page metadata"><dl><div><dt>Status</dt><dd>Active</dd></div><div><dt>Mode</dt><dd>Command</dd></div><div><dt>Theme</dt><dd>Kujo Light</dd></div></dl></aside>' },
       { slug: 'modal', name: 'Modal Dialog', description: 'An interruptive dialog that requires deliberate focus management.', variants: ['default', 'danger', 'wide'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<div class="sk-modal lab-modal-static" role="dialog" aria-labelledby="modal-static-title"><h2 id="modal-static-title">Review component</h2><p>Modal content keeps focusable actions grouped.</p><div class="sk-modal__actions"><button class="sk-button" type="button" data-variant="secondary">Cancel</button><button class="sk-button" type="button">Confirm</button></div></div>' },
       { slug: 'pricing-table', name: 'Pricing Table', description: 'A commercial pricing comparison layout with plans and features.', variants: ['monthly', 'annual', 'comparison'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<div class="sk-pricing-table"><table><caption>Pricing</caption><thead><tr><th>Plan</th><th>Price</th><th>Action</th></tr></thead><tbody><tr><td>Core</td><td>$19</td><td><button class="sk-button" type="button">Select</button></td></tr><tr><td>Pro</td><td>$49</td><td><button class="sk-button" type="button">Select</button></td></tr></tbody></table></div>' },
-      { slug: 'product-card', name: 'Product Card', description: 'A semantic commerce product summary with media, price, and actions.', variants: ['default', 'compact', 'featured'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<section class="sk-product-card"><h2>SiteKit License</h2><p>$49 - Lifetime updates</p><button class="sk-button" type="button">Add to cart</button></section>' },
-      { slug: 'product-grid', name: 'Product Grid', description: 'A responsive product listing surface.', variants: ['catalog', 'compact', 'comparison'], keyboard: 'No keyboard behavior required unless interactive content is slotted.', sample: '<section class="sk-product-grid" aria-label="Products"><article><h2>Core</h2><p>$19</p></article><article><h2>Pro</h2><p>$49</p></article><article><h2>Studio</h2><p>$99</p></article></section>' },
+      { slug: 'product-card', name: 'Product Card', description: 'A semantic commerce product summary with media, price, and actions.', variants: ['default', 'compact', 'featured'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<section class="sk-product-card"><div class="sk-product-card__layout"><div class="lab-product-meta"><h2>SiteKit License</h2><p>$49 - Lifetime updates</p><button class="sk-button" type="button">Add to cart</button></div><div data-product-media>Image</div></div></section>' },
+      { slug: 'product-grid', name: 'Product Grid', description: 'A responsive product listing surface.', variants: ['catalog', 'compact', 'comparison'], keyboard: 'No keyboard behavior required unless interactive content is slotted.', sample: '<section class="sk-product-grid" aria-label="Products"><article><div data-product-media>Core</div><h2>Core</h2><p>$19</p><button class="sk-button" type="button">Add</button></article><article><div data-product-media>Pro</div><h2>Pro</h2><p>$49</p><button class="sk-button" type="button">Add</button></article><article><div data-product-media>Studio</div><h2>Studio</h2><p>$99</p><button class="sk-button" type="button">Add</button></article></section>' },
       { slug: 'promo-banner', name: 'Promo Banner', description: 'A dismissible commercial or release announcement banner.', variants: ['info', 'success', 'warning'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<section class="sk-promo-banner"><h2>Release channel stable</h2><p>New command-style component previews are available.</p><button class="sk-button" type="button">Dismiss</button></section>' },
-      { slug: 'tabs', name: 'Tabs', description: 'A keyboard navigable view switcher for related panels.', variants: ['line', 'boxed', 'docs'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<div class="sk-tabs"><div role="tablist" aria-label="Preview tabs"><button role="tab" aria-selected="true">Overview</button><button role="tab" aria-selected="false">Tokens</button></div><section role="tabpanel" tabindex="0">Component preview panel.</section></div>' },
+      { slug: 'tabs', name: 'Tabs', description: 'A keyboard navigable view switcher for related panels.', variants: ['line', 'boxed', 'docs'], keyboard: 'Interactive descendants must be reachable by keyboard and expose visible focus.', sample: '<div class="sk-tabs" data-tab-demo><div role="tablist" aria-label="Preview tabs"><button id="tab-overview" role="tab" aria-selected="true" aria-controls="panel-overview" data-panel-content="Component preview panel.">Overview</button><button id="tab-tokens" role="tab" aria-selected="false" aria-controls="panel-overview" data-panel-content="Tokens, variants, and accessibility notes stay connected to the source component.">Tokens</button></div><section id="panel-overview" role="tabpanel" tabindex="0" aria-labelledby="tab-overview">Component preview panel.</section></div>' },
       { slug: 'trust-strip', name: 'Trust Strip', description: 'A compact proof row for security, shipping, warranties, or social proof.', variants: ['default', 'compact', 'bordered'], keyboard: 'No keyboard behavior required unless interactive content is slotted.', sample: '<section class="sk-trust-strip"><h2>Trusted checks</h2><div class="lab-sample-row"><span class="sk-badge" data-variant="success">Build</span><span class="sk-badge" data-variant="success">Lint</span><span class="sk-badge" data-variant="success">Snapshot</span></div></section>' }
     ];
 
     const list = document.querySelector('#component-list');
     const modal = document.querySelector('#component-preview');
     const previewTitle = document.querySelector('#preview-title');
-    const previewVariants = document.querySelector('#preview-variants');
     const previewStage = document.querySelector('#preview-stage');
     const previewCode = document.querySelector('#preview-code');
     const previewCodeTitle = document.querySelector('#preview-code-title');
+    const copyMarkup = document.querySelector('[data-copy-markup]');
 
     const renderBadges = (variants) => variants.map((variant) => `<span class="sk-badge" data-variant="outline">${variant}</span>`).join('');
 
@@ -129,11 +132,49 @@
       const component = componentData.find((item) => item.slug === button.dataset.preview);
       if (!component) return;
       previewTitle.textContent = component.name;
-      previewVariants.innerHTML = renderBadges(component.variants);
       previewStage.innerHTML = component.sample;
       previewCodeTitle.textContent = `${component.name} markup`;
       previewCode.textContent = component.sample;
       modal.showModal();
+      modal.focus({ preventScroll: true });
+    });
+
+    copyMarkup.addEventListener('click', async () => {
+      const text = previewCode.textContent;
+      copyMarkup.textContent = 'Copied';
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          throw new Error('Clipboard API unavailable');
+        }
+      } catch {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.insetBlockStart = '0';
+        textarea.style.opacity = '0';
+        document.body.append(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        textarea.remove();
+      }
+      window.setTimeout(() => {
+        copyMarkup.textContent = 'Copy';
+      }, 1200);
+    });
+
+    previewStage.addEventListener('click', (event) => {
+      const tab = event.target.closest('[role="tab"]');
+      if (!tab) return;
+      const tabs = [...tab.closest('[role="tablist"]').querySelectorAll('[role="tab"]')];
+      const panel = previewStage.querySelector(`#${tab.getAttribute('aria-controls')}`);
+      tabs.forEach((item) => item.setAttribute('aria-selected', String(item === tab)));
+      if (panel) {
+        panel.textContent = tab.dataset.panelContent;
+        panel.setAttribute('aria-labelledby', tab.id);
+      }
     });
   </script>
 </body>
