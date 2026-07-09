@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Segmented Control",
+      "variant": "single-select"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

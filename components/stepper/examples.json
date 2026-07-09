@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Stepper",
+      "variant": "number"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Image",
+      "variant": "figure"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Color Picker",
+      "variant": "default"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

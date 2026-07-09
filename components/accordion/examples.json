@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Accordion",
+      "variant": "faq"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

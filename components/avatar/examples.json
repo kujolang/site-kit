@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Avatar",
+      "variant": "initials"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Carousel",
+      "variant": "cards"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

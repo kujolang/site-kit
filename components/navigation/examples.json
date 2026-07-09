@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Navigation",
+      "variant": "primary"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

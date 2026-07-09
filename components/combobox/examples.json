@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Combobox",
+      "variant": "autocomplete"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

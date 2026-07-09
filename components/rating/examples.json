@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Rating",
+      "variant": "five-point"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

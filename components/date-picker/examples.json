@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Date Picker",
+      "variant": "calendar"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

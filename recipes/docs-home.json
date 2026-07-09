@@ -5,7 +5,7 @@
   "layout": "docs.html",
   "components": [
     "header",
-    "docs-nav",
+    "navigation",
     "hero",
     "code-block",
     "card",

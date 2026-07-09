@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Label",
+      "variant": "field"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

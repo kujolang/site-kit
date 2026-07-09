@@ -1,0 +1,1 @@
+@layer components { .sk-link { color: var(--sk-text-primary); font-family: var(--sk-font-mono); text-decoration: underline; text-underline-offset: var(--sk-border-2); } .sk-link:hover { text-decoration-thickness: var(--sk-border-2); } .sk-link:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } }

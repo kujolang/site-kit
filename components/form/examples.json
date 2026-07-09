@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Form",
+      "variant": "stacked"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

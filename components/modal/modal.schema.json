@@ -1,6 +1,6 @@
 {
   "$schema": "../../schemas/component.schema.json",
-  "name": "Modal Dialog",
+  "name": "Modal",
   "description": "An interruptive dialog that requires deliberate focus management.",
   "props": {
     "id": "string",

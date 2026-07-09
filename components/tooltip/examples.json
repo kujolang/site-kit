@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Tooltip",
+      "variant": "default"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

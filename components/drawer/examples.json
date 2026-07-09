@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Drawer",
+      "variant": "right"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]

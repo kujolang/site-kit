@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Rich Text Editor",
+      "variant": "basic"
+    },
+    "notes": "Use semantic landmarks and tokenized styling."
+  }
+]
