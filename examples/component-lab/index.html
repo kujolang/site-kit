@@ -1503,6 +1503,18 @@
     let activeMarkup = '';
 
     const renderBadges = (variants) => variants.map((variant) => `<span class="sk-badge" data-variant="outline">${variant}</span>`).join('');
+    const duplicateBentoSlugs = new Set([
+      'bento-grid-7',
+      'testing-bento-1',
+      'testing-bento-1-bootstrap',
+      'testing-bento-grid-2',
+      'testing-bento-grid-3',
+      'testing-bento-grid-4',
+      'testing-bento-grid-5',
+      'testing-bento-grid-6',
+      'testing-bento-grid-7'
+    ]);
+    const previewComponents = componentData.filter((component) => !duplicateBentoSlugs.has(component.slug));
     const previewKind = (component) => component.slug.includes('bento') ? 'bento' : 'default';
     const previewId = (component) => `${component.slug}-preview`;
     const sampleValues = {
@@ -1536,7 +1548,15 @@
       if (key === 'items') return '<article><h3>Tokenized</h3><p>Uses SiteKit theme values.</p></article><article><h3>Semantic</h3><p>Readable markup and clear structure.</p></article><article><h3>Responsive</h3><p>Adapts across viewports.</p></article>';
       return sampleValues[key] || component.name;
     };
-    const renderSample = (component) => component.sample.replace(/\{\{([a-zA-Z0-9_.-]+)\}\}/g, (_match, key) => componentValue(key, component));
+    const renderSample = (component) => {
+      if (component.slug === 'badge') {
+        return `<div class="lab-sample-row" aria-label="Badge variants">${component.variants.map((variant) => `<span class="sk-badge" data-variant="${variant}">${variant}</span>`).join('')}</div>`;
+      }
+      if (component.slug === 'button') {
+        return `<div class="lab-sample-row" aria-label="Button variants">${component.variants.map((variant) => `<button class="sk-button" type="button" data-variant="${variant}">${variant}</button>`).join('')}</div>`;
+      }
+      return component.sample.replace(/\{\{([a-zA-Z0-9_.-]+)\}\}/g, (_match, key) => componentValue(key, component));
+    };
     const preparePreview = () => {
       previewStage.querySelectorAll('dialog').forEach((dialog) => {
         dialog.setAttribute('open', '');
@@ -1544,7 +1564,7 @@
       });
     };
 
-    list.innerHTML = componentData.map((component) => `
+    list.innerHTML = previewComponents.map((component) => `
       <section class="sk-card lab-card" id="${component.slug}">
         <div class="lab-card__body">
           <h2>${component.name}</h2>
@@ -1561,7 +1581,7 @@
     list.addEventListener('click', (event) => {
       const button = event.target.closest('[data-preview]');
       if (!button) return;
-      const component = componentData.find((item) => item.slug === button.dataset.preview);
+      const component = previewComponents.find((item) => item.slug === button.dataset.preview);
       if (!component) return;
       const markup = renderSample(component);
       previewTitle.textContent = component.name;
