@@ -30,8 +30,10 @@
       .lab-preview-actions { display: flex; align-items: center; gap: var(--sk-space-3); }
       .lab-preview-actions form { margin: 0; }
       .lab-icon-button { inline-size: var(--sk-size-control-md); padding-inline: 0; }
-      .lab-preview-stage { min-block-size: min(66dvh, 48rem); display: grid; align-items: center; inline-size: min(100% - (2 * var(--sk-space-5)), var(--sk-size-content-xl)); margin-inline: auto; background: var(--sk-surface-page); padding-block: var(--sk-space-8); }
+      .lab-preview-stage { min-block-size: min(66dvh, 48rem); display: grid; align-items: center; inline-size: calc(100% - (2 * var(--sk-space-5))); margin-inline: auto; background: var(--sk-surface-page); padding-block: var(--sk-space-8); }
       .lab-preview-stage > * { inline-size: 100%; max-inline-size: 100%; }
+      .lab-preview-stage[data-preview-kind="bento"] { align-items: stretch; }
+      .lab-preview-stage[data-preview-kind="bento"] > * { block-size: 100%; min-block-size: min(66dvh, 48rem); }
       .lab-sample-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sk-space-4); }
       .lab-sample-stack { display: grid; gap: var(--sk-space-3); }
       .lab-sample-row { display: flex; flex-wrap: wrap; gap: var(--sk-space-3); align-items: center; }
@@ -1501,6 +1503,46 @@
     let activeMarkup = '';
 
     const renderBadges = (variants) => variants.map((variant) => `<span class="sk-badge" data-variant="outline">${variant}</span>`).join('');
+    const previewKind = (component) => component.slug.includes('bento') ? 'bento' : 'default';
+    const previewId = (component) => `${component.slug}-preview`;
+    const sampleValues = {
+      actions: '<a class="sk-button" href="#preview-action">Primary action</a><a class="sk-button" data-variant="secondary" href="#preview-secondary">Secondary</a>',
+      body: 'Tokenized content with semantic structure, accessible controls, and square SiteKit geometry.',
+      brand: 'SiteKit',
+      caption: 'sitekit-example.js',
+      code: 'import { SiteKit } from "@kujolang/sitekit";\n\nSiteKit.compose("launch-page");',
+      content: '<p>Use native disclosure behavior with clear, scannable supporting content.</p>',
+      help: 'Use a work email so the team can follow up.',
+      legal: '&copy; 2026 SiteKit. All rights reserved.',
+      name: 'name',
+      nav: '<a href="#docs">Docs</a><a href="#components">Components</a><a href="#pricing">Pricing</a>',
+      panel: '<p>Compose related views without leaving the current context.</p>',
+      summary: 'How does this component work?',
+      tabs: '<button role="tab" aria-selected="true">Overview</button><button role="tab">Details</button>',
+      title: 'Preview Dialog'
+    };
+    const componentValue = (key, component) => {
+      const id = previewId(component);
+      if (key === 'id') return id;
+      if (key === 'label') return `${component.name} preview`;
+      if (key === 'heading') return `${component.name} for production pages`;
+      if (key === 'links') return `<a href="#${id}-docs">Docs</a><a href="#${id}-components">Components</a><a href="#${id}-support">Support</a>`;
+      if (key === 'columns') return '<tr><th scope="col">Feature</th><th scope="col">Starter</th><th scope="col">Pro</th></tr>';
+      if (key === 'rows' && component.slug === 'metadata-panel') return '<div><dt>Status</dt><dd>Ready</dd></div><div><dt>Theme</dt><dd>Tokenized</dd></div><div><dt>Mode</dt><dd>Accessible</dd></div>';
+      if (key === 'rows') return '<tr><th scope="row">Components</th><td>Core</td><td>All</td></tr><tr><th scope="row">Support</th><td>Email</td><td>Priority</td></tr>';
+      if (key === 'items' && component.slug === 'command-strip') return '<span>Build: passing</span><span>Theme: kujo-light</span><span>Components: 119</span>';
+      if (key === 'items' && component.slug === 'ecosystem-map') return '<article class="lab-map-node"><span>Core</span><h3>Components</h3><p>Reusable contracts.</p></article><article class="lab-map-node"><span>Docs</span><h3>Recipes</h3><p>Composable pages.</p></article><article class="lab-map-node"><span>Tokens</span><h3>Themes</h3><p>Consistent surfaces.</p></article>';
+      if (key === 'items' && component.slug === 'product-grid') return '<article><div data-product-media>Preview</div><h3>Starter Kit</h3><p>$49</p><button class="sk-button" type="button">Add</button></article><article><div data-product-media>Preview</div><h3>Pro Kit</h3><p>$99</p><button class="sk-button" type="button">Add</button></article>';
+      if (key === 'items') return '<article><h3>Tokenized</h3><p>Uses SiteKit theme values.</p></article><article><h3>Semantic</h3><p>Readable markup and clear structure.</p></article><article><h3>Responsive</h3><p>Adapts across viewports.</p></article>';
+      return sampleValues[key] || component.name;
+    };
+    const renderSample = (component) => component.sample.replace(/\{\{([a-zA-Z0-9_.-]+)\}\}/g, (_match, key) => componentValue(key, component));
+    const preparePreview = () => {
+      previewStage.querySelectorAll('dialog').forEach((dialog) => {
+        dialog.setAttribute('open', '');
+        dialog.classList.add('lab-modal-static');
+      });
+    };
 
     list.innerHTML = componentData.map((component) => `
       <section class="sk-card lab-card" id="${component.slug}">
@@ -1521,9 +1563,12 @@
       if (!button) return;
       const component = componentData.find((item) => item.slug === button.dataset.preview);
       if (!component) return;
+      const markup = renderSample(component);
       previewTitle.textContent = component.name;
-      previewStage.innerHTML = component.sample;
-      activeMarkup = component.sample;
+      previewStage.dataset.previewKind = previewKind(component);
+      previewStage.innerHTML = markup;
+      preparePreview();
+      activeMarkup = previewStage.innerHTML;
       copyMarkup.textContent = 'Copy';
       modal.showModal();
       modal.focus({ preventScroll: true });
