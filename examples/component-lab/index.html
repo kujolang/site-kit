@@ -13,7 +13,12 @@
   <style>
     @layer overrides {
       .lab-shell { inline-size: min(100% - (2 * var(--sk-space-5)), var(--sk-size-content-lg)); margin-inline: auto; padding-block: var(--sk-space-6); }
-      .lab-toolbar { position: sticky; inset-block-start: 0; z-index: var(--sk-z-sticky); background: var(--sk-surface-page); padding-block: var(--sk-space-3); }
+      .lab-site-header { position: sticky; inset-block-start: 0; z-index: var(--sk-z-sticky); border-block-end: var(--sk-border-1) solid var(--sk-border-default); background: var(--sk-surface-page); padding-block: var(--sk-space-3); }
+      .lab-site-header .sk-header__inner { justify-content: flex-start; }
+      .lab-site-header select { border: var(--sk-border-1) solid var(--sk-border-default); border-radius: var(--sk-radius-0); background: var(--sk-surface-card); color: var(--sk-text-primary); padding: var(--sk-space-2) var(--sk-space-3); font: inherit; }
+      .lab-component-section { display: grid; gap: var(--sk-space-5); }
+      .lab-component-section + .lab-component-section { margin-block-start: var(--sk-space-12); }
+      .lab-section-title { margin: 0; border-block-end: var(--sk-border-1) solid var(--sk-border-default); padding-block-end: var(--sk-space-3); font-family: var(--sk-font-mono); font-size: var(--sk-type-size-2xl); }
       .lab-list { display: grid; gap: var(--sk-space-5); grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .lab-card { display: flex; flex-direction: column; min-block-size: 100%; }
       .lab-card__body { display: grid; gap: var(--sk-space-4); }
@@ -32,6 +37,8 @@
       .lab-icon-button { inline-size: var(--sk-size-control-md); padding-inline: 0; }
       .lab-preview-stage { min-block-size: min(66dvh, 48rem); display: grid; align-items: center; inline-size: min(80%, calc(100% - (2 * var(--sk-space-5)))); margin-inline: auto; background: var(--sk-surface-page); padding-block: var(--sk-space-8); }
       .lab-preview-stage > * { inline-size: 100%; max-inline-size: 100%; margin-inline: auto; }
+      .lab-preview-stage[data-preview-kind="inline"] { justify-items: center; }
+      .lab-preview-stage[data-preview-kind="inline"] > * { inline-size: auto; }
       .lab-preview-stage[data-preview-kind="bento"] { align-items: stretch; }
       .lab-preview-stage[data-preview-kind="bento"] > * { block-size: 100%; min-block-size: min(66dvh, 48rem); }
       .lab-sample-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sk-space-4); }
@@ -49,12 +56,11 @@
 </head>
 <body>
   <a class="sk-sr-only" href="#main">Skip to component lab</a>
-  <header class="sk-header"><div class="sk-header__inner"><a href="#main">SiteKit</a><nav aria-label="Lab"><a href="#components">Components</a><a href="#tokens">Tokens</a></nav></div></header>
-  <div class="lab-toolbar"><div class="sk-container sk-cluster"><label for="theme">Theme</label><select id="theme"><option value="kujo-light">kujo-light</option><option value="kujo-dark">kujo-dark</option><option value="bzby">bzby</option><option value="personal-dark">personal-dark</option></select></div></div>
+  <header class="sk-header lab-site-header"><div class="sk-header__inner"><a href="#main">SiteKit</a><select id="theme" aria-label="Theme"><option value="kujo-light">kujo-light</option><option value="kujo-dark">kujo-dark</option><option value="bzby">bzby</option><option value="personal-dark">personal-dark</option></select><nav aria-label="Lab"><a href="#components">Components</a><a href="#tokens">Tokens</a></nav></div></header>
   <main id="main" class="lab-shell sk-stack">
-    <section class="sk-hero"><div class="sk-hero__inner"><h1>SiteKit preview surface.</h1><p>Local tokenized components with theme switching, variant labels, accessible notes, and rendered previews.</p></div></section>
+    <section class="sk-hero"><div class="sk-hero__inner"><h1>SiteKit</h1><p>Local tokenized components with theme switching, variant labels, accessible notes, and rendered previews.</p></div></section>
     <section class="sk-card" id="tokens"><h2>Token Preview</h2><ul class="token-list"><li><span class="token-swatch" style="background:var(--sk-surface-page)"></span><code>--sk-surface-page</code></li><li><span class="token-swatch" style="background:var(--sk-surface-card)"></span><code>--sk-surface-card</code></li><li><span class="token-swatch" style="background:var(--sk-text-primary)"></span><code>--sk-text-primary</code></li><li><span class="token-swatch" style="background:var(--sk-text-muted)"></span><code>--sk-text-muted</code></li><li><span class="token-swatch" style="background:var(--sk-action-primary)"></span><code>--sk-action-primary</code></li><li><span class="token-swatch" style="background:var(--sk-border-default)"></span><code>--sk-border-default</code></li><li><span class="token-swatch" style="background:var(--sk-focus-ring)"></span><code>--sk-focus-ring</code></li><li><span class="token-swatch" style="background:var(--sk-state-success)"></span><code>--sk-state-success</code></li><li><span class="token-swatch" style="background:var(--sk-state-warning)"></span><code>--sk-state-warning</code></li><li><span class="token-swatch" style="background:var(--sk-state-danger)"></span><code>--sk-state-danger</code></li></ul></section>
-    <section id="components" class="sk-stack"><h2>Components</h2><div class="lab-list" id="component-list"></div></section>
+    <section id="components" class="sk-stack"><h2>Components</h2><div class="sk-stack" id="component-list"></div></section>
   </main>
 
   <dialog class="sk-modal lab-preview-modal" id="component-preview" aria-labelledby="preview-title" tabindex="-1">
@@ -73,1428 +79,984 @@
     theme.addEventListener('change', () => document.documentElement.dataset.theme = theme.value);
 
     const componentData = [
-          {
-                "slug": "badge",
-                "name": "Badge",
-                "description": "A compact status, category, or metadata label.",
-                "variants": [
-                      "neutral",
-                      "success",
-                      "warning",
-                      "danger",
-                      "outline"
-                ],
-                "keyboard": "No keyboard behavior required unless interactive content is slotted.",
-                "sample": "<span class=\"sk-badge\" data-variant=\"neutral\">{{label}}</span>"
-          },
-          {
-                "slug": "bento-grid",
-                "name": "Bento Grid",
-                "description": "A square-cornered modular grid for grouped capabilities, proof points, or portfolio services.",
-                "variants": [
-                      "portfolio",
-                      "balanced",
-                      "showcase",
-                      "dense"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-bento-grid\" aria-labelledby=\"bento-grid-title\">\n  <div class=\"sk-bento-grid__intro\">\n    <span class=\"sk-badge\" data-variant=\"outline\">Services</span>\n    <h2 id=\"bento-grid-title\">Build systems that stay sharp.</h2>\n    <p>A true bento composition with uneven spans, square panels, and mono titles.</p>\n  </div>\n  <article class=\"sk-bento-grid__item\" data-span=\"wide\">\n    <p class=\"sk-bento-grid__kicker\">01</p>\n    <h3>Custom Apps</h3>\n    <p>Production interfaces, dashboards, and customer workflows with clean component boundaries.</p>\n  </article>\n  <article class=\"sk-bento-grid__item\" data-span=\"tall\">\n    <p class=\"sk-bento-grid__kicker\">02</p>\n    <h3>Security Audits</h3>\n    <p>Focused reviews with remediation paths, checklists, and durable proof.</p>\n  </article>\n  <article class=\"sk-bento-grid__item\">\n    <p class=\"sk-bento-grid__kicker\">03</p>\n    <h3>Plugins</h3>\n    <p>Purpose-built extensions.</p>\n  </article>\n  <article class=\"sk-bento-grid__item\">\n    <p class=\"sk-bento-grid__kicker\">04</p>\n    <h3>Design Systems</h3>\n    <p>Reusable component contracts.</p>\n  </article>\n</section>"
-          },
-          {
-                "slug": "bento-grid-7",
-                "name": "Bento Grid",
-                "description": "A source-specific bento grid adapted from an old component into SiteKit square geometry.",
-                "variants": [
-                      "source-bento",
-                      "wide",
-                      "dense"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-bento-grid-7\" aria-labelledby=\"bento-grid-7-title\"><article class=\"sk-bento-grid-7__panel sk-bento-grid-7__intro\" data-span=\"hero\"><span class=\"sk-bento-grid-7__kicker\">Bento Grid</span><h2 id=\"bento-grid-7-title\">Security Audits</h2><p>Custom Apps</p></article><article class=\"sk-bento-grid-7__panel\" data-span=\"wide\"><span class=\"sk-bento-grid-7__kicker\">01</span><h3>Custom Apps</h3><p>Wide content module with durable SiteKit spacing and hard borders.</p></article><article class=\"sk-bento-grid-7__panel\" data-span=\"tall\"><span class=\"sk-bento-grid-7__kicker\">02</span><h3>Plugins</h3><p>Tall supporting module that creates the staggered bento rhythm.</p></article><article class=\"sk-bento-grid-7__panel\"><span class=\"sk-bento-grid-7__kicker\">03</span><h3>Web Design</h3><p>Compact proof point.</p></article><article class=\"sk-bento-grid-7__panel\"><span class=\"sk-bento-grid-7__kicker\">04</span><h3>System-ready</h3><p>Tokenized and responsive.</p></article></section>"
-          },
-          {
-                "slug": "button",
-                "name": "Button",
-                "description": "A semantic action control for links, form submits, and interface commands.",
-                "variants": [
-                      "primary",
-                      "secondary",
-                      "ghost",
-                      "danger"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<button class=\"sk-button\" type=\"button\" data-variant=\"primary\">{{label}}</button>"
-          },
-          {
-                "slug": "card",
-                "name": "Card",
-                "description": "A bounded content region for a single object, summary, or grouped action.",
-                "variants": [
-                      "plain",
-                      "interactive",
-                      "dense"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-card\" aria-labelledby=\"card-title\"><h2 id=\"card-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
-          },
-          {
-                "slug": "checkout-summary",
-                "name": "Checkout Summary",
-                "description": "A commerce order summary with totals, taxes, discounts, and trust metadata.",
-                "variants": [
-                      "default",
-                      "compact",
-                      "sticky"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-checkout-summary\" aria-labelledby=\"checkout-summary-title\"><h2 id=\"checkout-summary-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
-          },
-          {
-                "slug": "code-block",
-                "name": "Code Block",
-                "description": "A readable code or command block with caption and copy action.",
-                "variants": [
-                      "default",
-                      "terminal",
-                      "numbered"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<figure class=\"sk-code-block\"><figcaption><span>{{caption}}</span><button type=\"button\">Copy</button></figcaption><pre><code>{{code}}</code></pre></figure>"
-          },
-          {
-                "slug": "command-strip",
-                "name": "Command Strip",
-                "description": "A compact operational metric strip for status, filters, or system state.",
-                "variants": [
-                      "default",
-                      "compact",
-                      "four-up"
-                ],
-                "keyboard": "No keyboard behavior required unless interactive content is slotted.",
-                "sample": "<section class=\"sk-command-strip\" aria-label=\"{{label}}\">{{items}}</section>"
-          },
-          {
-                "slug": "comparison-table",
-                "name": "Comparison Table",
-                "description": "A structured feature comparison table for commercial or docs pages.",
-                "variants": [
-                      "default",
-                      "compact",
-                      "sticky"
-                ],
-                "keyboard": "No keyboard behavior required unless interactive content is slotted.",
-                "sample": "<div class=\"sk-comparison-table\"><table><caption>{{caption}}</caption><thead>{{columns}}</thead><tbody>{{rows}}</tbody></table></div>"
-          },
-          {
-                "slug": "content-section",
-                "name": "Content Section",
-                "description": "A responsive editorial section with copy, actions, and an optional media or proof panel.",
-                "variants": [
-                      "media-right",
-                      "media-left",
-                      "centered",
-                      "compact"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-content-section\" aria-labelledby=\"content-section-title\">\n  <div class=\"sk-content-section__copy\">\n    <span class=\"sk-badge\" data-variant=\"outline\">Workflow</span>\n    <h2 id=\"content-section-title\">Build fast, deploy faster.</h2>\n    <p>Use a focused content block when the page needs a deeper argument than a hero or card can carry.</p>\n    <a class=\"sk-button\" href=\"#content-section-title\">Read the guide</a>\n  </div>\n  <figure class=\"sk-content-section__media\">\n    <figcaption>Deploy pipeline</figcaption>\n    <dl>\n      <div><dt>Build</dt><dd>42s</dd></div>\n      <div><dt>Checks</dt><dd>Passing</dd></div>\n      <div><dt>Theme</dt><dd>Tokenized</dd></div>\n    </dl>\n  </figure>\n</section>"
-          },
-          {
-                "slug": "cta",
-                "name": "CTA",
-                "description": "A conversion block with a clear next action.",
-                "variants": [
-                      "band",
-                      "inline",
-                      "stacked"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-cta\" aria-labelledby=\"cta-title\"><h2 id=\"cta-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
-          },
-          {
-                "slug": "disclosure",
-                "name": "Disclosure FAQ",
-                "description": "A progressive reveal component for FAQs and optional detail.",
-                "variants": [
-                      "default",
-                      "faq",
-                      "compact"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<div class=\"sk-disclosure\"><details><summary>{{summary}}</summary><div class=\"sk-disclosure__content\">{{content}}</div></details></div>"
-          },
-          {
-                "slug": "docs-nav",
-                "name": "Docs Nav",
-                "description": "A documentation navigation landmark for section trees and active states.",
-                "variants": [
-                      "sidebar",
-                      "inline",
-                      "mobile"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<nav class=\"sk-docs-nav\" aria-label=\"Documentation\"><div class=\"sk-docs-nav__inner\">{{links}}</div></nav>"
-          },
-          {
-                "slug": "ecosystem-map",
-                "name": "Ecosystem Map",
-                "description": "A semantic map of projects, packages, docs, and relationships.",
-                "variants": [
-                      "grid",
-                      "radial",
-                      "compact"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-ecosystem-map\" aria-label=\"{{label}}\">{{items}}</section>"
-          },
-          {
-                "slug": "empty-state",
-                "name": "Empty State",
-                "description": "A clear message for empty collections with optional recovery action.",
-                "variants": [
-                      "default",
-                      "compact",
-                      "commerce"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-empty-state\" aria-labelledby=\"empty-state-title\"><h2 id=\"empty-state-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
-          },
-          {
-                "slug": "error-state",
-                "name": "Error State",
-                "description": "A recoverable error message with next steps and support context.",
-                "variants": [
-                      "default",
-                      "inline",
-                      "critical"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-error-state\" aria-labelledby=\"error-state-title\"><h2 id=\"error-state-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
-          },
-          {
-                "slug": "faq-panel",
-                "name": "FAQ Panel",
-                "description": "A structured question-and-answer surface for accordion, sidebar, and grid FAQ layouts.",
-                "variants": [
-                      "accordion",
-                      "sidebar",
-                      "card-grid",
-                      "icon-blocks"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-faq-panel\" aria-labelledby=\"faq-panel-title\">\n  <div class=\"sk-faq-panel__aside\">\n    <span class=\"sk-badge\" data-variant=\"outline\">Help</span>\n    <h2 id=\"faq-panel-title\">Frequently asked questions</h2>\n  </div>\n  <div class=\"sk-faq-panel__items\">\n    <details open>\n      <summary>How do I get started?</summary>\n      <p>Start with the component contracts, then compose the page from tokenized blocks.</p>\n    </details>\n    <details>\n      <summary>Can I use my own domain?</summary>\n      <p>Yes. The component pattern keeps setup details separate from the answer content.</p>\n    </details>\n    <details>\n      <summary>Is this accessible?</summary>\n      <p>Native details elements provide keyboard and screen-reader behavior without custom scripting.</p>\n    </details>\n  </div>\n</section>"
-          },
-          {
-                "slug": "feature-grid",
-                "name": "Feature Grid",
-                "description": "A responsive list of capabilities or benefits.",
-                "variants": [
-                      "two-column",
-                      "three-column",
-                      "dense"
-                ],
-                "keyboard": "No keyboard behavior required unless interactive content is slotted.",
-                "sample": "<section class=\"sk-feature-grid\" aria-label=\"{{label}}\">{{items}}</section>"
-          },
-          {
-                "slug": "footer",
-                "name": "Footer",
-                "description": "A semantic page footer for navigation, metadata, and legal links.",
-                "variants": [
-                      "simple",
-                      "columns",
-                      "product"
-                ],
-                "keyboard": "No keyboard behavior required unless interactive content is slotted.",
-                "sample": "<footer class=\"sk-footer\"><div class=\"sk-footer__inner\"><p>{{brand}}</p><nav aria-label=\"Footer\">{{links}}</nav><small>{{legal}}</small></div></footer>"
-          },
-          {
-                "slug": "form-field",
-                "name": "Form Field",
-                "description": "A labeled input group with help, validation, and autocomplete support.",
-                "variants": [
-                      "text",
-                      "select",
-                      "textarea",
-                      "checkbox"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<div class=\"sk-form-field\"><label for=\"{{id}}\">{{label}}</label><input id=\"{{id}}\" name=\"{{name}}\" type=\"text\" autocomplete=\"name\" aria-describedby=\"{{id}}-help\"><p class=\"sk-form-field__help\" id=\"{{id}}-help\">{{help}}</p></div>"
-          },
-          {
-                "slug": "generator-panel",
-                "name": "Generator Panel",
-                "description": "A form-forward tool panel for small generators, prompts, and preview controls.",
-                "variants": [
-                      "form-preview",
-                      "compact",
-                      "stacked"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-generator-panel\" aria-labelledby=\"generator-title\">\n  <form>\n    <h2 id=\"generator-title\">Thumbnail generator</h2>\n    <label for=\"generator-topic\">Topic</label>\n    <input id=\"generator-topic\" name=\"topic\" type=\"text\" value=\"Static site launch\">\n    <label for=\"generator-style\">Style</label>\n    <select id=\"generator-style\" name=\"style\"><option>Editorial</option><option>Technical</option></select>\n    <button class=\"sk-button\" type=\"submit\">Generate</button>\n  </form>\n  <div class=\"sk-generator-panel__preview\" role=\"img\" aria-label=\"Generated preview placeholder\">Preview</div>\n</section>"
-          },
-          {
-                "slug": "header",
-                "name": "Header",
-                "description": "A top-level site header with navigation and primary action.",
-                "variants": [
-                      "default",
-                      "docs",
-                      "commerce"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<header class=\"sk-header\"><div class=\"sk-header__inner\"><a href=\"/\" aria-label=\"{{brand}} home\">{{brand}}</a><nav aria-label=\"Primary\">{{nav}}</nav><div>{{actions}}</div></div></header>"
-          },
-          {
-                "slug": "hero",
-                "name": "Hero",
-                "description": "A first-viewport introduction for product, documentation, and launch pages.",
-                "variants": [
-                      "split",
-                      "centered",
-                      "technical"
-                ],
-                "keyboard": "No keyboard behavior required unless interactive content is slotted.",
-                "sample": "<section class=\"sk-hero\" aria-labelledby=\"hero-title\"><h2 id=\"hero-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
-          },
-          {
-                "slug": "loading-state",
-                "name": "Loading State",
-                "description": "A non-blocking loading placeholder that respects reduced motion.",
-                "variants": [
-                      "skeleton",
-                      "inline",
-                      "panel"
-                ],
-                "keyboard": "No keyboard behavior required unless interactive content is slotted.",
-                "sample": "<div class=\"sk-loading-state\" role=\"status\" aria-live=\"polite\"><span>{{label}}</span><span data-skeleton aria-hidden=\"true\"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></div>"
-          },
-          {
-                "slug": "metadata-panel",
-                "name": "Metadata Panel",
-                "description": "A compact key-value panel for operational metadata and object facts.",
-                "variants": [
-                      "default",
-                      "compact",
-                      "sidecar"
-                ],
-                "keyboard": "No keyboard behavior required unless interactive content is slotted.",
-                "sample": "<aside class=\"sk-metadata-panel\" aria-label=\"{{label}}\"><dl>{{rows}}</dl></aside>"
-          },
-          {
-                "slug": "modal",
-                "name": "Modal Dialog",
-                "description": "An interruptive dialog that requires deliberate focus management.",
-                "variants": [
-                      "default",
-                      "danger",
-                      "wide"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<dialog class=\"sk-modal\" id=\"{{id}}\" aria-labelledby=\"{{id}}-title\"><h2 id=\"{{id}}-title\">{{title}}</h2><div>{{body}}</div><form method=\"dialog\" class=\"sk-modal__actions\">{{actions}}</form></dialog>"
-          },
-          {
-                "slug": "newsletter-box-1",
-                "name": "Cyberpunk Newsletter Modal",
-                "description": "A source-specific newsletter signup component with semantic form controls.",
-                "variants": [
-                      "inline",
-                      "boxed",
-                      "split"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-newsletter-box-1\" aria-labelledby=\"newsletter-box-1-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">Newsletter</span><h2 id=\"newsletter-box-1-title\">Stay Plugged-In</h2><p>I drop relentless, no-fluff insights on coding, hustling, and scaling solo. Built to keep rebels like us t...</p></div><form><label for=\"newsletter-box-1-email\">Email address</label><div><input id=\"newsletter-box-1-email\" name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"you@example.com\"><button class=\"sk-button\" type=\"submit\">Subscribe</button></div><p>Accessible labels, visible focus, and tokenized controls.</p></form></section>"
-          },
-          {
-                "slug": "newsletter-box-2",
-                "name": "Cyberpunk Newsletter Modal",
-                "description": "A source-specific newsletter signup component with semantic form controls.",
-                "variants": [
-                      "inline",
-                      "boxed",
-                      "split"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-newsletter-box-2\" aria-labelledby=\"newsletter-box-2-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">Newsletter</span><h2 id=\"newsletter-box-2-title\">Join the Revolution</h2><p>Tokenized structure</p></div><form><label for=\"newsletter-box-2-email\">Email address</label><div><input id=\"newsletter-box-2-email\" name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"you@example.com\"><button class=\"sk-button\" type=\"submit\">Subscribe</button></div><p>Accessible labels, visible focus, and tokenized controls.</p></form></section>"
-          },
-          {
-                "slug": "newsletter-box-3",
-                "name": "Cyberpunk Newsletter Modal",
-                "description": "A source-specific newsletter signup component with semantic form controls.",
-                "variants": [
-                      "inline",
-                      "boxed",
-                      "split"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-newsletter-box-3\" aria-labelledby=\"newsletter-box-3-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">Newsletter</span><h2 id=\"newsletter-box-3-title\">Stay Plugged-In</h2><p>Tokenized structure</p></div><form><label for=\"newsletter-box-3-email\">Email address</label><div><input id=\"newsletter-box-3-email\" name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"you@example.com\"><button class=\"sk-button\" type=\"submit\">Subscribe</button></div><p>Accessible labels, visible focus, and tokenized controls.</p></form></section>"
-          },
-          {
-                "slug": "newsletter-box-4",
-                "name": "Cyberpunk Newsletter Modal",
-                "description": "A source-specific newsletter signup component with semantic form controls.",
-                "variants": [
-                      "inline",
-                      "boxed",
-                      "split"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-newsletter-box-4\" aria-labelledby=\"newsletter-box-4-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">Newsletter</span><h2 id=\"newsletter-box-4-title\">Join the Revolution</h2><p>Tokenized structure</p></div><form><label for=\"newsletter-box-4-email\">Email address</label><div><input id=\"newsletter-box-4-email\" name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"you@example.com\"><button class=\"sk-button\" type=\"submit\">Subscribe</button></div><p>Accessible labels, visible focus, and tokenized controls.</p></form></section>"
-          },
-          {
-                "slug": "newsletter-signup",
-                "name": "Newsletter Signup",
-                "description": "A focused email capture block with semantic form controls and compact supporting copy.",
-                "variants": [
-                      "inline",
-                      "boxed",
-                      "modal",
-                      "split"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-newsletter-signup\" aria-labelledby=\"newsletter-title\">\n  <div>\n    <span class=\"sk-badge\" data-variant=\"outline\">Newsletter</span>\n    <h2 id=\"newsletter-title\">Stay in the loop.</h2>\n    <p>Get concise build notes, release prompts, and design-system updates.</p>\n  </div>\n  <form class=\"sk-newsletter-signup__form\">\n    <label for=\"newsletter-email\">Email address</label>\n    <div>\n      <input id=\"newsletter-email\" name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"you@example.com\">\n      <button class=\"sk-button\" type=\"submit\">Subscribe</button>\n    </div>\n    <p>One useful note at a time. Unsubscribe whenever.</p>\n  </form>\n</section>"
-          },
-          {
-                "slug": "partners-strip",
-                "name": "Partners Strip",
-                "description": "A logo or partner proof row with semantic list structure and theme-safe styling.",
-                "variants": [
-                      "logos",
-                      "boxed",
-                      "compact"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-partners-strip\" aria-labelledby=\"partners-title\">\n  <h2 id=\"partners-title\">Trusted by leading teams</h2>\n  <ul>\n    <li>Northstar</li>\n    <li>Atlas</li>\n    <li>Signal</li>\n    <li>Foundry</li>\n  </ul>\n</section>"
-          },
-          {
-                "slug": "pricing-table",
-                "name": "Pricing Table",
-                "description": "A commercial pricing comparison layout with plans and features.",
-                "variants": [
-                      "monthly",
-                      "annual",
-                      "comparison"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<div class=\"sk-pricing-table\"><table><caption>{{caption}}</caption><thead>{{columns}}</thead><tbody>{{rows}}</tbody></table></div>"
-          },
-          {
-                "slug": "product-card",
-                "name": "Product Card",
-                "description": "A semantic commerce product summary with media, price, and actions.",
-                "variants": [
-                      "default",
-                      "compact",
-                      "featured"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-product-card\" aria-labelledby=\"product-card-title\"><h2 id=\"product-card-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
-          },
-          {
-                "slug": "product-grid",
-                "name": "Product Grid",
-                "description": "A responsive product listing surface.",
-                "variants": [
-                      "catalog",
-                      "compact",
-                      "comparison"
-                ],
-                "keyboard": "No keyboard behavior required unless interactive content is slotted.",
-                "sample": "<section class=\"sk-product-grid\" aria-label=\"{{label}}\">{{items}}</section>"
-          },
-          {
-                "slug": "product-showcase",
-                "name": "Product Showcase",
-                "description": "A compact commerce or template showcase adapted from legacy landing-page demos.",
-                "variants": [
-                      "template",
-                      "commerce",
-                      "editorial"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-product-showcase\" aria-labelledby=\"product-showcase-title\">\n  <div class=\"sk-product-showcase__intro\">\n    <span class=\"sk-badge\" data-variant=\"outline\">Showcase</span>\n    <h2 id=\"product-showcase-title\">Summer styles are finally here.</h2>\n    <p>A reusable showcase surface for template galleries, offers, and launches.</p>\n  </div>\n  <div class=\"sk-product-showcase__items\">\n    <article><h3>Deploy faster</h3><p>Launch-ready pattern.</p><a class=\"sk-button\" href=\"#product-showcase-title\">View</a></article>\n    <article><h3>Work with us</h3><p>Concise product story.</p><a class=\"sk-button\" href=\"#product-showcase-title\" data-variant=\"secondary\">Open</a></article>\n  </div>\n</section>"
-          },
-          {
-                "slug": "promo-banner",
-                "name": "Promo Banner",
-                "description": "A dismissible commercial or release announcement banner.",
-                "variants": [
-                      "info",
-                      "success",
-                      "warning"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-promo-banner\" aria-labelledby=\"promo-banner-title\"><h2 id=\"promo-banner-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
-          },
-          {
-                "slug": "recent-posts",
-                "name": "Recent Posts",
-                "description": "A semantic article-list component for blog previews and latest insights.",
-                "variants": [
-                      "cards",
-                      "list",
-                      "featured"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-recent-posts\" aria-labelledby=\"recent-posts-title\">\n  <h2 id=\"recent-posts-title\">Latest insights</h2>\n  <div>\n    <article><p class=\"sk-recent-posts__meta\">Guide</p><h3><a href=\"#recent-posts-title\">How SiteKit keeps components consistent</a></h3><p>Source contracts, generated CSS, and previews stay connected.</p></article>\n    <article><p class=\"sk-recent-posts__meta\">Workflow</p><h3><a href=\"#recent-posts-title\">Migrating legacy patterns cleanly</a></h3><p>Use old layouts as source material, not visual drift.</p></article>\n  </div>\n</section>"
-          },
-          {
-                "slug": "resource-links",
-                "name": "Resource Links",
-                "description": "A compact link collection for docs, examples, templates, and external references.",
-                "variants": [
-                      "grid",
-                      "stack",
-                      "annotated"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-resource-links\" aria-labelledby=\"resources-title\">\n  <h2 id=\"resources-title\">Resource links</h2>\n  <ul>\n    <li><a href=\"#resources-title\">Starter docs</a><p>Implementation notes and source contracts.</p></li>\n    <li><a href=\"#resources-title\">Component recipes</a><p>Composable page patterns.</p></li>\n    <li><a href=\"#resources-title\">Validation guide</a><p>Build, lint, and snapshot checks.</p></li>\n  </ul>\n</section>"
-          },
-          {
-                "slug": "roadmap",
-                "name": "Roadmap",
-                "description": "A chronological product timeline for milestones, launches, and upcoming work.",
-                "variants": [
-                      "timeline",
-                      "compact",
-                      "release-plan"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-roadmap\" aria-labelledby=\"roadmap-title\">\n  <h2 id=\"roadmap-title\">Product roadmap</h2>\n  <ol>\n    <li><time datetime=\"2026-07\">Jul 2026</time><h3>Component import</h3><p>Legacy marketing patterns become token-driven SiteKit components.</p></li>\n    <li><time datetime=\"2026-08\">Aug 2026</time><h3>Recipe refresh</h3><p>Recipes consume the expanded component set.</p></li>\n    <li><time datetime=\"2026-09\">Sep 2026</time><h3>Snapshot review</h3><p>Visual baselines cover the full catalog.</p></li>\n  </ol>\n</section>"
-          },
-          {
-                "slug": "stats-bar",
-                "name": "Stats Bar",
-                "description": "A semantic metric strip for proof points, performance numbers, or portfolio counters.",
-                "variants": [
-                      "inline",
-                      "boxed",
-                      "stacked"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-stats-bar\" aria-label=\"Project stats\">\n  <dl>\n    <div><dt>Open Source Plugins</dt><dd>50+</dd></div>\n    <div><dt>Years Experience</dt><dd>20+</dd></div>\n    <div><dt>Lighthouse Scores</dt><dd>100%</dd></div>\n  </dl>\n</section>"
-          },
-          {
-                "slug": "tabs",
-                "name": "Tabs",
-                "description": "A keyboard navigable view switcher for related panels.",
-                "variants": [
-                      "line",
-                      "boxed",
-                      "docs"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<div class=\"sk-tabs\"><div role=\"tablist\" aria-label=\"{{label}}\">{{tabs}}</div><section role=\"tabpanel\" tabindex=\"0\">{{panel}}</section></div>"
-          },
-          {
-                "slug": "team-grid",
-                "name": "Team Grid",
-                "description": "A responsive people grid for profiles, roles, and compact bios.",
-                "variants": [
-                      "profiles",
-                      "compact",
-                      "leadership"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-team-grid\" aria-labelledby=\"team-title\">\n  <h2 id=\"team-title\">Meet the team</h2>\n  <ul>\n    <li><span aria-hidden=\"true\">AM</span><h3>Alexandra Morgan</h3><p>Product strategy</p></li>\n    <li><span aria-hidden=\"true\">MP</span><h3>Michael Patel</h3><p>Engineering systems</p></li>\n    <li><span aria-hidden=\"true\">JR</span><h3>Jamie Rivera</h3><p>Design operations</p></li>\n  </ul>\n</section>"
-          },
-          {
-                "slug": "tessting-roadmap-1",
-                "name": "Timeline / Roadmap Showcase",
-                "description": "A source-specific roadmap timeline adapted into tokenized SiteKit structure.",
-                "variants": [
-                      "timeline",
-                      "milestones"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-tessting-roadmap-1\" aria-labelledby=\"tessting-roadmap-1-title\"><h2 id=\"tessting-roadmap-1-title\">Product Roadmap</h2><ol><li><time datetime=\"2026-07\">Jul 2026</time><h3>v1.0 Launch</h3><p>Initial source-specific milestone.</p></li><li><time datetime=\"2026-08\">Aug 2026</time><h3>Image Optimization</h3><p>Follow-up system milestone.</p></li><li><time datetime=\"2026-09\">Sep 2026</time><h3>Tag &amp; Category Archives</h3><p>Verification and release pass.</p></li></ol></section>"
-          },
-          {
-                "slug": "testimonial-rail",
-                "name": "Testimonial Rail",
-                "description": "A scroll-safe testimonial layout for customer quotes and builder proof.",
-                "variants": [
-                      "rail",
-                      "grid",
-                      "featured"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testimonial-rail\" aria-labelledby=\"testimonial-title\">\n  <h2 id=\"testimonial-title\">What builders say</h2>\n  <div>\n    <figure><blockquote>SiteKit gave our launch pages a consistent system without slowing the team down.</blockquote><figcaption>Alex, product lead</figcaption></figure>\n    <figure><blockquote>The components are plain enough to trust and structured enough to scale.</blockquote><figcaption>Morgan, engineer</figcaption></figure>\n  </div>\n</section>"
-          },
-          {
-                "slug": "testing",
-                "name": "Testing",
-                "description": "A source-specific showcase section adapted from an old component.",
-                "variants": [
-                      "showcase",
-                      "editorial"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing\" aria-labelledby=\"testing-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">Testing</span><h2 id=\"testing-title\">Testing</h2><p>Tokenized structure</p><a class=\"sk-button\" href=\"#testing-title\">Open</a></div><div class=\"sk-testing__surface\"><h3>Accessible by default</h3><p>Ready to compose</p></div></section>"
-          },
-          {
-                "slug": "testing-bento-1",
-                "name": "Portfolio Bento Grid",
-                "description": "A source-specific bento grid adapted from an old component into SiteKit square geometry.",
-                "variants": [
-                      "source-bento",
-                      "wide",
-                      "dense"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-bento-1\" aria-labelledby=\"testing-bento-1-title\"><article class=\"sk-testing-bento-1__panel sk-testing-bento-1__intro\" data-span=\"hero\"><span class=\"sk-testing-bento-1__kicker\">Portfolio Bento Grid</span><h2 id=\"testing-bento-1-title\">Custom Apps</h2><p>WP Plugins</p></article><article class=\"sk-testing-bento-1__panel\" data-span=\"wide\"><span class=\"sk-testing-bento-1__kicker\">01</span><h3>WP Plugins</h3><p>Wide content module with durable SiteKit spacing and hard borders.</p></article><article class=\"sk-testing-bento-1__panel\" data-span=\"tall\"><span class=\"sk-testing-bento-1__kicker\">02</span><h3>Security Audits</h3><p>Tall supporting module that creates the staggered bento rhythm.</p></article><article class=\"sk-testing-bento-1__panel\"><span class=\"sk-testing-bento-1__kicker\">03</span><h3>Web Design</h3><p>Compact proof point.</p></article><article class=\"sk-testing-bento-1__panel\"><span class=\"sk-testing-bento-1__kicker\">04</span><h3>System-ready</h3><p>Tokenized and responsive.</p></article></section>"
-          },
-          {
-                "slug": "testing-bento-1-bootstrap",
-                "name": "Portfolio Bento Grid",
-                "description": "A source-specific bento grid adapted from an old component into SiteKit square geometry.",
-                "variants": [
-                      "source-bento",
-                      "wide",
-                      "dense"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-bento-1-bootstrap\" aria-labelledby=\"testing-bento-1-bootstrap-title\"><article class=\"sk-testing-bento-1-bootstrap__panel sk-testing-bento-1-bootstrap__intro\" data-span=\"hero\"><span class=\"sk-testing-bento-1-bootstrap__kicker\">Portfolio Bento Grid</span><h2 id=\"testing-bento-1-bootstrap-title\">Custom Apps</h2><p>WP Plugins</p></article><article class=\"sk-testing-bento-1-bootstrap__panel\" data-span=\"wide\"><span class=\"sk-testing-bento-1-bootstrap__kicker\">01</span><h3>WP Plugins</h3><p>Wide content module with durable SiteKit spacing and hard borders.</p></article><article class=\"sk-testing-bento-1-bootstrap__panel\" data-span=\"tall\"><span class=\"sk-testing-bento-1-bootstrap__kicker\">02</span><h3>Security Audits</h3><p>Tall supporting module that creates the staggered bento rhythm.</p></article><article class=\"sk-testing-bento-1-bootstrap__panel\"><span class=\"sk-testing-bento-1-bootstrap__kicker\">03</span><h3>Web Design</h3><p>Compact proof point.</p></article><article class=\"sk-testing-bento-1-bootstrap__panel\"><span class=\"sk-testing-bento-1-bootstrap__kicker\">04</span><h3>System-ready</h3><p>Tokenized and responsive.</p></article></section>"
-          },
-          {
-                "slug": "testing-bento-grid-2",
-                "name": "Bento Grid",
-                "description": "A source-specific bento grid adapted from an old component into SiteKit square geometry.",
-                "variants": [
-                      "source-bento",
-                      "wide",
-                      "dense"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-bento-grid-2\" aria-labelledby=\"testing-bento-grid-2-title\"><article class=\"sk-testing-bento-grid-2__panel sk-testing-bento-grid-2__intro\" data-span=\"hero\"><span class=\"sk-testing-bento-grid-2__kicker\">Bento Grid</span><h2 id=\"testing-bento-grid-2-title\">Custom Apps</h2><p>WordPress Plugins</p></article><article class=\"sk-testing-bento-grid-2__panel\" data-span=\"wide\"><span class=\"sk-testing-bento-grid-2__kicker\">01</span><h3>WordPress Plugins</h3><p>Wide content module with durable SiteKit spacing and hard borders.</p></article><article class=\"sk-testing-bento-grid-2__panel\" data-span=\"tall\"><span class=\"sk-testing-bento-grid-2__kicker\">02</span><h3>Security Audits</h3><p>Tall supporting module that creates the staggered bento rhythm.</p></article><article class=\"sk-testing-bento-grid-2__panel\"><span class=\"sk-testing-bento-grid-2__kicker\">03</span><h3>Web Design</h3><p>Compact proof point.</p></article><article class=\"sk-testing-bento-grid-2__panel\"><span class=\"sk-testing-bento-grid-2__kicker\">04</span><h3>System-ready</h3><p>Tokenized and responsive.</p></article></section>"
-          },
-          {
-                "slug": "testing-bento-grid-3",
-                "name": "Bento Grid",
-                "description": "A source-specific bento grid adapted from an old component into SiteKit square geometry.",
-                "variants": [
-                      "source-bento",
-                      "wide",
-                      "dense"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-bento-grid-3\" aria-labelledby=\"testing-bento-grid-3-title\"><article class=\"sk-testing-bento-grid-3__panel sk-testing-bento-grid-3__intro\" data-span=\"hero\"><span class=\"sk-testing-bento-grid-3__kicker\">Bento Grid</span><h2 id=\"testing-bento-grid-3-title\">Security Audits</h2><p>Custom Apps</p></article><article class=\"sk-testing-bento-grid-3__panel\" data-span=\"wide\"><span class=\"sk-testing-bento-grid-3__kicker\">01</span><h3>Custom Apps</h3><p>Wide content module with durable SiteKit spacing and hard borders.</p></article><article class=\"sk-testing-bento-grid-3__panel\" data-span=\"tall\"><span class=\"sk-testing-bento-grid-3__kicker\">02</span><h3>WordPress Plugins</h3><p>Tall supporting module that creates the staggered bento rhythm.</p></article><article class=\"sk-testing-bento-grid-3__panel\"><span class=\"sk-testing-bento-grid-3__kicker\">03</span><h3>Web Design</h3><p>Compact proof point.</p></article><article class=\"sk-testing-bento-grid-3__panel\"><span class=\"sk-testing-bento-grid-3__kicker\">04</span><h3>System-ready</h3><p>Tokenized and responsive.</p></article></section>"
-          },
-          {
-                "slug": "testing-bento-grid-4",
-                "name": "Bento Grid",
-                "description": "A source-specific bento grid adapted from an old component into SiteKit square geometry.",
-                "variants": [
-                      "source-bento",
-                      "wide",
-                      "dense"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-bento-grid-4\" aria-labelledby=\"testing-bento-grid-4-title\"><article class=\"sk-testing-bento-grid-4__panel sk-testing-bento-grid-4__intro\" data-span=\"hero\"><span class=\"sk-testing-bento-grid-4__kicker\">Bento Grid</span><h2 id=\"testing-bento-grid-4-title\">Security Audits</h2><p>Custom Apps</p></article><article class=\"sk-testing-bento-grid-4__panel\" data-span=\"wide\"><span class=\"sk-testing-bento-grid-4__kicker\">01</span><h3>Custom Apps</h3><p>Wide content module with durable SiteKit spacing and hard borders.</p></article><article class=\"sk-testing-bento-grid-4__panel\" data-span=\"tall\"><span class=\"sk-testing-bento-grid-4__kicker\">02</span><h3>WordPress Plugins</h3><p>Tall supporting module that creates the staggered bento rhythm.</p></article><article class=\"sk-testing-bento-grid-4__panel\"><span class=\"sk-testing-bento-grid-4__kicker\">03</span><h3>Web Design</h3><p>Compact proof point.</p></article><article class=\"sk-testing-bento-grid-4__panel\"><span class=\"sk-testing-bento-grid-4__kicker\">04</span><h3>System-ready</h3><p>Tokenized and responsive.</p></article></section>"
-          },
-          {
-                "slug": "testing-bento-grid-5",
-                "name": "Bento Grid",
-                "description": "A source-specific bento grid adapted from an old component into SiteKit square geometry.",
-                "variants": [
-                      "source-bento",
-                      "wide",
-                      "dense"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-bento-grid-5\" aria-labelledby=\"testing-bento-grid-5-title\"><article class=\"sk-testing-bento-grid-5__panel sk-testing-bento-grid-5__intro\" data-span=\"hero\"><span class=\"sk-testing-bento-grid-5__kicker\">Bento Grid</span><h2 id=\"testing-bento-grid-5-title\">Security Audits</h2><p>Custom Apps</p></article><article class=\"sk-testing-bento-grid-5__panel\" data-span=\"wide\"><span class=\"sk-testing-bento-grid-5__kicker\">01</span><h3>Custom Apps</h3><p>Wide content module with durable SiteKit spacing and hard borders.</p></article><article class=\"sk-testing-bento-grid-5__panel\" data-span=\"tall\"><span class=\"sk-testing-bento-grid-5__kicker\">02</span><h3>Plugins</h3><p>Tall supporting module that creates the staggered bento rhythm.</p></article><article class=\"sk-testing-bento-grid-5__panel\"><span class=\"sk-testing-bento-grid-5__kicker\">03</span><h3>Web Design</h3><p>Compact proof point.</p></article><article class=\"sk-testing-bento-grid-5__panel\"><span class=\"sk-testing-bento-grid-5__kicker\">04</span><h3>System-ready</h3><p>Tokenized and responsive.</p></article></section>"
-          },
-          {
-                "slug": "testing-bento-grid-6",
-                "name": "Bento Grid",
-                "description": "A source-specific bento grid adapted from an old component into SiteKit square geometry.",
-                "variants": [
-                      "source-bento",
-                      "wide",
-                      "dense"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-bento-grid-6\" aria-labelledby=\"testing-bento-grid-6-title\"><article class=\"sk-testing-bento-grid-6__panel sk-testing-bento-grid-6__intro\" data-span=\"hero\"><span class=\"sk-testing-bento-grid-6__kicker\">Bento Grid</span><h2 id=\"testing-bento-grid-6-title\">Security Audits</h2><p>Custom Apps</p></article><article class=\"sk-testing-bento-grid-6__panel\" data-span=\"wide\"><span class=\"sk-testing-bento-grid-6__kicker\">01</span><h3>Custom Apps</h3><p>Wide content module with durable SiteKit spacing and hard borders.</p></article><article class=\"sk-testing-bento-grid-6__panel\" data-span=\"tall\"><span class=\"sk-testing-bento-grid-6__kicker\">02</span><h3>Plugins</h3><p>Tall supporting module that creates the staggered bento rhythm.</p></article><article class=\"sk-testing-bento-grid-6__panel\"><span class=\"sk-testing-bento-grid-6__kicker\">03</span><h3>Web Design</h3><p>Compact proof point.</p></article><article class=\"sk-testing-bento-grid-6__panel\"><span class=\"sk-testing-bento-grid-6__kicker\">04</span><h3>System-ready</h3><p>Tokenized and responsive.</p></article></section>"
-          },
-          {
-                "slug": "testing-bento-grid-7",
-                "name": "Bento Grid",
-                "description": "A source-specific bento grid adapted from an old component into SiteKit square geometry.",
-                "variants": [
-                      "source-bento",
-                      "wide",
-                      "dense"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-bento-grid-7\" aria-labelledby=\"testing-bento-grid-7-title\"><article class=\"sk-testing-bento-grid-7__panel sk-testing-bento-grid-7__intro\" data-span=\"hero\"><span class=\"sk-testing-bento-grid-7__kicker\">Bento Grid</span><h2 id=\"testing-bento-grid-7-title\">100% Lighthouse Scores</h2><p>Design Systems</p></article><article class=\"sk-testing-bento-grid-7__panel\" data-span=\"wide\"><span class=\"sk-testing-bento-grid-7__kicker\">01</span><h3>Design Systems</h3><p>Wide content module with durable SiteKit spacing and hard borders.</p></article><article class=\"sk-testing-bento-grid-7__panel\" data-span=\"tall\"><span class=\"sk-testing-bento-grid-7__kicker\">02</span><h3>API Integrations</h3><p>Tall supporting module that creates the staggered bento rhythm.</p></article><article class=\"sk-testing-bento-grid-7__panel\"><span class=\"sk-testing-bento-grid-7__kicker\">03</span><h3>E-commerce UX</h3><p>Compact proof point.</p></article><article class=\"sk-testing-bento-grid-7__panel\"><span class=\"sk-testing-bento-grid-7__kicker\">04</span><h3>System-ready</h3><p>Tokenized and responsive.</p></article></section>"
-          },
-          {
-                "slug": "testing-buttons",
-                "name": "Animated Label Button",
-                "description": "A source-specific button showcase using semantic SiteKit button controls.",
-                "variants": [
-                      "action-row",
-                      "stacked"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-buttons\" aria-labelledby=\"testing-buttons-title\"><h2 id=\"testing-buttons-title\">Animated Label Button</h2><div><button class=\"sk-button\" type=\"button\">Animated Label Button</button><button class=\"sk-button\" type=\"button\" data-variant=\"secondary\">Tokenized structure</button><button class=\"sk-button\" type=\"button\" data-variant=\"ghost\">Accessible by default</button></div></section>"
-          },
-          {
-                "slug": "testing-content-1",
-                "name": "Content Section with Image Right",
-                "description": "A source-specific content section with copy, action, and media/proof panel.",
-                "variants": [
-                      "media-right",
-                      "media-left",
-                      "centered"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-content-1\" aria-labelledby=\"testing-content-1-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">Content Section with Image Right</span><h2 id=\"testing-content-1-title\">Build Fast, Deploy Faster</h2><p>Tokenized structure</p><a class=\"sk-button\" href=\"#testing-content-1-title\">Open</a></div><div class=\"sk-testing-content-1__surface\"><h3>Accessible by default</h3><p>Ready to compose</p></div></section>"
-          },
-          {
-                "slug": "testing-content-2",
-                "name": "Content Section",
-                "description": "A source-specific content section with copy, action, and media/proof panel.",
-                "variants": [
-                      "media-right",
-                      "media-left",
-                      "centered"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-content-2\" aria-labelledby=\"testing-content-2-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">Content Section</span><h2 id=\"testing-content-2-title\">Made for Developers</h2><p>Tokenized structure</p><a class=\"sk-button\" href=\"#testing-content-2-title\">Open</a></div><div class=\"sk-testing-content-2__surface\"><h3>Accessible by default</h3><p>Ready to compose</p></div></section>"
-          },
-          {
-                "slug": "testing-content-3",
-                "name": "Content Section",
-                "description": "A source-specific content section with copy, action, and media/proof panel.",
-                "variants": [
-                      "media-right",
-                      "media-left",
-                      "centered"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-content-3\" aria-labelledby=\"testing-content-3-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">Content Section</span><h2 id=\"testing-content-3-title\">Your Content. Your Control.</h2><p>Developer-First Workflow</p><a class=\"sk-button\" href=\"#testing-content-3-title\">Open</a></div><div class=\"sk-testing-content-3__surface\"><h3>Accessible by default</h3><p>Ready to compose</p></div></section>"
-          },
-          {
-                "slug": "testing-content-5",
-                "name": "Content Section",
-                "description": "A source-specific content section with copy, action, and media/proof panel.",
-                "variants": [
-                      "media-right",
-                      "media-left",
-                      "centered"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-content-5\" aria-labelledby=\"testing-content-5-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">Content Section</span><h2 id=\"testing-content-5-title\">Your Content. Your Control.</h2><p>Tokenized structure</p><a class=\"sk-button\" href=\"#testing-content-5-title\">Open</a></div><div class=\"sk-testing-content-5__surface\"><h3>Accessible by default</h3><p>Ready to compose</p></div></section>"
-          },
-          {
-                "slug": "testing-cta-1",
-                "name": "Callout Banner Showcase",
-                "description": "A source-specific call-to-action section adapted into SiteKit conversion styling.",
-                "variants": [
-                      "band",
-                      "split",
-                      "stacked"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-cta-1\" aria-labelledby=\"testing-cta-1-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">Callout Banner Showcase</span><h2 id=\"testing-cta-1-title\">Ready to turbo-charge your next project?</h2><p>Tokenized structure</p><a class=\"sk-button\" href=\"#testing-cta-1-title\">Open</a></div><div class=\"sk-testing-cta-1__surface\"><h3>Accessible by default</h3><p>Ready to compose</p></div></section>"
-          },
-          {
-                "slug": "testing-cta-2",
-                "name": "Image + Text CTA Showcase",
-                "description": "A source-specific call-to-action section adapted into SiteKit conversion styling.",
-                "variants": [
-                      "band",
-                      "split",
-                      "stacked"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-cta-2\" aria-labelledby=\"testing-cta-2-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">Image + Text CTA Showcase</span><h2 id=\"testing-cta-2-title\">Let's create better websites, together.</h2><p>Tokenized structure</p><a class=\"sk-button\" href=\"#testing-cta-2-title\">Open</a></div><div class=\"sk-testing-cta-2__surface\"><h3>Accessible by default</h3><p>Ready to compose</p></div></section>"
-          },
-          {
-                "slug": "testing-cta-3",
-                "name": "SiteKit The Markdown Signup CTA",
-                "description": "A source-specific call-to-action section adapted into SiteKit conversion styling.",
-                "variants": [
-                      "band",
-                      "split",
-                      "stacked"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-cta-3\" aria-labelledby=\"testing-cta-3-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">SiteKit The Markdown Signup CTA</span><h2 id=\"testing-cta-3-title\">Join The Markdown</h2><p>Tokenized structure</p><a class=\"sk-button\" href=\"#testing-cta-3-title\">Open</a></div><div class=\"sk-testing-cta-3__surface\"><h3>Accessible by default</h3><p>Ready to compose</p></div></section>"
-          },
-          {
-                "slug": "testing-cta-4",
-                "name": "SiteKit Brand Growth CTA",
-                "description": "A source-specific call-to-action section adapted into SiteKit conversion styling.",
-                "variants": [
-                      "band",
-                      "split",
-                      "stacked"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-cta-4\" aria-labelledby=\"testing-cta-4-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">SiteKit Brand Growth CTA</span><h2 id=\"testing-cta-4-title\">Ship blazing-fast websites with SiteKit</h2><p>Tokenized structure</p><a class=\"sk-button\" href=\"#testing-cta-4-title\">Open</a></div><div class=\"sk-testing-cta-4__surface\"><h3>Accessible by default</h3><p>Ready to compose</p></div></section>"
-          },
-          {
-                "slug": "testing-cta-5",
-                "name": "SiteKit Contact CTA",
-                "description": "A source-specific call-to-action section adapted into SiteKit conversion styling.",
-                "variants": [
-                      "band",
-                      "split",
-                      "stacked"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-cta-5\" aria-labelledby=\"testing-cta-5-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">SiteKit Contact CTA</span><h2 id=\"testing-cta-5-title\">Have questions about SiteKit? We’re here to help.</h2><p>Tokenized structure</p><a class=\"sk-button\" href=\"#testing-cta-5-title\">Open</a></div><div class=\"sk-testing-cta-5__surface\"><h3>Accessible by default</h3><p>Ready to compose</p></div></section>"
-          },
-          {
-                "slug": "testing-faq-1",
-                "name": "FAQ Accordion Showcase",
-                "description": "A source-specific FAQ component using accessible native disclosure controls.",
-                "variants": [
-                      "accordion",
-                      "sidebar",
-                      "grid"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-faq-1\" aria-labelledby=\"testing-faq-1-title\"><div class=\"sk-testing-faq-1__intro\"><span class=\"sk-badge\" data-variant=\"outline\">FAQ</span><h2 id=\"testing-faq-1-title\">Frequently Asked Questions</h2></div><div class=\"sk-testing-faq-1__items\"><details open><summary>Tokenized structure</summary><p>Use native disclosure behavior with SiteKit focus states.</p></details><details><summary>Accessible by default</summary><p>The old visual idea is preserved through square, tokenized structure.</p></details><details><summary>Ready to compose</summary><p>Content can expand without custom interaction code.</p></details></div></section>"
-          },
-          {
-                "slug": "testing-faq-2",
-                "name": "Alt FAQ Component",
-                "description": "A source-specific FAQ component using accessible native disclosure controls.",
-                "variants": [
-                      "accordion",
-                      "sidebar",
-                      "grid"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-faq-2\" aria-labelledby=\"testing-faq-2-title\"><div class=\"sk-testing-faq-2__intro\"><span class=\"sk-badge\" data-variant=\"outline\">FAQ</span><h2 id=\"testing-faq-2-title\">FAQs</h2></div><div class=\"sk-testing-faq-2__items\"><details open><summary>What makes this FAQ layout unique?</summary><p>Use native disclosure behavior with SiteKit focus states.</p></details><details><summary>Is it easy to restyle?</summary><p>The old visual idea is preserved through square, tokenized structure.</p></details><details><summary>Can I use this in SiteKit components?</summary><p>Content can expand without custom interaction code.</p></details></div></section>"
-          },
-          {
-                "slug": "testing-faq-3",
-                "name": "Stacked FAQ Component",
-                "description": "A source-specific FAQ component using accessible native disclosure controls.",
-                "variants": [
-                      "accordion",
-                      "sidebar",
-                      "grid"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-faq-3\" aria-labelledby=\"testing-faq-3-title\"><div class=\"sk-testing-faq-3__intro\"><span class=\"sk-badge\" data-variant=\"outline\">FAQ</span><h2 id=\"testing-faq-3-title\">Have Questions?</h2></div><div class=\"sk-testing-faq-3__items\"><details open><summary>How fast is the setup process?</summary><p>Use native disclosure behavior with SiteKit focus states.</p></details><details><summary>Can I bring my own domain?</summary><p>The old visual idea is preserved through square, tokenized structure.</p></details><details><summary>What about scaling traffic?</summary><p>Content can expand without custom interaction code.</p></details></div></section>"
-          },
-          {
-                "slug": "testing-faq-4",
-                "name": "FAQ with Clean Load-in Animations",
-                "description": "A source-specific FAQ component using accessible native disclosure controls.",
-                "variants": [
-                      "accordion",
-                      "sidebar",
-                      "grid"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-faq-4\" aria-labelledby=\"testing-faq-4-title\"><div class=\"sk-testing-faq-4__intro\"><span class=\"sk-badge\" data-variant=\"outline\">FAQ</span><h2 id=\"testing-faq-4-title\">Need Help?</h2></div><div class=\"sk-testing-faq-4__items\"><details open><summary>Tokenized structure</summary><p>Use native disclosure behavior with SiteKit focus states.</p></details><details><summary>Accessible by default</summary><p>The old visual idea is preserved through square, tokenized structure.</p></details><details><summary>Ready to compose</summary><p>Content can expand without custom interaction code.</p></details></div></section>"
-          },
-          {
-                "slug": "testing-faq-5",
-                "name": "FAQ Card Grid Layout",
-                "description": "A source-specific FAQ component using accessible native disclosure controls.",
-                "variants": [
-                      "accordion",
-                      "sidebar",
-                      "grid"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-faq-5\" aria-labelledby=\"testing-faq-5-title\"><div class=\"sk-testing-faq-5__intro\"><span class=\"sk-badge\" data-variant=\"outline\">FAQ</span><h2 id=\"testing-faq-5-title\">Frequently Asked Questions</h2></div><div class=\"sk-testing-faq-5__items\"><details open><summary>How easy is it to get started?</summary><p>Use native disclosure behavior with SiteKit focus states.</p></details><details><summary>Can I use my own domain?</summary><p>The old visual idea is preserved through square, tokenized structure.</p></details><details><summary>Is it mobile-friendly?</summary><p>Content can expand without custom interaction code.</p></details></div></section>"
-          },
-          {
-                "slug": "testing-faq-6",
-                "name": "FAQ with Sidebar Navigation + Multi-Visible Display",
-                "description": "A source-specific FAQ component using accessible native disclosure controls.",
-                "variants": [
-                      "accordion",
-                      "sidebar",
-                      "grid"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-faq-6\" aria-labelledby=\"testing-faq-6-title\"><div class=\"sk-testing-faq-6__intro\"><span class=\"sk-badge\" data-variant=\"outline\">FAQ</span><h2 id=\"testing-faq-6-title\">Jump To</h2></div><div class=\"sk-testing-faq-6__items\"><details open><summary>How do I get started?</summary><p>Use native disclosure behavior with SiteKit focus states.</p></details><details><summary>Can I use my own domain?</summary><p>The old visual idea is preserved through square, tokenized structure.</p></details><details><summary>Does this support mobile devices?</summary><p>Content can expand without custom interaction code.</p></details></div></section>"
-          },
-          {
-                "slug": "testing-faq-7",
-                "name": "FAQ Icon Blocks Layout",
-                "description": "A source-specific FAQ component using accessible native disclosure controls.",
-                "variants": [
-                      "accordion",
-                      "sidebar",
-                      "grid"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-faq-7\" aria-labelledby=\"testing-faq-7-title\"><div class=\"sk-testing-faq-7__intro\"><span class=\"sk-badge\" data-variant=\"outline\">FAQ</span><h2 id=\"testing-faq-7-title\">FAQ Quick Answers</h2></div><div class=\"sk-testing-faq-7__items\"><details open><summary>Getting Started</summary><p>Use native disclosure behavior with SiteKit focus states.</p></details><details><summary>Domains &amp; SSL</summary><p>The old visual idea is preserved through square, tokenized structure.</p></details><details><summary>Mobile Support</summary><p>Content can expand without custom interaction code.</p></details></div></section>"
-          },
-          {
-                "slug": "testing-faq-8",
-                "name": "FAQ Right Sidebar Navigation",
-                "description": "A source-specific FAQ component using accessible native disclosure controls.",
-                "variants": [
-                      "accordion",
-                      "sidebar",
-                      "grid"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-faq-8\" aria-labelledby=\"testing-faq-8-title\"><div class=\"sk-testing-faq-8__intro\"><span class=\"sk-badge\" data-variant=\"outline\">FAQ</span><h2 id=\"testing-faq-8-title\">Need Help?</h2></div><div class=\"sk-testing-faq-8__items\"><details open><summary>How do I get started?</summary><p>Use native disclosure behavior with SiteKit focus states.</p></details><details><summary>Can I use my own domain?</summary><p>The old visual idea is preserved through square, tokenized structure.</p></details><details><summary>Does this support mobile devices?</summary><p>Content can expand without custom interaction code.</p></details></div></section>"
-          },
-          {
-                "slug": "testing-feature-comparison-1",
-                "name": "Feature Comparison Table",
-                "description": "A source-specific feature comparison table using semantic table markup.",
-                "variants": [
-                      "table",
-                      "compact"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<div class=\"sk-testing-feature-comparison-1\"><table><caption id=\"testing-feature-comparison-1-title\">Feature Comparison</caption><thead><tr><th>Feature</th><th>Core</th><th>Pro</th></tr></thead><tbody><tr><td>Tokenized structure</td><td>Included</td><td>Included</td></tr><tr><td>Accessible by default</td><td>Basic</td><td>Advanced</td></tr><tr><td>Support</td><td>Email</td><td>Priority</td></tr></tbody></table></div>"
-          },
-          {
-                "slug": "testing-features-1",
-                "name": "Feature Grid Showcase",
-                "description": "A source-specific feature grid using tokenized square cards.",
-                "variants": [
-                      "grid",
-                      "dense"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-features-1\" aria-labelledby=\"testing-features-1-title\"><h2 id=\"testing-features-1-title\">Why Creators Choose SiteKit</h2><div><article><h3>Instant Builds</h3><p>Square feature card adapted from the old system.</p></article><article><h3>Bulletproof Security</h3><p>Theme-safe and tokenized.</p></article><article><h3>Blazing Performance</h3><p>Responsive without one-off styling.</p></article></div></section>"
-          },
-          {
-                "slug": "testing-footer-1",
-                "name": "Footer Showcase",
-                "description": "A source-specific footer layout with semantic navigation groups.",
-                "variants": [
-                      "columns",
-                      "contact",
-                      "newsletter"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<footer class=\"sk-testing-footer-1\" aria-labelledby=\"testing-footer-1-title\"><div class=\"sk-testing-footer-1__brand\"><h2 id=\"testing-footer-1-title\">SiteKit</h2><p>Company</p></div><nav aria-label=\"Footer Showcase links\"><a href=\"#testing-footer-1-title\">Company</a><a href=\"#testing-footer-1-title\">Resources</a><a href=\"#testing-footer-1-title\">Products</a></nav><small>© 2026 SiteKit</small></footer>"
-          },
-          {
-                "slug": "testing-footer-10",
-                "name": "SiteKit",
-                "description": "A source-specific footer layout with semantic navigation groups.",
-                "variants": [
-                      "columns",
-                      "contact",
-                      "newsletter"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<footer class=\"sk-testing-footer-10\" aria-labelledby=\"testing-footer-10-title\"><div class=\"sk-testing-footer-10__brand\"><h2 id=\"testing-footer-10-title\">GET IN TOUCH.</h2><p>Tokenized structure</p></div><nav aria-label=\"SiteKit links\"><a href=\"#testing-footer-10-title\">Company</a><a href=\"#testing-footer-10-title\">Resources</a><a href=\"#testing-footer-10-title\">Products</a></nav><small>© 2026 SiteKit</small></footer>"
-          },
-          {
-                "slug": "testing-footer-2",
-                "name": "Footer Showcase",
-                "description": "A source-specific footer layout with semantic navigation groups.",
-                "variants": [
-                      "columns",
-                      "contact",
-                      "newsletter"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<footer class=\"sk-testing-footer-2\" aria-labelledby=\"testing-footer-2-title\"><div class=\"sk-testing-footer-2__brand\"><h2 id=\"testing-footer-2-title\">Stay Updated</h2><p>SiteKit</p></div><nav aria-label=\"Footer Showcase links\"><a href=\"#testing-footer-2-title\">Company</a><a href=\"#testing-footer-2-title\">Resources</a><a href=\"#testing-footer-2-title\">Products</a></nav><small>© 2026 SiteKit</small></footer>"
-          },
-          {
-                "slug": "testing-footer-3",
-                "name": "Footer Showcase",
-                "description": "A source-specific footer layout with semantic navigation groups.",
-                "variants": [
-                      "columns",
-                      "contact",
-                      "newsletter"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<footer class=\"sk-testing-footer-3\" aria-labelledby=\"testing-footer-3-title\"><div class=\"sk-testing-footer-3__brand\"><h2 id=\"testing-footer-3-title\">Stay in the loop</h2><p>SiteKit</p></div><nav aria-label=\"Footer Showcase links\"><a href=\"#testing-footer-3-title\">Company</a><a href=\"#testing-footer-3-title\">Resources</a><a href=\"#testing-footer-3-title\">Products</a></nav><small>© 2026 SiteKit</small></footer>"
-          },
-          {
-                "slug": "testing-footer-4",
-                "name": "Footer Showcase",
-                "description": "A source-specific footer layout with semantic navigation groups.",
-                "variants": [
-                      "columns",
-                      "contact",
-                      "newsletter"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<footer class=\"sk-testing-footer-4\" aria-labelledby=\"testing-footer-4-title\"><div class=\"sk-testing-footer-4__brand\"><h2 id=\"testing-footer-4-title\">SiteKit</h2><p>Company</p></div><nav aria-label=\"Footer Showcase links\"><a href=\"#testing-footer-4-title\">Company</a><a href=\"#testing-footer-4-title\">Resources</a><a href=\"#testing-footer-4-title\">Products</a></nav><small>© 2026 SiteKit</small></footer>"
-          },
-          {
-                "slug": "testing-footer-5",
-                "name": "Footer Showcase",
-                "description": "A source-specific footer layout with semantic navigation groups.",
-                "variants": [
-                      "columns",
-                      "contact",
-                      "newsletter"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<footer class=\"sk-testing-footer-5\" aria-labelledby=\"testing-footer-5-title\"><div class=\"sk-testing-footer-5__brand\"><h2 id=\"testing-footer-5-title\">SiteKit</h2><p>Company</p></div><nav aria-label=\"Footer Showcase links\"><a href=\"#testing-footer-5-title\">Company</a><a href=\"#testing-footer-5-title\">Resources</a><a href=\"#testing-footer-5-title\">Products</a></nav><small>© 2026 SiteKit</small></footer>"
-          },
-          {
-                "slug": "testing-footer-6",
-                "name": "Footer Showcase",
-                "description": "A source-specific footer layout with semantic navigation groups.",
-                "variants": [
-                      "columns",
-                      "contact",
-                      "newsletter"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<footer class=\"sk-testing-footer-6\" aria-labelledby=\"testing-footer-6-title\"><div class=\"sk-testing-footer-6__brand\"><h2 id=\"testing-footer-6-title\">Company</h2><p>Resources</p></div><nav aria-label=\"Footer Showcase links\"><a href=\"#testing-footer-6-title\">Company</a><a href=\"#testing-footer-6-title\">Resources</a><a href=\"#testing-footer-6-title\">Products</a></nav><small>© 2026 SiteKit</small></footer>"
-          },
-          {
-                "slug": "testing-footer-7",
-                "name": "Footer Showcase",
-                "description": "A source-specific footer layout with semantic navigation groups.",
-                "variants": [
-                      "columns",
-                      "contact",
-                      "newsletter"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<footer class=\"sk-testing-footer-7\" aria-labelledby=\"testing-footer-7-title\"><div class=\"sk-testing-footer-7__brand\"><h2 id=\"testing-footer-7-title\">SiteKit</h2><p>Company</p></div><nav aria-label=\"Footer Showcase links\"><a href=\"#testing-footer-7-title\">Company</a><a href=\"#testing-footer-7-title\">Resources</a><a href=\"#testing-footer-7-title\">Products</a></nav><small>© 2026 SiteKit</small></footer>"
-          },
-          {
-                "slug": "testing-footer-8",
-                "name": "Footer Showcase",
-                "description": "A source-specific footer layout with semantic navigation groups.",
-                "variants": [
-                      "columns",
-                      "contact",
-                      "newsletter"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<footer class=\"sk-testing-footer-8\" aria-labelledby=\"testing-footer-8-title\"><div class=\"sk-testing-footer-8__brand\"><h2 id=\"testing-footer-8-title\">SiteKit</h2><p>Company</p></div><nav aria-label=\"Footer Showcase links\"><a href=\"#testing-footer-8-title\">Company</a><a href=\"#testing-footer-8-title\">Resources</a><a href=\"#testing-footer-8-title\">Products</a></nav><small>© 2026 SiteKit</small></footer>"
-          },
-          {
-                "slug": "testing-footer-9",
-                "name": "SiteKit",
-                "description": "A source-specific footer layout with semantic navigation groups.",
-                "variants": [
-                      "columns",
-                      "contact",
-                      "newsletter"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<footer class=\"sk-testing-footer-9\" aria-labelledby=\"testing-footer-9-title\"><div class=\"sk-testing-footer-9__brand\"><h2 id=\"testing-footer-9-title\">GET IN TOUCH.</h2><p>Tokenized structure</p></div><nav aria-label=\"SiteKit links\"><a href=\"#testing-footer-9-title\">Company</a><a href=\"#testing-footer-9-title\">Resources</a><a href=\"#testing-footer-9-title\">Products</a></nav><small>© 2026 SiteKit</small></footer>"
-          },
-          {
-                "slug": "testing-header-1",
-                "name": "Responsive Header Showcase",
-                "description": "A source-specific header layout with semantic navigation and actions.",
-                "variants": [
-                      "navigation",
-                      "centered",
-                      "search"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<header class=\"sk-testing-header-1\"><a class=\"sk-testing-header-1__brand\" href=\"#testing-header-1-title\">Responsive Header Showcase</a><nav aria-label=\"Responsive Header Showcase navigation\"><a href=\"#testing-header-1-title\">Docs</a><a href=\"#testing-header-1-title\">Components</a><a href=\"#testing-header-1-title\">Pricing</a></nav><a class=\"sk-button\" href=\"#testing-header-1-title\">Start</a></header>"
-          },
-          {
-                "slug": "testing-header-2",
-                "name": "SiteKit",
-                "description": "A source-specific header layout with semantic navigation and actions.",
-                "variants": [
-                      "navigation",
-                      "centered",
-                      "search"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<header class=\"sk-testing-header-2\"><a class=\"sk-testing-header-2__brand\" href=\"#testing-header-2-title\">SiteKit</a><nav aria-label=\"SiteKit navigation\"><a href=\"#testing-header-2-title\">Docs</a><a href=\"#testing-header-2-title\">Components</a><a href=\"#testing-header-2-title\">Pricing</a></nav><a class=\"sk-button\" href=\"#testing-header-2-title\">Start</a></header>"
-          },
-          {
-                "slug": "testing-header-3",
-                "name": "SiteKit",
-                "description": "A source-specific header layout with semantic navigation and actions.",
-                "variants": [
-                      "navigation",
-                      "centered",
-                      "search"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<header class=\"sk-testing-header-3\"><a class=\"sk-testing-header-3__brand\" href=\"#testing-header-3-title\">SiteKit</a><nav aria-label=\"SiteKit navigation\"><a href=\"#testing-header-3-title\">Docs</a><a href=\"#testing-header-3-title\">Components</a><a href=\"#testing-header-3-title\">Pricing</a></nav><a class=\"sk-button\" href=\"#testing-header-3-title\">Start</a></header>"
-          },
-          {
-                "slug": "testing-header-4",
-                "name": "SiteKit",
-                "description": "A source-specific header layout with semantic navigation and actions.",
-                "variants": [
-                      "navigation",
-                      "centered",
-                      "search"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<header class=\"sk-testing-header-4\"><a class=\"sk-testing-header-4__brand\" href=\"#testing-header-4-title\">SiteKit</a><nav aria-label=\"SiteKit navigation\"><a href=\"#testing-header-4-title\">Docs</a><a href=\"#testing-header-4-title\">Components</a><a href=\"#testing-header-4-title\">Pricing</a></nav><a class=\"sk-button\" href=\"#testing-header-4-title\">Start</a></header>"
-          },
-          {
-                "slug": "testing-header-5",
-                "name": "SiteKit",
-                "description": "A source-specific header layout with semantic navigation and actions.",
-                "variants": [
-                      "navigation",
-                      "centered",
-                      "search"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<header class=\"sk-testing-header-5\"><a class=\"sk-testing-header-5__brand\" href=\"#testing-header-5-title\">SiteKit</a><nav aria-label=\"SiteKit navigation\"><a href=\"#testing-header-5-title\">Docs</a><a href=\"#testing-header-5-title\">Components</a><a href=\"#testing-header-5-title\">Pricing</a></nav><a class=\"sk-button\" href=\"#testing-header-5-title\">Start</a></header>"
-          },
-          {
-                "slug": "testing-header-6",
-                "name": "SiteKit",
-                "description": "A source-specific header layout with semantic navigation and actions.",
-                "variants": [
-                      "navigation",
-                      "centered",
-                      "search"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<header class=\"sk-testing-header-6\"><a class=\"sk-testing-header-6__brand\" href=\"#testing-header-6-title\">SiteKit</a><nav aria-label=\"SiteKit navigation\"><a href=\"#testing-header-6-title\">Docs</a><a href=\"#testing-header-6-title\">Components</a><a href=\"#testing-header-6-title\">Pricing</a></nav><a class=\"sk-button\" href=\"#testing-header-6-title\">Start</a></header>"
-          },
-          {
-                "slug": "testing-header-7",
-                "name": "SiteKit",
-                "description": "A source-specific header layout with semantic navigation and actions.",
-                "variants": [
-                      "navigation",
-                      "centered",
-                      "search"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<header class=\"sk-testing-header-7\"><a class=\"sk-testing-header-7__brand\" href=\"#testing-header-7-title\">SiteKit</a><nav aria-label=\"SiteKit navigation\"><a href=\"#testing-header-7-title\">Docs</a><a href=\"#testing-header-7-title\">Components</a><a href=\"#testing-header-7-title\">Pricing</a></nav><a class=\"sk-button\" href=\"#testing-header-7-title\">Start</a></header>"
-          },
-          {
-                "slug": "testing-header-8",
-                "name": "SiteKit",
-                "description": "A source-specific header layout with semantic navigation and actions.",
-                "variants": [
-                      "navigation",
-                      "centered",
-                      "search"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<header class=\"sk-testing-header-8\"><a class=\"sk-testing-header-8__brand\" href=\"#testing-header-8-title\">SiteKit</a><nav aria-label=\"SiteKit navigation\"><a href=\"#testing-header-8-title\">Docs</a><a href=\"#testing-header-8-title\">Components</a><a href=\"#testing-header-8-title\">Pricing</a></nav><a class=\"sk-button\" href=\"#testing-header-8-title\">Start</a></header>"
-          },
-          {
-                "slug": "testing-hero-1",
-                "name": "Template Showcase",
-                "description": "A source-specific hero section adapted into SiteKit technical launch styling.",
-                "variants": [
-                      "launch",
-                      "centered",
-                      "immersive"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-hero-1\" aria-labelledby=\"testing-hero-1-title\"><div class=\"sk-testing-hero-1__copy\"><span class=\"sk-badge\" data-variant=\"outline\">Template Showcase</span><h2 id=\"testing-hero-1-title\">Build Ultra-Fast Sites with SiteKit</h2><p>Tokenized structure</p><div class=\"sk-testing-hero-1__actions\"><a class=\"sk-button\" href=\"#testing-hero-1-title\">Explore</a><a class=\"sk-button\" data-variant=\"secondary\" href=\"#testing-hero-1-title\">Docs</a></div></div><div class=\"sk-testing-hero-1__visual\" role=\"img\" aria-label=\"Template Showcase visual preview\"><span>Accessible by default</span></div></section>"
-          },
-          {
-                "slug": "testing-hero-2",
-                "name": "Hero Section Showcase",
-                "description": "A source-specific hero section adapted into SiteKit technical launch styling.",
-                "variants": [
-                      "launch",
-                      "centered",
-                      "immersive"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-hero-2\" aria-labelledby=\"testing-hero-2-title\"><div class=\"sk-testing-hero-2__copy\"><span class=\"sk-badge\" data-variant=\"outline\">Hero Section Showcase</span><h2 id=\"testing-hero-2-title\">More SiteKit. Less Noise.</h2><p>Tokenized structure</p><div class=\"sk-testing-hero-2__actions\"><a class=\"sk-button\" href=\"#testing-hero-2-title\">Explore</a><a class=\"sk-button\" data-variant=\"secondary\" href=\"#testing-hero-2-title\">Docs</a></div></div><div class=\"sk-testing-hero-2__visual\" role=\"img\" aria-label=\"Hero Section Showcase visual preview\"><span>Accessible by default</span></div></section>"
-          },
-          {
-                "slug": "testing-hero-3",
-                "name": "Minimalist Hero Section",
-                "description": "A source-specific hero section adapted into SiteKit technical launch styling.",
-                "variants": [
-                      "launch",
-                      "centered",
-                      "immersive"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-hero-3\" aria-labelledby=\"testing-hero-3-title\"><div class=\"sk-testing-hero-3__copy\"><span class=\"sk-badge\" data-variant=\"outline\">Minimalist Hero Section</span><h2 id=\"testing-hero-3-title\">More SiteKit. Less Noise.</h2><p>Tokenized structure</p><div class=\"sk-testing-hero-3__actions\"><a class=\"sk-button\" href=\"#testing-hero-3-title\">Explore</a><a class=\"sk-button\" data-variant=\"secondary\" href=\"#testing-hero-3-title\">Docs</a></div></div><div class=\"sk-testing-hero-3__visual\" role=\"img\" aria-label=\"Minimalist Hero Section visual preview\"><span>Accessible by default</span></div></section>"
-          },
-          {
-                "slug": "testing-hero-4",
-                "name": "Template Showcase",
-                "description": "A source-specific hero section adapted into SiteKit technical launch styling.",
-                "variants": [
-                      "launch",
-                      "centered",
-                      "immersive"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-hero-4\" aria-labelledby=\"testing-hero-4-title\"><div class=\"sk-testing-hero-4__copy\"><span class=\"sk-badge\" data-variant=\"outline\">Template Showcase</span><h2 id=\"testing-hero-4-title\">Build Ultra-Fast Sites with SiteKit</h2><p>Tokenized structure</p><div class=\"sk-testing-hero-4__actions\"><a class=\"sk-button\" href=\"#testing-hero-4-title\">Explore</a><a class=\"sk-button\" data-variant=\"secondary\" href=\"#testing-hero-4-title\">Docs</a></div></div><div class=\"sk-testing-hero-4__visual\" role=\"img\" aria-label=\"Template Showcase visual preview\"><span>Accessible by default</span></div></section>"
-          },
-          {
-                "slug": "testing-hero-5",
-                "name": "Template Showcase",
-                "description": "A source-specific hero section adapted into SiteKit technical launch styling.",
-                "variants": [
-                      "launch",
-                      "centered",
-                      "immersive"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-hero-5\" aria-labelledby=\"testing-hero-5-title\"><div class=\"sk-testing-hero-5__copy\"><span class=\"sk-badge\" data-variant=\"outline\">Template Showcase</span><h2 id=\"testing-hero-5-title\">More SiteKit , Less Noise</h2><p>Tokenized structure</p><div class=\"sk-testing-hero-5__actions\"><a class=\"sk-button\" href=\"#testing-hero-5-title\">Explore</a><a class=\"sk-button\" data-variant=\"secondary\" href=\"#testing-hero-5-title\">Docs</a></div></div><div class=\"sk-testing-hero-5__visual\" role=\"img\" aria-label=\"Template Showcase visual preview\"><span>Accessible by default</span></div></section>"
-          },
-          {
-                "slug": "testing-hero-6",
-                "name": "SiteKit",
-                "description": "A source-specific hero section adapted into SiteKit technical launch styling.",
-                "variants": [
-                      "launch",
-                      "centered",
-                      "immersive"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-hero-6\" aria-labelledby=\"testing-hero-6-title\"><div class=\"sk-testing-hero-6__copy\"><span class=\"sk-badge\" data-variant=\"outline\">SiteKit</span><h2 id=\"testing-hero-6-title\">More SiteKit, Less Noise.</h2><p>SiteKit Docs</p><div class=\"sk-testing-hero-6__actions\"><a class=\"sk-button\" href=\"#testing-hero-6-title\">Explore</a><a class=\"sk-button\" data-variant=\"secondary\" href=\"#testing-hero-6-title\">Docs</a></div></div><div class=\"sk-testing-hero-6__visual\" role=\"img\" aria-label=\"SiteKit visual preview\"><span>E-commerce Starter</span></div></section>"
-          },
-          {
-                "slug": "testing-hero-7",
-                "name": "SiteKit",
-                "description": "A source-specific hero section adapted into SiteKit technical launch styling.",
-                "variants": [
-                      "launch",
-                      "centered",
-                      "immersive"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-hero-7\" aria-labelledby=\"testing-hero-7-title\"><div class=\"sk-testing-hero-7__copy\"><span class=\"sk-badge\" data-variant=\"outline\">SiteKit</span><h2 id=\"testing-hero-7-title\">BUILD ULTRA-FAST STATIC WEBSITES</h2><p>Tokenized structure</p><div class=\"sk-testing-hero-7__actions\"><a class=\"sk-button\" href=\"#testing-hero-7-title\">Explore</a><a class=\"sk-button\" data-variant=\"secondary\" href=\"#testing-hero-7-title\">Docs</a></div></div><div class=\"sk-testing-hero-7__visual\" role=\"img\" aria-label=\"SiteKit visual preview\"><span>Accessible by default</span></div></section>"
-          },
-          {
-                "slug": "testing-hero-8",
-                "name": "SiteKit",
-                "description": "A source-specific hero section adapted into SiteKit technical launch styling.",
-                "variants": [
-                      "launch",
-                      "centered",
-                      "immersive"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-hero-8\" aria-labelledby=\"testing-hero-8-title\"><div class=\"sk-testing-hero-8__copy\"><span class=\"sk-badge\" data-variant=\"outline\">SiteKit</span><h2 id=\"testing-hero-8-title\">SiteKit</h2><p>Unyielding Power Undeniable Speed</p><div class=\"sk-testing-hero-8__actions\"><a class=\"sk-button\" href=\"#testing-hero-8-title\">Explore</a><a class=\"sk-button\" data-variant=\"secondary\" href=\"#testing-hero-8-title\">Docs</a></div></div><div class=\"sk-testing-hero-8__visual\" role=\"img\" aria-label=\"SiteKit visual preview\"><span>Accessible by default</span></div></section>"
-          },
-          {
-                "slug": "testing-img-gen-1",
-                "name": "YouTube Thumbnail Generator",
-                "description": "A source-specific generator panel with form controls and preview output.",
-                "variants": [
-                      "form-preview",
-                      "stacked"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-img-gen-1\" aria-labelledby=\"testing-img-gen-1-title\"><form><h2 id=\"testing-img-gen-1-title\">YouTube Thumbnail Generator</h2><label for=\"testing-img-gen-1-prompt\">Prompt</label><input id=\"testing-img-gen-1-prompt\" name=\"prompt\" type=\"text\" value=\"Tokenized structure\"><label for=\"testing-img-gen-1-mode\">Mode</label><select id=\"testing-img-gen-1-mode\" name=\"mode\"><option>Editorial</option><option>Technical</option></select><button class=\"sk-button\" type=\"submit\">Generate</button></form><div class=\"sk-testing-img-gen-1__preview\" role=\"img\" aria-label=\"Generated preview\">Preview</div></section>"
-          },
-          {
-                "slug": "testing-newsletter-1",
-                "name": "CTA Section Showcase",
-                "description": "A source-specific newsletter signup component with semantic form controls.",
-                "variants": [
-                      "inline",
-                      "boxed",
-                      "split"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-newsletter-1\" aria-labelledby=\"testing-newsletter-1-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">Newsletter</span><h2 id=\"testing-newsletter-1-title\">Stay in the Loop</h2><p>Tokenized structure</p></div><form><label for=\"testing-newsletter-1-email\">Email address</label><div><input id=\"testing-newsletter-1-email\" name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"you@example.com\"><button class=\"sk-button\" type=\"submit\">Subscribe</button></div><p>Accessible labels, visible focus, and tokenized controls.</p></form></section>"
-          },
-          {
-                "slug": "testing-our-team-1",
-                "name": "Team Grid Showcase",
-                "description": "A source-specific team grid for people, roles, and compact bios.",
-                "variants": [
-                      "profiles",
-                      "compact"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-our-team-1\" aria-labelledby=\"testing-our-team-1-title\"><h2 id=\"testing-our-team-1-title\">Meet the Team</h2><ul><li><span>AM</span><h3>Alexandra Morgan</h3><p>Product strategy</p></li><li><span>MP</span><h3>Michael Patel</h3><p>Engineering systems</p></li><li><span>JR</span><h3>Sarah Parker</h3><p>Design operations</p></li></ul></section>"
-          },
-          {
-                "slug": "testing-partners-1",
-                "name": "Partners / Logos Row Showcase",
-                "description": "A source-specific partners strip for logos and trust markers.",
-                "variants": [
-                      "logos",
-                      "compact"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-partners-1\" aria-labelledby=\"testing-partners-1-title\"><h2 id=\"testing-partners-1-title\">Trusted by Leading Teams</h2><ul><li>Northstar</li><li>Atlas</li><li>Signal</li><li>Foundry</li></ul></section>"
-          },
-          {
-                "slug": "testing-pricing-1",
-                "name": "Pricing Plans Showcase",
-                "description": "A source-specific pricing layout using semantic plan cards.",
-                "variants": [
-                      "cards",
-                      "comparison",
-                      "featured"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-pricing-1\" aria-labelledby=\"testing-pricing-1-title\"><h2 id=\"testing-pricing-1-title\">Simple, transparent pricing</h2><div class=\"sk-testing-pricing-1__plans\"><article><h3>Starter</h3><p class=\"sk-testing-pricing-1__price\">$19</p><ul><li>Core components</li><li>Tokenized styles</li><li>Semantic markup</li></ul><button class=\"sk-button\" type=\"button\">Select</button></article><article data-featured><h3>Pro</h3><p class=\"sk-testing-pricing-1__price\">$49</p><ul><li>All components</li><li>Recipes</li><li>Priority support</li></ul><button class=\"sk-button\" type=\"button\">Select</button></article></div></section>"
-          },
-          {
-                "slug": "testing-pricing-2",
-                "name": "Pricing Plans Showcase",
-                "description": "A source-specific pricing layout using semantic plan cards.",
-                "variants": [
-                      "cards",
-                      "comparison",
-                      "featured"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-pricing-2\" aria-labelledby=\"testing-pricing-2-title\"><h2 id=\"testing-pricing-2-title\">Alternative Pricing Layout</h2><div class=\"sk-testing-pricing-2__plans\"><article><h3>Basic</h3><p class=\"sk-testing-pricing-2__price\">$19</p><ul><li>Core components</li><li>Tokenized styles</li><li>Semantic markup</li></ul><button class=\"sk-button\" type=\"button\">Select</button></article><article data-featured><h3>Standard</h3><p class=\"sk-testing-pricing-2__price\">$49</p><ul><li>All components</li><li>Recipes</li><li>Priority support</li></ul><button class=\"sk-button\" type=\"button\">Select</button></article></div></section>"
-          },
-          {
-                "slug": "testing-pricing-3",
-                "name": "Pricing Plans Showcase",
-                "description": "A source-specific pricing layout using semantic plan cards.",
-                "variants": [
-                      "cards",
-                      "comparison",
-                      "featured"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-pricing-3\" aria-labelledby=\"testing-pricing-3-title\"><h2 id=\"testing-pricing-3-title\">Square Grid Pricing</h2><div class=\"sk-testing-pricing-3__plans\"><article><h3>Basic</h3><p class=\"sk-testing-pricing-3__price\">$19</p><ul><li>Core components</li><li>Tokenized styles</li><li>Semantic markup</li></ul><button class=\"sk-button\" type=\"button\">Select</button></article><article data-featured><h3>Standard</h3><p class=\"sk-testing-pricing-3__price\">$49</p><ul><li>All components</li><li>Recipes</li><li>Priority support</li></ul><button class=\"sk-button\" type=\"button\">Select</button></article></div></section>"
-          },
-          {
-                "slug": "testing-pricing-4",
-                "name": "Pricing Plans Showcase",
-                "description": "A source-specific pricing layout using semantic plan cards.",
-                "variants": [
-                      "cards",
-                      "comparison",
-                      "featured"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-pricing-4\" aria-labelledby=\"testing-pricing-4-title\"><h2 id=\"testing-pricing-4-title\">Standout Pricing Grid</h2><div class=\"sk-testing-pricing-4__plans\"><article><h3>Basic</h3><p class=\"sk-testing-pricing-4__price\">$19</p><ul><li>Core components</li><li>Tokenized styles</li><li>Semantic markup</li></ul><button class=\"sk-button\" type=\"button\">Select</button></article><article data-featured><h3>Pro</h3><p class=\"sk-testing-pricing-4__price\">$49</p><ul><li>All components</li><li>Recipes</li><li>Priority support</li></ul><button class=\"sk-button\" type=\"button\">Select</button></article></div></section>"
-          },
-          {
-                "slug": "testing-recent-posts-1",
-                "name": "Blog Component Showcase",
-                "description": "A source-specific recent posts layout for article previews.",
-                "variants": [
-                      "cards",
-                      "list"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-recent-posts-1\" aria-labelledby=\"testing-recent-posts-1-title\"><h2 id=\"testing-recent-posts-1-title\">Latest Insights</h2><div><article><p class=\"sk-testing-recent-posts-1__meta\">Guide</p><h3><a href=\"#testing-recent-posts-1-title\">How SiteKit Cuts Build Times in Half</a></h3><p>Structured article preview with tokenized card styling.</p></article><article><p class=\"sk-testing-recent-posts-1__meta\">Workflow</p><h3><a href=\"#testing-recent-posts-1-title\">A Freelancer’s Guide to Migrating Clients off WordPress</a></h3><p>Secondary article preview.</p></article></div></section>"
-          },
-          {
-                "slug": "testing-resources-1",
-                "name": "SiteKit Resource Links",
-                "description": "A source-specific resource-link collection.",
-                "variants": [
-                      "grid",
-                      "annotated"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-resources-1\" aria-labelledby=\"testing-resources-1-title\"><h2 id=\"testing-resources-1-title\">We didn't reinvent the wheel</h2><ul><li><a href=\"#testing-resources-1-title\">Tokenized structure</a><p>Useful source reference.</p></li><li><a href=\"#testing-resources-1-title\">Accessible by default</a><p>Related implementation reference.</p></li><li><a href=\"#testing-resources-1-title\">Ready to compose</a><p>Verification reference.</p></li></ul></section>"
-          },
-          {
-                "slug": "testing-stats-1",
-                "name": "Stats Metrics Bar Showcase",
-                "description": "A source-specific stats bar for metrics and proof points.",
-                "variants": [
-                      "bar",
-                      "boxed"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-stats-1\" aria-label=\"Stats Metrics Bar Showcase metrics\"><dl><div><dt>Stats Metrics Bar Showcase</dt><dd>50+</dd></div><div><dt>Tokenized structure</dt><dd>20+</dd></div><div><dt>Accessible by default</dt><dd>100%</dd></div></dl></section>"
-          },
-          {
-                "slug": "testing-testimonials-1",
-                "name": "Testimonial Carousel Showcase",
-                "description": "A source-specific testimonial layout for quotes and attribution.",
-                "variants": [
-                      "rail",
-                      "cards"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-testimonials-1\" aria-labelledby=\"testing-testimonials-1-title\"><h2 id=\"testing-testimonials-1-title\">What Builders Say</h2><div><figure><blockquote>SiteKit made the legacy pattern feel native to the system.</blockquote><figcaption>Tokenized structure</figcaption></figure><figure><blockquote>The structure is easier to inspect, copy, and reuse.</blockquote><figcaption>Accessible by default</figcaption></figure></div></section>"
-          },
-          {
-                "slug": "testing-video-demo-1",
-                "name": "Integrated Video Embed Showcase",
-                "description": "A source-specific video demo block with captioned responsive media.",
-                "variants": [
-                      "embed",
-                      "split"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing-video-demo-1\" aria-labelledby=\"testing-video-demo-1-title\"><div><h2 id=\"testing-video-demo-1-title\">Watch How SiteKit Works</h2><p>Tokenized structure</p></div><figure><div role=\"img\" aria-label=\"Video preview\">16:9 Demo</div><figcaption>Integrated Video Embed Showcase</figcaption></figure></section>"
-          },
-          {
-                "slug": "testing2",
-                "name": "My Tailwind 4.1 Page",
-                "description": "A source-specific product showcase adapted from an old landing page.",
-                "variants": [
-                      "showcase",
-                      "commerce"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing2\" aria-labelledby=\"testing2-title\"><div><span class=\"sk-badge\" data-variant=\"outline\">My Tailwind 4.1 Page</span><h2 id=\"testing2-title\">Summer styles are finally here</h2><p>Deploy faster</p><a class=\"sk-button\" href=\"#testing2-title\">Open</a></div><div class=\"sk-testing2__surface\"><h3>Work with us</h3><p>Collections</p></div></section>"
-          },
-          {
-                "slug": "testing3",
-                "name": "Rotating Gradient Border",
-                "description": "A source-specific stats bar for metrics and proof points.",
-                "variants": [
-                      "bar",
-                      "boxed"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing3\" aria-label=\"Rotating Gradient Border metrics\"><dl><div><dt>50+ Open Source Plugins</dt><dd>50+</dd></div><div><dt>20+ Years Experience</dt><dd>20+</dd></div><div><dt>Custom MVP Builds</dt><dd>100%</dd></div></dl></section>"
-          },
-          {
-                "slug": "testing4",
-                "name": "Cyberpunk Hero Section",
-                "description": "A source-specific hero section adapted into SiteKit technical launch styling.",
-                "variants": [
-                      "launch",
-                      "centered",
-                      "immersive"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing4\" aria-labelledby=\"testing4-title\"><div class=\"sk-testing4__copy\"><span class=\"sk-badge\" data-variant=\"outline\">Cyberpunk Hero Section</span><h2 id=\"testing4-title\">Build Fast, Deploy Faster</h2><p>Tokenized structure</p><div class=\"sk-testing4__actions\"><a class=\"sk-button\" href=\"#testing4-title\">Explore</a><a class=\"sk-button\" data-variant=\"secondary\" href=\"#testing4-title\">Docs</a></div></div><div class=\"sk-testing4__visual\" role=\"img\" aria-label=\"Cyberpunk Hero Section visual preview\"><span>Accessible by default</span></div></section>"
-          },
-          {
-                "slug": "testing5",
-                "name": "Cyberpunk Blog Section",
-                "description": "A source-specific recent posts layout for article previews.",
-                "variants": [
-                      "cards",
-                      "list"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-testing5\" aria-labelledby=\"testing5-title\"><h2 id=\"testing5-title\">Latest Articles</h2><div><article><p class=\"sk-testing5__meta\">Guide</p><h3><a href=\"#testing5-title\">Building Ultra-Fast Static Sites</a></h3><p>Structured article preview with tokenized card styling.</p></article><article><p class=\"sk-testing5__meta\">Workflow</p><h3><a href=\"#testing5-title\">Top 5 OWASP Vulnerabilities in 2025</a></h3><p>Secondary article preview.</p></article></div></section>"
-          },
-          {
-                "slug": "trust-strip",
-                "name": "Trust Strip",
-                "description": "A compact proof row for security, shipping, warranties, or social proof.",
-                "variants": [
-                      "default",
-                      "compact",
-                      "bordered"
-                ],
-                "keyboard": "No keyboard behavior required unless interactive content is slotted.",
-                "sample": "<section class=\"sk-trust-strip\" aria-labelledby=\"trust-strip-title\"><h2 id=\"trust-strip-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
-          },
-          {
-                "slug": "video-demo",
-                "name": "Video Demo",
-                "description": "A responsive media demo block with caption, controls, and supporting product copy.",
-                "variants": [
-                      "embed",
-                      "split",
-                      "captioned"
-                ],
-                "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-                "sample": "<section class=\"sk-video-demo\" aria-labelledby=\"video-demo-title\">\n  <div class=\"sk-video-demo__copy\">\n    <h2 id=\"video-demo-title\">Watch how it works</h2>\n    <p>Pair the embed with concise context and controls that remain reachable.</p>\n  </div>\n  <figure class=\"sk-video-demo__frame\">\n    <div role=\"img\" aria-label=\"Video preview placeholder\">16:9 Demo</div>\n    <figcaption>Product walkthrough</figcaption>\n  </figure>\n</section>"
-          }
+              {
+                        "slug": "accordion",
+                        "name": "Accordion",
+                        "description": "A stacked disclosure control for expandable sections.",
+                        "variants": [
+                                  "faq",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-accordion\" aria-label=\"Accordion\"><details open><summary>What is included?</summary><p>Accessible disclosure behavior with tokenized SiteKit styling.</p></details><details><summary>Can I compose it?</summary><p>Use each item for a single question or grouped detail.</p></details></section>"
+              },
+              {
+                        "slug": "alert",
+                        "name": "Alert",
+                        "description": "A status message for success, warning, error, or neutral feedback.",
+                        "variants": [
+                                  "neutral",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<aside class=\"sk-alert\" role=\"status\" data-variant=\"neutral\"><strong>Build ready</strong><p>All checks passed and the component is ready to review.</p></aside>"
+              },
+              {
+                        "slug": "avatar",
+                        "name": "Avatar",
+                        "description": "A compact visual identity marker for a person, team, or object.",
+                        "variants": [
+                                  "initials",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<span class=\"sk-avatar\" aria-label=\"Alex Morgan\">AM</span>"
+              },
+              {
+                        "slug": "badge",
+                        "name": "Badge",
+                        "description": "A compact status, category, or metadata label.",
+                        "variants": [
+                                  "neutral",
+                                  "success",
+                                  "warning",
+                                  "danger",
+                                  "outline"
+                        ],
+                        "keyboard": "No keyboard behavior required unless interactive content is slotted.",
+                        "sample": "<span class=\"sk-badge\" data-variant=\"neutral\">{{label}}</span>"
+              },
+              {
+                        "slug": "bento-grid",
+                        "name": "Bento Grid",
+                        "description": "A square-cornered modular grid for grouped capabilities, proof points, or portfolio services.",
+                        "variants": [
+                                  "portfolio",
+                                  "balanced",
+                                  "showcase",
+                                  "dense"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-bento-grid\" aria-labelledby=\"bento-grid-title\">\n  <div class=\"sk-bento-grid__intro\">\n    <span class=\"sk-badge\" data-variant=\"outline\">Services</span>\n    <h2 id=\"bento-grid-title\">Build systems that stay sharp.</h2>\n    <p>A true bento composition with uneven spans, square panels, and mono titles.</p>\n  </div>\n  <article class=\"sk-bento-grid__item\" data-span=\"wide\">\n    <p class=\"sk-bento-grid__kicker\">01</p>\n    <h3>Custom Apps</h3>\n    <p>Production interfaces, dashboards, and customer workflows with clean component boundaries.</p>\n  </article>\n  <article class=\"sk-bento-grid__item\" data-span=\"tall\">\n    <p class=\"sk-bento-grid__kicker\">02</p>\n    <h3>Security Audits</h3>\n    <p>Focused reviews with remediation paths, checklists, and durable proof.</p>\n  </article>\n  <article class=\"sk-bento-grid__item\">\n    <p class=\"sk-bento-grid__kicker\">03</p>\n    <h3>Plugins</h3>\n    <p>Purpose-built extensions.</p>\n  </article>\n  <article class=\"sk-bento-grid__item\">\n    <p class=\"sk-bento-grid__kicker\">04</p>\n    <h3>Design Systems</h3>\n    <p>Reusable component contracts.</p>\n  </article>\n</section>"
+              },
+              {
+                        "slug": "breadcrumbs",
+                        "name": "Breadcrumbs",
+                        "description": "A navigational trail that shows the current page location.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<nav class=\"sk-breadcrumbs\" aria-label=\"Breadcrumbs\"><ol><li><a href=\"#home\">Home</a></li><li><a href=\"#components\">Components</a></li><li aria-current=\"page\">Breadcrumbs</li></ol></nav>"
+              },
+              {
+                        "slug": "button",
+                        "name": "Button",
+                        "description": "A semantic action control for links, form submits, and interface commands.",
+                        "variants": [
+                                  "primary",
+                                  "secondary",
+                                  "ghost",
+                                  "danger"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<button class=\"sk-button\" type=\"button\" data-variant=\"primary\">{{label}}</button>"
+              },
+              {
+                        "slug": "card",
+                        "name": "Card",
+                        "description": "A bounded content region for a single object, summary, or grouped action.",
+                        "variants": [
+                                  "plain",
+                                  "interactive",
+                                  "dense"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-card\" aria-labelledby=\"card-title\"><h2 id=\"card-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
+              },
+              {
+                        "slug": "carousel",
+                        "name": "Carousel",
+                        "description": "A grouped media or content sequence with explicit navigation controls.",
+                        "variants": [
+                                  "cards",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-carousel\" aria-labelledby=\"carousel-title\"><h2 id=\"carousel-title\">Featured components</h2><div class=\"sk-carousel__track\"><article><h3>Card</h3><p>Structured content.</p></article><article><h3>Tabs</h3><p>Switchable panels.</p></article><article><h3>Modal</h3><p>Focused dialog.</p></article></div><div class=\"sk-carousel__controls\"><button class=\"sk-button\" type=\"button\" data-variant=\"secondary\">Previous</button><button class=\"sk-button\" type=\"button\">Next</button></div></section>"
+              },
+              {
+                        "slug": "checkbox",
+                        "name": "Checkbox",
+                        "description": "A binary input that can be checked or unchecked.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-checkbox\"><label><input type=\"checkbox\" checked> Receive release notes</label></div>"
+              },
+              {
+                        "slug": "checkout-summary",
+                        "name": "Checkout Summary",
+                        "description": "A commerce order summary with totals, taxes, discounts, and trust metadata.",
+                        "variants": [
+                                  "default",
+                                  "compact",
+                                  "sticky"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-checkout-summary\" aria-labelledby=\"checkout-summary-title\"><h2 id=\"checkout-summary-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
+              },
+              {
+                        "slug": "code-block",
+                        "name": "Code Block",
+                        "description": "A readable code or command block with caption and copy action.",
+                        "variants": [
+                                  "default",
+                                  "terminal",
+                                  "numbered"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<figure class=\"sk-code-block\"><figcaption><span>{{caption}}</span><button type=\"button\">Copy</button></figcaption><pre><code>{{code}}</code></pre></figure>"
+              },
+              {
+                        "slug": "color-picker",
+                        "name": "Color Picker",
+                        "description": "A native color control with an accessible label.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-color-picker\"><label for=\"color-picker-control\">Accent color</label><input id=\"color-picker-control\" type=\"color\" value=\"#000000\"></div>"
+              },
+              {
+                        "slug": "combobox",
+                        "name": "Combobox",
+                        "description": "An autocomplete text input paired with suggested options.",
+                        "variants": [
+                                  "autocomplete",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-combobox\"><label for=\"combobox-input\">Component</label><input id=\"combobox-input\" type=\"text\" list=\"combobox-options\" value=\"Button\" autocomplete=\"off\"><datalist id=\"combobox-options\"><option value=\"Button\"></option><option value=\"Card\"></option><option value=\"Modal\"></option></datalist></div>"
+              },
+              {
+                        "slug": "command-strip",
+                        "name": "Command Strip",
+                        "description": "A compact operational metric strip for status, filters, or system state.",
+                        "variants": [
+                                  "default",
+                                  "compact",
+                                  "four-up"
+                        ],
+                        "keyboard": "No keyboard behavior required unless interactive content is slotted.",
+                        "sample": "<section class=\"sk-command-strip\" aria-label=\"{{label}}\">{{items}}</section>"
+              },
+              {
+                        "slug": "content-section",
+                        "name": "Content Section",
+                        "description": "A responsive editorial section with copy, actions, and an optional media or proof panel.",
+                        "variants": [
+                                  "media-right",
+                                  "media-left",
+                                  "centered",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-content-section\" aria-labelledby=\"content-section-title\">\n  <div class=\"sk-content-section__copy\">\n    <span class=\"sk-badge\" data-variant=\"outline\">Workflow</span>\n    <h2 id=\"content-section-title\">Build fast, deploy faster.</h2>\n    <p>Use a focused content block when the page needs a deeper argument than a hero or card can carry.</p>\n    <a class=\"sk-button\" href=\"#content-section-title\">Read the guide</a>\n  </div>\n  <figure class=\"sk-content-section__media\">\n    <figcaption>Deploy pipeline</figcaption>\n    <dl>\n      <div><dt>Build</dt><dd>42s</dd></div>\n      <div><dt>Checks</dt><dd>Passing</dd></div>\n      <div><dt>Theme</dt><dd>Tokenized</dd></div>\n    </dl>\n  </figure>\n</section>"
+              },
+              {
+                        "slug": "cta",
+                        "name": "CTA",
+                        "description": "A conversion block with a clear next action.",
+                        "variants": [
+                                  "band",
+                                  "inline",
+                                  "stacked"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-cta\" aria-labelledby=\"cta-title\"><h2 id=\"cta-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
+              },
+              {
+                        "slug": "date-input",
+                        "name": "Date Input",
+                        "description": "A native date input with label and help text.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-date-input\"><label for=\"date-input-control\">Publish date</label><input id=\"date-input-control\" type=\"date\" value=\"2026-07-09\"><p>Use for simple date entry.</p></div>"
+              },
+              {
+                        "slug": "date-picker",
+                        "name": "Date Picker",
+                        "description": "A compact date-picker surface with a visible calendar grid.",
+                        "variants": [
+                                  "calendar",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-date-picker\" aria-labelledby=\"date-picker-title\"><h2 id=\"date-picker-title\">July 2026</h2><div role=\"grid\" aria-label=\"July 2026\"><button type=\"button\">7</button><button type=\"button\">8</button><button type=\"button\" aria-current=\"date\">9</button><button type=\"button\">10</button></div></section>"
+              },
+              {
+                        "slug": "drawer",
+                        "name": "Drawer",
+                        "description": "A side panel for secondary navigation or contextual actions.",
+                        "variants": [
+                                  "right",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<aside class=\"sk-drawer\" aria-labelledby=\"drawer-title\"><h2 id=\"drawer-title\">Drawer</h2><p>Contextual content remains grouped in a side panel.</p><button class=\"sk-button\" type=\"button\">Close</button></aside>"
+              },
+              {
+                        "slug": "dropdown-menu",
+                        "name": "Dropdown Menu",
+                        "description": "A menu button with grouped actions.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-dropdown-menu\"><button class=\"sk-button\" type=\"button\" aria-haspopup=\"menu\" aria-expanded=\"true\">Actions</button><ul role=\"menu\"><li role=\"none\"><button role=\"menuitem\" type=\"button\">Duplicate</button></li><li role=\"none\"><button role=\"menuitem\" type=\"button\">Archive</button></li></ul></div>"
+              },
+              {
+                        "slug": "ecosystem-map",
+                        "name": "Ecosystem Map",
+                        "description": "A semantic map of projects, packages, docs, and relationships.",
+                        "variants": [
+                                  "grid",
+                                  "radial",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-ecosystem-map\" aria-label=\"{{label}}\">{{items}}</section>"
+              },
+              {
+                        "slug": "empty-state",
+                        "name": "Empty State",
+                        "description": "A clear message for empty collections with optional recovery action.",
+                        "variants": [
+                                  "default",
+                                  "compact",
+                                  "commerce"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-empty-state\" aria-labelledby=\"empty-state-title\"><h2 id=\"empty-state-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
+              },
+              {
+                        "slug": "error-state",
+                        "name": "Error State",
+                        "description": "A recoverable error message with next steps and support context.",
+                        "variants": [
+                                  "default",
+                                  "inline",
+                                  "critical"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-error-state\" aria-labelledby=\"error-state-title\"><h2 id=\"error-state-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
+              },
+              {
+                        "slug": "feature-grid",
+                        "name": "Feature Grid",
+                        "description": "A responsive list of capabilities or benefits.",
+                        "variants": [
+                                  "two-column",
+                                  "three-column",
+                                  "dense"
+                        ],
+                        "keyboard": "No keyboard behavior required unless interactive content is slotted.",
+                        "sample": "<section class=\"sk-feature-grid\" aria-label=\"{{label}}\">{{items}}</section>"
+              },
+              {
+                        "slug": "fieldset",
+                        "name": "Fieldset",
+                        "description": "A grouped set of form controls with a legend.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<fieldset class=\"sk-fieldset\"><legend>Contact preference</legend><label><input type=\"radio\" name=\"contact\" checked> Email</label><label><input type=\"radio\" name=\"contact\"> Phone</label></fieldset>"
+              },
+              {
+                        "slug": "file",
+                        "name": "File",
+                        "description": "A file metadata row for selected or attached files.",
+                        "variants": [
+                                  "row",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<article class=\"sk-file\"><span aria-hidden=\"true\">DOC</span><div><h3>proposal.pdf</h3><p>248 KB · Ready</p></div><button class=\"sk-button\" type=\"button\" data-variant=\"secondary\">Remove</button></article>"
+              },
+              {
+                        "slug": "file-upload",
+                        "name": "File Upload",
+                        "description": "A file input drop area with a clear label.",
+                        "variants": [
+                                  "dropzone",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-file-upload\"><label for=\"file-upload-control\">Upload files</label><input id=\"file-upload-control\" type=\"file\"><p>Drag files here or choose a file.</p></div>"
+              },
+              {
+                        "slug": "footer",
+                        "name": "Footer",
+                        "description": "A semantic page footer for navigation, metadata, and legal links.",
+                        "variants": [
+                                  "simple",
+                                  "columns",
+                                  "product"
+                        ],
+                        "keyboard": "No keyboard behavior required unless interactive content is slotted.",
+                        "sample": "<footer class=\"sk-footer\"><div class=\"sk-footer__inner\"><p>{{brand}}</p><nav aria-label=\"Footer\">{{links}}</nav><small>{{legal}}</small></div></footer>"
+              },
+              {
+                        "slug": "form",
+                        "name": "Form",
+                        "description": "A semantic form layout for labeled controls and actions.",
+                        "variants": [
+                                  "stacked",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<form class=\"sk-form\"><label for=\"form-email\">Email</label><input id=\"form-email\" name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"you@example.com\"><label for=\"form-message\">Message</label><textarea id=\"form-message\" name=\"message\">Tell us what you need.</textarea><button class=\"sk-button\" type=\"submit\">Submit</button></form>"
+              },
+              {
+                        "slug": "form-field",
+                        "name": "Form Field",
+                        "description": "A labeled input group with help, validation, and autocomplete support.",
+                        "variants": [
+                                  "text",
+                                  "select",
+                                  "textarea",
+                                  "checkbox"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-form-field\"><label for=\"{{id}}\">{{label}}</label><input id=\"{{id}}\" name=\"{{name}}\" type=\"text\" autocomplete=\"name\" aria-describedby=\"{{id}}-help\"><p class=\"sk-form-field__help\" id=\"{{id}}-help\">{{help}}</p></div>"
+              },
+              {
+                        "slug": "generator-panel",
+                        "name": "Generator Panel",
+                        "description": "A form-forward tool panel for small generators, prompts, and preview controls.",
+                        "variants": [
+                                  "form-preview",
+                                  "compact",
+                                  "stacked"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-generator-panel\" aria-labelledby=\"generator-title\">\n  <form>\n    <h2 id=\"generator-title\">Thumbnail generator</h2>\n    <label for=\"generator-topic\">Topic</label>\n    <input id=\"generator-topic\" name=\"topic\" type=\"text\" value=\"Static site launch\">\n    <label for=\"generator-style\">Style</label>\n    <select id=\"generator-style\" name=\"style\"><option>Editorial</option><option>Technical</option></select>\n    <button class=\"sk-button\" type=\"submit\">Generate</button>\n  </form>\n  <div class=\"sk-generator-panel__preview\" role=\"img\" aria-label=\"Generated preview placeholder\">Preview</div>\n</section>"
+              },
+              {
+                        "slug": "header",
+                        "name": "Header",
+                        "description": "A top-level site header with navigation and primary action.",
+                        "variants": [
+                                  "default",
+                                  "docs",
+                                  "commerce"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<header class=\"sk-header\"><div class=\"sk-header__inner\"><a href=\"/\" aria-label=\"{{brand}} home\">{{brand}}</a><nav aria-label=\"Primary\">{{nav}}</nav><div>{{actions}}</div></div></header>"
+              },
+              {
+                        "slug": "heading",
+                        "name": "Heading",
+                        "description": "A typographic heading pattern with optional supporting text.",
+                        "variants": [
+                                  "section",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<header class=\"sk-heading\"><p>Section</p><h2>Build with clear hierarchy.</h2><span>Supporting metadata stays compact and readable.</span></header>"
+              },
+              {
+                        "slug": "hero",
+                        "name": "Hero",
+                        "description": "A first-viewport introduction for product, documentation, and launch pages.",
+                        "variants": [
+                                  "split",
+                                  "centered",
+                                  "technical"
+                        ],
+                        "keyboard": "No keyboard behavior required unless interactive content is slotted.",
+                        "sample": "<section class=\"sk-hero\" aria-labelledby=\"hero-title\"><h2 id=\"hero-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
+              },
+              {
+                        "slug": "icon",
+                        "name": "Icon",
+                        "description": "A small symbolic marker with an accessible name when meaningful.",
+                        "variants": [
+                                  "line",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<span class=\"sk-icon\" role=\"img\" aria-label=\"Confirmed\">✓</span>"
+              },
+              {
+                        "slug": "image",
+                        "name": "Image",
+                        "description": "A responsive image frame with optional caption.",
+                        "variants": [
+                                  "figure",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<figure class=\"sk-image\"><div role=\"img\" aria-label=\"SiteKit placeholder image\">Image</div><figcaption>Tokenized image frame</figcaption></figure>"
+              },
+              {
+                        "slug": "label",
+                        "name": "Label",
+                        "description": "A compact text label for form fields or metadata.",
+                        "variants": [
+                                  "field",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<label class=\"sk-label\" for=\"label-example\">Project name</label>"
+              },
+              {
+                        "slug": "link",
+                        "name": "Link",
+                        "description": "A text link with visible focus and hover states.",
+                        "variants": [
+                                  "inline",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<a class=\"sk-link\" href=\"#components\">Read component docs</a>"
+              },
+              {
+                        "slug": "list",
+                        "name": "List",
+                        "description": "A semantic ordered or unordered list with consistent spacing.",
+                        "variants": [
+                                  "unordered",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<ul class=\"sk-list\"><li>Semantic markup</li><li>Tokenized spacing</li><li>Readable hierarchy</li></ul>"
+              },
+              {
+                        "slug": "metadata-panel",
+                        "name": "Metadata Panel",
+                        "description": "A compact key-value panel for operational metadata and object facts.",
+                        "variants": [
+                                  "default",
+                                  "compact",
+                                  "sidecar"
+                        ],
+                        "keyboard": "No keyboard behavior required unless interactive content is slotted.",
+                        "sample": "<aside class=\"sk-metadata-panel\" aria-label=\"{{label}}\"><dl>{{rows}}</dl></aside>"
+              },
+              {
+                        "slug": "modal",
+                        "name": "Modal",
+                        "description": "An interruptive dialog that requires deliberate focus management.",
+                        "variants": [
+                                  "default",
+                                  "danger",
+                                  "wide"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<dialog class=\"sk-modal\" id=\"{{id}}\" aria-labelledby=\"{{id}}-title\"><h2 id=\"{{id}}-title\">{{title}}</h2><div>{{body}}</div><form method=\"dialog\" class=\"sk-modal__actions\">{{actions}}</form></dialog>"
+              },
+              {
+                        "slug": "navigation",
+                        "name": "Navigation",
+                        "description": "A semantic navigation region for primary or secondary links.",
+                        "variants": [
+                                  "primary",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<nav class=\"sk-navigation\" aria-label=\"Primary\"><a href=\"#components\">Components</a><a href=\"#tokens\">Tokens</a><a href=\"#recipes\">Recipes</a></nav>"
+              },
+              {
+                        "slug": "newsletter-signup",
+                        "name": "Newsletter Signup",
+                        "description": "A focused email capture block with semantic form controls and compact supporting copy.",
+                        "variants": [
+                                  "inline",
+                                  "boxed",
+                                  "modal",
+                                  "split"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-newsletter-signup\" aria-labelledby=\"newsletter-title\">\n  <div>\n    <span class=\"sk-badge\" data-variant=\"outline\">Newsletter</span>\n    <h2 id=\"newsletter-title\">Stay in the loop.</h2>\n    <p>Get concise build notes, release prompts, and design-system updates.</p>\n  </div>\n  <form class=\"sk-newsletter-signup__form\">\n    <label for=\"newsletter-email\">Email address</label>\n    <div>\n      <input id=\"newsletter-email\" name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"you@example.com\">\n      <button class=\"sk-button\" type=\"submit\">Subscribe</button>\n    </div>\n    <p>One useful note at a time. Unsubscribe whenever.</p>\n  </form>\n</section>"
+              },
+              {
+                        "slug": "pagination",
+                        "name": "Pagination",
+                        "description": "A page navigation control for long result sets.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<nav class=\"sk-pagination\" aria-label=\"Pagination\"><a href=\"#prev\">Previous</a><a aria-current=\"page\" href=\"#1\">1</a><a href=\"#2\">2</a><a href=\"#next\">Next</a></nav>"
+              },
+              {
+                        "slug": "partners-strip",
+                        "name": "Partners Strip",
+                        "description": "A logo or partner proof row with semantic list structure and theme-safe styling.",
+                        "variants": [
+                                  "logos",
+                                  "boxed",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-partners-strip\" aria-labelledby=\"partners-title\">\n  <h2 id=\"partners-title\">Trusted by leading teams</h2>\n  <ul>\n    <li>Northstar</li>\n    <li>Atlas</li>\n    <li>Signal</li>\n    <li>Foundry</li>\n  </ul>\n</section>"
+              },
+              {
+                        "slug": "popover",
+                        "name": "Popover",
+                        "description": "A small contextual surface anchored to a trigger.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-popover\"><button class=\"sk-button\" type=\"button\" aria-expanded=\"true\">Details</button><div role=\"dialog\" aria-label=\"Details popover\"><p>Compact contextual information.</p></div></div>"
+              },
+              {
+                        "slug": "pricing-table",
+                        "name": "Pricing Table",
+                        "description": "A commercial pricing comparison layout with plans and features.",
+                        "variants": [
+                                  "monthly",
+                                  "annual",
+                                  "comparison"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-pricing-table\"><table><caption>{{caption}}</caption><thead>{{columns}}</thead><tbody>{{rows}}</tbody></table></div>"
+              },
+              {
+                        "slug": "product-card",
+                        "name": "Product Card",
+                        "description": "A semantic commerce product summary with media, price, and actions.",
+                        "variants": [
+                                  "default",
+                                  "compact",
+                                  "featured"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-product-card\" aria-labelledby=\"product-card-title\"><h2 id=\"product-card-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
+              },
+              {
+                        "slug": "product-grid",
+                        "name": "Product Grid",
+                        "description": "A responsive product listing surface.",
+                        "variants": [
+                                  "catalog",
+                                  "compact",
+                                  "comparison"
+                        ],
+                        "keyboard": "No keyboard behavior required unless interactive content is slotted.",
+                        "sample": "<section class=\"sk-product-grid\" aria-label=\"{{label}}\">{{items}}</section>"
+              },
+              {
+                        "slug": "product-showcase",
+                        "name": "Product Showcase",
+                        "description": "A compact commerce or template showcase adapted from legacy landing-page demos.",
+                        "variants": [
+                                  "template",
+                                  "commerce",
+                                  "editorial"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-product-showcase\" aria-labelledby=\"product-showcase-title\">\n  <div class=\"sk-product-showcase__intro\">\n    <span class=\"sk-badge\" data-variant=\"outline\">Showcase</span>\n    <h2 id=\"product-showcase-title\">Summer styles are finally here.</h2>\n    <p>A reusable showcase surface for template galleries, offers, and launches.</p>\n  </div>\n  <div class=\"sk-product-showcase__items\">\n    <article><h3>Deploy faster</h3><p>Launch-ready pattern.</p><a class=\"sk-button\" href=\"#product-showcase-title\">View</a></article>\n    <article><h3>Work with us</h3><p>Concise product story.</p><a class=\"sk-button\" href=\"#product-showcase-title\" data-variant=\"secondary\">Open</a></article>\n  </div>\n</section>"
+              },
+              {
+                        "slug": "progress-bar",
+                        "name": "Progress Bar",
+                        "description": "A horizontal progress meter for determinate completion.",
+                        "variants": [
+                                  "determinate",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-progress-bar\" aria-label=\"Build progress\"><span style=\"inline-size: 64%\"></span></div>"
+              },
+              {
+                        "slug": "progress-indicator",
+                        "name": "Progress Indicator",
+                        "description": "A compact step or status indicator for multi-step flows.",
+                        "variants": [
+                                  "steps",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<ol class=\"sk-progress-indicator\" aria-label=\"Progress\"><li data-complete>Plan</li><li data-current>Build</li><li>Ship</li></ol>"
+              },
+              {
+                        "slug": "promo-banner",
+                        "name": "Promo Banner",
+                        "description": "A dismissible commercial or release announcement banner.",
+                        "variants": [
+                                  "info",
+                                  "success",
+                                  "warning"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-promo-banner\" aria-labelledby=\"promo-banner-title\"><h2 id=\"promo-banner-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
+              },
+              {
+                        "slug": "quote",
+                        "name": "Quote",
+                        "description": "A pull quote or testimonial block with citation.",
+                        "variants": [
+                                  "pull",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<figure class=\"sk-quote\"><blockquote>SiteKit keeps interface patterns inspectable and reusable.</blockquote><figcaption>Product team</figcaption></figure>"
+              },
+              {
+                        "slug": "radio-button",
+                        "name": "Radio Button",
+                        "description": "A single-choice input within a related option group.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<fieldset class=\"sk-radio-button\"><legend>Plan</legend><label><input type=\"radio\" name=\"plan\" checked> Starter</label><label><input type=\"radio\" name=\"plan\"> Pro</label></fieldset>"
+              },
+              {
+                        "slug": "rating",
+                        "name": "Rating",
+                        "description": "A rating display or input for qualitative feedback.",
+                        "variants": [
+                                  "five-point",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-rating\" role=\"img\" aria-label=\"4 out of 5 stars\"><span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span></div>"
+              },
+              {
+                        "slug": "recent-posts",
+                        "name": "Recent Posts",
+                        "description": "A semantic article-list component for blog previews and latest insights.",
+                        "variants": [
+                                  "cards",
+                                  "list",
+                                  "featured"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-recent-posts\" aria-labelledby=\"recent-posts-title\">\n  <h2 id=\"recent-posts-title\">Latest insights</h2>\n  <div>\n    <article><p class=\"sk-recent-posts__meta\">Guide</p><h3><a href=\"#recent-posts-title\">How SiteKit keeps components consistent</a></h3><p>Source contracts, generated CSS, and previews stay connected.</p></article>\n    <article><p class=\"sk-recent-posts__meta\">Workflow</p><h3><a href=\"#recent-posts-title\">Migrating legacy patterns cleanly</a></h3><p>Use old layouts as source material, not visual drift.</p></article>\n  </div>\n</section>"
+              },
+              {
+                        "slug": "resource-links",
+                        "name": "Resource Links",
+                        "description": "A compact link collection for docs, examples, templates, and external references.",
+                        "variants": [
+                                  "grid",
+                                  "stack",
+                                  "annotated"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-resource-links\" aria-labelledby=\"resources-title\">\n  <h2 id=\"resources-title\">Resource links</h2>\n  <ul>\n    <li><a href=\"#resources-title\">Starter docs</a><p>Implementation notes and source contracts.</p></li>\n    <li><a href=\"#resources-title\">Component recipes</a><p>Composable page patterns.</p></li>\n    <li><a href=\"#resources-title\">Validation guide</a><p>Build, lint, and snapshot checks.</p></li>\n  </ul>\n</section>"
+              },
+              {
+                        "slug": "rich-text-editor",
+                        "name": "Rich Text Editor",
+                        "description": "A text editing surface with formatting controls.",
+                        "variants": [
+                                  "basic",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-rich-text-editor\" aria-labelledby=\"rte-title\"><h2 id=\"rte-title\">Editor</h2><div role=\"toolbar\" aria-label=\"Formatting\"><button type=\"button\">B</button><button type=\"button\">I</button><button type=\"button\">Link</button></div><div contenteditable=\"true\" role=\"textbox\" aria-multiline=\"true\">Write content here.</div></section>"
+              },
+              {
+                        "slug": "roadmap",
+                        "name": "Roadmap",
+                        "description": "A chronological product timeline for milestones, launches, and upcoming work.",
+                        "variants": [
+                                  "timeline",
+                                  "compact",
+                                  "release-plan"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-roadmap\" aria-labelledby=\"roadmap-title\">\n  <h2 id=\"roadmap-title\">Product roadmap</h2>\n  <ol>\n    <li><time datetime=\"2026-07\">Jul 2026</time><h3>Component import</h3><p>Legacy marketing patterns become token-driven SiteKit components.</p></li>\n    <li><time datetime=\"2026-08\">Aug 2026</time><h3>Recipe refresh</h3><p>Recipes consume the expanded component set.</p></li>\n    <li><time datetime=\"2026-09\">Sep 2026</time><h3>Snapshot review</h3><p>Visual baselines cover the full catalog.</p></li>\n  </ol>\n</section>"
+              },
+              {
+                        "slug": "search-input",
+                        "name": "Search Input",
+                        "description": "A search field with a visible submit action.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<form class=\"sk-search-input\" role=\"search\"><label for=\"search-input-control\">Search</label><div><input id=\"search-input-control\" type=\"search\" value=\"components\"><button class=\"sk-button\" type=\"submit\">Search</button></div></form>"
+              },
+              {
+                        "slug": "segmented-control",
+                        "name": "Segmented Control",
+                        "description": "A compact grouped control for switching modes.",
+                        "variants": [
+                                  "single-select",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-segmented-control\" role=\"group\" aria-label=\"View mode\"><button type=\"button\" aria-pressed=\"true\">Grid</button><button type=\"button\">List</button><button type=\"button\">Table</button></div>"
+              },
+              {
+                        "slug": "select",
+                        "name": "Select",
+                        "description": "A native select control with label and options.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-select\"><label for=\"select-control\">Theme</label><select id=\"select-control\"><option>kujo-light</option><option>kujo-dark</option><option>personal-dark</option></select></div>"
+              },
+              {
+                        "slug": "separator",
+                        "name": "Separator",
+                        "description": "A semantic visual divider between related sections.",
+                        "variants": [
+                                  "horizontal",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<hr class=\"sk-separator\">"
+              },
+              {
+                        "slug": "skeleton",
+                        "name": "Skeleton",
+                        "description": "A placeholder surface that indicates loading content.",
+                        "variants": [
+                                  "text",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-skeleton\" aria-hidden=\"true\"><span></span><span></span><span></span></div>"
+              },
+              {
+                        "slug": "skip-link",
+                        "name": "Skip Link",
+                        "description": "An accessible link for skipping directly to page content.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<a class=\"sk-skip-link\" href=\"#main\">Skip to main content</a>"
+              },
+              {
+                        "slug": "slider",
+                        "name": "Slider",
+                        "description": "A range input for selecting a numeric value.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-slider\"><label for=\"slider-control\">Intensity</label><input id=\"slider-control\" type=\"range\" min=\"0\" max=\"100\" value=\"64\"></div>"
+              },
+              {
+                        "slug": "spinner",
+                        "name": "Spinner",
+                        "description": "A compact indeterminate loading indicator.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-spinner\" role=\"status\"><span></span><span class=\"sk-sr-only\">Loading</span></div>"
+              },
+              {
+                        "slug": "stack",
+                        "name": "Stack",
+                        "description": "A vertical layout primitive for consistent spacing.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-stack-component\"><div>First item</div><div>Second item</div><div>Third item</div></div>"
+              },
+              {
+                        "slug": "stats-bar",
+                        "name": "Stats Bar",
+                        "description": "A semantic metric strip for proof points, performance numbers, or portfolio counters.",
+                        "variants": [
+                                  "inline",
+                                  "boxed",
+                                  "stacked"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-stats-bar\" aria-label=\"Project stats\">\n  <dl>\n    <div><dt>Open Source Plugins</dt><dd>50+</dd></div>\n    <div><dt>Years Experience</dt><dd>20+</dd></div>\n    <div><dt>Lighthouse Scores</dt><dd>100%</dd></div>\n  </dl>\n</section>"
+              },
+              {
+                        "slug": "stepper",
+                        "name": "Stepper",
+                        "description": "A numeric input with increment and decrement actions.",
+                        "variants": [
+                                  "number",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-stepper\"><label for=\"stepper-control\">Seats</label><div><button type=\"button\">−</button><input id=\"stepper-control\" type=\"number\" value=\"3\"><button type=\"button\">+</button></div></div>"
+              },
+              {
+                        "slug": "table",
+                        "name": "Table",
+                        "description": "A semantic table for structured comparison or tabular data.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-table\"><table><caption>Component status</caption><thead><tr><th scope=\"col\">Component</th><th scope=\"col\">Status</th></tr></thead><tbody><tr><th scope=\"row\">Button</th><td>Ready</td></tr><tr><th scope=\"row\">Modal</th><td>Ready</td></tr></tbody></table></div>"
+              },
+              {
+                        "slug": "tabs",
+                        "name": "Tabs",
+                        "description": "A keyboard navigable view switcher for related panels.",
+                        "variants": [
+                                  "line",
+                                  "boxed",
+                                  "docs"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-tabs\"><div role=\"tablist\" aria-label=\"{{label}}\">{{tabs}}</div><section role=\"tabpanel\" tabindex=\"0\">{{panel}}</section></div>"
+              },
+              {
+                        "slug": "team-grid",
+                        "name": "Team Grid",
+                        "description": "A responsive people grid for profiles, roles, and compact bios.",
+                        "variants": [
+                                  "profiles",
+                                  "compact",
+                                  "leadership"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-team-grid\" aria-labelledby=\"team-title\">\n  <h2 id=\"team-title\">Meet the team</h2>\n  <ul>\n    <li><span aria-hidden=\"true\">AM</span><h3>Alexandra Morgan</h3><p>Product strategy</p></li>\n    <li><span aria-hidden=\"true\">MP</span><h3>Michael Patel</h3><p>Engineering systems</p></li>\n    <li><span aria-hidden=\"true\">JR</span><h3>Jamie Rivera</h3><p>Design operations</p></li>\n  </ul>\n</section>"
+              },
+              {
+                        "slug": "testimonial-rail",
+                        "name": "Testimonial Rail",
+                        "description": "A scroll-safe testimonial layout for customer quotes and builder proof.",
+                        "variants": [
+                                  "rail",
+                                  "grid",
+                                  "featured"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-testimonial-rail\" aria-labelledby=\"testimonial-title\">\n  <h2 id=\"testimonial-title\">What builders say</h2>\n  <div>\n    <figure><blockquote>SiteKit gave our launch pages a consistent system without slowing the team down.</blockquote><figcaption>Alex, product lead</figcaption></figure>\n    <figure><blockquote>The components are plain enough to trust and structured enough to scale.</blockquote><figcaption>Morgan, engineer</figcaption></figure>\n  </div>\n</section>"
+              },
+              {
+                        "slug": "text-input",
+                        "name": "Text Input",
+                        "description": "A single-line text input with a visible label.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-text-input\"><label for=\"text-input-control\">Project</label><input id=\"text-input-control\" type=\"text\" value=\"SiteKit\"></div>"
+              },
+              {
+                        "slug": "textarea",
+                        "name": "Textarea",
+                        "description": "A multi-line text input with label and help text.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<div class=\"sk-textarea\"><label for=\"textarea-control\">Notes</label><textarea id=\"textarea-control\">Document implementation details.</textarea></div>"
+              },
+              {
+                        "slug": "toast",
+                        "name": "Toast",
+                        "description": "A non-modal notification for transient feedback.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<section class=\"sk-toast\" role=\"status\"><strong>Saved</strong><p>Your changes are synced.</p><button type=\"button\" aria-label=\"Dismiss\">×</button></section>"
+              },
+              {
+                        "slug": "toggle",
+                        "name": "Toggle",
+                        "description": "A binary switch-style control using a native checkbox.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<label class=\"sk-toggle\"><input type=\"checkbox\" checked><span>Enable notifications</span></label>"
+              },
+              {
+                        "slug": "tooltip",
+                        "name": "Tooltip",
+                        "description": "A short contextual text hint for an adjacent control.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<span class=\"sk-tooltip\"><button class=\"sk-button\" type=\"button\" aria-describedby=\"tooltip-content\">Info</button><span id=\"tooltip-content\" role=\"tooltip\">Helpful context for this control.</span></span>"
+              },
+              {
+                        "slug": "tree-view",
+                        "name": "Tree View",
+                        "description": "A hierarchical navigation or selection tree.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<nav class=\"sk-tree-view\" aria-label=\"Component tree\"><ul><li><button type=\"button\" aria-expanded=\"true\">Inputs</button><ul><li><a href=\"#text-input\">Text input</a></li><li><a href=\"#select\">Select</a></li></ul></li></ul></nav>"
+              },
+              {
+                        "slug": "trust-strip",
+                        "name": "Trust Strip",
+                        "description": "A compact proof row for security, shipping, warranties, or social proof.",
+                        "variants": [
+                                  "default",
+                                  "compact",
+                                  "bordered"
+                        ],
+                        "keyboard": "No keyboard behavior required unless interactive content is slotted.",
+                        "sample": "<section class=\"sk-trust-strip\" aria-labelledby=\"trust-strip-title\"><h2 id=\"trust-strip-title\">{{heading}}</h2><p>{{body}}</p><div>{{actions}}</div></section>"
+              },
+              {
+                        "slug": "video",
+                        "name": "Video",
+                        "description": "A responsive video embed frame with caption.",
+                        "variants": [
+                                  "embed",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<figure class=\"sk-video\"><div role=\"img\" aria-label=\"Video preview\">16:9 Video</div><figcaption>Accessible video frame with caption.</figcaption></figure>"
+              },
+              {
+                        "slug": "visually-hidden",
+                        "name": "Visually Hidden",
+                        "description": "A utility wrapper for content available to assistive technology only.",
+                        "variants": [
+                                  "default",
+                                  "compact"
+                        ],
+                        "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+                        "sample": "<p class=\"sk-visually-hidden\">This text is available to screen readers.</p><p aria-hidden=\"true\">Visible companion text.</p>"
+              }
     ];
-
     const list = document.querySelector('#component-list');
     const modal = document.querySelector('#component-preview');
     const previewTitle = document.querySelector('#preview-title');
@@ -1503,19 +1065,41 @@
     let activeMarkup = '';
 
     const renderBadges = (variants) => variants.map((variant) => `<span class="sk-badge" data-variant="outline">${variant}</span>`).join('');
-    const duplicateBentoSlugs = new Set([
-      'bento-grid-7',
-      'testing-bento-1',
-      'testing-bento-1-bootstrap',
-      'testing-bento-grid-2',
-      'testing-bento-grid-3',
-      'testing-bento-grid-4',
-      'testing-bento-grid-5',
-      'testing-bento-grid-6',
-      'testing-bento-grid-7'
-    ]);
-    const previewComponents = componentData.filter((component) => !duplicateBentoSlugs.has(component.slug));
-    const previewKind = (component) => component.slug.includes('bento') ? 'bento' : 'default';
+    const categoryOrder = [
+      'Foundations',
+      'Actions & Feedback',
+      'Forms & Inputs',
+      'Navigation & Overlays',
+      'Content & Media',
+      'Layout & Data',
+      'Marketing & Commerce'
+    ];
+    const categoryMap = {
+      foundations: new Set(['avatar', 'color-picker', 'heading', 'icon', 'image', 'label', 'link', 'separator', 'skip-link', 'stack', 'visually-hidden']),
+      actions: new Set(['alert', 'badge', 'button', 'progress-bar', 'progress-indicator', 'skeleton', 'spinner', 'toast', 'tooltip']),
+      forms: new Set(['checkbox', 'combobox', 'date-input', 'date-picker', 'fieldset', 'file', 'file-upload', 'form', 'form-field', 'radio-button', 'rating', 'rich-text-editor', 'search-input', 'segmented-control', 'select', 'slider', 'stepper', 'text-input', 'textarea', 'toggle']),
+      navigation: new Set(['accordion', 'breadcrumbs', 'drawer', 'dropdown-menu', 'footer', 'header', 'modal', 'navigation', 'pagination', 'popover', 'tabs', 'tree-view']),
+      content: new Set(['card', 'carousel', 'code-block', 'empty-state', 'error-state', 'hero', 'list', 'quote', 'recent-posts', 'resource-links', 'roadmap', 'team-grid', 'testimonial-rail', 'video']),
+      layout: new Set(['bento-grid', 'command-strip', 'content-section', 'ecosystem-map', 'feature-grid', 'generator-panel', 'metadata-panel', 'stats-bar', 'table']),
+      marketing: new Set(['checkout-summary', 'cta', 'newsletter-signup', 'partners-strip', 'pricing-table', 'product-card', 'product-grid', 'product-showcase', 'promo-banner', 'trust-strip'])
+    };
+    const componentCategory = (component) => {
+      if (categoryMap.foundations.has(component.slug)) return 'Foundations';
+      if (categoryMap.actions.has(component.slug)) return 'Actions & Feedback';
+      if (categoryMap.forms.has(component.slug)) return 'Forms & Inputs';
+      if (categoryMap.navigation.has(component.slug)) return 'Navigation & Overlays';
+      if (categoryMap.content.has(component.slug)) return 'Content & Media';
+      if (categoryMap.layout.has(component.slug)) return 'Layout & Data';
+      if (categoryMap.marketing.has(component.slug)) return 'Marketing & Commerce';
+      return 'Content & Media';
+    };
+    const previewComponents = componentData;
+    const inlinePreviewSlugs = new Set(['avatar', 'badge', 'button', 'icon', 'label', 'link', 'rating', 'segmented-control', 'separator', 'skip-link', 'spinner', 'toggle', 'tooltip']);
+    const previewKind = (component) => {
+      if (component.slug.includes('bento')) return 'bento';
+      if (inlinePreviewSlugs.has(component.slug)) return 'inline';
+      return 'default';
+    };
     const previewId = (component) => `${component.slug}-preview`;
     const sampleValues = {
       actions: '<a class="sk-button" href="#preview-action">Primary action</a><a class="sk-button" data-variant="secondary" href="#preview-secondary">Secondary</a>',
@@ -1555,6 +1139,9 @@
       if (component.slug === 'button') {
         return `<div class="lab-sample-row" aria-label="Button variants">${component.variants.map((variant) => `<button class="sk-button" type="button" data-variant="${variant}">${variant}</button>`).join('')}</div>`;
       }
+      if (component.slug === 'visually-hidden') {
+        return '<div class="lab-sample-stack"><p class="sk-visually-hidden">This text is available to screen readers.</p><p aria-hidden="true">Visible companion text.</p></div>';
+      }
       return component.sample.replace(/\{\{([a-zA-Z0-9_.-]+)\}\}/g, (_match, key) => componentValue(key, component));
     };
     const preparePreview = () => {
@@ -1564,7 +1151,7 @@
       });
     };
 
-    list.innerHTML = previewComponents.map((component) => `
+    const renderCard = (component) => `
       <section class="sk-card lab-card" id="${component.slug}">
         <div class="lab-card__body">
           <h2>${component.name}</h2>
@@ -1576,7 +1163,13 @@
           <button class="sk-button" type="button" data-preview="${component.slug}">Preview</button>
         </div>
       </section>
-    `).join('');
+    `;
+
+    list.innerHTML = categoryOrder.map((category) => {
+      const components = previewComponents.filter((component) => componentCategory(component) === category);
+      if (!components.length) return '';
+      return `<section class="lab-component-section" aria-labelledby="${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-title"><h3 class="lab-section-title" id="${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-title">${category}</h3><div class="lab-list">${components.map(renderCard).join('')}</div></section>`;
+    }).join('');
 
     list.addEventListener('click', (event) => {
       const button = event.target.closest('[data-preview]');
