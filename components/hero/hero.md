@@ -28,6 +28,17 @@ See hero.schema.json for the source contract.
 - Preserve semantic text structure and slotted interactive focus.
 - Color must not be the only means of communication.
 
+## Legacy Source Coverage
+
+- old-components/testing-hero-1.html
+- old-components/testing-hero-2.html
+- old-components/testing-hero-3.html
+- old-components/testing-hero-4.html
+- old-components/testing-hero-5.html
+- old-components/testing-hero-6.html
+- old-components/testing-hero-7.html
+- old-components/testing-hero-8.html
+
 ## Agent Usage Notes
 
 - Read hero.schema.json before using or changing this component.

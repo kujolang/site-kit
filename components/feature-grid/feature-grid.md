@@ -28,6 +28,10 @@ See feature-grid.schema.json for the source contract.
 - Preserve semantic text structure and slotted interactive focus.
 - Color must not be the only means of communication.
 
+## Legacy Source Coverage
+
+- old-components/testing-features-1.html
+
 ## Agent Usage Notes
 
 - Read feature-grid.schema.json before using or changing this component.

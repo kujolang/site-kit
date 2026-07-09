@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Footer Showcase",
+      "variant": "columns",
+      "source": "old-components/testing-footer-4.html"
+    },
+    "notes": "One-to-one SiteKit component adapted from the matching old-components source file."
+  }
+]

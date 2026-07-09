@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Partners Strip",
+      "variant": "logos"
+    },
+    "notes": "Adapted from old-components into tokenized SiteKit styling."
+  }
+]

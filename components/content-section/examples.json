@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Content Section",
+      "variant": "media-right"
+    },
+    "notes": "Adapted from old-components into tokenized SiteKit styling."
+  }
+]

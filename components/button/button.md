@@ -29,6 +29,10 @@ See button.schema.json for the source contract.
 - Keyboard access, visible focus, and accessible names are required.
 - Color must not be the only means of communication.
 
+## Legacy Source Coverage
+
+- old-components/testing-buttons.html
+
 ## Agent Usage Notes
 
 - Read button.schema.json before using or changing this component.

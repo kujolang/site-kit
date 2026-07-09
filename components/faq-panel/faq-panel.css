@@ -1,0 +1,57 @@
+@layer components {
+  .sk-faq-panel {
+    display: grid;
+    gap: var(--sk-space-5);
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-card);
+    padding: var(--sk-space-5);
+    container-type: inline-size;
+  }
+
+  .sk-faq-panel__aside {
+    display: grid;
+    align-content: start;
+    justify-items: start;
+    gap: var(--sk-space-3);
+  }
+
+  .sk-faq-panel__items {
+    display: grid;
+    gap: var(--sk-space-3);
+  }
+
+  .sk-faq-panel details {
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-page);
+    padding: var(--sk-space-4);
+  }
+
+  .sk-faq-panel summary {
+    cursor: pointer;
+    font-family: var(--sk-font-mono);
+  }
+
+  .sk-faq-panel details p {
+    margin-block-start: var(--sk-space-3);
+    color: var(--sk-text-secondary);
+  }
+
+  @container (min-width: 54rem) {
+    .sk-faq-panel[data-layout="sidebar"],
+    .sk-faq-panel:not([data-layout]) {
+      grid-template-columns: minmax(12rem, .45fr) minmax(0, 1fr);
+    }
+  }
+
+    .sk-faq-panel a:focus-visible,
+    .sk-faq-panel button:focus-visible,
+    .sk-faq-panel input:focus-visible,
+    .sk-faq-panel select:focus-visible,
+    .sk-faq-panel textarea:focus-visible,
+    .sk-faq-panel summary:focus-visible,
+    .sk-faq-panel [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+
+}

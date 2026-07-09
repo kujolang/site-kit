@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Bento Grid",
+      "variant": "source-bento",
+      "source": "old-components/testing-bento-grid-7.html"
+    },
+    "notes": "One-to-one SiteKit component adapted from the matching old-components source file."
+  }
+]

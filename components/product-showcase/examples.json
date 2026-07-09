@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Product Showcase",
+      "variant": "template"
+    },
+    "notes": "Adapted from old-components into tokenized SiteKit styling."
+  }
+]

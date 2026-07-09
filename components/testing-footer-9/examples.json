@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "SiteKit",
+      "variant": "columns",
+      "source": "old-components/testing-footer-9.html"
+    },
+    "notes": "One-to-one SiteKit component adapted from the matching old-components source file."
+  }
+]

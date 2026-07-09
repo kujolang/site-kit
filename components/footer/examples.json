@@ -6,5 +6,23 @@
       "variant": "simple"
     },
     "notes": "Use semantic landmarks and tokenized styling."
+  },
+  {
+    "name": "Legacy source coverage",
+    "props": {
+      "sources": [
+        "old-components/testing-footer-1.html",
+        "old-components/testing-footer-2.html",
+        "old-components/testing-footer-3.html",
+        "old-components/testing-footer-4.html",
+        "old-components/testing-footer-5.html",
+        "old-components/testing-footer-6.html",
+        "old-components/testing-footer-7.html",
+        "old-components/testing-footer-8.html",
+        "old-components/testing-footer-9.html",
+        "old-components/testing-footer-10.html"
+      ]
+    },
+    "notes": "Legacy old-components files reviewed and represented through this SiteKit component contract."
   }
 ]

@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "FAQ with Clean Load-in Animations",
+      "variant": "accordion",
+      "source": "old-components/testing-faq-4.html"
+    },
+    "notes": "One-to-one SiteKit component adapted from the matching old-components source file."
+  }
+]

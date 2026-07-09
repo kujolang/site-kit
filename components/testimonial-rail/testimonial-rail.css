@@ -1,0 +1,42 @@
+@layer components {
+  .sk-testimonial-rail {
+    display: grid;
+    gap: var(--sk-space-4);
+  }
+
+  .sk-testimonial-rail > div {
+    display: grid;
+    gap: var(--sk-space-4);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  }
+
+  .sk-testimonial-rail figure {
+    margin: 0;
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-card);
+    padding: var(--sk-space-5);
+  }
+
+  .sk-testimonial-rail blockquote {
+    margin: 0 0 var(--sk-space-4);
+    color: var(--sk-text-primary);
+  }
+
+  .sk-testimonial-rail figcaption {
+    color: var(--sk-text-muted);
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-sm);
+  }
+
+    .sk-testimonial-rail a:focus-visible,
+    .sk-testimonial-rail button:focus-visible,
+    .sk-testimonial-rail input:focus-visible,
+    .sk-testimonial-rail select:focus-visible,
+    .sk-testimonial-rail textarea:focus-visible,
+    .sk-testimonial-rail summary:focus-visible,
+    .sk-testimonial-rail [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+
+}

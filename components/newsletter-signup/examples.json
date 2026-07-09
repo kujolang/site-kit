@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Newsletter Signup",
+      "variant": "inline"
+    },
+    "notes": "Adapted from old-components into tokenized SiteKit styling."
+  }
+]

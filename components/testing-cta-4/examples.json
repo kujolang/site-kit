@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "SiteKit Brand Growth CTA",
+      "variant": "band",
+      "source": "old-components/testing-cta-4.html"
+    },
+    "notes": "One-to-one SiteKit component adapted from the matching old-components source file."
+  }
+]

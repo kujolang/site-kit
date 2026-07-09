@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Recent Posts",
+      "variant": "cards"
+    },
+    "notes": "Adapted from old-components into tokenized SiteKit styling."
+  }
+]

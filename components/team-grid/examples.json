@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Team Grid",
+      "variant": "profiles"
+    },
+    "notes": "Adapted from old-components into tokenized SiteKit styling."
+  }
+]

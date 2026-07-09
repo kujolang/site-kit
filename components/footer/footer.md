@@ -28,6 +28,19 @@ See footer.schema.json for the source contract.
 - Preserve semantic text structure and slotted interactive focus.
 - Color must not be the only means of communication.
 
+## Legacy Source Coverage
+
+- old-components/testing-footer-1.html
+- old-components/testing-footer-2.html
+- old-components/testing-footer-3.html
+- old-components/testing-footer-4.html
+- old-components/testing-footer-5.html
+- old-components/testing-footer-6.html
+- old-components/testing-footer-7.html
+- old-components/testing-footer-8.html
+- old-components/testing-footer-9.html
+- old-components/testing-footer-10.html
+
 ## Agent Usage Notes
 
 - Read footer.schema.json before using or changing this component.

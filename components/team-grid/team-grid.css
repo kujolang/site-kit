@@ -1,0 +1,51 @@
+@layer components {
+  .sk-team-grid {
+    display: grid;
+    gap: var(--sk-space-4);
+  }
+
+  .sk-team-grid ul {
+    display: grid;
+    gap: var(--sk-space-4);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sk-team-grid li {
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-card);
+    padding: var(--sk-space-5);
+  }
+
+  .sk-team-grid span {
+    inline-size: var(--sk-size-control-lg);
+    block-size: var(--sk-size-control-lg);
+    display: grid;
+    place-items: center;
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    margin-block-end: var(--sk-space-4);
+    font-family: var(--sk-font-mono);
+  }
+
+  .sk-team-grid h3 {
+    font-family: var(--sk-font-mono);
+  }
+
+  .sk-team-grid p {
+    color: var(--sk-text-secondary);
+  }
+
+    .sk-team-grid a:focus-visible,
+    .sk-team-grid button:focus-visible,
+    .sk-team-grid input:focus-visible,
+    .sk-team-grid select:focus-visible,
+    .sk-team-grid textarea:focus-visible,
+    .sk-team-grid summary:focus-visible,
+    .sk-team-grid [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Integrated Video Embed Showcase",
+      "variant": "embed",
+      "source": "old-components/testing-video-demo-1.html"
+    },
+    "notes": "One-to-one SiteKit component adapted from the matching old-components source file."
+  }
+]

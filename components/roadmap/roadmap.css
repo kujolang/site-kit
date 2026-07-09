@@ -1,0 +1,47 @@
+@layer components {
+  .sk-roadmap {
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-card);
+    padding: var(--sk-space-5);
+  }
+
+  .sk-roadmap ol {
+    display: grid;
+    gap: var(--sk-space-4);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sk-roadmap li {
+    border-inline-start: var(--sk-border-heavy) solid var(--sk-border-default);
+    padding-inline-start: var(--sk-space-4);
+  }
+
+  .sk-roadmap time,
+  .sk-roadmap h3 {
+    font-family: var(--sk-font-mono);
+  }
+
+  .sk-roadmap time {
+    color: var(--sk-text-muted);
+    font-size: var(--sk-type-size-xs);
+    text-transform: uppercase;
+  }
+
+  .sk-roadmap p {
+    color: var(--sk-text-secondary);
+  }
+
+    .sk-roadmap a:focus-visible,
+    .sk-roadmap button:focus-visible,
+    .sk-roadmap input:focus-visible,
+    .sk-roadmap select:focus-visible,
+    .sk-roadmap textarea:focus-visible,
+    .sk-roadmap summary:focus-visible,
+    .sk-roadmap [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "SiteKit The Markdown Signup CTA",
+      "variant": "band",
+      "source": "old-components/testing-cta-3.html"
+    },
+    "notes": "One-to-one SiteKit component adapted from the matching old-components source file."
+  }
+]

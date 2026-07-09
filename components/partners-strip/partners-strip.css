@@ -1,0 +1,42 @@
+@layer components {
+  .sk-partners-strip {
+    display: grid;
+    gap: var(--sk-space-4);
+    border-block: var(--sk-border-1) solid var(--sk-border-default);
+    padding-block: var(--sk-space-5);
+  }
+
+  .sk-partners-strip h2 {
+    font-size: var(--sk-type-size-lg);
+  }
+
+  .sk-partners-strip ul {
+    display: grid;
+    gap: var(--sk-space-3);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sk-partners-strip li {
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-card);
+    padding: var(--sk-space-4);
+    font-family: var(--sk-font-mono);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+    .sk-partners-strip a:focus-visible,
+    .sk-partners-strip button:focus-visible,
+    .sk-partners-strip input:focus-visible,
+    .sk-partners-strip select:focus-visible,
+    .sk-partners-strip textarea:focus-visible,
+    .sk-partners-strip summary:focus-visible,
+    .sk-partners-strip [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+
+}

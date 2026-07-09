@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Video Demo",
+      "variant": "embed"
+    },
+    "notes": "Adapted from old-components into tokenized SiteKit styling."
+  }
+]

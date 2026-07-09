@@ -1,0 +1,64 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "Resource Links",
+  "description": "A compact link collection for docs, examples, templates, and external references.",
+  "props": {
+    "heading": "string",
+    "links": "array"
+  },
+  "variants": [
+    "grid",
+    "stack",
+    "annotated"
+  ],
+  "requiredFields": [
+    "links"
+  ],
+  "accessibility": {
+    "semantics": "Use native semantic elements in templates before ARIA.",
+    "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+    "focus": "Uses :focus-visible styles in component CSS.",
+    "notes": [
+      "Color is never the only communication channel.",
+      "Motion must respect prefers-reduced-motion where animation exists."
+    ]
+  },
+  "tokenDependencies": [
+    "surface.page",
+    "surface.card",
+    "surface.raised",
+    "text.primary",
+    "text.secondary",
+    "text.muted",
+    "border.default",
+    "focus.ring",
+    "space.4",
+    "radius.0"
+  ],
+  "responsive": {
+    "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
+    "breakpoints": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "slots": [
+    "heading",
+    "links"
+  ],
+  "examples": [
+    {
+      "name": "Default",
+      "props": {
+        "label": "Resource Links",
+        "variant": "grid"
+      },
+      "notes": "Adapted from old-components into tokenized SiteKit styling."
+    }
+  ],
+  "allowedChildren": [
+    "heading",
+    "links"
+  ]
+}

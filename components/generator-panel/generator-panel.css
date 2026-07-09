@@ -1,0 +1,57 @@
+@layer components {
+  .sk-generator-panel {
+    display: grid;
+    gap: var(--sk-space-5);
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-card);
+    padding: var(--sk-space-5);
+    container-type: inline-size;
+  }
+
+  .sk-generator-panel form {
+    display: grid;
+    gap: var(--sk-space-3);
+  }
+
+  .sk-generator-panel label {
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-sm);
+  }
+
+  .sk-generator-panel input,
+  .sk-generator-panel select {
+    min-block-size: var(--sk-size-control-md);
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    border-radius: var(--sk-radius-0);
+    background: var(--sk-surface-page);
+    color: var(--sk-text-primary);
+    padding-inline: var(--sk-space-3);
+  }
+
+  .sk-generator-panel__preview {
+    aspect-ratio: 16 / 9;
+    display: grid;
+    place-items: center;
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-page);
+    font-family: var(--sk-font-mono);
+  }
+
+  @container (min-width: 56rem) {
+    .sk-generator-panel {
+      grid-template-columns: minmax(18rem, .7fr) minmax(24rem, 1fr);
+    }
+  }
+
+    .sk-generator-panel a:focus-visible,
+    .sk-generator-panel button:focus-visible,
+    .sk-generator-panel input:focus-visible,
+    .sk-generator-panel select:focus-visible,
+    .sk-generator-panel textarea:focus-visible,
+    .sk-generator-panel summary:focus-visible,
+    .sk-generator-panel [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+
+}

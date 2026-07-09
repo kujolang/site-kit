@@ -39,32 +39,124 @@ Tokens are split into primitive tokens in tokens/core.json, semantic tokens in t
 ## Components
 
 - Badge: A compact status, category, or metadata label.
+- Bento Grid: A square-cornered modular grid for grouped capabilities, proof points, or portfolio services.
+- Bento Grid: A source-specific bento grid adapted from an old component into SiteKit square geometry.
 - Button: A semantic action control for links, form submits, and interface commands.
 - Card: A bounded content region for a single object, summary, or grouped action.
 - Checkout Summary: A commerce order summary with totals, taxes, discounts, and trust metadata.
 - Code Block: A readable code or command block with caption and copy action.
 - Command Strip: A compact operational metric strip for status, filters, or system state.
 - Comparison Table: A structured feature comparison table for commercial or docs pages.
+- Content Section: A responsive editorial section with copy, actions, and an optional media or proof panel.
 - CTA: A conversion block with a clear next action.
 - Disclosure FAQ: A progressive reveal component for FAQs and optional detail.
 - Docs Nav: A documentation navigation landmark for section trees and active states.
 - Ecosystem Map: A semantic map of projects, packages, docs, and relationships.
 - Empty State: A clear message for empty collections with optional recovery action.
 - Error State: A recoverable error message with next steps and support context.
+- FAQ Panel: A structured question-and-answer surface for accordion, sidebar, and grid FAQ layouts.
 - Feature Grid: A responsive list of capabilities or benefits.
 - Footer: A semantic page footer for navigation, metadata, and legal links.
 - Form Field: A labeled input group with help, validation, and autocomplete support.
+- Generator Panel: A form-forward tool panel for small generators, prompts, and preview controls.
 - Header: A top-level site header with navigation and primary action.
 - Hero: A first-viewport introduction for product, documentation, and launch pages.
 - Loading State: A non-blocking loading placeholder that respects reduced motion.
 - Metadata Panel: A compact key-value panel for operational metadata and object facts.
 - Modal Dialog: An interruptive dialog that requires deliberate focus management.
+- Cyberpunk Newsletter Modal: A source-specific newsletter signup component with semantic form controls.
+- Cyberpunk Newsletter Modal: A source-specific newsletter signup component with semantic form controls.
+- Cyberpunk Newsletter Modal: A source-specific newsletter signup component with semantic form controls.
+- Cyberpunk Newsletter Modal: A source-specific newsletter signup component with semantic form controls.
+- Newsletter Signup: A focused email capture block with semantic form controls and compact supporting copy.
+- Partners Strip: A logo or partner proof row with semantic list structure and theme-safe styling.
 - Pricing Table: A commercial pricing comparison layout with plans and features.
 - Product Card: A semantic commerce product summary with media, price, and actions.
 - Product Grid: A responsive product listing surface.
+- Product Showcase: A compact commerce or template showcase adapted from legacy landing-page demos.
 - Promo Banner: A dismissible commercial or release announcement banner.
+- Recent Posts: A semantic article-list component for blog previews and latest insights.
+- Resource Links: A compact link collection for docs, examples, templates, and external references.
+- Roadmap: A chronological product timeline for milestones, launches, and upcoming work.
+- Stats Bar: A semantic metric strip for proof points, performance numbers, or portfolio counters.
 - Tabs: A keyboard navigable view switcher for related panels.
+- Team Grid: A responsive people grid for profiles, roles, and compact bios.
+- Timeline / Roadmap Showcase: A source-specific roadmap timeline adapted into tokenized SiteKit structure.
+- Testimonial Rail: A scroll-safe testimonial layout for customer quotes and builder proof.
+- Testing: A source-specific showcase section adapted from an old component.
+- Portfolio Bento Grid: A source-specific bento grid adapted from an old component into SiteKit square geometry.
+- Portfolio Bento Grid: A source-specific bento grid adapted from an old component into SiteKit square geometry.
+- Bento Grid: A source-specific bento grid adapted from an old component into SiteKit square geometry.
+- Bento Grid: A source-specific bento grid adapted from an old component into SiteKit square geometry.
+- Bento Grid: A source-specific bento grid adapted from an old component into SiteKit square geometry.
+- Bento Grid: A source-specific bento grid adapted from an old component into SiteKit square geometry.
+- Bento Grid: A source-specific bento grid adapted from an old component into SiteKit square geometry.
+- Bento Grid: A source-specific bento grid adapted from an old component into SiteKit square geometry.
+- Animated Label Button: A source-specific button showcase using semantic SiteKit button controls.
+- Content Section with Image Right: A source-specific content section with copy, action, and media/proof panel.
+- Content Section: A source-specific content section with copy, action, and media/proof panel.
+- Content Section: A source-specific content section with copy, action, and media/proof panel.
+- Content Section: A source-specific content section with copy, action, and media/proof panel.
+- Callout Banner Showcase: A source-specific call-to-action section adapted into SiteKit conversion styling.
+- Image + Text CTA Showcase: A source-specific call-to-action section adapted into SiteKit conversion styling.
+- SiteKit The Markdown Signup CTA: A source-specific call-to-action section adapted into SiteKit conversion styling.
+- SiteKit Brand Growth CTA: A source-specific call-to-action section adapted into SiteKit conversion styling.
+- SiteKit Contact CTA: A source-specific call-to-action section adapted into SiteKit conversion styling.
+- FAQ Accordion Showcase: A source-specific FAQ component using accessible native disclosure controls.
+- Alt FAQ Component: A source-specific FAQ component using accessible native disclosure controls.
+- Stacked FAQ Component: A source-specific FAQ component using accessible native disclosure controls.
+- FAQ with Clean Load-in Animations: A source-specific FAQ component using accessible native disclosure controls.
+- FAQ Card Grid Layout: A source-specific FAQ component using accessible native disclosure controls.
+- FAQ with Sidebar Navigation + Multi-Visible Display: A source-specific FAQ component using accessible native disclosure controls.
+- FAQ Icon Blocks Layout: A source-specific FAQ component using accessible native disclosure controls.
+- FAQ Right Sidebar Navigation: A source-specific FAQ component using accessible native disclosure controls.
+- Feature Comparison Table: A source-specific feature comparison table using semantic table markup.
+- Feature Grid Showcase: A source-specific feature grid using tokenized square cards.
+- Footer Showcase: A source-specific footer layout with semantic navigation groups.
+- SiteKit: A source-specific footer layout with semantic navigation groups.
+- Footer Showcase: A source-specific footer layout with semantic navigation groups.
+- Footer Showcase: A source-specific footer layout with semantic navigation groups.
+- Footer Showcase: A source-specific footer layout with semantic navigation groups.
+- Footer Showcase: A source-specific footer layout with semantic navigation groups.
+- Footer Showcase: A source-specific footer layout with semantic navigation groups.
+- Footer Showcase: A source-specific footer layout with semantic navigation groups.
+- Footer Showcase: A source-specific footer layout with semantic navigation groups.
+- SiteKit: A source-specific footer layout with semantic navigation groups.
+- Responsive Header Showcase: A source-specific header layout with semantic navigation and actions.
+- SiteKit: A source-specific header layout with semantic navigation and actions.
+- SiteKit: A source-specific header layout with semantic navigation and actions.
+- SiteKit: A source-specific header layout with semantic navigation and actions.
+- SiteKit: A source-specific header layout with semantic navigation and actions.
+- SiteKit: A source-specific header layout with semantic navigation and actions.
+- SiteKit: A source-specific header layout with semantic navigation and actions.
+- SiteKit: A source-specific header layout with semantic navigation and actions.
+- Template Showcase: A source-specific hero section adapted into SiteKit technical launch styling.
+- Hero Section Showcase: A source-specific hero section adapted into SiteKit technical launch styling.
+- Minimalist Hero Section: A source-specific hero section adapted into SiteKit technical launch styling.
+- Template Showcase: A source-specific hero section adapted into SiteKit technical launch styling.
+- Template Showcase: A source-specific hero section adapted into SiteKit technical launch styling.
+- SiteKit: A source-specific hero section adapted into SiteKit technical launch styling.
+- SiteKit: A source-specific hero section adapted into SiteKit technical launch styling.
+- SiteKit: A source-specific hero section adapted into SiteKit technical launch styling.
+- YouTube Thumbnail Generator: A source-specific generator panel with form controls and preview output.
+- CTA Section Showcase: A source-specific newsletter signup component with semantic form controls.
+- Team Grid Showcase: A source-specific team grid for people, roles, and compact bios.
+- Partners / Logos Row Showcase: A source-specific partners strip for logos and trust markers.
+- Pricing Plans Showcase: A source-specific pricing layout using semantic plan cards.
+- Pricing Plans Showcase: A source-specific pricing layout using semantic plan cards.
+- Pricing Plans Showcase: A source-specific pricing layout using semantic plan cards.
+- Pricing Plans Showcase: A source-specific pricing layout using semantic plan cards.
+- Blog Component Showcase: A source-specific recent posts layout for article previews.
+- SiteKit Resource Links: A source-specific resource-link collection.
+- Stats Metrics Bar Showcase: A source-specific stats bar for metrics and proof points.
+- Testimonial Carousel Showcase: A source-specific testimonial layout for quotes and attribution.
+- Integrated Video Embed Showcase: A source-specific video demo block with captioned responsive media.
+- My Tailwind 4.1 Page: A source-specific product showcase adapted from an old landing page.
+- Rotating Gradient Border: A source-specific stats bar for metrics and proof points.
+- Cyberpunk Hero Section: A source-specific hero section adapted into SiteKit technical launch styling.
+- Cyberpunk Blog Section: A source-specific recent posts layout for article previews.
 - Trust Strip: A compact proof row for security, shipping, warranties, or social proof.
+- Video Demo: A responsive media demo block with caption, controls, and supporting product copy.
 
 ## Layout Recipes
 

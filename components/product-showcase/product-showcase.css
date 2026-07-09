@@ -1,0 +1,47 @@
+@layer components {
+  .sk-product-showcase {
+    display: grid;
+    gap: var(--sk-space-5);
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-card);
+    padding: var(--sk-space-5);
+  }
+
+  .sk-product-showcase__intro {
+    display: grid;
+    justify-items: start;
+    gap: var(--sk-space-3);
+  }
+
+  .sk-product-showcase__intro p {
+    color: var(--sk-text-secondary);
+  }
+
+  .sk-product-showcase__items {
+    display: grid;
+    gap: var(--sk-space-4);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  }
+
+  .sk-product-showcase article {
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-page);
+    padding: var(--sk-space-4);
+  }
+
+  .sk-product-showcase h3 {
+    font-family: var(--sk-font-mono);
+  }
+
+    .sk-product-showcase a:focus-visible,
+    .sk-product-showcase button:focus-visible,
+    .sk-product-showcase input:focus-visible,
+    .sk-product-showcase select:focus-visible,
+    .sk-product-showcase textarea:focus-visible,
+    .sk-product-showcase summary:focus-visible,
+    .sk-product-showcase [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+
+}

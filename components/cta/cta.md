@@ -28,6 +28,14 @@ See cta.schema.json for the source contract.
 - Keyboard access, visible focus, and accessible names are required.
 - Color must not be the only means of communication.
 
+## Legacy Source Coverage
+
+- old-components/testing-cta-1.html
+- old-components/testing-cta-2.html
+- old-components/testing-cta-3.html
+- old-components/testing-cta-4.html
+- old-components/testing-cta-5.html
+
 ## Agent Usage Notes
 
 - Read cta.schema.json before using or changing this component.

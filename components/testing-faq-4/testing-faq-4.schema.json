@@ -1,0 +1,70 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "FAQ with Clean Load-in Animations",
+  "description": "A source-specific FAQ component using accessible native disclosure controls.",
+  "props": {
+    "heading": "string optional",
+    "content": "array optional",
+    "actions": "array optional"
+  },
+  "variants": [
+    "accordion",
+    "sidebar",
+    "grid"
+  ],
+  "requiredFields": [
+    "heading"
+  ],
+  "accessibility": {
+    "semantics": "Use native semantic elements in templates before ARIA.",
+    "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+    "focus": "Uses :focus-visible styles in component CSS.",
+    "notes": [
+      "Color is never the only communication channel.",
+      "Motion must respect prefers-reduced-motion where animation exists."
+    ]
+  },
+  "tokenDependencies": [
+    "surface.page",
+    "surface.card",
+    "surface.raised",
+    "text.primary",
+    "text.secondary",
+    "text.muted",
+    "border.default",
+    "border.subtle",
+    "focus.ring",
+    "space.4",
+    "radius.0",
+    "font.mono"
+  ],
+  "responsive": {
+    "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
+    "breakpoints": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "slots": [
+    "heading",
+    "content",
+    "actions"
+  ],
+  "examples": [
+    {
+      "name": "Default",
+      "props": {
+        "label": "FAQ with Clean Load-in Animations",
+        "variant": "accordion",
+        "source": "old-components/testing-faq-4.html"
+      },
+      "notes": "One-to-one SiteKit component adapted from the matching old-components source file."
+    }
+  ],
+  "allowedChildren": [
+    "heading",
+    "content",
+    "actions"
+  ]
+}

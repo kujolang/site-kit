@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Testimonial Rail",
+      "variant": "rail"
+    },
+    "notes": "Adapted from old-components into tokenized SiteKit styling."
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Bento Grid",
+      "variant": "portfolio"
+    },
+    "notes": "Adapted from old-components into tokenized SiteKit styling."
+  }
+]

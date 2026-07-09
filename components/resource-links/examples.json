@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Resource Links",
+      "variant": "grid"
+    },
+    "notes": "Adapted from old-components into tokenized SiteKit styling."
+  }
+]

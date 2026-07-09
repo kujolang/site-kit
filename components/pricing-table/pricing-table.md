@@ -28,6 +28,13 @@ See pricing-table.schema.json for the source contract.
 - Keyboard access, visible focus, and accessible names are required.
 - Color must not be the only means of communication.
 
+## Legacy Source Coverage
+
+- old-components/testing-pricing-1.html
+- old-components/testing-pricing-2.html
+- old-components/testing-pricing-3.html
+- old-components/testing-pricing-4.html
+
 ## Agent Usage Notes
 
 - Read pricing-table.schema.json before using or changing this component.

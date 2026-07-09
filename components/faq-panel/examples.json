@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "FAQ Panel",
+      "variant": "accordion"
+    },
+    "notes": "Adapted from old-components into tokenized SiteKit styling."
+  }
+]

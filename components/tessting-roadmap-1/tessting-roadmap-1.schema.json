@@ -1,0 +1,69 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "Timeline / Roadmap Showcase",
+  "description": "A source-specific roadmap timeline adapted into tokenized SiteKit structure.",
+  "props": {
+    "heading": "string optional",
+    "content": "array optional",
+    "actions": "array optional"
+  },
+  "variants": [
+    "timeline",
+    "milestones"
+  ],
+  "requiredFields": [
+    "heading"
+  ],
+  "accessibility": {
+    "semantics": "Use native semantic elements in templates before ARIA.",
+    "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+    "focus": "Uses :focus-visible styles in component CSS.",
+    "notes": [
+      "Color is never the only communication channel.",
+      "Motion must respect prefers-reduced-motion where animation exists."
+    ]
+  },
+  "tokenDependencies": [
+    "surface.page",
+    "surface.card",
+    "surface.raised",
+    "text.primary",
+    "text.secondary",
+    "text.muted",
+    "border.default",
+    "border.subtle",
+    "focus.ring",
+    "space.4",
+    "radius.0",
+    "font.mono"
+  ],
+  "responsive": {
+    "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
+    "breakpoints": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "slots": [
+    "heading",
+    "content",
+    "actions"
+  ],
+  "examples": [
+    {
+      "name": "Default",
+      "props": {
+        "label": "Timeline / Roadmap Showcase",
+        "variant": "timeline",
+        "source": "old-components/tessting-roadmap-1.html"
+      },
+      "notes": "One-to-one SiteKit component adapted from the matching old-components source file."
+    }
+  ],
+  "allowedChildren": [
+    "heading",
+    "content",
+    "actions"
+  ]
+}

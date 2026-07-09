@@ -1,0 +1,60 @@
+@layer components {
+  .sk-newsletter-signup {
+    display: grid;
+    gap: var(--sk-space-5);
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-card);
+    padding: var(--sk-space-5);
+    container-type: inline-size;
+  }
+
+  .sk-newsletter-signup p {
+    color: var(--sk-text-secondary);
+  }
+
+  .sk-newsletter-signup__form {
+    display: grid;
+    gap: var(--sk-space-3);
+  }
+
+  .sk-newsletter-signup__form label {
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-sm);
+  }
+
+  .sk-newsletter-signup__form div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sk-space-3);
+  }
+
+  .sk-newsletter-signup input {
+    min-inline-size: min(100%, 18rem);
+    min-block-size: var(--sk-size-control-md);
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    border-radius: var(--sk-radius-0);
+    background: var(--sk-surface-page);
+    color: var(--sk-text-primary);
+    padding-inline: var(--sk-space-3);
+  }
+
+  @container (min-width: 48rem) {
+    .sk-newsletter-signup[data-layout="split"],
+    .sk-newsletter-signup:not([data-layout]) {
+      grid-template-columns: minmax(0, 1fr) minmax(20rem, .9fr);
+      align-items: center;
+    }
+  }
+
+    .sk-newsletter-signup a:focus-visible,
+    .sk-newsletter-signup button:focus-visible,
+    .sk-newsletter-signup input:focus-visible,
+    .sk-newsletter-signup select:focus-visible,
+    .sk-newsletter-signup textarea:focus-visible,
+    .sk-newsletter-signup summary:focus-visible,
+    .sk-newsletter-signup [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+
+}

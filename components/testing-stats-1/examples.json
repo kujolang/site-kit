@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Stats Metrics Bar Showcase",
+      "variant": "bar",
+      "source": "old-components/testing-stats-1.html"
+    },
+    "notes": "One-to-one SiteKit component adapted from the matching old-components source file."
+  }
+]

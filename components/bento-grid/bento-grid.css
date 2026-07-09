@@ -1,0 +1,95 @@
+@layer components {
+  .sk-bento-grid {
+    display: grid;
+    gap: var(--sk-component-grid-gap);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: minmax(9rem, auto);
+    container-type: inline-size;
+  }
+
+  .sk-bento-grid__intro,
+  .sk-bento-grid__item {
+    display: grid;
+    gap: var(--sk-space-4);
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    border-radius: var(--sk-radius-0);
+    background: var(--sk-surface-card);
+    padding: var(--sk-space-5);
+  }
+
+  .sk-bento-grid__intro {
+    align-content: space-between;
+    background: var(--sk-surface-raised);
+  }
+
+  .sk-bento-grid__item {
+    min-block-size: 11rem;
+    align-content: end;
+  }
+
+  .sk-bento-grid__intro,
+  .sk-bento-grid__item[data-span="hero"] {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .sk-bento-grid__item[data-span="wide"] {
+    grid-column: span 2;
+  }
+
+  .sk-bento-grid__item[data-span="tall"] {
+    grid-row: span 2;
+  }
+
+  .sk-bento-grid__kicker,
+  .sk-bento-grid h2,
+  .sk-bento-grid h3 {
+    margin: 0;
+    font-family: var(--sk-font-mono);
+  }
+
+  .sk-bento-grid p {
+    color: var(--sk-text-secondary);
+  }
+
+  .sk-bento-grid__kicker {
+    color: var(--sk-text-muted);
+    font-size: var(--sk-type-size-xs);
+    text-transform: uppercase;
+  }
+
+  @container (max-width: 56rem) {
+    .sk-bento-grid { inline-size: 100%;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sk-bento-grid__intro,
+    .sk-bento-grid__item[data-span="hero"],
+    .sk-bento-grid__item[data-span="wide"] {
+      grid-column: span 2;
+    }
+  }
+
+  @container (max-width: 34rem) {
+    .sk-bento-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .sk-bento-grid__intro,
+    .sk-bento-grid__item[data-span] {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+
+  .sk-bento-grid a:focus-visible,
+  .sk-bento-grid button:focus-visible,
+  .sk-bento-grid input:focus-visible,
+  .sk-bento-grid select:focus-visible,
+  .sk-bento-grid textarea:focus-visible,
+  .sk-bento-grid summary:focus-visible,
+  .sk-bento-grid [role="tab"]:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Default",
+    "props": {
+      "label": "Generator Panel",
+      "variant": "form-preview"
+    },
+    "notes": "Adapted from old-components into tokenized SiteKit styling."
+  }
+]

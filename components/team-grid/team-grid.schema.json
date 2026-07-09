@@ -1,0 +1,64 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "Team Grid",
+  "description": "A responsive people grid for profiles, roles, and compact bios.",
+  "props": {
+    "heading": "string optional",
+    "people": "array"
+  },
+  "variants": [
+    "profiles",
+    "compact",
+    "leadership"
+  ],
+  "requiredFields": [
+    "people"
+  ],
+  "accessibility": {
+    "semantics": "Use native semantic elements in templates before ARIA.",
+    "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
+    "focus": "Uses :focus-visible styles in component CSS.",
+    "notes": [
+      "Color is never the only communication channel.",
+      "Motion must respect prefers-reduced-motion where animation exists."
+    ]
+  },
+  "tokenDependencies": [
+    "surface.page",
+    "surface.card",
+    "surface.raised",
+    "text.primary",
+    "text.secondary",
+    "text.muted",
+    "border.default",
+    "focus.ring",
+    "space.4",
+    "radius.0"
+  ],
+  "responsive": {
+    "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
+    "breakpoints": [
+      "sm",
+      "md",
+      "lg"
+    ]
+  },
+  "slots": [
+    "heading",
+    "people"
+  ],
+  "examples": [
+    {
+      "name": "Default",
+      "props": {
+        "label": "Team Grid",
+        "variant": "profiles"
+      },
+      "notes": "Adapted from old-components into tokenized SiteKit styling."
+    }
+  ],
+  "allowedChildren": [
+    "heading",
+    "people"
+  ]
+}

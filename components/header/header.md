@@ -28,6 +28,17 @@ See header.schema.json for the source contract.
 - Keyboard access, visible focus, and accessible names are required.
 - Color must not be the only means of communication.
 
+## Legacy Source Coverage
+
+- old-components/testing-header-1.html
+- old-components/testing-header-2.html
+- old-components/testing-header-3.html
+- old-components/testing-header-4.html
+- old-components/testing-header-5.html
+- old-components/testing-header-6.html
+- old-components/testing-header-7.html
+- old-components/testing-header-8.html
+
 ## Agent Usage Notes
 
 - Read header.schema.json before using or changing this component.

@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-06-20",
-  "componentCount": 27,
+  "componentCount": 119,
   "components": [
     {
       "slug": "badge",
@@ -15,6 +15,27 @@
       "examples": 1
     },
     {
+      "slug": "bento-grid",
+      "name": "Bento Grid",
+      "variants": [
+        "portfolio",
+        "balanced",
+        "showcase",
+        "dense"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "bento-grid-7",
+      "name": "Bento Grid",
+      "variants": [
+        "source-bento",
+        "wide",
+        "dense"
+      ],
+      "examples": 1
+    },
+    {
       "slug": "button",
       "name": "Button",
       "variants": [
@@ -23,7 +44,7 @@
         "ghost",
         "danger"
       ],
-      "examples": 1
+      "examples": 2
     },
     {
       "slug": "card",
@@ -73,6 +94,17 @@
         "compact",
         "sticky"
       ],
+      "examples": 2
+    },
+    {
+      "slug": "content-section",
+      "name": "Content Section",
+      "variants": [
+        "media-right",
+        "media-left",
+        "centered",
+        "compact"
+      ],
       "examples": 1
     },
     {
@@ -83,7 +115,7 @@
         "inline",
         "stacked"
       ],
-      "examples": 1
+      "examples": 2
     },
     {
       "slug": "disclosure",
@@ -136,6 +168,17 @@
       "examples": 1
     },
     {
+      "slug": "faq-panel",
+      "name": "FAQ Panel",
+      "variants": [
+        "accordion",
+        "sidebar",
+        "card-grid",
+        "icon-blocks"
+      ],
+      "examples": 1
+    },
+    {
       "slug": "feature-grid",
       "name": "Feature Grid",
       "variants": [
@@ -143,7 +186,7 @@
         "three-column",
         "dense"
       ],
-      "examples": 1
+      "examples": 2
     },
     {
       "slug": "footer",
@@ -153,7 +196,7 @@
         "columns",
         "product"
       ],
-      "examples": 1
+      "examples": 2
     },
     {
       "slug": "form-field",
@@ -167,6 +210,16 @@
       "examples": 1
     },
     {
+      "slug": "generator-panel",
+      "name": "Generator Panel",
+      "variants": [
+        "form-preview",
+        "compact",
+        "stacked"
+      ],
+      "examples": 1
+    },
+    {
       "slug": "header",
       "name": "Header",
       "variants": [
@@ -174,7 +227,7 @@
         "docs",
         "commerce"
       ],
-      "examples": 1
+      "examples": 2
     },
     {
       "slug": "hero",
@@ -184,7 +237,7 @@
         "centered",
         "technical"
       ],
-      "examples": 1
+      "examples": 2
     },
     {
       "slug": "loading-state",
@@ -217,6 +270,67 @@
       "examples": 1
     },
     {
+      "slug": "newsletter-box-1",
+      "name": "Cyberpunk Newsletter Modal",
+      "variants": [
+        "inline",
+        "boxed",
+        "split"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "newsletter-box-2",
+      "name": "Cyberpunk Newsletter Modal",
+      "variants": [
+        "inline",
+        "boxed",
+        "split"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "newsletter-box-3",
+      "name": "Cyberpunk Newsletter Modal",
+      "variants": [
+        "inline",
+        "boxed",
+        "split"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "newsletter-box-4",
+      "name": "Cyberpunk Newsletter Modal",
+      "variants": [
+        "inline",
+        "boxed",
+        "split"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "newsletter-signup",
+      "name": "Newsletter Signup",
+      "variants": [
+        "inline",
+        "boxed",
+        "modal",
+        "split"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "partners-strip",
+      "name": "Partners Strip",
+      "variants": [
+        "logos",
+        "boxed",
+        "compact"
+      ],
+      "examples": 1
+    },
+    {
       "slug": "pricing-table",
       "name": "Pricing Table",
       "variants": [
@@ -224,7 +338,7 @@
         "annual",
         "comparison"
       ],
-      "examples": 1
+      "examples": 2
     },
     {
       "slug": "product-card",
@@ -247,12 +361,62 @@
       "examples": 1
     },
     {
+      "slug": "product-showcase",
+      "name": "Product Showcase",
+      "variants": [
+        "template",
+        "commerce",
+        "editorial"
+      ],
+      "examples": 1
+    },
+    {
       "slug": "promo-banner",
       "name": "Promo Banner",
       "variants": [
         "info",
         "success",
         "warning"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "recent-posts",
+      "name": "Recent Posts",
+      "variants": [
+        "cards",
+        "list",
+        "featured"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "resource-links",
+      "name": "Resource Links",
+      "variants": [
+        "grid",
+        "stack",
+        "annotated"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "roadmap",
+      "name": "Roadmap",
+      "variants": [
+        "timeline",
+        "compact",
+        "release-plan"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "stats-bar",
+      "name": "Stats Bar",
+      "variants": [
+        "inline",
+        "boxed",
+        "stacked"
       ],
       "examples": 1
     },
@@ -267,12 +431,756 @@
       "examples": 1
     },
     {
+      "slug": "team-grid",
+      "name": "Team Grid",
+      "variants": [
+        "profiles",
+        "compact",
+        "leadership"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "tessting-roadmap-1",
+      "name": "Timeline / Roadmap Showcase",
+      "variants": [
+        "timeline",
+        "milestones"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testimonial-rail",
+      "name": "Testimonial Rail",
+      "variants": [
+        "rail",
+        "grid",
+        "featured"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing",
+      "name": "Testing",
+      "variants": [
+        "showcase",
+        "editorial"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-bento-1",
+      "name": "Portfolio Bento Grid",
+      "variants": [
+        "source-bento",
+        "wide",
+        "dense"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-bento-1-bootstrap",
+      "name": "Portfolio Bento Grid",
+      "variants": [
+        "source-bento",
+        "wide",
+        "dense"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-bento-grid-2",
+      "name": "Bento Grid",
+      "variants": [
+        "source-bento",
+        "wide",
+        "dense"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-bento-grid-3",
+      "name": "Bento Grid",
+      "variants": [
+        "source-bento",
+        "wide",
+        "dense"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-bento-grid-4",
+      "name": "Bento Grid",
+      "variants": [
+        "source-bento",
+        "wide",
+        "dense"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-bento-grid-5",
+      "name": "Bento Grid",
+      "variants": [
+        "source-bento",
+        "wide",
+        "dense"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-bento-grid-6",
+      "name": "Bento Grid",
+      "variants": [
+        "source-bento",
+        "wide",
+        "dense"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-bento-grid-7",
+      "name": "Bento Grid",
+      "variants": [
+        "source-bento",
+        "wide",
+        "dense"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-buttons",
+      "name": "Animated Label Button",
+      "variants": [
+        "action-row",
+        "stacked"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-content-1",
+      "name": "Content Section with Image Right",
+      "variants": [
+        "media-right",
+        "media-left",
+        "centered"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-content-2",
+      "name": "Content Section",
+      "variants": [
+        "media-right",
+        "media-left",
+        "centered"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-content-3",
+      "name": "Content Section",
+      "variants": [
+        "media-right",
+        "media-left",
+        "centered"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-content-5",
+      "name": "Content Section",
+      "variants": [
+        "media-right",
+        "media-left",
+        "centered"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-cta-1",
+      "name": "Callout Banner Showcase",
+      "variants": [
+        "band",
+        "split",
+        "stacked"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-cta-2",
+      "name": "Image + Text CTA Showcase",
+      "variants": [
+        "band",
+        "split",
+        "stacked"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-cta-3",
+      "name": "SiteKit The Markdown Signup CTA",
+      "variants": [
+        "band",
+        "split",
+        "stacked"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-cta-4",
+      "name": "SiteKit Brand Growth CTA",
+      "variants": [
+        "band",
+        "split",
+        "stacked"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-cta-5",
+      "name": "SiteKit Contact CTA",
+      "variants": [
+        "band",
+        "split",
+        "stacked"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-faq-1",
+      "name": "FAQ Accordion Showcase",
+      "variants": [
+        "accordion",
+        "sidebar",
+        "grid"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-faq-2",
+      "name": "Alt FAQ Component",
+      "variants": [
+        "accordion",
+        "sidebar",
+        "grid"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-faq-3",
+      "name": "Stacked FAQ Component",
+      "variants": [
+        "accordion",
+        "sidebar",
+        "grid"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-faq-4",
+      "name": "FAQ with Clean Load-in Animations",
+      "variants": [
+        "accordion",
+        "sidebar",
+        "grid"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-faq-5",
+      "name": "FAQ Card Grid Layout",
+      "variants": [
+        "accordion",
+        "sidebar",
+        "grid"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-faq-6",
+      "name": "FAQ with Sidebar Navigation + Multi-Visible Display",
+      "variants": [
+        "accordion",
+        "sidebar",
+        "grid"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-faq-7",
+      "name": "FAQ Icon Blocks Layout",
+      "variants": [
+        "accordion",
+        "sidebar",
+        "grid"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-faq-8",
+      "name": "FAQ Right Sidebar Navigation",
+      "variants": [
+        "accordion",
+        "sidebar",
+        "grid"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-feature-comparison-1",
+      "name": "Feature Comparison Table",
+      "variants": [
+        "table",
+        "compact"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-features-1",
+      "name": "Feature Grid Showcase",
+      "variants": [
+        "grid",
+        "dense"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-footer-1",
+      "name": "Footer Showcase",
+      "variants": [
+        "columns",
+        "contact",
+        "newsletter"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-footer-10",
+      "name": "SiteKit",
+      "variants": [
+        "columns",
+        "contact",
+        "newsletter"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-footer-2",
+      "name": "Footer Showcase",
+      "variants": [
+        "columns",
+        "contact",
+        "newsletter"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-footer-3",
+      "name": "Footer Showcase",
+      "variants": [
+        "columns",
+        "contact",
+        "newsletter"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-footer-4",
+      "name": "Footer Showcase",
+      "variants": [
+        "columns",
+        "contact",
+        "newsletter"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-footer-5",
+      "name": "Footer Showcase",
+      "variants": [
+        "columns",
+        "contact",
+        "newsletter"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-footer-6",
+      "name": "Footer Showcase",
+      "variants": [
+        "columns",
+        "contact",
+        "newsletter"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-footer-7",
+      "name": "Footer Showcase",
+      "variants": [
+        "columns",
+        "contact",
+        "newsletter"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-footer-8",
+      "name": "Footer Showcase",
+      "variants": [
+        "columns",
+        "contact",
+        "newsletter"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-footer-9",
+      "name": "SiteKit",
+      "variants": [
+        "columns",
+        "contact",
+        "newsletter"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-header-1",
+      "name": "Responsive Header Showcase",
+      "variants": [
+        "navigation",
+        "centered",
+        "search"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-header-2",
+      "name": "SiteKit",
+      "variants": [
+        "navigation",
+        "centered",
+        "search"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-header-3",
+      "name": "SiteKit",
+      "variants": [
+        "navigation",
+        "centered",
+        "search"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-header-4",
+      "name": "SiteKit",
+      "variants": [
+        "navigation",
+        "centered",
+        "search"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-header-5",
+      "name": "SiteKit",
+      "variants": [
+        "navigation",
+        "centered",
+        "search"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-header-6",
+      "name": "SiteKit",
+      "variants": [
+        "navigation",
+        "centered",
+        "search"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-header-7",
+      "name": "SiteKit",
+      "variants": [
+        "navigation",
+        "centered",
+        "search"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-header-8",
+      "name": "SiteKit",
+      "variants": [
+        "navigation",
+        "centered",
+        "search"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-hero-1",
+      "name": "Template Showcase",
+      "variants": [
+        "launch",
+        "centered",
+        "immersive"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-hero-2",
+      "name": "Hero Section Showcase",
+      "variants": [
+        "launch",
+        "centered",
+        "immersive"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-hero-3",
+      "name": "Minimalist Hero Section",
+      "variants": [
+        "launch",
+        "centered",
+        "immersive"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-hero-4",
+      "name": "Template Showcase",
+      "variants": [
+        "launch",
+        "centered",
+        "immersive"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-hero-5",
+      "name": "Template Showcase",
+      "variants": [
+        "launch",
+        "centered",
+        "immersive"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-hero-6",
+      "name": "SiteKit",
+      "variants": [
+        "launch",
+        "centered",
+        "immersive"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-hero-7",
+      "name": "SiteKit",
+      "variants": [
+        "launch",
+        "centered",
+        "immersive"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-hero-8",
+      "name": "SiteKit",
+      "variants": [
+        "launch",
+        "centered",
+        "immersive"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-img-gen-1",
+      "name": "YouTube Thumbnail Generator",
+      "variants": [
+        "form-preview",
+        "stacked"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-newsletter-1",
+      "name": "CTA Section Showcase",
+      "variants": [
+        "inline",
+        "boxed",
+        "split"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-our-team-1",
+      "name": "Team Grid Showcase",
+      "variants": [
+        "profiles",
+        "compact"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-partners-1",
+      "name": "Partners / Logos Row Showcase",
+      "variants": [
+        "logos",
+        "compact"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-pricing-1",
+      "name": "Pricing Plans Showcase",
+      "variants": [
+        "cards",
+        "comparison",
+        "featured"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-pricing-2",
+      "name": "Pricing Plans Showcase",
+      "variants": [
+        "cards",
+        "comparison",
+        "featured"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-pricing-3",
+      "name": "Pricing Plans Showcase",
+      "variants": [
+        "cards",
+        "comparison",
+        "featured"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-pricing-4",
+      "name": "Pricing Plans Showcase",
+      "variants": [
+        "cards",
+        "comparison",
+        "featured"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-recent-posts-1",
+      "name": "Blog Component Showcase",
+      "variants": [
+        "cards",
+        "list"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-resources-1",
+      "name": "SiteKit Resource Links",
+      "variants": [
+        "grid",
+        "annotated"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-stats-1",
+      "name": "Stats Metrics Bar Showcase",
+      "variants": [
+        "bar",
+        "boxed"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-testimonials-1",
+      "name": "Testimonial Carousel Showcase",
+      "variants": [
+        "rail",
+        "cards"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing-video-demo-1",
+      "name": "Integrated Video Embed Showcase",
+      "variants": [
+        "embed",
+        "split"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing2",
+      "name": "My Tailwind 4.1 Page",
+      "variants": [
+        "showcase",
+        "commerce"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing3",
+      "name": "Rotating Gradient Border",
+      "variants": [
+        "bar",
+        "boxed"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing4",
+      "name": "Cyberpunk Hero Section",
+      "variants": [
+        "launch",
+        "centered",
+        "immersive"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "testing5",
+      "name": "Cyberpunk Blog Section",
+      "variants": [
+        "cards",
+        "list"
+      ],
+      "examples": 1
+    },
+    {
       "slug": "trust-strip",
       "name": "Trust Strip",
       "variants": [
         "default",
         "compact",
         "bordered"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "video-demo",
+      "name": "Video Demo",
+      "variants": [
+        "embed",
+        "split",
+        "captioned"
       ],
       "examples": 1
     }
