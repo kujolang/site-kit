@@ -30,19 +30,19 @@
       .lab-preview-actions { display: flex; align-items: center; gap: var(--sk-space-3); }
       .lab-preview-actions form { margin: 0; }
       .lab-icon-button { inline-size: var(--sk-size-control-md); padding-inline: 0; }
-      .lab-preview-stage { min-block-size: min(66dvh, 48rem); display: grid; align-items: center; inline-size: calc(100% - (2 * var(--sk-space-5))); margin-inline: auto; background: var(--sk-surface-page); padding-block: var(--sk-space-8); }
-      .lab-preview-stage > * { inline-size: 100%; max-inline-size: 100%; }
+      .lab-preview-stage { min-block-size: min(66dvh, 48rem); display: grid; align-items: center; inline-size: min(80%, calc(100% - (2 * var(--sk-space-5)))); margin-inline: auto; background: var(--sk-surface-page); padding-block: var(--sk-space-8); }
+      .lab-preview-stage > * { inline-size: 100%; max-inline-size: 100%; margin-inline: auto; }
       .lab-preview-stage[data-preview-kind="bento"] { align-items: stretch; }
       .lab-preview-stage[data-preview-kind="bento"] > * { block-size: 100%; min-block-size: min(66dvh, 48rem); }
       .lab-sample-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sk-space-4); }
       .lab-sample-stack { display: grid; gap: var(--sk-space-3); }
-      .lab-sample-row { display: flex; flex-wrap: wrap; gap: var(--sk-space-3); align-items: center; }
+      .lab-sample-row { display: flex; flex-wrap: wrap; gap: var(--sk-space-3); align-items: center; justify-content: center; }
       .lab-map-node { display: grid; gap: var(--sk-space-3); min-block-size: 10rem; }
       .lab-map-node span { font-family: var(--sk-font-mono); font-size: var(--sk-type-size-xs); text-transform: uppercase; }
       .lab-product-meta { display: grid; gap: var(--sk-space-3); }
-      .lab-modal-static { position: static; display: block; inline-size: min(100%, 32rem); margin: 0; }
+      .lab-modal-static { position: static; display: block; inline-size: min(100%, 32rem); margin-inline: auto; }
       @media (max-width: 76rem) { .lab-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } .token-list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-      @media (max-width: 44rem) { .lab-list, .lab-sample-grid { grid-template-columns: 1fr; } .token-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+      @media (max-width: 44rem) { .lab-preview-stage { inline-size: calc(100% - (2 * var(--sk-space-5))); } .lab-list, .lab-sample-grid { grid-template-columns: 1fr; } .token-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
       @media (max-width: 30rem) { .token-list { grid-template-columns: 1fr; } }
     }
   </style>
