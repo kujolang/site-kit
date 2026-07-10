@@ -13,9 +13,10 @@
   <style>
     @layer overrides {
       .lab-shell { inline-size: min(100% - (2 * var(--sk-space-5)), var(--sk-size-content-lg)); margin-inline: auto; padding-block: var(--sk-space-6); }
-      .lab-site-header { position: sticky; inset-block-start: 0; z-index: var(--sk-z-sticky); border-block-end: var(--sk-border-1) solid var(--sk-border-default); background: var(--sk-surface-page); padding-block: var(--sk-space-3); }
-      .lab-site-header .sk-header__inner { justify-content: flex-start; }
-      .lab-site-header select { border: var(--sk-border-1) solid var(--sk-border-default); border-radius: var(--sk-radius-0); background: var(--sk-surface-card); color: var(--sk-text-primary); padding: var(--sk-space-2) var(--sk-space-3); font: inherit; }
+      .lab-site-header { position: sticky; inset-block-start: 0; z-index: var(--sk-z-sticky); background: var(--sk-surface-page); padding-block: 0; }
+      .lab-site-header .sk-header__inner { justify-content: space-between; padding: var(--sk-space-1) 0; border: 0; background: transparent; }
+      .lab-site-header nav { margin-inline-start: auto; }
+      .lab-theme-select { inline-size: min(100%, 14rem); }
       .lab-component-section { display: grid; gap: var(--sk-space-5); }
       .lab-component-section + .lab-component-section { margin-block-start: var(--sk-space-12); }
       .lab-section-title { margin: 0; border-block-end: var(--sk-border-1) solid var(--sk-border-default); padding-block-end: var(--sk-space-3); font-family: var(--sk-font-mono); font-size: var(--sk-type-size-2xl); }
@@ -57,7 +58,7 @@
 </head>
 <body>
   <a class="sk-sr-only" href="#main">Skip to component lab</a>
-  <header class="sk-header lab-site-header"><div class="sk-header__inner"><a href="#main">SiteKit</a><select id="theme" aria-label="Theme"><option value="kujo-light">kujo-light</option><option value="kujo-dark">kujo-dark</option><option value="bzby">bzby</option><option value="personal-dark">personal-dark</option></select><nav aria-label="Lab"><a href="#components">Components</a><a href="#tokens">Tokens</a></nav></div></header>
+  <header class="sk-header lab-site-header"><div class="sk-header__inner"><div class="sk-select lab-theme-select"><select id="theme" aria-label="Theme"><option value="kujo-light">kujo-light</option><option value="kujo-dark">kujo-dark</option><option value="bzby">bzby</option><option value="personal-dark">personal-dark</option></select></div><nav aria-label="Lab"><a href="#components">Components</a><a href="#tokens">Tokens</a></nav></div></header>
   <main id="main" class="lab-shell sk-stack">
     <section class="sk-hero"><div class="sk-hero__inner"><h1>SiteKit</h1><p>Local tokenized components with theme switching, variant labels, accessible notes, and rendered previews.</p></div></section>
     <section class="sk-card" id="tokens"><h2>Token Preview</h2><ul class="token-list"><li><span class="token-swatch" style="background:var(--sk-surface-page)"></span><code>--sk-surface-page</code></li><li><span class="token-swatch" style="background:var(--sk-surface-card)"></span><code>--sk-surface-card</code></li><li><span class="token-swatch" style="background:var(--sk-text-primary)"></span><code>--sk-text-primary</code></li><li><span class="token-swatch" style="background:var(--sk-text-muted)"></span><code>--sk-text-muted</code></li><li><span class="token-swatch" style="background:var(--sk-action-primary)"></span><code>--sk-action-primary</code></li><li><span class="token-swatch" style="background:var(--sk-border-default)"></span><code>--sk-border-default</code></li><li><span class="token-swatch" style="background:var(--sk-focus-ring)"></span><code>--sk-focus-ring</code></li><li><span class="token-swatch" style="background:var(--sk-state-success)"></span><code>--sk-state-success</code></li><li><span class="token-swatch" style="background:var(--sk-state-warning)"></span><code>--sk-state-warning</code></li><li><span class="token-swatch" style="background:var(--sk-state-danger)"></span><code>--sk-state-danger</code></li></ul></section>
