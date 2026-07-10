@@ -25,7 +25,14 @@
     border-radius: var(--sk-radius-0);
     background: var(--sk-surface-page);
     color: var(--sk-text-primary);
-    padding-inline: var(--sk-space-3);
+    padding: var(--sk-space-3);
+    font: inherit;
+  }
+
+  .sk-generator-panel select {
+    appearance: none;
+    background: linear-gradient(45deg, transparent 50%, var(--sk-text-primary) 50%) calc(100% - var(--sk-space-4)) 50% / var(--sk-space-2) var(--sk-space-2) no-repeat, var(--sk-surface-page);
+    padding-inline-end: var(--sk-space-8);
   }
 
   .sk-generator-panel__preview {

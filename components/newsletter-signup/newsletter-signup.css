@@ -1,11 +1,26 @@
 @layer components {
   .sk-newsletter-signup {
     display: grid;
-    gap: var(--sk-space-5);
+    gap: var(--sk-space-6);
     border: var(--sk-border-1) solid var(--sk-border-default);
     background: var(--sk-surface-card);
     padding: var(--sk-space-5);
     container-type: inline-size;
+  }
+
+  .sk-newsletter-signup__copy {
+    display: grid;
+    gap: var(--sk-space-3);
+    align-content: center;
+  }
+
+  .sk-newsletter-signup__copy h2,
+  .sk-newsletter-signup__copy p {
+    margin: 0;
+  }
+
+  .sk-newsletter-signup__copy h2 {
+    font-family: var(--sk-font-mono);
   }
 
   .sk-newsletter-signup p {
@@ -14,7 +29,10 @@
 
   .sk-newsletter-signup__form {
     display: grid;
-    gap: var(--sk-space-3);
+    gap: var(--sk-space-4);
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-page);
+    padding: var(--sk-space-4);
   }
 
   .sk-newsletter-signup__form label {
@@ -26,6 +44,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--sk-space-3);
+    align-items: center;
   }
 
   .sk-newsletter-signup input {
@@ -35,7 +54,7 @@
     border-radius: var(--sk-radius-0);
     background: var(--sk-surface-page);
     color: var(--sk-text-primary);
-    padding-inline: var(--sk-space-3);
+    padding: var(--sk-space-3);
   }
 
   @container (min-width: 48rem) {

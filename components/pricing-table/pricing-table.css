@@ -10,6 +10,7 @@
     min-inline-size: 0;
     table-layout: fixed;
     border-collapse: collapse;
+    border: 0;
   }
 
   .sk-pricing-table caption {
@@ -24,11 +25,28 @@
 
   .sk-pricing-table th,
   .sk-pricing-table td {
-    border: var(--sk-border-1) solid var(--sk-border-subtle);
+    border-block-start: var(--sk-border-1) solid var(--sk-border-subtle);
+    border-inline-start: var(--sk-border-1) solid var(--sk-border-subtle);
     padding: var(--sk-space-3);
     text-align: start;
     vertical-align: top;
     overflow-wrap: anywhere;
+  }
+
+  .sk-pricing-table th:first-child,
+  .sk-pricing-table td:first-child {
+    border-inline-start: 0;
+  }
+
+  .sk-pricing-table tbody tr:last-child th,
+  .sk-pricing-table tbody tr:last-child td {
+    border-block-end: 0;
+  }
+
+  .sk-pricing-table td[data-price] {
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-xl);
+    font-weight: var(--sk-type-weight-bold);
   }
 
   .sk-pricing-table th {

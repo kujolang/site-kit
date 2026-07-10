@@ -6,10 +6,27 @@
   }
 
   .sk-feature-grid > * {
+    display: grid;
+    gap: var(--sk-space-3);
     border: var(--sk-border-1) solid var(--sk-border-default);
     border-radius: var(--sk-radius-0);
     background: var(--sk-surface-card);
     padding: var(--sk-space-5);
+  }
+
+  .sk-feature-grid [data-feature-icon] {
+    display: grid;
+    place-items: center;
+    inline-size: var(--sk-size-control-lg);
+    block-size: var(--sk-size-control-lg);
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-raised);
+    font-family: var(--sk-font-mono);
+  }
+
+  .sk-feature-grid h3 {
+    margin: 0;
+    font-family: var(--sk-font-mono);
   }
 
   .sk-feature-grid a:focus-visible,

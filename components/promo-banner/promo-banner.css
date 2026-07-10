@@ -1,5 +1,10 @@
 @layer components {
   .sk-promo-banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sk-space-4);
     position: relative;
     border: var(--sk-border-1) solid var(--sk-border-default);
     border-radius: var(--sk-radius-0);
@@ -35,11 +40,30 @@
   }
 
   .sk-promo-banner > * + * {
-    margin-block-start: var(--sk-component-card-gap);
+    margin-block-start: 0;
+  }
+
+  .sk-promo-banner h2 {
+    margin: 0;
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-lg);
   }
 
   .sk-promo-banner p {
+    margin: 0;
     color: var(--sk-text-secondary);
+  }
+
+  .sk-promo-banner__copy {
+    display: grid;
+    gap: var(--sk-space-2);
+  }
+
+  .sk-promo-banner__actions,
+  .sk-promo-banner > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sk-space-3);
   }
 
   .sk-promo-banner[aria-busy="true"] {

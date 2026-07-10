@@ -1,5 +1,7 @@
 @layer components {
   .sk-trust-strip {
+    display: grid;
+    gap: var(--sk-space-4);
     position: relative;
     border: var(--sk-border-1) solid var(--sk-border-default);
     border-radius: var(--sk-radius-0);
@@ -35,10 +37,39 @@
   }
 
   .sk-trust-strip > * + * {
-    margin-block-start: var(--sk-component-card-gap);
+    margin-block-start: 0;
+  }
+
+  .sk-trust-strip h2 {
+    margin: 0;
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-lg);
+  }
+
+  .sk-trust-strip ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+    gap: var(--sk-border-1);
+    margin: 0;
+    padding: 0;
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-border-default);
+    list-style: none;
+  }
+
+  .sk-trust-strip li {
+    display: grid;
+    gap: var(--sk-space-2);
+    background: var(--sk-surface-card);
+    padding: var(--sk-space-3);
+  }
+
+  .sk-trust-strip strong {
+    font-family: var(--sk-font-mono);
   }
 
   .sk-trust-strip p {
+    margin: 0;
     color: var(--sk-text-secondary);
   }
 

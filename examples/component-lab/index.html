@@ -44,6 +44,7 @@
       .lab-sample-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sk-space-4); }
       .lab-sample-stack { display: grid; gap: var(--sk-space-3); }
       .lab-sample-row { display: flex; flex-wrap: wrap; gap: var(--sk-space-3); align-items: center; justify-content: center; }
+      .lab-action-row { display: flex; flex-wrap: wrap; gap: var(--sk-space-3); align-items: center; }
       .lab-map-node { display: grid; gap: var(--sk-space-3); min-block-size: 10rem; }
       .lab-map-node span { font-family: var(--sk-font-mono); font-size: var(--sk-type-size-xs); text-transform: uppercase; }
       .lab-product-meta { display: grid; gap: var(--sk-space-3); }
@@ -1094,7 +1095,7 @@
       return 'Content & Media';
     };
     const previewComponents = componentData;
-    const inlinePreviewSlugs = new Set(['avatar', 'badge', 'button', 'icon', 'label', 'link', 'rating', 'segmented-control', 'separator', 'skip-link', 'spinner', 'toggle', 'tooltip']);
+    const inlinePreviewSlugs = new Set(['avatar', 'badge', 'button', 'color-picker', 'icon', 'label', 'link', 'rating', 'segmented-control', 'separator', 'skip-link', 'spinner', 'toggle', 'tooltip']);
     const previewKind = (component) => {
       if (component.slug.includes('bento')) return 'bento';
       if (inlinePreviewSlugs.has(component.slug)) return 'inline';
@@ -1102,7 +1103,7 @@
     };
     const previewId = (component) => `${component.slug}-preview`;
     const sampleValues = {
-      actions: '<a class="sk-button" href="#preview-action">Primary action</a><a class="sk-button" data-variant="secondary" href="#preview-secondary">Secondary</a>',
+      actions: '<span class="lab-action-row"><a class="sk-button" href="#preview-action">Primary action</a><a class="sk-button" data-variant="secondary" href="#preview-secondary">Secondary</a></span>',
       body: 'Tokenized content with semantic structure, accessible controls, and square SiteKit geometry.',
       brand: 'SiteKit',
       caption: 'sitekit-example.js',
@@ -1126,11 +1127,44 @@
       if (key === 'columns') return '<tr><th scope="col">Feature</th><th scope="col">Starter</th><th scope="col">Pro</th></tr>';
       if (key === 'rows' && component.slug === 'metadata-panel') return '<div><dt>Status</dt><dd>Ready</dd></div><div><dt>Theme</dt><dd>Tokenized</dd></div><div><dt>Mode</dt><dd>Accessible</dd></div>';
       if (key === 'rows') return '<tr><th scope="row">Components</th><td>Core</td><td>All</td></tr><tr><th scope="row">Support</th><td>Email</td><td>Priority</td></tr>';
-      if (key === 'items' && component.slug === 'command-strip') return '<span>Build: passing</span><span>Theme: kujo-light</span><span>Components: 119</span>';
+      if (key === 'items' && component.slug === 'command-strip') return '<span>Build: passing</span><span>Theme: kujo-light</span><span>Components: 85</span>';
       if (key === 'items' && component.slug === 'ecosystem-map') return '<article class="lab-map-node"><span>Core</span><h3>Components</h3><p>Reusable contracts.</p></article><article class="lab-map-node"><span>Docs</span><h3>Recipes</h3><p>Composable pages.</p></article><article class="lab-map-node"><span>Tokens</span><h3>Themes</h3><p>Consistent surfaces.</p></article>';
       if (key === 'items' && component.slug === 'product-grid') return '<article><div data-product-media>Preview</div><h3>Starter Kit</h3><p>$49</p><button class="sk-button" type="button">Add</button></article><article><div data-product-media>Preview</div><h3>Pro Kit</h3><p>$99</p><button class="sk-button" type="button">Add</button></article>';
       if (key === 'items') return '<article><h3>Tokenized</h3><p>Uses SiteKit theme values.</p></article><article><h3>Semantic</h3><p>Readable markup and clear structure.</p></article><article><h3>Responsive</h3><p>Adapts across viewports.</p></article>';
       return sampleValues[key] || component.name;
+    };
+    const actionRow = '<span class="lab-action-row"><a class="sk-button" href="#preview-action">Primary action</a><a class="sk-button" data-variant="secondary" href="#preview-secondary">Secondary</a></span>';
+    const sampleOverrides = {
+      avatar: () => `<span class="sk-avatar" aria-label="Alex Morgan"><img alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='white'/%3E%3Cpath d='M16 48V18h32v30H16Z' fill='none' stroke='black' stroke-width='4'/%3E%3Ccircle cx='32' cy='29' r='8' fill='black'/%3E%3Cpath d='M19 48c4-9 10-13 13-13s9 4 13 13' fill='black'/%3E%3C/svg%3E"></span>`,
+      separator: () => '<div class="sk-separator" role="separator" aria-orientation="horizontal"><span aria-hidden="true">X</span></div>',
+      alert: () => '<aside class="sk-alert" role="status" data-variant="warning"><strong>Deploy attention</strong><p>Two checks need review before this build can ship.</p></aside>',
+      skeleton: () => '<div class="sk-skeleton" aria-hidden="true"><span class="sk-skeleton__media"></span><span></span><span></span><span></span></div>',
+      spinner: () => '<div class="sk-spinner" role="status"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="sk-sr-only">Loading</span></div>',
+      toast: () => '<section class="sk-toast" role="status"><strong>Saved</strong><p>Your changes are synced.</p><button type="button" aria-label="Dismiss">X</button></section>',
+      tooltip: () => '<span class="sk-tooltip"><button class="sk-button" type="button" aria-describedby="tooltip-content" aria-expanded="false">Info</button><span id="tooltip-content" role="tooltip" hidden>Helpful context for this control.</span></span>',
+      combobox: () => '<div class="sk-combobox"><label for="combobox-input">Component</label><input id="combobox-input" type="text" role="combobox" aria-controls="combobox-options" aria-expanded="true" value="Button" autocomplete="off"><ul id="combobox-options" role="listbox"><li role="option" aria-selected="true">Button</li><li role="option">Card</li><li role="option">Modal</li></ul></div>',
+      datePicker: () => '<section class="sk-date-picker" aria-labelledby="date-picker-title"><header><button type="button" aria-label="Previous month">Prev</button><h2 id="date-picker-title">July 2026</h2><button type="button" aria-label="Next month">Next</button></header><div data-weekdays aria-hidden="true"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div><div role="grid" aria-label="July 2026"><button type="button" disabled>28</button><button type="button" disabled>29</button><button type="button" disabled>30</button><button type="button">1</button><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button" aria-current="date" aria-pressed="true">9</button><button type="button">10</button><button type="button">11</button></div></section>',
+      drawer: () => '<div class="sk-drawer-shell"><div class="sk-drawer-scrim" aria-hidden="true"></div><aside class="sk-drawer" aria-labelledby="drawer-title"><header><div><h2 id="drawer-title">Project settings</h2><p>Manage the active workspace.</p></div><button class="sk-button" type="button" data-variant="secondary" aria-label="Close drawer">X</button></header><nav aria-label="Drawer"><a href="#profile">Profile</a><a href="#billing">Billing</a><a href="#access">Access control</a></nav><button class="sk-button" type="button">Save changes</button></aside></div>',
+      dropdownMenu: () => '<div class="sk-dropdown-menu"><button class="sk-button" type="button" aria-haspopup="menu" aria-expanded="false">Actions</button><ul role="menu" hidden><li role="none"><button role="menuitem" type="button">Duplicate</button></li><li role="none"><button role="menuitem" type="button">Archive</button></li></ul></div>',
+      popover: () => '<div class="sk-popover"><button class="sk-button" type="button" aria-expanded="false">Details</button><div role="dialog" aria-label="Details popover" hidden><p>Compact contextual information.</p></div></div>',
+      tabs: (component) => `<div class="sk-tabs"><div role="tablist" aria-label="Preview tabs"><button id="${previewId(component)}-overview-tab" role="tab" aria-selected="true" aria-controls="${previewId(component)}-panel" data-panel-content="Overview content shows the active component summary.">Overview</button><button id="${previewId(component)}-details-tab" role="tab" aria-selected="false" aria-controls="${previewId(component)}-panel" data-panel-content="Details content shows implementation notes and usage guidance.">Details</button></div><section id="${previewId(component)}-panel" role="tabpanel" tabindex="0" aria-labelledby="${previewId(component)}-overview-tab">Overview content shows the active component summary.</section></div>`,
+      carousel: () => '<section class="sk-carousel" aria-labelledby="carousel-title"><h2 id="carousel-title">Featured components</h2><div class="sk-carousel__track" tabindex="0"><article><h3>Card</h3><p>Structured content.</p></article><article><h3>Tabs</h3><p>Switchable panels.</p></article><article><h3>Modal</h3><p>Focused dialog.</p></article></div><div class="sk-carousel__controls"><button class="sk-button" type="button" data-variant="secondary" data-carousel-prev>Prev</button><button class="sk-button" type="button" data-carousel-next>Next</button></div></section>',
+      codeBlock: () => '<figure class="sk-code-block"><figcaption><span>sitekit-example.js</span><button type="button" data-copy-code>Copy</button></figcaption><pre><code>import { SiteKit } from "@kujolang/sitekit";\n\nSiteKit.compose("launch-page");</code></pre></figure>',
+      emptyState: () => `<section class="sk-empty-state" aria-labelledby="empty-state-title"><span class="sk-empty-state__mark" aria-hidden="true">0</span><h2 id="empty-state-title">No projects yet</h2><p>Create your first project to start collecting tasks, files, and deployment notes.</p><div>${actionRow}</div></section>`,
+      errorState: () => `<section class="sk-error-state" aria-labelledby="error-state-title"><span data-error-code>Sync failed</span><h2 id="error-state-title">We could not save changes.</h2><p>The API returned a recoverable error. Retry the request or review the deployment log.</p><div>${actionRow}</div></section>`,
+      hero: () => `<section class="sk-hero" aria-labelledby="hero-title"><div class="sk-hero__inner"><h2 id="hero-title">Launch pages with SiteKit.</h2><p>Compose accessible, tokenized sections that stay sharp across themes.</p><div class="sk-hero__actions">${actionRow}</div></div></section>`,
+      bentoGrid: () => '<section class="sk-bento-grid" aria-labelledby="bento-grid-title"><div class="sk-bento-grid__intro"><span class="sk-badge" data-variant="outline">Services</span><div class="sk-bento-grid__content"><h2 id="bento-grid-title">Build systems that stay sharp.</h2><p>A true bento composition with uneven spans, square panels, and mono titles.</p></div></div><article class="sk-bento-grid__item" data-span="wide"><p class="sk-bento-grid__kicker">01</p><h3>Custom Apps</h3><p>Production interfaces, dashboards, and customer workflows with clean component boundaries.</p></article><article class="sk-bento-grid__item" data-span="tall"><p class="sk-bento-grid__kicker">02</p><h3>Security Audits</h3><p>Focused reviews with remediation paths, checklists, and durable proof.</p></article><article class="sk-bento-grid__item"><p class="sk-bento-grid__kicker">03</p><h3>Plugins</h3><p>Purpose-built extensions.</p></article><article class="sk-bento-grid__item"><p class="sk-bento-grid__kicker">04</p><h3>Design Systems</h3><p>Reusable component contracts.</p></article></section>',
+      featureGrid: () => '<section class="sk-feature-grid" aria-label="Features"><article><span data-feature-icon aria-hidden="true">01</span><h3>Tokenized UI</h3><p>Every surface follows SiteKit theme contracts.</p></article><article><span data-feature-icon aria-hidden="true">02</span><h3>Semantic markup</h3><p>Patterns start from native HTML.</p></article><article><span data-feature-icon aria-hidden="true">03</span><h3>Fast previews</h3><p>Components can be inspected and copied quickly.</p></article></section>',
+      table: () => '<div class="sk-table"><table><caption>Release QA queue</caption><thead><tr><th scope="col">Area</th><th scope="col">Owner</th><th scope="col">Status</th><th scope="col">Due</th></tr></thead><tbody><tr><th scope="row">Checkout flow</th><td>Design Systems</td><td>In review</td><td>Jul 12</td></tr><tr><th scope="row">Account drawer</th><td>Frontend</td><td>Ready</td><td>Jul 14</td></tr><tr><th scope="row">Email capture</th><td>Growth</td><td>Needs copy</td><td>Jul 15</td></tr></tbody></table></div>',
+      checkoutSummary: () => '<section class="sk-checkout-summary" aria-labelledby="checkout-summary-title"><h2 id="checkout-summary-title">Order summary</h2><ul class="sk-checkout-summary__items"><li><span>SiteKit Pro license</span><strong>$99</strong></li><li><span>Priority support</span><strong>$29</strong></li></ul><dl><div><dt>Subtotal</dt><dd>$128</dd></div><div><dt>Tax</dt><dd>$8</dd></div><div data-total><dt>Total</dt><dd>$136</dd></div></dl><div class="sk-checkout-summary__actions"><button class="sk-button" type="button">Checkout</button><button class="sk-button" type="button" data-variant="secondary">Edit cart</button></div></section>',
+      cta: () => `<section class="sk-cta" aria-labelledby="cta-title"><div class="sk-cta__inner"><div class="sk-cta__copy"><h2 id="cta-title">Ship the next page.</h2><p>Compose tokenized sections and move from idea to production.</p></div><div class="sk-cta__actions">${actionRow}</div></div></section>`,
+      newsletterSignup: () => '<section class="sk-newsletter-signup" aria-labelledby="newsletter-title"><div class="sk-newsletter-signup__copy"><span class="sk-badge" data-variant="outline">Newsletter</span><h2 id="newsletter-title">Stay in the loop.</h2><p>Get concise build notes, release prompts, and design-system updates.</p></div><form class="sk-newsletter-signup__form"><label for="newsletter-email">Email address</label><div><input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="you@example.com"><button class="sk-button" type="submit">Subscribe</button></div><p>One useful note at a time. No feed noise.</p></form></section>',
+      pricingTable: () => '<div class="sk-pricing-table"><table><caption>Plan comparison</caption><thead><tr><th scope="col">Feature</th><th scope="col">Starter</th><th scope="col">Pro</th><th scope="col">Scale</th></tr></thead><tbody><tr><th scope="row">Monthly price</th><td data-price>$19</td><td data-price>$49</td><td data-price>$99</td></tr><tr><th scope="row">Projects</th><td>3</td><td>25</td><td>Unlimited</td></tr><tr><th scope="row">Components</th><td>Core</td><td>Core + commerce</td><td>Everything</td></tr><tr><th scope="row">Support</th><td>Email</td><td>Priority</td><td>Dedicated channel</td></tr></tbody></table></div>',
+      productCard: () => `<section class="sk-product-card" aria-labelledby="product-card-title"><div class="sk-product-card__layout"><div><h2 id="product-card-title">SiteKit Pro</h2><p>Reusable component contracts, lab previews, and commerce-ready sections.</p><p class="sk-product-card__price">$49</p><div class="sk-product-card__actions">${actionRow}</div></div><div data-product-media aria-hidden="true">Product</div></div></section>`,
+      productGrid: () => '<section class="sk-product-grid" aria-label="Products"><article><div data-product-media>Preview</div><h3>Starter Kit</h3><p>$49</p><button class="sk-button" type="button">Add</button></article><article><div data-product-media>Preview</div><h3>Pro Kit</h3><p>$99</p><button class="sk-button" type="button">Add</button></article><article><div data-product-media>Preview</div><h3>Team Kit</h3><p>$149</p><button class="sk-button" type="button">Add</button></article></section>',
+      productShowcase: () => '<section class="sk-product-showcase" aria-labelledby="product-showcase-title"><div class="sk-product-showcase__intro"><span class="sk-badge" data-variant="outline">Featured</span><h2 id="product-showcase-title">Launch System Pro</h2><p>A focused product showcase with a clear hero object, benefits, and supporting offers.</p><a class="sk-button" href="#product-showcase-title">View product</a></div><div class="sk-product-showcase__hero" role="img" aria-label="Launch System Pro product preview">Product preview</div><div class="sk-product-showcase__items"><article><h3>Included templates</h3><p>Landing, docs, pricing, and ecommerce sections.</p></article><article><h3>Team license</h3><p>Use across production launches and client builds.</p></article></div></section>',
+      promoBanner: () => `<section class="sk-promo-banner" aria-labelledby="promo-banner-title"><div class="sk-promo-banner__copy"><h2 id="promo-banner-title">Launch week bundle</h2><p>Save 20% on templates, components, and deployment recipes.</p></div><div class="sk-promo-banner__actions">${actionRow}</div></section>`,
+      trustStrip: () => '<section class="sk-trust-strip" aria-labelledby="trust-strip-title"><h2 id="trust-strip-title">Trusted delivery signals</h2><ul><li><strong>SSL</strong><span>Secure checkout</span></li><li><strong>24h</strong><span>Response window</span></li><li><strong>99.9%</strong><span>Uptime target</span></li><li><strong>30d</strong><span>Refund policy</span></li></ul></section>'
     };
     const renderSample = (component) => {
       if (component.slug === 'badge') {
@@ -1139,6 +1173,8 @@
       if (component.slug === 'button') {
         return `<div class="lab-sample-row" aria-label="Button variants">${component.variants.map((variant) => `<button class="sk-button" type="button" data-variant="${variant}">${variant}</button>`).join('')}</div>`;
       }
+      const overrideKey = component.slug.replace(/-([a-z])/g, (_match, letter) => letter.toUpperCase());
+      if (sampleOverrides[overrideKey]) return sampleOverrides[overrideKey](component);
       if (component.slug === 'visually-hidden') {
         return '<div class="lab-sample-stack"><p class="sk-visually-hidden">This text is available to screen readers.</p><p aria-hidden="true">Visible companion text.</p></div>';
       }
@@ -1213,7 +1249,120 @@
       }, 1200);
     });
 
+    const copyText = async (text, button) => {
+      const original = button.textContent;
+      button.textContent = 'Copied';
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          throw new Error('Clipboard API unavailable');
+        }
+      } catch {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.insetBlockStart = '0';
+        textarea.style.opacity = '0';
+        document.body.append(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        textarea.remove();
+      }
+      window.setTimeout(() => {
+        button.textContent = original;
+      }, 1200);
+    };
+
     previewStage.addEventListener('click', (event) => {
+      const toastClose = event.target.closest('.sk-toast button');
+      if (toastClose) {
+        toastClose.closest('.sk-toast').hidden = true;
+        return;
+      }
+
+      const dropdownButton = event.target.closest('.sk-dropdown-menu > button');
+      if (dropdownButton) {
+        const menu = dropdownButton.nextElementSibling;
+        const open = dropdownButton.getAttribute('aria-expanded') !== 'true';
+        dropdownButton.setAttribute('aria-expanded', String(open));
+        menu.hidden = !open;
+        return;
+      }
+
+      const popoverButton = event.target.closest('.sk-popover > button');
+      if (popoverButton) {
+        const panel = popoverButton.nextElementSibling;
+        const open = popoverButton.getAttribute('aria-expanded') !== 'true';
+        popoverButton.setAttribute('aria-expanded', String(open));
+        panel.hidden = !open;
+        return;
+      }
+
+      const tooltipButton = event.target.closest('.sk-tooltip > button');
+      if (tooltipButton) {
+        const tooltip = document.getElementById(tooltipButton.getAttribute('aria-describedby'));
+        const open = tooltipButton.getAttribute('aria-expanded') !== 'true';
+        tooltipButton.setAttribute('aria-expanded', String(open));
+        tooltip.hidden = !open;
+        return;
+      }
+
+      const stepButton = event.target.closest('.sk-stepper button');
+      if (stepButton) {
+        const input = stepButton.closest('.sk-stepper').querySelector('input[type="number"]');
+        const delta = stepButton.textContent.trim() === '+' ? 1 : -1;
+        input.value = String(Number(input.value || 0) + delta);
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+        return;
+      }
+
+      const segmentButton = event.target.closest('.sk-segmented-control button');
+      if (segmentButton) {
+        segmentButton.closest('.sk-segmented-control').querySelectorAll('button').forEach((button) => {
+          button.setAttribute('aria-pressed', String(button === segmentButton));
+        });
+        return;
+      }
+
+      const comboOption = event.target.closest('.sk-combobox [role="option"]');
+      if (comboOption) {
+        const combobox = comboOption.closest('.sk-combobox');
+        const input = combobox.querySelector('[role="combobox"]');
+        input.value = comboOption.textContent.trim();
+        combobox.querySelectorAll('[role="option"]').forEach((option) => {
+          option.setAttribute('aria-selected', String(option === comboOption));
+        });
+        return;
+      }
+
+      const dateButton = event.target.closest('.sk-date-picker [role="grid"] button:not([disabled])');
+      if (dateButton) {
+        dateButton.closest('[role="grid"]').querySelectorAll('button').forEach((button) => {
+          button.removeAttribute('aria-current');
+          button.setAttribute('aria-pressed', 'false');
+        });
+        dateButton.setAttribute('aria-current', 'date');
+        dateButton.setAttribute('aria-pressed', 'true');
+        return;
+      }
+
+      const carouselNext = event.target.closest('[data-carousel-next]');
+      const carouselPrev = event.target.closest('[data-carousel-prev]');
+      if (carouselNext || carouselPrev) {
+        const track = event.target.closest('.sk-carousel').querySelector('.sk-carousel__track');
+        track.scrollBy({ left: (carouselNext ? 1 : -1) * track.clientWidth, behavior: 'smooth' });
+        return;
+      }
+
+      const codeCopy = event.target.closest('[data-copy-code]');
+      if (codeCopy) {
+        const code = codeCopy.closest('.sk-code-block').querySelector('code').textContent;
+        copyText(code, codeCopy);
+        return;
+      }
+
       const tab = event.target.closest('[role="tab"]');
       if (!tab) return;
       const tabs = [...tab.closest('[role="tablist"]').querySelectorAll('[role="tab"]')];
@@ -1224,6 +1373,7 @@
         panel.setAttribute('aria-labelledby', tab.id);
       }
     });
+
   </script>
 </body>
 </html>

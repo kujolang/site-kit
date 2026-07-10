@@ -59,6 +59,14 @@
     gap: var(--sk-space-4);
   }
 
+  .sk-header__actions,
+  .sk-header .sk-header__inner > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sk-space-3);
+    align-items: center;
+  }
+
   .sk-header a:focus-visible,
   .sk-header button:focus-visible,
   .sk-header input:focus-visible,

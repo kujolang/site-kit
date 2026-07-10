@@ -12,6 +12,8 @@
     margin-inline: auto;
     display: grid;
     gap: var(--sk-space-5);
+    justify-items: center;
+    text-align: center;
   }
 
   .sk-hero[data-layout="centered"] .sk-hero__inner {
@@ -20,11 +22,15 @@
   }
 
   .sk-hero .sk-button {
-    justify-self: start;
+    justify-self: center;
   }
 
-  .sk-hero[data-layout="centered"] .sk-button {
-    justify-self: center;
+  .sk-hero__actions,
+  .sk-hero .sk-hero__inner > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--sk-space-3);
   }
 
   .sk-hero h1,

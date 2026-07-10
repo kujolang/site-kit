@@ -20,15 +20,16 @@
     place-items: center;
     aspect-ratio: 4 / 3;
     border: var(--sk-border-1) solid var(--sk-border-default);
-    background:
-      linear-gradient(90deg, transparent calc(100% - var(--sk-border-1)), var(--sk-border-subtle) 0),
-      linear-gradient(180deg, transparent calc(100% - var(--sk-border-1)), var(--sk-border-subtle) 0),
-      var(--sk-surface-subtle);
-    background-size: var(--sk-space-5) var(--sk-space-5);
+    background: var(--sk-surface-subtle);
     color: var(--sk-text-muted);
     font-family: var(--sk-font-mono);
     font-size: var(--sk-type-size-xs);
     text-transform: uppercase;
+  }
+
+  .sk-product-grid h3 {
+    margin: 0;
+    font-family: var(--sk-font-mono);
   }
 
   .sk-product-grid a:focus-visible,

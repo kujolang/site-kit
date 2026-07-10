@@ -1,7 +1,11 @@
 @layer components {
   .sk-empty-state {
+    display: grid;
+    justify-items: center;
+    gap: var(--sk-space-4);
+    text-align: center;
     position: relative;
-    border: var(--sk-border-1) solid var(--sk-border-default);
+    border: var(--sk-border-1) dashed var(--sk-border-default);
     border-radius: var(--sk-radius-0);
     background: var(--sk-surface-card);
     color: var(--sk-text-primary);
@@ -35,10 +39,26 @@
   }
 
   .sk-empty-state > * + * {
-    margin-block-start: var(--sk-component-card-gap);
+    margin-block-start: 0;
+  }
+
+  .sk-empty-state__mark {
+    display: grid;
+    place-items: center;
+    inline-size: var(--sk-size-control-lg);
+    block-size: var(--sk-size-control-lg);
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-page);
+    font-family: var(--sk-font-mono);
+  }
+
+  .sk-empty-state h2 {
+    margin: 0;
+    font-family: var(--sk-font-mono);
   }
 
   .sk-empty-state p {
+    max-inline-size: 42ch;
     color: var(--sk-text-secondary);
   }
 

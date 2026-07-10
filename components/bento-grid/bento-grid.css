@@ -22,8 +22,19 @@
   }
 
   .sk-bento-grid__intro {
-    align-content: space-between;
+    grid-template-rows: auto 1fr;
+    align-content: stretch;
     background: var(--sk-surface-raised);
+  }
+
+  .sk-bento-grid__intro .sk-badge {
+    justify-self: start;
+  }
+
+  .sk-bento-grid__content {
+    align-self: end;
+    display: grid;
+    gap: var(--sk-space-4);
   }
 
   .sk-bento-grid__item {
