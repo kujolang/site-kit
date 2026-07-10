@@ -1,5 +1,6 @@
 # Changelog
 
-## 0.1.0 - 2026-06-20
+## Unreleased
 
-- Created the initial SiteKit foundation with tokens, themes, components, standards, recipes, generated docs, generated CSS, validation scripts, and a static component lab.
+- Documented the intentional internal/source-only package scope, compatibility
+  boundary, release gate, and remaining browser/accessibility evidence gap.

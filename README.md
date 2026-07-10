@@ -8,6 +8,18 @@ It is useful for Kujo official websites, Kujo ecosystem projects, developer docu
 
 The source of truth is tokens, component schemas, component templates, component CSS, layout recipes, and standards documents. DESIGN.md and css/generated are generated outputs.
 
+## Distribution and compatibility
+
+SiteKit is an internal, source-only design-system package at `0.1.0`. Its
+`private: true` manifest is intentional: this repository does not publish an npm
+package or promise a hosted component service. Consumers copy or vendor the
+reviewed source surfaces they need and run the documented generation checks.
+
+The public contract for this phase is the source model above plus generated
+output reproducibility. Changes that alter schemas, templates, token names, or
+generated CSS must include migration notes in [CHANGELOG.md](CHANGELOG.md) and
+pass build, lint, validation, and snapshots before merging.
+
 ## Quick Start
 
 ```bash
@@ -25,3 +37,16 @@ open examples/component-lab/index.html
 - Semantic HTML before ARIA.
 - Tokens before one-off values.
 - Components before page-specific styling.
+
+## Release checks
+
+```bash
+npm run build
+npm run lint
+npm run validate
+npm run snapshot
+```
+
+The GitHub Actions workflow runs the same source-only gate. Browser/accessibility
+testing remains a separate pre-launch requirement for representative consuming
+layouts; it is not represented as proof from this package alone.
