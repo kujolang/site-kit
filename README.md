@@ -10,22 +10,54 @@ The source of truth is tokens, component schemas, component templates, component
 
 ## Distribution and compatibility
 
-SiteKit is an internal, source-only design-system package at `0.1.0`. Its
-`private: true` manifest is intentional: this repository does not publish an npm
-package or promise a hosted component service. Consumers copy or vendor the
-reviewed source surfaces they need and run the documented generation checks.
+SiteKit remains an internal package at `0.1.0`; `private: true` is intentional.
+Consumers should copy or vendor the generated `dist/` directory, or keep this
+repository as a local dependency. No npm publication or hosted service is
+promised.
 
-The public contract for this phase is the source model above plus generated
-output reproducibility. Changes that alter schemas, templates, token names, or
-generated CSS must include migration notes in [CHANGELOG.md](CHANGELOG.md) and
-pass build, lint, validation, and snapshots before merging.
+The supported consumer entry point is:
+
+```text
+dist/sitekit.css
+dist/sitekit.js        optional progressive behavior
+dist/fonts/*           required sibling assets for Departure Mono
+```
+
+`npm run build` regenerates the bundle in this order: reset, primitive and
+semantic tokens, theme overrides, base styles, components, then utilities. The
+font URLs in `dist/sitekit.css` are relative to `dist/fonts/`; preserve that
+directory relationship when copying or vendoring. The same bundle works from a
+`file://` URL and from a local HTTP server. `css/generated/*` remains useful for
+source inspection, but consumers should not manually assemble it.
+
+For a static HTML consumer:
+
+```html
+<html lang="en" data-theme="kujo-light">
+  <head>
+    <link rel="stylesheet" href="./sitekit.css">
+  </head>
+  <body>
+    <!-- semantic SiteKit markup -->
+    <script src="./sitekit.js" defer></script>
+  </body>
+</html>
+```
+
+Omit `sitekit.js` when CSS-only markup is preferred. If it is loaded, it
+enhances dropdowns, popovers, drawers, dialogs, tooltips, theme controls, and
+focus behavior only when their documented hooks are present. See
+[docs/components.md](docs/components.md) for selection guidance and
+composition contracts.
 
 ## Quick Start
 
 ```bash
 npm run build
 npm run lint
+npm run validate
 npm run snapshot
+npm run smoke
 open examples/component-lab/index.html
 ```
 

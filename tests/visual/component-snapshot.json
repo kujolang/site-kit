@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20",
+  "generatedAt": "2026-07-12",
   "componentCount": 85,
   "components": [
     {
@@ -346,9 +346,13 @@
       "name": "Icon",
       "variants": [
         "line",
-        "compact"
+        "compact",
+        "decorative",
+        "meaningful",
+        "inline",
+        "external"
       ],
-      "examples": 1
+      "examples": 4
     },
     {
       "slug": "image",

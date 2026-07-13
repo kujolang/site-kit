@@ -27,6 +27,10 @@ See dropdown-menu.schema.json for the source contract.
 - Interactive controls need visible focus and keyboard access.
 - Color must not be the only means of communication.
 
+## Optional behavior
+
+Load `dist/sitekit.js` after the markup to progressively enhance this CSS-first pattern. The script manages `aria-expanded`, menu IDs, Arrow/Home/End navigation, Escape, Tab, outside-click close, and trigger focus restoration. Without the script the menu remains semantic HTML and can be wired by a consumer.
+
 ## Examples
 
 See examples.json and dropdown-menu.html.

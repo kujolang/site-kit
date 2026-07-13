@@ -13,6 +13,14 @@ SiteKit is an AI-readable, human-verifiable design system and component library 
 - Agent-readable and human-verifiable.
 - Accessible, semantic, tokenized, modular, and extensible by default.
 
+## Consumer Contract
+
+Use `dist/sitekit.css` as the supported CSS entry point and keep its sibling `fonts/` directory. Add `dist/sitekit.js` only when a consumer opts into behavior enhancement. The bundle is ordered reset, tokens, themes, base, components, utilities and works from `file://` or a local HTTP server. See [README.md](README.md) and [docs/components.md](docs/components.md).
+
+## Optional Behavior
+
+Dropdowns, popovers, drawers, modals, tooltips, theme controls, and icon-button contracts are progressive enhancements. Static HTML remains readable without JavaScript. Behavior hooks are documented in each relevant component and in the generated component index.
+
 ## Visual Identity
 
 Technical, architectural, command-surface minimalism with high contrast, near-white page foundations, white panels, black linework, no decorative shadows, monospace metadata labels, and square geometry.
@@ -127,6 +135,7 @@ Tokens are split into primitive tokens in tokens/core.json, semantic tokens in t
 ## Layout Recipes
 
 - Blog Index: Composable blog index recipe.
+- Source of Truth Dashboard: Composable operational dashboard recipe for repository metadata, status, filters, and source links.
 - Docs Home: Composable documentation home recipe.
 - Ecommerce Page: Composable ecommerce recipe.
 - Ecosystem Page: Composable ecosystem map recipe.
@@ -156,6 +165,7 @@ Tokens are split into primitive tokens in tokens/core.json, semantic tokens in t
 
 npm run build
 npm run lint
+npm run validate
 npm run snapshot
 
 ## Extension Process

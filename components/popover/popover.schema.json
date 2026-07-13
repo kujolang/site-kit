@@ -62,5 +62,11 @@
     "label",
     "content",
     "actions"
-  ]
+  ],
+  "behavior": {
+    "optionalScript": "dist/sitekit.js",
+    "hooks": ["aria-expanded", "aria-controls", "role=dialog"],
+    "keyboard": "Escape closes the popover and restores focus to its trigger.",
+    "dismissal": "Outside click closes the popover."
+  }
 }

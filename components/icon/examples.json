@@ -6,5 +6,32 @@
       "variant": "line"
     },
     "notes": "Use semantic landmarks and tokenized styling."
+  },
+  {
+    "name": "Inline decorative",
+    "props": {
+      "variant": "decorative",
+      "name": "check",
+      "size": "sm"
+    },
+    "notes": "The parent text carries the meaning; the SVG is aria-hidden."
+  },
+  {
+    "name": "External GitHub reference",
+    "props": {
+      "variant": "external",
+      "name": "github",
+      "size": "md"
+    },
+    "notes": "Reference only the registered symbol needed by the consuming site."
+  },
+  {
+    "name": "Icon-only close button",
+    "props": {
+      "variant": "meaningful",
+      "name": "close",
+      "label": "Close panel"
+    },
+    "notes": "The button, not the icon, owns the accessible name."
   }
 ]

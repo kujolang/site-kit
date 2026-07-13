@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require("./sitekit").generateCss()
+const s = require("./sitekit"); s.generateCss(); s.generateDistribution();

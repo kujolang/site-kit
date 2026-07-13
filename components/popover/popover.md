@@ -27,6 +27,10 @@ See popover.schema.json for the source contract.
 - Interactive controls need visible focus and keyboard access.
 - Color must not be the only means of communication.
 
+## Optional behavior
+
+Load `dist/sitekit.js` to add `aria-controls`, toggle state, Escape handling, and outside-click dismissal. Keep essential content in the page flow rather than only inside the popover.
+
 ## Examples
 
 See examples.json and popover.html.

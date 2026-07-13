@@ -27,6 +27,10 @@ See drawer.schema.json for the source contract.
 - Interactive controls need visible focus and keyboard access.
 - Color must not be the only means of communication.
 
+## Optional behavior
+
+Add `data-sk-drawer` to the labeled `<aside>`, point a real button at its ID with `data-sk-drawer-open`, and add `data-sk-drawer-close` to the close button. `dist/sitekit.js` adds Escape handling, outside scrim dismissal, focus containment, and focus restoration.
+
 ## Examples
 
 See examples.json and drawer.html.

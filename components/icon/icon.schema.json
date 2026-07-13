@@ -4,11 +4,18 @@
   "description": "A small symbolic marker with an accessible name when meaningful.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "decorative|meaningful|inline|external",
+    "name": "string optional",
+    "size": "sm|md|lg optional",
+    "source": "inline SVG markup or external SVG reference optional"
   },
   "variants": [
     "line",
-    "compact"
+    "compact",
+    "decorative",
+    "meaningful",
+    "inline",
+    "external"
   ],
   "requiredFields": [],
   "accessibility": {
@@ -46,7 +53,8 @@
   "slots": [
     "label",
     "content",
-    "actions"
+    "actions",
+    "svg"
   ],
   "examples": [
     {
@@ -61,6 +69,7 @@
   "allowedChildren": [
     "label",
     "content",
-    "actions"
+    "actions",
+    "svg"
   ]
 }

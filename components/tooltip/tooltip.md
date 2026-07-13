@@ -27,6 +27,10 @@ See tooltip.schema.json for the source contract.
 - Interactive controls need visible focus and keyboard access.
 - Color must not be the only means of communication.
 
+## Optional behavior
+
+Load `dist/sitekit.js` to expose the tooltip while its trigger is focused or hovered and to hide it on blur or Escape. Tooltip content is advisory; use a visible label or description for essential information.
+
 ## Examples
 
 See examples.json and tooltip.html.
