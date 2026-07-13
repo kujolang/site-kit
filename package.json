@@ -11,7 +11,8 @@
     "generate:css": "node scripts/generate-css",
     "generate:design": "node scripts/generate-design-md",
     "snapshot": "node scripts/snapshot-components",
-    "test": "npm run lint"
+    "smoke": "node tests/browser/smoke.mjs",
+    "test": "npm run lint && npm run smoke"
   },
   "license": "MIT"
 }

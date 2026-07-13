@@ -1,0 +1,25 @@
+{
+  "$schema": "../schemas/recipe.schema.json",
+  "name": "Source of Truth Dashboard",
+  "description": "Composable operational dashboard recipe for repository metadata, status, filters, and source links.",
+  "layout": "app-shell.html",
+  "components": [
+    "header",
+    "navigation",
+    "icon",
+    "dropdown-menu",
+    "table",
+    "badge",
+    "metadata-panel",
+    "drawer",
+    "modal",
+    "popover",
+    "tooltip",
+    "footer"
+  ],
+  "accessibility": [
+    "Keep repository data in a captioned table with scoped headers.",
+    "Use visible labels for filters and accessible names for icon-only controls.",
+    "Load optional behavior only after semantic markup is complete."
+  ]
+}
