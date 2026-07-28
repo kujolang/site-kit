@@ -82,3 +82,11 @@ npm run snapshot
 The GitHub Actions workflow runs the same source-only gate. Browser/accessibility
 testing remains a separate pre-launch requirement for representative consuming
 layouts; it is not represented as proof from this package alone.
+
+## Launch readiness
+
+Current launch scope: locally verified technical preview. The 2026-07-28 next
+batch proof passes the native build, lint, validation, snapshot, browser smoke,
+and formatting gates. Release-candidate scope still requires current Workcell
+proof and broader representative visual/accessibility evidence. See
+[`docs/launch-checklist.md`](docs/launch-checklist.md).
