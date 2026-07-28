@@ -1,6 +1,6 @@
 # Launch Checklist
 
-Current launch scope: `locally verified technical preview`. SiteKit's source and local browser smoke gates pass, but release-candidate scope still requires Workcell proof and broader representative visual/accessibility evidence.
+Current launch scope: `locally verified technical preview`. SiteKit's source, local browser smoke, Lens check, and Workcell proof gates pass locally. Release-candidate scope still requires broader representative visual/accessibility evidence.
 
 ## Local Gates
 
@@ -10,22 +10,21 @@ Current launch scope: `locally verified technical preview`. SiteKit's source and
 - [x] Snapshot generation checked with `npm run snapshot`.
 - [x] Browser smoke checked with `npm run smoke`.
 - [x] Formatting checked with `git diff --check`.
-- [ ] Workcell proof checked with `workcell run --file docs/workcell-launch-gate.json --repo .`.
+- [x] Workcell proof checked with `workcell run --file docs/workcell-launch-gate.json --repo . --no-pull`.
 - [ ] Lens/browser matrix captured for representative consuming pages.
 
-## Current External Blocker
+## Workcell Proof Notes
 
-Workcell proof is blocked by the local Docker image build/pull path, not by SiteKit source behavior. The Workcell base image could not be fetched from Docker Hub because `auth.docker.io` timed out.
+Workcell proof passed after building `kujolang/workcell-base:local` with `DOCKER_BUILDKIT=0`, using the Colima Workcell Docker host, and setting `TMPDIR` to a path under `/Users/robertdevore/2026/Kujolang/kujo-repos/.workcell-host-tmp` so the disposable worktree mount was visible inside the Colima VM.
 
-Closest equivalent proof: native Node build, lint, validate, snapshot, and browser smoke gates.
-
-Safe resume command:
+Resume command:
 
 ```bash
-cd /Users/robertdevore/2026/Kujolang/kujo-repos/workcell
-DOCKER_HOST=unix:///Users/robertdevore/.colima/kujo-workcell/docker.sock docker build --tag kujolang/workcell-base:local docker/
-cd /Users/robertdevore/2026/Kujolang/kujo-repos/site-kit
-workcell run --file docs/workcell-launch-gate.json --repo .
+export DOCKER_HOST=unix:///Users/robertdevore/.colima/kujo-workcell/docker.sock
+export DOCKER_CONFIG=/tmp/kujo-next-batch-docker-config
+export TMPDIR=/Users/robertdevore/2026/Kujolang/kujo-repos/.workcell-host-tmp
+workcell run --file docs/workcell-launch-gate.json --repo . --no-pull
+workcell verify --run .workcell/runs/<run-id> --json
 ```
 
 ## Forbidden Launch Actions
