@@ -17,7 +17,10 @@
   ],
   "environment": {
     "allow": [],
-    "set": {}
+    "set": {
+      "HOME": "/tmp",
+      "npm_config_cache": "/tmp/npm-cache"
+    }
   },
   "secrets": [],
   "resources": {
