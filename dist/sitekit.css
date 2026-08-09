@@ -1,6 +1,5 @@
 @layer reset { *, *::before, *::after { box-sizing: border-box; } html { text-size-adjust: 100%; } body { margin: 0; min-block-size: 100vh; } img, svg, video { display: block; max-inline-size: 100%; } button, input, textarea, select { font: inherit; } table { border-collapse: collapse; inline-size: 100%; } }
 
-
 @layer tokens {
   :root {
     --sk-color-black: #060606;
@@ -126,7 +125,6 @@
   }
 }
 
-
 @layer tokens {
   [data-theme="bzby"] {
     --sk-surface-page: #fffaf0;
@@ -231,7 +229,6 @@
   }
 }
 
-
 @font-face {
   font-family: "Departure Mono";
   src:
@@ -243,7 +240,6 @@
 }
 
 @layer base { :root { color-scheme: light; } [data-theme="kujo-dark"], [data-theme="personal-dark"] { color-scheme: dark; } body { background: var(--sk-surface-page); color: var(--sk-text-primary); font-family: var(--sk-font-sans); line-height: var(--sk-type-line-normal); letter-spacing: 0; } a { color: var(--sk-text-link); text-underline-offset: .2em; } :focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } h1, h2 { font-family: var(--sk-font-mono); font-weight: var(--sk-type-weight-regular); letter-spacing: 0; } h1, h2, h3, h4 { line-height: var(--sk-type-line-tight); margin-block: 0 var(--sk-space-4); } p { margin-block: 0 var(--sk-space-4); } code, kbd, samp { font-family: var(--sk-font-mono); } @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 1ms !important; scroll-behavior: auto !important; transition-duration: 1ms !important; } } }
-
 
 @layer components { .sk-accordion { display: grid; gap: var(--sk-space-3); } .sk-accordion details { border: var(--sk-border-1) solid var(--sk-border-default); background: var(--sk-surface-card); padding: var(--sk-space-4); } .sk-accordion summary { cursor: pointer; font-family: var(--sk-font-mono); font-weight: var(--sk-type-weight-bold); } .sk-accordion p { color: var(--sk-text-secondary); } .sk-accordion a:focus-visible, .sk-accordion button:focus-visible, .sk-accordion input:focus-visible, .sk-accordion select:focus-visible, .sk-accordion textarea:focus-visible, .sk-accordion summary:focus-visible, .sk-accordion [role="tab"]:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } }
 
@@ -2457,6 +2453,4 @@
 
 @layer components { .sk-visually-hidden { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }  .sk-visually-hidden a:focus-visible, .sk-visually-hidden button:focus-visible, .sk-visually-hidden input:focus-visible, .sk-visually-hidden select:focus-visible, .sk-visually-hidden textarea:focus-visible, .sk-visually-hidden summary:focus-visible, .sk-visually-hidden [role="tab"]:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } }
 
-
 @layer utilities { .sk-container { inline-size: min(100% - (2 * var(--sk-space-4)), var(--sk-size-content-xl)); margin-inline: auto; } .sk-stack { display: grid; gap: var(--sk-space-4); } .sk-cluster { display: flex; flex-wrap: wrap; gap: var(--sk-space-3); align-items: center; } .sk-grid { display: grid; gap: var(--sk-component-grid-gap); grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); } .sk-muted { color: var(--sk-text-muted); } .sk-sr-only { position: absolute; inline-size: 1px; block-size: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; } }
-

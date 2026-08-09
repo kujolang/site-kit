@@ -54,7 +54,7 @@ function generateDistribution() {
     base,
     text('css/generated/components.css'),
     text('css/utilities.css'),
-  ].join('\n\n');
+  ].map((contents) => contents.trim()).join('\n\n');
   fs.writeFileSync(path.join(dist, 'sitekit.css'), `${bundle}\n`);
   fs.copyFileSync(path.join(root, 'scripts/sitekit-behavior.js'), path.join(dist, 'sitekit.js'));
   for (const file of ['DepartureMono-Regular.woff', 'DepartureMono-Regular.woff2', 'DepartureMono-LICENSE.txt']) {

@@ -1,8 +1,25 @@
 {
-  "title": { "contains": "Ecommerce" },
-  "text": { "contains": ["Products", "Add to cart"] },
-  "selectors": { "exists": ["main"] },
-  "console": { "no_errors": true },
-  "network": { "no_5xx": true },
-  "layout": { "no_horizontal_overflow": true }
+  "title": {
+    "contains": "Ecommerce"
+  },
+  "text": {
+    "contains": [
+      "Products",
+      "Add to cart"
+    ]
+  },
+  "selectors": {
+    "exists": [
+      "main"
+    ]
+  },
+  "console": {
+    "no_errors": true
+  },
+  "network": {
+    "no_5xx": true
+  },
+  "layout": {
+    "no_horizontal_overflow": true
+  }
 }

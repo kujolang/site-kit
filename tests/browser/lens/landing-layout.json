@@ -1,8 +1,24 @@
 {
-  "title": { "contains": "Landing" },
-  "text": { "contains": ["Launch with structure."] },
-  "selectors": { "exists": ["main"] },
-  "console": { "no_errors": true },
-  "network": { "no_5xx": true },
-  "layout": { "no_horizontal_overflow": true }
+  "title": {
+    "contains": "Landing"
+  },
+  "text": {
+    "contains": [
+      "Launch with structure."
+    ]
+  },
+  "selectors": {
+    "exists": [
+      "main"
+    ]
+  },
+  "console": {
+    "no_errors": true
+  },
+  "network": {
+    "no_5xx": true
+  },
+  "layout": {
+    "no_horizontal_overflow": true
+  }
 }
