@@ -1,0 +1,8 @@
+{
+  "title": { "contains": "Docs" },
+  "text": { "contains": ["Documentation"] },
+  "selectors": { "exists": ["main"] },
+  "console": { "no_errors": true },
+  "network": { "no_5xx": true },
+  "layout": { "no_horizontal_overflow": true }
+}

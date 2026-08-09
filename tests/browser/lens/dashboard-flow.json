@@ -1,0 +1,32 @@
+{
+  "name": "SiteKit dashboard progressive behavior",
+  "description": "Exercise theme, drawer, popover, menu, and modal controls using selectors confirmed by Lens inspect.",
+  "url": "http://127.0.0.1:4173/examples/consumer-dashboard/index.html",
+  "viewports": ["1440x900", "390x844"],
+  "timeout_seconds": 60,
+  "allow_external": false,
+  "allow_destructive": false,
+  "steps": [
+    { "visit": "http://127.0.0.1:4173/examples/consumer-dashboard/index.html" },
+    { "assert_text": "Repository readiness at a glance." },
+    { "screenshot": { "name": "dashboard-initial" } },
+    { "click": { "selector": "[aria-label=\"Switch to dark theme\"]", "safe": true } },
+    { "click": { "selector": "button:has-text(\"OPEN FILTERS\")", "safe": true } },
+    { "wait_for_selector": "#filter-drawer:not([hidden])" },
+    { "screenshot": { "name": "drawer-open" } },
+    { "click": { "selector": "[aria-label=\"Close filters\"]", "safe": true } },
+    { "assert_not_selector": "#filter-drawer:not([hidden])" },
+    { "click": { "selector": "button:has-text(\"FILTER GUIDANCE\")", "safe": true } },
+    { "wait_for_selector": ".sk-popover [role=dialog]:not([hidden])" },
+    { "click": { "selector": "button:has-text(\"FILTER GUIDANCE\")", "safe": true } },
+    { "click": { "selector": "button:has-text(\"ACTIONS\")", "safe": true } },
+    { "wait_for_selector": "[data-sk-modal-open=\"review-modal\"]" },
+    { "click": { "selector": "[data-sk-modal-open=\"review-modal\"]", "safe": true } },
+    { "wait_for_selector": "#review-modal[open]" },
+    { "screenshot": { "name": "review-modal" } },
+    { "click": { "selector": "#review-modal [data-sk-modal-close]", "safe": true } },
+    { "assert_not_selector": "#review-modal[open]" },
+    { "assert_no_console_errors": true },
+    { "assert_no_failed_requests": true }
+  ]
+}

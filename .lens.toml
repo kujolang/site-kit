@@ -1,0 +1,8 @@
+fail_on = "warning"
+timeout = 60
+viewports = ["1440x900", "768x1024", "390x844"]
+check_links = true
+max_links = 50
+settle_ms = 400
+accessibility = true
+a11y_tags = ["wcag2a", "wcag2aa"]
