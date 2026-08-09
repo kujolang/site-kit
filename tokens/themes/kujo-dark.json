@@ -36,7 +36,16 @@
         "value": "{color.black}"
       },
       "link": {
-        "value": "{color.cyan.600}"
+        "value": "#7dd3fc"
+      },
+      "danger": {
+        "value": "#ff8c8c"
+      },
+      "success": {
+        "value": "#6fdc8c"
+      },
+      "warning": {
+        "value": "#ffd166"
       }
     },
     "action": {
@@ -51,6 +60,12 @@
       },
       "secondaryText": {
         "value": "{color.white}"
+      },
+      "danger": {
+        "value": "#ff8c8c"
+      },
+      "dangerText": {
+        "value": "{color.black}"
       }
     },
     "border": {
@@ -63,7 +78,7 @@
     },
     "focus": {
       "ring": {
-        "value": "{color.cyan.600}"
+        "value": "#7dd3fc"
       },
       "ringOffset": {
         "value": "{color.black}"
@@ -72,6 +87,20 @@
     "shadow": {
       "color": {
         "value": "{color.white}"
+      }
+    },
+    "state": {
+      "success": {
+        "value": "#6fdc8c"
+      },
+      "warning": {
+        "value": "#ffd166"
+      },
+      "danger": {
+        "value": "#ff8c8c"
+      },
+      "info": {
+        "value": "#7dd3fc"
       }
     }
   }

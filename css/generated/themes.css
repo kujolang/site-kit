@@ -32,16 +32,25 @@
     --sk-text-secondary: var(--sk-color-gray-100);
     --sk-text-muted: var(--sk-color-gray-300);
     --sk-text-inverse: var(--sk-color-black);
-    --sk-text-link: var(--sk-color-cyan-600);
+    --sk-text-link: #7dd3fc;
+    --sk-text-danger: #ff8c8c;
+    --sk-text-success: #6fdc8c;
+    --sk-text-warning: #ffd166;
     --sk-action-primary: var(--sk-color-white);
     --sk-action-primary-text: var(--sk-color-black);
     --sk-action-secondary: var(--sk-color-gray-900);
     --sk-action-secondary-text: var(--sk-color-white);
+    --sk-action-danger: #ff8c8c;
+    --sk-action-danger-text: var(--sk-color-black);
     --sk-border-default: var(--sk-color-white);
     --sk-border-subtle: var(--sk-color-gray-300);
-    --sk-focus-ring: var(--sk-color-cyan-600);
+    --sk-focus-ring: #7dd3fc;
     --sk-focus-ring-offset: var(--sk-color-black);
     --sk-shadow-color: var(--sk-color-white);
+    --sk-state-success: #6fdc8c;
+    --sk-state-warning: #ffd166;
+    --sk-state-danger: #ff8c8c;
+    --sk-state-info: #7dd3fc;
   }
   [data-theme="kujo-light"] {
     --sk-surface-page: var(--sk-color-paper);
@@ -86,5 +95,9 @@
     --sk-focus-ring: #8cc9ff;
     --sk-focus-ring-offset: #0f1115;
     --sk-shadow-color: #f7f4ed;
+    --sk-state-success: #6fdc8c;
+    --sk-state-warning: #ffd166;
+    --sk-state-danger: #ff8c8c;
+    --sk-state-info: #8cc9ff;
   }
 }

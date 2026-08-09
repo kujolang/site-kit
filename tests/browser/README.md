@@ -1,5 +1,5 @@
-# Browser smoke
+# Browser tests
 
-`npm run smoke` verifies the browser-facing distribution contract deterministically: generated CSS order, relative font assets, both Kujo themes, the optional behavior hooks, reduced-motion CSS, semantic consumer markup, `file://` URL resolution, and local HTTP asset loading.
+`npm run smoke` is the deterministic static distribution/HTTP contract test; it is not rendered-browser proof. `npm run browser:test` runs Playwright Chromium, Firefox, and WebKit over the component lab, dashboard, landing, documentation, ecommerce, CSS-only, interaction, reduced-motion, text-scaling, and clean-consumer cases. Reports are generated under `artifacts/browser/` and are not committed.
 
-The consuming layout is [examples/consumer-dashboard/index.html](../../examples/consumer-dashboard/index.html). Use a browser against that file or a local HTTP server to inspect the visual and interactive behavior; no third-party browser driver is required for the deterministic contract suite.
+Run Lens separately against the local server for deterministic screenshots, links, network, DOM, overflow, and axe-core evidence. See [the launch checklist](../../docs/launch-checklist.md) for the exact matrix and evidence boundary.

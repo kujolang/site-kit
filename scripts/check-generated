@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+'use strict';
+
+const crypto = require('crypto');
+const fs = require('fs');
+const path = require('path');
+const { execFileSync } = require('child_process');
+
+const root = path.resolve(__dirname, '..');
+const outputs = [
+  'css/generated',
+  'DESIGN.md',
+  'docs/components.md',
+  'dist',
+  'tests/visual/component-snapshot.json',
+];
+
+function run(command, args) {
+  execFileSync(command, args, { cwd: root, stdio: 'inherit' });
+}
+
+function filesUnder(target) {
+  const absolute = path.join(root, target);
+  if (!fs.existsSync(absolute)) return [];
+  if (fs.statSync(absolute).isFile()) return [target];
+  return fs.readdirSync(absolute, { withFileTypes: true }).flatMap((entry) => filesUnder(path.join(target, entry.name))).sort();
+}
+
+function digest() {
+  const files = outputs.flatMap(filesUnder).sort();
+  const sum = crypto.createHash('sha256');
+  for (const file of files) sum.update(file).update('\0').update(fs.readFileSync(path.join(root, file))).update('\0');
+  return sum.digest('hex');
+}
+
+run('npm', ['run', 'build']);
+run('npm', ['run', 'snapshot']);
+const first = digest();
+run('npm', ['run', 'build']);
+run('npm', ['run', 'snapshot']);
+const second = digest();
+if (first !== second) throw new Error(`generation is not deterministic: ${first} != ${second}`);
+run('git', ['diff', '--exit-code', '--', ...outputs]);
+console.log(`generated output check passed: ${first}`);

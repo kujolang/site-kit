@@ -65,7 +65,12 @@
   ],
   "behavior": {
     "optionalScript": "dist/sitekit.js",
-    "hooks": ["data-sk-drawer", "data-sk-drawer-open", "data-sk-drawer-close", "aria-hidden"],
+    "hooks": [
+      "data-sk-drawer",
+      "data-sk-drawer-open",
+      "data-sk-drawer-close",
+      "aria-hidden"
+    ],
     "keyboard": "Escape closes the drawer; Tab and Shift+Tab remain within the panel.",
     "dismissal": "The explicit close button and optional scrim close the drawer and restore focus."
   }

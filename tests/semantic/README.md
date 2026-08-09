@@ -1,3 +1,3 @@
-# semantic Tests
+# Semantic tests
 
-Reserved for focused checks. The current v0.1 validation entrypoint is npm run lint.
+`npm run validate` checks language, landmarks, heading presence/order, label/control relationships, table captions and header scopes, and the prohibition on clickable `div`/`span` substitutes in source templates and representative pages. Rendered checks run again in `npm run browser:test`.

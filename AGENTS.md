@@ -2,6 +2,8 @@
 
 SiteKit is source-driven. Treat tokens, schemas, templates, component CSS, recipes, and standards as authoritative. DESIGN.md is generated or generator-ready guidance, not the only source of truth.
 
+SiteKit v1 is a stable source-vendored distribution. Keep `private: true`, treat `dist/` as the supported consumer artifact, preserve the sibling `fonts/` relationship, and do not hand-edit generated outputs. npm publication and hosted component services are outside the v1 contract.
+
 ## Before Creating Or Editing UI
 
 1. Read DESIGN.md.
@@ -13,6 +15,7 @@ SiteKit is source-driven. Treat tokens, schemas, templates, component CSS, recip
 7. Run validation checks.
 8. If a component fails, fix the reusable component source, not only the page.
 9. If a new pattern is needed, propose it as a documented component.
+10. Run formatting, generation, validation, browser, and release-content gates before release changes.
 
 ## Anti-Patterns
 

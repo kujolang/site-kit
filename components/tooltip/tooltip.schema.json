@@ -65,7 +65,10 @@
   ],
   "behavior": {
     "optionalScript": "dist/sitekit.js",
-    "hooks": ["aria-describedby", "role=tooltip"],
+    "hooks": [
+      "aria-describedby",
+      "role=tooltip"
+    ],
     "keyboard": "The tooltip is exposed while its trigger is focused and hides on blur or Escape.",
     "dismissal": "Tooltips are non-interactive hints and must not contain essential actions."
   }

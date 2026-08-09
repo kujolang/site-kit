@@ -73,6 +73,20 @@
       "color": {
         "value": "#f7f4ed"
       }
+    },
+    "state": {
+      "success": {
+        "value": "#6fdc8c"
+      },
+      "warning": {
+        "value": "#ffd166"
+      },
+      "danger": {
+        "value": "#ff8c8c"
+      },
+      "info": {
+        "value": "#8cc9ff"
+      }
     }
   }
 }

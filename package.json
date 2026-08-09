@@ -1,18 +1,58 @@
 {
   "name": "@kujolang/sitekit",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "AI-readable, human-verifiable design system and component library for Kujo and semantic websites.",
+  "description": "Stable source-vendored design system and component library for Kujo and semantic websites.",
   "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist/",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "exports": {
+    "./sitekit.css": "./dist/sitekit.css",
+    "./sitekit.js": "./dist/sitekit.js",
+    "./fonts/*": "./dist/fonts/*",
+    "./package.json": "./package.json"
+  },
+  "style": "dist/sitekit.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kujolang/site-kit.git"
+  },
+  "homepage": "https://github.com/kujolang/site-kit#readme",
+  "bugs": {
+    "url": "https://github.com/kujolang/site-kit/issues"
+  },
   "scripts": {
     "build": "node scripts/build",
     "lint": "node scripts/lint",
-    "validate": "node scripts/validate-components",
+    "format": "node scripts/format-repository",
+    "format:check": "node scripts/format-repository --check",
+    "validate": "npm run validate:components && npm run validate:contract && npm run validate:version && npm run validate:links",
+    "validate:components": "node scripts/validate-components",
+    "validate:contract": "node tests/contract/release-contract.mjs",
+    "validate:version": "node tests/contract/version-consistency.mjs",
+    "validate:links": "node tests/contract/markdown-links.mjs",
     "generate:css": "node scripts/generate-css",
     "generate:design": "node scripts/generate-design-md",
     "snapshot": "node scripts/snapshot-components",
     "smoke": "node tests/browser/smoke.mjs",
-    "test": "npm run lint && npm run smoke"
+    "browser:test": "playwright test",
+    "browser:install": "playwright install chromium firefox webkit",
+    "generated:check": "node scripts/check-generated",
+    "release:archive": "node scripts/release-archive",
+    "release:check": "node tests/release/package-content.mjs",
+    "test:static": "npm run format:check && npm run build && npm run lint && npm run validate && npm run snapshot && npm run smoke && npm run release:check",
+    "test": "npm run test:static && npm run browser:test"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@axe-core/playwright": "4.12.1",
+    "@playwright/test": "1.62.1"
+  }
 }

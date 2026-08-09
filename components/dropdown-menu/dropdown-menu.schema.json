@@ -65,7 +65,12 @@
   ],
   "behavior": {
     "optionalScript": "dist/sitekit.js",
-    "hooks": ["aria-haspopup=menu", "aria-expanded", "role=menu", "role=menuitem"],
+    "hooks": [
+      "aria-haspopup=menu",
+      "aria-expanded",
+      "role=menu",
+      "role=menuitem"
+    ],
     "keyboard": "ArrowDown opens and focuses the first item; ArrowUp/ArrowDown, Home, End, Escape, and Tab are supported.",
     "dismissal": "Escape, Tab, and outside click close the menu and Escape restores focus to the trigger."
   }

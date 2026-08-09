@@ -1,4 +1,5 @@
 .DS_Store
+node_modules/
 old-components/
 .loop-engineering/
 # Kujo ecosystem local artifact ignore block.
@@ -124,12 +125,15 @@ old-components/
 
 # SSG / Howl / generated static output
 /output/
-/dist/
 /logs/
 /.kujo-post-manifest.txt
 
+# SiteKit intentionally tracks dist/ as its supported source-vendored artifact.
+
 # AI SDK local release/security artifacts
 /artifacts/security/
+/artifacts/release/
+/artifacts/browser/
 
 # Local test outputs commonly emitted by Kujo tool repos
 /tests/tmp/

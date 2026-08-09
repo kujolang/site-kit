@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "product": "SiteKit",
+  "version": "1.0.0",
+  "distribution": "source-vendored",
+  "entrypoints": {
+    "css": "sitekit.css",
+    "javascript": "sitekit.js",
+    "fonts": "fonts/"
+  },
+  "files": {
+    "LICENSE": "9c6cac5c32d816ad842f9a412ba4c5c862611e5df7816f9bf0d0780beea00e79",
+    "README.md": "07ff456c651c6a0fc3802f4805020d42c3030490f84dbc1f0b284b041dd6151c",
+    "sitekit.css": "f75e30bd6a2cc1b00cb1e88a14bd3e570e9213925b9b00459f6b9131597a6a15",
+    "sitekit.js": "85ede684cb53523838f337fd79c720ef92303bf52c51255ad4e60bc5f8f054ee",
+    "fonts/DepartureMono-LICENSE.txt": "b65e42750f3cb65437a97f4dfd781c58f199259949db2341012be60e32500e83",
+    "fonts/DepartureMono-Regular.woff": "8ede4e8a40475d440389d1bb44201bd3067129a62c718158921b111ceb52fca5",
+    "fonts/DepartureMono-Regular.woff2": "5b4fed1daa90708aa9c6ee1190abca9dc22164a1c1def0020386e46b61038cfb"
+  }
+}

@@ -65,7 +65,12 @@
   ],
   "behavior": {
     "optionalScript": "dist/sitekit.js",
-    "hooks": ["data-sk-modal", "data-sk-modal-open", "data-sk-modal-close", "dialog"],
+    "hooks": [
+      "data-sk-modal",
+      "data-sk-modal-open",
+      "data-sk-modal-close",
+      "dialog"
+    ],
     "keyboard": "Native dialog behavior handles focus; the optional layer explicitly restores focus, traps Tab, and handles Escape.",
     "dismissal": "Use a real close button or form method=dialog; do not make the backdrop the only dismissal path."
   }
