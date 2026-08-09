@@ -1,16 +1,50 @@
 {
   "version": 1,
   "name": "site-kit-launch-gate",
-  "runtime": {"backend": "docker", "image": "kujolang/workcell-base:local", "build_context": ""},
-  "workspace": {"strategy": "git-worktree", "mount_path": "/workspace"},
-  "command": ["sh", "-lc", "test -f README.md && test -f package.json && test -f docs/launch-checklist.md && printf 'site-kit launch gate source files present\\n' > site-kit-workcell-proof.txt"],
-  "environment": {"allow": [], "set": {}},
+  "runtime": {
+    "backend": "docker",
+    "image": "kujolang/workcell-base:local",
+    "build_context": ""
+  },
+  "workspace": {
+    "strategy": "git-worktree",
+    "mount_path": "/workspace"
+  },
+  "command": [
+    "sh",
+    "-lc",
+    "node --version && npm run format:check && npm run build && npm run lint && npm run validate && npm run snapshot && npm run smoke && npm run release:check && printf 'site-kit v1 release gates passed\\n' > site-kit-workcell-proof.txt"
+  ],
+  "environment": {
+    "allow": [],
+    "set": {}
+  },
   "secrets": [],
-  "resources": {"cpus": 1, "memory": "256m", "pids": 64, "timeout_ms": 60000},
-  "network": {"mode": "none"},
-  "filesystem": {"read_only_root": true, "tmpfs": ["/tmp"]},
-  "artifacts": {"export": ["site-kit-workcell-proof.txt"]},
-  "cleanup": {"keep_failed": false},
+  "resources": {
+    "cpus": 2,
+    "memory": "1g",
+    "pids": 128,
+    "timeout_ms": 300000
+  },
+  "network": {
+    "mode": "none"
+  },
+  "filesystem": {
+    "read_only_root": true,
+    "tmpfs": [
+      "/tmp"
+    ]
+  },
+  "artifacts": {
+    "export": [
+      "site-kit-workcell-proof.txt"
+    ]
+  },
+  "cleanup": {
+    "keep_failed": false
+  },
   "trust_profile": "contained-standard",
-  "receipt": {"path": ".workcell/runs"}
+  "receipt": {
+    "path": ".workcell/runs"
+  }
 }

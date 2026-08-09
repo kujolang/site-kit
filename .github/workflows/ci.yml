@@ -2,20 +2,77 @@ name: SiteKit CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, "codex/**"]
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
-  source-gate:
+  release-gate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+      - name: Checkout SiteKit
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 0
+      - name: Set up Node 20
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 20
-      - run: npm run build
-      - run: npm run lint
-      - run: npm run validate
-      - run: npm run snapshot
-      - run: git diff --exit-code -- css/generated DESIGN.md
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Install browser engines
+        run: npx playwright install --with-deps chromium firefox webkit
+      - name: Check formatting
+        run: npm run format:check
+      - name: Build generated outputs
+        run: npm run build
+      - name: Lint source contracts
+        run: npm run lint
+      - name: Validate schemas, semantics, versions, links, and distribution
+        run: npm run validate
+      - name: Generate component snapshot
+        run: npm run snapshot
+      - name: Run static distribution smoke
+        run: npm run smoke
+      - name: Run rendered browser and accessibility matrix
+        run: npm run browser:test
+      - name: Verify release package and clean consumer
+        run: npm run release:check
+      - name: Reject generated-output drift
+        run: git diff --exit-code -- css/generated DESIGN.md docs/components.md dist tests/visual/component-snapshot.json
+      - name: Reject whitespace errors
+        run: git diff --check
+      - name: Upload browser evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: sitekit-browser-evidence
+          path: artifacts/browser/
+          if-no-files-found: warn
+
+  shipcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout SiteKit
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          path: site-kit
+      - name: Checkout Kujo
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          repository: kujolang/kujo
+          path: kujo
+      - name: Checkout ShipCheck
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          repository: kujolang/shipcheck
+          path: shipcheck
+      - name: Build Kujo
+        run: cargo build --manifest-path kujo/Cargo.toml --release
+      - name: Run ShipCheck gate
+        working-directory: shipcheck
+        run: ../kujo/target/release/kujo run shipcheck.kujo gate --dir ../site-kit --format json
