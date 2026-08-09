@@ -1,10 +1,10 @@
 # SiteKit
 
-![Version 1.0.0](https://img.shields.io/badge/version-1.0.0-0b6bcb)
-[![MIT license](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![SiteKit CI](https://github.com/kujolang/site-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/kujolang/site-kit/actions/workflows/ci.yml)
-![Node 20+](https://img.shields.io/badge/node-%3E%3D20-43853d)
-![Built for Kujo](https://img.shields.io/badge/built%20for-Kujo-111111)
+[![Version](https://img.shields.io/badge/version-1.0.0-black)](https://github.com/kujolang/site-kit/releases/tag/v1.0.0)
+[![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
+[![built for Kujo](https://img.shields.io/badge/built%20for-Kujo-white.svg)](https://github.com/kujolang/kujo)
+[![CI](https://github.com/kujolang/site-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/kujolang/site-kit/actions/workflows/ci.yml)
+[![node](https://img.shields.io/badge/node-%E2%89%A520-black.svg?logo=node.js&logoColor=white)](#install-or-vendor)
 
 SiteKit 1.0 is a stable, source-driven design system for accessible, semantic, token-based static websites and web interfaces. Its supported consumer artifact is the generated `dist/` directory, copied or vendored into a project. SiteKit remains `private: true`; npm registry publication is not part of v1.
 
