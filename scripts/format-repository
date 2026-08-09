@@ -8,9 +8,28 @@ const { execFileSync } = require('child_process');
 const root = path.resolve(__dirname, '..');
 const check = process.argv.includes('--check');
 const supported = new Set(['.css', '.html', '.js', '.json', '.md', '.mjs', '.toml', '.yaml', '.yml']);
-const files = execFileSync('git', ['ls-files', '-z'], { cwd: root, encoding: 'utf8' })
-  .split('\0')
-  .filter(Boolean)
+const excluded = new Set(['.git', '.lens', '.workcell', 'artifacts', 'node_modules', 'playwright-report', 'test-results']);
+
+function walk(directory = root) {
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    if (excluded.has(entry.name)) return [];
+    const absolute = path.join(directory, entry.name);
+    if (entry.isDirectory()) return walk(absolute);
+    return entry.isFile() ? [path.relative(root, absolute)] : [];
+  });
+}
+
+function repositoryFiles() {
+  try {
+    return execFileSync('git', ['ls-files', '-z'], { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] })
+      .split('\0')
+      .filter(Boolean);
+  } catch {
+    return walk().sort();
+  }
+}
+
+const files = repositoryFiles()
   .filter((file) => supported.has(path.extname(file)) || file.startsWith('scripts/'));
 const changed = [];
 
