@@ -18,7 +18,6 @@
   "environment": {
     "allow": [],
     "set": {
-      "HOME": "/tmp",
       "npm_config_cache": "/tmp/npm-cache"
     }
   },
