@@ -121,9 +121,10 @@
 
 # SSG / Howl / generated static output
 /output/
-/dist/
 /logs/
 /.kujo-post-manifest.txt
+
+# SiteKit intentionally tracks dist/ as its supported source-vendored artifact.
 
 # AI SDK local release/security artifacts
 /artifacts/security/
@@ -141,4 +142,3 @@
 # /fence.toml
 # /.lens.toml
 # /packwrite.toml
-
