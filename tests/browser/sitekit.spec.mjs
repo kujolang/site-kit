@@ -18,6 +18,12 @@ const viewports = [
 ];
 const themes = ['kujo-light', 'kujo-dark'];
 
+async function loadBehaviorFixture(page, markup) {
+  await page.goto('/examples/consumer-dashboard/index.html');
+  await page.setContent(`<!doctype html><html lang="en" data-theme="kujo-light"><body>${markup}</body></html>`);
+  await page.addScriptTag({ url: '/dist/sitekit.js' });
+}
+
 for (const fixture of pages) {
   for (const viewport of viewports) {
     for (const theme of themes) {
@@ -141,4 +147,89 @@ test('clean copied distribution works over HTTP and file URLs', async ({ page })
     const font = await page.getByRole('heading', { level: 1 }).evaluate((element) => getComputedStyle(element).fontFamily);
     expect(font).toContain('Departure Mono');
   }
+});
+
+test.describe('progressive behavior regressions', () => {
+  test('repeated enhancement does not duplicate event handlers', async ({ page }) => {
+    await loadBehaviorFixture(page, '<div class="sk-dropdown-menu"><button type="button" aria-haspopup="menu" aria-expanded="false">Actions</button><ul role="menu" hidden><li role="none"><button role="menuitem" type="button">Run</button></li></ul></div>');
+    await page.evaluate(() => window.SiteKit.enhance());
+    const trigger = page.getByRole('button', { name: 'Actions' });
+    await trigger.click();
+    await expect(trigger).toHaveAttribute('aria-expanded', 'true');
+  });
+
+  test('generated relationship IDs never collide with existing document IDs', async ({ page }) => {
+    await loadBehaviorFixture(page, '<div id="sk-menu-1"></div><div class="sk-dropdown-menu"><button type="button" aria-haspopup="menu" aria-expanded="false">Actions</button><ul role="menu" hidden><li role="none"><button role="menuitem" type="button">Run</button></li></ul></div>');
+    const ids = await page.locator('[id]').evaluateAll((elements) => elements.map((element) => element.id));
+    expect(new Set(ids).size).toBe(ids.length);
+  });
+
+  test('focus traps ignore controls hidden by an ancestor', async ({ page }) => {
+    await loadBehaviorFixture(page, '<dialog class="sk-modal" data-sk-modal open><div hidden><button id="hidden-control" type="button">Hidden</button></div><button id="first-visible" type="button">First</button><button id="last-visible" type="button">Last</button></dialog>');
+    await page.locator('#last-visible').focus();
+    await page.keyboard.press('Tab');
+    await expect(page.locator('#first-visible')).toBeFocused();
+  });
+
+  test('ArrowUp opens a menu and focuses its last item', async ({ page }) => {
+    await loadBehaviorFixture(page, '<div class="sk-dropdown-menu"><button type="button" aria-haspopup="menu" aria-expanded="false">Actions</button><ul role="menu" hidden><li role="none"><button role="menuitem" type="button">First</button></li><li role="none"><button role="menuitem" type="button">Last</button></li></ul></div>');
+    const trigger = page.getByRole('button', { name: 'Actions' });
+    await trigger.focus();
+    await page.keyboard.press('ArrowUp');
+    await expect(trigger).toHaveAttribute('aria-expanded', 'true');
+    await expect(page.getByRole('menuitem', { name: 'Last' })).toBeFocused();
+  });
+
+  test('tooltip stays visible while either hover or focus remains active', async ({ page }) => {
+    await loadBehaviorFixture(page, '<span class="sk-tooltip"><button type="button">Info</button><span role="tooltip" hidden>Help</span></span><button type="button">After</button>');
+    const trigger = page.getByRole('button', { name: 'Info' });
+    const tooltip = page.getByRole('tooltip');
+    await trigger.hover();
+    await trigger.focus();
+    await page.getByRole('button', { name: 'After' }).focus();
+    await expect(tooltip).toBeVisible();
+    await page.mouse.move(0, 0);
+    await expect(tooltip).toBeHidden();
+  });
+
+  test('every modal opener targeting the same dialog works', async ({ page }) => {
+    await loadBehaviorFixture(page, '<button type="button" data-sk-modal-open="shared-modal">Open first</button><button type="button" data-sk-modal-open="shared-modal">Open second</button><dialog id="shared-modal" data-sk-modal><button type="button" data-sk-modal-close>Close</button></dialog>');
+    await page.getByRole('button', { name: 'Open second' }).click();
+    await expect(page.locator('#shared-modal')).toHaveAttribute('open', '');
+  });
+
+  test('every drawer opener targeting the same drawer works', async ({ page }) => {
+    await loadBehaviorFixture(page, '<button type="button" data-sk-drawer-open="shared-drawer">Open first</button><button type="button" data-sk-drawer-open="shared-drawer">Open second</button><aside id="shared-drawer" data-sk-drawer hidden aria-hidden="true"><button type="button" data-sk-drawer-close>Close</button></aside>');
+    const second = page.getByRole('button', { name: 'Open second' });
+    await second.click();
+    await expect(page.locator('#shared-drawer')).toHaveAttribute('aria-hidden', 'false');
+    await page.getByRole('button', { name: 'Close' }).click();
+    await expect(second).toBeFocused();
+  });
+
+  test('each drawer controls the scrim in its own shell', async ({ page }) => {
+    await loadBehaviorFixture(page, '<button type="button" data-sk-drawer-open="drawer-one">Open one</button><button type="button" data-sk-drawer-open="drawer-two">Open two</button><div class="sk-drawer-shell" id="shell-one"><div class="sk-drawer-scrim" hidden></div><aside id="drawer-one" data-sk-drawer hidden><button type="button">One</button></aside></div><div class="sk-drawer-shell" id="shell-two"><div class="sk-drawer-scrim" hidden></div><aside id="drawer-two" data-sk-drawer hidden><button type="button">Two</button></aside></div>');
+    await page.getByRole('button', { name: 'Open two' }).click();
+    await expect(page.locator('#shell-one .sk-drawer-scrim')).toHaveAttribute('hidden', '');
+    await expect(page.locator('#shell-two .sk-drawer-scrim')).not.toHaveAttribute('hidden', '');
+  });
+
+  test('a valid persisted theme is restored during enhancement', async ({ page }) => {
+    await page.goto('/examples/consumer-dashboard/index.html');
+    await page.evaluate(() => window.localStorage.setItem('sk-theme', 'kujo-dark'));
+    await page.setContent('<!doctype html><html lang="en" data-theme="kujo-light"><body><button type="button" data-sk-theme-toggle>Theme</button></body></html>');
+    await page.addScriptTag({ url: '/dist/sitekit.js' });
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'kujo-dark');
+  });
+
+  test('theme selectors and toggles stay synchronized', async ({ page }) => {
+    await loadBehaviorFixture(page, '<select data-sk-theme-select aria-label="Theme"><option value="kujo-light">Light</option><option value="kujo-dark">Dark</option></select><button type="button" data-sk-theme-toggle>Theme</button>');
+    const select = page.locator('select[data-sk-theme-select]');
+    const toggle = page.locator('[data-sk-theme-toggle]');
+    await select.selectOption('kujo-dark');
+    await expect(toggle).toHaveAttribute('aria-pressed', 'true');
+    await expect(toggle).toHaveAttribute('aria-label', 'Switch to light theme');
+    await toggle.click();
+    await expect(select).toHaveValue('kujo-light');
+  });
 });

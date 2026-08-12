@@ -3,15 +3,33 @@
 
   var focusableSelector = 'a[href], area[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), summary, [tabindex]:not([tabindex="-1"])';
   var idCounter = 0;
+  var enhancedDropdowns = new WeakSet();
+  var enhancedPopovers = new WeakSet();
+  var enhancedTooltips = new WeakSet();
+  var enhancedModals = new WeakSet();
+  var enhancedDrawers = new WeakSet();
+  var enhancedThemeControls = new WeakSet();
+  var supportedThemes = ['kujo-light', 'kujo-dark', 'personal-dark', 'bzby'];
 
   function nextId(prefix) {
-    idCounter += 1;
-    return prefix + '-' + idCounter;
+    var id;
+    do {
+      idCounter += 1;
+      id = prefix + '-' + idCounter;
+    } while (document.getElementById(id));
+    return id;
   }
 
   function focusable(container) {
     return Array.prototype.slice.call(container.querySelectorAll(focusableSelector)).filter(function (element) {
-      return !element.hasAttribute('hidden') && element.getAttribute('aria-hidden') !== 'true';
+      var style = window.getComputedStyle(element);
+      return !element.matches(':disabled') && !element.closest('[hidden], [inert], [aria-hidden="true"]') && style.display !== 'none' && style.visibility !== 'hidden';
+    });
+  }
+
+  function controlsTargeting(attribute, id) {
+    return Array.prototype.slice.call(document.querySelectorAll('[' + attribute + ']')).filter(function (control) {
+      return control.getAttribute(attribute) === id;
     });
   }
 
@@ -29,9 +47,11 @@
 
   function enhanceDropdowns() {
     document.querySelectorAll('.sk-dropdown-menu').forEach(function (container) {
+      if (enhancedDropdowns.has(container)) return;
       var trigger = container.querySelector('[aria-haspopup="menu"]');
       var menu = container.querySelector('[role="menu"], ul');
       if (!trigger || !menu) return;
+      enhancedDropdowns.add(container);
       menu.setAttribute('role', 'menu');
       if (!menu.id) menu.id = nextId('sk-menu');
       trigger.setAttribute('aria-controls', menu.id);
@@ -40,21 +60,25 @@
         setExpanded(trigger, false, menu);
         if (restore) trigger.focus();
       };
-      var open = function (focusFirst) {
+      var open = function (focusTarget) {
         setExpanded(trigger, true, menu);
-        if (focusFirst) {
-          var item = items()[0];
+        if (focusTarget) {
+          var list = items();
+          var item = list[focusTarget === 'last' ? list.length - 1 : 0];
           if (item) item.focus();
         }
       };
       trigger.addEventListener('click', function () {
         var expanded = trigger.getAttribute('aria-expanded') === 'true';
-        if (expanded) close(false); else open(false);
+        if (expanded) close(false); else open(null);
       });
       trigger.addEventListener('keydown', function (event) {
         if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
           event.preventDefault();
-          open(true);
+          open('first');
+        } else if (event.key === 'ArrowUp') {
+          event.preventDefault();
+          open('last');
         }
       });
       menu.addEventListener('keydown', function (event) {
@@ -84,9 +108,11 @@
 
   function enhancePopovers() {
     document.querySelectorAll('.sk-popover').forEach(function (container) {
+      if (enhancedPopovers.has(container)) return;
       var trigger = container.querySelector('button, [aria-expanded]');
       var panel = container.querySelector('[role="dialog"], [data-sk-popover-panel]');
       if (!trigger || !panel) return;
+      enhancedPopovers.add(container);
       if (!panel.id) panel.id = nextId('sk-popover');
       trigger.setAttribute('aria-controls', panel.id);
       var close = function (restore) { setExpanded(trigger, false, panel); if (restore) trigger.focus(); };
@@ -99,18 +125,21 @@
 
   function enhanceTooltips() {
     document.querySelectorAll('.sk-tooltip').forEach(function (container) {
+      if (enhancedTooltips.has(container)) return;
       var trigger = container.querySelector('button, [aria-describedby]');
       var tip = container.querySelector('[role="tooltip"]');
       if (!trigger || !tip) return;
+      enhancedTooltips.add(container);
       if (!tip.id) tip.id = nextId('sk-tooltip');
       trigger.setAttribute('aria-describedby', tip.id);
-      var show = function () { tip.hidden = false; };
-      var hide = function () { tip.hidden = true; };
-      trigger.addEventListener('focus', show);
-      trigger.addEventListener('blur', hide);
-      trigger.addEventListener('mouseenter', show);
-      trigger.addEventListener('mouseleave', hide);
-      trigger.addEventListener('keydown', function (event) { if (event.key === 'Escape') hide(); });
+      var focused = false;
+      var hovered = false;
+      var update = function () { tip.hidden = !(focused || hovered); };
+      trigger.addEventListener('focus', function () { focused = true; update(); });
+      trigger.addEventListener('blur', function () { focused = false; update(); });
+      trigger.addEventListener('mouseenter', function () { hovered = true; update(); });
+      trigger.addEventListener('mouseleave', function () { hovered = false; update(); });
+      trigger.addEventListener('keydown', function (event) { if (event.key === 'Escape') tip.hidden = true; });
     });
   }
 
@@ -125,31 +154,39 @@
   }
 
   function enhanceModal(modal) {
-    var opener = modal.id ? document.querySelector('[data-sk-modal-open="' + modal.id + '"]') : null;
+    if (enhancedModals.has(modal)) return;
+    enhancedModals.add(modal);
+    var openers = modal.id ? controlsTargeting('data-sk-modal-open', modal.id) : [];
     var closeButtons = modal.querySelectorAll('[data-sk-modal-close], [data-sk-modal-dismiss]');
     var previous = null;
     var close = function () {
       if (typeof modal.close === 'function') modal.close(); else modal.hidden = true;
-      if (previous && typeof previous.focus === 'function') previous.focus();
     };
-    if (opener) opener.addEventListener('click', function () { previous = opener; if (typeof modal.showModal === 'function') modal.showModal(); else modal.hidden = false; });
+    openers.forEach(function (opener) {
+      opener.addEventListener('click', function () { previous = opener; if (typeof modal.showModal === 'function') modal.showModal(); else modal.hidden = false; });
+    });
     closeButtons.forEach(function (button) { button.addEventListener('click', close); });
     modal.addEventListener('cancel', function (event) { event.preventDefault(); close(); });
-    modal.addEventListener('close', function () { var restore = opener || previous; var hiddenAncestor = restore && restore.closest ? restore.closest('[hidden]') : null; if (hiddenAncestor) restore = hiddenAncestor.parentElement.querySelector('[aria-haspopup="menu"]') || restore; if (restore && typeof restore.focus === 'function') window.setTimeout(function () { restore.focus(); }, 0); });
+    modal.addEventListener('close', function () { var restore = previous; var hiddenAncestor = restore && restore.closest ? restore.closest('[hidden]') : null; if (hiddenAncestor) restore = hiddenAncestor.parentElement.querySelector('[aria-haspopup="menu"]') || restore; if (restore && typeof restore.focus === 'function') window.setTimeout(function () { restore.focus(); }, 0); });
     modal.addEventListener('keydown', function (event) { if (event.key === 'Escape') close(); else trapFocus(modal, event); });
   }
 
   function enhanceDrawers() {
     document.querySelectorAll('[data-sk-drawer]').forEach(function (drawer) {
+      if (enhancedDrawers.has(drawer)) return;
+      enhancedDrawers.add(drawer);
       var id = drawer.id || nextId('sk-drawer');
       drawer.id = id;
-      var opener = document.querySelector('[data-sk-drawer-open="' + id + '"]');
+      var openers = controlsTargeting('data-sk-drawer-open', id);
       var closeButtons = drawer.querySelectorAll('[data-sk-drawer-close], [data-sk-drawer-dismiss]');
       var previous = null;
-      var scrim = drawer.querySelector('.sk-drawer-scrim') || document.querySelector('[data-sk-drawer-scrim]');
+      var shell = drawer.closest('.sk-drawer-shell');
+      var scrim = shell ? shell.querySelector('.sk-drawer-scrim, [data-sk-drawer-scrim]') : null;
+      if (!scrim) scrim = controlsTargeting('data-sk-drawer-scrim', id)[0] || null;
+      if (!scrim && document.querySelectorAll('[data-sk-drawer]').length === 1) scrim = document.querySelector('[data-sk-drawer-scrim]');
       var close = function () { drawer.hidden = true; drawer.setAttribute('aria-hidden', 'true'); if (scrim) scrim.hidden = true; if (previous) previous.focus(); };
-      var open = function () { previous = opener || document.activeElement; drawer.hidden = false; drawer.setAttribute('aria-hidden', 'false'); if (scrim) scrim.hidden = false; var first = focusable(drawer)[0]; if (first) first.focus(); };
-      if (opener) opener.addEventListener('click', open);
+      var open = function (opener) { previous = opener || document.activeElement; drawer.hidden = false; drawer.setAttribute('aria-hidden', 'false'); if (scrim) scrim.hidden = false; var first = focusable(drawer)[0]; if (first) first.focus(); };
+      openers.forEach(function (opener) { opener.addEventListener('click', function () { open(opener); }); });
       closeButtons.forEach(function (button) { button.addEventListener('click', close); });
       drawer.addEventListener('keydown', function (event) { if (event.key === 'Escape') { event.preventDefault(); close(); } else trapFocus(drawer, event); });
       if (scrim) scrim.addEventListener('click', close);
@@ -158,23 +195,41 @@
 
   function enhanceTheme() {
     var root = document.documentElement;
-    document.querySelectorAll('[data-sk-theme-select]').forEach(function (select) {
-      select.value = root.dataset.theme || select.value;
-      select.addEventListener('change', function () { root.dataset.theme = select.value; try { window.localStorage.setItem('sk-theme', select.value); } catch (error) {} });
-    });
-    document.querySelectorAll('[data-sk-theme-toggle]').forEach(function (button) {
-      var updateThemeButton = function () {
-        var dark = root.dataset.theme === 'kujo-dark';
+    var selects = Array.prototype.slice.call(document.querySelectorAll('[data-sk-theme-select]'));
+    var toggles = Array.prototype.slice.call(document.querySelectorAll('[data-sk-theme-toggle]'));
+    var updateControls = function () {
+      document.querySelectorAll('[data-sk-theme-select]').forEach(function (select) {
+        if (Array.prototype.some.call(select.options, function (option) { return option.value === root.dataset.theme; })) select.value = root.dataset.theme;
+      });
+      document.querySelectorAll('[data-sk-theme-toggle]').forEach(function (button) {
+        var dark = root.dataset.theme === 'kujo-dark' || root.dataset.theme === 'personal-dark';
         button.setAttribute('aria-pressed', String(dark));
         button.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
-      };
-      updateThemeButton();
+      });
+    };
+    var applyTheme = function (theme, persist) {
+      if (!supportedThemes.includes(theme)) return;
+      root.dataset.theme = theme;
+      updateControls();
+      if (persist) try { window.localStorage.setItem('sk-theme', theme); } catch (error) {}
+    };
+    var storedTheme = null;
+    try { storedTheme = window.localStorage.getItem('sk-theme'); } catch (error) {}
+    if (supportedThemes.includes(storedTheme)) root.dataset.theme = storedTheme;
+    selects.forEach(function (select) {
+      if (enhancedThemeControls.has(select)) return;
+      enhancedThemeControls.add(select);
+      select.addEventListener('change', function () { applyTheme(select.value, true); });
+    });
+    toggles.forEach(function (button) {
+      if (enhancedThemeControls.has(button)) return;
+      enhancedThemeControls.add(button);
       button.addEventListener('click', function () {
-        root.dataset.theme = root.dataset.theme === 'kujo-dark' ? 'kujo-light' : 'kujo-dark';
-        updateThemeButton();
-        try { window.localStorage.setItem('sk-theme', root.dataset.theme); } catch (error) {}
+        var dark = root.dataset.theme === 'kujo-dark' || root.dataset.theme === 'personal-dark';
+        applyTheme(dark ? 'kujo-light' : 'kujo-dark', true);
       });
     });
+    updateControls();
   }
 
   function enhance() {
