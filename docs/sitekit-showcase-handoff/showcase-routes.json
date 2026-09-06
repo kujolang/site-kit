@@ -1,0 +1,4279 @@
+{
+  "schemaVersion": 1,
+  "canonicalOrigin": "https://sitekit.kujolang.ai",
+  "sourceCommit": "c0d199e06bc926e29de87b7cd983ee3d54db9cda",
+  "status": "PROPOSED, no routes deployed",
+  "routes": [
+    {
+      "path": "/",
+      "title": "SiteKit",
+      "kind": "home",
+      "purpose": "Understand the product and try one real example",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "summary",
+        "button",
+        "themes"
+      ],
+      "interactions": [
+        "theme comparison",
+        "browse"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/getting-started/",
+      "title": "Getting started",
+      "kind": "guide",
+      "purpose": "Build the first static consumer",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "README",
+        "architecture"
+      ],
+      "interactions": [
+        "copy minimal page"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/getting-started/vendoring/",
+      "title": "Vendoring and upgrades",
+      "kind": "guide",
+      "purpose": "Keep assets and versions reproducible",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "dist manifest",
+        "licenses"
+      ],
+      "interactions": [
+        "copy commands"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/getting-started/behavior/",
+      "title": "Behavior ownership",
+      "kind": "guide",
+      "purpose": "Understand native, dist and consumer behavior",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "runtime map"
+      ],
+      "interactions": [
+        "real supported hook examples"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/foundations/",
+      "title": "Foundations",
+      "kind": "index",
+      "purpose": "Discover the visual system",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "token manifest"
+      ],
+      "interactions": [
+        "browse"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/tokens/",
+      "title": "Token inspector",
+      "kind": "tool",
+      "purpose": "Inspect every real token and theme value",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "token manifest",
+        "direct usage map"
+      ],
+      "interactions": [
+        "filter",
+        "copy",
+        "theme comparison"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/",
+      "title": "Components",
+      "kind": "index",
+      "purpose": "Find the right existing component",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "component manifest",
+        "aliases"
+      ],
+      "interactions": [
+        "search",
+        "category filter",
+        "primitive filter"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/matrix/",
+      "title": "States and variants",
+      "kind": "matrix",
+      "purpose": "Compare genuinely implemented variants",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "matrix component adapters"
+      ],
+      "interactions": [
+        "focus/hover practice",
+        "theme",
+        "native states"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/patterns/",
+      "title": "Patterns",
+      "kind": "index",
+      "purpose": "Find reusable compositions",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "recipes"
+      ],
+      "interactions": [
+        "browse"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/layouts/",
+      "title": "Layouts",
+      "kind": "index",
+      "purpose": "Understand six starter documents",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "layouts"
+      ],
+      "interactions": [
+        "browse"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/examples/",
+      "title": "Example applications",
+      "kind": "index",
+      "purpose": "See larger interfaces built with SiteKit",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "example metadata"
+      ],
+      "interactions": [
+        "browse"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/playground/",
+      "title": "Playground",
+      "kind": "tool",
+      "purpose": "Explore bounded component configuration",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "adapter registry"
+      ],
+      "interactions": [
+        "component",
+        "theme",
+        "width",
+        "controls",
+        "code",
+        "reset",
+        "deep link"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/accessibility/",
+      "title": "Accessibility",
+      "kind": "guide",
+      "purpose": "Understand verified support and remaining responsibilities",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "behavior review",
+        "test evidence"
+      ],
+      "interactions": [
+        "keyboard exercises"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/changelog/",
+      "title": "Changelog",
+      "kind": "guide",
+      "purpose": "Read library release changes",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "CHANGELOG.md"
+      ],
+      "interactions": [
+        "source links"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/search/",
+      "title": "Search",
+      "kind": "search",
+      "purpose": "Search names, props, tokens, examples and docs",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "search index"
+      ],
+      "interactions": [
+        "query",
+        "result navigation",
+        "clear"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/404.html",
+      "title": "Page not found",
+      "kind": "error",
+      "purpose": "Recover from missing routes",
+      "audience": [
+        "humans",
+        "agents"
+      ],
+      "data": [
+        "navigation"
+      ],
+      "interactions": [
+        "browse",
+        "search"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/foundations/colors/",
+      "title": "Colors",
+      "kind": "foundation",
+      "purpose": "swatches and semantic relationships",
+      "audience": [
+        "designers",
+        "builders"
+      ],
+      "data": [
+        "token manifest",
+        "source CSS"
+      ],
+      "interactions": [
+        "copy",
+        "live examples"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/foundations/typography/",
+      "title": "Typography",
+      "kind": "foundation",
+      "purpose": "real type scale and stacks",
+      "audience": [
+        "designers",
+        "builders"
+      ],
+      "data": [
+        "token manifest",
+        "source CSS"
+      ],
+      "interactions": [
+        "copy",
+        "live examples"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/foundations/spacing/",
+      "title": "Spacing and sizing",
+      "kind": "foundation",
+      "purpose": "space/control/content rulers",
+      "audience": [
+        "designers",
+        "builders"
+      ],
+      "data": [
+        "token manifest",
+        "source CSS"
+      ],
+      "interactions": [
+        "copy",
+        "live examples"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/foundations/geometry/",
+      "title": "Geometry and surfaces",
+      "kind": "foundation",
+      "purpose": "radius/borders/no-shadow truth",
+      "audience": [
+        "designers",
+        "builders"
+      ],
+      "data": [
+        "token manifest",
+        "source CSS"
+      ],
+      "interactions": [
+        "copy",
+        "live examples"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/foundations/layout/",
+      "title": "Layout and containment",
+      "kind": "foundation",
+      "purpose": "utility classes and actual queries",
+      "audience": [
+        "designers",
+        "builders"
+      ],
+      "data": [
+        "token manifest",
+        "source CSS"
+      ],
+      "interactions": [
+        "copy",
+        "live examples"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/foundations/motion/",
+      "title": "Motion",
+      "kind": "foundation",
+      "purpose": "actual component effects and reduced motion",
+      "audience": [
+        "designers",
+        "builders"
+      ],
+      "data": [
+        "token manifest",
+        "source CSS"
+      ],
+      "interactions": [
+        "copy",
+        "live examples"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/foundations/icons/",
+      "title": "Iconography",
+      "kind": "foundation",
+      "purpose": "inline/sprite and accessible meaning",
+      "audience": [
+        "designers",
+        "builders"
+      ],
+      "data": [
+        "token manifest",
+        "source CSS"
+      ],
+      "interactions": [
+        "copy",
+        "live examples"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/accordion/",
+      "title": "Accordion",
+      "kind": "component",
+      "purpose": "Group native details/summary disclosures for FAQs.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:accordion",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/alert/",
+      "title": "Alert",
+      "kind": "component",
+      "purpose": "Show a status notice with an exclamation marker and optional severity colors.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:alert",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/avatar/",
+      "title": "Avatar",
+      "kind": "component",
+      "purpose": "Frame an image or manually authored initials in a square.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:avatar",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/badge/",
+      "title": "Badge",
+      "kind": "component",
+      "purpose": "Add compact text status labels.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:badge",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/bento-grid/",
+      "title": "Bento Grid",
+      "kind": "component",
+      "purpose": "Arrange an intro and unevenly spanning feature panels.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:bento-grid",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/breadcrumbs/",
+      "title": "Breadcrumbs",
+      "kind": "component",
+      "purpose": "Represent a hierarchy as an ordered navigation trail.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:breadcrumbs",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/button/",
+      "title": "Button",
+      "kind": "component",
+      "purpose": "Trigger an action using a native button, or style a navigation anchor.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:button",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/card/",
+      "title": "Card",
+      "kind": "component",
+      "purpose": "Group a heading, explanatory body and actions in a framed section.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:card",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/carousel/",
+      "title": "Carousel",
+      "kind": "component",
+      "purpose": "Present a horizontally scrollable, snapping series of cards.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:carousel",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/checkbox/",
+      "title": "Checkbox",
+      "kind": "component",
+      "purpose": "Capture a native boolean choice with a wrapping label.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:checkbox",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/checkout-summary/",
+      "title": "Checkout Summary",
+      "kind": "component",
+      "purpose": "Display items and a definition list of totals with checkout actions.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:checkout-summary",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/code-block/",
+      "title": "Code Block",
+      "kind": "component",
+      "purpose": "Display escaped code in pre/code with a caption and copy affordance.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:code-block",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/color-picker/",
+      "title": "Color Picker",
+      "kind": "component",
+      "purpose": "Use a labeled native color input.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:color-picker",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/combobox/",
+      "title": "Combobox",
+      "kind": "component",
+      "purpose": "Show an input and styled option list for a consumer-owned autocomplete.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:combobox",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/command-strip/",
+      "title": "Command Strip",
+      "kind": "component",
+      "purpose": "Display compact single-line metadata cells in a responsive strip.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:command-strip",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/content-section/",
+      "title": "Content Section",
+      "kind": "component",
+      "purpose": "Compose supporting copy, action and a metadata/media panel.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:content-section",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/cta/",
+      "title": "CTA",
+      "kind": "component",
+      "purpose": "Group a call-to-action headline, supporting copy and action row.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:cta",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/date-input/",
+      "title": "Date Input",
+      "kind": "component",
+      "purpose": "Capture a date through the browser-native date input.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:date-input",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/date-picker/",
+      "title": "Date Picker",
+      "kind": "component",
+      "purpose": "Provide a styled calendar mockup for further implementation.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:date-picker",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/drawer/",
+      "title": "Drawer",
+      "kind": "component",
+      "purpose": "Show a secondary panel with optional open/close and focus containment.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:drawer",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/dropdown-menu/",
+      "title": "Dropdown Menu",
+      "kind": "component",
+      "purpose": "Offer a button-triggered menu of commands with keyboard movement.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:dropdown-menu",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/ecosystem-map/",
+      "title": "Ecosystem Map",
+      "kind": "component",
+      "purpose": "Display ecosystem nodes as a responsive grid of authored cards.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:ecosystem-map",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/empty-state/",
+      "title": "Empty State",
+      "kind": "component",
+      "purpose": "Explain an empty collection and offer a next action.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:empty-state",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/error-state/",
+      "title": "Error State",
+      "kind": "component",
+      "purpose": "Explain a recoverable failure and show retry/review actions.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:error-state",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/feature-grid/",
+      "title": "Feature Grid",
+      "kind": "component",
+      "purpose": "Arrange feature articles with marker boxes in an intrinsic grid.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:feature-grid",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/fieldset/",
+      "title": "Fieldset",
+      "kind": "component",
+      "purpose": "Group native related form controls with a legend.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:fieldset",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/file/",
+      "title": "File",
+      "kind": "component",
+      "purpose": "Show a file metadata row and a remove affordance.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:file",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/file-upload/",
+      "title": "File Upload",
+      "kind": "component",
+      "purpose": "Expose a native file chooser in a dashed frame.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:file-upload",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/footer/",
+      "title": "Footer",
+      "kind": "component",
+      "purpose": "Compose brand, links and legal text in a wrapping footer.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:footer",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/form/",
+      "title": "Form",
+      "kind": "component",
+      "purpose": "Compose labeled native email and message controls with submit.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:form",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/form-field/",
+      "title": "Form Field",
+      "kind": "component",
+      "purpose": "Associate a label, native control and help description.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:form-field",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/generator-panel/",
+      "title": "Generator Panel",
+      "kind": "component",
+      "purpose": "Arrange a form next to a preview placeholder.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:generator-panel",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/header/",
+      "title": "Header",
+      "kind": "component",
+      "purpose": "Build a branded wrapping header with primary links and actions.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:header",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/heading/",
+      "title": "Heading",
+      "kind": "component",
+      "purpose": "Group an eyebrow, h2 and supporting metadata.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:heading",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/hero/",
+      "title": "Hero",
+      "kind": "component",
+      "purpose": "Present a large centered heading, explanation and action row.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:hero",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/icon/",
+      "title": "Icon",
+      "kind": "component",
+      "purpose": "Wrap small inline SVG or a consumer-owned sprite with sizing and semantics.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:icon",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/image/",
+      "title": "Image",
+      "kind": "component",
+      "purpose": "Provide a captioned image-frame visual example.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:image",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/label/",
+      "title": "Label",
+      "kind": "component",
+      "purpose": "Label an associated native form control.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:label",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/link/",
+      "title": "Link",
+      "kind": "component",
+      "purpose": "Style a real navigation anchor with underline and focus.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:link",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/list/",
+      "title": "List",
+      "kind": "component",
+      "purpose": "Format a semantic unordered list with spacing.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:list",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/metadata-panel/",
+      "title": "Metadata Panel",
+      "kind": "component",
+      "purpose": "Present labeled key/value rows in a definition list.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:metadata-panel",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/modal/",
+      "title": "Modal",
+      "kind": "component",
+      "purpose": "Open a labeled native dialog with explicit dismissal and opener restoration.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:modal",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/navigation/",
+      "title": "Navigation",
+      "kind": "component",
+      "purpose": "Display a wrapping set of primary navigation links.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:navigation",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/newsletter-signup/",
+      "title": "Newsletter Signup",
+      "kind": "component",
+      "purpose": "Compose email signup copy and an inline submission form.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:newsletter-signup",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/pagination/",
+      "title": "Pagination",
+      "kind": "component",
+      "purpose": "Link between pages and mark the current one.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:pagination",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/partners-strip/",
+      "title": "Partners Strip",
+      "kind": "component",
+      "purpose": "Lay out partner names or consumer-provided logos in an intrinsic grid.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:partners-strip",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/popover/",
+      "title": "Popover",
+      "kind": "component",
+      "purpose": "Toggle contextual nonmodal content next to a trigger.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:popover",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/pricing-table/",
+      "title": "Pricing Table",
+      "kind": "component",
+      "purpose": "Compare plans in a captioned table with row and column headers.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:pricing-table",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/product-card/",
+      "title": "Product Card",
+      "kind": "component",
+      "purpose": "Present product title, description, price and actions beside media.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:product-card",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/product-grid/",
+      "title": "Product Grid",
+      "kind": "component",
+      "purpose": "Arrange product summaries in an intrinsic responsive grid.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:product-grid",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/product-showcase/",
+      "title": "Product Showcase",
+      "kind": "component",
+      "purpose": "Compose a featured product, media placeholder and supporting offers.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:product-showcase",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/progress-bar/",
+      "title": "Progress Bar",
+      "kind": "component",
+      "purpose": "Draw a horizontal completion fill.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:progress-bar",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/progress-indicator/",
+      "title": "Progress Indicator",
+      "kind": "component",
+      "purpose": "Show an ordered sequence of workflow steps.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:progress-indicator",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/promo-banner/",
+      "title": "Promo Banner",
+      "kind": "component",
+      "purpose": "Present a promotional message and action cluster.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:promo-banner",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/quote/",
+      "title": "Quote",
+      "kind": "component",
+      "purpose": "Present a quotation with figure attribution.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:quote",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/radio-button/",
+      "title": "Radio Button",
+      "kind": "component",
+      "purpose": "Capture one native choice within a labeled radio group.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:radio-button",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/rating/",
+      "title": "Rating",
+      "kind": "component",
+      "purpose": "Render a static star rating with an accessible summary.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:rating",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/recent-posts/",
+      "title": "Recent Posts",
+      "kind": "component",
+      "purpose": "Present authored article cards and metadata.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:recent-posts",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/resource-links/",
+      "title": "Resource Links",
+      "kind": "component",
+      "purpose": "Group descriptive resource links in an intrinsic grid.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:resource-links",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/rich-text-editor/",
+      "title": "Rich Text Editor",
+      "kind": "component",
+      "purpose": "Show a contenteditable text area with toolbar affordances.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:rich-text-editor",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/roadmap/",
+      "title": "Roadmap",
+      "kind": "component",
+      "purpose": "Display an ordered milestone timeline with dates.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:roadmap",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/search-input/",
+      "title": "Search Input",
+      "kind": "component",
+      "purpose": "Provide a labeled native search form.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:search-input",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/segmented-control/",
+      "title": "Segmented Control",
+      "kind": "component",
+      "purpose": "Present a group of view-mode buttons.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:segmented-control",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/select/",
+      "title": "Select",
+      "kind": "component",
+      "purpose": "Capture a choice with a native select.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:select",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/separator/",
+      "title": "Separator",
+      "kind": "component",
+      "purpose": "Separate adjacent content with horizontal separator semantics.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:separator",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/skeleton/",
+      "title": "Skeleton",
+      "kind": "component",
+      "purpose": "Show a decorative loading placeholder silhouette.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:skeleton",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/skip-link/",
+      "title": "Skip Link",
+      "kind": "component",
+      "purpose": "Let keyboard users jump to the main region.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:skip-link",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/slider/",
+      "title": "Slider",
+      "kind": "component",
+      "purpose": "Capture a scalar through a native range control.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:slider",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/spinner/",
+      "title": "Spinner",
+      "kind": "component",
+      "purpose": "Show a nine-cell activity animation with Loading status text.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:spinner",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/stack/",
+      "title": "Stack",
+      "kind": "component",
+      "purpose": "Display vertically spaced child panels with borders and padding.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:stack",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/stats-bar/",
+      "title": "Stats Bar",
+      "kind": "component",
+      "purpose": "Present metrics as a definition list with strong numeric typography.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:stats-bar",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/stepper/",
+      "title": "Stepper",
+      "kind": "component",
+      "purpose": "Combine a native numeric input with decrement/increment buttons.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:stepper",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/table/",
+      "title": "Table",
+      "kind": "component",
+      "purpose": "Display captioned tabular data with scoped headers and overflow wrapper.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:table",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/tabs/",
+      "title": "Tabs",
+      "kind": "component",
+      "purpose": "Provide the styled tablist/panel structure for related views.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:tabs",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/team-grid/",
+      "title": "Team Grid",
+      "kind": "component",
+      "purpose": "Arrange profile summaries in an intrinsic grid.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:team-grid",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/testimonial-rail/",
+      "title": "Testimonial Rail",
+      "kind": "component",
+      "purpose": "Present quote figures with attributions in a grid.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:testimonial-rail",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/text-input/",
+      "title": "Text Input",
+      "kind": "component",
+      "purpose": "Capture short text with an explicit label.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:text-input",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/textarea/",
+      "title": "Textarea",
+      "kind": "component",
+      "purpose": "Capture multiline native text with label and minimum height.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:textarea",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/toast/",
+      "title": "Toast",
+      "kind": "component",
+      "purpose": "Show an inline live status with a dismiss button.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:toast",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/toggle/",
+      "title": "Toggle",
+      "kind": "component",
+      "purpose": "Capture a native boolean with a square moving indicator.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:toggle",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/tooltip/",
+      "title": "Tooltip",
+      "kind": "component",
+      "purpose": "Show advisory text on trigger focus/hover with Escape dismissal.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:tooltip",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/tree-view/",
+      "title": "Tree View",
+      "kind": "component",
+      "purpose": "Present nested navigation with a branch disclosure affordance.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:tree-view",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/trust-strip/",
+      "title": "Trust Strip",
+      "kind": "component",
+      "purpose": "Display a compact grid of named trust/delivery claims.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:trust-strip",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/video/",
+      "title": "Video",
+      "kind": "component",
+      "purpose": "Display a captioned 16:9 media placeholder.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:video",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/components/visually-hidden/",
+      "title": "Visually Hidden",
+      "kind": "component",
+      "purpose": "Keep noninteractive descriptive text available to assistive technology.",
+      "audience": [
+        "builders",
+        "agents"
+      ],
+      "data": [
+        "component:visually-hidden",
+        "source example",
+        "adapter"
+      ],
+      "interactions": [
+        "preview",
+        "safe controls",
+        "copy",
+        "theme",
+        "width"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/patterns/blog-index/",
+      "title": "Blog Index",
+      "kind": "recipe",
+      "purpose": "Composable blog index recipe.",
+      "audience": [
+        "builders"
+      ],
+      "data": [
+        "recipes/blog-index.json",
+        "blog.html",
+        "header",
+        "badge",
+        "card",
+        "navigation",
+        "footer"
+      ],
+      "interactions": [
+        "composition preview",
+        "copy"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/patterns/dashboard-page/",
+      "title": "Source of Truth Dashboard",
+      "kind": "recipe",
+      "purpose": "Composable operational dashboard recipe for repository metadata, status, filters, and source links.",
+      "audience": [
+        "builders"
+      ],
+      "data": [
+        "recipes/dashboard-page.json",
+        "app-shell.html",
+        "header",
+        "navigation",
+        "icon",
+        "dropdown-menu",
+        "table",
+        "badge",
+        "metadata-panel",
+        "drawer",
+        "modal",
+        "popover",
+        "tooltip",
+        "footer"
+      ],
+      "interactions": [
+        "composition preview",
+        "copy"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/patterns/docs-home/",
+      "title": "Docs Home",
+      "kind": "recipe",
+      "purpose": "Composable documentation home recipe.",
+      "audience": [
+        "builders"
+      ],
+      "data": [
+        "recipes/docs-home.json",
+        "docs.html",
+        "header",
+        "navigation",
+        "hero",
+        "code-block",
+        "card",
+        "footer"
+      ],
+      "interactions": [
+        "composition preview",
+        "copy"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/patterns/ecommerce-page/",
+      "title": "Ecommerce Page",
+      "kind": "recipe",
+      "purpose": "Composable ecommerce recipe.",
+      "audience": [
+        "builders"
+      ],
+      "data": [
+        "recipes/ecommerce-page.json",
+        "ecommerce.html",
+        "header",
+        "promo-banner",
+        "product-grid",
+        "product-card",
+        "checkout-summary",
+        "trust-strip",
+        "accordion",
+        "footer"
+      ],
+      "interactions": [
+        "composition preview",
+        "copy"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/patterns/ecosystem-page/",
+      "title": "Ecosystem Page",
+      "kind": "recipe",
+      "purpose": "Composable ecosystem map recipe.",
+      "audience": [
+        "builders"
+      ],
+      "data": [
+        "recipes/ecosystem-page.json",
+        "landing.html",
+        "header",
+        "hero",
+        "ecosystem-map",
+        "card",
+        "navigation",
+        "footer"
+      ],
+      "interactions": [
+        "composition preview",
+        "copy"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/patterns/launch-page/",
+      "title": "Launch Page",
+      "kind": "recipe",
+      "purpose": "Composable launch page recipe using SiteKit components.",
+      "audience": [
+        "builders"
+      ],
+      "data": [
+        "recipes/launch-page.json",
+        "landing.html",
+        "header",
+        "hero",
+        "badge",
+        "button",
+        "feature-grid",
+        "cta",
+        "footer"
+      ],
+      "interactions": [
+        "composition preview",
+        "copy"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/patterns/pricing-page/",
+      "title": "Pricing Page",
+      "kind": "recipe",
+      "purpose": "Composable pricing page recipe.",
+      "audience": [
+        "builders"
+      ],
+      "data": [
+        "recipes/pricing-page.json",
+        "landing.html",
+        "header",
+        "hero",
+        "pricing-table",
+        "table",
+        "accordion",
+        "cta",
+        "footer"
+      ],
+      "interactions": [
+        "composition preview",
+        "copy"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/patterns/product-page/",
+      "title": "Product Page",
+      "kind": "recipe",
+      "purpose": "Composable product page recipe.",
+      "audience": [
+        "builders"
+      ],
+      "data": [
+        "recipes/product-page.json",
+        "landing.html",
+        "header",
+        "hero",
+        "product-card",
+        "feature-grid",
+        "trust-strip",
+        "cta",
+        "footer"
+      ],
+      "interactions": [
+        "composition preview",
+        "copy"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/layouts/app-shell/",
+      "title": "App Shell",
+      "kind": "layout",
+      "purpose": "Explain starter structure and limits",
+      "audience": [
+        "builders"
+      ],
+      "data": [
+        "layouts/app-shell.html"
+      ],
+      "interactions": [
+        "viewport preview",
+        "source"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/layouts/blog/",
+      "title": "Blog",
+      "kind": "layout",
+      "purpose": "Explain starter structure and limits",
+      "audience": [
+        "builders"
+      ],
+      "data": [
+        "layouts/blog.html"
+      ],
+      "interactions": [
+        "viewport preview",
+        "source"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/layouts/changelog/",
+      "title": "Changelog",
+      "kind": "layout",
+      "purpose": "Explain starter structure and limits",
+      "audience": [
+        "builders"
+      ],
+      "data": [
+        "layouts/changelog.html"
+      ],
+      "interactions": [
+        "viewport preview",
+        "source"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/layouts/docs/",
+      "title": "Docs",
+      "kind": "layout",
+      "purpose": "Explain starter structure and limits",
+      "audience": [
+        "builders"
+      ],
+      "data": [
+        "layouts/docs.html"
+      ],
+      "interactions": [
+        "viewport preview",
+        "source"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/layouts/ecommerce/",
+      "title": "Ecommerce",
+      "kind": "layout",
+      "purpose": "Explain starter structure and limits",
+      "audience": [
+        "builders"
+      ],
+      "data": [
+        "layouts/ecommerce.html"
+      ],
+      "interactions": [
+        "viewport preview",
+        "source"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/layouts/landing/",
+      "title": "Landing",
+      "kind": "layout",
+      "purpose": "Explain starter structure and limits",
+      "audience": [
+        "builders"
+      ],
+      "data": [
+        "layouts/landing.html"
+      ],
+      "interactions": [
+        "viewport preview",
+        "source"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/examples/repository-dashboard/",
+      "title": "Repository readiness dashboard",
+      "kind": "example",
+      "purpose": "Prove a complete local-data composition",
+      "audience": [
+        "builders",
+        "evaluators"
+      ],
+      "data": [
+        "examples/consumer-dashboard/index.html",
+        "local fixtures"
+      ],
+      "interactions": [
+        "local state",
+        "copy",
+        "theme",
+        "responsive"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/examples/documentation-workbench/",
+      "title": "Documentation workbench",
+      "kind": "example",
+      "purpose": "Prove a complete local-data composition",
+      "audience": [
+        "builders",
+        "evaluators"
+      ],
+      "data": [
+        "recipes/docs-home.json",
+        "local fixtures"
+      ],
+      "interactions": [
+        "local state",
+        "copy",
+        "theme",
+        "responsive"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/examples/product-catalog/",
+      "title": "Product catalog",
+      "kind": "example",
+      "purpose": "Prove a complete local-data composition",
+      "audience": [
+        "builders",
+        "evaluators"
+      ],
+      "data": [
+        "examples/ecommerce-page/index.html",
+        "local fixtures"
+      ],
+      "interactions": [
+        "local state",
+        "copy",
+        "theme",
+        "responsive"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/examples/launch-editorial/",
+      "title": "Launch and editorial",
+      "kind": "example",
+      "purpose": "Prove a complete local-data composition",
+      "audience": [
+        "builders",
+        "evaluators"
+      ],
+      "data": [
+        "examples/kujolang-ai/index.html",
+        "local fixtures"
+      ],
+      "interactions": [
+        "local state",
+        "copy",
+        "theme",
+        "responsive"
+      ],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/llms.txt",
+      "title": "Agent documentation index",
+      "kind": "machine",
+      "purpose": "Expose synchronized static discovery",
+      "audience": [
+        "agents",
+        "crawlers"
+      ],
+      "data": [
+        "normalized manifests"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components.json",
+      "title": "Component metadata",
+      "kind": "machine",
+      "purpose": "Expose synchronized static discovery",
+      "audience": [
+        "agents",
+        "crawlers"
+      ],
+      "data": [
+        "normalized manifests"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/tokens.json",
+      "title": "Token metadata",
+      "kind": "machine",
+      "purpose": "Expose synchronized static discovery",
+      "audience": [
+        "agents",
+        "crawlers"
+      ],
+      "data": [
+        "normalized manifests"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/routes.json",
+      "title": "Route metadata",
+      "kind": "machine",
+      "purpose": "Expose synchronized static discovery",
+      "audience": [
+        "agents",
+        "crawlers"
+      ],
+      "data": [
+        "normalized manifests"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/sitemap.xml",
+      "title": "Canonical sitemap",
+      "kind": "machine",
+      "purpose": "Expose synchronized static discovery",
+      "audience": [
+        "agents",
+        "crawlers"
+      ],
+      "data": [
+        "normalized manifests"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/robots.txt",
+      "title": "Crawler policy",
+      "kind": "machine",
+      "purpose": "Expose synchronized static discovery",
+      "audience": [
+        "agents",
+        "crawlers"
+      ],
+      "data": [
+        "normalized manifests"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/accordion.json",
+      "title": "Accordion metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:accordion"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/alert.json",
+      "title": "Alert metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:alert"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/avatar.json",
+      "title": "Avatar metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:avatar"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/badge.json",
+      "title": "Badge metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:badge"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/bento-grid.json",
+      "title": "Bento Grid metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:bento-grid"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/breadcrumbs.json",
+      "title": "Breadcrumbs metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:breadcrumbs"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/button.json",
+      "title": "Button metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:button"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/card.json",
+      "title": "Card metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:card"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/carousel.json",
+      "title": "Carousel metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:carousel"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/checkbox.json",
+      "title": "Checkbox metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:checkbox"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/checkout-summary.json",
+      "title": "Checkout Summary metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:checkout-summary"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/code-block.json",
+      "title": "Code Block metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:code-block"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/color-picker.json",
+      "title": "Color Picker metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:color-picker"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/combobox.json",
+      "title": "Combobox metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:combobox"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/command-strip.json",
+      "title": "Command Strip metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:command-strip"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/content-section.json",
+      "title": "Content Section metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:content-section"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/cta.json",
+      "title": "CTA metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:cta"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/date-input.json",
+      "title": "Date Input metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:date-input"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/date-picker.json",
+      "title": "Date Picker metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:date-picker"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/drawer.json",
+      "title": "Drawer metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:drawer"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/dropdown-menu.json",
+      "title": "Dropdown Menu metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:dropdown-menu"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/ecosystem-map.json",
+      "title": "Ecosystem Map metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:ecosystem-map"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/empty-state.json",
+      "title": "Empty State metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:empty-state"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/error-state.json",
+      "title": "Error State metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:error-state"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/feature-grid.json",
+      "title": "Feature Grid metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:feature-grid"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/fieldset.json",
+      "title": "Fieldset metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:fieldset"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/file.json",
+      "title": "File metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:file"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/file-upload.json",
+      "title": "File Upload metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:file-upload"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/footer.json",
+      "title": "Footer metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:footer"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/form.json",
+      "title": "Form metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:form"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/form-field.json",
+      "title": "Form Field metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:form-field"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/generator-panel.json",
+      "title": "Generator Panel metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:generator-panel"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/header.json",
+      "title": "Header metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:header"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/heading.json",
+      "title": "Heading metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:heading"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/hero.json",
+      "title": "Hero metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:hero"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/icon.json",
+      "title": "Icon metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:icon"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/image.json",
+      "title": "Image metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:image"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/label.json",
+      "title": "Label metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:label"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/link.json",
+      "title": "Link metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:link"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/list.json",
+      "title": "List metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:list"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/metadata-panel.json",
+      "title": "Metadata Panel metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:metadata-panel"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/modal.json",
+      "title": "Modal metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:modal"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/navigation.json",
+      "title": "Navigation metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:navigation"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/newsletter-signup.json",
+      "title": "Newsletter Signup metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:newsletter-signup"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/pagination.json",
+      "title": "Pagination metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:pagination"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/partners-strip.json",
+      "title": "Partners Strip metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:partners-strip"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/popover.json",
+      "title": "Popover metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:popover"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/pricing-table.json",
+      "title": "Pricing Table metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:pricing-table"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/product-card.json",
+      "title": "Product Card metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:product-card"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/product-grid.json",
+      "title": "Product Grid metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:product-grid"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/product-showcase.json",
+      "title": "Product Showcase metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:product-showcase"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/progress-bar.json",
+      "title": "Progress Bar metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:progress-bar"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/progress-indicator.json",
+      "title": "Progress Indicator metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:progress-indicator"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/promo-banner.json",
+      "title": "Promo Banner metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:promo-banner"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/quote.json",
+      "title": "Quote metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:quote"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/radio-button.json",
+      "title": "Radio Button metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:radio-button"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/rating.json",
+      "title": "Rating metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:rating"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/recent-posts.json",
+      "title": "Recent Posts metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:recent-posts"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/resource-links.json",
+      "title": "Resource Links metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:resource-links"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/rich-text-editor.json",
+      "title": "Rich Text Editor metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:rich-text-editor"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/roadmap.json",
+      "title": "Roadmap metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:roadmap"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/search-input.json",
+      "title": "Search Input metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:search-input"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/segmented-control.json",
+      "title": "Segmented Control metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:segmented-control"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/select.json",
+      "title": "Select metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:select"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/separator.json",
+      "title": "Separator metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:separator"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/skeleton.json",
+      "title": "Skeleton metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:skeleton"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/skip-link.json",
+      "title": "Skip Link metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:skip-link"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/slider.json",
+      "title": "Slider metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:slider"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/spinner.json",
+      "title": "Spinner metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:spinner"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/stack.json",
+      "title": "Stack metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:stack"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/stats-bar.json",
+      "title": "Stats Bar metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:stats-bar"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/stepper.json",
+      "title": "Stepper metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:stepper"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/table.json",
+      "title": "Table metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:table"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/tabs.json",
+      "title": "Tabs metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:tabs"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/team-grid.json",
+      "title": "Team Grid metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:team-grid"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/testimonial-rail.json",
+      "title": "Testimonial Rail metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:testimonial-rail"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/text-input.json",
+      "title": "Text Input metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:text-input"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/textarea.json",
+      "title": "Textarea metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:textarea"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/toast.json",
+      "title": "Toast metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:toast"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/toggle.json",
+      "title": "Toggle metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:toggle"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/tooltip.json",
+      "title": "Tooltip metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:tooltip"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/tree-view.json",
+      "title": "Tree View metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:tree-view"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/trust-strip.json",
+      "title": "Trust Strip metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:trust-strip"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/video.json",
+      "title": "Video metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:video"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    },
+    {
+      "path": "/api/components/visually-hidden.json",
+      "title": "Visually Hidden metadata",
+      "kind": "machine",
+      "purpose": "Provide compact exact component reference",
+      "audience": [
+        "agents"
+      ],
+      "data": [
+        "component:visually-hidden"
+      ],
+      "interactions": [],
+      "priority": "P0",
+      "confidence": "PROPOSED"
+    }
+  ],
+  "previewRoutePattern": "/previews/<component>/<example>/",
+  "downloadRoutePattern": "/examples-source/<example>.html.txt",
+  "notes": "Preview/example downloads are emitted only for reviewed adapters; they are noindex and not primary navigation."
+}
