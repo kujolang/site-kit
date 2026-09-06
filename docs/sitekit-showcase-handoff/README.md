@@ -6,6 +6,10 @@ Start with [Executive summary](00-EXECUTIVE-SUMMARY.md), [Architecture](01-ARCHI
 
 85 component records/examples, 15 classified primitives, 120 tokens, four themes, eight recipes and six layouts are covered. Existing static gates and 135 browser tests pass. Additional isolated probes exposed unresolved source defects; read [Testing and quality](16-TESTING-AND-QUALITY.md). No website was built or deployed.
 
+## Library implementation mission
+
+Before building the showcase, give the implementation agent [the library gap-closure mega prompt](18-LIBRARY-GAP-CLOSURE-PROMPT.md). It specifies the source fixes, bounded widget behavior, contract reconciliation, tests and refreshed handoff required for the next phase. This prompt does not authorize building or deploying the website.
+
 ## Artifact index
 
 All paths below are relative to docs/sitekit-showcase-handoff/ in the SiteKit repository. Files are documentation, audit metadata, evidence or regeneration/verification tools.
@@ -30,6 +34,7 @@ All paths below are relative to docs/sitekit-showcase-handoff/ in the SiteKit re
 - [15-MANIFEST-CONTRACT.md](15-MANIFEST-CONTRACT.md)
 - [16-TESTING-AND-QUALITY.md](16-TESTING-AND-QUALITY.md)
 - [17-CONSOLIDATION.md](17-CONSOLIDATION.md)
+- [18-LIBRARY-GAP-CLOSURE-PROMPT.md](18-LIBRARY-GAP-CLOSURE-PROMPT.md)
 - [README.md](README.md)
 - [audit-notes.json](audit-notes.json)
 - [component-manifest.json](component-manifest.json)
