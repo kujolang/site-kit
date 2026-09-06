@@ -1,0 +1,49 @@
+{
+  "sourceCommit": "c0d199e06bc926e29de87b7cd983ee3d54db9cda",
+  "browser": "Chromium",
+  "date": "2026-09-06",
+  "bentoGrid": [
+    {
+      "width": 390,
+      "contained": false,
+      "columns": "82.5px 82.5px 82.5px 82.5px",
+      "scrollWidth": 434
+    },
+    {
+      "width": 390,
+      "contained": true,
+      "columns": "390px",
+      "scrollWidth": 390
+    },
+    {
+      "width": 700,
+      "contained": false,
+      "columns": "160px 160px 160px 160px",
+      "scrollWidth": 700
+    },
+    {
+      "width": 700,
+      "contained": true,
+      "columns": "340px 340px",
+      "scrollWidth": 700
+    },
+    {
+      "width": 1000,
+      "contained": false,
+      "columns": "235px 235px 235px 235px",
+      "scrollWidth": 1000
+    },
+    {
+      "width": 1000,
+      "contained": true,
+      "columns": "235px 235px 235px 235px",
+      "scrollWidth": 1000
+    }
+  ],
+  "primaryButtonIcon": {
+    "buttonBackground": "rgb(6, 6, 6)",
+    "buttonText": "rgb(255, 255, 255)",
+    "iconColor": "rgb(6, 6, 6)",
+    "stroke": "rgb(6, 6, 6)"
+  }
+}

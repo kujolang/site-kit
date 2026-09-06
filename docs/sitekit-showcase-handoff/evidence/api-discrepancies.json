@@ -1,0 +1,2333 @@
+{
+  "requiredFieldsAbsentFromProps": {
+    "checkout-summary": [
+      "totals"
+    ],
+    "form-field": [
+      "control"
+    ],
+    "tabs": [
+      "panels"
+    ]
+  },
+  "variantEvidence": {
+    "accordion": {
+      "declared": [
+        "faq",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "alert": {
+      "declared": [
+        "neutral",
+        "compact"
+      ],
+      "cssDataVariant": [
+        "danger",
+        "neutral",
+        "success",
+        "warning"
+      ]
+    },
+    "avatar": {
+      "declared": [
+        "initials",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "badge": {
+      "declared": [
+        "neutral",
+        "success",
+        "warning",
+        "danger",
+        "outline"
+      ],
+      "cssDataVariant": [
+        "danger",
+        "success",
+        "warning"
+      ]
+    },
+    "bento-grid": {
+      "declared": [
+        "portfolio",
+        "balanced",
+        "showcase",
+        "dense"
+      ],
+      "cssDataVariant": []
+    },
+    "breadcrumbs": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "button": {
+      "declared": [
+        "primary",
+        "secondary",
+        "ghost",
+        "danger"
+      ],
+      "cssDataVariant": [
+        "danger",
+        "ghost",
+        "secondary"
+      ]
+    },
+    "card": {
+      "declared": [
+        "plain",
+        "interactive",
+        "dense"
+      ],
+      "cssDataVariant": []
+    },
+    "carousel": {
+      "declared": [
+        "cards",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "checkbox": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "checkout-summary": {
+      "declared": [
+        "default",
+        "compact",
+        "sticky"
+      ],
+      "cssDataVariant": []
+    },
+    "code-block": {
+      "declared": [
+        "default",
+        "terminal",
+        "numbered"
+      ],
+      "cssDataVariant": []
+    },
+    "color-picker": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "combobox": {
+      "declared": [
+        "autocomplete",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "command-strip": {
+      "declared": [
+        "default",
+        "compact",
+        "four-up"
+      ],
+      "cssDataVariant": []
+    },
+    "content-section": {
+      "declared": [
+        "media-right",
+        "media-left",
+        "centered",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "cta": {
+      "declared": [
+        "band",
+        "inline",
+        "stacked"
+      ],
+      "cssDataVariant": []
+    },
+    "date-input": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "date-picker": {
+      "declared": [
+        "calendar",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "drawer": {
+      "declared": [
+        "right",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "dropdown-menu": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "ecosystem-map": {
+      "declared": [
+        "grid",
+        "radial",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "empty-state": {
+      "declared": [
+        "default",
+        "compact",
+        "commerce"
+      ],
+      "cssDataVariant": []
+    },
+    "error-state": {
+      "declared": [
+        "default",
+        "inline",
+        "critical"
+      ],
+      "cssDataVariant": []
+    },
+    "feature-grid": {
+      "declared": [
+        "two-column",
+        "three-column",
+        "dense"
+      ],
+      "cssDataVariant": []
+    },
+    "fieldset": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "file": {
+      "declared": [
+        "row",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "file-upload": {
+      "declared": [
+        "dropzone",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "footer": {
+      "declared": [
+        "simple",
+        "columns",
+        "product"
+      ],
+      "cssDataVariant": []
+    },
+    "form": {
+      "declared": [
+        "stacked",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "form-field": {
+      "declared": [
+        "text",
+        "select",
+        "textarea",
+        "checkbox"
+      ],
+      "cssDataVariant": []
+    },
+    "generator-panel": {
+      "declared": [
+        "form-preview",
+        "compact",
+        "stacked"
+      ],
+      "cssDataVariant": []
+    },
+    "header": {
+      "declared": [
+        "default",
+        "docs",
+        "commerce"
+      ],
+      "cssDataVariant": []
+    },
+    "heading": {
+      "declared": [
+        "section",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "hero": {
+      "declared": [
+        "split",
+        "centered",
+        "technical"
+      ],
+      "cssDataVariant": []
+    },
+    "icon": {
+      "declared": [
+        "line",
+        "compact",
+        "decorative",
+        "meaningful",
+        "inline",
+        "external"
+      ],
+      "cssDataVariant": []
+    },
+    "image": {
+      "declared": [
+        "figure",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "label": {
+      "declared": [
+        "field",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "link": {
+      "declared": [
+        "inline",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "list": {
+      "declared": [
+        "unordered",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "metadata-panel": {
+      "declared": [
+        "default",
+        "compact",
+        "sidecar"
+      ],
+      "cssDataVariant": []
+    },
+    "modal": {
+      "declared": [
+        "default",
+        "danger",
+        "wide"
+      ],
+      "cssDataVariant": []
+    },
+    "navigation": {
+      "declared": [
+        "primary",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "newsletter-signup": {
+      "declared": [
+        "inline",
+        "boxed",
+        "modal",
+        "split"
+      ],
+      "cssDataVariant": []
+    },
+    "pagination": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "partners-strip": {
+      "declared": [
+        "logos",
+        "boxed",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "popover": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "pricing-table": {
+      "declared": [
+        "monthly",
+        "annual",
+        "comparison"
+      ],
+      "cssDataVariant": []
+    },
+    "product-card": {
+      "declared": [
+        "default",
+        "compact",
+        "featured"
+      ],
+      "cssDataVariant": []
+    },
+    "product-grid": {
+      "declared": [
+        "catalog",
+        "compact",
+        "comparison"
+      ],
+      "cssDataVariant": []
+    },
+    "product-showcase": {
+      "declared": [
+        "template",
+        "commerce",
+        "editorial"
+      ],
+      "cssDataVariant": []
+    },
+    "progress-bar": {
+      "declared": [
+        "determinate",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "progress-indicator": {
+      "declared": [
+        "steps",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "promo-banner": {
+      "declared": [
+        "info",
+        "success",
+        "warning"
+      ],
+      "cssDataVariant": []
+    },
+    "quote": {
+      "declared": [
+        "pull",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "radio-button": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "rating": {
+      "declared": [
+        "five-point",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "recent-posts": {
+      "declared": [
+        "cards",
+        "list",
+        "featured"
+      ],
+      "cssDataVariant": []
+    },
+    "resource-links": {
+      "declared": [
+        "grid",
+        "stack",
+        "annotated"
+      ],
+      "cssDataVariant": []
+    },
+    "rich-text-editor": {
+      "declared": [
+        "basic",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "roadmap": {
+      "declared": [
+        "timeline",
+        "compact",
+        "release-plan"
+      ],
+      "cssDataVariant": []
+    },
+    "search-input": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "segmented-control": {
+      "declared": [
+        "single-select",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "select": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "separator": {
+      "declared": [
+        "horizontal",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "skeleton": {
+      "declared": [
+        "text",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "skip-link": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "slider": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "spinner": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "stack": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "stats-bar": {
+      "declared": [
+        "inline",
+        "boxed",
+        "stacked"
+      ],
+      "cssDataVariant": []
+    },
+    "stepper": {
+      "declared": [
+        "number",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "table": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "tabs": {
+      "declared": [
+        "line",
+        "boxed",
+        "docs"
+      ],
+      "cssDataVariant": []
+    },
+    "team-grid": {
+      "declared": [
+        "profiles",
+        "compact",
+        "leadership"
+      ],
+      "cssDataVariant": []
+    },
+    "testimonial-rail": {
+      "declared": [
+        "rail",
+        "grid",
+        "featured"
+      ],
+      "cssDataVariant": []
+    },
+    "text-input": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "textarea": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "toast": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "toggle": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "tooltip": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "tree-view": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "trust-strip": {
+      "declared": [
+        "default",
+        "compact",
+        "bordered"
+      ],
+      "cssDataVariant": []
+    },
+    "video": {
+      "declared": [
+        "embed",
+        "compact"
+      ],
+      "cssDataVariant": []
+    },
+    "visually-hidden": {
+      "declared": [
+        "default",
+        "compact"
+      ],
+      "cssDataVariant": []
+    }
+  },
+  "tokenDependencyDifferences": {
+    "accordion": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-primary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-3",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "alert": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-border-heavy",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-size-control-sm",
+        "--sk-space-3",
+        "--sk-state-danger",
+        "--sk-state-info",
+        "--sk-state-success",
+        "--sk-state-warning",
+        "--sk-text-danger",
+        "--sk-text-success",
+        "--sk-text-warning",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "avatar": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-font-mono",
+        "--sk-space-4",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-size-control-lg"
+      ]
+    },
+    "badge": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-focus-ring",
+        "--sk-radius-1",
+        "--sk-space-4",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-space-2",
+        "--sk-state-danger",
+        "--sk-state-success",
+        "--sk-state-warning",
+        "--sk-surface-subtle",
+        "--sk-type-size-xs",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "bento-grid": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-surface-page",
+        "--sk-text-primary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-component-grid-gap",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-space-5",
+        "--sk-type-size-xs"
+      ]
+    },
+    "breadcrumbs": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-default",
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-type-size-xs"
+      ]
+    },
+    "button": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-default",
+        "--sk-radius-1",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-danger",
+        "--sk-action-danger-text",
+        "--sk-action-primary",
+        "--sk-action-primary-text",
+        "--sk-action-secondary",
+        "--sk-action-secondary-text",
+        "--sk-border-1",
+        "--sk-border-strong",
+        "--sk-component-button-gap",
+        "--sk-component-button-height",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-motion-ease",
+        "--sk-motion-fast",
+        "--sk-radius-0",
+        "--sk-shadow-none",
+        "--sk-type-line-tight",
+        "--sk-type-size-sm",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "card": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-surface-page"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-component-card-gap",
+        "--sk-component-card-padding",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-radius-0",
+        "--sk-shadow-none",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-state-danger"
+      ]
+    },
+    "carousel": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-surface-page",
+        "--sk-surface-subtle",
+        "--sk-text-muted"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-3",
+        "--sk-space-5"
+      ]
+    },
+    "checkbox": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-primary",
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-size-control-sm",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "checkout-summary": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-surface-page"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-border-2",
+        "--sk-border-subtle",
+        "--sk-component-card-gap",
+        "--sk-component-card-padding",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-shadow-none",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-state-danger",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "code-block": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-primary",
+        "--sk-action-primary-text",
+        "--sk-action-secondary",
+        "--sk-action-secondary-text",
+        "--sk-border-1",
+        "--sk-code-border",
+        "--sk-code-surface",
+        "--sk-code-text",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-size-control-md",
+        "--sk-space-3",
+        "--sk-type-size-sm"
+      ]
+    },
+    "color-picker": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-size-control-lg",
+        "--sk-space-1",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "combobox": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-primary",
+        "--sk-action-primary-text",
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "command-strip": {
+      "declaredButNotDirectlyReferenced": [],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-ring",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-type-line-tight"
+      ]
+    },
+    "content-section": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-0",
+        "--sk-surface-raised",
+        "--sk-text-primary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-border-subtle",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-space-3",
+        "--sk-space-5",
+        "--sk-space-6",
+        "--sk-type-size-sm"
+      ]
+    },
+    "cta": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-text-primary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-space-5",
+        "--sk-type-line-loose",
+        "--sk-type-line-tight",
+        "--sk-type-size-md",
+        "--sk-type-size-xl"
+      ]
+    },
+    "date-input": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "date-picker": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-surface-page",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-primary",
+        "--sk-action-primary-text",
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-size-control-md",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-space-5",
+        "--sk-type-size-lg",
+        "--sk-type-size-xs",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "drawer": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-font-mono",
+        "--sk-surface-raised",
+        "--sk-text-muted"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-shadow-none",
+        "--sk-space-3",
+        "--sk-space-5"
+      ]
+    },
+    "dropdown-menu": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-primary",
+        "--sk-action-primary-text",
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-z-dropdown"
+      ]
+    },
+    "ecosystem-map": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-component-grid-gap",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-radius-0",
+        "--sk-space-5"
+      ]
+    },
+    "empty-state": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-component-card-padding",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-shadow-none",
+        "--sk-size-control-lg",
+        "--sk-space-2",
+        "--sk-state-danger"
+      ]
+    },
+    "error-state": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-surface-page"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-border-2",
+        "--sk-border-heavy",
+        "--sk-component-card-padding",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-shadow-none",
+        "--sk-space-1",
+        "--sk-space-2",
+        "--sk-state-danger",
+        "--sk-text-danger",
+        "--sk-type-size-xs"
+      ]
+    },
+    "feature-grid": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-component-grid-gap",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-size-control-lg",
+        "--sk-space-3",
+        "--sk-space-5",
+        "--sk-surface-raised"
+      ]
+    },
+    "fieldset": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-primary",
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-size-control-sm",
+        "--sk-space-3",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "file": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-size-control-lg",
+        "--sk-space-5",
+        "--sk-type-size-xs"
+      ]
+    },
+    "file-upload": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-primary",
+        "--sk-action-primary-text",
+        "--sk-action-secondary",
+        "--sk-action-secondary-text",
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-space-8",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "footer": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-surface-card",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-size-content-lg",
+        "--sk-space-5",
+        "--sk-surface-raised",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "form": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-3",
+        "--sk-space-5",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "form-field": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-space-4",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-radius-0",
+        "--sk-size-control-md",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-surface-raised",
+        "--sk-text-muted",
+        "--sk-type-size-sm",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "generator-panel": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-surface-raised",
+        "--sk-text-muted",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-size-control-md",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-space-5",
+        "--sk-space-8",
+        "--sk-type-size-sm"
+      ]
+    },
+    "header": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-surface-card",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-primary-text",
+        "--sk-action-secondary-text",
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-size-content-lg",
+        "--sk-space-3",
+        "--sk-space-5",
+        "--sk-surface-raised",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "heading": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-default",
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-type-size-xs"
+      ]
+    },
+    "hero": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-text-primary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-component-hero-max-width",
+        "--sk-component-hero-padding-block",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-radius-0",
+        "--sk-space-3",
+        "--sk-space-5",
+        "--sk-type-line-loose",
+        "--sk-type-size-4xl",
+        "--sk-type-size-5xl",
+        "--sk-type-size-md"
+      ]
+    },
+    "icon": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-border-2",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-size-control-lg",
+        "--sk-size-control-md",
+        "--sk-size-control-sm"
+      ]
+    },
+    "image": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-surface-subtle",
+        "--sk-text-primary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-3",
+        "--sk-type-size-sm"
+      ]
+    },
+    "label": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-default",
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "link": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-default",
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-2",
+        "--sk-focus-offset",
+        "--sk-focus-width"
+      ]
+    },
+    "list": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-default",
+        "--sk-border-subtle",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-5"
+      ]
+    },
+    "metadata-panel": {
+      "declaredButNotDirectlyReferenced": [],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-ring",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-type-line-tight",
+        "--sk-type-size-sm",
+        "--sk-type-size-xs",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "modal": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-2",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-radius-0",
+        "--sk-shadow-none",
+        "--sk-space-3",
+        "--sk-space-6",
+        "--sk-surface-inverse",
+        "--sk-surface-raised"
+      ]
+    },
+    "navigation": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-type-size-xs"
+      ]
+    },
+    "newsletter-signup": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-surface-raised",
+        "--sk-text-muted"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-size-control-md",
+        "--sk-space-3",
+        "--sk-space-5",
+        "--sk-space-6",
+        "--sk-type-size-sm"
+      ]
+    },
+    "pagination": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-primary",
+        "--sk-action-primary-text",
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "partners-strip": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-0",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-text-muted",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-space-3",
+        "--sk-space-5",
+        "--sk-type-size-lg"
+      ]
+    },
+    "popover": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-surface-subtle",
+        "--sk-text-muted"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-motion-base",
+        "--sk-motion-ease",
+        "--sk-space-2",
+        "--sk-z-dropdown"
+      ]
+    },
+    "pricing-table": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-border-subtle",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-space-3",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-type-size-sm",
+        "--sk-type-size-xl",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "product-card": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-surface-page"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-component-card-gap",
+        "--sk-component-card-padding",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-shadow-none",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-state-danger",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-type-size-xl",
+        "--sk-type-size-xs",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "product-grid": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-component-grid-gap",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-space-3",
+        "--sk-space-5",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-type-size-xs"
+      ]
+    },
+    "product-showcase": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-0",
+        "--sk-surface-raised",
+        "--sk-text-muted",
+        "--sk-text-primary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-space-3",
+        "--sk-space-5",
+        "--sk-surface-subtle"
+      ]
+    },
+    "progress-bar": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width"
+      ]
+    },
+    "progress-indicator": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-type-size-xs",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "promo-banner": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-surface-page"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-component-card-padding",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-shadow-none",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-state-danger",
+        "--sk-type-size-lg"
+      ]
+    },
+    "quote": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-2",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-3",
+        "--sk-space-5",
+        "--sk-type-size-lg",
+        "--sk-type-size-xs"
+      ]
+    },
+    "radio-button": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-primary",
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-size-control-sm",
+        "--sk-space-3",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "rating": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-default",
+        "--sk-border-subtle",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-sans",
+        "--sk-space-1",
+        "--sk-type-size-lg"
+      ]
+    },
+    "recent-posts": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-0",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-text-primary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-space-5",
+        "--sk-type-size-xs"
+      ]
+    },
+    "resource-links": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-0",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-text-muted"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-space-3"
+      ]
+    },
+    "rich-text-editor": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-font-mono",
+        "--sk-surface-page",
+        "--sk-surface-subtle",
+        "--sk-text-muted"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-space-5"
+      ]
+    },
+    "roadmap": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-0",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-text-primary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-border-heavy",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-space-5",
+        "--sk-type-size-xs"
+      ]
+    },
+    "search-input": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "segmented-control": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-text-muted",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-primary",
+        "--sk-action-primary-text",
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "select": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-size-control-lg",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-space-8",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "separator": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-3",
+        "--sk-type-size-xs"
+      ]
+    },
+    "skeleton": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-surface-page",
+        "--sk-text-muted",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-motion-ease",
+        "--sk-space-5"
+      ]
+    },
+    "skip-link": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-3"
+      ]
+    },
+    "slider": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "spinner": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-text-muted",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-motion-ease",
+        "--sk-space-1",
+        "--sk-state-success"
+      ]
+    },
+    "stack": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width"
+      ]
+    },
+    "stats-bar": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-0",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-border-subtle",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-space-3",
+        "--sk-type-line-tight",
+        "--sk-type-size-3xl",
+        "--sk-type-size-xs"
+      ]
+    },
+    "stepper": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-primary",
+        "--sk-action-primary-text",
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-size-control-lg",
+        "--sk-size-control-md",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "table": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-3"
+      ]
+    },
+    "tabs": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-type-weight-bold"
+      ]
+    },
+    "team-grid": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-0",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-text-muted",
+        "--sk-text-primary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-size-control-lg",
+        "--sk-space-5"
+      ]
+    },
+    "testimonial-rail": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-0",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-space-5",
+        "--sk-type-size-sm"
+      ]
+    },
+    "text-input": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "textarea": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-type-line-tight",
+        "--sk-type-size-xs"
+      ]
+    },
+    "toast": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-surface-page",
+        "--sk-surface-subtle",
+        "--sk-text-muted"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-primary",
+        "--sk-action-primary-text",
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-size-control-md",
+        "--sk-space-3"
+      ]
+    },
+    "toggle": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-font-mono",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-action-primary",
+        "--sk-action-primary-text",
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-motion-base",
+        "--sk-motion-ease",
+        "--sk-size-control-lg",
+        "--sk-size-control-md",
+        "--sk-space-1",
+        "--sk-space-2",
+        "--sk-space-3"
+      ]
+    },
+    "tooltip": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-motion-base",
+        "--sk-motion-ease",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-type-size-sm",
+        "--sk-z-dropdown"
+      ]
+    },
+    "tree-view": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-default",
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-2",
+        "--sk-space-5"
+      ]
+    },
+    "trust-strip": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-radius-1",
+        "--sk-surface-page"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-component-card-padding",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-shadow-none",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-state-danger",
+        "--sk-type-size-lg"
+      ]
+    },
+    "video": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-subtle",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-surface-subtle",
+        "--sk-text-primary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-border-1",
+        "--sk-focus-offset",
+        "--sk-focus-width",
+        "--sk-space-3"
+      ]
+    },
+    "visually-hidden": {
+      "declaredButNotDirectlyReferenced": [
+        "--sk-border-default",
+        "--sk-border-subtle",
+        "--sk-font-mono",
+        "--sk-radius-0",
+        "--sk-space-4",
+        "--sk-surface-card",
+        "--sk-surface-page",
+        "--sk-surface-raised",
+        "--sk-surface-subtle",
+        "--sk-text-muted",
+        "--sk-text-primary",
+        "--sk-text-secondary"
+      ],
+      "directlyReferencedButUndeclared": [
+        "--sk-focus-offset",
+        "--sk-focus-width"
+      ]
+    }
+  },
+  "caution": "Static differences identify investigation points, not automatic defects: transitive dependencies and base aliases require authored review."
+}

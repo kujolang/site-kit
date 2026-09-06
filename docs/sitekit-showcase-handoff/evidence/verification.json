@@ -1,0 +1,76 @@
+{
+  "auditDate": "2026-09-06",
+  "sourceCommit": "c0d199e06bc926e29de87b7cd983ee3d54db9cda",
+  "changesScope": "Documentation, structured metadata and read-only audit scripts only; no library/site implementation or deployment.",
+  "checks": [
+    {
+      "command": "npm test (initial)",
+      "result": "Static stages passed; browser CLI unavailable before npm ci",
+      "resolved": true
+    },
+    {
+      "command": "npm ci; npx playwright install chromium firefox webkit",
+      "result": "Passed; test dependencies and browser engines installed without tracked manifest changes"
+    },
+    {
+      "command": "npm run browser:test -- --workers=2",
+      "result": "PASS",
+      "stats": {
+        "startTime": "2026-09-06T20:18:22.755Z",
+        "duration": 213151.685,
+        "expected": 135,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "command": "node docs/sitekit-showcase-handoff/evidence/probe-components.cjs",
+      "result": "Completed 170 isolated Chromium cases; findings are not a passing component compliance assertion",
+      "cases": 170,
+      "casesWithAxeViolations": 12,
+      "distinctComponentsWithAxeViolations": [
+        "avatar",
+        "code-block",
+        "date-picker",
+        "drawer",
+        "progress-bar",
+        "rich-text-editor"
+      ]
+    },
+    {
+      "command": "node docs/sitekit-showcase-handoff/evidence/reproduce-findings.cjs",
+      "result": "Confirmed outer-container dependence and primary Button/Icon color collision"
+    },
+    {
+      "command": "python3 docs/sitekit-showcase-handoff/verify-handoff.py",
+      "result": "PASS: 85 component records/examples, 15 primitives, 120 tokens, 217 proposed routes and 516 source hashes"
+    },
+    {
+      "command": "npm run test:static (after staging dossier)",
+      "result": "PASS: format, build, lint, component/contract/version/Markdown-link validation, snapshot, smoke and release package checks"
+    },
+    {
+      "command": "node --check evidence/probe-components.cjs and evidence/reproduce-findings.cjs",
+      "result": "PASS: syntax checks for read-only evidence tooling"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    }
+  ],
+  "visualReview": {
+    "kujoHome": "OBSERVED screenshot at 1440px: bordered white header, small K logo, Departure Mono display heading, monochrome dither illustration and compact bordered actions. Use identity, not large homepage illustration, for reference pages.",
+    "consumerDashboard": "OBSERVED local screenshot at 1440px: strong square framed hero, filter/sidebar and table composition; primary icon buttons appear black/invisible, confirmed separately by computed styles.",
+    "screenshots": [
+      "evidence/kujo-home.png",
+      "evidence/consumer-dashboard.png"
+    ]
+  },
+  "limits": [
+    "Probe CSS loaded via setContent does not resolve relative fonts; no full font/contrast certification.",
+    "Axe did not open all overlay states or validate all four themes in isolated probes.",
+    "No screen-reader, forced-colors, RTL or all-state pixel regression pass performed.",
+    "No deployment, DNS/account query or site implementation."
+  ]
+}

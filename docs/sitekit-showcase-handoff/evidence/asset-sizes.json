@@ -1,0 +1,37 @@
+{
+  "method": "Bytes and gzip.compress(mtime=0) of current dist; not network timing",
+  "assets": {
+    "dist/LICENSE": {
+      "bytes": 1077,
+      "gzipBytes": 652
+    },
+    "dist/README.md": {
+      "bytes": 510,
+      "gzipBytes": 323
+    },
+    "dist/fonts/DepartureMono-LICENSE.txt": {
+      "bytes": 4357,
+      "gzipBytes": 1951
+    },
+    "dist/fonts/DepartureMono-Regular.woff": {
+      "bytes": 25256,
+      "gzipBytes": 25179
+    },
+    "dist/fonts/DepartureMono-Regular.woff2": {
+      "bytes": 22496,
+      "gzipBytes": 22524
+    },
+    "dist/sitekit-manifest.json": {
+      "bytes": 894,
+      "gzipBytes": 527
+    },
+    "dist/sitekit.css": {
+      "bytes": 122689,
+      "gzipBytes": 13649
+    },
+    "dist/sitekit.js": {
+      "bytes": 12540,
+      "gzipBytes": 2825
+    }
+  }
+}

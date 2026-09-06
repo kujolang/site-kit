@@ -1,0 +1,5018 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "c0d199e06bc926e29de87b7cd983ee3d54db9cda",
+  "counts": {
+    "core": 78,
+    "semantic": 42,
+    "total": 120
+  },
+  "themes": {
+    "bzby": {
+      "surface.page": "#fffaf0",
+      "surface.raised": "#ffffff",
+      "surface.card": "#ffffff",
+      "surface.inverse": "#111111",
+      "surface.subtle": "#ffffff",
+      "surface.accent": "#111111",
+      "text.primary": "#111111",
+      "text.secondary": "#403b33",
+      "text.muted": "#766b5f",
+      "text.inverse": "#fffaf0",
+      "text.link": "#085f63",
+      "action.primary": "#111111",
+      "action.primaryText": "#fffaf0",
+      "action.secondary": "#ffffff",
+      "action.secondaryText": "#111111",
+      "border.default": "#111111",
+      "border.subtle": "#766b5f",
+      "focus.ring": "#085f63",
+      "focus.ringOffset": "#fffaf0",
+      "shadow.color": "#111111"
+    },
+    "kujo-dark": {
+      "surface.page": "{color.black}",
+      "surface.raised": "{color.gray.900}",
+      "surface.card": "{color.gray.900}",
+      "surface.inverse": "{color.white}",
+      "surface.subtle": "{color.gray.900}",
+      "surface.accent": "{color.white}",
+      "text.primary": "{color.white}",
+      "text.secondary": "{color.gray.100}",
+      "text.muted": "{color.gray.300}",
+      "text.inverse": "{color.black}",
+      "text.link": "#7dd3fc",
+      "text.danger": "#ff8c8c",
+      "text.success": "#6fdc8c",
+      "text.warning": "#ffd166",
+      "action.primary": "{color.white}",
+      "action.primaryText": "{color.black}",
+      "action.secondary": "{color.gray.900}",
+      "action.secondaryText": "{color.white}",
+      "action.danger": "#ff8c8c",
+      "action.dangerText": "{color.black}",
+      "border.default": "{color.white}",
+      "border.subtle": "{color.gray.300}",
+      "focus.ring": "#7dd3fc",
+      "focus.ringOffset": "{color.black}",
+      "shadow.color": "{color.white}",
+      "state.success": "#6fdc8c",
+      "state.warning": "#ffd166",
+      "state.danger": "#ff8c8c",
+      "state.info": "#7dd3fc"
+    },
+    "kujo-light": {
+      "surface.page": "{color.paper}",
+      "surface.raised": "{color.white}",
+      "surface.card": "{color.white}",
+      "surface.inverse": "{color.black}",
+      "surface.subtle": "{color.white}",
+      "surface.accent": "{color.black}",
+      "text.primary": "{color.black}",
+      "text.secondary": "{color.gray.700}",
+      "text.muted": "{color.gray.500}",
+      "text.inverse": "{color.paper}",
+      "text.link": "{color.black}",
+      "action.primary": "{color.black}",
+      "action.primaryText": "{color.white}",
+      "action.secondary": "{color.white}",
+      "action.secondaryText": "{color.black}",
+      "border.default": "{color.black}",
+      "border.subtle": "{color.gray.500}",
+      "focus.ring": "{color.black}",
+      "focus.ringOffset": "{color.paper}",
+      "shadow.color": "{color.black}"
+    },
+    "personal-dark": {
+      "surface.page": "#0f1115",
+      "surface.raised": "#171a20",
+      "surface.card": "#171a20",
+      "surface.inverse": "#f7f4ed",
+      "surface.subtle": "#171a20",
+      "surface.accent": "#f7f4ed",
+      "text.primary": "#f7f4ed",
+      "text.secondary": "#d7d2c8",
+      "text.muted": "#a69f94",
+      "text.inverse": "#0f1115",
+      "text.link": "#8cc9ff",
+      "action.primary": "#f7f4ed",
+      "action.primaryText": "#0f1115",
+      "action.secondary": "#171a20",
+      "action.secondaryText": "#f7f4ed",
+      "border.default": "#f7f4ed",
+      "border.subtle": "#a69f94",
+      "focus.ring": "#8cc9ff",
+      "focus.ringOffset": "#0f1115",
+      "shadow.color": "#f7f4ed",
+      "state.success": "#6fdc8c",
+      "state.warning": "#ffd166",
+      "state.danger": "#ff8c8c",
+      "state.info": "#8cc9ff"
+    }
+  },
+  "tokens": [
+    {
+      "name": "color.black",
+      "cssVariable": "--sk-color-black",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#060606",
+      "references": [],
+      "resolvedDefault": "#060606",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#060606"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "color.white",
+      "cssVariable": "--sk-color-white",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#ffffff",
+      "references": [],
+      "resolvedDefault": "#ffffff",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#ffffff"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#ffffff"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#ffffff"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#ffffff"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "color.paper",
+      "cssVariable": "--sk-color-paper",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#f9f9f9",
+      "references": [],
+      "resolvedDefault": "#f9f9f9",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#f9f9f9"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#f9f9f9"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#f9f9f9"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#f9f9f9"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "color.ink",
+      "cssVariable": "--sk-color-ink",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#060606",
+      "references": [],
+      "resolvedDefault": "#060606",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#060606"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "color.gray.50",
+      "cssVariable": "--sk-color-gray-50",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#f9f9f9",
+      "references": [],
+      "resolvedDefault": "#f9f9f9",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#f9f9f9"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#f9f9f9"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#f9f9f9"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#f9f9f9"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "color.gray.100",
+      "cssVariable": "--sk-color-gray-100",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#eeeeee",
+      "references": [],
+      "resolvedDefault": "#eeeeee",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#eeeeee"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#eeeeee"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#eeeeee"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#eeeeee"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "color.gray.300",
+      "cssVariable": "--sk-color-gray-300",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#b8b8b8",
+      "references": [],
+      "resolvedDefault": "#b8b8b8",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#b8b8b8"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#b8b8b8"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#b8b8b8"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#b8b8b8"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "color.gray.500",
+      "cssVariable": "--sk-color-gray-500",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#5d5d5d",
+      "references": [],
+      "resolvedDefault": "#5d5d5d",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#5d5d5d"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#5d5d5d"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#5d5d5d"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#5d5d5d"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "color.gray.700",
+      "cssVariable": "--sk-color-gray-700",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#2b2b2b",
+      "references": [],
+      "resolvedDefault": "#2b2b2b",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#2b2b2b"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#2b2b2b"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#2b2b2b"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#2b2b2b"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "color.gray.900",
+      "cssVariable": "--sk-color-gray-900",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#111111",
+      "references": [],
+      "resolvedDefault": "#111111",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#111111"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#111111"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#111111"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#111111"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "color.blue.600",
+      "cssVariable": "--sk-color-blue-600",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#1646d2",
+      "references": [],
+      "resolvedDefault": "#1646d2",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#1646d2"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#1646d2"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#1646d2"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#1646d2"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "color.green.600",
+      "cssVariable": "--sk-color-green-600",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#0f6b35",
+      "references": [],
+      "resolvedDefault": "#0f6b35",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#0f6b35"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#0f6b35"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#0f6b35"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#0f6b35"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "color.yellow.500",
+      "cssVariable": "--sk-color-yellow-500",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#765000",
+      "references": [],
+      "resolvedDefault": "#765000",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#765000"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#765000"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#765000"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#765000"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "color.red.600",
+      "cssVariable": "--sk-color-red-600",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#a31515",
+      "references": [],
+      "resolvedDefault": "#a31515",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#a31515"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#a31515"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#a31515"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#a31515"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "color.cyan.600",
+      "cssVariable": "--sk-color-cyan-600",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "#075d6c",
+      "references": [],
+      "resolvedDefault": "#075d6c",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#075d6c"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#075d6c"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#075d6c"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#075d6c"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "font.sans",
+      "cssVariable": "--sk-font-sans",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+      "references": [],
+      "resolvedDefault": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
+        }
+      },
+      "directComponentReferences": [
+        "rating"
+      ],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "font.mono",
+      "cssVariable": "--sk-font-mono",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+      "references": [],
+      "resolvedDefault": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
+        }
+      },
+      "directComponentReferences": [
+        "accordion",
+        "alert",
+        "badge",
+        "bento-grid",
+        "breadcrumbs",
+        "button",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "generator-panel",
+        "header",
+        "heading",
+        "icon",
+        "image",
+        "label",
+        "link",
+        "metadata-panel",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-indicator",
+        "promo-banner",
+        "quote",
+        "radio-button",
+        "recent-posts",
+        "resource-links",
+        "roadmap",
+        "search-input",
+        "segmented-control",
+        "select",
+        "separator",
+        "skip-link",
+        "slider",
+        "stats-bar",
+        "stepper",
+        "table",
+        "tabs",
+        "team-grid",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "tree-view",
+        "trust-strip",
+        "video"
+      ],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.size.xs",
+      "cssVariable": "--sk-type-size-xs",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "0.75rem",
+      "references": [],
+      "resolvedDefault": "0.75rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "0.75rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "0.75rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "0.75rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "0.75rem"
+        }
+      },
+      "directComponentReferences": [
+        "badge",
+        "bento-grid",
+        "breadcrumbs",
+        "checkbox",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "date-input",
+        "date-picker",
+        "error-state",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "header",
+        "heading",
+        "label",
+        "metadata-panel",
+        "navigation",
+        "product-card",
+        "product-grid",
+        "progress-indicator",
+        "quote",
+        "radio-button",
+        "recent-posts",
+        "roadmap",
+        "search-input",
+        "select",
+        "separator",
+        "slider",
+        "stats-bar",
+        "stepper",
+        "text-input",
+        "textarea"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.size.sm",
+      "cssVariable": "--sk-type-size-sm",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "0.875rem",
+      "references": [],
+      "resolvedDefault": "0.875rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "0.875rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "0.875rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "0.875rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "0.875rem"
+        }
+      },
+      "directComponentReferences": [
+        "button",
+        "code-block",
+        "content-section",
+        "form-field",
+        "generator-panel",
+        "image",
+        "metadata-panel",
+        "newsletter-signup",
+        "pricing-table",
+        "testimonial-rail",
+        "tooltip"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.size.md",
+      "cssVariable": "--sk-type-size-md",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "1rem",
+      "references": [],
+      "resolvedDefault": "1rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1rem"
+        }
+      },
+      "directComponentReferences": [
+        "cta",
+        "hero"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.size.lg",
+      "cssVariable": "--sk-type-size-lg",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "1.125rem",
+      "references": [],
+      "resolvedDefault": "1.125rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1.125rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1.125rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1.125rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1.125rem"
+        }
+      },
+      "directComponentReferences": [
+        "date-picker",
+        "partners-strip",
+        "promo-banner",
+        "quote",
+        "rating",
+        "trust-strip"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.size.xl",
+      "cssVariable": "--sk-type-size-xl",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "1.375rem",
+      "references": [],
+      "resolvedDefault": "1.375rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1.375rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1.375rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1.375rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1.375rem"
+        }
+      },
+      "directComponentReferences": [
+        "cta",
+        "pricing-table",
+        "product-card"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.size.2xl",
+      "cssVariable": "--sk-type-size-2xl",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "1.75rem",
+      "references": [],
+      "resolvedDefault": "1.75rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1.75rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1.75rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1.75rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1.75rem"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.size.3xl",
+      "cssVariable": "--sk-type-size-3xl",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "2.25rem",
+      "references": [],
+      "resolvedDefault": "2.25rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "2.25rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "2.25rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "2.25rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "2.25rem"
+        }
+      },
+      "directComponentReferences": [
+        "stats-bar"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.size.4xl",
+      "cssVariable": "--sk-type-size-4xl",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "3rem",
+      "references": [],
+      "resolvedDefault": "3rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "3rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "3rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "3rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "3rem"
+        }
+      },
+      "directComponentReferences": [
+        "hero"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.size.5xl",
+      "cssVariable": "--sk-type-size-5xl",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "5.375rem",
+      "references": [],
+      "resolvedDefault": "5.375rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "5.375rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "5.375rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "5.375rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "5.375rem"
+        }
+      },
+      "directComponentReferences": [
+        "hero"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.line.tight",
+      "cssVariable": "--sk-type-line-tight",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "1.1",
+      "references": [],
+      "resolvedDefault": "1.1",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1.1"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1.1"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1.1"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1.1"
+        }
+      },
+      "directComponentReferences": [
+        "button",
+        "checkbox",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "cta",
+        "date-input",
+        "fieldset",
+        "file-upload",
+        "footer",
+        "form",
+        "header",
+        "label",
+        "metadata-panel",
+        "radio-button",
+        "search-input",
+        "select",
+        "slider",
+        "stats-bar",
+        "stepper",
+        "text-input",
+        "textarea"
+      ],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.line.normal",
+      "cssVariable": "--sk-type-line-normal",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "1.5",
+      "references": [],
+      "resolvedDefault": "1.5",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1.5"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1.5"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1.5"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1.5"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.line.loose",
+      "cssVariable": "--sk-type-line-loose",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "1.7",
+      "references": [],
+      "resolvedDefault": "1.7",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1.7"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1.7"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1.7"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1.7"
+        }
+      },
+      "directComponentReferences": [
+        "cta",
+        "hero"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.weight.regular",
+      "cssVariable": "--sk-type-weight-regular",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "400",
+      "references": [],
+      "resolvedDefault": "400",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "400"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "400"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "400"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "400"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.weight.medium",
+      "cssVariable": "--sk-type-weight-medium",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "520",
+      "references": [],
+      "resolvedDefault": "520",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "520"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "520"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "520"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "520"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "type.weight.bold",
+      "cssVariable": "--sk-type-weight-bold",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "700",
+      "references": [],
+      "resolvedDefault": "700",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "700"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "700"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "700"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "700"
+        }
+      },
+      "directComponentReferences": [
+        "accordion",
+        "alert",
+        "badge",
+        "button",
+        "checkout-summary",
+        "date-picker",
+        "footer",
+        "form-field",
+        "header",
+        "metadata-panel",
+        "pagination",
+        "pricing-table",
+        "product-card",
+        "progress-indicator",
+        "segmented-control",
+        "tabs"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "space.0",
+      "cssVariable": "--sk-space-0",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "0",
+      "references": [],
+      "resolvedDefault": "0",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "0"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "0"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "0"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "0"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "space.1",
+      "cssVariable": "--sk-space-1",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "0.25rem",
+      "references": [],
+      "resolvedDefault": "0.25rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "0.25rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "0.25rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "0.25rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "0.25rem"
+        }
+      },
+      "directComponentReferences": [
+        "color-picker",
+        "error-state",
+        "rating",
+        "spinner",
+        "toggle"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "space.2",
+      "cssVariable": "--sk-space-2",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "0.5rem",
+      "references": [],
+      "resolvedDefault": "0.5rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "0.5rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "0.5rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "0.5rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "0.5rem"
+        }
+      },
+      "directComponentReferences": [
+        "badge",
+        "breadcrumbs",
+        "card",
+        "checkbox",
+        "checkout-summary",
+        "color-picker",
+        "combobox",
+        "cta",
+        "date-input",
+        "date-picker",
+        "dropdown-menu",
+        "empty-state",
+        "error-state",
+        "file-upload",
+        "form-field",
+        "generator-panel",
+        "heading",
+        "list",
+        "pagination",
+        "popover",
+        "product-card",
+        "progress-indicator",
+        "promo-banner",
+        "rich-text-editor",
+        "search-input",
+        "segmented-control",
+        "select",
+        "skip-link",
+        "slider",
+        "stepper",
+        "tabs",
+        "text-input",
+        "textarea",
+        "toggle",
+        "tooltip",
+        "tree-view",
+        "trust-strip"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "space.3",
+      "cssVariable": "--sk-space-3",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "0.75rem",
+      "references": [],
+      "resolvedDefault": "0.75rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "0.75rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "0.75rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "0.75rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "0.75rem"
+        }
+      },
+      "directComponentReferences": [
+        "accordion",
+        "alert",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "feature-grid",
+        "fieldset",
+        "file-upload",
+        "form",
+        "form-field",
+        "generator-panel",
+        "header",
+        "hero",
+        "image",
+        "metadata-panel",
+        "modal",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-indicator",
+        "promo-banner",
+        "quote",
+        "radio-button",
+        "resource-links",
+        "rich-text-editor",
+        "search-input",
+        "segmented-control",
+        "select",
+        "separator",
+        "skip-link",
+        "slider",
+        "stats-bar",
+        "stepper",
+        "table",
+        "tabs",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "trust-strip",
+        "video"
+      ],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "space.4",
+      "cssVariable": "--sk-space-4",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "1rem",
+      "references": [],
+      "resolvedDefault": "1rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1rem"
+        }
+      },
+      "directComponentReferences": [
+        "accordion",
+        "alert",
+        "bento-grid",
+        "button",
+        "card",
+        "carousel",
+        "checkout-summary",
+        "code-block",
+        "command-strip",
+        "content-section",
+        "date-picker",
+        "drawer",
+        "empty-state",
+        "error-state",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "generator-panel",
+        "header",
+        "metadata-panel",
+        "modal",
+        "navigation",
+        "newsletter-signup",
+        "partners-strip",
+        "popover",
+        "pricing-table",
+        "product-card",
+        "product-showcase",
+        "progress-bar",
+        "promo-banner",
+        "radio-button",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "select",
+        "skeleton",
+        "spinner",
+        "stack",
+        "stats-bar",
+        "tabs",
+        "team-grid",
+        "testimonial-rail",
+        "toast",
+        "trust-strip"
+      ],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "space.5",
+      "cssVariable": "--sk-space-5",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "1.25rem",
+      "references": [],
+      "resolvedDefault": "1.25rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1.25rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1.25rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1.25rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1.25rem"
+        }
+      },
+      "directComponentReferences": [
+        "bento-grid",
+        "carousel",
+        "content-section",
+        "cta",
+        "date-picker",
+        "drawer",
+        "ecosystem-map",
+        "feature-grid",
+        "file",
+        "footer",
+        "form",
+        "generator-panel",
+        "header",
+        "hero",
+        "list",
+        "newsletter-signup",
+        "partners-strip",
+        "product-grid",
+        "product-showcase",
+        "quote",
+        "recent-posts",
+        "rich-text-editor",
+        "roadmap",
+        "skeleton",
+        "team-grid",
+        "testimonial-rail",
+        "tree-view"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "space.6",
+      "cssVariable": "--sk-space-6",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "1.5rem",
+      "references": [],
+      "resolvedDefault": "1.5rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1.5rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1.5rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1.5rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1.5rem"
+        }
+      },
+      "directComponentReferences": [
+        "content-section",
+        "modal",
+        "newsletter-signup"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "space.8",
+      "cssVariable": "--sk-space-8",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "2rem",
+      "references": [],
+      "resolvedDefault": "2rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "2rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "2rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "2rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "2rem"
+        }
+      },
+      "directComponentReferences": [
+        "file-upload",
+        "generator-panel",
+        "select"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "space.10",
+      "cssVariable": "--sk-space-10",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "2.5rem",
+      "references": [],
+      "resolvedDefault": "2.5rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "2.5rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "2.5rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "2.5rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "2.5rem"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "space.12",
+      "cssVariable": "--sk-space-12",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "3rem",
+      "references": [],
+      "resolvedDefault": "3rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "3rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "3rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "3rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "3rem"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "space.16",
+      "cssVariable": "--sk-space-16",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "4rem",
+      "references": [],
+      "resolvedDefault": "4rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "4rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "4rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "4rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "4rem"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "space.20",
+      "cssVariable": "--sk-space-20",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "5rem",
+      "references": [],
+      "resolvedDefault": "5rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "5rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "5rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "5rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "5rem"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "space.24",
+      "cssVariable": "--sk-space-24",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "6rem",
+      "references": [],
+      "resolvedDefault": "6rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "6rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "6rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "6rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "6rem"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "size.content.sm",
+      "cssVariable": "--sk-size-content-sm",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "42rem",
+      "references": [],
+      "resolvedDefault": "42rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "42rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "42rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "42rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "42rem"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "size.content.md",
+      "cssVariable": "--sk-size-content-md",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "64rem",
+      "references": [],
+      "resolvedDefault": "64rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "64rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "64rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "64rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "64rem"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "size.content.lg",
+      "cssVariable": "--sk-size-content-lg",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "78rem",
+      "references": [],
+      "resolvedDefault": "78rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "78rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "78rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "78rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "78rem"
+        }
+      },
+      "directComponentReferences": [
+        "footer",
+        "header"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "size.content.xl",
+      "cssVariable": "--sk-size-content-xl",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "92rem",
+      "references": [],
+      "resolvedDefault": "92rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "92rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "92rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "92rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "92rem"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "size.control.sm",
+      "cssVariable": "--sk-size-control-sm",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "2rem",
+      "references": [],
+      "resolvedDefault": "2rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "2rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "2rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "2rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "2rem"
+        }
+      },
+      "directComponentReferences": [
+        "alert",
+        "checkbox",
+        "fieldset",
+        "icon",
+        "radio-button"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "size.control.md",
+      "cssVariable": "--sk-size-control-md",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "2.5rem",
+      "references": [],
+      "resolvedDefault": "2.5rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "2.5rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "2.5rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "2.5rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "2.5rem"
+        }
+      },
+      "directComponentReferences": [
+        "code-block",
+        "date-picker",
+        "form-field",
+        "generator-panel",
+        "icon",
+        "newsletter-signup",
+        "stepper",
+        "toast",
+        "toggle"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "size.control.lg",
+      "cssVariable": "--sk-size-control-lg",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "3rem",
+      "references": [],
+      "resolvedDefault": "3rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "3rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "3rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "3rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "3rem"
+        }
+      },
+      "directComponentReferences": [
+        "avatar",
+        "color-picker",
+        "empty-state",
+        "feature-grid",
+        "file",
+        "icon",
+        "select",
+        "stepper",
+        "team-grid",
+        "toggle"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "border.0",
+      "cssVariable": "--sk-border-0",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "0",
+      "references": [],
+      "resolvedDefault": "0",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "0"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "0"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "0"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "0"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "border.1",
+      "cssVariable": "--sk-border-1",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "1px",
+      "references": [],
+      "resolvedDefault": "1px",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1px"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1px"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1px"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1px"
+        }
+      },
+      "directComponentReferences": [
+        "accordion",
+        "alert",
+        "avatar",
+        "badge",
+        "bento-grid",
+        "button",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "ecosystem-map",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "form-field",
+        "generator-panel",
+        "header",
+        "hero",
+        "icon",
+        "image",
+        "metadata-panel",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "popover",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-bar",
+        "progress-indicator",
+        "promo-banner",
+        "radio-button",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "search-input",
+        "segmented-control",
+        "select",
+        "separator",
+        "skeleton",
+        "skip-link",
+        "slider",
+        "spinner",
+        "stack",
+        "stats-bar",
+        "stepper",
+        "table",
+        "tabs",
+        "team-grid",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "trust-strip",
+        "video"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "border.2",
+      "cssVariable": "--sk-border-2",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "2px",
+      "references": [],
+      "resolvedDefault": "2px",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "2px"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "2px"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "2px"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "2px"
+        }
+      },
+      "directComponentReferences": [
+        "checkout-summary",
+        "error-state",
+        "icon",
+        "link",
+        "modal",
+        "quote"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "border.heavy",
+      "cssVariable": "--sk-border-heavy",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "3px",
+      "references": [],
+      "resolvedDefault": "3px",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "3px"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "3px"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "3px"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "3px"
+        }
+      },
+      "directComponentReferences": [
+        "alert",
+        "error-state",
+        "roadmap"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "radius.0",
+      "cssVariable": "--sk-radius-0",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "0",
+      "references": [],
+      "resolvedDefault": "0",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "0"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "0"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "0"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "0"
+        }
+      },
+      "directComponentReferences": [
+        "alert",
+        "avatar",
+        "badge",
+        "bento-grid",
+        "button",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "ecosystem-map",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "form",
+        "form-field",
+        "generator-panel",
+        "hero",
+        "modal",
+        "newsletter-signup",
+        "product-card",
+        "product-grid",
+        "promo-banner",
+        "radio-button",
+        "rich-text-editor",
+        "search-input",
+        "select",
+        "slider",
+        "stepper",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "trust-strip"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "radius.1",
+      "cssVariable": "--sk-radius-1",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "2px",
+      "references": [],
+      "resolvedDefault": "2px",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "2px"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "2px"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "2px"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "2px"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "radius.2",
+      "cssVariable": "--sk-radius-2",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "4px",
+      "references": [],
+      "resolvedDefault": "4px",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "4px"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "4px"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "4px"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "4px"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "radius.3",
+      "cssVariable": "--sk-radius-3",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "6px",
+      "references": [],
+      "resolvedDefault": "6px",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "6px"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "6px"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "6px"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "6px"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "shadow.none",
+      "cssVariable": "--sk-shadow-none",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "none",
+      "references": [],
+      "resolvedDefault": "none",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "none"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "none"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "none"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "none"
+        }
+      },
+      "directComponentReferences": [
+        "button",
+        "card",
+        "checkout-summary",
+        "drawer",
+        "empty-state",
+        "error-state",
+        "modal",
+        "product-card",
+        "promo-banner",
+        "trust-strip"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "shadow.hard",
+      "cssVariable": "--sk-shadow-hard",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "none",
+      "references": [],
+      "resolvedDefault": "none",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "none"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "none"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "none"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "none"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "shadow.hardSm",
+      "cssVariable": "--sk-shadow-hard-sm",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "none",
+      "references": [],
+      "resolvedDefault": "none",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "none"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "none"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "none"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "none"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "motion.fast",
+      "cssVariable": "--sk-motion-fast",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "120ms",
+      "references": [],
+      "resolvedDefault": "120ms",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "120ms"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "120ms"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "120ms"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "120ms"
+        }
+      },
+      "directComponentReferences": [
+        "button"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "motion.base",
+      "cssVariable": "--sk-motion-base",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "180ms",
+      "references": [],
+      "resolvedDefault": "180ms",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "180ms"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "180ms"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "180ms"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "180ms"
+        }
+      },
+      "directComponentReferences": [
+        "popover",
+        "toggle",
+        "tooltip"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "motion.slow",
+      "cssVariable": "--sk-motion-slow",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "260ms",
+      "references": [],
+      "resolvedDefault": "260ms",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "260ms"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "260ms"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "260ms"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "260ms"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "motion.ease",
+      "cssVariable": "--sk-motion-ease",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "cubic-bezier(.2,0,0,1)",
+      "references": [],
+      "resolvedDefault": "cubic-bezier(.2,0,0,1)",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "cubic-bezier(.2,0,0,1)"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "cubic-bezier(.2,0,0,1)"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "cubic-bezier(.2,0,0,1)"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "cubic-bezier(.2,0,0,1)"
+        }
+      },
+      "directComponentReferences": [
+        "button",
+        "popover",
+        "skeleton",
+        "spinner",
+        "toggle",
+        "tooltip"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "z.base",
+      "cssVariable": "--sk-z-base",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "0",
+      "references": [],
+      "resolvedDefault": "0",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "0"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "0"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "0"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "0"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "z.dropdown",
+      "cssVariable": "--sk-z-dropdown",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "20",
+      "references": [],
+      "resolvedDefault": "20",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "20"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "20"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "20"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "20"
+        }
+      },
+      "directComponentReferences": [
+        "dropdown-menu",
+        "popover",
+        "tooltip"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "z.sticky",
+      "cssVariable": "--sk-z-sticky",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "30",
+      "references": [],
+      "resolvedDefault": "30",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "30"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "30"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "30"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "30"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "z.modal",
+      "cssVariable": "--sk-z-modal",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "80",
+      "references": [],
+      "resolvedDefault": "80",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "80"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "80"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "80"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "80"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "z.toast",
+      "cssVariable": "--sk-z-toast",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "90",
+      "references": [],
+      "resolvedDefault": "90",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "90"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "90"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "90"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "90"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "focus.width",
+      "cssVariable": "--sk-focus-width",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "2px",
+      "references": [],
+      "resolvedDefault": "2px",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "2px"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "2px"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "2px"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "2px"
+        }
+      },
+      "directComponentReferences": [
+        "accordion",
+        "alert",
+        "avatar",
+        "bento-grid",
+        "breadcrumbs",
+        "button",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "ecosystem-map",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "form-field",
+        "generator-panel",
+        "header",
+        "heading",
+        "hero",
+        "icon",
+        "image",
+        "label",
+        "link",
+        "list",
+        "metadata-panel",
+        "modal",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "popover",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-bar",
+        "progress-indicator",
+        "promo-banner",
+        "quote",
+        "radio-button",
+        "rating",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "search-input",
+        "segmented-control",
+        "select",
+        "separator",
+        "skeleton",
+        "skip-link",
+        "slider",
+        "spinner",
+        "stack",
+        "stats-bar",
+        "stepper",
+        "table",
+        "tabs",
+        "team-grid",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "tree-view",
+        "trust-strip",
+        "video",
+        "visually-hidden"
+      ],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "focus.offset",
+      "cssVariable": "--sk-focus-offset",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "3px",
+      "references": [],
+      "resolvedDefault": "3px",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "3px"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "3px"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "3px"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "3px"
+        }
+      },
+      "directComponentReferences": [
+        "accordion",
+        "alert",
+        "avatar",
+        "bento-grid",
+        "breadcrumbs",
+        "button",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "ecosystem-map",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "form-field",
+        "generator-panel",
+        "header",
+        "heading",
+        "hero",
+        "icon",
+        "image",
+        "label",
+        "link",
+        "list",
+        "metadata-panel",
+        "modal",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "popover",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-bar",
+        "progress-indicator",
+        "promo-banner",
+        "quote",
+        "radio-button",
+        "rating",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "search-input",
+        "segmented-control",
+        "select",
+        "separator",
+        "skeleton",
+        "skip-link",
+        "slider",
+        "spinner",
+        "stack",
+        "stats-bar",
+        "stepper",
+        "table",
+        "tabs",
+        "team-grid",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "tree-view",
+        "trust-strip",
+        "video",
+        "visually-hidden"
+      ],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "breakpoint.sm",
+      "cssVariable": "--sk-breakpoint-sm",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "36rem",
+      "references": [],
+      "resolvedDefault": "36rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "36rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "36rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "36rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "36rem"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "breakpoint.md",
+      "cssVariable": "--sk-breakpoint-md",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "48rem",
+      "references": [],
+      "resolvedDefault": "48rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "48rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "48rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "48rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "48rem"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "breakpoint.lg",
+      "cssVariable": "--sk-breakpoint-lg",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "64rem",
+      "references": [],
+      "resolvedDefault": "64rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "64rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "64rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "64rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "64rem"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "breakpoint.xl",
+      "cssVariable": "--sk-breakpoint-xl",
+      "layer": "core",
+      "source": "tokens/core.json",
+      "value": "80rem",
+      "references": [],
+      "resolvedDefault": "80rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "80rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "80rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "80rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "80rem"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "surface.page",
+      "cssVariable": "--sk-surface-page",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.paper}",
+      "references": [
+        "color.paper"
+      ],
+      "resolvedDefault": "#f9f9f9",
+      "themes": {
+        "bzby": {
+          "override": "#fffaf0",
+          "resolved": "#fffaf0"
+        },
+        "kujo-dark": {
+          "override": "{color.black}",
+          "resolved": "#060606"
+        },
+        "kujo-light": {
+          "override": "{color.paper}",
+          "resolved": "#f9f9f9"
+        },
+        "personal-dark": {
+          "override": "#0f1115",
+          "resolved": "#0f1115"
+        }
+      },
+      "directComponentReferences": [
+        "content-section",
+        "drawer",
+        "empty-state",
+        "footer",
+        "generator-panel",
+        "header",
+        "newsletter-signup",
+        "product-showcase"
+      ],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "surface.raised",
+      "cssVariable": "--sk-surface-raised",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolvedDefault": "#ffffff",
+      "themes": {
+        "bzby": {
+          "override": "#ffffff",
+          "resolved": "#ffffff"
+        },
+        "kujo-dark": {
+          "override": "{color.gray.900}",
+          "resolved": "#111111"
+        },
+        "kujo-light": {
+          "override": "{color.white}",
+          "resolved": "#ffffff"
+        },
+        "personal-dark": {
+          "override": "#171a20",
+          "resolved": "#171a20"
+        }
+      },
+      "directComponentReferences": [
+        "avatar",
+        "bento-grid",
+        "carousel",
+        "date-picker",
+        "feature-grid",
+        "footer",
+        "form-field",
+        "header",
+        "image",
+        "modal",
+        "popover",
+        "pricing-table",
+        "rich-text-editor",
+        "skeleton",
+        "spinner",
+        "tabs",
+        "toast",
+        "video"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "surface.card",
+      "cssVariable": "--sk-surface-card",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolvedDefault": "#ffffff",
+      "themes": {
+        "bzby": {
+          "override": "#ffffff",
+          "resolved": "#ffffff"
+        },
+        "kujo-dark": {
+          "override": "{color.gray.900}",
+          "resolved": "#111111"
+        },
+        "kujo-light": {
+          "override": "{color.white}",
+          "resolved": "#ffffff"
+        },
+        "personal-dark": {
+          "override": "#171a20",
+          "resolved": "#171a20"
+        }
+      },
+      "directComponentReferences": [
+        "accordion",
+        "alert",
+        "bento-grid",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "ecosystem-map",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "form",
+        "generator-panel",
+        "hero",
+        "icon",
+        "metadata-panel",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-bar",
+        "progress-indicator",
+        "promo-banner",
+        "quote",
+        "radio-button",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "search-input",
+        "segmented-control",
+        "select",
+        "skeleton",
+        "skip-link",
+        "slider",
+        "stack",
+        "stats-bar",
+        "stepper",
+        "table",
+        "team-grid",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "trust-strip"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "surface.inverse",
+      "cssVariable": "--sk-surface-inverse",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolvedDefault": "#060606",
+      "themes": {
+        "bzby": {
+          "override": "#111111",
+          "resolved": "#111111"
+        },
+        "kujo-dark": {
+          "override": "{color.white}",
+          "resolved": "#ffffff"
+        },
+        "kujo-light": {
+          "override": "{color.black}",
+          "resolved": "#060606"
+        },
+        "personal-dark": {
+          "override": "#f7f4ed",
+          "resolved": "#f7f4ed"
+        }
+      },
+      "directComponentReferences": [
+        "modal"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "surface.subtle",
+      "cssVariable": "--sk-surface-subtle",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolvedDefault": "#ffffff",
+      "themes": {
+        "bzby": {
+          "override": "#ffffff",
+          "resolved": "#ffffff"
+        },
+        "kujo-dark": {
+          "override": "{color.gray.900}",
+          "resolved": "#111111"
+        },
+        "kujo-light": {
+          "override": "{color.white}",
+          "resolved": "#ffffff"
+        },
+        "personal-dark": {
+          "override": "#171a20",
+          "resolved": "#171a20"
+        }
+      },
+      "directComponentReferences": [
+        "badge",
+        "date-picker",
+        "drawer",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "segmented-control",
+        "skeleton",
+        "spinner",
+        "tabs"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "surface.accent",
+      "cssVariable": "--sk-surface-accent",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.ink}",
+      "references": [
+        "color.ink"
+      ],
+      "resolvedDefault": "#060606",
+      "themes": {
+        "bzby": {
+          "override": "#111111",
+          "resolved": "#111111"
+        },
+        "kujo-dark": {
+          "override": "{color.white}",
+          "resolved": "#ffffff"
+        },
+        "kujo-light": {
+          "override": "{color.black}",
+          "resolved": "#060606"
+        },
+        "personal-dark": {
+          "override": "#f7f4ed",
+          "resolved": "#f7f4ed"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "text.primary",
+      "cssVariable": "--sk-text-primary",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolvedDefault": "#060606",
+      "themes": {
+        "bzby": {
+          "override": "#111111",
+          "resolved": "#111111"
+        },
+        "kujo-dark": {
+          "override": "{color.white}",
+          "resolved": "#ffffff"
+        },
+        "kujo-light": {
+          "override": "{color.black}",
+          "resolved": "#060606"
+        },
+        "personal-dark": {
+          "override": "#f7f4ed",
+          "resolved": "#f7f4ed"
+        }
+      },
+      "directComponentReferences": [
+        "alert",
+        "avatar",
+        "badge",
+        "breadcrumbs",
+        "button",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "empty-state",
+        "error-state",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "form-field",
+        "generator-panel",
+        "header",
+        "heading",
+        "icon",
+        "link",
+        "list",
+        "metadata-panel",
+        "modal",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "popover",
+        "product-card",
+        "progress-bar",
+        "promo-banner",
+        "radio-button",
+        "rating",
+        "resource-links",
+        "rich-text-editor",
+        "search-input",
+        "segmented-control",
+        "select",
+        "skip-link",
+        "slider",
+        "stepper",
+        "tabs",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "tree-view",
+        "trust-strip"
+      ],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "text.secondary",
+      "cssVariable": "--sk-text-secondary",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.gray.700}",
+      "references": [
+        "color.gray.700"
+      ],
+      "resolvedDefault": "#2b2b2b",
+      "themes": {
+        "bzby": {
+          "override": "#403b33",
+          "resolved": "#403b33"
+        },
+        "kujo-dark": {
+          "override": "{color.gray.100}",
+          "resolved": "#eeeeee"
+        },
+        "kujo-light": {
+          "override": "{color.gray.700}",
+          "resolved": "#2b2b2b"
+        },
+        "personal-dark": {
+          "override": "#d7d2c8",
+          "resolved": "#d7d2c8"
+        }
+      },
+      "directComponentReferences": [
+        "accordion",
+        "alert",
+        "bento-grid",
+        "card",
+        "carousel",
+        "checkout-summary",
+        "content-section",
+        "cta",
+        "date-input",
+        "drawer",
+        "empty-state",
+        "error-state",
+        "file",
+        "file-upload",
+        "heading",
+        "hero",
+        "image",
+        "newsletter-signup",
+        "popover",
+        "product-card",
+        "product-showcase",
+        "promo-banner",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "team-grid",
+        "toast",
+        "trust-strip",
+        "video"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "text.muted",
+      "cssVariable": "--sk-text-muted",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.gray.500}",
+      "references": [
+        "color.gray.500"
+      ],
+      "resolvedDefault": "#5d5d5d",
+      "themes": {
+        "bzby": {
+          "override": "#766b5f",
+          "resolved": "#766b5f"
+        },
+        "kujo-dark": {
+          "override": "{color.gray.300}",
+          "resolved": "#b8b8b8"
+        },
+        "kujo-light": {
+          "override": "{color.gray.500}",
+          "resolved": "#5d5d5d"
+        },
+        "personal-dark": {
+          "override": "#a69f94",
+          "resolved": "#a69f94"
+        }
+      },
+      "directComponentReferences": [
+        "bento-grid",
+        "breadcrumbs",
+        "checkbox",
+        "color-picker",
+        "combobox",
+        "content-section",
+        "date-input",
+        "date-picker",
+        "fieldset",
+        "file-upload",
+        "form",
+        "form-field",
+        "heading",
+        "image",
+        "label",
+        "list",
+        "metadata-panel",
+        "product-card",
+        "product-grid",
+        "quote",
+        "radio-button",
+        "recent-posts",
+        "roadmap",
+        "search-input",
+        "select",
+        "separator",
+        "slider",
+        "stats-bar",
+        "stepper",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "video"
+      ],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "text.inverse",
+      "cssVariable": "--sk-text-inverse",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolvedDefault": "#ffffff",
+      "themes": {
+        "bzby": {
+          "override": "#fffaf0",
+          "resolved": "#fffaf0"
+        },
+        "kujo-dark": {
+          "override": "{color.black}",
+          "resolved": "#060606"
+        },
+        "kujo-light": {
+          "override": "{color.paper}",
+          "resolved": "#f9f9f9"
+        },
+        "personal-dark": {
+          "override": "#0f1115",
+          "resolved": "#0f1115"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "text.link",
+      "cssVariable": "--sk-text-link",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolvedDefault": "#060606",
+      "themes": {
+        "bzby": {
+          "override": "#085f63",
+          "resolved": "#085f63"
+        },
+        "kujo-dark": {
+          "override": "#7dd3fc",
+          "resolved": "#7dd3fc"
+        },
+        "kujo-light": {
+          "override": "{color.black}",
+          "resolved": "#060606"
+        },
+        "personal-dark": {
+          "override": "#8cc9ff",
+          "resolved": "#8cc9ff"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "text.danger",
+      "cssVariable": "--sk-text-danger",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.red.600}",
+      "references": [
+        "color.red.600"
+      ],
+      "resolvedDefault": "#a31515",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#a31515"
+        },
+        "kujo-dark": {
+          "override": "#ff8c8c",
+          "resolved": "#ff8c8c"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#a31515"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#a31515"
+        }
+      },
+      "directComponentReferences": [
+        "alert",
+        "error-state"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "text.success",
+      "cssVariable": "--sk-text-success",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.green.600}",
+      "references": [
+        "color.green.600"
+      ],
+      "resolvedDefault": "#0f6b35",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#0f6b35"
+        },
+        "kujo-dark": {
+          "override": "#6fdc8c",
+          "resolved": "#6fdc8c"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#0f6b35"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#0f6b35"
+        }
+      },
+      "directComponentReferences": [
+        "alert"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "text.warning",
+      "cssVariable": "--sk-text-warning",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.yellow.500}",
+      "references": [
+        "color.yellow.500"
+      ],
+      "resolvedDefault": "#765000",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#765000"
+        },
+        "kujo-dark": {
+          "override": "#ffd166",
+          "resolved": "#ffd166"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#765000"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#765000"
+        }
+      },
+      "directComponentReferences": [
+        "alert"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "action.primary",
+      "cssVariable": "--sk-action-primary",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolvedDefault": "#060606",
+      "themes": {
+        "bzby": {
+          "override": "#111111",
+          "resolved": "#111111"
+        },
+        "kujo-dark": {
+          "override": "{color.white}",
+          "resolved": "#ffffff"
+        },
+        "kujo-light": {
+          "override": "{color.black}",
+          "resolved": "#060606"
+        },
+        "personal-dark": {
+          "override": "#f7f4ed",
+          "resolved": "#f7f4ed"
+        }
+      },
+      "directComponentReferences": [
+        "button",
+        "checkbox",
+        "code-block",
+        "combobox",
+        "date-picker",
+        "dropdown-menu",
+        "fieldset",
+        "file-upload",
+        "pagination",
+        "radio-button",
+        "segmented-control",
+        "stepper",
+        "toast",
+        "toggle"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "action.primaryText",
+      "cssVariable": "--sk-action-primary-text",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolvedDefault": "#ffffff",
+      "themes": {
+        "bzby": {
+          "override": "#fffaf0",
+          "resolved": "#fffaf0"
+        },
+        "kujo-dark": {
+          "override": "{color.black}",
+          "resolved": "#060606"
+        },
+        "kujo-light": {
+          "override": "{color.white}",
+          "resolved": "#ffffff"
+        },
+        "personal-dark": {
+          "override": "#0f1115",
+          "resolved": "#0f1115"
+        }
+      },
+      "directComponentReferences": [
+        "button",
+        "code-block",
+        "combobox",
+        "date-picker",
+        "dropdown-menu",
+        "file-upload",
+        "header",
+        "pagination",
+        "segmented-control",
+        "stepper",
+        "toast",
+        "toggle"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "action.secondary",
+      "cssVariable": "--sk-action-secondary",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolvedDefault": "#ffffff",
+      "themes": {
+        "bzby": {
+          "override": "#ffffff",
+          "resolved": "#ffffff"
+        },
+        "kujo-dark": {
+          "override": "{color.gray.900}",
+          "resolved": "#111111"
+        },
+        "kujo-light": {
+          "override": "{color.white}",
+          "resolved": "#ffffff"
+        },
+        "personal-dark": {
+          "override": "#171a20",
+          "resolved": "#171a20"
+        }
+      },
+      "directComponentReferences": [
+        "button",
+        "code-block",
+        "file-upload"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "action.secondaryText",
+      "cssVariable": "--sk-action-secondary-text",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolvedDefault": "#060606",
+      "themes": {
+        "bzby": {
+          "override": "#111111",
+          "resolved": "#111111"
+        },
+        "kujo-dark": {
+          "override": "{color.white}",
+          "resolved": "#ffffff"
+        },
+        "kujo-light": {
+          "override": "{color.black}",
+          "resolved": "#060606"
+        },
+        "personal-dark": {
+          "override": "#f7f4ed",
+          "resolved": "#f7f4ed"
+        }
+      },
+      "directComponentReferences": [
+        "button",
+        "code-block",
+        "file-upload",
+        "header"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "action.danger",
+      "cssVariable": "--sk-action-danger",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.red.600}",
+      "references": [
+        "color.red.600"
+      ],
+      "resolvedDefault": "#a31515",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#a31515"
+        },
+        "kujo-dark": {
+          "override": "#ff8c8c",
+          "resolved": "#ff8c8c"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#a31515"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#a31515"
+        }
+      },
+      "directComponentReferences": [
+        "button"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "action.dangerText",
+      "cssVariable": "--sk-action-danger-text",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolvedDefault": "#ffffff",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#ffffff"
+        },
+        "kujo-dark": {
+          "override": "{color.black}",
+          "resolved": "#060606"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#ffffff"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#ffffff"
+        }
+      },
+      "directComponentReferences": [
+        "button"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "action.ghost",
+      "cssVariable": "--sk-action-ghost",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "transparent",
+      "references": [],
+      "resolvedDefault": "transparent",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "transparent"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "transparent"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "transparent"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "transparent"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "border.default",
+      "cssVariable": "--sk-border-default",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolvedDefault": "#060606",
+      "themes": {
+        "bzby": {
+          "override": "#111111",
+          "resolved": "#111111"
+        },
+        "kujo-dark": {
+          "override": "{color.white}",
+          "resolved": "#ffffff"
+        },
+        "kujo-light": {
+          "override": "{color.black}",
+          "resolved": "#060606"
+        },
+        "personal-dark": {
+          "override": "#f7f4ed",
+          "resolved": "#f7f4ed"
+        }
+      },
+      "directComponentReferences": [
+        "accordion",
+        "alert",
+        "avatar",
+        "badge",
+        "bento-grid",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "ecosystem-map",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "form-field",
+        "generator-panel",
+        "header",
+        "hero",
+        "icon",
+        "image",
+        "metadata-panel",
+        "modal",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "popover",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-bar",
+        "progress-indicator",
+        "promo-banner",
+        "quote",
+        "radio-button",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "search-input",
+        "segmented-control",
+        "select",
+        "separator",
+        "skeleton",
+        "skip-link",
+        "slider",
+        "spinner",
+        "stack",
+        "stats-bar",
+        "stepper",
+        "table",
+        "tabs",
+        "team-grid",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "trust-strip",
+        "video"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "border.subtle",
+      "cssVariable": "--sk-border-subtle",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.gray.300}",
+      "references": [
+        "color.gray.300"
+      ],
+      "resolvedDefault": "#b8b8b8",
+      "themes": {
+        "bzby": {
+          "override": "#766b5f",
+          "resolved": "#766b5f"
+        },
+        "kujo-dark": {
+          "override": "{color.gray.300}",
+          "resolved": "#b8b8b8"
+        },
+        "kujo-light": {
+          "override": "{color.gray.500}",
+          "resolved": "#5d5d5d"
+        },
+        "personal-dark": {
+          "override": "#a69f94",
+          "resolved": "#a69f94"
+        }
+      },
+      "directComponentReferences": [
+        "checkout-summary",
+        "content-section",
+        "metadata-panel",
+        "pricing-table",
+        "skeleton",
+        "stats-bar"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "border.strong",
+      "cssVariable": "--sk-border-strong",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolvedDefault": "#060606",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#060606"
+        }
+      },
+      "directComponentReferences": [
+        "button"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "border.inverse",
+      "cssVariable": "--sk-border-inverse",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolvedDefault": "#ffffff",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#ffffff"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#ffffff"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#ffffff"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#ffffff"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "focus.ring",
+      "cssVariable": "--sk-focus-ring",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolvedDefault": "#060606",
+      "themes": {
+        "bzby": {
+          "override": "#085f63",
+          "resolved": "#085f63"
+        },
+        "kujo-dark": {
+          "override": "#7dd3fc",
+          "resolved": "#7dd3fc"
+        },
+        "kujo-light": {
+          "override": "{color.black}",
+          "resolved": "#060606"
+        },
+        "personal-dark": {
+          "override": "#8cc9ff",
+          "resolved": "#8cc9ff"
+        }
+      },
+      "directComponentReferences": [
+        "accordion",
+        "alert",
+        "avatar",
+        "bento-grid",
+        "breadcrumbs",
+        "button",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "ecosystem-map",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "form-field",
+        "generator-panel",
+        "header",
+        "heading",
+        "hero",
+        "icon",
+        "image",
+        "label",
+        "link",
+        "list",
+        "metadata-panel",
+        "modal",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "popover",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-bar",
+        "progress-indicator",
+        "promo-banner",
+        "quote",
+        "radio-button",
+        "rating",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "search-input",
+        "segmented-control",
+        "select",
+        "separator",
+        "skeleton",
+        "skip-link",
+        "slider",
+        "spinner",
+        "stack",
+        "stats-bar",
+        "stepper",
+        "table",
+        "tabs",
+        "team-grid",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "tree-view",
+        "trust-strip",
+        "video",
+        "visually-hidden"
+      ],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "focus.ringOffset",
+      "cssVariable": "--sk-focus-ring-offset",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.paper}",
+      "references": [
+        "color.paper"
+      ],
+      "resolvedDefault": "#f9f9f9",
+      "themes": {
+        "bzby": {
+          "override": "#fffaf0",
+          "resolved": "#fffaf0"
+        },
+        "kujo-dark": {
+          "override": "{color.black}",
+          "resolved": "#060606"
+        },
+        "kujo-light": {
+          "override": "{color.paper}",
+          "resolved": "#f9f9f9"
+        },
+        "personal-dark": {
+          "override": "#0f1115",
+          "resolved": "#0f1115"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "shadow.color",
+      "cssVariable": "--sk-shadow-color",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolvedDefault": "#060606",
+      "themes": {
+        "bzby": {
+          "override": "#111111",
+          "resolved": "#111111"
+        },
+        "kujo-dark": {
+          "override": "{color.white}",
+          "resolved": "#ffffff"
+        },
+        "kujo-light": {
+          "override": "{color.black}",
+          "resolved": "#060606"
+        },
+        "personal-dark": {
+          "override": "#f7f4ed",
+          "resolved": "#f7f4ed"
+        }
+      },
+      "directComponentReferences": [],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "code.surface",
+      "cssVariable": "--sk-code-surface",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolvedDefault": "#ffffff",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#ffffff"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#ffffff"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#ffffff"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#ffffff"
+        }
+      },
+      "directComponentReferences": [
+        "code-block"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "code.text",
+      "cssVariable": "--sk-code-text",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolvedDefault": "#060606",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#060606"
+        }
+      },
+      "directComponentReferences": [
+        "code-block"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "code.border",
+      "cssVariable": "--sk-code-border",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolvedDefault": "#060606",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#060606"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "#060606"
+        }
+      },
+      "directComponentReferences": [
+        "code-block"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "state.success",
+      "cssVariable": "--sk-state-success",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.green.600}",
+      "references": [
+        "color.green.600"
+      ],
+      "resolvedDefault": "#0f6b35",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#0f6b35"
+        },
+        "kujo-dark": {
+          "override": "#6fdc8c",
+          "resolved": "#6fdc8c"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#0f6b35"
+        },
+        "personal-dark": {
+          "override": "#6fdc8c",
+          "resolved": "#6fdc8c"
+        }
+      },
+      "directComponentReferences": [
+        "alert",
+        "badge",
+        "spinner"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "state.warning",
+      "cssVariable": "--sk-state-warning",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.yellow.500}",
+      "references": [
+        "color.yellow.500"
+      ],
+      "resolvedDefault": "#765000",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#765000"
+        },
+        "kujo-dark": {
+          "override": "#ffd166",
+          "resolved": "#ffd166"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#765000"
+        },
+        "personal-dark": {
+          "override": "#ffd166",
+          "resolved": "#ffd166"
+        }
+      },
+      "directComponentReferences": [
+        "alert",
+        "badge"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "state.danger",
+      "cssVariable": "--sk-state-danger",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.red.600}",
+      "references": [
+        "color.red.600"
+      ],
+      "resolvedDefault": "#a31515",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#a31515"
+        },
+        "kujo-dark": {
+          "override": "#ff8c8c",
+          "resolved": "#ff8c8c"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#a31515"
+        },
+        "personal-dark": {
+          "override": "#ff8c8c",
+          "resolved": "#ff8c8c"
+        }
+      },
+      "directComponentReferences": [
+        "alert",
+        "badge",
+        "card",
+        "checkout-summary",
+        "empty-state",
+        "error-state",
+        "product-card",
+        "promo-banner",
+        "trust-strip"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "state.info",
+      "cssVariable": "--sk-state-info",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{color.cyan.600}",
+      "references": [
+        "color.cyan.600"
+      ],
+      "resolvedDefault": "#075d6c",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "#075d6c"
+        },
+        "kujo-dark": {
+          "override": "#7dd3fc",
+          "resolved": "#7dd3fc"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "#075d6c"
+        },
+        "personal-dark": {
+          "override": "#8cc9ff",
+          "resolved": "#8cc9ff"
+        }
+      },
+      "directComponentReferences": [
+        "alert"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "component.button.height",
+      "cssVariable": "--sk-component-button-height",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{size.control.md}",
+      "references": [
+        "size.control.md"
+      ],
+      "resolvedDefault": "2.5rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "2.5rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "2.5rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "2.5rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "2.5rem"
+        }
+      },
+      "directComponentReferences": [
+        "button"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "component.button.gap",
+      "cssVariable": "--sk-component-button-gap",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{space.2}",
+      "references": [
+        "space.2"
+      ],
+      "resolvedDefault": "0.5rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "0.5rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "0.5rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "0.5rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "0.5rem"
+        }
+      },
+      "directComponentReferences": [
+        "button"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "component.card.padding",
+      "cssVariable": "--sk-component-card-padding",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{space.5}",
+      "references": [
+        "space.5"
+      ],
+      "resolvedDefault": "1.25rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1.25rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1.25rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1.25rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1.25rem"
+        }
+      },
+      "directComponentReferences": [
+        "card",
+        "checkout-summary",
+        "empty-state",
+        "error-state",
+        "product-card",
+        "promo-banner",
+        "trust-strip"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "component.card.gap",
+      "cssVariable": "--sk-component-card-gap",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{space.5}",
+      "references": [
+        "space.5"
+      ],
+      "resolvedDefault": "1.25rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1.25rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1.25rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1.25rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1.25rem"
+        }
+      },
+      "directComponentReferences": [
+        "card",
+        "checkout-summary",
+        "product-card"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "component.hero.paddingBlock",
+      "cssVariable": "--sk-component-hero-padding-block",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{space.6}",
+      "references": [
+        "space.6"
+      ],
+      "resolvedDefault": "1.5rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1.5rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1.5rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1.5rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1.5rem"
+        }
+      },
+      "directComponentReferences": [
+        "hero"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "component.hero.maxWidth",
+      "cssVariable": "--sk-component-hero-max-width",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{size.content.lg}",
+      "references": [
+        "size.content.lg"
+      ],
+      "resolvedDefault": "78rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "78rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "78rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "78rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "78rem"
+        }
+      },
+      "directComponentReferences": [
+        "hero"
+      ],
+      "baseOrUtilityReference": false,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    },
+    {
+      "name": "component.grid.gap",
+      "cssVariable": "--sk-component-grid-gap",
+      "layer": "semantic",
+      "source": "tokens/semantic.json",
+      "value": "{space.5}",
+      "references": [
+        "space.5"
+      ],
+      "resolvedDefault": "1.25rem",
+      "themes": {
+        "bzby": {
+          "override": null,
+          "resolved": "1.25rem"
+        },
+        "kujo-dark": {
+          "override": null,
+          "resolved": "1.25rem"
+        },
+        "kujo-light": {
+          "override": null,
+          "resolved": "1.25rem"
+        },
+        "personal-dark": {
+          "override": null,
+          "resolved": "1.25rem"
+        }
+      },
+      "directComponentReferences": [
+        "bento-grid",
+        "ecosystem-map",
+        "feature-grid",
+        "product-grid"
+      ],
+      "baseOrUtilityReference": true,
+      "confidence": "VERIFIED static token resolution; not computed cascade or contrast certification"
+    }
+  ]
+}

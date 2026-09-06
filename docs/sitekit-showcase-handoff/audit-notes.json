@@ -1,0 +1,1143 @@
+{
+  "sourceCommit": "c0d199e06bc926e29de87b7cd983ee3d54db9cda",
+  "confidenceLegend": {
+    "VERIFIED": "Direct source inspection",
+    "OBSERVED": "Demonstrated by executed test or inspected example; scope stated",
+    "INFERRED": "Architectural deduction",
+    "PROPOSED": "Future library or showcase work",
+    "UNKNOWN": "Not safely established"
+  },
+  "primitives": [
+    "button",
+    "link",
+    "heading",
+    "icon",
+    "separator",
+    "badge",
+    "label",
+    "text-input",
+    "textarea",
+    "checkbox",
+    "radio-button",
+    "toggle",
+    "select",
+    "skip-link",
+    "visually-hidden"
+  ],
+  "viewportDemos": [
+    "header",
+    "navigation",
+    "drawer",
+    "table",
+    "pricing-table",
+    "carousel",
+    "metadata-panel",
+    "command-strip",
+    "tabs",
+    "file-upload",
+    "stepper",
+    "search-input",
+    "team-grid",
+    "product-grid",
+    "feature-grid",
+    "stats-bar",
+    "trust-strip",
+    "resource-links",
+    "recent-posts",
+    "testimonial-rail"
+  ],
+  "matrixComponents": [
+    "button",
+    "badge",
+    "alert",
+    "icon",
+    "checkbox",
+    "radio-button",
+    "toggle",
+    "card"
+  ],
+  "utilities": [
+    {
+      "selector": ".sk-container",
+      "purpose": "Centered 92rem maximum with 1rem gutters"
+    },
+    {
+      "selector": ".sk-stack",
+      "purpose": "Grid stack with space.4 gap; no panel styling"
+    },
+    {
+      "selector": ".sk-cluster",
+      "purpose": "Wrapping centered flex row with space.3 gap"
+    },
+    {
+      "selector": ".sk-grid",
+      "purpose": "Auto-fit grid with min(100%,18rem) tracks"
+    },
+    {
+      "selector": ".sk-muted",
+      "purpose": "Semantic muted text"
+    },
+    {
+      "selector": ".sk-sr-only",
+      "purpose": "Clipped assistive text; no focus reveal"
+    }
+  ],
+  "runtime": {
+    "publicGlobal": "window.SiteKit.enhance()",
+    "arguments": [],
+    "returns": "undefined",
+    "scope": "Entire document; no root argument, observer, teardown or component constructors",
+    "idempotence": "WeakSet per enhanced container/control; new child openers inside already-enhanced modal/drawer are not rebound",
+    "hooks": [
+      "data-sk-modal",
+      "data-sk-modal-open",
+      "data-sk-modal-close",
+      "data-sk-modal-dismiss",
+      "data-sk-drawer",
+      "data-sk-drawer-open",
+      "data-sk-drawer-close",
+      "data-sk-drawer-dismiss",
+      "data-sk-drawer-scrim",
+      "data-sk-popover-panel",
+      "data-sk-theme-toggle",
+      "data-sk-theme-select"
+    ],
+    "themeStorageKey": "sk-theme",
+    "themes": [
+      "kujo-light",
+      "kujo-dark",
+      "personal-dark",
+      "bzby"
+    ],
+    "events": "Native events only; no custom dispatch API",
+    "internalHelpers": [
+      "nextId",
+      "focusable",
+      "controlsTargeting",
+      "setExpanded",
+      "closeOnOutside",
+      "trapFocus",
+      "enhanceDropdowns",
+      "enhancePopovers",
+      "enhanceTooltips",
+      "enhanceModal",
+      "enhanceDrawers",
+      "enhanceTheme"
+    ],
+    "frameworkHooks": []
+  },
+  "components": {
+    "accordion": {
+      "use": "Group native details/summary disclosures for FAQs.",
+      "avoid": "Essential information hidden by default or a scripted tree.",
+      "caveats": [
+        "Native multiple-open disclosures; no exclusive-open logic or FAQ/compact CSS variants."
+      ],
+      "behavior": "native",
+      "a11yRating": "strong",
+      "a11y": "Native details/summary supplies keyboard and expanded/collapsed semantics. Source first item is open; no forced accordion exclusivity.",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Native multiple-open disclosures; no exclusive-open logic or FAQ/compact CSS variants.",
+      "controls": {
+        "open": {
+          "type": "boolean",
+          "attribute": "open",
+          "target": "details"
+        }
+      }
+    },
+    "alert": {
+      "use": "Show a status notice with an exclamation marker and optional severity colors.",
+      "avoid": "A blocking dialog or automatically dismissing notification.",
+      "caveats": [
+        "CSS supports danger, warning, success and neutral; schema lists neutral/compact. No compact selector."
+      ],
+      "documentation": "contradicts implementation",
+      "docReason": "CSS supports danger, warning, success and neutral; schema lists neutral/compact. No compact selector.",
+      "controls": {
+        "variant": {
+          "type": "select",
+          "values": [
+            "neutral",
+            "success",
+            "warning",
+            "danger"
+          ],
+          "attribute": "data-variant"
+        }
+      }
+    },
+    "avatar": {
+      "use": "Frame an image or manually authored initials in a square.",
+      "avoid": "A guaranteed initials generator or image fallback service.",
+      "caveats": [
+        "Template has an empty-alt image inside a generic span with aria-label; accessible exposure needs correction or verification. No fallback generation.",
+        "OBSERVED: axe aria-prohibited-attr on generic span aria-label in both Kujo themes."
+      ],
+      "a11yRating": "needs improvement",
+      "a11y": "Template has an empty-alt image inside a generic span with aria-label; accessible exposure needs correction or verification. No fallback generation. OBSERVED: axe aria-prohibited-attr on generic span aria-label in both Kujo themes."
+    },
+    "badge": {
+      "use": "Add compact text status labels.",
+      "avoid": "An interactive control or status conveyed only by color.",
+      "caveats": [
+        "Neutral and outline share base styling; only success/warning/danger have dedicated selectors."
+      ],
+      "documentation": "contradicts implementation",
+      "docReason": "Neutral and outline share base styling; only success/warning/danger have dedicated selectors.",
+      "controls": {
+        "variant": {
+          "type": "select",
+          "values": [
+            "neutral",
+            "success",
+            "warning",
+            "danger"
+          ],
+          "attribute": "data-variant"
+        },
+        "label": {
+          "type": "text",
+          "target": "textContent"
+        }
+      }
+    },
+    "bento-grid": {
+      "use": "Arrange an intro and unevenly spanning feature panels.",
+      "avoid": "Arbitrary item counts without testing explicit grid placement.",
+      "caveats": [
+        "data-span controls hero/wide/tall placement; named variants lack selectors. Dense visual placement can differ from reading order. Container self-query caveat applies.",
+        "OBSERVED: at 390px without outer container, four columns and 434px document width; with outer containment, one column and 390px width. At 700px, outer containment yields two columns; no outer containment retains four."
+      ],
+      "responsive": "Root-changing container queries cannot query the root itself; provide and test an explicit outer inline-size container. Descendant rules may use the component root as a different nearest query container. Exact thresholds/rules below are source observations.",
+      "related": [
+        "card",
+        "feature-grid"
+      ]
+    },
+    "breadcrumbs": {
+      "use": "Represent a hierarchy as an ordered navigation trail.",
+      "avoid": "Primary navigation or an automatically generated router trail.",
+      "caveats": [
+        "Current page is manually marked on li. Compact has no dedicated rule."
+      ]
+    },
+    "button": {
+      "use": "Trigger an action using a native button, or style a navigation anchor.",
+      "avoid": "A div acting as a button or an aria-disabled anchor assumed inert.",
+      "caveats": [
+        "Loading and href exist in schema but are not rendered by the template. No size API; use native disabled. Primary is the base style."
+      ],
+      "behavior": "native",
+      "documentation": "contradicts implementation",
+      "docReason": "Loading and href exist in schema but are not rendered by the template. No size API; use native disabled. Primary is the base style.",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Loading and href exist in schema but are not rendered by the template. No size API; use native disabled. Primary is the base style.",
+      "bindings": {
+        "label": "Text content of button.",
+        "variant": "data-variant=primary|secondary|ghost|danger; primary is base styling.",
+        "type": "Native button type attribute; template default button.",
+        "disabled": "Native button disabled attribute; aria-disabled styling alone does not block activation.",
+        "href": "Consumer must choose an anchor and set href; source button does not bind it."
+      },
+      "controls": {
+        "variant": {
+          "type": "select",
+          "values": [
+            "primary",
+            "secondary",
+            "ghost",
+            "danger"
+          ],
+          "attribute": "data-variant"
+        },
+        "label": {
+          "type": "text",
+          "target": "textContent"
+        },
+        "disabled": {
+          "type": "boolean",
+          "attribute": "disabled"
+        }
+      },
+      "related": [
+        "link",
+        "icon",
+        "spinner"
+      ]
+    },
+    "card": {
+      "use": "Group a heading, explanatory body and actions in a framed section.",
+      "avoid": "A clickable whole-card interaction without a real link.",
+      "caveats": [
+        "Schema title differs from template heading. No plain/interactive/dense selectors; busy sets cursor only and error sets border only."
+      ],
+      "documentation": "contradicts implementation",
+      "docReason": "Schema title differs from template heading. No plain/interactive/dense selectors; busy sets cursor only and error sets border only.",
+      "controls": {
+        "busy": {
+          "type": "boolean",
+          "attribute": "aria-busy"
+        },
+        "error": {
+          "type": "boolean",
+          "attribute": "data-state",
+          "trueValue": "error"
+        }
+      },
+      "related": [
+        "heading",
+        "button",
+        "badge"
+      ]
+    },
+    "carousel": {
+      "use": "Present a horizontally scrollable, snapping series of cards.",
+      "avoid": "An autoplay slider or a complete accessible carousel controller.",
+      "caveats": [
+        "Prev/Next work only in lab click code; dist has no handler. Native scroll works. Track hides scrollbar."
+      ],
+      "behavior": "example-only-js",
+      "interaction": "Prev/Next work only in lab click code; dist has no handler. Native scroll works. Track hides scrollbar."
+    },
+    "checkbox": {
+      "use": "Capture a native boolean choice with a wrapping label.",
+      "avoid": "A radio group or custom tri-state widget.",
+      "caveats": [
+        "Native checked state is styled; indeterminate and disabled visual treatments are not authored here."
+      ],
+      "behavior": "native",
+      "a11yRating": "strong",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Native checked state is styled; indeterminate and disabled visual treatments are not authored here.",
+      "controls": {
+        "checked": {
+          "type": "boolean",
+          "property": "checked",
+          "target": "native input",
+          "confidence": "PROPOSED browser-property adapter"
+        }
+      }
+    },
+    "checkout-summary": {
+      "use": "Display items and a definition list of totals with checkout actions.",
+      "avoid": "Payment processing or automatic totals computation.",
+      "caveats": [
+        "requiredFields includes totals but props expose subtotal/total. Sticky has no CSS implementation. Values are static fixture data."
+      ],
+      "documentation": "contradicts implementation",
+      "docReason": "requiredFields includes totals but props expose subtotal/total. Sticky has no CSS implementation. Values are static fixture data."
+    },
+    "code-block": {
+      "use": "Display escaped code in pre/code with a caption and copy affordance.",
+      "avoid": "A syntax highlighter, executable console or automatic clipboard library.",
+      "caveats": [
+        "Copy handler exists only in component lab. Terminal/numbered variants have no CSS selectors.",
+        "OBSERVED at 390px with the dossier long-code example: axe scrollable-region-focusable on pre. Provide a keyboard-focusable named code scroll region in consumer composition."
+      ],
+      "behavior": "example-only-js",
+      "documentation": "contradicts implementation",
+      "docReason": "Copy handler exists only in component lab. Terminal/numbered variants have no CSS selectors.",
+      "interaction": "Copy handler exists only in component lab. Terminal/numbered variants have no CSS selectors.",
+      "related": [
+        "button",
+        "command-strip"
+      ],
+      "a11yRating": "needs improvement",
+      "a11y": " OBSERVED at 390px with the dossier long-code example: axe scrollable-region-focusable on pre. Provide a keyboard-focusable named code scroll region in consumer composition."
+    },
+    "color-picker": {
+      "use": "Use a labeled native color input.",
+      "avoid": "An alpha-channel, eyedropper or palette editor supplied by SiteKit.",
+      "caveats": [
+        "Native browser picker behavior and supported formats apply; value is hardcoded in template."
+      ],
+      "behavior": "native",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Native browser picker behavior and supported formats apply; value is hardcoded in template.",
+      "controls": {
+        "value": {
+          "type": "native-value",
+          "property": "value",
+          "confidence": "PROPOSED browser-property adapter; not schema API"
+        }
+      }
+    },
+    "combobox": {
+      "use": "Show an input and styled option list for a consumer-owned autocomplete.",
+      "avoid": "A complete keyboard-accessible autocomplete out of the box.",
+      "caveats": [
+        "No dist filtering, active-descendant, arrow navigation or selection handler. Lab has click selection only."
+      ],
+      "behavior": "example-only-js",
+      "a11yRating": "needs improvement",
+      "a11y": "No dist filtering, active-descendant, arrow navigation or selection handler. Lab has click selection only.",
+      "interaction": "No dist filtering, active-descendant, arrow navigation or selection handler. Lab has click selection only.",
+      "related": [
+        "search-input",
+        "select"
+      ]
+    },
+    "command-strip": {
+      "use": "Display compact single-line metadata cells in a responsive strip.",
+      "avoid": "A command palette or keyboard launcher.",
+      "caveats": [
+        "Cells truncate with ellipsis; items/label are placeholders. No command execution or four-up variant implementation."
+      ]
+    },
+    "content-section": {
+      "use": "Compose supporting copy, action and a metadata/media panel.",
+      "avoid": "Assuming schema media objects automatically render.",
+      "caveats": [
+        "media-left uses data-layout within a 54rem container query; several schema variants have no CSS mapping. Root self-query needs ancestor container."
+      ],
+      "responsive": "Root-changing container queries cannot query the root itself; provide and test an explicit outer inline-size container. Descendant rules may use the component root as a different nearest query container. Exact thresholds/rules below are source observations."
+    },
+    "cta": {
+      "use": "Group a call-to-action headline, supporting copy and action row.",
+      "avoid": "A form submission service or automatic action renderer.",
+      "caveats": [
+        "Only actions is a template placeholder; heading/body are static. A split data-layout rule exists, not the declared band/inline/stacked switches."
+      ]
+    },
+    "date-input": {
+      "use": "Capture a date through the browser-native date input.",
+      "avoid": "A date range picker or custom calendar.",
+      "caveats": [
+        "No schema value/min/max contract; native attributes remain available. Help paragraph is not linked with aria-describedby."
+      ],
+      "behavior": "native",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. No schema value/min/max contract; native attributes remain available. Help paragraph is not linked with aria-describedby.",
+      "controls": {
+        "value": {
+          "type": "native-value",
+          "property": "value",
+          "confidence": "PROPOSED browser-property adapter; not schema API"
+        }
+      }
+    },
+    "date-picker": {
+      "use": "Provide a styled calendar mockup for further implementation.",
+      "avoid": "A production date selector without consumer controller and semantic repairs.",
+      "caveats": [
+        "Partial July calendar, no month navigation or date calculations. role=grid lacks rows/gridcells. Lab selection changes aria-current, conflating current and selected dates.",
+        "OBSERVED: axe aria-required-children on role=grid in both Kujo themes."
+      ],
+      "behavior": "example-only-js",
+      "a11yRating": "needs improvement",
+      "a11y": "Partial July calendar, no month navigation or date calculations. role=grid lacks rows/gridcells. Lab selection changes aria-current, conflating current and selected dates. OBSERVED: axe aria-required-children on role=grid in both Kujo themes.",
+      "interaction": "Partial July calendar, no month navigation or date calculations. role=grid lacks rows/gridcells. Lab selection changes aria-current, conflating current and selected dates.",
+      "related": [
+        "date-input"
+      ]
+    },
+    "drawer": {
+      "use": "Show a secondary panel with optional open/close and focus containment.",
+      "avoid": "Assuming it is a complete modal sheet with inert background.",
+      "caveats": [
+        "Source shell is an inline two-column frame; dashboard adds fixed positioning. No background inert, aria-modal, scroll lock or opener expanded-state synchronization.",
+        "OBSERVED in 390px Chromium probes, both Kujo themes: .sk-drawer display:grid overrides native hidden display; aside remains rendered/focusable with aria-hidden=true. axe reports aria-hidden-focus. Consumer dashboard has its own hidden override, so existing page tests do not catch the source-template defect."
+      ],
+      "behavior": "optional-js",
+      "documentation": "adequate",
+      "a11yRating": "needs improvement",
+      "a11y": "Source shell is an inline two-column frame; dashboard adds fixed positioning. No background inert, aria-modal, scroll lock or opener expanded-state synchronization. OBSERVED in 390px Chromium probes, both Kujo themes: .sk-drawer display:grid overrides native hidden display; aside remains rendered/focusable with aria-hidden=true. axe reports aria-hidden-focus. Consumer dashboard has its own hidden override, so existing page tests do not catch the source-template defect.",
+      "interaction": "Shipped: data-sk-drawer-open matching ID unhides aside, updates aria-hidden, unhides resolved scrim and focuses first focusable; close/dismiss/Escape/scrim click hides it and restores opener; Tab cycles endpoints. This does not establish browser modality or background inertness.",
+      "responsive": "Inline shell has a minimum 18rem panel and 28rem minimum height; no component media query. Dashboard fixture supplies fixed panel/backdrop positioning outside the component CSS.",
+      "related": [
+        "header",
+        "navigation",
+        "modal"
+      ]
+    },
+    "dropdown-menu": {
+      "use": "Offer a button-triggered menu of commands with keyboard movement.",
+      "avoid": "Navigation lists or a complete nested/typeahead menu system.",
+      "caveats": [
+        "Arrow/Home/End/Escape and outside dismissal are shipped; disabled menuitems are not filtered and activation does not automatically close."
+      ],
+      "behavior": "optional-js",
+      "documentation": "adequate",
+      "interaction": "Shipped: trigger click toggles; ArrowDown/Enter/Space opens first item; ArrowUp opens last; menu arrows wrap; Home/End jump; Escape closes and restores; Tab closes; document click and delayed focusout close. No typeahead, nested submenus, disabled-item filtering or automatic item-activation close."
+    },
+    "ecosystem-map": {
+      "use": "Display ecosystem nodes as a responsive grid of authored cards.",
+      "avoid": "A force graph, radial layout engine or relationship visualization.",
+      "caveats": [
+        "Schema nodes/relationships differ from items/label placeholders; only dense grid selector exists, no radial renderer."
+      ],
+      "controls": {
+        "density": {
+          "type": "select",
+          "values": [
+            "default",
+            "dense"
+          ],
+          "attribute": "data-density"
+        }
+      }
+    },
+    "empty-state": {
+      "use": "Explain an empty collection and offer a next action.",
+      "avoid": "A loading indicator or unexplained decorative blank.",
+      "caveats": [
+        "Fixture heading/body are static despite props; actions is a slot. Busy/error rules do not create data states."
+      ]
+    },
+    "error-state": {
+      "use": "Explain a recoverable failure and show retry/review actions.",
+      "avoid": "An automatic error boundary or network retry implementation.",
+      "caveats": [
+        "No automatic alert announcement or retry logic; content and actions are consumer-owned."
+      ]
+    },
+    "feature-grid": {
+      "use": "Arrange feature articles with marker boxes in an intrinsic grid.",
+      "avoid": "An enforced two/three-column prop runtime.",
+      "caveats": [
+        "data-density=dense changes minimum track size; columns schema has no direct binding."
+      ],
+      "controls": {
+        "density": {
+          "type": "select",
+          "values": [
+            "default",
+            "dense"
+          ],
+          "attribute": "data-density"
+        }
+      }
+    },
+    "fieldset": {
+      "use": "Group native related form controls with a legend.",
+      "avoid": "A generic visual card without grouped form meaning.",
+      "caveats": [
+        "Template includes radios. Styled radio/checkbox descendants are native controls; legend and shared name matter."
+      ],
+      "behavior": "native",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Template includes radios. Styled radio/checkbox descendants are native controls; legend and shared name matter."
+    },
+    "file": {
+      "use": "Show a file metadata row and a remove affordance.",
+      "avoid": "Uploading, downloading or deleting files automatically.",
+      "caveats": [
+        "Remove has no dist handler; file size/type/status are literal content."
+      ]
+    },
+    "file-upload": {
+      "use": "Expose a native file chooser in a dashed frame.",
+      "avoid": "A built-in upload client, dropzone or validation pipeline.",
+      "caveats": [
+        "Drag-files copy exceeds implementation: no drop listeners, transfer, progress or accept/multiple configuration in schema."
+      ],
+      "behavior": "native",
+      "documentation": "contradicts implementation",
+      "docReason": "Drag-files copy exceeds implementation: no drop listeners, transfer, progress or accept/multiple configuration in schema.",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Drag-files copy exceeds implementation: no drop listeners, transfer, progress or accept/multiple configuration in schema."
+    },
+    "footer": {
+      "use": "Compose brand, links and legal text in a wrapping footer.",
+      "avoid": "An automatic multi-column sitemap renderer.",
+      "caveats": [
+        "simple/columns/product variants have no selectors; links/legal/brand are source placeholders."
+      ]
+    },
+    "form": {
+      "use": "Compose labeled native email and message controls with submit.",
+      "avoid": "A schema-driven form builder or backend integration.",
+      "caveats": [
+        "Template has no action, required validation contract or submission handler. Browser submission must be intercepted for demos."
+      ],
+      "behavior": "native",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Template has no action, required validation contract or submission handler. Browser submission must be intercepted for demos."
+    },
+    "form-field": {
+      "use": "Associate a label, native control and help description.",
+      "avoid": "Automatic validation or rendering a control prop.",
+      "caveats": [
+        "requiredFields includes control absent from props; fixed text input uses id/name/label/help placeholders and autocomplete=name."
+      ],
+      "behavior": "native",
+      "documentation": "contradicts implementation",
+      "docReason": "requiredFields includes control absent from props; fixed text input uses id/name/label/help placeholders and autocomplete=name.",
+      "a11yRating": "strong",
+      "a11y": "Explicit for/id and aria-describedby help association are implemented. Error association is not generated.",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. requiredFields includes control absent from props; fixed text input uses id/name/label/help placeholders and autocomplete=name.",
+      "related": [
+        "label",
+        "text-input",
+        "form"
+      ]
+    },
+    "generator-panel": {
+      "use": "Arrange a form next to a preview placeholder.",
+      "avoid": "An AI generator or API-backed tool.",
+      "caveats": [
+        "No generation, preview update or service code. 56rem root self-query requires an ancestor container."
+      ],
+      "responsive": "Root-changing container queries cannot query the root itself; provide and test an explicit outer inline-size container. Descendant rules may use the component root as a different nearest query container. Exact thresholds/rules below are source observations."
+    },
+    "header": {
+      "use": "Build a branded wrapping header with primary links and actions.",
+      "avoid": "A ready-made mobile hamburger or sticky sidebar shell.",
+      "caveats": [
+        "Header wraps; docs/commerce/default are not switches. Descendant Button variant rules belong to Button."
+      ],
+      "responsive": "Intrinsic wrapping only. Inner maximum 78rem and fixed token gutters; no mobile toggle, sticky header or viewport collapse hook."
+    },
+    "heading": {
+      "use": "Group an eyebrow, h2 and supporting metadata.",
+      "avoid": "An automatic level/size heading API.",
+      "caveats": [
+        "Template fixes h2; global h1/h2 use Departure Mono but other headings rely on native/base or component rules."
+      ]
+    },
+    "hero": {
+      "use": "Present a large centered heading, explanation and action row.",
+      "avoid": "A complete responsive marketing page or rich media renderer.",
+      "caveats": [
+        "Centered base and data-layout=split exist; split distributes direct children without a dedicated media slot. Heading changes at container 56rem."
+      ],
+      "controls": {
+        "layout": {
+          "type": "select",
+          "values": [
+            "centered",
+            "split"
+          ],
+          "attribute": "data-layout",
+          "note": "Provide a reviewed split composition; not an automatic schema variant."
+        }
+      },
+      "responsive": "Heading scales from 3rem to 5.375rem at container 56rem; inner split grid uses the root container. Heading line-height is hardcoded .9. Test long titles and 200 percent text.",
+      "related": [
+        "cta",
+        "feature-grid"
+      ]
+    },
+    "icon": {
+      "use": "Wrap small inline SVG or a consumer-owned sprite with sizing and semantics.",
+      "avoid": "An icon package, registry service or label for an otherwise unnamed button.",
+      "caveats": [
+        "data-icon-name does not fetch icons. CSS aria-hidden:true is invalid and cannot supply an ARIA attribute. Boxed uses data-icon-variant, not data-variant.",
+        "OBSERVED: a default .sk-icon inside a primary .sk-button resets color to text.primary; SVG stroke rgb(6,6,6) matches button background rgb(6,6,6), making the symbol invisible in light theme. See evidence/focused-findings.json."
+      ],
+      "documentation": "contradicts implementation",
+      "docReason": "Authored icon guidance is useful, but size/boxed bindings and invalid decorative CSS declaration need explicit qualification.",
+      "sizes": [
+        "sm: 2rem wrapper",
+        "md/base: 2.5rem wrapper",
+        "lg: 3rem wrapper"
+      ],
+      "bindings": {
+        "name": "data-icon-name is metadata only; SVG markup must be supplied.",
+        "size": "data-size=sm|lg; md uses base 2.5rem."
+      },
+      "controls": {
+        "size": {
+          "type": "select",
+          "values": [
+            "sm",
+            "md",
+            "lg"
+          ],
+          "attribute": "data-size"
+        },
+        "boxed": {
+          "type": "boolean",
+          "attribute": "data-icon-variant",
+          "trueValue": "boxed"
+        }
+      },
+      "related": [
+        "button",
+        "avatar"
+      ],
+      "a11yRating": "needs improvement",
+      "a11y": " OBSERVED: a default .sk-icon inside a primary .sk-button resets color to text.primary; SVG stroke rgb(6,6,6) matches button background rgb(6,6,6), making the symbol invisible in light theme. See evidence/focused-findings.json."
+    },
+    "image": {
+      "use": "Provide a captioned image-frame visual example.",
+      "avoid": "An image optimizer, responsive image loader or implemented img API.",
+      "caveats": [
+        "Source template is a div with role=img, not an img. div-specific aspect-ratio styles do not automatically apply to a replacement img."
+      ],
+      "documentation": "contradicts implementation",
+      "docReason": "Source template is a div with role=img, not an img. div-specific aspect-ratio styles do not automatically apply to a replacement img."
+    },
+    "label": {
+      "use": "Label an associated native form control.",
+      "avoid": "A generic caption or label with no target control.",
+      "caveats": [
+        "Standalone source references absent label-example control; dossier example includes it."
+      ]
+    },
+    "link": {
+      "use": "Style a real navigation anchor with underline and focus.",
+      "avoid": "A command action that should use button.",
+      "caveats": [
+        "Native href navigation; compact is not a separate style."
+      ],
+      "behavior": "native",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Native href navigation; compact is not a separate style."
+    },
+    "list": {
+      "use": "Format a semantic unordered list with spacing.",
+      "avoid": "A virtualized list or interactive listbox.",
+      "caveats": [
+        "Unordered list styling only; content is literal template data."
+      ]
+    },
+    "metadata-panel": {
+      "use": "Present labeled key/value rows in a definition list.",
+      "avoid": "A JSON parser or automatically generated inspector.",
+      "caveats": [
+        "Rows/label placeholders are manually rendered; values align to the end and may need long-content tests."
+      ]
+    },
+    "modal": {
+      "use": "Open a labeled native dialog with explicit dismissal and opener restoration.",
+      "avoid": "Persistent page content or a fallback modal for obsolete browsers.",
+      "caveats": [
+        "Default/danger/wide variants have no distinct CSS. Native showModal provides modality; backdrop-click closing and close veto are not supplied."
+      ],
+      "behavior": "optional-js",
+      "documentation": "adequate",
+      "a11yRating": "strong",
+      "a11y": "Native dialog.showModal provides top-layer modality and browser focus behavior; enhancement restores the opener and cycles Tab. Check nested dialogs and empty-focus cases separately.",
+      "interaction": "Shipped: every data-sk-modal-open matching existing dialog ID calls showModal; close/dismiss hooks close; cancel and Escape close; Tab cycles focus; close event restores opener asynchronously (or containing menu trigger when opener is hidden). No custom events. Native dialog APIs remain available.",
+      "related": [
+        "button",
+        "drawer"
+      ]
+    },
+    "navigation": {
+      "use": "Display a wrapping set of primary navigation links.",
+      "avoid": "A router, sidebar manager or mobile menu controller.",
+      "caveats": [
+        "No current-route detection or collapse behavior; consumer writes aria-current and destinations."
+      ]
+    },
+    "newsletter-signup": {
+      "use": "Compose email signup copy and an inline submission form.",
+      "avoid": "A working email subscription or consent service.",
+      "caveats": [
+        "No action/backend/required input/consent processing. Split container rule is real but requires an ancestor to affect root."
+      ],
+      "responsive": "Root-changing container queries cannot query the root itself; provide and test an explicit outer inline-size container. Descendant rules may use the component root as a different nearest query container. Exact thresholds/rules below are source observations."
+    },
+    "pagination": {
+      "use": "Link between pages and mark the current one.",
+      "avoid": "Client-side data pagination, item slicing or total-page computation.",
+      "caveats": [
+        "Links are fixture anchors; hrefs and aria-current are authored."
+      ],
+      "behavior": "native",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Links are fixture anchors; hrefs and aria-current are authored."
+    },
+    "partners-strip": {
+      "use": "Lay out partner names or consumer-provided logos in an intrinsic grid.",
+      "avoid": "Evidence of actual endorsements or a bundled logo collection.",
+      "caveats": [
+        "Template names are placeholders; logos/boxed/compact are unimplemented switches."
+      ]
+    },
+    "popover": {
+      "use": "Toggle contextual nonmodal content next to a trigger.",
+      "avoid": "A modal form or collision-aware floating positioning library.",
+      "caveats": [
+        "Shipped toggle/Escape/outside click; no initial panel focus, trap, collision avoidance or portal. data-sk-popover-panel selector is JS-only unless role=dialog also supplies CSS."
+      ],
+      "behavior": "optional-js",
+      "documentation": "adequate",
+      "interaction": "Shipped: first button/[aria-expanded] toggles role=dialog or data-sk-popover-panel; creates missing ID and aria-controls; updates hidden/aria-hidden; Escape on trigger/panel restores trigger; outside click closes without restoration."
+    },
+    "pricing-table": {
+      "use": "Compare plans in a captioned table with row and column headers.",
+      "avoid": "Billing logic, plan selection or cadence switching.",
+      "caveats": [
+        "Fixed layout wraps text anywhere rather than guaranteeing horizontal scroll; plans/currency/cadence are descriptive only."
+      ]
+    },
+    "product-card": {
+      "use": "Present product title, description, price and actions beside media.",
+      "avoid": "A cart item, inventory model or automatic media renderer.",
+      "caveats": [
+        "Template has decorative Product div, not imageAlt/availability bindings. Layout child query at 30rem can use root container."
+      ],
+      "responsive": "Root supplies inline-size containment; at 30rem its child layout becomes two columns with a 9rem minimum media track. Below threshold it is a single grid column."
+    },
+    "product-grid": {
+      "use": "Arrange product summaries in an intrinsic responsive grid.",
+      "avoid": "A catalog service, filter engine or cart.",
+      "caveats": [
+        "Add buttons have no handlers; dense CSS is undocumented as data-density rather than declared catalog/compact/comparison variants."
+      ],
+      "controls": {
+        "density": {
+          "type": "select",
+          "values": [
+            "default",
+            "dense"
+          ],
+          "attribute": "data-density"
+        }
+      },
+      "related": [
+        "product-card",
+        "checkout-summary"
+      ]
+    },
+    "product-showcase": {
+      "use": "Compose a featured product, media placeholder and supporting offers.",
+      "avoid": "A product gallery or interactive commerce backend.",
+      "caveats": [
+        "Template contains static sample content; root split query at 58rem needs external containment."
+      ],
+      "responsive": "Root-changing container queries cannot query the root itself; provide and test an explicit outer inline-size container. Descendant rules may use the component root as a different nearest query container. Exact thresholds/rules below are source observations."
+    },
+    "progress-bar": {
+      "use": "Draw a horizontal completion fill.",
+      "avoid": "An accessible progress widget without additional native/ARIA semantics.",
+      "caveats": [
+        "Template div has no role=progressbar or value semantics; 64 percent inline-size is visual only.",
+        "OBSERVED: axe aria-prohibited-attr on generic div aria-label; no progress role/value semantics."
+      ],
+      "a11yRating": "needs improvement",
+      "a11y": "Template div has no role=progressbar or value semantics; 64 percent inline-size is visual only. OBSERVED: axe aria-prohibited-attr on generic div aria-label; no progress role/value semantics.",
+      "related": [
+        "progress-indicator",
+        "spinner"
+      ]
+    },
+    "progress-indicator": {
+      "use": "Show an ordered sequence of workflow steps.",
+      "avoid": "Automatic step validation or navigation.",
+      "caveats": [
+        "data-current is bolded; data-complete is present but has no style. No aria-current=step."
+      ],
+      "a11yRating": "needs improvement",
+      "a11y": "data-current is bolded; data-complete is present but has no style. No aria-current=step."
+    },
+    "promo-banner": {
+      "use": "Present a promotional message and action cluster.",
+      "avoid": "A dismissible announcement system out of the box.",
+      "caveats": [
+        "dismissible prop has no close markup/handler. Info/success/warning lack selectors; generic error state is separate."
+      ],
+      "documentation": "contradicts implementation",
+      "docReason": "dismissible prop has no close markup/handler. Info/success/warning lack selectors; generic error state is separate."
+    },
+    "quote": {
+      "use": "Present a quotation with figure attribution.",
+      "avoid": "A testimonial service or unsupported claims about actual users.",
+      "caveats": [
+        "Use real approved quote content; source is demonstration copy, no special compact treatment."
+      ]
+    },
+    "radio-button": {
+      "use": "Capture one native choice within a labeled radio group.",
+      "avoid": "Independent multiple choices or an ARIA-only custom radio widget.",
+      "caveats": [
+        "Native same-name controls supply keyboard selection; appearance is squared despite radio semantics."
+      ],
+      "behavior": "native",
+      "a11yRating": "strong",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Native same-name controls supply keyboard selection; appearance is squared despite radio semantics.",
+      "controls": {
+        "checked": {
+          "type": "boolean",
+          "property": "checked",
+          "target": "native input",
+          "confidence": "PROPOSED browser-property adapter"
+        }
+      }
+    },
+    "rating": {
+      "use": "Render a static star rating with an accessible summary.",
+      "avoid": "An editable rating input.",
+      "caveats": [
+        "role=img label supplies value; no selection handler or automatic star generation."
+      ]
+    },
+    "recent-posts": {
+      "use": "Present authored article cards and metadata.",
+      "avoid": "Fetching posts or automatic blog generation.",
+      "caveats": [
+        "cards/list/featured are declared but share the intrinsic grid implementation."
+      ]
+    },
+    "resource-links": {
+      "use": "Group descriptive resource links in an intrinsic grid.",
+      "avoid": "An automatic link crawler or search index.",
+      "caveats": [
+        "Static links need real destinations; grid/stack/annotated have no variant selectors."
+      ]
+    },
+    "rich-text-editor": {
+      "use": "Show a contenteditable text area with toolbar affordances.",
+      "avoid": "A secure full editor or working formatting controls.",
+      "caveats": [
+        "No toolbar handlers, serialization or sanitization. Textbox lacks an accessible name; section label does not label the textbox.",
+        "OBSERVED: axe aria-input-field-name on contenteditable textbox in both Kujo themes."
+      ],
+      "a11yRating": "needs improvement",
+      "a11y": "No toolbar handlers, serialization or sanitization. Textbox lacks an accessible name; section label does not label the textbox. OBSERVED: axe aria-input-field-name on contenteditable textbox in both Kujo themes."
+    },
+    "roadmap": {
+      "use": "Display an ordered milestone timeline with dates.",
+      "avoid": "A scheduling engine or current release plan.",
+      "caveats": [
+        "Fixture dates describe sample content. CSS timeline is static; compact/release-plan have no switches."
+      ]
+    },
+    "search-input": {
+      "use": "Provide a labeled native search form.",
+      "avoid": "A search index or instant filtering supplied by SiteKit.",
+      "caveats": [
+        "Consumer owns submit and results. Template supplies only an input and button."
+      ],
+      "behavior": "native",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Consumer owns submit and results. Template supplies only an input and button."
+    },
+    "segmented-control": {
+      "use": "Present a group of view-mode buttons.",
+      "avoid": "A complete single-select state controller.",
+      "caveats": [
+        "Only lab clicks synchronize aria-pressed. Native button semantics remain; all buttons should explicitly declare pressed state in consumer code."
+      ],
+      "behavior": "example-only-js",
+      "interaction": "Only lab clicks synchronize aria-pressed. Native button semantics remain; all buttons should explicitly declare pressed state in consumer code."
+    },
+    "select": {
+      "use": "Capture a choice with a native select.",
+      "avoid": "An async combobox or custom select listbox.",
+      "caveats": [
+        "Template has only three themes and omits bzby; theme behavior requires data-sk-theme-select with explicit valid option values."
+      ],
+      "behavior": "native",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Template has only three themes and omits bzby; theme behavior requires data-sk-theme-select with explicit valid option values.",
+      "controls": {
+        "value": {
+          "type": "native-value",
+          "property": "value",
+          "confidence": "PROPOSED browser-property adapter; not schema API"
+        }
+      }
+    },
+    "separator": {
+      "use": "Separate adjacent content with horizontal separator semantics.",
+      "avoid": "Vertical orientation without new styles/markup.",
+      "caveats": [
+        "Decorative X is aria-hidden. horizontal/compact are descriptive rather than CSS variants."
+      ]
+    },
+    "skeleton": {
+      "use": "Show a decorative loading placeholder silhouette.",
+      "avoid": "A loading announcement on its own.",
+      "caveats": [
+        "aria-hidden=true; pair with a named status elsewhere. Pulse duration is hardcoded 1400ms and opt-in to motion."
+      ]
+    },
+    "skip-link": {
+      "use": "Let keyboard users jump to the main region.",
+      "avoid": "A hidden link whose target is missing or not useful.",
+      "caveats": [
+        "Requires #main; uses focus-visible reveal, unlike the sk-sr-only link in existing layouts."
+      ],
+      "behavior": "native",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Requires #main; uses focus-visible reveal, unlike the sk-sr-only link in existing layouts."
+    },
+    "slider": {
+      "use": "Capture a scalar through a native range control.",
+      "avoid": "A multi-thumb slider or labeled value display supplied by SiteKit.",
+      "caveats": [
+        "Template min/max/value are literal attributes; consumer owns value output and units.",
+        "OBSERVED: isolated 390px probe yields document scrollWidth 392px in both Kujo themes. Font loading is outside probe scope; verify native input sizing/margins in final composition."
+      ],
+      "behavior": "native",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Template min/max/value are literal attributes; consumer owns value output and units.",
+      "controls": {
+        "value": {
+          "type": "native-value",
+          "property": "value",
+          "confidence": "PROPOSED browser-property adapter; not schema API"
+        }
+      }
+    },
+    "spinner": {
+      "use": "Show a nine-cell activity animation with Loading status text.",
+      "avoid": "Determinate progress or decorative motion without status meaning.",
+      "caveats": [
+        "Animation duration 1800ms and phase delays bypass motion duration tokens; animation runs only for no-preference."
+      ]
+    },
+    "stack": {
+      "use": "Display vertically spaced child panels with borders and padding.",
+      "avoid": "Assuming sk-stack and sk-stack-component are identical.",
+      "caveats": [
+        "Component selector is sk-stack-component; utility sk-stack only supplies layout. Local focus selectors mistakenly use sk-stack; base focus still applies."
+      ]
+    },
+    "stats-bar": {
+      "use": "Present metrics as a definition list with strong numeric typography.",
+      "avoid": "Live analytics or verified product statistics.",
+      "caveats": [
+        "Values are sample marketing copy; no inline/boxed/stacked switching."
+      ]
+    },
+    "stepper": {
+      "use": "Combine a native numeric input with decrement/increment buttons.",
+      "avoid": "A complete bounded quantity controller.",
+      "caveats": [
+        "Extra buttons are lab-only, ignore min/max and emit change. Browser number input remains native; plus/minus need clearer accessible names."
+      ],
+      "behavior": "example-only-js",
+      "a11yRating": "needs improvement",
+      "a11y": "Extra buttons are lab-only, ignore min/max and emit change. Browser number input remains native; plus/minus need clearer accessible names.",
+      "interaction": "Extra buttons are lab-only, ignore min/max and emit change. Browser number input remains native; plus/minus need clearer accessible names."
+    },
+    "table": {
+      "use": "Display captioned tabular data with scoped headers and overflow wrapper.",
+      "avoid": "A sortable, filterable, virtualized data grid.",
+      "caveats": [
+        "No sorting or row selection API; horizontal scrolling relies on content overflow and wrapper keyboard reachability needs testing."
+      ],
+      "a11yRating": "strong",
+      "a11y": "Caption plus scope=col and scope=row are present. The scroll wrapper lacks explicit focusability; test keyboard access with very wide data.",
+      "related": [
+        "badge",
+        "metadata-panel"
+      ]
+    },
+    "tabs": {
+      "use": "Provide the styled tablist/panel structure for related views.",
+      "avoid": "A working accessible tabs controller from dist alone.",
+      "caveats": [
+        "No dist tab events or roving tabindex. Lab supports clicks only. required panels is absent from props; template panel singular differs from slots."
+      ],
+      "behavior": "example-only-js",
+      "a11yRating": "needs improvement",
+      "a11y": "No dist tab events or roving tabindex. Lab supports clicks only. required panels is absent from props; template panel singular differs from slots.",
+      "documentation": "contradicts implementation",
+      "docReason": "No dist tab events or roving tabindex. Lab supports clicks only. required panels is absent from props; template panel singular differs from slots.",
+      "interaction": "No dist tab events or roving tabindex. Lab supports clicks only. required panels is absent from props; template panel singular differs from slots.",
+      "related": [
+        "segmented-control",
+        "navigation"
+      ]
+    },
+    "team-grid": {
+      "use": "Arrange profile summaries in an intrinsic grid.",
+      "avoid": "A directory service or avatar loader.",
+      "caveats": [
+        "Initials are decorative spans; names carry identity. profiles/compact/leadership lack selectors."
+      ]
+    },
+    "testimonial-rail": {
+      "use": "Present quote figures with attributions in a grid.",
+      "avoid": "An animated testimonial carousel.",
+      "caveats": [
+        "Despite rail name, implementation is an intrinsic grid with no scrolling/rail controller."
+      ]
+    },
+    "text-input": {
+      "use": "Capture short text with an explicit label.",
+      "avoid": "An autocomplete, validator or form-state manager.",
+      "caveats": [
+        "Native value/required/readonly/disabled can be authored but are absent from component schema."
+      ],
+      "behavior": "native",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Native value/required/readonly/disabled can be authored but are absent from component schema.",
+      "controls": {
+        "value": {
+          "type": "native-value",
+          "property": "value",
+          "confidence": "PROPOSED browser-property adapter; not schema API"
+        }
+      }
+    },
+    "textarea": {
+      "use": "Capture multiline native text with label and minimum height.",
+      "avoid": "Rich-text formatting or autoresize behavior.",
+      "caveats": [
+        "Nine-rem min height; no auto-resize controller. Native resize behavior varies by browser."
+      ],
+      "behavior": "native",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Nine-rem min height; no auto-resize controller. Native resize behavior varies by browser.",
+      "controls": {
+        "value": {
+          "type": "native-value",
+          "property": "value",
+          "confidence": "PROPOSED browser-property adapter; not schema API"
+        }
+      }
+    },
+    "toast": {
+      "use": "Show an inline live status with a dismiss button.",
+      "avoid": "A queue, portal, timer or notification service.",
+      "caveats": [
+        "Dismiss is implemented only in the lab; no dist handler. Component is in flow, not fixed to viewport."
+      ],
+      "behavior": "example-only-js",
+      "interaction": "Dismiss is implemented only in the lab; no dist handler. Component is in flow, not fixed to viewport."
+    },
+    "toggle": {
+      "use": "Capture a native boolean with a square moving indicator.",
+      "avoid": "An automatically persisted setting or role=switch controller.",
+      "caveats": [
+        "Uses checkbox semantics, not switch role. Thumb transform is physical translateX and may need RTL review."
+      ],
+      "behavior": "native",
+      "interaction": "Browser-native control/navigation behavior for the source elements; no SiteKit-specific callback or controller. Uses checkbox semantics, not switch role. Thumb transform is physical translateX and may need RTL review.",
+      "controls": {
+        "checked": {
+          "type": "boolean",
+          "property": "checked",
+          "target": "native input",
+          "confidence": "PROPOSED browser-property adapter"
+        }
+      }
+    },
+    "tooltip": {
+      "use": "Show advisory text on trigger focus/hover with Escape dismissal.",
+      "avoid": "Essential content, interactive tooltip content or collision-aware positioning.",
+      "caveats": [
+        "Shipped listeners track trigger hover/focus; tooltip pointer-events:none prevents hovering the tooltip itself. Existing aria-describedby is replaced. No touch-specific model."
+      ],
+      "behavior": "optional-js",
+      "documentation": "adequate",
+      "a11yRating": "needs improvement",
+      "a11y": "Shipped listeners track trigger hover/focus; tooltip pointer-events:none prevents hovering the tooltip itself. Existing aria-describedby is replaced. No touch-specific model.",
+      "interaction": "Shipped: button/[aria-describedby] and role=tooltip receive ID relationship; focus and mouseenter reveal; blur/mouseleave hide only when both inactive; Escape hides. Does not keep tooltip open when pointer moves onto tip."
+    },
+    "tree-view": {
+      "use": "Present nested navigation with a branch disclosure affordance.",
+      "avoid": "An ARIA tree widget with arrow-key navigation.",
+      "caveats": [
+        "No dist or lab tree collapse handler. Source uses nested navigation lists, not role=tree; button aria-expanded is static."
+      ],
+      "a11yRating": "needs improvement",
+      "a11y": "No dist or lab tree collapse handler. Source uses nested navigation lists, not role=tree; button aria-expanded is static."
+    },
+    "trust-strip": {
+      "use": "Display a compact grid of named trust/delivery claims.",
+      "avoid": "Real compliance, uptime or refund evidence.",
+      "caveats": [
+        "Claims are illustrative placeholders; no backend verification, default/compact/bordered selectors absent."
+      ]
+    },
+    "video": {
+      "use": "Display a captioned 16:9 media placeholder.",
+      "avoid": "A working video player, embed or caption-track API.",
+      "caveats": [
+        "Source div is role=img, not video/iframe. Native media controls, tracks and consent are consumer work."
+      ],
+      "documentation": "contradicts implementation",
+      "docReason": "Source div is role=img, not video/iframe. Native media controls, tracks and consent are consumer work."
+    },
+    "visually-hidden": {
+      "use": "Keep noninteractive descriptive text available to assistive technology.",
+      "avoid": "Hiding focusable controls that must become visible on focus.",
+      "caveats": [
+        "Clip-path hides visual text without reveal; use skip-link for keyboard navigation. Companion aria-hidden text is example-only."
+      ]
+    }
+  }
+}

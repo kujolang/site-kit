@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-09-06",
+  "sources": [
+    {
+      "url": "https://kujolang.ai/",
+      "method": "curl HTTP 200; web reader failed",
+      "observed": "Canonical root, local SiteKit CSS, local K logomark and site scripts; production source commit unknown",
+      "sha256OfFetchedHtml": "03e49abf555582352119c8f712f9f512dd8ba093b87fb5dd4105df6304a1720d"
+    },
+    {
+      "url": "https://developers.cloudflare.com/pages/framework-guides/deploy-anything/",
+      "method": "official documentation read",
+      "supports": "Static HTML output can be hosted on Pages; build output directory configured"
+    },
+    {
+      "url": "https://developers.cloudflare.com/workers/static-assets/",
+      "method": "official documentation read",
+      "supports": "Workers Static Assets serves static sites; no application server implied"
+    }
+  ],
+  "localEcosystemEvidence": [
+    "../kujolang.ai-work/README.md",
+    "../kujolang.ai-work/build.kujo",
+    "../kujolang.ai-work/assets/css/style.css",
+    "../docs.kujolang.ai/README.md",
+    "../docs.kujolang.ai/scripts/build_site.py",
+    "../docs.kujolang.ai/kujo-ssg.yml"
+  ],
+  "boundary": "Sibling sources establish observed conventions only. No DNS or account inspection. No deployment."
+}

@@ -1,0 +1,1575 @@
+{
+  "auditDate": "2026-09-06",
+  "sourceCommit": "c0d199e06bc926e29de87b7cd983ee3d54db9cda",
+  "methodology": "Chromium; each dossier standalone HTML example at 390x844 in two themes with an outer inline-size container and dist CSS/JS. axe WCAG tags. Font relative URLs are unresolved in setContent; typography/real-font appearance is NOT established by these probes. No real form submissions or external APIs. Axe violations and overflow are observations, not formal compliance results. Skip-link example includes its own main and may produce an audit-harness nested landmark finding.",
+  "components": [
+    {
+      "slug": "accordion",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "accordion",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "alert",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "alert",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "avatar",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "description": "Ensure ARIA attributes are not prohibited for an element's role",
+          "nodes": [
+            {
+              "html": "<span class=\"sk-avatar\" aria-label=\"Alex Morgan\">",
+              "failureSummary": "Fix all of the following:\n  aria-label attribute cannot be used on a span with no valid role attribute."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "avatar",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "description": "Ensure ARIA attributes are not prohibited for an element's role",
+          "nodes": [
+            {
+              "html": "<span class=\"sk-avatar\" aria-label=\"Alex Morgan\">",
+              "failureSummary": "Fix all of the following:\n  aria-label attribute cannot be used on a span with no valid role attribute."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "badge",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "badge",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "bento-grid",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "bento-grid",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "breadcrumbs",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "breadcrumbs",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "button",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "button",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "card",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "card",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "carousel",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "carousel",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "checkbox",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "checkbox",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "checkout-summary",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "checkout-summary",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "code-block",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": [
+        {
+          "id": "scrollable-region-focusable",
+          "impact": "serious",
+          "description": "Ensure elements that have scrollable content are accessible by keyboard in Safari",
+          "nodes": [
+            {
+              "html": "<pre><code>&lt;button class=\"sk-button\" type=\"button\"&gt;Save&lt;/button&gt;</code></pre>",
+              "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "code-block",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": [
+        {
+          "id": "scrollable-region-focusable",
+          "impact": "serious",
+          "description": "Ensure elements that have scrollable content are accessible by keyboard in Safari",
+          "nodes": [
+            {
+              "html": "<pre><code>&lt;button class=\"sk-button\" type=\"button\"&gt;Save&lt;/button&gt;</code></pre>",
+              "failureSummary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "color-picker",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "color-picker",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "combobox",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "combobox",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "command-strip",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "command-strip",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "content-section",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "content-section",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "cta",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "cta",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "date-input",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "date-input",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "date-picker",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": [
+        {
+          "id": "aria-required-children",
+          "impact": "critical",
+          "description": "Ensure elements with an ARIA role that require child roles contain them",
+          "nodes": [
+            {
+              "html": "<div role=\"grid\" aria-label=\"July 2026\">",
+              "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: button, button[aria-current]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "date-picker",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": [
+        {
+          "id": "aria-required-children",
+          "impact": "critical",
+          "description": "Ensure elements with an ARIA role that require child roles contain them",
+          "nodes": [
+            {
+              "html": "<div role=\"grid\" aria-label=\"July 2026\">",
+              "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: button, button[aria-current]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "drawer",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [
+        {
+          "tag": "ASIDE",
+          "class": "sk-drawer",
+          "id": "project-drawer"
+        }
+      ],
+      "violations": [
+        {
+          "id": "aria-hidden-focus",
+          "impact": "serious",
+          "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+          "nodes": [
+            {
+              "html": "<aside class=\"sk-drawer\" id=\"project-drawer\" data-sk-drawer=\"\" hidden=\"\" aria-hidden=\"true\" aria-labelledby=\"drawer-title\">",
+              "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "drawer",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [
+        {
+          "tag": "ASIDE",
+          "class": "sk-drawer",
+          "id": "project-drawer"
+        }
+      ],
+      "violations": [
+        {
+          "id": "aria-hidden-focus",
+          "impact": "serious",
+          "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+          "nodes": [
+            {
+              "html": "<aside class=\"sk-drawer\" id=\"project-drawer\" data-sk-drawer=\"\" hidden=\"\" aria-hidden=\"true\" aria-labelledby=\"drawer-title\">",
+              "failureSummary": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "dropdown-menu",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "dropdown-menu",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "ecosystem-map",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "ecosystem-map",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "empty-state",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "empty-state",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "error-state",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "error-state",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "feature-grid",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "feature-grid",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "fieldset",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "fieldset",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "file",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "file",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "file-upload",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "file-upload",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "footer",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "footer",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "form",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "form",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "form-field",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "form-field",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "generator-panel",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "generator-panel",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "header",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "header",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "heading",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "heading",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "hero",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "hero",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "icon",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "icon",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "image",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "image",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "label",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "label",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "link",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "link",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "list",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "list",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "metadata-panel",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "metadata-panel",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "modal",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "modal",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "navigation",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "navigation",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "newsletter-signup",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "newsletter-signup",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "pagination",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "pagination",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "partners-strip",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "partners-strip",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "popover",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "popover",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "pricing-table",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "pricing-table",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "product-card",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "product-card",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "product-grid",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "product-grid",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "product-showcase",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "product-showcase",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "progress-bar",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "description": "Ensure ARIA attributes are not prohibited for an element's role",
+          "nodes": [
+            {
+              "html": "<div class=\"sk-progress-bar\" aria-label=\"Build progress\"><span style=\"inline-size: 64%\"></span></div>",
+              "failureSummary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "progress-bar",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "description": "Ensure ARIA attributes are not prohibited for an element's role",
+          "nodes": [
+            {
+              "html": "<div class=\"sk-progress-bar\" aria-label=\"Build progress\"><span style=\"inline-size: 64%\"></span></div>",
+              "failureSummary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "progress-indicator",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "progress-indicator",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "promo-banner",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "promo-banner",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "quote",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "quote",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "radio-button",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "radio-button",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "rating",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "rating",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "recent-posts",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "recent-posts",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "resource-links",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "resource-links",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "rich-text-editor",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": [
+        {
+          "id": "aria-input-field-name",
+          "impact": "serious",
+          "description": "Ensure every ARIA input field has an accessible name",
+          "nodes": [
+            {
+              "html": "<div contenteditable=\"true\" role=\"textbox\" aria-multiline=\"true\">Write content here.</div>",
+              "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "rich-text-editor",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": [
+        {
+          "id": "aria-input-field-name",
+          "impact": "serious",
+          "description": "Ensure every ARIA input field has an accessible name",
+          "nodes": [
+            {
+              "html": "<div contenteditable=\"true\" role=\"textbox\" aria-multiline=\"true\">Write content here.</div>",
+              "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "roadmap",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "roadmap",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "search-input",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "search-input",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "segmented-control",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "segmented-control",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "select",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "select",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "separator",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "separator",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "skeleton",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "skeleton",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "skip-link",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "skip-link",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "slider",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 392,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "slider",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 392,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "spinner",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "spinner",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "stack",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "stack",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "stats-bar",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "stats-bar",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "stepper",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "stepper",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "table",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "table",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "tabs",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "tabs",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "team-grid",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "team-grid",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "testimonial-rail",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "testimonial-rail",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "text-input",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "text-input",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "textarea",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "textarea",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "toast",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "toast",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "toggle",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "toggle",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "tooltip",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "tooltip",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "tree-view",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "tree-view",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "trust-strip",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "trust-strip",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "video",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "video",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "visually-hidden",
+      "theme": "kujo-light",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    },
+    {
+      "slug": "visually-hidden",
+      "theme": "kujo-dark",
+      "width": 390,
+      "scrollWidth": 390,
+      "hiddenButRendered": [],
+      "violations": []
+    }
+  ],
+  "containerComparisons": [
+    {
+      "slug": "bento-grid",
+      "contained": false,
+      "columns": "235px 235px 235px 235px"
+    },
+    {
+      "slug": "bento-grid",
+      "contained": true,
+      "columns": "235px 235px 235px 235px"
+    },
+    {
+      "slug": "content-section",
+      "contained": false,
+      "columns": "950px"
+    },
+    {
+      "slug": "content-section",
+      "contained": true,
+      "columns": "529.141px 396.859px"
+    },
+    {
+      "slug": "generator-panel",
+      "contained": false,
+      "columns": "958px"
+    },
+    {
+      "slug": "generator-panel",
+      "contained": true,
+      "columns": "386.234px 551.766px"
+    },
+    {
+      "slug": "newsletter-signup",
+      "contained": false,
+      "columns": "958px"
+    },
+    {
+      "slug": "newsletter-signup",
+      "contained": true,
+      "columns": "491.578px 442.422px"
+    },
+    {
+      "slug": "product-showcase",
+      "contained": false,
+      "columns": "958px"
+    },
+    {
+      "slug": "product-showcase",
+      "contained": true,
+      "columns": "515.891px 422.109px"
+    }
+  ]
+}
