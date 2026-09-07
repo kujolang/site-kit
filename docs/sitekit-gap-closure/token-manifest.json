@@ -2110,9 +2110,7 @@
         "kujo-light": "120ms",
         "personal-dark": "120ms"
       },
-      "consumers": [
-        "button"
-      ]
+      "consumers": []
     },
     {
       "id": "motion.base",
@@ -2157,7 +2155,6 @@
         "personal-dark": "cubic-bezier(.2,0,0,1)"
       },
       "consumers": [
-        "button",
         "mobile-menu",
         "popover",
         "skeleton",

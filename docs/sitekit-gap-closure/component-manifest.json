@@ -1046,7 +1046,7 @@
       "sourceHashes": {
         "components/button/button.schema.json": "c08dca31784c0daf77bdcb791dc1d350c5fe956c84dbd7549f775cf1eefb3a7b",
         "components/button/button.html": "f9d8a510de8bf46280e43469feb99714b4dd52bce7e68e88cf34ed8a7eee493c",
-        "components/button/button.css": "59ddc2948906d458fec2f98c407ef16284768e30d1fc3a56cb0d45c6ebbc60cf",
+        "components/button/button.css": "f6a89b6a81008b42ee15eb450b8955a06e9cc9d029081c7139809bd10c89bded",
         "components/button/button.md": "8173abaf5a0bd9e18003d620e1eddf9f8505cbdd0cea329a6f5f9016b01f5e0e",
         "components/button/examples.json": "71de348ce21558d5ad80165f01183923c576f7a6503d28164679031250a26a23",
         "components/button/example.html": "72c245ed4eb9b6c177dd5e072bbbbb209050ae998e109496d83f7a8d4bfd34f1",
@@ -1226,8 +1226,6 @@
         "--sk-type-weight-bold",
         "--sk-type-line-tight",
         "--sk-shadow-none",
-        "--sk-motion-fast",
-        "--sk-motion-ease",
         "--sk-action-secondary",
         "--sk-action-secondary-text",
         "--sk-focus-width",

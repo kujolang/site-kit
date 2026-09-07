@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Switch inverse button colors atomically to avoid transient low contrast during hover and theme changes.
+
 - Bundle a licensed Tabler outline sprite and lightweight glyph styling.
 - Theme all native scrollbars with SiteKit tokens and preserve system forced-color fallback.
 
@@ -10,6 +12,8 @@
 
 
 ## Unreleased
+
+- Switch inverse button colors atomically to avoid transient low contrast during hover and theme changes.
 
 - Bundle a licensed Tabler outline sprite and lightweight glyph styling.
 - Theme all native scrollbars with SiteKit tokens and preserve system forced-color fallback.
@@ -21,6 +25,8 @@
 - Add subtree lifecycle/disposal, instance ID prefixing, current source contracts, standalone examples, reference compositions and browser regressions.
 
 ## Unreleased
+
+- Switch inverse button colors atomically to avoid transient low contrast during hover and theme changes.
 
 - Bundle a licensed Tabler outline sprite and lightweight glyph styling.
 - Theme all native scrollbars with SiteKit tokens and preserve system forced-color fallback.

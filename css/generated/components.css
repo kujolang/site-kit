@@ -160,7 +160,8 @@
     text-transform: uppercase;
     box-shadow: var(--sk-shadow-none);
     cursor: pointer;
-    transition: background-color var(--sk-motion-fast) var(--sk-motion-ease), color var(--sk-motion-fast) var(--sk-motion-ease);
+    /* Swap foreground/background together: cross-fading inverse colors loses contrast. */
+    transition: none;
   }
 
   .sk-button:hover {
