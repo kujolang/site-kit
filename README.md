@@ -59,7 +59,6 @@ Alternatively, download the GitHub release archive and copy its `dist/` director
 
 ## Themes
 
-Set `data-theme` on `<html>` to `kujo-light`, `kujo-dark`, `personal-dark`, or `bzby`. Theme controls using `data-sk-theme-toggle` or `data-sk-theme-select` are enhanced only when `sitekit.js` is loaded. Component CSS consumes semantic tokens and does not own theme values.
 
 ## Fonts, icons, and licenses
 

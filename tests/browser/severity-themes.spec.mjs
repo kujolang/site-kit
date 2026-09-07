@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-for (const theme of ['kujo-light', 'kujo-dark', 'personal-dark', 'bzby']) {
+for (const theme of ['kujo-light', 'kujo-dark', 'personal-dark']) {
   test(`severity text contrast ${theme}`, async ({ page }) => {
     await page.goto('/health');
     const alerts = ['warning', 'danger', 'success'].map(variant => `<aside class="sk-alert" data-variant="${variant}"><strong>${variant} status</strong><p>Review the reported state.</p></aside>`).join('');

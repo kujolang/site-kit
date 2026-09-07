@@ -1,6 +1,6 @@
 # SiteKit component index
 
-Generated from all 85 component schemas by `npm run build` for SiteKit 1.0.0. Use this index to choose an existing contract before creating a new pattern.
+Generated from all 86 component schemas by `npm run build` for SiteKit 1.0.0. Use this index to choose an existing contract before creating a new pattern.
 
 ## Selection guidance
 
@@ -47,6 +47,7 @@ Use a component when its semantics and behavior match the content. Do not use a 
 
 ## Navigation
 
+- **Mobile Menu** (`components/mobile-menu`): A full-screen modal navigation flyout with native dialog focus and explicit dismissal.
 - **Breadcrumbs** (`components/breadcrumbs`): A navigational trail that shows the current page location.
 - **Header** (`components/header`): A top-level site header with navigation and primary action.
 - **Navigation** (`components/navigation`): A semantic navigation region for primary or secondary links.

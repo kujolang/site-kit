@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "libraryVersion": "1.0.0",
   "sourceIdentity": "SHA-256 sourceHashes per component; commit is recorded in VERIFICATION.md",
-  "runtimeSourceHash": "d86dd4d2a727a27e670634b896ee080213557098f84603e28baa545fcc0a1a8d",
+  "runtimeSourceHash": "f6a9157ee80c5d9af1a64eac26c74c2f9b59ae509db717df01443fb503acadef",
   "components": [
     {
       "slug": "accordion",
@@ -7254,6 +7254,154 @@
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
           "path": "components/metadata-panel/example.html",
           "html": "<aside class=\"sk-metadata-panel\" aria-label=\"Metadata Panel\"><dl><div><dt>Version</dt><dd>1.0.0</dd></div></dl></aside>\n"
+        }
+      ]
+    },
+    {
+      "slug": "mobile-menu",
+      "name": "Mobile Menu",
+      "category": "Navigation",
+      "description": "A full-screen modal navigation flyout with native dialog focus and explicit dismissal.",
+      "version": "1.0.0",
+      "guidance": {
+        "use": "Use a full-screen navigation flyout for compact site headers. Supply ordinary links and an explicit close button.",
+        "avoid": "Context menus, nonmodal side panels, or application dialogs that are not navigation."
+      },
+      "source": {
+        "schema": "components/mobile-menu/mobile-menu.schema.json",
+        "template": "components/mobile-menu/mobile-menu.html",
+        "css": "components/mobile-menu/mobile-menu.css",
+        "documentation": "components/mobile-menu/mobile-menu.md",
+        "examples": "components/mobile-menu/examples.json"
+      },
+      "sourceHashes": {
+        "components/mobile-menu/mobile-menu.schema.json": "7fa3e22ff459b60be958419a1adb1b4359f9ecaff8f93a94cf639c335593dc62",
+        "components/mobile-menu/mobile-menu.html": "4066c1e8599798bdbac29431ac93a6e1bd2d4936773853eaaccaf32b04d7eae9",
+        "components/mobile-menu/mobile-menu.css": "03c940479af4e2493687bff95b36828b69e619c0c6277d7ee51ba60a48a44eb6",
+        "components/mobile-menu/mobile-menu.md": "2b92d3845020a5462784e22789d1604f81fccfc0c4805139fe1dcf3cfc407964",
+        "components/mobile-menu/examples.json": "0d02609f97ff095c5b017399486bc1ae21fbacb7107f19c1b37335b93088057f",
+        "components/mobile-menu/example.html": "ef224f57d2ed808f961631088d89a2a66d44055f644eb50f744e11d3afcb4bcd"
+      },
+      "properties": {
+        "id": {
+          "type": "string",
+          "required": false,
+          "default": null,
+          "allowedValues": null,
+          "binding": {
+            "selector": "[id]",
+            "html": "id and all matching IDREFs"
+          },
+          "stateOwner": "consumer",
+          "example": "demo-mobile-menu"
+        },
+        "title": {
+          "type": "string",
+          "required": true,
+          "default": null,
+          "allowedValues": null,
+          "binding": {
+            "selector": "h2",
+            "html": "textContent"
+          },
+          "stateOwner": "consumer",
+          "example": "Explore"
+        },
+        "open": {
+          "type": "boolean",
+          "required": false,
+          "default": null,
+          "allowedValues": null,
+          "binding": {
+            "selector": "dialog",
+            "html": "native open for nonmodal; showModal() for modal"
+          },
+          "stateOwner": "native",
+          "example": false
+        }
+      },
+      "variants": {
+        "default": {
+          "kind": "alias",
+          "binding": null,
+          "aliasOf": "base",
+          "notes": "Full viewport navigation; no visual variants yet."
+        }
+      },
+      "slots": {
+        "title": {
+          "owner": "consumer",
+          "content": "Trusted semantic HTML; links must be real navigation anchors. Escape text data.",
+          "example": "example.html"
+        },
+        "links": {
+          "owner": "consumer",
+          "content": "Trusted semantic HTML; links must be real navigation anchors. Escape text data.",
+          "example": "example.html"
+        }
+      },
+      "accessibility": {
+        "semantics": "Native dialog with aria-labelledby and a labeled nav; links retain navigation semantics, never role=menu.",
+        "keyboard": "Native modal containment plus SiteKit Tab wrap, Escape dismissal and opener focus restoration. Opening focuses the close button.",
+        "focus": "Visible focus rings; explicit close button; active opener gets aria-expanded.",
+        "notes": [
+          "Background scrolling is locked while open. Link activation closes the flyout.",
+          "Reduced motion disables the enter animation.",
+          "No-JS consumers must provide a visible navigation fallback."
+        ]
+      },
+      "responsive": {
+        "strategy": "Full viewport at any host width using logical dimensions and dynamic viewport height; content scrolls inside the dialog. Consumers choose when to expose the trigger.",
+        "breakpoints": []
+      },
+      "selectors": [
+        ".sk-mobile-menu",
+        ".sk-mobile-menu__header"
+      ],
+      "hooks": [
+        "data-sk-modal-open",
+        "data-sk-modal",
+        "data-sk-modal-close"
+      ],
+      "nativeAttributes": [
+        "type",
+        "controls"
+      ],
+      "dependencies": [
+        "sk-button",
+        "sk-modal"
+      ],
+      "tokenReferences": [
+        "--sk-radius-0",
+        "--sk-space-6",
+        "--sk-surface-page",
+        "--sk-text-primary",
+        "--sk-motion-base",
+        "--sk-motion-ease",
+        "--sk-space-4",
+        "--sk-type-size-xl",
+        "--sk-space-2",
+        "--sk-space-3",
+        "--sk-border-1",
+        "--sk-border-default",
+        "--sk-type-size-lg",
+        "--sk-action-primary",
+        "--sk-action-primary-text",
+        "--sk-focus-width",
+        "--sk-focus-ring",
+        "--sk-focus-offset"
+      ],
+      "examples": [
+        {
+          "id": "mobile-menu-default",
+          "name": "Standalone",
+          "props": {
+            "title": "Explore"
+          },
+          "htmlFile": "example.html",
+          "notes": "Use the optional script to open the modal. Keep equivalent navigation visible when JavaScript is unavailable.",
+          "path": "components/mobile-menu/example.html",
+          "html": "<button class=\"sk-button\" type=\"button\" data-sk-modal-open=\"demo-mobile-menu\" aria-controls=\"demo-mobile-menu\" aria-haspopup=\"dialog\" aria-expanded=\"false\">Menu</button>\n<dialog class=\"sk-mobile-menu\" data-sk-modal id=\"demo-mobile-menu\" aria-labelledby=\"demo-mobile-menu-title\" tabindex=\"-1\">\n  <header class=\"sk-mobile-menu__header\"><h2 id=\"demo-mobile-menu-title\">Explore</h2><button class=\"sk-button\" type=\"button\" data-sk-modal-close autofocus>Close menu</button></header>\n  <nav aria-label=\"Mobile navigation\"><a href=\"#overview\">Overview</a><a href=\"#components\">Components</a><a href=\"#getting-started\">Getting started</a></nav>\n</dialog>\n"
         }
       ]
     },

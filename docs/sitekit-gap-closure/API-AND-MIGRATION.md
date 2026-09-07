@@ -13,7 +13,7 @@ container.replaceChildren(next);
 SiteKit.enhance(container);
 ```
 
-Use `dispose` before removing or replacing enhanced subtrees. It releases document listeners and ResizeObservers; it does not undo HTML state or remove content. Reinserted disposed content can be enhanced again. Repeated enhancement is safe. New modal/drawer openers targeting existing panels work through delegated listeners. New tabs can be inserted and synchronized by enhancing their root. Replace other widget options/controls by disposing and enhancing their component root. There is no global MutationObserver. Calling `enhance` on a child does not reconfigure its ancestors. Theme application synchronizes all controls; initial saved theme is read once and storage failures are ignored. Supported themes are kujo-light, kujo-dark, personal-dark and bzby.
+Use `dispose` before removing or replacing enhanced subtrees. It releases document listeners and ResizeObservers; it does not undo HTML state or remove content. Reinserted disposed content can be enhanced again. Repeated enhancement is safe. New modal/drawer openers targeting existing panels work through delegated listeners. New tabs can be inserted and synchronized by enhancing their root. Replace other widget options/controls by disposing and enhancing their component root. There is no global MutationObserver. Calling `enhance` on a child does not reconfigure its ancestors. Theme application synchronizes all controls; initial saved theme is read once and storage failures are ignored. Supported themes are kujo-light, kujo-dark, personal-dark.
 
 Before repeating an example, use unique IDs in authored HTML, or prefix a **detached** instance:
 
@@ -74,3 +74,7 @@ Floating popovers and tooltips are clamped to the viewport when enhanced and rep
 For form submission from Combobox, leave the query input unnamed and put the application field name on `input[data-sk-value]`; initialize that hidden input to the committed option value. Query text is transient while editing. Read committed selections from that field or `sk:change`.
 
 Without the optional script, native fields, disclosure controls, links and media remain usable. Tabs leave all source panels readable. Date Picker leaves its native date input visible and hides calendar controls until enhancement; Editor hides formatting controls until enhancement but retains named text editing. Other enhancement-only actions require the optional script; use the documented native Select/Date Input or plain content composition when scripting is intentionally absent.
+
+## Mobile Menu
+
+The full-screen navigation component uses native Modal hooks and adds navigation-link dismissal and CSS scroll locking. See components/mobile-menu/mobile-menu.md. Modal openers now synchronize aria-expanded; disposing an open modal closes it.

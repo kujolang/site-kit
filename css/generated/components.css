@@ -1234,6 +1234,21 @@
   }
 }
 
+@layer components {
+  .sk-mobile-menu { position: fixed; inset: 0; margin: 0; box-sizing: border-box; inline-size: 100%; block-size: 100%; block-size: 100dvh; max-inline-size: none; max-block-size: none; border: 0; border-radius: var(--sk-radius-0); padding: var(--sk-space-6); background: var(--sk-surface-page); color: var(--sk-text-primary); overflow-y: auto; overscroll-behavior: contain; }
+  .sk-mobile-menu[open] { display: flex; flex-direction: column; gap: var(--sk-space-6); animation: sk-mobile-menu-enter var(--sk-motion-base) var(--sk-motion-ease); }
+  .sk-mobile-menu::backdrop { background: var(--sk-surface-page); }
+  .sk-mobile-menu__header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--sk-space-4); }
+  .sk-mobile-menu__header h2 { margin: 0; font-size: var(--sk-type-size-xl); }
+  .sk-mobile-menu nav { display: grid; gap: var(--sk-space-2); }
+  .sk-mobile-menu nav a { display: block; padding: var(--sk-space-3); color: var(--sk-text-primary); border-block-end: var(--sk-border-1) solid var(--sk-border-default); font-size: var(--sk-type-size-lg); overflow-wrap: anywhere; text-decoration: none; }
+  .sk-mobile-menu nav a:hover, .sk-mobile-menu nav a[aria-current="page"] { background: var(--sk-action-primary); color: var(--sk-action-primary-text); }
+  .sk-mobile-menu :focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); }
+  html:has(.sk-mobile-menu[open]), body:has(.sk-mobile-menu[open]) { overflow: hidden; }
+  @keyframes sk-mobile-menu-enter { from { transform: translateX(100%); } to { transform: translateX(0); } }
+  @media (prefers-reduced-motion: reduce) { .sk-mobile-menu[open] { animation: none; } }
+}
+
 @layer components { .sk-modal { max-inline-size: min(100% - (2 * var(--sk-space-4)), 42rem); border: var(--sk-border-2) solid var(--sk-border-default); border-radius: var(--sk-radius-0); background: var(--sk-surface-raised); color: var(--sk-text-primary); padding: var(--sk-space-6); box-shadow: var(--sk-shadow-none); } .sk-modal::backdrop { background: color-mix(in srgb, var(--sk-surface-inverse) 72%, transparent); } .sk-modal .sk-modal__actions { display: flex; flex-wrap: wrap; gap: var(--sk-space-3); justify-content: flex-start; } .sk-modal a:focus-visible, .sk-modal button:focus-visible, .sk-modal input:focus-visible, .sk-modal select:focus-visible, .sk-modal textarea:focus-visible, .sk-modal summary:focus-visible, .sk-modal [role="tab"]:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } }
 
 @layer components { .sk-navigation { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sk-space-4); border: var(--sk-border-1) solid var(--sk-border-default); background: var(--sk-surface-card); padding: var(--sk-space-4); } .sk-navigation a { color: var(--sk-text-primary); font-family: var(--sk-font-mono); font-size: var(--sk-type-size-xs); text-transform: uppercase; } .sk-navigation a:focus-visible, .sk-navigation button:focus-visible, .sk-navigation input:focus-visible, .sk-navigation select:focus-visible, .sk-navigation textarea:focus-visible, .sk-navigation summary:focus-visible, .sk-navigation [role="tab"]:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } }

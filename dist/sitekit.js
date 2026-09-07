@@ -36,7 +36,7 @@
   var enhancedDrawers = new WeakSet();
   var enhancedThemeControls = new WeakSet();
   var themeInitialized = false;
-  var supportedThemes = ['kujo-light', 'kujo-dark', 'personal-dark', 'bzby'];
+  var supportedThemes = ['kujo-light', 'kujo-dark', 'personal-dark'];
 
   function nextId(prefix) {
     var id;
@@ -204,6 +204,8 @@
     var openers = modal.id ? controlsTargeting('data-sk-modal-open', modal.id) : [];
     var closeButtons = modal.querySelectorAll('[data-sk-modal-close], [data-sk-modal-dismiss]');
     var previous = null;
+    var updateOpeners = function () { openers.forEach(function (opener) { opener.setAttribute("aria-expanded", String(modal.open)); }); };
+    updateOpeners();
     var close = function () {
       if (typeof modal.close === 'function') modal.close(); else modal.hidden = true;
     };
@@ -212,12 +214,14 @@
       if (opener && opener.getAttribute('data-sk-modal-open') === modal.id && !opener.matches(':disabled, [aria-disabled="true"]')) {
         previous = opener;
         if (!modal.open) modal.showModal();
+        updateOpeners();
       }
-      if (modal.contains(event.target) && event.target.closest('[data-sk-modal-close], [data-sk-modal-dismiss]')) close();
+      if (modal.contains(event.target) && (event.target.closest('[data-sk-modal-close], [data-sk-modal-dismiss]') || (modal.classList.contains('sk-mobile-menu') && event.target.closest('a[href]')))) close();
     });
     listen(modal, 'cancel', function (event) { event.preventDefault(); close(); });
-    listen(modal, 'close', function () { var restore = previous; var hiddenAncestor = restore && restore.closest ? restore.closest('[hidden]') : null; if (hiddenAncestor) restore = hiddenAncestor.parentElement.querySelector('[aria-haspopup="menu"]') || restore; if (restore && restore.isConnected && typeof restore.focus === 'function') window.setTimeout(function () { restore.focus(); }, 0); });
+    listen(modal, 'close', function () { updateOpeners(); var restore = previous; var hiddenAncestor = restore && restore.closest ? restore.closest('[hidden]') : null; if (hiddenAncestor) restore = hiddenAncestor.parentElement.querySelector('[aria-haspopup="menu"]') || restore; if (restore && restore.isConnected && typeof restore.focus === 'function') window.setTimeout(function () { restore.focus(); }, 0); });
     listen(modal, 'keydown', function (event) { if (event.key === 'Escape') close(); else trapFocus(modal, event); });
+    cleanups.get(modal).push(function () { if (modal.open) close(); updateOpeners(); });
   }
 
   function enhanceDrawers() {

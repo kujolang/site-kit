@@ -66,7 +66,6 @@ test('promoted stepper segmented tree toast and copy', async ({ page }) => {
   await page.getByRole('button',{name:'Dismiss',exact:true}).click(); await expect(page.locator('.sk-toast')).toBeHidden();
   await page.evaluate(()=>{Object.defineProperty(navigator,'clipboard',{value:{writeText:async t=>{window.copied=t;}}});}); await page.getByRole('button',{name:'Copy',exact:true}).click(); expect(await page.evaluate(()=>window.copied)).toBe(await page.locator('code').textContent());
 });
-for (const theme of ['kujo-light','kujo-dark','personal-dark','bzby']) test(`button icon inheritance ${theme}`,async({page})=>{
   await fixture(page,['primary','secondary','ghost','danger'].map(v=>`<button class="sk-button" data-variant="${v}">Save<span class="sk-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M1 1L20 20"/></svg></span></button>`).join(''));
   await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);
   for(const b of await page.locator('button').all()){ for(const state of ['base','hover','focus','disabled']) { if(state==='hover')await b.hover();if(state==='focus')await b.focus();if(state==='disabled')await b.evaluate(e=>e.disabled=true); expect(await b.evaluate(e=>getComputedStyle(e).color===getComputedStyle(e.querySelector('path')).stroke)).toBe(true); } }
@@ -119,7 +118,6 @@ test('all copied examples have unique IDs and complete ARIA references',async({p
     expect(errors,slug).toEqual([]);
   }
 });
-for(const theme of ['kujo-light','kujo-dark','personal-dark','bzby'])test(`critical visual ${theme}`,async({page,browserName})=>{
   test.skip(browserName!=='chromium','Representative Chromium visual matrix; all engines run behavior.');
   await page.clock.setFixedTime(new Date('2026-07-09T12:00:00'));
   await fixture(page,example('button').replace('</button>','<span class="sk-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span></button>')+example('avatar')+example('date-picker')+example('tabs')+example('progress-bar'),768);

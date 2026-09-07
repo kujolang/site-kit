@@ -82,7 +82,7 @@ for (const marker of ['<caption', 'scope="col"', 'scope="row"', 'data-sk-drawer'
 for (const match of dashboard.matchAll(/<label\b[^>]*for=["']([^"']+)["']/gi)) {
   assert.match(dashboard, new RegExp(`id=["']${match[1]}["']`), `label target is missing: ${match[1]}`);
 }
-assert.match(read('docs/components.md'), /all 85 component schemas/);
+assert.match(read('docs/components.md'), new RegExp(`all ${components.length} component schemas`));
 assert.equal((read('docs/components.md').match(/^- \*\*/gm) || []).length, components.length, 'generated component index is incomplete');
 
 console.log(`release contract passed: ${components.length} schemas, ${pages.length} representative pages, distribution hashes and semantics verified`);

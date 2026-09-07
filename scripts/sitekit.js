@@ -89,7 +89,7 @@ function generateComponentIndex() {
     Foundations: ['heading', 'icon', 'link', 'separator', 'skip-link', 'visually-hidden'],
     Actions: ['button', 'dropdown-menu', 'pagination', 'segmented-control'],
     Forms: ['checkbox', 'color-picker', 'combobox', 'date-input', 'date-picker', 'fieldset', 'file', 'file-upload', 'form', 'form-field', 'label', 'radio-button', 'rich-text-editor', 'search-input', 'select', 'slider', 'stepper', 'text-input', 'textarea', 'toggle'],
-    Navigation: ['breadcrumbs', 'header', 'navigation', 'tabs', 'tree-view'],
+    Navigation: ['mobile-menu', 'breadcrumbs', 'header', 'navigation', 'tabs', 'tree-view'],
     Overlays: ['drawer', 'modal', 'popover', 'tooltip'],
     Feedback: ['accordion', 'alert', 'empty-state', 'error-state', 'progress-bar', 'progress-indicator', 'skeleton', 'spinner', 'toast'],
     'Data Display': ['avatar', 'badge', 'carousel', 'code-block', 'command-strip', 'ecosystem-map', 'image', 'list', 'metadata-panel', 'rating', 'roadmap', 'stats-bar', 'table', 'video'],

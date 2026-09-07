@@ -1,0 +1,11 @@
+[
+  {
+    "id": "mobile-menu-default",
+    "name": "Standalone",
+    "props": {
+      "title": "Explore"
+    },
+    "htmlFile": "example.html",
+    "notes": "Use the optional script to open the modal. Keep equivalent navigation visible when JavaScript is unavailable."
+  }
+]

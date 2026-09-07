@@ -1,26 +1,4 @@
 @layer tokens {
-  [data-theme="bzby"] {
-    --sk-surface-page: #fffaf0;
-    --sk-surface-raised: #ffffff;
-    --sk-surface-card: #ffffff;
-    --sk-surface-inverse: #111111;
-    --sk-surface-subtle: #ffffff;
-    --sk-surface-accent: #111111;
-    --sk-text-primary: #111111;
-    --sk-text-secondary: #403b33;
-    --sk-text-muted: #766b5f;
-    --sk-text-inverse: #fffaf0;
-    --sk-text-link: #085f63;
-    --sk-action-primary: #111111;
-    --sk-action-primary-text: #fffaf0;
-    --sk-action-secondary: #ffffff;
-    --sk-action-secondary-text: #111111;
-    --sk-border-default: #111111;
-    --sk-border-subtle: #766b5f;
-    --sk-focus-ring: #085f63;
-    --sk-focus-ring-offset: #fffaf0;
-    --sk-shadow-color: #111111;
-  }
   [data-theme="kujo-dark"] {
     --sk-surface-page: var(--sk-color-black);
     --sk-surface-raised: var(--sk-color-gray-900);

@@ -439,84 +439,6 @@
     }
   },
   "themes": {
-    "bzby": {
-      "name": "bzby",
-      "description": "Compact commercial theme with sharper signal states.",
-      "tokens": {
-        "surface": {
-          "page": {
-            "value": "#fffaf0"
-          },
-          "raised": {
-            "value": "#ffffff"
-          },
-          "card": {
-            "value": "#ffffff"
-          },
-          "inverse": {
-            "value": "#111111"
-          },
-          "subtle": {
-            "value": "#ffffff"
-          },
-          "accent": {
-            "value": "#111111"
-          }
-        },
-        "text": {
-          "primary": {
-            "value": "#111111"
-          },
-          "secondary": {
-            "value": "#403b33"
-          },
-          "muted": {
-            "value": "#766b5f"
-          },
-          "inverse": {
-            "value": "#fffaf0"
-          },
-          "link": {
-            "value": "#085f63"
-          }
-        },
-        "action": {
-          "primary": {
-            "value": "#111111"
-          },
-          "primaryText": {
-            "value": "#fffaf0"
-          },
-          "secondary": {
-            "value": "#ffffff"
-          },
-          "secondaryText": {
-            "value": "#111111"
-          }
-        },
-        "border": {
-          "default": {
-            "value": "#111111"
-          },
-          "subtle": {
-            "value": "#766b5f"
-          }
-        },
-        "focus": {
-          "ring": {
-            "value": "#085f63"
-          },
-          "ringOffset": {
-            "value": "#fffaf0"
-          }
-        },
-        "shadow": {
-          "color": {
-            "value": "#111111"
-          }
-        }
-      }
-    },
     "kujo-dark": {
       "name": "kujo-dark",
       "description": "Dark Kujo technical interface theme.",
@@ -807,7 +729,6 @@
   "sourceHashes": {
     "tokens/core.json": "b8076ddf98995ee8ca6262843ef0cb67045ca9eda3930ad4282dd5e96fd31d50",
     "tokens/semantic.json": "3e2574684f91a833b866d8f7de215e237e8b25e8af524bcc824b151812f048e7",
-    "tokens/themes/bzby.json": "b04244c6f7a23fb4828fc285a5a7634d7cc54ea26dd44ea46d2920c2d196bd49",
     "tokens/themes/kujo-dark.json": "56231282b198aba03475ff54e71c0bf1f1ec31614f7ed16cbf5e773b5c30fbb6",
     "tokens/themes/kujo-light.json": "98038c0a492b2823ae6c5cd43c759a5d8189fcf3dc1270e2acd711504ece4618",
     "tokens/themes/personal-dark.json": "4aee1e14912af21909c9539b6d9ec29a78b1f21fa690395c9ddec87462aad9c2"
@@ -820,7 +741,6 @@
       "references": [],
       "resolved": "#060606",
       "themes": {
-        "bzby": "#060606",
         "kujo-dark": "#060606",
         "kujo-light": "#060606",
         "personal-dark": "#060606"
@@ -834,7 +754,6 @@
       "references": [],
       "resolved": "#ffffff",
       "themes": {
-        "bzby": "#ffffff",
         "kujo-dark": "#ffffff",
         "kujo-light": "#ffffff",
         "personal-dark": "#ffffff"
@@ -848,7 +767,6 @@
       "references": [],
       "resolved": "#f9f9f9",
       "themes": {
-        "bzby": "#f9f9f9",
         "kujo-dark": "#f9f9f9",
         "kujo-light": "#f9f9f9",
         "personal-dark": "#f9f9f9"
@@ -862,7 +780,6 @@
       "references": [],
       "resolved": "#060606",
       "themes": {
-        "bzby": "#060606",
         "kujo-dark": "#060606",
         "kujo-light": "#060606",
         "personal-dark": "#060606"
@@ -876,7 +793,6 @@
       "references": [],
       "resolved": "#f9f9f9",
       "themes": {
-        "bzby": "#f9f9f9",
         "kujo-dark": "#f9f9f9",
         "kujo-light": "#f9f9f9",
         "personal-dark": "#f9f9f9"
@@ -890,7 +806,6 @@
       "references": [],
       "resolved": "#eeeeee",
       "themes": {
-        "bzby": "#eeeeee",
         "kujo-dark": "#eeeeee",
         "kujo-light": "#eeeeee",
         "personal-dark": "#eeeeee"
@@ -904,7 +819,6 @@
       "references": [],
       "resolved": "#b8b8b8",
       "themes": {
-        "bzby": "#b8b8b8",
         "kujo-dark": "#b8b8b8",
         "kujo-light": "#b8b8b8",
         "personal-dark": "#b8b8b8"
@@ -918,7 +832,6 @@
       "references": [],
       "resolved": "#5d5d5d",
       "themes": {
-        "bzby": "#5d5d5d",
         "kujo-dark": "#5d5d5d",
         "kujo-light": "#5d5d5d",
         "personal-dark": "#5d5d5d"
@@ -932,7 +845,6 @@
       "references": [],
       "resolved": "#2b2b2b",
       "themes": {
-        "bzby": "#2b2b2b",
         "kujo-dark": "#2b2b2b",
         "kujo-light": "#2b2b2b",
         "personal-dark": "#2b2b2b"
@@ -946,7 +858,6 @@
       "references": [],
       "resolved": "#111111",
       "themes": {
-        "bzby": "#111111",
         "kujo-dark": "#111111",
         "kujo-light": "#111111",
         "personal-dark": "#111111"
@@ -960,7 +871,6 @@
       "references": [],
       "resolved": "#1646d2",
       "themes": {
-        "bzby": "#1646d2",
         "kujo-dark": "#1646d2",
         "kujo-light": "#1646d2",
         "personal-dark": "#1646d2"
@@ -974,7 +884,6 @@
       "references": [],
       "resolved": "#0f6b35",
       "themes": {
-        "bzby": "#0f6b35",
         "kujo-dark": "#0f6b35",
         "kujo-light": "#0f6b35",
         "personal-dark": "#0f6b35"
@@ -988,7 +897,6 @@
       "references": [],
       "resolved": "#765000",
       "themes": {
-        "bzby": "#765000",
         "kujo-dark": "#765000",
         "kujo-light": "#765000",
         "personal-dark": "#765000"
@@ -1002,7 +910,6 @@
       "references": [],
       "resolved": "#a31515",
       "themes": {
-        "bzby": "#a31515",
         "kujo-dark": "#a31515",
         "kujo-light": "#a31515",
         "personal-dark": "#a31515"
@@ -1016,7 +923,6 @@
       "references": [],
       "resolved": "#075d6c",
       "themes": {
-        "bzby": "#075d6c",
         "kujo-dark": "#075d6c",
         "kujo-light": "#075d6c",
         "personal-dark": "#075d6c"
@@ -1030,7 +936,6 @@
       "references": [],
       "resolved": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
       "themes": {
-        "bzby": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
         "kujo-dark": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
         "kujo-light": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
         "personal-dark": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
@@ -1046,7 +951,6 @@
       "references": [],
       "resolved": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
       "themes": {
-        "bzby": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
         "kujo-dark": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
         "kujo-light": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
         "personal-dark": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
@@ -1127,7 +1031,6 @@
       "references": [],
       "resolved": "0.75rem",
       "themes": {
-        "bzby": "0.75rem",
         "kujo-dark": "0.75rem",
         "kujo-light": "0.75rem",
         "personal-dark": "0.75rem"
@@ -1177,7 +1080,6 @@
       "references": [],
       "resolved": "0.875rem",
       "themes": {
-        "bzby": "0.875rem",
         "kujo-dark": "0.875rem",
         "kujo-light": "0.875rem",
         "personal-dark": "0.875rem"
@@ -1203,7 +1105,6 @@
       "references": [],
       "resolved": "1rem",
       "themes": {
-        "bzby": "1rem",
         "kujo-dark": "1rem",
         "kujo-light": "1rem",
         "personal-dark": "1rem"
@@ -1220,13 +1121,13 @@
       "references": [],
       "resolved": "1.125rem",
       "themes": {
-        "bzby": "1.125rem",
         "kujo-dark": "1.125rem",
         "kujo-light": "1.125rem",
         "personal-dark": "1.125rem"
       },
       "consumers": [
         "date-picker",
+        "mobile-menu",
         "partners-strip",
         "promo-banner",
         "quote",
@@ -1241,13 +1142,13 @@
       "references": [],
       "resolved": "1.375rem",
       "themes": {
-        "bzby": "1.375rem",
         "kujo-dark": "1.375rem",
         "kujo-light": "1.375rem",
         "personal-dark": "1.375rem"
       },
       "consumers": [
         "cta",
+        "mobile-menu",
         "pricing-table",
         "product-card"
       ]
@@ -1259,7 +1160,6 @@
       "references": [],
       "resolved": "1.75rem",
       "themes": {
-        "bzby": "1.75rem",
         "kujo-dark": "1.75rem",
         "kujo-light": "1.75rem",
         "personal-dark": "1.75rem"
@@ -1273,7 +1173,6 @@
       "references": [],
       "resolved": "2.25rem",
       "themes": {
-        "bzby": "2.25rem",
         "kujo-dark": "2.25rem",
         "kujo-light": "2.25rem",
         "personal-dark": "2.25rem"
@@ -1289,7 +1188,6 @@
       "references": [],
       "resolved": "3rem",
       "themes": {
-        "bzby": "3rem",
         "kujo-dark": "3rem",
         "kujo-light": "3rem",
         "personal-dark": "3rem"
@@ -1305,7 +1203,6 @@
       "references": [],
       "resolved": "5.375rem",
       "themes": {
-        "bzby": "5.375rem",
         "kujo-dark": "5.375rem",
         "kujo-light": "5.375rem",
         "personal-dark": "5.375rem"
@@ -1321,7 +1218,6 @@
       "references": [],
       "resolved": "1.1",
       "themes": {
-        "bzby": "1.1",
         "kujo-dark": "1.1",
         "kujo-light": "1.1",
         "personal-dark": "1.1"
@@ -1358,7 +1254,6 @@
       "references": [],
       "resolved": "1.5",
       "themes": {
-        "bzby": "1.5",
         "kujo-dark": "1.5",
         "kujo-light": "1.5",
         "personal-dark": "1.5"
@@ -1372,7 +1267,6 @@
       "references": [],
       "resolved": "1.7",
       "themes": {
-        "bzby": "1.7",
         "kujo-dark": "1.7",
         "kujo-light": "1.7",
         "personal-dark": "1.7"
@@ -1389,7 +1283,6 @@
       "references": [],
       "resolved": "400",
       "themes": {
-        "bzby": "400",
         "kujo-dark": "400",
         "kujo-light": "400",
         "personal-dark": "400"
@@ -1403,7 +1296,6 @@
       "references": [],
       "resolved": "520",
       "themes": {
-        "bzby": "520",
         "kujo-dark": "520",
         "kujo-light": "520",
         "personal-dark": "520"
@@ -1417,7 +1309,6 @@
       "references": [],
       "resolved": "700",
       "themes": {
-        "bzby": "700",
         "kujo-dark": "700",
         "kujo-light": "700",
         "personal-dark": "700"
@@ -1448,7 +1339,6 @@
       "references": [],
       "resolved": "0",
       "themes": {
-        "bzby": "0",
         "kujo-dark": "0",
         "kujo-light": "0",
         "personal-dark": "0"
@@ -1462,7 +1352,6 @@
       "references": [],
       "resolved": "0.25rem",
       "themes": {
-        "bzby": "0.25rem",
         "kujo-dark": "0.25rem",
         "kujo-light": "0.25rem",
         "personal-dark": "0.25rem"
@@ -1482,7 +1371,6 @@
       "references": [],
       "resolved": "0.5rem",
       "themes": {
-        "bzby": "0.5rem",
         "kujo-dark": "0.5rem",
         "kujo-light": "0.5rem",
         "personal-dark": "0.5rem"
@@ -1506,6 +1394,7 @@
         "generator-panel",
         "heading",
         "list",
+        "mobile-menu",
         "pagination",
         "popover",
         "product-card",
@@ -1534,7 +1423,6 @@
       "references": [],
       "resolved": "0.75rem",
       "themes": {
-        "bzby": "0.75rem",
         "kujo-dark": "0.75rem",
         "kujo-light": "0.75rem",
         "personal-dark": "0.75rem"
@@ -1566,6 +1454,7 @@
         "hero",
         "image",
         "metadata-panel",
+        "mobile-menu",
         "modal",
         "newsletter-signup",
         "pagination",
@@ -1606,7 +1495,6 @@
       "references": [],
       "resolved": "1rem",
       "themes": {
-        "bzby": "1rem",
         "kujo-dark": "1rem",
         "kujo-light": "1rem",
         "personal-dark": "1rem"
@@ -1633,6 +1521,7 @@
         "generator-panel",
         "header",
         "metadata-panel",
+        "mobile-menu",
         "modal",
         "navigation",
         "newsletter-signup",
@@ -1667,7 +1556,6 @@
       "references": [],
       "resolved": "1.25rem",
       "themes": {
-        "bzby": "1.25rem",
         "kujo-dark": "1.25rem",
         "kujo-light": "1.25rem",
         "personal-dark": "1.25rem"
@@ -1709,13 +1597,13 @@
       "references": [],
       "resolved": "1.5rem",
       "themes": {
-        "bzby": "1.5rem",
         "kujo-dark": "1.5rem",
         "kujo-light": "1.5rem",
         "personal-dark": "1.5rem"
       },
       "consumers": [
         "content-section",
+        "mobile-menu",
         "modal",
         "newsletter-signup"
       ]
@@ -1727,7 +1615,6 @@
       "references": [],
       "resolved": "2rem",
       "themes": {
-        "bzby": "2rem",
         "kujo-dark": "2rem",
         "kujo-light": "2rem",
         "personal-dark": "2rem"
@@ -1745,7 +1632,6 @@
       "references": [],
       "resolved": "2.5rem",
       "themes": {
-        "bzby": "2.5rem",
         "kujo-dark": "2.5rem",
         "kujo-light": "2.5rem",
         "personal-dark": "2.5rem"
@@ -1759,7 +1645,6 @@
       "references": [],
       "resolved": "3rem",
       "themes": {
-        "bzby": "3rem",
         "kujo-dark": "3rem",
         "kujo-light": "3rem",
         "personal-dark": "3rem"
@@ -1773,7 +1658,6 @@
       "references": [],
       "resolved": "4rem",
       "themes": {
-        "bzby": "4rem",
         "kujo-dark": "4rem",
         "kujo-light": "4rem",
         "personal-dark": "4rem"
@@ -1787,7 +1671,6 @@
       "references": [],
       "resolved": "5rem",
       "themes": {
-        "bzby": "5rem",
         "kujo-dark": "5rem",
         "kujo-light": "5rem",
         "personal-dark": "5rem"
@@ -1801,7 +1684,6 @@
       "references": [],
       "resolved": "6rem",
       "themes": {
-        "bzby": "6rem",
         "kujo-dark": "6rem",
         "kujo-light": "6rem",
         "personal-dark": "6rem"
@@ -1815,7 +1697,6 @@
       "references": [],
       "resolved": "42rem",
       "themes": {
-        "bzby": "42rem",
         "kujo-dark": "42rem",
         "kujo-light": "42rem",
         "personal-dark": "42rem"
@@ -1829,7 +1710,6 @@
       "references": [],
       "resolved": "64rem",
       "themes": {
-        "bzby": "64rem",
         "kujo-dark": "64rem",
         "kujo-light": "64rem",
         "personal-dark": "64rem"
@@ -1843,7 +1723,6 @@
       "references": [],
       "resolved": "78rem",
       "themes": {
-        "bzby": "78rem",
         "kujo-dark": "78rem",
         "kujo-light": "78rem",
         "personal-dark": "78rem"
@@ -1860,7 +1739,6 @@
       "references": [],
       "resolved": "92rem",
       "themes": {
-        "bzby": "92rem",
         "kujo-dark": "92rem",
         "kujo-light": "92rem",
         "personal-dark": "92rem"
@@ -1874,7 +1752,6 @@
       "references": [],
       "resolved": "2rem",
       "themes": {
-        "bzby": "2rem",
         "kujo-dark": "2rem",
         "kujo-light": "2rem",
         "personal-dark": "2rem"
@@ -1894,7 +1771,6 @@
       "references": [],
       "resolved": "2.5rem",
       "themes": {
-        "bzby": "2.5rem",
         "kujo-dark": "2.5rem",
         "kujo-light": "2.5rem",
         "personal-dark": "2.5rem"
@@ -1918,7 +1794,6 @@
       "references": [],
       "resolved": "3rem",
       "themes": {
-        "bzby": "3rem",
         "kujo-dark": "3rem",
         "kujo-light": "3rem",
         "personal-dark": "3rem"
@@ -1943,7 +1818,6 @@
       "references": [],
       "resolved": "0",
       "themes": {
-        "bzby": "0",
         "kujo-dark": "0",
         "kujo-light": "0",
         "personal-dark": "0"
@@ -1957,7 +1831,6 @@
       "references": [],
       "resolved": "1px",
       "themes": {
-        "bzby": "1px",
         "kujo-dark": "1px",
         "kujo-light": "1px",
         "personal-dark": "1px"
@@ -1999,6 +1872,7 @@
         "icon",
         "image",
         "metadata-panel",
+        "mobile-menu",
         "navigation",
         "newsletter-signup",
         "pagination",
@@ -2047,7 +1921,6 @@
       "references": [],
       "resolved": "2px",
       "themes": {
-        "bzby": "2px",
         "kujo-dark": "2px",
         "kujo-light": "2px",
         "personal-dark": "2px"
@@ -2068,7 +1941,6 @@
       "references": [],
       "resolved": "3px",
       "themes": {
-        "bzby": "3px",
         "kujo-dark": "3px",
         "kujo-light": "3px",
         "personal-dark": "3px"
@@ -2086,7 +1958,6 @@
       "references": [],
       "resolved": "0",
       "themes": {
-        "bzby": "0",
         "kujo-dark": "0",
         "kujo-light": "0",
         "personal-dark": "0"
@@ -2119,6 +1990,7 @@
         "form-field",
         "generator-panel",
         "hero",
+        "mobile-menu",
         "modal",
         "newsletter-signup",
         "product-card",
@@ -2144,7 +2016,6 @@
       "references": [],
       "resolved": "2px",
       "themes": {
-        "bzby": "2px",
         "kujo-dark": "2px",
         "kujo-light": "2px",
         "personal-dark": "2px"
@@ -2158,7 +2029,6 @@
       "references": [],
       "resolved": "4px",
       "themes": {
-        "bzby": "4px",
         "kujo-dark": "4px",
         "kujo-light": "4px",
         "personal-dark": "4px"
@@ -2172,7 +2042,6 @@
       "references": [],
       "resolved": "6px",
       "themes": {
-        "bzby": "6px",
         "kujo-dark": "6px",
         "kujo-light": "6px",
         "personal-dark": "6px"
@@ -2186,7 +2055,6 @@
       "references": [],
       "resolved": "none",
       "themes": {
-        "bzby": "none",
         "kujo-dark": "none",
         "kujo-light": "none",
         "personal-dark": "none"
@@ -2211,7 +2079,6 @@
       "references": [],
       "resolved": "none",
       "themes": {
-        "bzby": "none",
         "kujo-dark": "none",
         "kujo-light": "none",
         "personal-dark": "none"
@@ -2225,7 +2092,6 @@
       "references": [],
       "resolved": "none",
       "themes": {
-        "bzby": "none",
         "kujo-dark": "none",
         "kujo-light": "none",
         "personal-dark": "none"
@@ -2239,7 +2105,6 @@
       "references": [],
       "resolved": "120ms",
       "themes": {
-        "bzby": "120ms",
         "kujo-dark": "120ms",
         "kujo-light": "120ms",
         "personal-dark": "120ms"
@@ -2255,12 +2120,12 @@
       "references": [],
       "resolved": "180ms",
       "themes": {
-        "bzby": "180ms",
         "kujo-dark": "180ms",
         "kujo-light": "180ms",
         "personal-dark": "180ms"
       },
       "consumers": [
+        "mobile-menu",
         "popover",
         "toggle",
         "tooltip"
@@ -2273,7 +2138,6 @@
       "references": [],
       "resolved": "260ms",
       "themes": {
-        "bzby": "260ms",
         "kujo-dark": "260ms",
         "kujo-light": "260ms",
         "personal-dark": "260ms"
@@ -2287,13 +2151,13 @@
       "references": [],
       "resolved": "cubic-bezier(.2,0,0,1)",
       "themes": {
-        "bzby": "cubic-bezier(.2,0,0,1)",
         "kujo-dark": "cubic-bezier(.2,0,0,1)",
         "kujo-light": "cubic-bezier(.2,0,0,1)",
         "personal-dark": "cubic-bezier(.2,0,0,1)"
       },
       "consumers": [
         "button",
+        "mobile-menu",
         "popover",
         "skeleton",
         "spinner",
@@ -2308,7 +2172,6 @@
       "references": [],
       "resolved": "0",
       "themes": {
-        "bzby": "0",
         "kujo-dark": "0",
         "kujo-light": "0",
         "personal-dark": "0"
@@ -2322,7 +2185,6 @@
       "references": [],
       "resolved": "20",
       "themes": {
-        "bzby": "20",
         "kujo-dark": "20",
         "kujo-light": "20",
         "personal-dark": "20"
@@ -2342,7 +2204,6 @@
       "references": [],
       "resolved": "30",
       "themes": {
-        "bzby": "30",
         "kujo-dark": "30",
         "kujo-light": "30",
         "personal-dark": "30"
@@ -2356,7 +2217,6 @@
       "references": [],
       "resolved": "80",
       "themes": {
-        "bzby": "80",
         "kujo-dark": "80",
         "kujo-light": "80",
         "personal-dark": "80"
@@ -2370,7 +2230,6 @@
       "references": [],
       "resolved": "90",
       "themes": {
-        "bzby": "90",
         "kujo-dark": "90",
         "kujo-light": "90",
         "personal-dark": "90"
@@ -2384,7 +2243,6 @@
       "references": [],
       "resolved": "2px",
       "themes": {
-        "bzby": "2px",
         "kujo-dark": "2px",
         "kujo-light": "2px",
         "personal-dark": "2px"
@@ -2430,6 +2288,7 @@
         "link",
         "list",
         "metadata-panel",
+        "mobile-menu",
         "modal",
         "navigation",
         "newsletter-signup",
@@ -2483,7 +2342,6 @@
       "references": [],
       "resolved": "3px",
       "themes": {
-        "bzby": "3px",
         "kujo-dark": "3px",
         "kujo-light": "3px",
         "personal-dark": "3px"
@@ -2529,6 +2387,7 @@
         "link",
         "list",
         "metadata-panel",
+        "mobile-menu",
         "modal",
         "navigation",
         "newsletter-signup",
@@ -2582,7 +2441,6 @@
       "references": [],
       "resolved": "36rem",
       "themes": {
-        "bzby": "36rem",
         "kujo-dark": "36rem",
         "kujo-light": "36rem",
         "personal-dark": "36rem"
@@ -2596,7 +2454,6 @@
       "references": [],
       "resolved": "48rem",
       "themes": {
-        "bzby": "48rem",
         "kujo-dark": "48rem",
         "kujo-light": "48rem",
         "personal-dark": "48rem"
@@ -2610,7 +2467,6 @@
       "references": [],
       "resolved": "64rem",
       "themes": {
-        "bzby": "64rem",
         "kujo-dark": "64rem",
         "kujo-light": "64rem",
         "personal-dark": "64rem"
@@ -2624,7 +2480,6 @@
       "references": [],
       "resolved": "80rem",
       "themes": {
-        "bzby": "80rem",
         "kujo-dark": "80rem",
         "kujo-light": "80rem",
         "personal-dark": "80rem"
@@ -2640,7 +2495,6 @@
       ],
       "resolved": "#f9f9f9",
       "themes": {
-        "bzby": "#fffaf0",
         "kujo-dark": "#060606",
         "kujo-light": "#f9f9f9",
         "personal-dark": "#0f1115"
@@ -2652,6 +2506,7 @@
         "footer",
         "generator-panel",
         "header",
+        "mobile-menu",
         "newsletter-signup",
         "product-showcase"
       ]
@@ -2665,7 +2520,6 @@
       ],
       "resolved": "#ffffff",
       "themes": {
-        "bzby": "#ffffff",
         "kujo-dark": "#111111",
         "kujo-light": "#ffffff",
         "personal-dark": "#171a20"
@@ -2700,7 +2554,6 @@
       ],
       "resolved": "#ffffff",
       "themes": {
-        "bzby": "#ffffff",
         "kujo-dark": "#111111",
         "kujo-light": "#ffffff",
         "personal-dark": "#171a20"
@@ -2779,7 +2632,6 @@
       ],
       "resolved": "#060606",
       "themes": {
-        "bzby": "#111111",
         "kujo-dark": "#ffffff",
         "kujo-light": "#060606",
         "personal-dark": "#f7f4ed"
@@ -2797,7 +2649,6 @@
       ],
       "resolved": "#ffffff",
       "themes": {
-        "bzby": "#ffffff",
         "kujo-dark": "#111111",
         "kujo-light": "#ffffff",
         "personal-dark": "#171a20"
@@ -2825,7 +2676,6 @@
       ],
       "resolved": "#060606",
       "themes": {
-        "bzby": "#111111",
         "kujo-dark": "#ffffff",
         "kujo-light": "#060606",
         "personal-dark": "#f7f4ed"
@@ -2841,7 +2691,6 @@
       ],
       "resolved": "#060606",
       "themes": {
-        "bzby": "#111111",
         "kujo-dark": "#ffffff",
         "kujo-light": "#060606",
         "personal-dark": "#f7f4ed"
@@ -2877,6 +2726,7 @@
         "link",
         "list",
         "metadata-panel",
+        "mobile-menu",
         "modal",
         "navigation",
         "newsletter-signup",
@@ -2915,7 +2765,6 @@
       ],
       "resolved": "#2b2b2b",
       "themes": {
-        "bzby": "#403b33",
         "kujo-dark": "#eeeeee",
         "kujo-light": "#2b2b2b",
         "personal-dark": "#d7d2c8"
@@ -2962,7 +2811,6 @@
       ],
       "resolved": "#5d5d5d",
       "themes": {
-        "bzby": "#766b5f",
         "kujo-dark": "#b8b8b8",
         "kujo-light": "#5d5d5d",
         "personal-dark": "#a69f94"
@@ -3012,7 +2860,6 @@
       ],
       "resolved": "#ffffff",
       "themes": {
-        "bzby": "#fffaf0",
         "kujo-dark": "#060606",
         "kujo-light": "#f9f9f9",
         "personal-dark": "#0f1115"
@@ -3028,7 +2875,6 @@
       ],
       "resolved": "#060606",
       "themes": {
-        "bzby": "#085f63",
         "kujo-dark": "#7dd3fc",
         "kujo-light": "#060606",
         "personal-dark": "#8cc9ff"
@@ -3044,7 +2890,6 @@
       ],
       "resolved": "#a31515",
       "themes": {
-        "bzby": "#a31515",
         "kujo-dark": "#ff8c8c",
         "kujo-light": "#a31515",
         "personal-dark": "#ff8c8c"
@@ -3063,7 +2908,6 @@
       ],
       "resolved": "#0f6b35",
       "themes": {
-        "bzby": "#0f6b35",
         "kujo-dark": "#6fdc8c",
         "kujo-light": "#0f6b35",
         "personal-dark": "#6fdc8c"
@@ -3081,7 +2925,6 @@
       ],
       "resolved": "#765000",
       "themes": {
-        "bzby": "#765000",
         "kujo-dark": "#ffd166",
         "kujo-light": "#765000",
         "personal-dark": "#ffd166"
@@ -3099,7 +2942,6 @@
       ],
       "resolved": "#060606",
       "themes": {
-        "bzby": "#111111",
         "kujo-dark": "#ffffff",
         "kujo-light": "#060606",
         "personal-dark": "#f7f4ed"
@@ -3113,6 +2955,7 @@
         "dropdown-menu",
         "fieldset",
         "file-upload",
+        "mobile-menu",
         "pagination",
         "radio-button",
         "segmented-control",
@@ -3130,7 +2973,6 @@
       ],
       "resolved": "#ffffff",
       "themes": {
-        "bzby": "#fffaf0",
         "kujo-dark": "#060606",
         "kujo-light": "#ffffff",
         "personal-dark": "#0f1115"
@@ -3143,6 +2985,7 @@
         "dropdown-menu",
         "file-upload",
         "header",
+        "mobile-menu",
         "pagination",
         "segmented-control",
         "stepper",
@@ -3159,7 +3002,6 @@
       ],
       "resolved": "#ffffff",
       "themes": {
-        "bzby": "#ffffff",
         "kujo-dark": "#111111",
         "kujo-light": "#ffffff",
         "personal-dark": "#171a20"
@@ -3179,7 +3021,6 @@
       ],
       "resolved": "#060606",
       "themes": {
-        "bzby": "#111111",
         "kujo-dark": "#ffffff",
         "kujo-light": "#060606",
         "personal-dark": "#f7f4ed"
@@ -3200,7 +3041,6 @@
       ],
       "resolved": "#a31515",
       "themes": {
-        "bzby": "#a31515",
         "kujo-dark": "#ff8c8c",
         "kujo-light": "#a31515",
         "personal-dark": "#a31515"
@@ -3218,7 +3058,6 @@
       ],
       "resolved": "#ffffff",
       "themes": {
-        "bzby": "#ffffff",
         "kujo-dark": "#060606",
         "kujo-light": "#ffffff",
         "personal-dark": "#ffffff"
@@ -3234,7 +3073,6 @@
       "references": [],
       "resolved": "transparent",
       "themes": {
-        "bzby": "transparent",
         "kujo-dark": "transparent",
         "kujo-light": "transparent",
         "personal-dark": "transparent"
@@ -3250,7 +3088,6 @@
       ],
       "resolved": "#060606",
       "themes": {
-        "bzby": "#111111",
         "kujo-dark": "#ffffff",
         "kujo-light": "#060606",
         "personal-dark": "#f7f4ed"
@@ -3291,6 +3128,7 @@
         "icon",
         "image",
         "metadata-panel",
+        "mobile-menu",
         "modal",
         "navigation",
         "newsletter-signup",
@@ -3343,7 +3181,6 @@
       ],
       "resolved": "#b8b8b8",
       "themes": {
-        "bzby": "#766b5f",
         "kujo-dark": "#b8b8b8",
         "kujo-light": "#5d5d5d",
         "personal-dark": "#a69f94"
@@ -3366,7 +3203,6 @@
       ],
       "resolved": "#060606",
       "themes": {
-        "bzby": "#060606",
         "kujo-dark": "#060606",
         "kujo-light": "#060606",
         "personal-dark": "#060606"
@@ -3384,7 +3220,6 @@
       ],
       "resolved": "#ffffff",
       "themes": {
-        "bzby": "#ffffff",
         "kujo-dark": "#ffffff",
         "kujo-light": "#ffffff",
         "personal-dark": "#ffffff"
@@ -3400,7 +3235,6 @@
       ],
       "resolved": "#060606",
       "themes": {
-        "bzby": "#085f63",
         "kujo-dark": "#7dd3fc",
         "kujo-light": "#060606",
         "personal-dark": "#8cc9ff"
@@ -3446,6 +3280,7 @@
         "link",
         "list",
         "metadata-panel",
+        "mobile-menu",
         "modal",
         "navigation",
         "newsletter-signup",
@@ -3501,7 +3336,6 @@
       ],
       "resolved": "#f9f9f9",
       "themes": {
-        "bzby": "#fffaf0",
         "kujo-dark": "#060606",
         "kujo-light": "#f9f9f9",
         "personal-dark": "#0f1115"
@@ -3517,7 +3351,6 @@
       ],
       "resolved": "#060606",
       "themes": {
-        "bzby": "#111111",
         "kujo-dark": "#ffffff",
         "kujo-light": "#060606",
         "personal-dark": "#f7f4ed"
@@ -3533,7 +3366,6 @@
       ],
       "resolved": "#ffffff",
       "themes": {
-        "bzby": "#ffffff",
         "kujo-dark": "#ffffff",
         "kujo-light": "#ffffff",
         "personal-dark": "#ffffff"
@@ -3551,7 +3383,6 @@
       ],
       "resolved": "#060606",
       "themes": {
-        "bzby": "#060606",
         "kujo-dark": "#060606",
         "kujo-light": "#060606",
         "personal-dark": "#060606"
@@ -3569,7 +3400,6 @@
       ],
       "resolved": "#060606",
       "themes": {
-        "bzby": "#060606",
         "kujo-dark": "#060606",
         "kujo-light": "#060606",
         "personal-dark": "#060606"
@@ -3587,7 +3417,6 @@
       ],
       "resolved": "#0f6b35",
       "themes": {
-        "bzby": "#0f6b35",
         "kujo-dark": "#6fdc8c",
         "kujo-light": "#0f6b35",
         "personal-dark": "#6fdc8c"
@@ -3607,7 +3436,6 @@
       ],
       "resolved": "#765000",
       "themes": {
-        "bzby": "#765000",
         "kujo-dark": "#ffd166",
         "kujo-light": "#765000",
         "personal-dark": "#ffd166"
@@ -3626,7 +3454,6 @@
       ],
       "resolved": "#a31515",
       "themes": {
-        "bzby": "#a31515",
         "kujo-dark": "#ff8c8c",
         "kujo-light": "#a31515",
         "personal-dark": "#ff8c8c"
@@ -3652,7 +3479,6 @@
       ],
       "resolved": "#075d6c",
       "themes": {
-        "bzby": "#075d6c",
         "kujo-dark": "#7dd3fc",
         "kujo-light": "#075d6c",
         "personal-dark": "#8cc9ff"
@@ -3670,7 +3496,6 @@
       ],
       "resolved": "2.5rem",
       "themes": {
-        "bzby": "2.5rem",
         "kujo-dark": "2.5rem",
         "kujo-light": "2.5rem",
         "personal-dark": "2.5rem"
@@ -3688,7 +3513,6 @@
       ],
       "resolved": "0.5rem",
       "themes": {
-        "bzby": "0.5rem",
         "kujo-dark": "0.5rem",
         "kujo-light": "0.5rem",
         "personal-dark": "0.5rem"
@@ -3706,7 +3530,6 @@
       ],
       "resolved": "1.25rem",
       "themes": {
-        "bzby": "1.25rem",
         "kujo-dark": "1.25rem",
         "kujo-light": "1.25rem",
         "personal-dark": "1.25rem"
@@ -3730,7 +3553,6 @@
       ],
       "resolved": "1.25rem",
       "themes": {
-        "bzby": "1.25rem",
         "kujo-dark": "1.25rem",
         "kujo-light": "1.25rem",
         "personal-dark": "1.25rem"
@@ -3750,7 +3572,6 @@
       ],
       "resolved": "1.5rem",
       "themes": {
-        "bzby": "1.5rem",
         "kujo-dark": "1.5rem",
         "kujo-light": "1.5rem",
         "personal-dark": "1.5rem"
@@ -3768,7 +3589,6 @@
       ],
       "resolved": "78rem",
       "themes": {
-        "bzby": "78rem",
         "kujo-dark": "78rem",
         "kujo-light": "78rem",
         "personal-dark": "78rem"
@@ -3786,7 +3606,6 @@
       ],
       "resolved": "1.25rem",
       "themes": {
-        "bzby": "1.25rem",
         "kujo-dark": "1.25rem",
         "kujo-light": "1.25rem",
         "personal-dark": "1.25rem"

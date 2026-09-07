@@ -246,6 +246,12 @@
     "url": "../../components/metadata-panel/metadata-panel.md"
   },
   {
+    "id": "mobile-menu",
+    "title": "Mobile Menu",
+    "description": "Use a full-screen navigation flyout for compact site headers. Supply ordinary links and an explicit close button.",
+    "url": "../../components/mobile-menu/mobile-menu.md"
+  },
+  {
     "id": "modal",
     "title": "Modal",
     "description": "Open a labeled native dialog with explicit dismissal and opener restoration.",

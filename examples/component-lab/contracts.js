@@ -525,6 +525,17 @@ window.SiteKitCatalog = [
     "sample": "<aside class=\"sk-metadata-panel\" aria-label=\"Metadata Panel\"><dl><div><dt>Version</dt><dd>1.0.0</dd></div></dl></aside>\n"
   },
   {
+    "slug": "mobile-menu",
+    "name": "Mobile Menu",
+    "category": "Navigation",
+    "description": "A full-screen modal navigation flyout with native dialog focus and explicit dismissal.",
+    "variants": [
+      "default"
+    ],
+    "keyboard": "Native modal containment plus SiteKit Tab wrap, Escape dismissal and opener focus restoration. Opening focuses the close button.",
+    "sample": "<button class=\"sk-button\" type=\"button\" data-sk-modal-open=\"demo-mobile-menu\" aria-controls=\"demo-mobile-menu\" aria-haspopup=\"dialog\" aria-expanded=\"false\">Menu</button>\n<dialog class=\"sk-mobile-menu\" data-sk-modal id=\"demo-mobile-menu\" aria-labelledby=\"demo-mobile-menu-title\" tabindex=\"-1\">\n  <header class=\"sk-mobile-menu__header\"><h2 id=\"demo-mobile-menu-title\">Explore</h2><button class=\"sk-button\" type=\"button\" data-sk-modal-close autofocus>Close menu</button></header>\n  <nav aria-label=\"Mobile navigation\"><a href=\"#overview\">Overview</a><a href=\"#components\">Components</a><a href=\"#getting-started\">Getting started</a></nav>\n</dialog>\n"
+  },
+  {
     "slug": "modal",
     "name": "Modal",
     "category": "Overlays",

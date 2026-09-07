@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Add reusable full-screen Mobile Menu navigation with native dialog focus, scroll locking, navigation dismissal and reduced-motion support.
+- Retire the commercial color scheme; Kujo light, Kujo dark and personal dark remain.
+
+
+## Unreleased
+
 - Match personal-dark severity text to its existing readable state palette for alerts and other status text.
 
 - Repair isolated hidden Drawer, inherited Icon color, Avatar/Progress semantics, keyboard code overflow, tooltip persistence, skip links and containment.

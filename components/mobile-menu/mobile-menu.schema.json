@@ -1,0 +1,144 @@
+{
+  "$schema": "../../schemas/component.schema.json",
+  "name": "Mobile Menu",
+  "description": "A full-screen modal navigation flyout with native dialog focus and explicit dismissal.",
+  "props": {
+    "id": "string",
+    "title": "string",
+    "open": "boolean"
+  },
+  "variants": [
+    "default"
+  ],
+  "requiredFields": [
+    "title"
+  ],
+  "accessibility": {
+    "semantics": "Native dialog with aria-labelledby and a labeled nav; links retain navigation semantics, never role=menu.",
+    "keyboard": "Native modal containment plus SiteKit Tab wrap, Escape dismissal and opener focus restoration. Opening focuses the close button.",
+    "focus": "Visible focus rings; explicit close button; active opener gets aria-expanded.",
+    "notes": [
+      "Background scrolling is locked while open. Link activation closes the flyout.",
+      "Reduced motion disables the enter animation.",
+      "No-JS consumers must provide a visible navigation fallback."
+    ]
+  },
+  "tokenDependencies": [
+    "action.primary",
+    "action.primaryText",
+    "border.1",
+    "border.default",
+    "focus.offset",
+    "focus.ring",
+    "focus.width",
+    "motion.base",
+    "motion.ease",
+    "radius.0",
+    "space.2",
+    "space.3",
+    "space.4",
+    "space.6",
+    "surface.page",
+    "text.primary",
+    "type.size.lg",
+    "type.size.xl"
+  ],
+  "responsive": {
+    "strategy": "Full viewport at any host width using logical dimensions and dynamic viewport height; content scrolls inside the dialog. Consumers choose when to expose the trigger.",
+    "breakpoints": []
+  },
+  "slots": [
+    "title",
+    "links"
+  ],
+  "examples": [
+    {
+      "id": "mobile-menu-default",
+      "name": "Standalone",
+      "props": {
+        "title": "Explore"
+      },
+      "htmlFile": "example.html",
+      "notes": "Use the optional script to open the modal. Keep equivalent navigation visible when JavaScript is unavailable."
+    }
+  ],
+  "allowedChildren": [
+    "title",
+    "links"
+  ],
+  "behavior": {
+    "optionalScript": "dist/sitekit.js",
+    "hooks": [
+      "data-sk-modal",
+      "data-sk-modal-open",
+      "data-sk-modal-close",
+      "dialog"
+    ],
+    "keyboard": "Native dialog behavior handles focus; the optional layer explicitly restores focus, traps Tab, and handles Escape.",
+    "dismissal": "Close button, Escape or activation of a contained navigation link. Scroll lock follows dialog open state; dispose closes an open dialog."
+  },
+  "propertyContracts": {
+    "id": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "[id]",
+        "html": "id and all matching IDREFs"
+      },
+      "stateOwner": "consumer",
+      "example": "demo-mobile-menu"
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "h2",
+        "html": "textContent"
+      },
+      "stateOwner": "consumer",
+      "example": "Explore"
+    },
+    "open": {
+      "type": "boolean",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "dialog",
+        "html": "native open for nonmodal; showModal() for modal"
+      },
+      "stateOwner": "native",
+      "example": false
+    }
+  },
+  "variantContracts": {
+    "default": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Full viewport navigation; no visual variants yet."
+    }
+  },
+  "guidance": {
+    "use": "Use a full-screen navigation flyout for compact site headers. Supply ordinary links and an explicit close button.",
+    "avoid": "Context menus, nonmodal side panels, or application dialogs that are not navigation."
+  },
+  "slotContracts": {
+    "title": {
+      "owner": "consumer",
+      "content": "Trusted semantic HTML; links must be real navigation anchors. Escape text data.",
+      "example": "example.html"
+    },
+    "links": {
+      "owner": "consumer",
+      "content": "Trusted semantic HTML; links must be real navigation anchors. Escape text data.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Navigation"
+}

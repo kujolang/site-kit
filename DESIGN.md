@@ -50,7 +50,6 @@ Tokens are split into primitive tokens in tokens/core.json, semantic tokens in t
 
 ## Themes
 
-- bzby: Compact commercial theme with sharper signal states.
 - kujo-dark: Dark Kujo technical interface theme.
 - kujo-light: Monochrome Kujo command surface with white panels and hard black structure.
 - personal-dark: Personal publishing dark theme with restrained contrast.
@@ -98,6 +97,7 @@ Tokens are split into primitive tokens in tokens/core.json, semantic tokens in t
 - Link: A text link with visible focus and hover states.
 - List: A semantic ordered or unordered list with consistent spacing.
 - Metadata Panel: A compact key-value panel for operational metadata and object facts.
+- Mobile Menu: A full-screen modal navigation flyout with native dialog focus and explicit dismissal.
 - Modal: An interruptive dialog that requires deliberate focus management.
 - Navigation: A semantic navigation region for primary or secondary links.
 - Newsletter Signup: A focused email capture block with semantic form controls and compact supporting copy.

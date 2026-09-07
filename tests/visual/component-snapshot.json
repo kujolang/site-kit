@@ -1,7 +1,7 @@
 {
   "sitekitVersion": "1.0.0",
   "generatedAt": "2026-08-08",
-  "componentCount": 85,
+  "componentCount": 86,
   "components": [
     {
       "slug": "accordion",
@@ -401,6 +401,14 @@
         "default",
         "compact",
         "sidecar"
+      ],
+      "examples": 1
+    },
+    {
+      "slug": "mobile-menu",
+      "name": "Mobile Menu",
+      "variants": [
+        "default"
       ],
       "examples": 1
     },
