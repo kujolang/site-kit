@@ -1,0 +1,21 @@
+{
+  "method": "Agent-directed real Chromium keyboard steps, separate from assertion suite; no physical keyboard or screen-reader session",
+  "steps": [
+    {
+      "step": "Tab to skip",
+      "focus": "Skip to reference content"
+    },
+    {
+      "step": "Activate skip",
+      "focus": "main"
+    },
+    {
+      "step": "Keyboard submit",
+      "status": "Valid locally. No data was sent."
+    },
+    {
+      "step": "Keyboard search",
+      "focus": "Native image and video"
+    }
+  ]
+}

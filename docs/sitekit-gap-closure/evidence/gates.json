@@ -1,0 +1,42 @@
+[
+  {
+    "command": "npm run format:check",
+    "exitCode": 0,
+    "durationMs": 2465
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 0,
+    "durationMs": 1849
+  },
+  {
+    "command": "npm run lint",
+    "exitCode": 0,
+    "durationMs": 2195
+  },
+  {
+    "command": "npm run validate",
+    "exitCode": 0,
+    "durationMs": 8399
+  },
+  {
+    "command": "npm run snapshot",
+    "exitCode": 0,
+    "durationMs": 1235
+  },
+  {
+    "command": "npm run smoke",
+    "exitCode": 0,
+    "durationMs": 1914
+  },
+  {
+    "command": "npm run generated:check",
+    "exitCode": 0,
+    "durationMs": 6099
+  },
+  {
+    "command": "npm run release:check",
+    "exitCode": 0,
+    "durationMs": 3890
+  }
+]

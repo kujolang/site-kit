@@ -1,0 +1,113 @@
+{
+  "baseline": "c0d199e06bc926e29de87b7cd983ee3d54db9cda",
+  "components": [
+    {
+      "slug": "bento-grid",
+      "width": 390,
+      "display": "grid",
+      "columns": "82.5px 82.5px 82.5px 82.5px",
+      "documentWidth": 434
+    },
+    {
+      "slug": "bento-grid",
+      "width": 1000,
+      "display": "grid",
+      "columns": "235px 235px 235px 235px",
+      "documentWidth": 1000
+    },
+    {
+      "slug": "slider",
+      "width": 390,
+      "display": "grid",
+      "columns": "390px",
+      "documentWidth": 392
+    },
+    {
+      "slug": "slider",
+      "width": 1000,
+      "display": "grid",
+      "columns": "1000px",
+      "documentWidth": 1002
+    },
+    {
+      "slug": "drawer",
+      "width": 390,
+      "display": "grid",
+      "columns": "347px",
+      "documentWidth": 390
+    },
+    {
+      "slug": "drawer",
+      "width": 1000,
+      "display": "grid",
+      "columns": "408px",
+      "documentWidth": 1000
+    },
+    {
+      "slug": "content-section",
+      "width": 390,
+      "display": "grid",
+      "columns": "340px",
+      "documentWidth": 390
+    },
+    {
+      "slug": "content-section",
+      "width": 1000,
+      "display": "grid",
+      "columns": "950px",
+      "documentWidth": 1000
+    },
+    {
+      "slug": "generator-panel",
+      "width": 390,
+      "display": "grid",
+      "columns": "348px",
+      "documentWidth": 390
+    },
+    {
+      "slug": "generator-panel",
+      "width": 1000,
+      "display": "grid",
+      "columns": "958px",
+      "documentWidth": 1000
+    },
+    {
+      "slug": "newsletter-signup",
+      "width": 390,
+      "display": "grid",
+      "columns": "348px",
+      "documentWidth": 390
+    },
+    {
+      "slug": "newsletter-signup",
+      "width": 1000,
+      "display": "grid",
+      "columns": "958px",
+      "documentWidth": 1000
+    },
+    {
+      "slug": "product-showcase",
+      "width": 390,
+      "display": "grid",
+      "columns": "348px",
+      "documentWidth": 390
+    },
+    {
+      "slug": "product-showcase",
+      "width": 1000,
+      "display": "grid",
+      "columns": "958px",
+      "documentWidth": 1000
+    }
+  ],
+  "bytes": {
+    "css": {
+      "raw": 122689,
+      "gzip": 13858
+    },
+    "js": {
+      "raw": 12540,
+      "gzip": 2827
+    }
+  }
+}

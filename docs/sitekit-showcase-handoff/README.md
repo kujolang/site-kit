@@ -1,5 +1,7 @@
 # SiteKit showcase handoff
 
+> **Newer library implementation:** See [gap-closure handoff](../sitekit-gap-closure/README.md) for current contracts, fixes and verification. This dossier remains the immutable historical audit; read the new status before using its caveats.
+
 **READY WITH CAVEATS.** Audit of SiteKit 1.0.0 source c0d199e06bc926e29de87b7cd983ee3d54db9cda, 2026-09-06. Build sitekit.kujolang.ai according to this handoff; do not assume declared schema props or lab-only behavior are shipped APIs.
 
 Start with [Executive summary](00-EXECUTIVE-SUMMARY.md), [Architecture](01-ARCHITECTURE.md), [Implementation plan](12-IMPLEMENTATION-PLAN.md), [Acceptance criteria](13-ACCEPTANCE-CRITERIA.md) and [Open questions](14-OPEN-QUESTIONS.md). The [component inventory](02-COMPONENT-INVENTORY.md) is the master coverage checklist.

@@ -1,0 +1,46 @@
+{
+  "attempts": [
+    {
+      "command": "npm run browser:test -- --workers=3",
+      "result": "432 passed",
+      "reportedDuration": "13.7m",
+      "scope": "First implementation checkpoint, before expanded states and references"
+    },
+    {
+      "command": "npm run browser:test -- --workers=5",
+      "observedFailure": "Reference header target-size in Chromium; omitted canonical sk-header__inner wrapper",
+      "remedy": "Use Header canonical inner structure; no axe rule disabled"
+    },
+    {
+      "command": "npm run browser:test -- --workers=5",
+      "result": "Interrupted after macOS process exhaustion / Chromium Target crashed",
+      "remedy": "Full matrix rerun with two workers; no assertions removed"
+    },
+    {
+      "command": "npm run browser:test -- --grep 'reference forms|carousel boundaries|floating panels|dynamic tabs' --workers=3",
+      "result": "12 passed (1.2m)",
+      "testCorrections": "Use Option-Tab for macOS WebKit link navigation; explicitly focus Copy before keyboard activation; naturalWidth is density-corrected by srcset, so assert successful loading, declared width and currentSrc."
+    }
+  ],
+  "reviewDiscoveries": [
+    {
+      "issue": "Nested reference Stack expanded document to code intrinsic width",
+      "remedy": "Source .sk-stack uses minmax(0,1fr) track; children min-inline-size:0. Source code-copy button resists shrinking."
+    }
+  ],
+  "mediaProbe": {
+    "chromium": {
+      "readyState": 4,
+      "error": null
+    },
+    "firefox": {
+      "readyState": 4,
+      "error": null
+    },
+    "webkit": {
+      "readyState": 1,
+      "error": null
+    },
+    "asset": "examples/reference-compositions/assets/diagram.webm"
+  }
+}
