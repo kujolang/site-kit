@@ -63,3 +63,10 @@
     color: var(--sk-action-danger-text);
   }
 }
+
+@layer components {
+  .sk-button:has(.sk-button__status) { position: relative; }
+  .sk-button__status { display: none; }
+  .sk-button[aria-busy="true"] .sk-button__label { visibility: hidden; }
+  .sk-button[aria-busy="true"] .sk-button__status { display: grid; position: absolute; inset: 0; place-items: center; }
+}

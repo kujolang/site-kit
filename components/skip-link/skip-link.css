@@ -1,1 +1,5 @@
-@layer components { .sk-skip-link { display: inline-block; border: var(--sk-border-1) solid var(--sk-border-default); background: var(--sk-surface-card); color: var(--sk-text-primary); padding: var(--sk-space-2) var(--sk-space-3); font-family: var(--sk-font-mono); } .sk-skip-link:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } }
+@layer components {
+  .sk-skip-link { position: absolute; inset-block-start: 0; inset-inline-start: 0; z-index: var(--sk-z-dropdown); transform: translateY(-200%); display: inline-block; border: var(--sk-border-1) solid var(--sk-border-default); background: var(--sk-surface-card); color: var(--sk-text-primary); padding: var(--sk-space-2) var(--sk-space-3); font-family: var(--sk-font-mono); }
+  .sk-skip-link:focus { transform: none; }
+  .sk-skip-link:focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); }
+}

@@ -5,7 +5,7 @@
     border: var(--sk-border-1) solid var(--sk-border-default);
     background: var(--sk-surface-card);
     padding: var(--sk-space-5);
-    container-type: inline-size;
+
   }
 
   .sk-product-showcase__intro {

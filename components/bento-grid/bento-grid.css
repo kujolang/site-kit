@@ -8,7 +8,7 @@
     grid-template-rows: repeat(3, minmax(10rem, 1fr));
     grid-auto-rows: minmax(10rem, 1fr);
     grid-auto-flow: dense;
-    container-type: inline-size;
+
   }
 
   .sk-bento-grid__intro,
@@ -127,3 +127,5 @@
     outline-offset: var(--sk-focus-offset);
   }
 }
+
+@layer components { .sk-bento-grid:not(.sk-component-container > *) { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); grid-template-rows: none; } .sk-bento-grid:not(.sk-component-container > *) > * { grid-column: auto; grid-row: auto; min-inline-size: 0; } }
