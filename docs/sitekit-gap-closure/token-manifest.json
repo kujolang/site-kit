@@ -741,6 +741,15 @@
           },
           "link": {
             "value": "#8cc9ff"
+          },
+          "danger": {
+            "value": "#ff8c8c"
+          },
+          "success": {
+            "value": "#6fdc8c"
+          },
+          "warning": {
+            "value": "#ffd166"
           }
         },
         "action": {
@@ -801,7 +810,7 @@
     "tokens/themes/bzby.json": "b04244c6f7a23fb4828fc285a5a7634d7cc54ea26dd44ea46d2920c2d196bd49",
     "tokens/themes/kujo-dark.json": "56231282b198aba03475ff54e71c0bf1f1ec31614f7ed16cbf5e773b5c30fbb6",
     "tokens/themes/kujo-light.json": "98038c0a492b2823ae6c5cd43c759a5d8189fcf3dc1270e2acd711504ece4618",
-    "tokens/themes/personal-dark.json": "d9d49cf8dd8ee1a65ecae459484b4217a51dc2b41d4762c4596cec204ebf919a"
+    "tokens/themes/personal-dark.json": "4aee1e14912af21909c9539b6d9ec29a78b1f21fa690395c9ddec87462aad9c2"
   },
   "tokens": [
     {
@@ -3038,7 +3047,7 @@
         "bzby": "#a31515",
         "kujo-dark": "#ff8c8c",
         "kujo-light": "#a31515",
-        "personal-dark": "#a31515"
+        "personal-dark": "#ff8c8c"
       },
       "consumers": [
         "alert",
@@ -3057,7 +3066,7 @@
         "bzby": "#0f6b35",
         "kujo-dark": "#6fdc8c",
         "kujo-light": "#0f6b35",
-        "personal-dark": "#0f6b35"
+        "personal-dark": "#6fdc8c"
       },
       "consumers": [
         "alert"
@@ -3075,7 +3084,7 @@
         "bzby": "#765000",
         "kujo-dark": "#ffd166",
         "kujo-light": "#765000",
-        "personal-dark": "#765000"
+        "personal-dark": "#ffd166"
       },
       "consumers": [
         "alert"

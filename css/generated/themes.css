@@ -86,6 +86,9 @@
     --sk-text-muted: #a69f94;
     --sk-text-inverse: #0f1115;
     --sk-text-link: #8cc9ff;
+    --sk-text-danger: #ff8c8c;
+    --sk-text-success: #6fdc8c;
+    --sk-text-warning: #ffd166;
     --sk-action-primary: #f7f4ed;
     --sk-action-primary-text: #0f1115;
     --sk-action-secondary: #171a20;

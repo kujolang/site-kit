@@ -37,6 +37,15 @@
       },
       "link": {
         "value": "#8cc9ff"
+      },
+      "danger": {
+        "value": "#ff8c8c"
+      },
+      "success": {
+        "value": "#6fdc8c"
+      },
+      "warning": {
+        "value": "#ffd166"
       }
     },
     "action": {
