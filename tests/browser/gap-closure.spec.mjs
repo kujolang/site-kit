@@ -171,7 +171,7 @@ test('floating panels stay within viewport edges',async({page})=>{
 test('reference composition visual',async({page,browserName})=>{
   test.skip(browserName!=='chromium','Representative composition visual; behavior runs all engines.');
   await page.setViewportSize({width:390,height:844});await page.goto('/examples/reference-compositions/index.html');await page.evaluate(async()=>{document.querySelector('main').style.fontFamily='Departure Mono';await document.fonts.ready;});
-  await expect(page.locator('main')).toHaveScreenshot('reference-composition.png',{animations:'disabled',mask:[page.locator('video')],maxDiffPixelRatio:0.01});
+  await expect(page.locator('main')).toHaveScreenshot(`reference-composition-${process.platform}.png`,{animations:'disabled',mask:[page.locator('video')],maxDiffPixelRatio:0.01});
 });
 
 for(const width of [320,390,768,1440])test(`navigation tables forms text stress ${width}`,async({page})=>{
