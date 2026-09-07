@@ -6306,15 +6306,15 @@
       },
       "sourceHashes": {
         "components/icon/icon.schema.json": "30cd30d54f290174fcdead4f5f8c8d70b59440ffd77d23d3c7ebcaa40190291e",
-        "components/icon/icon.html": "20c2de2a789668b6bdcea2661060a9b24b8830aabc310b924ef56061e1a75d46",
-        "components/icon/icon.css": "a99157f3043371e4fbe2ff068f68d7170b5276d61832012341e83843c213baa5",
-        "components/icon/icon.md": "b1ba35ea568a67256ccd4f55a24425e3ccf331c69d6dc1ed09ec2012173a2d73",
+        "components/icon/icon.html": "5be616087749b3feed8619446932a1c8f2503dd38737d55602746aeb339665f8",
+        "components/icon/icon.css": "569663648b2cd7ec522645ef00098ae69ae896dbb82dcfc459274f3205166499",
+        "components/icon/icon.md": "d2024051b8e306ad801500298bd3ee1d1685525bc205424fee2811cff4d224aa",
         "components/icon/examples.json": "f0460a374fe747bb5720ecb330fb6e6fc7cab995a6dd3e15ca4e90b0fc4fa986",
-        "components/icon/example.html": "20c2de2a789668b6bdcea2661060a9b24b8830aabc310b924ef56061e1a75d46",
-        "components/icon/example-decorative.html": "030be6c168948f4f6758fa148ab81ac28c2d5e015422dfb6c659dbe574d746ce",
-        "components/icon/example-meaningful.html": "56aa8c3f2a2b1f4527f3f1b63ef710c525337fd686a08fff73ba50ee8355fecc",
-        "components/icon/example-inline.html": "56aa8c3f2a2b1f4527f3f1b63ef710c525337fd686a08fff73ba50ee8355fecc",
-        "components/icon/example-external.html": "cd282063897ace7316585ebedffb4970d105af9e10e1ba956cda2bd0989ccc2c"
+        "components/icon/example.html": "5be616087749b3feed8619446932a1c8f2503dd38737d55602746aeb339665f8",
+        "components/icon/example-decorative.html": "cea1df48ca59da15a7da29b10cdfa972bcc59c4259d3a41ef8081d41763ffaaf",
+        "components/icon/example-meaningful.html": "48246f23630e18abc218661bf7cddd27054aabe203aa19e9f0d337da445bcec7",
+        "components/icon/example-inline.html": "48246f23630e18abc218661bf7cddd27054aabe203aa19e9f0d337da445bcec7",
+        "components/icon/example-external.html": "71d815ed38ff5a4eb3e1e6fc05791d6a74325d7e54714de9fc7aac52ad420e27"
       },
       "properties": {
         "label": {
@@ -6483,7 +6483,8 @@
         ]
       },
       "selectors": [
-        ".sk-icon"
+        ".sk-icon",
+        ".sk-glyph"
       ],
       "hooks": [
         "data-icon-name"
@@ -6503,7 +6504,8 @@
         "--sk-border-2",
         "--sk-focus-width",
         "--sk-focus-ring",
-        "--sk-focus-offset"
+        "--sk-focus-offset",
+        "--sk-space-5"
       ],
       "examples": [
         {
@@ -6516,7 +6518,7 @@
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
           "path": "components/icon/example.html",
-          "html": "<span class=\"sk-icon\" data-icon-name=\"check\" role=\"img\" aria-label=\"Confirmed\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" focusable=\"false\"><path d=\"m5 12 4 4L19 6\" /></svg></span>\n"
+          "html": "<span class=\"sk-icon\" data-icon-name=\"check\" role=\"img\" aria-label=\"Confirmed\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" focusable=\"false\">\n  <path d=\"M5 12l5 5l10 -10\" />\n</svg></span>\n"
         },
         {
           "id": "icon-decorative",
@@ -6527,7 +6529,7 @@
           "htmlFile": "example-decorative.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
           "path": "components/icon/example-decorative.html",
-          "html": "<span class=\"sk-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"m5 12 4 4L19 6\"/></svg></span>\n"
+          "html": "<span class=\"sk-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\">\n  <path d=\"M5 12l5 5l10 -10\" />\n</svg></span>\n"
         },
         {
           "id": "icon-meaningful",
@@ -6539,7 +6541,7 @@
           "htmlFile": "example-meaningful.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
           "path": "components/icon/example-meaningful.html",
-          "html": "<span class=\"sk-icon\" role=\"img\" aria-label=\"Confirmed\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m5 12 4 4L19 6\"/></svg></span>\n"
+          "html": "<span class=\"sk-icon\" role=\"img\" aria-label=\"Confirmed\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\">\n  <path d=\"M5 12l5 5l10 -10\" />\n</svg></span>\n"
         },
         {
           "id": "icon-inline",
@@ -6551,7 +6553,7 @@
           "htmlFile": "example-inline.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
           "path": "components/icon/example-inline.html",
-          "html": "<span class=\"sk-icon\" role=\"img\" aria-label=\"Confirmed\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m5 12 4 4L19 6\"/></svg></span>\n"
+          "html": "<span class=\"sk-icon\" role=\"img\" aria-label=\"Confirmed\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\">\n  <path d=\"M5 12l5 5l10 -10\" />\n</svg></span>\n"
         },
         {
           "id": "icon-external",
@@ -6563,7 +6565,7 @@
           "htmlFile": "example-external.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
           "path": "components/icon/example-external.html",
-          "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" hidden><symbol id=\"local-check\" viewBox=\"0 0 24 24\"><path d=\"m5 12 4 4L19 6\"/></symbol></svg><span class=\"sk-icon\" role=\"img\" aria-label=\"Confirmed\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><use href=\"#local-check\"/></svg></span>\n"
+          "html": "<svg xmlns=\"http://www.w3.org/2000/svg\" hidden><symbol id=\"local-check\" viewBox=\"0 0 24 24\">\n  <path d=\"M5 12l5 5l10 -10\" />\n</symbol></svg><span class=\"sk-icon\" role=\"img\" aria-label=\"Confirmed\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><use href=\"#local-check\"/></svg></span>\n"
         }
       ]
     },

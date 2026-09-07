@@ -15,6 +15,9 @@ const checksumPath = `${archivePath}.sha256`;
 const payload = [
   'LICENSE',
   'dist/LICENSE',
+  'dist/icons/tabler.svg',
+  'dist/icons/LICENSE.txt',
+  'dist/icons/README.md',
   'dist/README.md',
   'dist/sitekit-manifest.json',
   'dist/sitekit.css',

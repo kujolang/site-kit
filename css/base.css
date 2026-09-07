@@ -9,3 +9,13 @@
 }
 
 @layer base { :root { color-scheme: light; } [data-theme="kujo-dark"], [data-theme="personal-dark"] { color-scheme: dark; } body { background: var(--sk-surface-page); color: var(--sk-text-primary); font-family: var(--sk-font-sans); line-height: var(--sk-type-line-normal); letter-spacing: 0; } a { color: var(--sk-text-link); text-underline-offset: .2em; } :focus-visible { outline: var(--sk-focus-width) solid var(--sk-focus-ring); outline-offset: var(--sk-focus-offset); } h1, h2 { font-family: var(--sk-font-mono); font-weight: var(--sk-type-weight-regular); letter-spacing: 0; } h1, h2, h3, h4 { overflow-wrap: anywhere; line-height: var(--sk-type-line-tight); margin-block: 0 var(--sk-space-4); } p { margin-block: 0 var(--sk-space-4); } code, kbd, samp { font-family: var(--sk-font-mono); } @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 1ms !important; scroll-behavior: auto !important; transition-duration: 1ms !important; } } }
+
+/* Preserve native scrolling and system contrast; never hide scrollbars. */
+@layer base {
+ * { scrollbar-color: var(--sk-text-muted) var(--sk-surface-page); scrollbar-width: auto; }
+ ::-webkit-scrollbar { inline-size: var(--sk-space-3); block-size: var(--sk-space-3); }
+ ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: var(--sk-surface-page); }
+ ::-webkit-scrollbar-thumb { background: var(--sk-text-muted); border: var(--sk-border-2) solid var(--sk-surface-page); border-radius: var(--sk-radius-0); }
+ ::-webkit-scrollbar-thumb:hover { background: var(--sk-text-primary); }
+ @media (forced-colors: active) { * { scrollbar-color: auto; } }
+}

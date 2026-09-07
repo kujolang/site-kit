@@ -22,6 +22,9 @@ const prefix = `sitekit-v${pkg.version}`;
 const expectedArchiveEntries = [
   `${prefix}/LICENSE`,
   `${prefix}/dist/LICENSE`,
+  `${prefix}/dist/icons/tabler.svg`,
+  `${prefix}/dist/icons/LICENSE.txt`,
+  `${prefix}/dist/icons/README.md`,
   `${prefix}/dist/README.md`,
   `${prefix}/dist/sitekit-manifest.json`,
   `${prefix}/dist/sitekit.css`,

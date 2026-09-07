@@ -2,11 +2,17 @@
 
 ## Unreleased
 
+- Bundle a licensed Tabler outline sprite and lightweight glyph styling.
+- Theme all native scrollbars with SiteKit tokens and preserve system forced-color fallback.
+
 - Add reusable full-screen Mobile Menu navigation with native dialog focus, scroll locking, navigation dismissal and reduced-motion support.
 - Retire the commercial color scheme; Kujo light, Kujo dark and personal dark remain.
 
 
 ## Unreleased
+
+- Bundle a licensed Tabler outline sprite and lightweight glyph styling.
+- Theme all native scrollbars with SiteKit tokens and preserve system forced-color fallback.
 
 - Match personal-dark severity text to its existing readable state palette for alerts and other status text.
 
@@ -15,6 +21,9 @@
 - Add subtree lifecycle/disposal, instance ID prefixing, current source contracts, standalone examples, reference compositions and browser regressions.
 
 ## Unreleased
+
+- Bundle a licensed Tabler outline sprite and lightweight glyph styling.
+- Theme all native scrollbars with SiteKit tokens and preserve system forced-color fallback.
 
 ## [1.0.0] - 2026-08-08
 

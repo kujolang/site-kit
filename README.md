@@ -64,7 +64,7 @@ Alternatively, download the GitHub release archive and copy its `dist/` director
 
 `sitekit.css` loads `DepartureMono-Regular.woff2` and `.woff` from `./fonts/`. Preserve those paths. SiteKit's code and documentation use the [MIT license](LICENSE); Departure Mono retains its own license in [fonts/DepartureMono-LICENSE.txt](fonts/DepartureMono-LICENSE.txt) and `dist/fonts/DepartureMono-LICENSE.txt`.
 
-SiteKit does not bundle an icon library. Use a small inline SVG or a consumer-owned SVG sprite following the [Icon contract](components/icon/icon.md), and preserve the source icon license.
+SiteKit bundles a curated Tabler Icons v3.46.0 outline sprite and MIT license under `dist/icons/`. Follow the [Icon contract](components/icon/icon.md) and preserve the source license. Native scrollbars use the active theme’s text/surface tokens; forced-color mode retains system colors.
 
 ## Browser support
 

@@ -461,7 +461,7 @@ window.SiteKitCatalog = [
       "external"
     ],
     "keyboard": "Interactive descendants must be reachable by keyboard and expose visible focus.",
-    "sample": "<span class=\"sk-icon\" data-icon-name=\"check\" role=\"img\" aria-label=\"Confirmed\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" focusable=\"false\"><path d=\"m5 12 4 4L19 6\" /></svg></span>\n"
+    "sample": "<span class=\"sk-icon\" data-icon-name=\"check\" role=\"img\" aria-label=\"Confirmed\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" focusable=\"false\">\n  <path d=\"M5 12l5 5l10 -10\" />\n</svg></span>\n"
   },
   {
     "slug": "image",

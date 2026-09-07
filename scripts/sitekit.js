@@ -60,14 +60,15 @@ function generateDistribution() {
   for (const file of ['DepartureMono-Regular.woff', 'DepartureMono-Regular.woff2', 'DepartureMono-LICENSE.txt']) {
     fs.copyFileSync(path.join(root, 'fonts', file), path.join(fonts, file));
   }
+  fs.cpSync(path.join(root, 'icons'), path.join(dist, 'icons'), { recursive: true });
   fs.copyFileSync(path.join(root, 'LICENSE'), path.join(dist, 'LICENSE'));
   fs.writeFileSync(path.join(dist, 'README.md'), `# SiteKit ${packageInfo.version} distribution
 
 This directory is the supported SiteKit v1 source-vendored artifact. Copy it as a unit, load \`sitekit.css\`, and optionally load \`sitekit.js\` for progressive behavior. Keep \`fonts/\` beside the CSS file because the relative font URLs are part of the contract.
 
-The bundle order is reset, tokens, themes, base, components, and utilities. \`LICENSE\` covers SiteKit; \`fonts/DepartureMono-LICENSE.txt\` covers the bundled Departure Mono assets. npm publication is not part of SiteKit v1.
+The bundle order is reset, tokens, themes, base, components, and utilities. \`LICENSE\` covers SiteKit; \`fonts/DepartureMono-LICENSE.txt\` covers the bundled Departure Mono assets. The curated Tabler sprite is in icons/tabler.svg; preserve icons/LICENSE.txt. Theme-aware scrollbars apply throughout the bundle, with forced-color system fallback. npm publication is not part of SiteKit v1.
 `);
-  const files = ['LICENSE', 'README.md', 'sitekit.css', 'sitekit.js', 'fonts/DepartureMono-LICENSE.txt', 'fonts/DepartureMono-Regular.woff', 'fonts/DepartureMono-Regular.woff2'];
+  const files = ['icons/tabler.svg', 'icons/LICENSE.txt', 'icons/README.md', 'LICENSE', 'README.md', 'sitekit.css', 'sitekit.js', 'fonts/DepartureMono-LICENSE.txt', 'fonts/DepartureMono-Regular.woff', 'fonts/DepartureMono-Regular.woff2'];
   const manifest = {
     schemaVersion: 1,
     product: 'SiteKit',

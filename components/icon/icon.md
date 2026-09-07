@@ -34,22 +34,14 @@ See icon.schema.json for the source contract.
 - Keep SVG `focusable="false"` and `aria-hidden="true"` when the parent owns the meaning.
 - Do not rely on color alone.
 
-## Registration contract
+## Bundled Tabler icons
 
-Register only the symbols a consumer uses in its own sprite. Names use lowercase kebab-case (`github`, `external-link`, `close`, `check`). Preserve the source license in the consuming project. SiteKit does not bundle a third-party icon library.
+SiteKit now includes a curated Tabler Icons v3.46.0 outline sprite in `dist/icons/tabler.svg`, its MIT license and symbol inventory. See [icon assets](../../icons/README.md). Use the lightweight `.sk-glyph` directly in buttons, or the existing `.sk-icon` wrapper for sized standalone symbols. Decorative icons use `aria-hidden="true"` and `focusable="false"`; icon-only controls need an accessible name. External use is same-origin HTTP; embed symbols for file URLs.
 
-## Examples
+```html
+<button class="sk-button" type="button" aria-label="Search">
+  <svg class="sk-glyph" aria-hidden="true" focusable="false"><use href="/assets/sitekit/icons/tabler.svg#search"></use></svg>
+</button>
+```
 
-See examples.json and icon.html. The examples include inline SVG, a GitHub brand symbol, and an icon-only close action.
-
-## Maintained contract and standalone example
-
-Use: Wrap small inline SVG or a consumer-owned sprite with sizing and semantics.
-
-Avoid: An icon package, registry service or label for an otherwise unnamed button.
-
-See [contract](icon.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.
-
-## Asset provenance
-
-The canonical check mark is simple SiteKit example geometry under the repository MIT license. The historical `examples/icons.svg#github` is a GitHub brand mark, not an MIT icon-library grant. For permitted uses and current artwork, consult [GitHub brand guidance](https://brand.github.com/foundations/logo) (checked 2026-09-06). Preserve brand attribution and use it only to identify/link GitHub; do not present it as SiteKit artwork. The distribution does not bundle that example sprite.
+Inline canonical check examples use Tabler check geometry. Custom product logos remain their owners’ brand assets; they are not interface icons. Additional symbols should be sourced from the pinned upstream set with license preservation.

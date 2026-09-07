@@ -17,7 +17,8 @@
     "./sitekit.css": "./dist/sitekit.css",
     "./sitekit.js": "./dist/sitekit.js",
     "./fonts/*": "./dist/fonts/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./icons/*": "./dist/icons/*"
   },
   "style": "dist/sitekit.css",
   "repository": {

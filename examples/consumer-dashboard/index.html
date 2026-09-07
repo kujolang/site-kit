@@ -40,7 +40,12 @@
   <header class="sk-header dashboard__header">
     <div class="sk-header__inner">
       <a class="dashboard__brand" href="#main" aria-label="SiteKit dashboard home">
-        <span class="sk-icon" data-size="sm" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 5h14v14H5zM9 9h6v6H9z"/></svg></span>
+        <span class="sk-icon" data-size="sm" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+  <path d="M5 4h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" />
+  <path d="M5 16h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" />
+  <path d="M15 12h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" />
+  <path d="M15 4h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" />
+</svg></span>
         <span>SiteKit / Source of Truth</span>
       </a>
       <nav class="sk-navigation" aria-label="Primary">
@@ -49,7 +54,9 @@
         <a href="https://github.com/kujolang" rel="noreferrer">GitHub</a>
       </nav>
       <div class="sk-cluster">
-        <button class="sk-button" type="button" data-sk-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><span class="sk-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4 8.5 8.5 0 1 0 20 15.2Z"/></svg></span></button>
+        <button class="sk-button" type="button" data-sk-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><span class="sk-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+  <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008" />
+</svg></span></button>
         <div class="sk-dropdown-menu">
           <button class="sk-button" type="button" aria-haspopup="menu" aria-expanded="false">Actions</button>
           <ul role="menu" hidden>
@@ -69,7 +76,9 @@
         <p>One representative layout composed from SiteKit Header, Navigation, Icon, Dropdown Menu, Table, Badge, Drawer, Modal, Popover, Tooltip, and theme patterns.</p>
         <div class="sk-cluster">
           <button class="sk-button" type="button" data-sk-drawer-open="filter-drawer">Open filters</button>
-          <a class="sk-button" data-variant="secondary" href="https://github.com/kujolang/site-kit" rel="noreferrer"><span class="sk-icon" data-size="sm" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12 .8A11.2 11.2 0 0 0 8.46 22.63c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.17 1.72 1.17 1 1.72 2.62 1.23 3.26.94.1-.73.39-1.23.71-1.51-2.5-.28-5.13-1.25-5.13-5.57 0-1.23.44-2.24 1.16-3.03-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.16a10.76 10.76 0 0 1 5.64 0c2.15-1.46 3.1-1.16 3.1-1.16.61 1.55.23 2.7.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.33-2.63 5.29-5.14 5.57.4.35.76 1.04.76 2.1v3.11c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z"/></svg></span> View SiteKit on GitHub</a>
+          <a class="sk-button" data-variant="secondary" href="https://github.com/kujolang/site-kit" rel="noreferrer"><span class="sk-icon" data-size="sm" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg></span> View SiteKit on GitHub</a>
         </div>
       </div>
     </section>
@@ -102,7 +111,11 @@
         <section class="sk-card dashboard__table">
           <div class="sk-cluster dashboard__table-head">
             <div><p class="sk-label">Evidence register</p><h2 id="repositories-title">Repositories</h2></div>
-            <span class="sk-tooltip"><button class="sk-button" type="button" aria-describedby="table-tip" aria-label="What does ready mean?"><span class="sk-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span></button><span id="table-tip" role="tooltip" hidden>Ready means the local evidence snapshot passed its checks.</span></span>
+            <span class="sk-tooltip"><button class="sk-button" type="button" aria-describedby="table-tip" aria-label="What does ready mean?"><span class="sk-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+  <path d="M12 9h.01" />
+  <path d="M11 12h1v4h1" />
+</svg></span></button><span id="table-tip" role="tooltip" hidden>Ready means the local evidence snapshot passed its checks.</span></span>
           </div>
           <div class="sk-table"><table><caption class="sk-sr-only">Repository readiness and supporting metadata</caption><thead><tr><th scope="col">Repository</th><th scope="col">Owner</th><th scope="col">Status</th><th scope="col">Verified</th></tr></thead><tbody><tr><th scope="row"><a href="https://github.com/kujolang/site-kit" rel="noreferrer">site-kit</a><small class="sk-muted"> design system / main</small></th><td>Design Systems</td><td><span class="sk-badge" data-variant="success">Ready</span></td><td>Today</td></tr><tr><th scope="row"><a href="https://github.com/kujolang/kujo" rel="noreferrer">kujo</a><small class="sk-muted"> language / main</small></th><td>Runtime</td><td><span class="sk-badge" data-variant="warning">In review</span></td><td>Yesterday</td></tr><tr><th scope="row"><a href="https://github.com/kujolang/dispatch" rel="noreferrer">dispatch</a><small class="sk-muted"> workflows / main</small></th><td>Automation</td><td><span class="sk-badge" data-variant="success">Ready</span></td><td>Jul 10</td></tr></tbody></table></div>
         </section>
@@ -113,7 +126,10 @@
 
   <div class="dashboard__drawer-backdrop" data-sk-drawer-scrim hidden></div>
   <aside class="sk-drawer dashboard__drawer" id="filter-drawer" data-sk-drawer hidden aria-hidden="true" aria-labelledby="drawer-title">
-    <header><div><p class="sk-label">Secondary controls</p><h2 id="drawer-title">Mobile filters</h2></div><button class="sk-button" type="button" data-sk-drawer-close aria-label="Close filters"><span class="sk-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></span></button></header>
+    <header><div><p class="sk-label">Secondary controls</p><h2 id="drawer-title">Mobile filters</h2></div><button class="sk-button" type="button" data-sk-drawer-close aria-label="Close filters"><span class="sk-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+  <path d="M18 6l-12 12" />
+  <path d="M6 6l12 12" />
+</svg></span></button></header>
     <p>Use the filter sidebar on larger screens or this drawer on smaller screens.</p>
     <button class="sk-button" type="button" data-sk-drawer-close>Apply and close</button>
   </aside>
