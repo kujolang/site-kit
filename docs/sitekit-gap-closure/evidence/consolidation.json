@@ -1,0 +1,24 @@
+{
+  "mode": "Strata CONSOLIDATE",
+  "project": "Agent Notes",
+  "saved": {
+    "id": "d7de4680-aacc-417c-8783-4dcdfae1a3ee",
+    "title": "Session Memory \u00b7 SiteKit verified library gap closure and showcase handoff \u00b7 2026-09-06",
+    "content": "One implementation/current-state/timeline handoff with verified contracts, evidence/commit provenance, compatibility limits and next starting point; related to prior audit/prompt episodes."
+  },
+  "atomicNotesCreated": 0,
+  "exactRetrieval": "passed: full note content, current successful CI state and focused tags returned by ID despite HTTP 500 write responses",
+  "conceptRetrieval": "passed: verified library returns the saved note; earlier longer phrase queries did not match",
+  "signalbox": {
+    "capturesCreated": [],
+    "signalsCreated": [],
+    "duplicatesSkipped": [
+      "sig_20f24e2c-cffc-4567-bcba-ae93b369f809 (Strata writes can commit behind HTTP 500)",
+      "sig_15ede701-8e86-485e-89c9-2ce8d5462e0e (same post-write error)"
+    ],
+    "rejected": [
+      "Completed SiteKit work summaries and resolved defects"
+    ],
+    "dispositionsChanged": false
+  }
+}

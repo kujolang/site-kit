@@ -4,8 +4,8 @@
   "jobs": [
     {
       "name": "shipcheck",
-      "conclusion": null,
-      "status": "in_progress",
+      "conclusion": "success",
+      "status": "completed",
       "url": "https://github.com/kujolang/site-kit/actions/runs/34071120146/job/101588535037",
       "steps": [
         {
@@ -30,28 +30,33 @@
         },
         {
           "name": "Build Kujo",
-          "conclusion": null,
-          "status": "in_progress"
+          "conclusion": "success",
+          "status": "completed"
         },
         {
           "name": "Run ShipCheck gate",
-          "conclusion": null,
-          "status": "pending"
+          "conclusion": "success",
+          "status": "completed"
         },
         {
           "name": "Post Checkout ShipCheck",
-          "conclusion": null,
-          "status": "pending"
+          "conclusion": "success",
+          "status": "completed"
         },
         {
           "name": "Post Checkout Kujo",
-          "conclusion": null,
-          "status": "pending"
+          "conclusion": "success",
+          "status": "completed"
         },
         {
           "name": "Post Checkout SiteKit",
-          "conclusion": null,
-          "status": "pending"
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success",
+          "status": "completed"
         }
       ]
     },
