@@ -20,8 +20,8 @@ export default function globalSetup() {
   <link rel="stylesheet" href="./sitekit/sitekit.css">
 </head>
 <body>
-  <a class="sk-sr-only" href="#main">Skip to content</a>
-  <main id="main" class="sk-container sk-stack">
+  <a class="sk-skip-link" href="#main">Skip to content</a>
+  <main id="main" tabindex="-1" class="sk-container sk-stack">
     <h1>Clean SiteKit consumer</h1>
     <p>This page uses only the copied release distribution.</p>
     <button class="sk-button" type="button" data-sk-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">Theme</button>
