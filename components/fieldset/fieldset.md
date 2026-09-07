@@ -6,11 +6,11 @@ A grouped set of form controls with a legend.
 
 ## When To Use
 
-Use Fieldset when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Group native related form controls with a legend.
 
 ## When Not To Use
 
-Do not use Fieldset to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+A generic visual card without grouped form meaning.
 
 ## Props
 
@@ -18,8 +18,10 @@ See fieldset.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See fieldset.schema.json for the source contract.
 ## Examples
 
 See examples.json and fieldset.html.
+
+## Maintained contract and standalone example
+
+Use: Group native related form controls with a legend.
+
+Avoid: A generic visual card without grouped form meaning.
+
+See [contract](fieldset.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

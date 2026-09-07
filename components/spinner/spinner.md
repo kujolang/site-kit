@@ -6,11 +6,11 @@ A compact indeterminate loading indicator.
 
 ## When To Use
 
-Use Spinner when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Show a nine-cell activity animation with Loading status text.
 
 ## When Not To Use
 
-Do not use Spinner to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+Determinate progress or decorative motion without status meaning.
 
 ## Props
 
@@ -18,8 +18,10 @@ See spinner.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See spinner.schema.json for the source contract.
 ## Examples
 
 See examples.json and spinner.html.
+
+## Maintained contract and standalone example
+
+Use: Show a nine-cell activity animation with Loading status text.
+
+Avoid: Determinate progress or decorative motion without status meaning.
+
+See [contract](spinner.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

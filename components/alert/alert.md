@@ -6,11 +6,11 @@ A status message for success, warning, error, or neutral feedback.
 
 ## When To Use
 
-Use Alert when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Show a status notice with an exclamation marker and optional severity colors.
 
 ## When Not To Use
 
-Do not use Alert to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+A blocking dialog or automatically dismissing notification.
 
 ## Props
 
@@ -18,8 +18,13 @@ See alert.schema.json for the source contract.
 
 ## Variants
 
-- neutral
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| neutral | implemented | [data-variant="neutral"] |
+| compact | alias | Base style; no switch |
+| danger | implemented | [data-variant="danger"] |
+| warning | implemented | [data-variant="warning"] |
+| success | implemented | [data-variant="success"] |
 
 ## Accessibility Notes
 
@@ -30,3 +35,11 @@ See alert.schema.json for the source contract.
 ## Examples
 
 See examples.json and alert.html.
+
+## Maintained contract and standalone example
+
+Use: Show a status notice with an exclamation marker and optional severity colors.
+
+Avoid: A blocking dialog or automatically dismissing notification.
+
+See [contract](alert.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

@@ -6,11 +6,11 @@ A horizontal progress meter for determinate completion.
 
 ## When To Use
 
-Use Progress Bar when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Draw a horizontal completion fill.
 
 ## When Not To Use
 
-Do not use Progress Bar to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+An accessible progress widget without additional native/ARIA semantics.
 
 ## Props
 
@@ -18,8 +18,10 @@ See progress-bar.schema.json for the source contract.
 
 ## Variants
 
-- determinate
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| determinate | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See progress-bar.schema.json for the source contract.
 ## Examples
 
 See examples.json and progress-bar.html.
+
+## Maintained contract and standalone example
+
+Use: Draw a horizontal completion fill.
+
+Avoid: An accessible progress widget without additional native/ARIA semantics.
+
+See [contract](progress-bar.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

@@ -6,11 +6,11 @@ A single-line text input with a visible label.
 
 ## When To Use
 
-Use Text Input when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Capture short text with an explicit label.
 
 ## When Not To Use
 
-Do not use Text Input to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+An autocomplete, validator or form-state manager.
 
 ## Props
 
@@ -18,8 +18,10 @@ See text-input.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See text-input.schema.json for the source contract.
 ## Examples
 
 See examples.json and text-input.html.
+
+## Maintained contract and standalone example
+
+Use: Capture short text with an explicit label.
+
+Avoid: An autocomplete, validator or form-state manager.
+
+See [contract](text-input.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

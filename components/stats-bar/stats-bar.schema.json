@@ -24,16 +24,20 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "surface.raised",
-    "text.primary",
-    "text.secondary",
-    "text.muted",
+    "border.1",
     "border.default",
+    "border.subtle",
+    "focus.offset",
     "focus.ring",
+    "focus.width",
+    "font.mono",
+    "space.3",
     "space.4",
-    "radius.0"
+    "surface.card",
+    "text.muted",
+    "type.line.tight",
+    "type.size.3xl",
+    "type.size.xs"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -48,15 +52,98 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "stats-bar-default",
+      "name": "Standalone",
       "props": {
-        "label": "Stats Bar",
-        "variant": "inline"
+        "stats": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup"
+          }
+        ],
+        "label": "Stats Bar"
       },
-      "notes": "Adapted from old-components into tokenized SiteKit styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "stats"
-  ]
+  ],
+  "propertyContracts": {
+    "stats": {
+      "type": "array",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-stats-bar",
+        "html": "authored child markup in canonical example; arrays are consumer data, never automatically bound"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string"
+        },
+        "contract": "Authored data structure: label is displayed text; content is escaped text or trusted authored slot markup. Optional href is a consumer-owned safe navigation URL. No automatic renderer."
+      }
+    },
+    "label": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "label, [aria-label], summary, button, a, span",
+        "html": "textContent or accessible name appropriate to the element"
+      },
+      "stateOwner": "consumer",
+      "example": "Stats Bar"
+    }
+  },
+  "variantContracts": {
+    "inline": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "boxed": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "stacked": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Present metrics as a definition list with strong numeric typography.",
+    "avoid": "Live analytics or verified product statistics."
+  },
+  "slotContracts": {
+    "stats": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Data Display"
 }

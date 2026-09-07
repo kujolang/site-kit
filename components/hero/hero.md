@@ -6,11 +6,11 @@ A first-viewport introduction for product, documentation, and launch pages.
 
 ## When To Use
 
-Use Hero when the page needs this pattern as a reusable, token-driven component.
+Present a large centered heading, explanation and action row.
 
 ## When Not To Use
 
-Do not use Hero to bypass semantic structure, heading order, or accessibility behavior.
+A complete responsive marketing page or rich media renderer.
 
 ## Props
 
@@ -18,9 +18,11 @@ See hero.schema.json for the source contract.
 
 ## Variants
 
-- split
-- centered
-- technical
+| Name | Contract | Binding |
+| --- | --- | --- |
+| split | implemented | [data-layout="split"] |
+| centered | implemented | [data-layout="centered"] |
+| technical | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -48,3 +50,11 @@ See hero.schema.json for the source contract.
 ## Examples
 
 See examples.json and hero.html.
+
+## Maintained contract and standalone example
+
+Use: Present a large centered heading, explanation and action row.
+
+Avoid: A complete responsive marketing page or rich media renderer.
+
+See [contract](hero.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

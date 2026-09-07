@@ -1,10 +1,12 @@
 [
   {
-    "name": "Default",
+    "id": "dropdown-menu-default",
+    "name": "Standalone",
     "props": {
       "label": "Dropdown Menu",
-      "variant": "default"
+      "variant": "Example"
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

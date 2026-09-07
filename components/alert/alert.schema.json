@@ -8,7 +8,10 @@
   },
   "variants": [
     "neutral",
-    "compact"
+    "compact",
+    "danger",
+    "warning",
+    "success"
   ],
   "requiredFields": [],
   "accessibility": {
@@ -21,19 +24,28 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
+    "border.1",
+    "border.default",
+    "border.heavy",
+    "focus.offset",
+    "focus.ring",
+    "focus.width",
+    "font.mono",
+    "radius.0",
+    "size.control.sm",
+    "space.3",
+    "space.4",
+    "state.danger",
+    "state.info",
+    "state.success",
+    "state.warning",
     "surface.card",
-    "surface.raised",
-    "surface.subtle",
+    "text.danger",
     "text.primary",
     "text.secondary",
-    "text.muted",
-    "border.default",
-    "border.subtle",
-    "focus.ring",
-    "space.4",
-    "radius.0",
-    "font.mono"
+    "text.success",
+    "text.warning",
+    "type.weight.bold"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -50,17 +62,144 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "alert-default",
+      "name": "Standalone",
+      "props": {
+        "label": "Alert",
+        "variant": "Example"
+      },
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "alert-neutral",
+      "name": "neutral",
       "props": {
         "label": "Alert",
         "variant": "neutral"
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example-neutral.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "alert-danger",
+      "name": "danger",
+      "props": {
+        "label": "Alert",
+        "variant": "danger"
+      },
+      "htmlFile": "example-danger.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "alert-warning",
+      "name": "warning",
+      "props": {
+        "label": "Alert",
+        "variant": "warning"
+      },
+      "htmlFile": "example-warning.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "alert-success",
+      "name": "success",
+      "props": {
+        "label": "Alert",
+        "variant": "success"
+      },
+      "htmlFile": "example-success.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "label",
     "content",
     "actions"
-  ]
+  ],
+  "propertyContracts": {
+    "label": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "label, [aria-label], summary, button, a, span",
+        "html": "textContent or accessible name appropriate to the element"
+      },
+      "stateOwner": "consumer",
+      "example": "Alert"
+    },
+    "variant": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-alert",
+        "html": "see variantContracts; names do not imply data-variant support"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    }
+  },
+  "variantContracts": {
+    "neutral": {
+      "kind": "implemented",
+      "binding": "[data-variant=\"neutral\"]",
+      "aliasOf": null,
+      "notes": "Apply the attribute on the source selector.",
+      "example": "alert-neutral"
+    },
+    "compact": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "danger": {
+      "kind": "implemented",
+      "binding": "[data-variant=\"danger\"]",
+      "aliasOf": null,
+      "notes": "Apply the attribute on the source selector.",
+      "example": "alert-danger"
+    },
+    "warning": {
+      "kind": "implemented",
+      "binding": "[data-variant=\"warning\"]",
+      "aliasOf": null,
+      "notes": "Apply the attribute on the source selector.",
+      "example": "alert-warning"
+    },
+    "success": {
+      "kind": "implemented",
+      "binding": "[data-variant=\"success\"]",
+      "aliasOf": null,
+      "notes": "Apply the attribute on the source selector.",
+      "example": "alert-success"
+    }
+  },
+  "guidance": {
+    "use": "Show a status notice with an exclamation marker and optional severity colors.",
+    "avoid": "A blocking dialog or automatically dismissing notification."
+  },
+  "slotContracts": {
+    "label": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "content": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "actions": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Feedback"
 }

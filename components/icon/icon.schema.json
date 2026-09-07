@@ -7,7 +7,8 @@
     "variant": "decorative|meaningful|inline|external",
     "name": "string optional",
     "size": "sm|md|lg optional",
-    "source": "inline SVG markup or external SVG reference optional"
+    "source": "inline SVG markup or external SVG reference optional",
+    "boxed": "boolean"
   },
   "variants": [
     "line",
@@ -28,19 +29,17 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "surface.raised",
-    "surface.subtle",
-    "text.primary",
-    "text.secondary",
-    "text.muted",
+    "border.1",
+    "border.2",
     "border.default",
-    "border.subtle",
+    "focus.offset",
     "focus.ring",
-    "space.4",
-    "radius.0",
-    "font.mono"
+    "focus.width",
+    "font.mono",
+    "size.control.lg",
+    "size.control.md",
+    "size.control.sm",
+    "surface.card"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -58,12 +57,74 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "icon-default",
+      "name": "Standalone",
       "props": {
         "label": "Icon",
-        "variant": "line"
+        "variant": "decorative",
+        "name": "project",
+        "size": "sm",
+        "source": "Example",
+        "boxed": false
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "icon-decorative",
+      "name": "decorative",
+      "props": {
+        "label": "Icon",
+        "variant": "decorative",
+        "name": "project",
+        "size": "sm",
+        "source": "Example",
+        "boxed": false
+      },
+      "htmlFile": "example-decorative.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "icon-meaningful",
+      "name": "meaningful",
+      "props": {
+        "label": "Icon",
+        "variant": "meaningful",
+        "name": "project",
+        "size": "sm",
+        "source": "Example",
+        "boxed": false
+      },
+      "htmlFile": "example-meaningful.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "icon-inline",
+      "name": "inline",
+      "props": {
+        "label": "Icon",
+        "variant": "inline",
+        "name": "project",
+        "size": "sm",
+        "source": "Example",
+        "boxed": false
+      },
+      "htmlFile": "example-inline.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "icon-external",
+      "name": "external",
+      "props": {
+        "label": "Icon",
+        "variant": "external",
+        "name": "project",
+        "size": "sm",
+        "source": "Example",
+        "boxed": false
+      },
+      "htmlFile": "example-external.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
@@ -71,5 +132,158 @@
     "content",
     "actions",
     "svg"
-  ]
+  ],
+  "propertyContracts": {
+    "label": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-icon[role=\"img\"]",
+        "html": "aria-label for meaningful icon; omit for decorative"
+      },
+      "stateOwner": "consumer",
+      "example": "Icon"
+    },
+    "variant": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": [
+        "decorative",
+        "meaningful",
+        "inline",
+        "external"
+      ],
+      "binding": {
+        "selector": ".sk-icon",
+        "html": "see variantContracts; names do not imply data-variant support"
+      },
+      "stateOwner": "consumer",
+      "example": "decorative"
+    },
+    "name": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "input, .sk-icon",
+        "html": "native name; Icon data-icon-name is metadata only"
+      },
+      "stateOwner": "consumer",
+      "example": "project"
+    },
+    "size": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": [
+        "sm",
+        "md",
+        "lg"
+      ],
+      "binding": {
+        "selector": ".sk-icon",
+        "html": "data-size"
+      },
+      "stateOwner": "consumer",
+      "example": "sm"
+    },
+    "source": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-icon svg",
+        "html": "trusted inline SVG or use href to a local sprite; source license remains consumer-owned"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    },
+    "boxed": {
+      "type": "boolean",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-icon",
+        "html": "data-icon-variant=boxed"
+      },
+      "stateOwner": "consumer",
+      "example": false
+    }
+  },
+  "variantContracts": {
+    "line": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "compact": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "decorative": {
+      "kind": "composition",
+      "binding": null,
+      "aliasOf": null,
+      "example": "icon-decorative",
+      "notes": "Use the concrete semantic markup in example-decorative.html; this is not a data-variant switch."
+    },
+    "meaningful": {
+      "kind": "composition",
+      "binding": null,
+      "aliasOf": null,
+      "example": "icon-meaningful",
+      "notes": "Use the concrete semantic markup in example-meaningful.html; this is not a data-variant switch."
+    },
+    "inline": {
+      "kind": "composition",
+      "binding": null,
+      "aliasOf": null,
+      "example": "icon-inline",
+      "notes": "Use the concrete semantic markup in example-inline.html; this is not a data-variant switch."
+    },
+    "external": {
+      "kind": "composition",
+      "binding": null,
+      "aliasOf": null,
+      "example": "icon-external",
+      "notes": "Use the concrete semantic markup in example-external.html; this is not a data-variant switch."
+    }
+  },
+  "guidance": {
+    "use": "Wrap small inline SVG or a consumer-owned sprite with sizing and semantics.",
+    "avoid": "An icon package, registry service or label for an otherwise unnamed button."
+  },
+  "slotContracts": {
+    "label": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "content": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "actions": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "svg": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Foundations"
 }

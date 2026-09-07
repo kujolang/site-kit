@@ -6,11 +6,11 @@ A logo or partner proof row with semantic list structure and theme-safe styling.
 
 ## When To Use
 
-Use Partners Strip when the page needs this legacy-informed pattern as a reusable, token-driven SiteKit component.
+Lay out partner names or consumer-provided logos in an intrinsic grid.
 
 ## When Not To Use
 
-Do not use Partners Strip to bypass semantic structure, heading order, token usage, or accessibility behavior.
+Evidence of actual endorsements or a bundled logo collection.
 
 ## Props
 
@@ -18,9 +18,11 @@ See partners-strip.schema.json for the source contract.
 
 ## Variants
 
-- logos
-- boxed
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| logos | alias | Base style; no switch |
+| boxed | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -42,3 +44,11 @@ See partners-strip.schema.json for the source contract.
 ## Examples
 
 See examples.json and partners-strip.html.
+
+## Maintained contract and standalone example
+
+Use: Lay out partner names or consumer-provided logos in an intrinsic grid.
+
+Avoid: Evidence of actual endorsements or a bundled logo collection.
+
+See [contract](partners-strip.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

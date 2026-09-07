@@ -1,10 +1,22 @@
 [
   {
-    "name": "Default",
+    "id": "avatar-default",
+    "name": "Standalone",
+    "props": {
+      "label": "Avatar",
+      "variant": "Example"
+    },
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "avatar-initials",
+    "name": "initials",
     "props": {
       "label": "Avatar",
       "variant": "initials"
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example-initials.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

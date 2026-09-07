@@ -6,11 +6,11 @@ A utility wrapper for content available to assistive technology only.
 
 ## When To Use
 
-Use Visually Hidden when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Keep noninteractive descriptive text available to assistive technology.
 
 ## When Not To Use
 
-Do not use Visually Hidden to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+Hiding focusable controls that must become visible on focus.
 
 ## Props
 
@@ -18,8 +18,10 @@ See visually-hidden.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See visually-hidden.schema.json for the source contract.
 ## Examples
 
 See examples.json and visually-hidden.html.
+
+## Maintained contract and standalone example
+
+Use: Keep noninteractive descriptive text available to assistive technology.
+
+Avoid: Hiding focusable controls that must become visible on focus.
+
+See [contract](visually-hidden.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

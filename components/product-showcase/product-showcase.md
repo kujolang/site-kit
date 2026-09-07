@@ -6,11 +6,11 @@ A compact commerce or template showcase adapted from legacy landing-page demos.
 
 ## When To Use
 
-Use Product Showcase when the page needs this legacy-informed pattern as a reusable, token-driven SiteKit component.
+Compose a featured product, media placeholder and supporting offers.
 
 ## When Not To Use
 
-Do not use Product Showcase to bypass semantic structure, heading order, token usage, or accessibility behavior.
+A product gallery or interactive commerce backend.
 
 ## Props
 
@@ -18,9 +18,11 @@ See product-showcase.schema.json for the source contract.
 
 ## Variants
 
-- template
-- commerce
-- editorial
+| Name | Contract | Binding |
+| --- | --- | --- |
+| template | alias | Base style; no switch |
+| commerce | alias | Base style; no switch |
+| editorial | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -44,3 +46,11 @@ See product-showcase.schema.json for the source contract.
 ## Examples
 
 See examples.json and product-showcase.html.
+
+## Maintained contract and standalone example
+
+Use: Compose a featured product, media placeholder and supporting offers.
+
+Avoid: A product gallery or interactive commerce backend.
+
+See [contract](product-showcase.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

@@ -1,10 +1,12 @@
 [
   {
-    "name": "Default",
+    "id": "text-input-default",
+    "name": "Standalone",
     "props": {
       "label": "Text Input",
-      "variant": "default"
+      "variant": "Example"
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

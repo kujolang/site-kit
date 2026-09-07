@@ -26,14 +26,22 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "text.primary",
-    "text.secondary",
+    "border.1",
     "border.default",
+    "focus.offset",
     "focus.ring",
-    "space.4",
-    "radius.1"
+    "focus.width",
+    "font.mono",
+    "radius.0",
+    "space.2",
+    "space.3",
+    "space.5",
+    "surface.card",
+    "text.secondary",
+    "type.line.loose",
+    "type.line.tight",
+    "type.size.md",
+    "type.size.xl"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -50,17 +58,132 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "cta-default",
+      "name": "Standalone",
       "props": {
-        "label": "CTA",
-        "variant": "band"
+        "heading": "Build with SiteKit",
+        "body": "Semantic HTML, local assets, and reusable styles.",
+        "actions": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup"
+          }
+        ]
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "heading",
     "body",
     "actions"
-  ]
+  ],
+  "propertyContracts": {
+    "heading": {
+      "type": "string",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "h1, h2, h3",
+        "html": "textContent"
+      },
+      "stateOwner": "consumer",
+      "example": "Build with SiteKit"
+    },
+    "body": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "p",
+        "html": "textContent"
+      },
+      "stateOwner": "consumer",
+      "example": "Semantic HTML, local assets, and reusable styles."
+    },
+    "actions": {
+      "type": "array",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "button, a",
+        "html": "authored child elements"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string",
+          "href": "string"
+        },
+        "contract": "Authored data structure: label is displayed text; content is escaped text or trusted authored slot markup. Optional href is a consumer-owned safe navigation URL. No automatic renderer."
+      }
+    }
+  },
+  "variantContracts": {
+    "band": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "inline": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "stacked": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Group a call-to-action headline, supporting copy and action row.",
+    "avoid": "A form submission service or automatic action renderer."
+  },
+  "slotContracts": {
+    "heading": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "body": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "actions": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [
+    [
+      "old-components/testing-cta-1.html",
+      "old-components/testing-cta-2.html",
+      "old-components/testing-cta-3.html",
+      "old-components/testing-cta-4.html",
+      "old-components/testing-cta-5.html"
+    ]
+  ],
+  "category": "Content"
 }

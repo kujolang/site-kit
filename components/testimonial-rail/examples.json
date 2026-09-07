@@ -1,10 +1,18 @@
 [
   {
-    "name": "Default",
+    "id": "testimonial-rail-default",
+    "name": "Standalone",
     "props": {
-      "label": "Testimonial Rail",
-      "variant": "rail"
+      "heading": "Build with SiteKit",
+      "quotes": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup",
+          "citation": "SiteKit team"
+        }
+      ]
     },
-    "notes": "Adapted from old-components into tokenized SiteKit styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

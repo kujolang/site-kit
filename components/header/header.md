@@ -6,11 +6,11 @@ A top-level site header with navigation and primary action.
 
 ## When To Use
 
-Use Header when the page needs this pattern as a reusable, token-driven component.
+Build a branded wrapping header with primary links and actions.
 
 ## When Not To Use
 
-Do not use Header to bypass semantic structure, heading order, or accessibility behavior.
+A ready-made mobile hamburger or sticky sidebar shell.
 
 ## Props
 
@@ -18,9 +18,11 @@ See header.schema.json for the source contract.
 
 ## Variants
 
-- default
-- docs
-- commerce
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| docs | alias | Base style; no switch |
+| commerce | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -48,3 +50,11 @@ See header.schema.json for the source contract.
 ## Examples
 
 See examples.json and header.html.
+
+## Maintained contract and standalone example
+
+Use: Build a branded wrapping header with primary links and actions.
+
+Avoid: A ready-made mobile hamburger or sticky sidebar shell.
+
+See [contract](header.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

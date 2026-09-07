@@ -1,10 +1,44 @@
 [
   {
-    "name": "Default",
+    "id": "content-section-default",
+    "name": "Standalone",
     "props": {
-      "label": "Content Section",
-      "variant": "media-right"
+      "eyebrow": "Example",
+      "heading": "Build with SiteKit",
+      "body": "Semantic HTML, local assets, and reusable styles.",
+      "media": {
+        "label": "Example",
+        "content": "Text or trusted authored markup"
+      },
+      "actions": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ]
     },
-    "notes": "Adapted from old-components into tokenized SiteKit styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "content-section-media-left",
+    "name": "media-left",
+    "props": {
+      "eyebrow": "Example",
+      "heading": "Build with SiteKit",
+      "body": "Semantic HTML, local assets, and reusable styles.",
+      "media": {
+        "label": "Example",
+        "content": "Text or trusted authored markup"
+      },
+      "actions": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ]
+    },
+    "htmlFile": "example-media-left.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

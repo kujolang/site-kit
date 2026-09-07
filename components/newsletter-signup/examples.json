@@ -1,10 +1,42 @@
 [
   {
-    "name": "Default",
+    "id": "newsletter-signup-default",
+    "name": "Standalone",
     "props": {
-      "label": "Newsletter Signup",
-      "variant": "inline"
+      "heading": "Build with SiteKit",
+      "body": "Semantic HTML, local assets, and reusable styles.",
+      "fields": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup",
+          "id": "example-item",
+          "name": "project",
+          "type": "text"
+        }
+      ],
+      "consent": "Example"
     },
-    "notes": "Adapted from old-components into tokenized SiteKit styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "newsletter-signup-split",
+    "name": "split",
+    "props": {
+      "heading": "Build with SiteKit",
+      "body": "Semantic HTML, local assets, and reusable styles.",
+      "fields": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup",
+          "id": "example-item",
+          "name": "project",
+          "type": "text"
+        }
+      ],
+      "consent": "Example"
+    },
+    "htmlFile": "example-split.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

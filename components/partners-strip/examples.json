@@ -1,10 +1,17 @@
 [
   {
-    "name": "Default",
+    "id": "partners-strip-default",
+    "name": "Standalone",
     "props": {
-      "label": "Partners Strip",
-      "variant": "logos"
+      "heading": "Build with SiteKit",
+      "partners": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ]
     },
-    "notes": "Adapted from old-components into tokenized SiteKit styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

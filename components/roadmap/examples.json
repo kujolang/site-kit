@@ -1,10 +1,18 @@
 [
   {
-    "name": "Default",
+    "id": "roadmap-default",
+    "name": "Standalone",
     "props": {
-      "label": "Roadmap",
-      "variant": "timeline"
+      "heading": "Build with SiteKit",
+      "milestones": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup",
+          "date": "2026-07-09"
+        }
+      ]
     },
-    "notes": "Adapted from old-components into tokenized SiteKit styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

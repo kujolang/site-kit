@@ -6,11 +6,11 @@ A native color control with an accessible label.
 
 ## When To Use
 
-Use Color Picker when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Use a labeled native color input.
 
 ## When Not To Use
 
-Do not use Color Picker to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+An alpha-channel, eyedropper or palette editor supplied by SiteKit.
 
 ## Props
 
@@ -18,8 +18,10 @@ See color-picker.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See color-picker.schema.json for the source contract.
 ## Examples
 
 See examples.json and color-picker.html.
+
+## Maintained contract and standalone example
+
+Use: Use a labeled native color input.
+
+Avoid: An alpha-channel, eyedropper or palette editor supplied by SiteKit.
+
+See [contract](color-picker.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

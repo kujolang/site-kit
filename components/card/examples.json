@@ -1,10 +1,47 @@
 [
   {
-    "name": "Default",
+    "id": "card-default",
+    "name": "Standalone",
     "props": {
-      "label": "Card",
-      "variant": "plain"
+      "title": "Review changes",
+      "body": "Semantic HTML, local assets, and reusable styles.",
+      "href": "Example",
+      "heading": "Build with SiteKit",
+      "actions": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ]
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "card-interactive",
+    "name": "interactive",
+    "props": {
+      "title": "Review changes",
+      "body": "Semantic HTML, local assets, and reusable styles.",
+      "href": "Example",
+      "heading": "Build with SiteKit",
+      "actions": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ]
+    },
+    "htmlFile": "example-interactive.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "card-body-only",
+    "name": "Body only",
+    "props": {
+      "body": "A card may contain body content without a heading."
+    },
+    "htmlFile": "example-body-only.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

@@ -6,11 +6,11 @@ A compact text label for form fields or metadata.
 
 ## When To Use
 
-Use Label when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Label an associated native form control.
 
 ## When Not To Use
 
-Do not use Label to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+A generic caption or label with no target control.
 
 ## Props
 
@@ -18,8 +18,10 @@ See label.schema.json for the source contract.
 
 ## Variants
 
-- field
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| field | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See label.schema.json for the source contract.
 ## Examples
 
 See examples.json and label.html.
+
+## Maintained contract and standalone example
+
+Use: Label an associated native form control.
+
+Avoid: A generic caption or label with no target control.
+
+See [contract](label.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

@@ -25,14 +25,24 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "text.primary",
-    "text.secondary",
+    "action.primaryText",
+    "action.secondaryText",
+    "border.1",
     "border.default",
+    "focus.offset",
     "focus.ring",
+    "focus.width",
+    "font.mono",
+    "size.content.lg",
+    "space.3",
     "space.4",
-    "radius.1"
+    "space.5",
+    "surface.page",
+    "surface.raised",
+    "text.primary",
+    "type.line.tight",
+    "type.size.xs",
+    "type.weight.bold"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -49,17 +59,161 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "header-default",
+      "name": "Standalone",
       "props": {
-        "label": "Header",
-        "variant": "default"
+        "brand": "SiteKit",
+        "nav": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup",
+            "href": "#main"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup"
+          }
+        ]
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "brand",
     "nav",
     "actions"
-  ]
+  ],
+  "propertyContracts": {
+    "brand": {
+      "type": "string",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-header",
+        "html": "consumer-authored content; no attribute switch or runtime binding; see canonical example"
+      },
+      "stateOwner": "consumer",
+      "example": "SiteKit"
+    },
+    "nav": {
+      "type": "array",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "nav",
+        "html": "authored child markup in canonical example; arrays are consumer data, never automatically bound"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup",
+          "href": "#main"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content",
+          "href"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string",
+          "href": "string"
+        },
+        "contract": "Authored data structure: label is displayed text; content is escaped text or trusted authored slot markup. Optional href is a consumer-owned safe navigation URL. No automatic renderer."
+      }
+    },
+    "actions": {
+      "type": "array",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "button, a",
+        "html": "authored child elements"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string",
+          "href": "string"
+        },
+        "contract": "Authored data structure: label is displayed text; content is escaped text or trusted authored slot markup. Optional href is a consumer-owned safe navigation URL. No automatic renderer."
+      }
+    }
+  },
+  "variantContracts": {
+    "default": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "docs": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "commerce": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Build a branded wrapping header with primary links and actions.",
+    "avoid": "A ready-made mobile hamburger or sticky sidebar shell."
+  },
+  "slotContracts": {
+    "brand": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "nav": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "actions": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [
+    [
+      "old-components/testing-header-1.html",
+      "old-components/testing-header-2.html",
+      "old-components/testing-header-3.html",
+      "old-components/testing-header-4.html",
+      "old-components/testing-header-5.html",
+      "old-components/testing-header-6.html",
+      "old-components/testing-header-7.html",
+      "old-components/testing-header-8.html"
+    ]
+  ],
+  "category": "Navigation"
 }

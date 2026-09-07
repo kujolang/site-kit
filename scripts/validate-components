@@ -1,2 +1,4 @@
 #!/usr/bin/env node
 require("./sitekit").validate()
+
+require('./generate-contracts').generate();

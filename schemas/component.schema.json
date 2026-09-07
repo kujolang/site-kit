@@ -12,6 +12,212 @@
     "tokenDependencies",
     "responsive",
     "slots",
-    "examples"
-  ]
+    "examples",
+    "propertyContracts",
+    "variantContracts",
+    "slotContracts",
+    "guidance",
+    "category"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1
+    },
+    "props": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "requiredFields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "slots": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "tokenDependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "propertyContracts": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/propertyContract"
+      }
+    },
+    "variantContracts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "kind"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "implemented",
+              "alias",
+              "composition"
+            ]
+          },
+          "binding": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "aliasOf": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "example": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "slotContracts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "owner",
+          "content",
+          "example"
+        ]
+      }
+    },
+    "guidance": {
+      "type": "object",
+      "required": [
+        "use",
+        "avoid"
+      ],
+      "properties": {
+        "use": {
+          "type": "string"
+        },
+        "avoid": {
+          "type": "string"
+        }
+      }
+    },
+    "examples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "props",
+          "htmlFile"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string"
+          },
+          "props": {
+            "type": "object"
+          },
+          "htmlFile": {
+            "type": "string",
+            "pattern": "^example[-a-z]*\\.html$"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "propertyContract": {
+      "type": "object",
+      "required": [
+        "type",
+        "required",
+        "default",
+        "allowedValues",
+        "binding",
+        "stateOwner",
+        "example"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "string",
+            "number",
+            "boolean",
+            "object",
+            "array"
+          ]
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "allowedValues": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "binding": {
+          "type": "object",
+          "required": [
+            "selector",
+            "html"
+          ],
+          "properties": {
+            "selector": {
+              "type": "string"
+            },
+            "html": {
+              "type": "string"
+            }
+          }
+        },
+        "stateOwner": {
+          "enum": [
+            "native",
+            "consumer",
+            "sitekit"
+          ]
+        }
+      }
+    }
+  }
 }

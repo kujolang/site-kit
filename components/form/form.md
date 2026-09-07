@@ -6,11 +6,11 @@ A semantic form layout for labeled controls and actions.
 
 ## When To Use
 
-Use Form when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Compose labeled native email and message controls with submit.
 
 ## When Not To Use
 
-Do not use Form to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+A schema-driven form builder or backend integration.
 
 ## Props
 
@@ -18,8 +18,10 @@ See form.schema.json for the source contract.
 
 ## Variants
 
-- stacked
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| stacked | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See form.schema.json for the source contract.
 ## Examples
 
 See examples.json and form.html.
+
+## Maintained contract and standalone example
+
+Use: Compose labeled native email and message controls with submit.
+
+Avoid: A schema-driven form builder or backend integration.
+
+See [contract](form.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

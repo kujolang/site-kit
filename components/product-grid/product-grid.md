@@ -6,11 +6,11 @@ A responsive product listing surface.
 
 ## When To Use
 
-Use Product Grid when the page needs this pattern as a reusable, token-driven component.
+Arrange product summaries in an intrinsic responsive grid.
 
 ## When Not To Use
 
-Do not use Product Grid to bypass semantic structure, heading order, or accessibility behavior.
+A catalog service, filter engine or cart.
 
 ## Props
 
@@ -18,9 +18,11 @@ See product-grid.schema.json for the source contract.
 
 ## Variants
 
-- catalog
-- compact
-- comparison
+| Name | Contract | Binding |
+| --- | --- | --- |
+| catalog | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
+| comparison | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -37,3 +39,11 @@ See product-grid.schema.json for the source contract.
 ## Examples
 
 See examples.json and product-grid.html.
+
+## Maintained contract and standalone example
+
+Use: Arrange product summaries in an intrinsic responsive grid.
+
+Avoid: A catalog service, filter engine or cart.
+
+See [contract](product-grid.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

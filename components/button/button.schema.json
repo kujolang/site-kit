@@ -29,14 +29,29 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "text.primary",
-    "text.secondary",
-    "border.default",
+    "action.danger",
+    "action.dangerText",
+    "action.primary",
+    "action.primaryText",
+    "action.secondary",
+    "action.secondaryText",
+    "border.1",
+    "border.strong",
+    "component.button.gap",
+    "component.button.height",
+    "focus.offset",
     "focus.ring",
+    "focus.width",
+    "font.mono",
+    "motion.ease",
+    "motion.fast",
+    "radius.0",
+    "shadow.none",
     "space.4",
-    "radius.1"
+    "text.primary",
+    "type.line.tight",
+    "type.size.sm",
+    "type.weight.bold"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -53,17 +68,204 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "button-default",
+      "name": "Standalone",
       "props": {
         "label": "Button",
-        "variant": "primary"
+        "variant": "primary",
+        "href": "Example",
+        "type": "button",
+        "disabled": false,
+        "loading": false
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "button-secondary",
+      "name": "secondary",
+      "props": {
+        "label": "Button",
+        "variant": "secondary",
+        "href": "Example",
+        "type": "button",
+        "disabled": false,
+        "loading": false
+      },
+      "htmlFile": "example-secondary.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "button-ghost",
+      "name": "ghost",
+      "props": {
+        "label": "Button",
+        "variant": "ghost",
+        "href": "Example",
+        "type": "button",
+        "disabled": false,
+        "loading": false
+      },
+      "htmlFile": "example-ghost.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "button-danger",
+      "name": "danger",
+      "props": {
+        "label": "Button",
+        "variant": "danger",
+        "href": "Example",
+        "type": "button",
+        "disabled": false,
+        "loading": false
+      },
+      "htmlFile": "example-danger.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "label",
     "icon-start",
     "icon-end"
-  ]
+  ],
+  "propertyContracts": {
+    "label": {
+      "type": "string",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-button",
+        "html": "textContent; include icon-start/icon-end as children"
+      },
+      "stateOwner": "consumer",
+      "example": "Button"
+    },
+    "variant": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": [
+        "primary",
+        "secondary",
+        "ghost",
+        "danger"
+      ],
+      "binding": {
+        "selector": ".sk-button",
+        "html": "see variantContracts; names do not imply data-variant support"
+      },
+      "stateOwner": "consumer",
+      "example": "primary"
+    },
+    "href": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "a.sk-button",
+        "html": "native href on an anchor, not a button"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    },
+    "type": {
+      "type": "string",
+      "required": false,
+      "default": "button",
+      "allowedValues": [
+        "button",
+        "submit",
+        "reset"
+      ],
+      "binding": {
+        "selector": "button.sk-button",
+        "html": "native type; default template button"
+      },
+      "stateOwner": "native",
+      "example": "button"
+    },
+    "disabled": {
+      "type": "boolean",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "button, input, select, textarea",
+        "html": "native disabled attribute"
+      },
+      "stateOwner": "native",
+      "example": false
+    },
+    "loading": {
+      "type": "boolean",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "button.sk-button",
+        "html": "consumer sets aria-busy=true, disabled and status; reference-compositions/index.html"
+      },
+      "stateOwner": "consumer",
+      "example": false
+    }
+  },
+  "variantContracts": {
+    "primary": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "secondary": {
+      "kind": "implemented",
+      "binding": "[data-variant=\"secondary\"]",
+      "aliasOf": null,
+      "notes": "Apply the attribute on the source selector.",
+      "example": "button-secondary"
+    },
+    "ghost": {
+      "kind": "implemented",
+      "binding": "[data-variant=\"ghost\"]",
+      "aliasOf": null,
+      "notes": "Apply the attribute on the source selector.",
+      "example": "button-ghost"
+    },
+    "danger": {
+      "kind": "implemented",
+      "binding": "[data-variant=\"danger\"]",
+      "aliasOf": null,
+      "notes": "Apply the attribute on the source selector.",
+      "example": "button-danger"
+    }
+  },
+  "guidance": {
+    "use": "Trigger an action using a native button, or style a navigation anchor.",
+    "avoid": "A div acting as a button or an aria-disabled anchor assumed inert."
+  },
+  "slotContracts": {
+    "label": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "icon-start": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "icon-end": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [
+    [
+      "old-components/testing-buttons.html"
+    ]
+  ],
+  "category": "Actions"
 }

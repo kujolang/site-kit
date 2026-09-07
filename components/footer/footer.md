@@ -6,11 +6,11 @@ A semantic page footer for navigation, metadata, and legal links.
 
 ## When To Use
 
-Use Footer when the page needs this pattern as a reusable, token-driven component.
+Compose brand, links and legal text in a wrapping footer.
 
 ## When Not To Use
 
-Do not use Footer to bypass semantic structure, heading order, or accessibility behavior.
+An automatic multi-column sitemap renderer.
 
 ## Props
 
@@ -18,9 +18,11 @@ See footer.schema.json for the source contract.
 
 ## Variants
 
-- simple
-- columns
-- product
+| Name | Contract | Binding |
+| --- | --- | --- |
+| simple | alias | Base style; no switch |
+| columns | alias | Base style; no switch |
+| product | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -50,3 +52,11 @@ See footer.schema.json for the source contract.
 ## Examples
 
 See examples.json and footer.html.
+
+## Maintained contract and standalone example
+
+Use: Compose brand, links and legal text in a wrapping footer.
+
+Avoid: An automatic multi-column sitemap renderer.
+
+See [contract](footer.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

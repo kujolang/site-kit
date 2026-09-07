@@ -21,19 +21,20 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
+    "border.1",
+    "border.default",
+    "focus.offset",
+    "focus.ring",
+    "focus.width",
+    "radius.0",
+    "space.2",
+    "space.3",
+    "space.4",
+    "space.5",
     "surface.card",
     "surface.raised",
-    "surface.subtle",
     "text.primary",
-    "text.secondary",
-    "text.muted",
-    "border.default",
-    "border.subtle",
-    "focus.ring",
-    "space.4",
-    "radius.0",
-    "font.mono"
+    "text.secondary"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -50,17 +51,82 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "rich-text-editor-default",
+      "name": "Standalone",
       "props": {
         "label": "Rich Text Editor",
-        "variant": "basic"
+        "variant": "Example"
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "label",
     "content",
     "actions"
-  ]
+  ],
+  "propertyContracts": {
+    "label": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "label, [aria-label], summary, button, a, span",
+        "html": "textContent or accessible name appropriate to the element"
+      },
+      "stateOwner": "consumer",
+      "example": "Rich Text Editor"
+    },
+    "variant": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-rich-text-editor",
+        "html": "see variantContracts; names do not imply data-variant support"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    }
+  },
+  "variantContracts": {
+    "basic": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "compact": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Edit a small named text fragment with selected-text bold, italic and safe links.",
+    "avoid": "A full document editor, rich HTML paste, media embeds or collaborative editing."
+  },
+  "slotContracts": {
+    "label": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "content": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "actions": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Forms"
 }

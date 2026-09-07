@@ -1,10 +1,18 @@
 [
   {
-    "name": "Default",
+    "id": "resource-links-default",
+    "name": "Standalone",
     "props": {
-      "label": "Resource Links",
-      "variant": "grid"
+      "heading": "Build with SiteKit",
+      "links": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup",
+          "href": "#main"
+        }
+      ]
     },
-    "notes": "Adapted from old-components into tokenized SiteKit styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

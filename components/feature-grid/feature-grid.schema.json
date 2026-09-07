@@ -24,14 +24,19 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "text.primary",
-    "text.secondary",
+    "border.1",
     "border.default",
+    "component.grid.gap",
+    "focus.offset",
     "focus.ring",
-    "space.4",
-    "radius.1"
+    "focus.width",
+    "font.mono",
+    "radius.0",
+    "size.control.lg",
+    "space.3",
+    "space.5",
+    "surface.card",
+    "surface.raised"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -46,15 +51,122 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "feature-grid-default",
+      "name": "Standalone",
       "props": {
-        "label": "Feature Grid",
-        "variant": "two-column"
+        "items": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup"
+          }
+        ],
+        "columns": "2"
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "feature-grid-dense",
+      "name": "dense",
+      "props": {
+        "items": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup"
+          }
+        ],
+        "columns": "2"
+      },
+      "htmlFile": "example-dense.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "items"
-  ]
+  ],
+  "propertyContracts": {
+    "items": {
+      "type": "array",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-feature-grid",
+        "html": "authored child markup in canonical example; arrays are consumer data, never automatically bound"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string"
+        },
+        "contract": "Consumer data. Render labels as text and content through the documented semantic child/slot structure; never insert untrusted HTML."
+      }
+    },
+    "columns": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": [
+        "2",
+        "3",
+        "auto"
+      ],
+      "binding": {
+        "selector": ".sk-feature-grid",
+        "html": "consumer-authored content; no attribute switch or runtime binding; see canonical example"
+      },
+      "stateOwner": "consumer",
+      "example": "2"
+    }
+  },
+  "variantContracts": {
+    "two-column": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "three-column": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "dense": {
+      "kind": "implemented",
+      "binding": "[data-density=\"dense\"]",
+      "aliasOf": null,
+      "notes": "Apply the attribute on the source selector.",
+      "example": "feature-grid-dense"
+    }
+  },
+  "guidance": {
+    "use": "Arrange feature articles with marker boxes in an intrinsic grid.",
+    "avoid": "An enforced two/three-column prop runtime."
+  },
+  "slotContracts": {
+    "items": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [
+    [
+      "old-components/testing-features-1.html"
+    ]
+  ],
+  "category": "Content"
 }

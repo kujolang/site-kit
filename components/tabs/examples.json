@@ -1,10 +1,42 @@
 [
   {
-    "name": "Default",
+    "id": "tabs-default",
+    "name": "Standalone",
     "props": {
+      "tabs": [
+        {
+          "id": "demo-tabs-0",
+          "label": "Overview",
+          "content": "Overview content",
+          "controls": "demo-tabs-panel-0"
+        },
+        {
+          "id": "demo-tabs-1",
+          "label": "Details",
+          "content": "Details content",
+          "controls": "demo-tabs-panel-1"
+        }
+      ],
+      "selected": "Example",
+      "panels": [
+        {
+          "id": "demo-tabs-panel-0",
+          "label": "Overview",
+          "content": "Overview content",
+          "labelledby": "demo-tabs-0"
+        },
+        {
+          "id": "demo-tabs-panel-1",
+          "label": "Details",
+          "content": "Details content",
+          "labelledby": "demo-tabs-1"
+        }
+      ],
       "label": "Tabs",
-      "variant": "line"
+      "activation": "automatic",
+      "orientation": "horizontal"
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

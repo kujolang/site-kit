@@ -1,10 +1,52 @@
 [
   {
-    "name": "Default",
+    "id": "alert-default",
+    "name": "Standalone",
+    "props": {
+      "label": "Alert",
+      "variant": "Example"
+    },
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "alert-neutral",
+    "name": "neutral",
     "props": {
       "label": "Alert",
       "variant": "neutral"
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example-neutral.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "alert-danger",
+    "name": "danger",
+    "props": {
+      "label": "Alert",
+      "variant": "danger"
+    },
+    "htmlFile": "example-danger.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "alert-warning",
+    "name": "warning",
+    "props": {
+      "label": "Alert",
+      "variant": "warning"
+    },
+    "htmlFile": "example-warning.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "alert-success",
+    "name": "success",
+    "props": {
+      "label": "Alert",
+      "variant": "success"
+    },
+    "htmlFile": "example-success.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

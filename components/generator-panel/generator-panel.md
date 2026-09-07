@@ -6,11 +6,11 @@ A form-forward tool panel for small generators, prompts, and preview controls.
 
 ## When To Use
 
-Use Generator Panel when the page needs this legacy-informed pattern as a reusable, token-driven SiteKit component.
+Arrange a form next to a preview placeholder.
 
 ## When Not To Use
 
-Do not use Generator Panel to bypass semantic structure, heading order, token usage, or accessibility behavior.
+An AI generator or API-backed tool.
 
 ## Props
 
@@ -18,9 +18,11 @@ See generator-panel.schema.json for the source contract.
 
 ## Variants
 
-- form-preview
-- compact
-- stacked
+| Name | Contract | Binding |
+| --- | --- | --- |
+| form-preview | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
+| stacked | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -42,3 +44,11 @@ See generator-panel.schema.json for the source contract.
 ## Examples
 
 See examples.json and generator-panel.html.
+
+## Maintained contract and standalone example
+
+Use: Arrange a form next to a preview placeholder.
+
+Avoid: An AI generator or API-backed tool.
+
+See [contract](generator-panel.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

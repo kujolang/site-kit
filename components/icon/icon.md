@@ -6,11 +6,11 @@ A small symbolic marker with a stable inline or external SVG contract.
 
 ## When To Use
 
-Use Icon when an interface needs a repeatable action, brand, status, or navigation symbol. Prefer an inline SVG for a small local set and an external `<use href="/icons/sprite.svg#github">` reference for a shared sprite.
+Wrap small inline SVG or a consumer-owned sprite with sizing and semantics.
 
 ## When Not To Use
 
-Do not use Icon as the only accessible name for a control, as a replacement for text that carries essential meaning, or to bundle an entire icon library.
+An icon package, registry service or label for an otherwise unnamed button.
 
 ## Props
 
@@ -18,11 +18,14 @@ See icon.schema.json for the source contract.
 
 ## Variants
 
-- decorative: add `aria-hidden="true"` and no label.
-- meaningful: add a concise `aria-label` or visible adjacent text.
-- inline: render one local SVG inside `.sk-icon`.
-- external: reference a registered sprite symbol by name.
-- `sm`, `md`, and `lg` sizes use SiteKit control tokens.
+| Name | Contract | Binding |
+| --- | --- | --- |
+| line | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
+| decorative | composition | icon-decorative |
+| meaningful | composition | icon-meaningful |
+| inline | composition | icon-inline |
+| external | composition | icon-external |
 
 ## Accessibility Notes
 
@@ -38,3 +41,15 @@ Register only the symbols a consumer uses in its own sprite. Names use lowercase
 ## Examples
 
 See examples.json and icon.html. The examples include inline SVG, a GitHub brand symbol, and an icon-only close action.
+
+## Maintained contract and standalone example
+
+Use: Wrap small inline SVG or a consumer-owned sprite with sizing and semantics.
+
+Avoid: An icon package, registry service or label for an otherwise unnamed button.
+
+See [contract](icon.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.
+
+## Asset provenance
+
+The canonical check mark is simple SiteKit example geometry under the repository MIT license. The historical `examples/icons.svg#github` is a GitHub brand mark, not an MIT icon-library grant. For permitted uses and current artwork, consult [GitHub brand guidance](https://brand.github.com/foundations/logo) (checked 2026-09-06). Preserve brand attribution and use it only to identify/link GitHub; do not present it as SiteKit artwork. The distribution does not bundle that example sprite.

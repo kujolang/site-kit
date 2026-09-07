@@ -6,11 +6,11 @@ A commerce order summary with totals, taxes, discounts, and trust metadata.
 
 ## When To Use
 
-Use Checkout Summary when the page needs this pattern as a reusable, token-driven component.
+Display items and a definition list of totals with checkout actions.
 
 ## When Not To Use
 
-Do not use Checkout Summary to bypass semantic structure, heading order, or accessibility behavior.
+Payment processing or automatic totals computation.
 
 ## Props
 
@@ -18,9 +18,11 @@ See checkout-summary.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
-- sticky
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
+| sticky | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -37,3 +39,11 @@ See checkout-summary.schema.json for the source contract.
 ## Examples
 
 See examples.json and checkout-summary.html.
+
+## Maintained contract and standalone example
+
+Use: Display items and a definition list of totals with checkout actions.
+
+Avoid: Payment processing or automatic totals computation.
+
+See [contract](checkout-summary.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

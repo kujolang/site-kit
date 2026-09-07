@@ -1,37 +1,72 @@
 [
   {
-    "name": "Default",
+    "id": "icon-default",
+    "name": "Standalone",
     "props": {
       "label": "Icon",
-      "variant": "line"
-    },
-    "notes": "Use semantic landmarks and tokenized styling."
-  },
-  {
-    "name": "Inline decorative",
-    "props": {
       "variant": "decorative",
-      "name": "check",
-      "size": "sm"
+      "name": "project",
+      "size": "sm",
+      "source": "Example",
+      "boxed": false
     },
-    "notes": "The parent text carries the meaning; the SVG is aria-hidden."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   },
   {
-    "name": "External GitHub reference",
+    "id": "icon-decorative",
+    "name": "decorative",
     "props": {
-      "variant": "external",
-      "name": "github",
-      "size": "md"
+      "label": "Icon",
+      "variant": "decorative",
+      "name": "project",
+      "size": "sm",
+      "source": "Example",
+      "boxed": false
     },
-    "notes": "Reference only the registered symbol needed by the consuming site."
+    "htmlFile": "example-decorative.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   },
   {
-    "name": "Icon-only close button",
+    "id": "icon-meaningful",
+    "name": "meaningful",
     "props": {
+      "label": "Icon",
       "variant": "meaningful",
-      "name": "close",
-      "label": "Close panel"
+      "name": "project",
+      "size": "sm",
+      "source": "Example",
+      "boxed": false
     },
-    "notes": "The button, not the icon, owns the accessible name."
+    "htmlFile": "example-meaningful.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "icon-inline",
+    "name": "inline",
+    "props": {
+      "label": "Icon",
+      "variant": "inline",
+      "name": "project",
+      "size": "sm",
+      "source": "Example",
+      "boxed": false
+    },
+    "htmlFile": "example-inline.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "icon-external",
+    "name": "external",
+    "props": {
+      "label": "Icon",
+      "variant": "external",
+      "name": "project",
+      "size": "sm",
+      "source": "Example",
+      "boxed": false
+    },
+    "htmlFile": "example-external.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

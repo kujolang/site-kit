@@ -8,7 +8,10 @@
     "type": "text|email|password|search|tel|url",
     "required": "boolean",
     "autocomplete": "string optional",
-    "error": "string optional"
+    "error": "string optional",
+    "control": "string",
+    "help": "string optional",
+    "name": "string optional"
   },
   "variants": [
     "text",
@@ -30,14 +33,20 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "text.primary",
-    "text.secondary",
+    "border.1",
     "border.default",
+    "focus.offset",
     "focus.ring",
-    "space.4",
-    "radius.1"
+    "focus.width",
+    "radius.0",
+    "size.control.md",
+    "space.2",
+    "space.3",
+    "surface.raised",
+    "text.muted",
+    "text.primary",
+    "type.size.sm",
+    "type.weight.bold"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -55,12 +64,72 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "form-field-default",
+      "name": "Standalone",
       "props": {
+        "id": "demo-form-field",
         "label": "Form Field",
-        "variant": "text"
+        "type": "text",
+        "required": false,
+        "autocomplete": "Example",
+        "error": "Example",
+        "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
+        "help": "Use a short project name.",
+        "name": "project"
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "form-field-select",
+      "name": "select",
+      "props": {
+        "id": "demo-form-field",
+        "label": "Form Field",
+        "type": "text",
+        "required": false,
+        "autocomplete": "Example",
+        "error": "Example",
+        "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
+        "help": "Use a short project name.",
+        "name": "project"
+      },
+      "htmlFile": "example-select.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "form-field-textarea",
+      "name": "textarea",
+      "props": {
+        "id": "demo-form-field",
+        "label": "Form Field",
+        "type": "text",
+        "required": false,
+        "autocomplete": "Example",
+        "error": "Example",
+        "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
+        "help": "Use a short project name.",
+        "name": "project"
+      },
+      "htmlFile": "example-textarea.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "form-field-checkbox",
+      "name": "checkbox",
+      "props": {
+        "id": "demo-form-field",
+        "label": "Form Field",
+        "type": "text",
+        "required": false,
+        "autocomplete": "Example",
+        "error": "Example",
+        "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
+        "help": "Use a short project name.",
+        "name": "project"
+      },
+      "htmlFile": "example-checkbox.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
@@ -68,5 +137,179 @@
     "control",
     "help",
     "error"
-  ]
+  ],
+  "propertyContracts": {
+    "id": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "[id]",
+        "html": "id and all matching IDREFs"
+      },
+      "stateOwner": "consumer",
+      "example": "demo-form-field"
+    },
+    "label": {
+      "type": "string",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "label",
+        "html": "textContent; for equals control id"
+      },
+      "stateOwner": "consumer",
+      "example": "Form Field"
+    },
+    "type": {
+      "type": "string",
+      "required": false,
+      "default": "text",
+      "allowedValues": [
+        "text",
+        "email",
+        "password",
+        "search",
+        "tel",
+        "url"
+      ],
+      "binding": {
+        "selector": "input",
+        "html": "native type for input compositions, ignored on select/textarea"
+      },
+      "stateOwner": "native",
+      "example": "text"
+    },
+    "required": {
+      "type": "boolean",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "input, select, textarea",
+        "html": "native required attribute"
+      },
+      "stateOwner": "native",
+      "example": false
+    },
+    "autocomplete": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "input",
+        "html": "native autocomplete attribute"
+      },
+      "stateOwner": "native",
+      "example": "Example"
+    },
+    "error": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "input, select, textarea",
+        "html": "aria-invalid=true and aria-describedby pointing to visible error"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    },
+    "control": {
+      "type": "string",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "input, select, textarea",
+        "html": "trusted authored native element replacing control slot; matching id and help IDREF"
+      },
+      "stateOwner": "consumer",
+      "example": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">"
+    },
+    "help": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-form-field__help",
+        "html": "textContent and control aria-describedby"
+      },
+      "stateOwner": "consumer",
+      "example": "Use a short project name."
+    },
+    "name": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "input, .sk-icon",
+        "html": "native name; Icon data-icon-name is metadata only"
+      },
+      "stateOwner": "consumer",
+      "example": "project"
+    }
+  },
+  "variantContracts": {
+    "text": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "select": {
+      "kind": "composition",
+      "binding": null,
+      "aliasOf": null,
+      "example": "form-field-select",
+      "notes": "Use the concrete semantic markup in example-select.html; this is not a data-variant switch."
+    },
+    "textarea": {
+      "kind": "composition",
+      "binding": null,
+      "aliasOf": null,
+      "example": "form-field-textarea",
+      "notes": "Use the concrete semantic markup in example-textarea.html; this is not a data-variant switch."
+    },
+    "checkbox": {
+      "kind": "composition",
+      "binding": null,
+      "aliasOf": null,
+      "example": "form-field-checkbox",
+      "notes": "Use the concrete semantic markup in example-checkbox.html; this is not a data-variant switch."
+    }
+  },
+  "guidance": {
+    "use": "Associate a label, native control and help description.",
+    "avoid": "Automatic validation or rendering a control prop."
+  },
+  "slotContracts": {
+    "label": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "control": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "help": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "error": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Forms"
 }

@@ -6,11 +6,11 @@ A rating display or input for qualitative feedback.
 
 ## When To Use
 
-Use Rating when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Render a static star rating with an accessible summary.
 
 ## When Not To Use
 
-Do not use Rating to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+An editable rating input.
 
 ## Props
 
@@ -18,8 +18,10 @@ See rating.schema.json for the source contract.
 
 ## Variants
 
-- five-point
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| five-point | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See rating.schema.json for the source contract.
 ## Examples
 
 See examples.json and rating.html.
+
+## Maintained contract and standalone example
+
+Use: Render a static star rating with an accessible summary.
+
+Avoid: An editable rating input.
+
+See [contract](rating.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

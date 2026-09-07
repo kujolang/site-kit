@@ -6,11 +6,11 @@ An interruptive dialog that requires deliberate focus management.
 
 ## When To Use
 
-Use Modal Dialog when the page needs this pattern as a reusable, token-driven component.
+Open a labeled native dialog with explicit dismissal and opener restoration.
 
 ## When Not To Use
 
-Do not use Modal Dialog to bypass semantic structure, heading order, or accessibility behavior.
+Persistent page content or a fallback modal for obsolete browsers.
 
 ## Props
 
@@ -18,9 +18,11 @@ See modal.schema.json for the source contract.
 
 ## Variants
 
-- default
-- danger
-- wide
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| danger | alias | Base style; no switch |
+| wide | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -41,3 +43,11 @@ Prefer the native `<dialog>` contract. Point a real button at its ID with `data-
 ## Examples
 
 See examples.json and modal.html.
+
+## Maintained contract and standalone example
+
+Use: Open a labeled native dialog with explicit dismissal and opener restoration.
+
+Avoid: Persistent page content or a fallback modal for obsolete browsers.
+
+See [contract](modal.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

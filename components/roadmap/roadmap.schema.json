@@ -24,16 +24,19 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "surface.raised",
-    "text.primary",
-    "text.secondary",
-    "text.muted",
+    "border.1",
     "border.default",
+    "border.heavy",
+    "focus.offset",
     "focus.ring",
+    "focus.width",
+    "font.mono",
     "space.4",
-    "radius.0"
+    "space.5",
+    "surface.card",
+    "text.muted",
+    "text.secondary",
+    "type.size.xs"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -49,16 +52,108 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "roadmap-default",
+      "name": "Standalone",
       "props": {
-        "label": "Roadmap",
-        "variant": "timeline"
+        "heading": "Build with SiteKit",
+        "milestones": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup",
+            "date": "2026-07-09"
+          }
+        ]
       },
-      "notes": "Adapted from old-components into tokenized SiteKit styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "heading",
     "milestones"
-  ]
+  ],
+  "propertyContracts": {
+    "heading": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "h1, h2, h3",
+        "html": "textContent"
+      },
+      "stateOwner": "consumer",
+      "example": "Build with SiteKit"
+    },
+    "milestones": {
+      "type": "array",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-roadmap",
+        "html": "authored child markup in canonical example; arrays are consumer data, never automatically bound"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup",
+          "date": "2026-07-09"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content",
+          "date"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string",
+          "date": "string"
+        },
+        "contract": "Authored data structure: label is displayed text; content is escaped text or trusted authored slot markup. Optional href is a consumer-owned safe navigation URL. No automatic renderer."
+      }
+    }
+  },
+  "variantContracts": {
+    "timeline": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "compact": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "release-plan": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Display an ordered milestone timeline with dates.",
+    "avoid": "A scheduling engine or current release plan."
+  },
+  "slotContracts": {
+    "heading": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "milestones": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Data Display"
 }

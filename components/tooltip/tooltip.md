@@ -6,11 +6,11 @@ A short contextual text hint for an adjacent control.
 
 ## When To Use
 
-Use Tooltip when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Show advisory text on trigger focus/hover with Escape dismissal.
 
 ## When Not To Use
 
-Do not use Tooltip to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+Essential content, interactive tooltip content or collision-aware positioning.
 
 ## Props
 
@@ -18,8 +18,10 @@ See tooltip.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -34,3 +36,11 @@ Load `dist/sitekit.js` to expose the tooltip while its trigger is focused or hov
 ## Examples
 
 See examples.json and tooltip.html.
+
+## Maintained contract and standalone example
+
+Use: Show advisory text on trigger focus/hover with Escape dismissal.
+
+Avoid: Essential content, interactive tooltip content or collision-aware positioning.
+
+See [contract](tooltip.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

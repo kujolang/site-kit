@@ -6,11 +6,11 @@ A semantic metric strip for proof points, performance numbers, or portfolio coun
 
 ## When To Use
 
-Use Stats Bar when the page needs this legacy-informed pattern as a reusable, token-driven SiteKit component.
+Present metrics as a definition list with strong numeric typography.
 
 ## When Not To Use
 
-Do not use Stats Bar to bypass semantic structure, heading order, token usage, or accessibility behavior.
+Live analytics or verified product statistics.
 
 ## Props
 
@@ -18,9 +18,11 @@ See stats-bar.schema.json for the source contract.
 
 ## Variants
 
-- inline
-- boxed
-- stacked
+| Name | Contract | Binding |
+| --- | --- | --- |
+| inline | alias | Base style; no switch |
+| boxed | alias | Base style; no switch |
+| stacked | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -43,3 +45,11 @@ See stats-bar.schema.json for the source contract.
 ## Examples
 
 See examples.json and stats-bar.html.
+
+## Maintained contract and standalone example
+
+Use: Present metrics as a definition list with strong numeric typography.
+
+Avoid: Live analytics or verified product statistics.
+
+See [contract](stats-bar.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

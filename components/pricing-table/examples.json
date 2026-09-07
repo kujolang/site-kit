@@ -1,22 +1,19 @@
 [
   {
-    "name": "Default",
+    "id": "pricing-table-default",
+    "name": "Standalone",
     "props": {
-      "label": "Pricing Table",
-      "variant": "monthly"
+      "plans": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup",
+          "price": "$49"
+        }
+      ],
+      "currency": "Example",
+      "cadence": "Example"
     },
-    "notes": "Use semantic landmarks and tokenized styling."
-  },
-  {
-    "name": "Legacy source coverage",
-    "props": {
-      "sources": [
-        "old-components/testing-pricing-1.html",
-        "old-components/testing-pricing-2.html",
-        "old-components/testing-pricing-3.html",
-        "old-components/testing-pricing-4.html"
-      ]
-    },
-    "notes": "Legacy old-components files reviewed and represented through this SiteKit component contract."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

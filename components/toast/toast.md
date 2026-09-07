@@ -6,11 +6,11 @@ A non-modal notification for transient feedback.
 
 ## When To Use
 
-Use Toast when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Announce application-inserted status in a live region with explicit dismissal.
 
 ## When Not To Use
 
-Do not use Toast to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+Essential persistent instructions or time-critical information that disappears.
 
 ## Props
 
@@ -18,8 +18,10 @@ See toast.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See toast.schema.json for the source contract.
 ## Examples
 
 See examples.json and toast.html.
+
+## Maintained contract and standalone example
+
+Use: Announce application-inserted status in a live region with explicit dismissal.
+
+Avoid: Essential persistent instructions or time-critical information that disappears.
+
+See [contract](toast.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

@@ -6,11 +6,11 @@ A semantic map of projects, packages, docs, and relationships.
 
 ## When To Use
 
-Use Ecosystem Map when the page needs this pattern as a reusable, token-driven component.
+Display ecosystem nodes as a responsive grid of authored cards.
 
 ## When Not To Use
 
-Do not use Ecosystem Map to bypass semantic structure, heading order, or accessibility behavior.
+A force graph, radial layout engine or relationship visualization.
 
 ## Props
 
@@ -18,9 +18,11 @@ See ecosystem-map.schema.json for the source contract.
 
 ## Variants
 
-- grid
-- radial
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| grid | alias | Base style; no switch |
+| radial | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -37,3 +39,11 @@ See ecosystem-map.schema.json for the source contract.
 ## Examples
 
 See examples.json and ecosystem-map.html.
+
+## Maintained contract and standalone example
+
+Use: Display ecosystem nodes as a responsive grid of authored cards.
+
+Avoid: A force graph, radial layout engine or relationship visualization.
+
+See [contract](ecosystem-map.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

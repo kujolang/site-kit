@@ -1,10 +1,42 @@
 [
   {
-    "name": "Default",
+    "id": "badge-default",
+    "name": "Standalone",
     "props": {
       "label": "Badge",
       "variant": "neutral"
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "badge-success",
+    "name": "success",
+    "props": {
+      "label": "Badge",
+      "variant": "success"
+    },
+    "htmlFile": "example-success.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "badge-warning",
+    "name": "warning",
+    "props": {
+      "label": "Badge",
+      "variant": "warning"
+    },
+    "htmlFile": "example-warning.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "badge-danger",
+    "name": "danger",
+    "props": {
+      "label": "Badge",
+      "variant": "danger"
+    },
+    "htmlFile": "example-danger.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

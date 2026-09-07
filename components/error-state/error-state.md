@@ -6,11 +6,11 @@ A recoverable error message with next steps and support context.
 
 ## When To Use
 
-Use Error State when the page needs this pattern as a reusable, token-driven component.
+Explain a recoverable failure and show retry/review actions.
 
 ## When Not To Use
 
-Do not use Error State to bypass semantic structure, heading order, or accessibility behavior.
+An automatic error boundary or network retry implementation.
 
 ## Props
 
@@ -18,9 +18,11 @@ See error-state.schema.json for the source contract.
 
 ## Variants
 
-- default
-- inline
-- critical
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| inline | alias | Base style; no switch |
+| critical | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -37,3 +39,11 @@ See error-state.schema.json for the source contract.
 ## Examples
 
 See examples.json and error-state.html.
+
+## Maintained contract and standalone example
+
+Use: Explain a recoverable failure and show retry/review actions.
+
+Avoid: An automatic error boundary or network retry implementation.
+
+See [contract](error-state.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

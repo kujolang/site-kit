@@ -4,7 +4,11 @@
   "description": "A numeric input with increment and decrement actions.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "string optional",
+    "value": "number",
+    "min": "number optional",
+    "max": "number optional",
+    "step": "number optional"
   },
   "variants": [
     "number",
@@ -21,19 +25,24 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "surface.raised",
-    "surface.subtle",
-    "text.primary",
-    "text.secondary",
-    "text.muted",
+    "action.primary",
+    "action.primaryText",
+    "border.1",
     "border.default",
-    "border.subtle",
+    "focus.offset",
     "focus.ring",
-    "space.4",
+    "focus.width",
+    "font.mono",
     "radius.0",
-    "font.mono"
+    "size.control.lg",
+    "size.control.md",
+    "space.2",
+    "space.3",
+    "surface.card",
+    "text.muted",
+    "text.primary",
+    "type.line.tight",
+    "type.size.xs"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -50,17 +59,134 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "stepper-default",
+      "name": "Standalone",
       "props": {
         "label": "Stepper",
-        "variant": "number"
+        "variant": "Example",
+        "value": 1,
+        "min": 1,
+        "max": 1,
+        "step": 1
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "label",
     "content",
     "actions"
-  ]
+  ],
+  "propertyContracts": {
+    "label": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "label, [aria-label], summary, button, a, span",
+        "html": "textContent or accessible name appropriate to the element"
+      },
+      "stateOwner": "consumer",
+      "example": "Stepper"
+    },
+    "variant": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-stepper",
+        "html": "see variantContracts; names do not imply data-variant support"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    },
+    "value": {
+      "type": "number",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "input, [role=\"progressbar\"]",
+        "html": "native value; progress aria-valuenow plus matching fill width"
+      },
+      "stateOwner": "consumer",
+      "example": 1
+    },
+    "min": {
+      "type": "number",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "input",
+        "html": "native min"
+      },
+      "stateOwner": "native",
+      "example": 1
+    },
+    "max": {
+      "type": "number",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "input, [role=\"progressbar\"]",
+        "html": "native max; progress aria-valuemax"
+      },
+      "stateOwner": "native",
+      "example": 1
+    },
+    "step": {
+      "type": "number",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "input",
+        "html": "native step"
+      },
+      "stateOwner": "native",
+      "example": 1
+    }
+  },
+  "variantContracts": {
+    "number": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "compact": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Adjust a native number input with bounded increment and decrement controls.",
+    "avoid": "Arbitrary numeric expressions or multi-value input."
+  },
+  "slotContracts": {
+    "label": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "content": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "actions": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Forms"
 }

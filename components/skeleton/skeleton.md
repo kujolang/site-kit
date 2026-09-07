@@ -6,11 +6,11 @@ A placeholder surface that indicates loading content.
 
 ## When To Use
 
-Use Skeleton when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Show a decorative loading placeholder silhouette.
 
 ## When Not To Use
 
-Do not use Skeleton to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+A loading announcement on its own.
 
 ## Props
 
@@ -18,8 +18,10 @@ See skeleton.schema.json for the source contract.
 
 ## Variants
 
-- text
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| text | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See skeleton.schema.json for the source contract.
 ## Examples
 
 See examples.json and skeleton.html.
+
+## Maintained contract and standalone example
+
+Use: Show a decorative loading placeholder silhouette.
+
+Avoid: A loading announcement on its own.
+
+See [contract](skeleton.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

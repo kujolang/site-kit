@@ -6,11 +6,11 @@ A conversion block with a clear next action.
 
 ## When To Use
 
-Use CTA when the page needs this pattern as a reusable, token-driven component.
+Group a call-to-action headline, supporting copy and action row.
 
 ## When Not To Use
 
-Do not use CTA to bypass semantic structure, heading order, or accessibility behavior.
+A form submission service or automatic action renderer.
 
 ## Props
 
@@ -18,9 +18,11 @@ See cta.schema.json for the source contract.
 
 ## Variants
 
-- band
-- inline
-- stacked
+| Name | Contract | Binding |
+| --- | --- | --- |
+| band | alias | Base style; no switch |
+| inline | alias | Base style; no switch |
+| stacked | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -45,3 +47,11 @@ See cta.schema.json for the source contract.
 ## Examples
 
 See examples.json and cta.html.
+
+## Maintained contract and standalone example
+
+Use: Group a call-to-action headline, supporting copy and action row.
+
+Avoid: A form submission service or automatic action renderer.
+
+See [contract](cta.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

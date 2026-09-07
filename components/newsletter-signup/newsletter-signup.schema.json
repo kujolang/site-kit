@@ -28,16 +28,23 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
+    "border.1",
+    "border.default",
+    "focus.offset",
+    "focus.ring",
+    "focus.width",
+    "font.mono",
+    "radius.0",
+    "size.control.md",
+    "space.3",
+    "space.4",
+    "space.5",
+    "space.6",
     "surface.card",
-    "surface.raised",
+    "surface.page",
     "text.primary",
     "text.secondary",
-    "text.muted",
-    "border.default",
-    "focus.ring",
-    "space.4",
-    "radius.0"
+    "type.size.sm"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -55,12 +62,44 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "newsletter-signup-default",
+      "name": "Standalone",
       "props": {
-        "label": "Newsletter Signup",
-        "variant": "inline"
+        "heading": "Build with SiteKit",
+        "body": "Semantic HTML, local assets, and reusable styles.",
+        "fields": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup",
+            "id": "example-item",
+            "name": "project",
+            "type": "text"
+          }
+        ],
+        "consent": "Example"
       },
-      "notes": "Adapted from old-components into tokenized SiteKit styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "newsletter-signup-split",
+      "name": "split",
+      "props": {
+        "heading": "Build with SiteKit",
+        "body": "Semantic HTML, local assets, and reusable styles.",
+        "fields": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup",
+            "id": "example-item",
+            "name": "project",
+            "type": "text"
+          }
+        ],
+        "consent": "Example"
+      },
+      "htmlFile": "example-split.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
@@ -68,5 +107,136 @@
     "body",
     "form",
     "consent"
-  ]
+  ],
+  "propertyContracts": {
+    "heading": {
+      "type": "string",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "h1, h2, h3",
+        "html": "textContent"
+      },
+      "stateOwner": "consumer",
+      "example": "Build with SiteKit"
+    },
+    "body": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "p",
+        "html": "textContent"
+      },
+      "stateOwner": "consumer",
+      "example": "Semantic HTML, local assets, and reusable styles."
+    },
+    "fields": {
+      "type": "array",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "form",
+        "html": "authored child markup in canonical example; arrays are consumer data, never automatically bound"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup",
+          "id": "example-item",
+          "name": "project",
+          "type": "text"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content",
+          "id",
+          "name",
+          "type"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string",
+          "id": "string",
+          "name": "string",
+          "type": "string"
+        },
+        "contract": "Authored data structure: label is displayed text; content is escaped text or trusted authored slot markup. Optional href is a consumer-owned safe navigation URL. No automatic renderer."
+      }
+    },
+    "consent": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-newsletter-signup",
+        "html": "consumer-authored content; no attribute switch or runtime binding; see canonical example"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    }
+  },
+  "variantContracts": {
+    "inline": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "boxed": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "modal": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "split": {
+      "kind": "implemented",
+      "binding": "[data-layout=\"split\"]",
+      "aliasOf": null,
+      "notes": "Apply the attribute on the source selector.",
+      "example": "newsletter-signup-split"
+    }
+  },
+  "guidance": {
+    "use": "Compose email signup copy and an inline submission form.",
+    "avoid": "A working email subscription or consent service."
+  },
+  "slotContracts": {
+    "heading": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "body": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "form": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "consent": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Content"
 }

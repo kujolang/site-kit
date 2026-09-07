@@ -6,11 +6,11 @@ A multi-line text input with label and help text.
 
 ## When To Use
 
-Use Textarea when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Capture multiline native text with label and minimum height.
 
 ## When Not To Use
 
-Do not use Textarea to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+Rich-text formatting or autoresize behavior.
 
 ## Props
 
@@ -18,8 +18,10 @@ See textarea.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See textarea.schema.json for the source contract.
 ## Examples
 
 See examples.json and textarea.html.
+
+## Maintained contract and standalone example
+
+Use: Capture multiline native text with label and minimum height.
+
+Avoid: Rich-text formatting or autoresize behavior.
+
+See [contract](textarea.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

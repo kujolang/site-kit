@@ -1,10 +1,15 @@
 [
   {
-    "name": "Default",
+    "id": "date-picker-default",
+    "name": "Standalone",
     "props": {
       "label": "Date Picker",
-      "variant": "calendar"
+      "variant": "Example",
+      "value": "Example",
+      "min": "Example",
+      "max": "Example"
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

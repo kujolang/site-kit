@@ -6,11 +6,11 @@ A readable code or command block with caption and copy action.
 
 ## When To Use
 
-Use Code Block when the page needs this pattern as a reusable, token-driven component.
+Present readable source text with optional exact-text copy and keyboard scrolling.
 
 ## When Not To Use
 
-Do not use Code Block to bypass semantic structure, heading order, or accessibility behavior.
+A syntax highlighter, editor or arbitrary-code runner.
 
 ## Props
 
@@ -18,9 +18,11 @@ See code-block.schema.json for the source contract.
 
 ## Variants
 
-- default
-- terminal
-- numbered
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| terminal | alias | Base style; no switch |
+| numbered | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -37,3 +39,11 @@ See code-block.schema.json for the source contract.
 ## Examples
 
 See examples.json and code-block.html.
+
+## Maintained contract and standalone example
+
+Use: Present readable source text with optional exact-text copy and keyboard scrolling.
+
+Avoid: A syntax highlighter, editor or arbitrary-code runner.
+
+See [contract](code-block.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

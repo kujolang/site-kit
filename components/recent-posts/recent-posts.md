@@ -6,11 +6,11 @@ A semantic article-list component for blog previews and latest insights.
 
 ## When To Use
 
-Use Recent Posts when the page needs this legacy-informed pattern as a reusable, token-driven SiteKit component.
+Present authored article cards and metadata.
 
 ## When Not To Use
 
-Do not use Recent Posts to bypass semantic structure, heading order, token usage, or accessibility behavior.
+Fetching posts or automatic blog generation.
 
 ## Props
 
@@ -18,9 +18,11 @@ See recent-posts.schema.json for the source contract.
 
 ## Variants
 
-- cards
-- list
-- featured
+| Name | Contract | Binding |
+| --- | --- | --- |
+| cards | alias | Base style; no switch |
+| list | alias | Base style; no switch |
+| featured | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -43,3 +45,11 @@ See recent-posts.schema.json for the source contract.
 ## Examples
 
 See examples.json and recent-posts.html.
+
+## Maintained contract and standalone example
+
+Use: Present authored article cards and metadata.
+
+Avoid: Fetching posts or automatic blog generation.
+
+See [contract](recent-posts.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

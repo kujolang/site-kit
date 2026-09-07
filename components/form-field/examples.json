@@ -1,10 +1,70 @@
 [
   {
-    "name": "Default",
+    "id": "form-field-default",
+    "name": "Standalone",
     "props": {
+      "id": "demo-form-field",
       "label": "Form Field",
-      "variant": "text"
+      "type": "text",
+      "required": false,
+      "autocomplete": "Example",
+      "error": "Example",
+      "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
+      "help": "Use a short project name.",
+      "name": "project"
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "form-field-select",
+    "name": "select",
+    "props": {
+      "id": "demo-form-field",
+      "label": "Form Field",
+      "type": "text",
+      "required": false,
+      "autocomplete": "Example",
+      "error": "Example",
+      "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
+      "help": "Use a short project name.",
+      "name": "project"
+    },
+    "htmlFile": "example-select.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "form-field-textarea",
+    "name": "textarea",
+    "props": {
+      "id": "demo-form-field",
+      "label": "Form Field",
+      "type": "text",
+      "required": false,
+      "autocomplete": "Example",
+      "error": "Example",
+      "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
+      "help": "Use a short project name.",
+      "name": "project"
+    },
+    "htmlFile": "example-textarea.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "form-field-checkbox",
+    "name": "checkbox",
+    "props": {
+      "id": "demo-form-field",
+      "label": "Form Field",
+      "type": "text",
+      "required": false,
+      "autocomplete": "Example",
+      "error": "Example",
+      "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
+      "help": "Use a short project name.",
+      "name": "project"
+    },
+    "htmlFile": "example-checkbox.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

@@ -6,11 +6,11 @@ A compact key-value panel for operational metadata and object facts.
 
 ## When To Use
 
-Use Metadata Panel beside headers, detail views, or cards that need scannable facts.
+Present labeled key/value rows in a definition list.
 
 ## When Not To Use
 
-Do not use Metadata Panel for long narrative content or complex tabular data.
+A JSON parser or automatically generated inspector.
 
 ## Props
 
@@ -18,9 +18,11 @@ See metadata-panel.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
-- sidecar
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
+| sidecar | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -37,3 +39,11 @@ See metadata-panel.schema.json for the source contract.
 ## Examples
 
 See examples.json and metadata-panel.html.
+
+## Maintained contract and standalone example
+
+Use: Present labeled key/value rows in a definition list.
+
+Avoid: A JSON parser or automatically generated inspector.
+
+See [contract](metadata-panel.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

@@ -6,11 +6,11 @@ A page navigation control for long result sets.
 
 ## When To Use
 
-Use Pagination when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Link between pages and mark the current one.
 
 ## When Not To Use
 
-Do not use Pagination to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+Client-side data pagination, item slicing or total-page computation.
 
 ## Props
 
@@ -18,8 +18,10 @@ See pagination.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See pagination.schema.json for the source contract.
 ## Examples
 
 See examples.json and pagination.html.
+
+## Maintained contract and standalone example
+
+Use: Link between pages and mark the current one.
+
+Avoid: Client-side data pagination, item slicing or total-page computation.
+
+See [contract](pagination.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

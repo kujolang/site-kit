@@ -6,11 +6,11 @@ A chronological product timeline for milestones, launches, and upcoming work.
 
 ## When To Use
 
-Use Roadmap when the page needs this legacy-informed pattern as a reusable, token-driven SiteKit component.
+Display an ordered milestone timeline with dates.
 
 ## When Not To Use
 
-Do not use Roadmap to bypass semantic structure, heading order, token usage, or accessibility behavior.
+A scheduling engine or current release plan.
 
 ## Props
 
@@ -18,9 +18,11 @@ See roadmap.schema.json for the source contract.
 
 ## Variants
 
-- timeline
-- compact
-- release-plan
+| Name | Contract | Binding |
+| --- | --- | --- |
+| timeline | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
+| release-plan | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -42,3 +44,11 @@ See roadmap.schema.json for the source contract.
 ## Examples
 
 See examples.json and roadmap.html.
+
+## Maintained contract and standalone example
+
+Use: Display an ordered milestone timeline with dates.
+
+Avoid: A scheduling engine or current release plan.
+
+See [contract](roadmap.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

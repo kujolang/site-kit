@@ -6,11 +6,11 @@ A compact status, category, or metadata label.
 
 ## When To Use
 
-Use Badge when the page needs this pattern as a reusable, token-driven component.
+Add compact text status labels.
 
 ## When Not To Use
 
-Do not use Badge to bypass semantic structure, heading order, or accessibility behavior.
+An interactive control or status conveyed only by color.
 
 ## Props
 
@@ -18,11 +18,13 @@ See badge.schema.json for the source contract.
 
 ## Variants
 
-- neutral
-- success
-- warning
-- danger
-- outline
+| Name | Contract | Binding |
+| --- | --- | --- |
+| neutral | alias | Base style; no switch |
+| success | implemented | [data-variant="success"] |
+| warning | implemented | [data-variant="warning"] |
+| danger | implemented | [data-variant="danger"] |
+| outline | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -39,3 +41,11 @@ See badge.schema.json for the source contract.
 ## Examples
 
 See examples.json and badge.html.
+
+## Maintained contract and standalone example
+
+Use: Add compact text status labels.
+
+Avoid: An interactive control or status conveyed only by color.
+
+See [contract](badge.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

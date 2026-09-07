@@ -6,11 +6,11 @@ A responsive list of capabilities or benefits.
 
 ## When To Use
 
-Use Feature Grid when the page needs this pattern as a reusable, token-driven component.
+Arrange feature articles with marker boxes in an intrinsic grid.
 
 ## When Not To Use
 
-Do not use Feature Grid to bypass semantic structure, heading order, or accessibility behavior.
+An enforced two/three-column prop runtime.
 
 ## Props
 
@@ -18,9 +18,11 @@ See feature-grid.schema.json for the source contract.
 
 ## Variants
 
-- two-column
-- three-column
-- dense
+| Name | Contract | Binding |
+| --- | --- | --- |
+| two-column | alias | Base style; no switch |
+| three-column | alias | Base style; no switch |
+| dense | implemented | [data-density="dense"] |
 
 ## Accessibility Notes
 
@@ -41,3 +43,11 @@ See feature-grid.schema.json for the source contract.
 ## Examples
 
 See examples.json and feature-grid.html.
+
+## Maintained contract and standalone example
+
+Use: Arrange feature articles with marker boxes in an intrinsic grid.
+
+Avoid: An enforced two/three-column prop runtime.
+
+See [contract](feature-grid.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

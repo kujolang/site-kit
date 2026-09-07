@@ -6,11 +6,11 @@ A semantic action control for links, form submits, and interface commands.
 
 ## When To Use
 
-Use Button when the page needs this pattern as a reusable, token-driven component.
+Trigger an action using a native button, or style a navigation anchor.
 
 ## When Not To Use
 
-Do not use Button to bypass semantic structure, heading order, or accessibility behavior.
+A div acting as a button or an aria-disabled anchor assumed inert.
 
 ## Props
 
@@ -18,10 +18,12 @@ See button.schema.json for the source contract.
 
 ## Variants
 
-- primary
-- secondary
-- ghost
-- danger
+| Name | Contract | Binding |
+| --- | --- | --- |
+| primary | alias | Base style; no switch |
+| secondary | implemented | [data-variant="secondary"] |
+| ghost | implemented | [data-variant="ghost"] |
+| danger | implemented | [data-variant="danger"] |
 
 ## Accessibility Notes
 
@@ -42,3 +44,11 @@ See button.schema.json for the source contract.
 ## Examples
 
 See examples.json and button.html.
+
+## Maintained contract and standalone example
+
+Use: Trigger an action using a native button, or style a navigation anchor.
+
+Avoid: A div acting as a button or an aria-disabled anchor assumed inert.
+
+See [contract](button.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

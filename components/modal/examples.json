@@ -1,10 +1,14 @@
 [
   {
-    "name": "Default",
+    "id": "modal-default",
+    "name": "Standalone",
     "props": {
-      "label": "Modal Dialog",
-      "variant": "default"
+      "id": "demo-modal",
+      "title": "Review changes",
+      "open": false,
+      "dismissible": false
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

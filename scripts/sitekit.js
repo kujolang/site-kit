@@ -122,7 +122,7 @@ function generateComponentIndex() {
   lines.push(
     '## Behavior-enabled composition', '',
     '- Dropdown Menu + Icon + Button: use a real button with an accessible label; the optional `sitekit.js` layer adds menu focus movement, Escape, outside-click close, and `aria-expanded` state.',
-    '- Drawer + Header/Navigation: use a labeled panel, a real close button, and `data-sk-drawer-open` / `data-sk-drawer-close` hooks for optional focus containment.',
+    '- Drawer + Header/Navigation: use a labeled panel, a real close button, and `data-sk-drawer-open` / `data-sk-drawer-close` hooks for a nonmodal secondary panel; Tab follows normal document order.',
     '- Modal + Button: use a native `<dialog>` with `data-sk-modal` and a labeled heading; the optional behavior layer restores focus and traps Tab.',
     '- Popover + Tooltip: use these for contextual information, never for essential content or a replacement for a form label.',
     '- Header + Navigation + Theme: keep landmarks and use `data-sk-theme-toggle` or `data-sk-theme-select` for optional persistence.',
@@ -156,7 +156,7 @@ function generateDesign() {
     '- Deterministic generation, validation, and representative static HTML consumers.', '',
     'The v1 promise does not include npm publication, a hosted component service, universal framework compatibility, accessibility certification for arbitrary downstream compositions, unsupported-browser visual parity, or behavior for markup that omits documented hooks.', '',
     '## Optional Behavior', '',
-    'Dropdowns, popovers, drawers, modals, tooltips, theme controls, and icon-button contracts are progressive enhancements. Static HTML remains readable without JavaScript. Behavior hooks are documented in each relevant component and in the generated component index.', '',
+    'Dropdowns, popovers, drawers, modals, tooltips, tabs, local comboboxes, calendars, basic editors, steppers, segmented controls, copy, carousels, disclosures, dismissal, and theme controls are progressive enhancements. See docs/sitekit-gap-closure/API-AND-MIGRATION.md for bounded contracts and lifecycle. Static HTML remains readable without JavaScript. Behavior hooks are documented in each relevant component and in the generated component index.', '',
     '## Visual Identity', '', 'Technical, architectural, command-surface minimalism with high contrast, near-white page foundations, white panels, black linework, no decorative shadows, monospace metadata labels, and square geometry.', '',
     '## Accessibility Standard', '', 'WCAG 2.2 AA is the design and test baseline for SiteKit source components, documented usage, and tested reference compositions. Prefer native HTML before ARIA. Interactive controls require keyboard access, visible focus, and reduced-motion-safe behavior. This is not certification of arbitrary downstream markup.', '',
     '## Semantic HTML Standard', '', 'Use landmarks, ordered headings, real buttons, real links, lists for lists, and tables for tabular data. ARIA only fills gaps that native HTML cannot express.', '',
@@ -171,6 +171,7 @@ function generateDesign() {
   ];
   fs.writeFileSync(path.join(root, 'DESIGN.md'), md.join('\n'));
   generateComponentIndex();
+  require('./generate-contracts').generate();
   console.log('generated DESIGN.md and docs/components.md');
 }
 

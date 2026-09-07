@@ -1,26 +1,53 @@
 [
   {
-    "name": "Default",
+    "id": "hero-default",
+    "name": "Standalone",
     "props": {
-      "label": "Hero",
-      "variant": "split"
-    },
-    "notes": "Use semantic landmarks and tokenized styling."
-  },
-  {
-    "name": "Legacy source coverage",
-    "props": {
-      "sources": [
-        "old-components/testing-hero-1.html",
-        "old-components/testing-hero-2.html",
-        "old-components/testing-hero-3.html",
-        "old-components/testing-hero-4.html",
-        "old-components/testing-hero-5.html",
-        "old-components/testing-hero-6.html",
-        "old-components/testing-hero-7.html",
-        "old-components/testing-hero-8.html"
+      "eyebrow": "Example",
+      "heading": "Build with SiteKit",
+      "body": "Semantic HTML, local assets, and reusable styles.",
+      "actions": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
       ]
     },
-    "notes": "Legacy old-components files reviewed and represented through this SiteKit component contract."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "hero-split",
+    "name": "split",
+    "props": {
+      "eyebrow": "Example",
+      "heading": "Build with SiteKit",
+      "body": "Semantic HTML, local assets, and reusable styles.",
+      "actions": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ]
+    },
+    "htmlFile": "example-split.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "hero-centered",
+    "name": "centered",
+    "props": {
+      "eyebrow": "Example",
+      "heading": "Build with SiteKit",
+      "body": "Semantic HTML, local assets, and reusable styles.",
+      "actions": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ]
+    },
+    "htmlFile": "example-centered.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

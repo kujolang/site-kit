@@ -6,11 +6,11 @@ A binary input that can be checked or unchecked.
 
 ## When To Use
 
-Use Checkbox when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Capture a native boolean choice with a wrapping label.
 
 ## When Not To Use
 
-Do not use Checkbox to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+A radio group or custom tri-state widget.
 
 ## Props
 
@@ -18,8 +18,10 @@ See checkbox.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See checkbox.schema.json for the source contract.
 ## Examples
 
 See examples.json and checkbox.html.
+
+## Maintained contract and standalone example
+
+Use: Capture a native boolean choice with a wrapping label.
+
+Avoid: A radio group or custom tri-state widget.
+
+See [contract](checkbox.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

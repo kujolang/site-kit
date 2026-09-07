@@ -25,14 +25,23 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
+    "border.1",
+    "border.default",
+    "component.card.padding",
+    "focus.offset",
+    "focus.ring",
+    "focus.width",
+    "font.mono",
+    "radius.0",
+    "shadow.none",
+    "space.2",
+    "space.3",
+    "space.4",
+    "state.danger",
     "surface.card",
     "text.primary",
     "text.secondary",
-    "border.default",
-    "focus.ring",
-    "space.4",
-    "radius.1"
+    "type.size.lg"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -48,16 +57,101 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "promo-banner-default",
+      "name": "Standalone",
       "props": {
-        "label": "Promo Banner",
-        "variant": "info"
+        "message": "Example",
+        "action": {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        },
+        "dismissible": false
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "message",
     "action"
-  ]
+  ],
+  "propertyContracts": {
+    "message": {
+      "type": "string",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-promo-banner",
+        "html": "consumer-authored content; no attribute switch or runtime binding; see canonical example"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    },
+    "action": {
+      "type": "object",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-promo-banner",
+        "html": "consumer-authored content; no attribute switch or runtime binding; see canonical example"
+      },
+      "stateOwner": "consumer",
+      "example": {
+        "label": "Example",
+        "content": "Text or trusted authored markup"
+      }
+    },
+    "dismissible": {
+      "type": "boolean",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "button",
+        "html": "include or omit explicit dismissal hook; native dialog Escape remains available"
+      },
+      "stateOwner": "consumer",
+      "example": false
+    }
+  },
+  "variantContracts": {
+    "info": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "success": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "warning": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Present a promotional message and action cluster.",
+    "avoid": "A dismissible announcement system out of the box."
+  },
+  "slotContracts": {
+    "message": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "action": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Commerce"
 }

@@ -6,11 +6,11 @@ A focused email capture block with semantic form controls and compact supporting
 
 ## When To Use
 
-Use Newsletter Signup when the page needs this legacy-informed pattern as a reusable, token-driven SiteKit component.
+Compose email signup copy and an inline submission form.
 
 ## When Not To Use
 
-Do not use Newsletter Signup to bypass semantic structure, heading order, token usage, or accessibility behavior.
+A working email subscription or consent service.
 
 ## Props
 
@@ -18,10 +18,12 @@ See newsletter-signup.schema.json for the source contract.
 
 ## Variants
 
-- inline
-- boxed
-- modal
-- split
+| Name | Contract | Binding |
+| --- | --- | --- |
+| inline | alias | Base style; no switch |
+| boxed | alias | Base style; no switch |
+| modal | alias | Base style; no switch |
+| split | implemented | [data-layout="split"] |
 
 ## Accessibility Notes
 
@@ -47,3 +49,11 @@ See newsletter-signup.schema.json for the source contract.
 ## Examples
 
 See examples.json and newsletter-signup.html.
+
+## Maintained contract and standalone example
+
+Use: Compose email signup copy and an inline submission form.
+
+Avoid: A working email subscription or consent service.
+
+See [contract](newsletter-signup.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

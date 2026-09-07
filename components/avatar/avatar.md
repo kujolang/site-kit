@@ -6,11 +6,11 @@ A compact visual identity marker for a person, team, or object.
 
 ## When To Use
 
-Use Avatar when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Frame an image or manually authored initials in a square.
 
 ## When Not To Use
 
-Do not use Avatar to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+A guaranteed initials generator or image fallback service.
 
 ## Props
 
@@ -18,8 +18,10 @@ See avatar.schema.json for the source contract.
 
 ## Variants
 
-- initials
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| initials | composition | avatar-initials |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See avatar.schema.json for the source contract.
 ## Examples
 
 See examples.json and avatar.html.
+
+## Maintained contract and standalone example
+
+Use: Frame an image or manually authored initials in a square.
+
+Avoid: A guaranteed initials generator or image fallback service.
+
+See [contract](avatar.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

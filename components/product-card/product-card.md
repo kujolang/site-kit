@@ -6,11 +6,11 @@ A semantic commerce product summary with media, price, and actions.
 
 ## When To Use
 
-Use Product Card when the page needs this pattern as a reusable, token-driven component.
+Present product title, description, price and actions beside media.
 
 ## When Not To Use
 
-Do not use Product Card to bypass semantic structure, heading order, or accessibility behavior.
+A cart item, inventory model or automatic media renderer.
 
 ## Props
 
@@ -18,9 +18,11 @@ See product-card.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
-- featured
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
+| featured | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -37,3 +39,11 @@ See product-card.schema.json for the source contract.
 ## Examples
 
 See examples.json and product-card.html.
+
+## Maintained contract and standalone example
+
+Use: Present product title, description, price and actions beside media.
+
+Avoid: A cart item, inventory model or automatic media renderer.
+
+See [contract](product-card.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

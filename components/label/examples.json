@@ -1,10 +1,12 @@
 [
   {
-    "name": "Default",
+    "id": "label-default",
+    "name": "Standalone",
     "props": {
       "label": "Label",
-      "variant": "field"
+      "variant": "Example"
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

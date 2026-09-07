@@ -11,6 +11,10 @@ const outputs = [
   'css/generated',
   'DESIGN.md',
   'docs/components.md',
+  'examples/component-lab/contracts.js',
+  'docs/sitekit-gap-closure/component-manifest.json',
+  'docs/sitekit-gap-closure/token-manifest.json',
+  'docs/sitekit-gap-closure/search-records.json',
   'dist',
   'tests/visual/component-snapshot.json',
 ];

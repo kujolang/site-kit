@@ -5,7 +5,9 @@
   "props": {
     "title": "string optional",
     "body": "string",
-    "href": "string optional"
+    "href": "string optional",
+    "heading": "string optional",
+    "actions": "array optional"
   },
   "variants": [
     "plain",
@@ -25,14 +27,22 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
+    "border.1",
+    "border.default",
+    "component.card.gap",
+    "component.card.padding",
+    "focus.offset",
+    "focus.ring",
+    "focus.width",
+    "radius.0",
+    "shadow.none",
+    "space.2",
+    "space.3",
+    "space.4",
+    "state.danger",
     "surface.card",
     "text.primary",
-    "text.secondary",
-    "border.default",
-    "focus.ring",
-    "space.4",
-    "radius.1"
+    "text.secondary"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -49,17 +59,178 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "card-default",
+      "name": "Standalone",
       "props": {
-        "label": "Card",
-        "variant": "plain"
+        "title": "Review changes",
+        "body": "Semantic HTML, local assets, and reusable styles.",
+        "href": "Example",
+        "heading": "Build with SiteKit",
+        "actions": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup"
+          }
+        ]
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "card-interactive",
+      "name": "interactive",
+      "props": {
+        "title": "Review changes",
+        "body": "Semantic HTML, local assets, and reusable styles.",
+        "href": "Example",
+        "heading": "Build with SiteKit",
+        "actions": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup"
+          }
+        ]
+      },
+      "htmlFile": "example-interactive.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+    },
+    {
+      "id": "card-body-only",
+      "name": "Body only",
+      "props": {
+        "body": "A card may contain body content without a heading."
+      },
+      "htmlFile": "example-body-only.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "header",
     "body",
     "footer"
-  ]
+  ],
+  "propertyContracts": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "h2",
+        "html": "Optional h2 textContent; heading is a compatible authoring alias. If omitted, omit the h2 and its aria-labelledby reference."
+      },
+      "stateOwner": "consumer",
+      "example": "Review changes"
+    },
+    "body": {
+      "type": "string",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "p",
+        "html": "textContent"
+      },
+      "stateOwner": "consumer",
+      "example": "Semantic HTML, local assets, and reusable styles."
+    },
+    "href": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "a",
+        "html": "href (use an anchor instead of button for navigation)"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    },
+    "heading": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "h2",
+        "html": "alias of title textContent"
+      },
+      "stateOwner": "consumer",
+      "example": "Build with SiteKit"
+    },
+    "actions": {
+      "type": "array",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-card__actions",
+        "html": "authored button or link children"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string",
+          "href": "string"
+        },
+        "contract": "Authored data structure: label is displayed text; content is escaped text or trusted authored slot markup. Optional href is a consumer-owned safe navigation URL. No automatic renderer."
+      }
+    }
+  },
+  "variantContracts": {
+    "plain": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "interactive": {
+      "kind": "composition",
+      "binding": null,
+      "aliasOf": null,
+      "example": "card-interactive",
+      "notes": "Use the concrete semantic markup in example-interactive.html; this is not a data-variant switch."
+    },
+    "dense": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Group a heading, explanatory body and actions in a framed section.",
+    "avoid": "A clickable whole-card interaction without a real link."
+  },
+  "slotContracts": {
+    "header": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "body": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "footer": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Content"
 }

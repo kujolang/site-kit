@@ -6,11 +6,11 @@ A numeric input with increment and decrement actions.
 
 ## When To Use
 
-Use Stepper when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Adjust a native number input with bounded increment and decrement controls.
 
 ## When Not To Use
 
-Do not use Stepper to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+Arbitrary numeric expressions or multi-value input.
 
 ## Props
 
@@ -18,8 +18,10 @@ See stepper.schema.json for the source contract.
 
 ## Variants
 
-- number
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| number | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See stepper.schema.json for the source contract.
 ## Examples
 
 See examples.json and stepper.html.
+
+## Maintained contract and standalone example
+
+Use: Adjust a native number input with bounded increment and decrement controls.
+
+Avoid: Arbitrary numeric expressions or multi-value input.
+
+See [contract](stepper.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

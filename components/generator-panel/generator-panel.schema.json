@@ -26,16 +26,23 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "surface.raised",
-    "text.primary",
-    "text.secondary",
-    "text.muted",
+    "border.1",
     "border.default",
+    "focus.offset",
     "focus.ring",
+    "focus.width",
+    "font.mono",
+    "radius.0",
+    "size.control.md",
+    "space.2",
+    "space.3",
     "space.4",
-    "radius.0"
+    "space.5",
+    "space.8",
+    "surface.card",
+    "surface.page",
+    "text.primary",
+    "type.size.sm"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -52,17 +59,141 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "generator-panel-default",
+      "name": "Standalone",
       "props": {
-        "label": "Generator Panel",
-        "variant": "form-preview"
+        "heading": "Build with SiteKit",
+        "fields": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup",
+            "id": "example-item",
+            "name": "project",
+            "type": "text"
+          }
+        ],
+        "preview": {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
       },
-      "notes": "Adapted from old-components into tokenized SiteKit styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "heading",
     "form",
     "preview"
-  ]
+  ],
+  "propertyContracts": {
+    "heading": {
+      "type": "string",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "h1, h2, h3",
+        "html": "textContent"
+      },
+      "stateOwner": "consumer",
+      "example": "Build with SiteKit"
+    },
+    "fields": {
+      "type": "array",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "form",
+        "html": "authored child markup in canonical example; arrays are consumer data, never automatically bound"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup",
+          "id": "example-item",
+          "name": "project",
+          "type": "text"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content",
+          "id",
+          "name",
+          "type"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string",
+          "id": "string",
+          "name": "string",
+          "type": "string"
+        },
+        "contract": "Authored data structure: label is displayed text; content is escaped text or trusted authored slot markup. Optional href is a consumer-owned safe navigation URL. No automatic renderer."
+      }
+    },
+    "preview": {
+      "type": "object",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-generator-panel",
+        "html": "consumer-authored content; no attribute switch or runtime binding; see canonical example"
+      },
+      "stateOwner": "consumer",
+      "example": {
+        "label": "Example",
+        "content": "Text or trusted authored markup"
+      }
+    }
+  },
+  "variantContracts": {
+    "form-preview": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "compact": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "stacked": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Arrange a form next to a preview placeholder.",
+    "avoid": "An AI generator or API-backed tool."
+  },
+  "slotContracts": {
+    "heading": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "form": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "preview": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Tools"
 }

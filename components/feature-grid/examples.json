@@ -1,19 +1,32 @@
 [
   {
-    "name": "Default",
+    "id": "feature-grid-default",
+    "name": "Standalone",
     "props": {
-      "label": "Feature Grid",
-      "variant": "two-column"
+      "items": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "columns": "2"
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   },
   {
-    "name": "Legacy source coverage",
+    "id": "feature-grid-dense",
+    "name": "dense",
     "props": {
-      "sources": [
-        "old-components/testing-features-1.html"
-      ]
+      "items": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "columns": "2"
     },
-    "notes": "Legacy old-components files reviewed and represented through this SiteKit component contract."
+    "htmlFile": "example-dense.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

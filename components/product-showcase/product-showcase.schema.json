@@ -26,16 +26,19 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "surface.raised",
-    "text.primary",
-    "text.secondary",
-    "text.muted",
+    "border.1",
     "border.default",
+    "focus.offset",
     "focus.ring",
+    "focus.width",
+    "font.mono",
+    "space.3",
     "space.4",
-    "radius.0"
+    "space.5",
+    "surface.card",
+    "surface.page",
+    "surface.subtle",
+    "text.secondary"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -52,17 +55,151 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "product-showcase-default",
+      "name": "Standalone",
       "props": {
-        "label": "Product Showcase",
-        "variant": "template"
+        "heading": "Build with SiteKit",
+        "products": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup",
+            "price": "$49"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup"
+          }
+        ]
       },
-      "notes": "Adapted from old-components into tokenized SiteKit styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "heading",
     "products",
     "actions"
-  ]
+  ],
+  "propertyContracts": {
+    "heading": {
+      "type": "string",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "h1, h2, h3",
+        "html": "textContent"
+      },
+      "stateOwner": "consumer",
+      "example": "Build with SiteKit"
+    },
+    "products": {
+      "type": "array",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-product-showcase",
+        "html": "authored child markup in canonical example; arrays are consumer data, never automatically bound"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup",
+          "price": "$49"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content",
+          "price"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string",
+          "price": "string",
+          "imageAlt": "string"
+        },
+        "contract": "Authored data structure: label is displayed text; content is escaped text or trusted authored slot markup. Optional href is a consumer-owned safe navigation URL. No automatic renderer."
+      }
+    },
+    "actions": {
+      "type": "array",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "button, a",
+        "html": "authored child elements"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string",
+          "href": "string"
+        },
+        "contract": "Authored data structure: label is displayed text; content is escaped text or trusted authored slot markup. Optional href is a consumer-owned safe navigation URL. No automatic renderer."
+      }
+    }
+  },
+  "variantContracts": {
+    "template": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "commerce": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "editorial": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Compose a featured product, media placeholder and supporting offers.",
+    "avoid": "A product gallery or interactive commerce backend."
+  },
+  "slotContracts": {
+    "heading": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "products": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "actions": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Commerce"
 }

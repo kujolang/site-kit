@@ -23,14 +23,23 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
+    "border.1",
+    "border.default",
+    "component.card.padding",
+    "focus.offset",
+    "focus.ring",
+    "focus.width",
+    "font.mono",
+    "radius.0",
+    "shadow.none",
+    "space.2",
+    "space.3",
+    "space.4",
+    "state.danger",
     "surface.card",
     "text.primary",
     "text.secondary",
-    "border.default",
-    "focus.ring",
-    "space.4",
-    "radius.1"
+    "type.size.lg"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -45,15 +54,85 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "trust-strip-default",
+      "name": "Standalone",
       "props": {
-        "label": "Trust Strip",
-        "variant": "default"
+        "items": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup"
+          }
+        ]
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "items"
-  ]
+  ],
+  "propertyContracts": {
+    "items": {
+      "type": "array",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-trust-strip",
+        "html": "authored child markup in canonical example; arrays are consumer data, never automatically bound"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string"
+        },
+        "contract": "Consumer data. Render labels as text and content through the documented semantic child/slot structure; never insert untrusted HTML."
+      }
+    }
+  },
+  "variantContracts": {
+    "default": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "compact": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "bordered": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Display a compact grid of named trust/delivery claims.",
+    "avoid": "Real compliance, uptime or refund evidence."
+  },
+  "slotContracts": {
+    "items": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Commerce"
 }

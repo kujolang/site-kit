@@ -6,11 +6,11 @@ A keyboard navigable view switcher for related panels.
 
 ## When To Use
 
-Use Tabs when the page needs this pattern as a reusable, token-driven component.
+Switch related local panels with automatic or manual keyboard activation.
 
 ## When Not To Use
 
-Do not use Tabs to bypass semantic structure, heading order, or accessibility behavior.
+Navigation to unrelated pages or panels without associated tabs.
 
 ## Props
 
@@ -18,9 +18,11 @@ See tabs.schema.json for the source contract.
 
 ## Variants
 
-- line
-- boxed
-- docs
+| Name | Contract | Binding |
+| --- | --- | --- |
+| line | alias | Base style; no switch |
+| boxed | alias | Base style; no switch |
+| docs | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -37,3 +39,11 @@ See tabs.schema.json for the source contract.
 ## Examples
 
 See examples.json and tabs.html.
+
+## Maintained contract and standalone example
+
+Use: Switch related local panels with automatic or manual keyboard activation.
+
+Avoid: Navigation to unrelated pages or panels without associated tabs.
+
+See [contract](tabs.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

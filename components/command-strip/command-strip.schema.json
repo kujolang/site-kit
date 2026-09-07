@@ -24,11 +24,17 @@
     ]
   },
   "tokenDependencies": [
-    "surface.card",
-    "text.primary",
+    "border.1",
     "border.default",
+    "focus.offset",
+    "focus.ring",
+    "focus.width",
+    "font.mono",
     "space.3",
     "space.4",
+    "surface.card",
+    "text.primary",
+    "type.line.tight",
     "type.size.xs"
   ],
   "responsive": {
@@ -44,15 +50,98 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "command-strip-default",
+      "name": "Standalone",
       "props": {
-        "label": "Command metrics",
-        "variant": "default"
+        "items": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup"
+          }
+        ],
+        "label": "Command Strip"
       },
-      "notes": "Use for compact operational facts, not long explanatory copy."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "items"
-  ]
+  ],
+  "propertyContracts": {
+    "items": {
+      "type": "array",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-command-strip",
+        "html": "authored child markup in canonical example; arrays are consumer data, never automatically bound"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string"
+        },
+        "contract": "Consumer data. Render labels as text and content through the documented semantic child/slot structure; never insert untrusted HTML."
+      }
+    },
+    "label": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "label, [aria-label], summary, button, a, span",
+        "html": "textContent or accessible name appropriate to the element"
+      },
+      "stateOwner": "consumer",
+      "example": "Command Strip"
+    }
+  },
+  "variantContracts": {
+    "default": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "compact": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "four-up": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Display compact single-line metadata cells in a responsive strip.",
+    "avoid": "A command palette or keyboard launcher."
+  },
+  "slotContracts": {
+    "items": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Data Display"
 }

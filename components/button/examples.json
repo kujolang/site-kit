@@ -1,19 +1,58 @@
 [
   {
-    "name": "Default",
+    "id": "button-default",
+    "name": "Standalone",
     "props": {
       "label": "Button",
-      "variant": "primary"
+      "variant": "primary",
+      "href": "Example",
+      "type": "button",
+      "disabled": false,
+      "loading": false
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   },
   {
-    "name": "Legacy source coverage",
+    "id": "button-secondary",
+    "name": "secondary",
     "props": {
-      "sources": [
-        "old-components/testing-buttons.html"
-      ]
+      "label": "Button",
+      "variant": "secondary",
+      "href": "Example",
+      "type": "button",
+      "disabled": false,
+      "loading": false
     },
-    "notes": "Legacy old-components files reviewed and represented through this SiteKit component contract."
+    "htmlFile": "example-secondary.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "button-ghost",
+    "name": "ghost",
+    "props": {
+      "label": "Button",
+      "variant": "ghost",
+      "href": "Example",
+      "type": "button",
+      "disabled": false,
+      "loading": false
+    },
+    "htmlFile": "example-ghost.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
+  },
+  {
+    "id": "button-danger",
+    "name": "danger",
+    "props": {
+      "label": "Button",
+      "variant": "danger",
+      "href": "Example",
+      "type": "button",
+      "disabled": false,
+      "loading": false
+    },
+    "htmlFile": "example-danger.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

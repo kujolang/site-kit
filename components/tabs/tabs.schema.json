@@ -4,7 +4,11 @@
   "description": "A keyboard navigable view switcher for related panels.",
   "props": {
     "tabs": "array",
-    "selected": "string"
+    "selected": "string",
+    "panels": "array",
+    "label": "string",
+    "activation": "automatic|manual",
+    "orientation": "horizontal|vertical"
   },
   "variants": [
     "line",
@@ -25,14 +29,19 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "text.primary",
-    "text.secondary",
+    "border.1",
     "border.default",
+    "focus.offset",
     "focus.ring",
+    "focus.width",
+    "font.mono",
+    "space.2",
+    "space.3",
     "space.4",
-    "radius.1"
+    "surface.raised",
+    "surface.subtle",
+    "text.primary",
+    "type.weight.bold"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -48,16 +57,206 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "tabs-default",
+      "name": "Standalone",
       "props": {
+        "tabs": [
+          {
+            "id": "demo-tabs-0",
+            "label": "Overview",
+            "content": "Overview content",
+            "controls": "demo-tabs-panel-0"
+          },
+          {
+            "id": "demo-tabs-1",
+            "label": "Details",
+            "content": "Details content",
+            "controls": "demo-tabs-panel-1"
+          }
+        ],
+        "selected": "Example",
+        "panels": [
+          {
+            "id": "demo-tabs-panel-0",
+            "label": "Overview",
+            "content": "Overview content",
+            "labelledby": "demo-tabs-0"
+          },
+          {
+            "id": "demo-tabs-panel-1",
+            "label": "Details",
+            "content": "Details content",
+            "labelledby": "demo-tabs-1"
+          }
+        ],
         "label": "Tabs",
-        "variant": "line"
+        "activation": "automatic",
+        "orientation": "horizontal"
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "tablist",
     "panels"
-  ]
+  ],
+  "propertyContracts": {
+    "tabs": {
+      "type": "array",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "[role=\"tablist\"]",
+        "html": "one native button role=tab per item; id and aria-controls reference corresponding panel"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "content",
+          "controls"
+        ],
+        "properties": {
+          "id": "string",
+          "label": "string",
+          "content": "string",
+          "controls": "string"
+        }
+      }
+    },
+    "selected": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "[role=\"tab\"]",
+        "html": "aria-selected=true on one initial tab"
+      },
+      "stateOwner": "sitekit",
+      "example": "Example"
+    },
+    "panels": {
+      "type": "array",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-tabs > [role=\"tabpanel\"]",
+        "html": "one section per item; id and aria-labelledby reference corresponding tab"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "content",
+          "labelledby"
+        ],
+        "properties": {
+          "id": "string",
+          "label": "string",
+          "content": "string",
+          "labelledby": "string"
+        }
+      }
+    },
+    "label": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "label, [aria-label], summary, button, a, span",
+        "html": "textContent or accessible name appropriate to the element"
+      },
+      "stateOwner": "consumer",
+      "example": "Tabs"
+    },
+    "activation": {
+      "type": "string",
+      "required": false,
+      "default": "automatic",
+      "allowedValues": [
+        "automatic",
+        "manual"
+      ],
+      "binding": {
+        "selector": ".sk-tabs",
+        "html": "data-activation"
+      },
+      "stateOwner": "sitekit",
+      "example": "automatic"
+    },
+    "orientation": {
+      "type": "string",
+      "required": false,
+      "default": "horizontal",
+      "allowedValues": [
+        "horizontal",
+        "vertical"
+      ],
+      "binding": {
+        "selector": "[role=\"tablist\"]",
+        "html": "aria-orientation"
+      },
+      "stateOwner": "sitekit",
+      "example": "horizontal"
+    }
+  },
+  "variantContracts": {
+    "line": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "boxed": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "docs": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Switch related local panels with automatic or manual keyboard activation.",
+    "avoid": "Navigation to unrelated pages or panels without associated tabs."
+  },
+  "slotContracts": {
+    "tablist": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "panels": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Navigation"
 }

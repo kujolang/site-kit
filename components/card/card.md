@@ -6,11 +6,11 @@ A bounded content region for a single object, summary, or grouped action.
 
 ## When To Use
 
-Use Card when the page needs this pattern as a reusable, token-driven component.
+Group a heading, explanatory body and actions in a framed section.
 
 ## When Not To Use
 
-Do not use Card to bypass semantic structure, heading order, or accessibility behavior.
+A clickable whole-card interaction without a real link.
 
 ## Props
 
@@ -18,9 +18,11 @@ See card.schema.json for the source contract.
 
 ## Variants
 
-- plain
-- interactive
-- dense
+| Name | Contract | Binding |
+| --- | --- | --- |
+| plain | alias | Base style; no switch |
+| interactive | composition | card-interactive |
+| dense | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -37,3 +39,11 @@ See card.schema.json for the source contract.
 ## Examples
 
 See examples.json and card.html.
+
+## Maintained contract and standalone example
+
+Use: Group a heading, explanatory body and actions in a framed section.
+
+Avoid: A clickable whole-card interaction without a real link.
+
+See [contract](card.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

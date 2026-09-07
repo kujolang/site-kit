@@ -6,11 +6,11 @@ A commercial pricing comparison layout with plans and features.
 
 ## When To Use
 
-Use Pricing Table when the page needs this pattern as a reusable, token-driven component.
+Compare plans in a captioned table with row and column headers.
 
 ## When Not To Use
 
-Do not use Pricing Table to bypass semantic structure, heading order, or accessibility behavior.
+Billing logic, plan selection or cadence switching.
 
 ## Props
 
@@ -18,9 +18,11 @@ See pricing-table.schema.json for the source contract.
 
 ## Variants
 
-- monthly
-- annual
-- comparison
+| Name | Contract | Binding |
+| --- | --- | --- |
+| monthly | alias | Base style; no switch |
+| annual | alias | Base style; no switch |
+| comparison | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -44,3 +46,11 @@ See pricing-table.schema.json for the source contract.
 ## Examples
 
 See examples.json and pricing-table.html.
+
+## Maintained contract and standalone example
+
+Use: Compare plans in a captioned table with row and column headers.
+
+Avoid: Billing logic, plan selection or cadence switching.
+
+See [contract](pricing-table.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

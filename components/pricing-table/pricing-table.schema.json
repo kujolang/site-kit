@@ -25,14 +25,20 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "text.primary",
-    "text.secondary",
+    "border.1",
     "border.default",
+    "border.subtle",
+    "focus.offset",
     "focus.ring",
+    "focus.width",
+    "font.mono",
+    "space.3",
     "space.4",
-    "radius.1"
+    "surface.raised",
+    "surface.subtle",
+    "type.size.sm",
+    "type.size.xl",
+    "type.weight.bold"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -48,16 +54,129 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "pricing-table-default",
+      "name": "Standalone",
       "props": {
-        "label": "Pricing Table",
-        "variant": "monthly"
+        "plans": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup",
+            "price": "$49"
+          }
+        ],
+        "currency": "Example",
+        "cadence": "Example"
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "plans",
     "feature-rows"
-  ]
+  ],
+  "propertyContracts": {
+    "plans": {
+      "type": "array",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-pricing-table",
+        "html": "authored child markup in canonical example; arrays are consumer data, never automatically bound"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup",
+          "price": "$49"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content",
+          "price"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string",
+          "price": "string",
+          "features": "string"
+        },
+        "contract": "Authored data structure: label is displayed text; content is escaped text or trusted authored slot markup. Optional href is a consumer-owned safe navigation URL. No automatic renderer."
+      }
+    },
+    "currency": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-pricing-table",
+        "html": "consumer-authored content; no attribute switch or runtime binding; see canonical example"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    },
+    "cadence": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-pricing-table",
+        "html": "consumer-authored content; no attribute switch or runtime binding; see canonical example"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    }
+  },
+  "variantContracts": {
+    "monthly": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "annual": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "comparison": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Compare plans in a captioned table with row and column headers.",
+    "avoid": "Billing logic, plan selection or cadence switching."
+  },
+  "slotContracts": {
+    "plans": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "feature-rows": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [
+    [
+      "old-components/testing-pricing-1.html",
+      "old-components/testing-pricing-2.html",
+      "old-components/testing-pricing-3.html",
+      "old-components/testing-pricing-4.html"
+    ]
+  ],
+  "category": "Commerce"
 }

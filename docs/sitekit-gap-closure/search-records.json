@@ -1,0 +1,512 @@
+[
+  {
+    "id": "accordion",
+    "title": "Accordion",
+    "description": "Group native details/summary disclosures for FAQs.",
+    "url": "../../components/accordion/accordion.md"
+  },
+  {
+    "id": "alert",
+    "title": "Alert",
+    "description": "Show a status notice with an exclamation marker and optional severity colors.",
+    "url": "../../components/alert/alert.md"
+  },
+  {
+    "id": "avatar",
+    "title": "Avatar",
+    "description": "Frame an image or manually authored initials in a square.",
+    "url": "../../components/avatar/avatar.md"
+  },
+  {
+    "id": "badge",
+    "title": "Badge",
+    "description": "Add compact text status labels.",
+    "url": "../../components/badge/badge.md"
+  },
+  {
+    "id": "bento-grid",
+    "title": "Bento Grid",
+    "description": "Arrange an intro and unevenly spanning feature panels.",
+    "url": "../../components/bento-grid/bento-grid.md"
+  },
+  {
+    "id": "breadcrumbs",
+    "title": "Breadcrumbs",
+    "description": "Represent a hierarchy as an ordered navigation trail.",
+    "url": "../../components/breadcrumbs/breadcrumbs.md"
+  },
+  {
+    "id": "button",
+    "title": "Button",
+    "description": "Trigger an action using a native button, or style a navigation anchor.",
+    "url": "../../components/button/button.md"
+  },
+  {
+    "id": "card",
+    "title": "Card",
+    "description": "Group a heading, explanatory body and actions in a framed section.",
+    "url": "../../components/card/card.md"
+  },
+  {
+    "id": "carousel",
+    "title": "Carousel",
+    "description": "Browse a scrollable card series with optional previous/next controls.",
+    "url": "../../components/carousel/carousel.md"
+  },
+  {
+    "id": "checkbox",
+    "title": "Checkbox",
+    "description": "Capture a native boolean choice with a wrapping label.",
+    "url": "../../components/checkbox/checkbox.md"
+  },
+  {
+    "id": "checkout-summary",
+    "title": "Checkout Summary",
+    "description": "Display items and a definition list of totals with checkout actions.",
+    "url": "../../components/checkout-summary/checkout-summary.md"
+  },
+  {
+    "id": "code-block",
+    "title": "Code Block",
+    "description": "Present readable source text with optional exact-text copy and keyboard scrolling.",
+    "url": "../../components/code-block/code-block.md"
+  },
+  {
+    "id": "color-picker",
+    "title": "Color Picker",
+    "description": "Use a labeled native color input.",
+    "url": "../../components/color-picker/color-picker.md"
+  },
+  {
+    "id": "combobox",
+    "title": "Combobox",
+    "description": "Filter and select one supplied local option using the optional keyboard controller.",
+    "url": "../../components/combobox/combobox.md"
+  },
+  {
+    "id": "command-strip",
+    "title": "Command Strip",
+    "description": "Display compact single-line metadata cells in a responsive strip.",
+    "url": "../../components/command-strip/command-strip.md"
+  },
+  {
+    "id": "content-section",
+    "title": "Content Section",
+    "description": "Compose supporting copy, action and a metadata/media panel.",
+    "url": "../../components/content-section/content-section.md"
+  },
+  {
+    "id": "cta",
+    "title": "CTA",
+    "description": "Group a call-to-action headline, supporting copy and action row.",
+    "url": "../../components/cta/cta.md"
+  },
+  {
+    "id": "date-input",
+    "title": "Date Input",
+    "description": "Capture a date through the browser-native date input.",
+    "url": "../../components/date-input/date-input.md"
+  },
+  {
+    "id": "date-picker",
+    "title": "Date Picker",
+    "description": "Choose one date in a Sunday-first en-US calendar with a native input fallback.",
+    "url": "../../components/date-picker/date-picker.md"
+  },
+  {
+    "id": "drawer",
+    "title": "Drawer",
+    "description": "Show a nonmodal secondary panel with open/close, initial focus and focus restoration; Tab remains in normal document order.",
+    "url": "../../components/drawer/drawer.md"
+  },
+  {
+    "id": "dropdown-menu",
+    "title": "Dropdown Menu",
+    "description": "Offer a button-triggered menu of commands with keyboard movement.",
+    "url": "../../components/dropdown-menu/dropdown-menu.md"
+  },
+  {
+    "id": "ecosystem-map",
+    "title": "Ecosystem Map",
+    "description": "Display ecosystem nodes as a responsive grid of authored cards.",
+    "url": "../../components/ecosystem-map/ecosystem-map.md"
+  },
+  {
+    "id": "empty-state",
+    "title": "Empty State",
+    "description": "Explain an empty collection and offer a next action.",
+    "url": "../../components/empty-state/empty-state.md"
+  },
+  {
+    "id": "error-state",
+    "title": "Error State",
+    "description": "Explain a recoverable failure and show retry/review actions.",
+    "url": "../../components/error-state/error-state.md"
+  },
+  {
+    "id": "feature-grid",
+    "title": "Feature Grid",
+    "description": "Arrange feature articles with marker boxes in an intrinsic grid.",
+    "url": "../../components/feature-grid/feature-grid.md"
+  },
+  {
+    "id": "fieldset",
+    "title": "Fieldset",
+    "description": "Group native related form controls with a legend.",
+    "url": "../../components/fieldset/fieldset.md"
+  },
+  {
+    "id": "file",
+    "title": "File",
+    "description": "Show a file metadata row and a remove affordance.",
+    "url": "../../components/file/file.md"
+  },
+  {
+    "id": "file-upload",
+    "title": "File Upload",
+    "description": "Expose a native file chooser in a dashed frame.",
+    "url": "../../components/file-upload/file-upload.md"
+  },
+  {
+    "id": "footer",
+    "title": "Footer",
+    "description": "Compose brand, links and legal text in a wrapping footer.",
+    "url": "../../components/footer/footer.md"
+  },
+  {
+    "id": "form",
+    "title": "Form",
+    "description": "Compose labeled native email and message controls with submit.",
+    "url": "../../components/form/form.md"
+  },
+  {
+    "id": "form-field",
+    "title": "Form Field",
+    "description": "Associate a label, native control and help description.",
+    "url": "../../components/form-field/form-field.md"
+  },
+  {
+    "id": "generator-panel",
+    "title": "Generator Panel",
+    "description": "Arrange a form next to a preview placeholder.",
+    "url": "../../components/generator-panel/generator-panel.md"
+  },
+  {
+    "id": "header",
+    "title": "Header",
+    "description": "Build a branded wrapping header with primary links and actions.",
+    "url": "../../components/header/header.md"
+  },
+  {
+    "id": "heading",
+    "title": "Heading",
+    "description": "Group an eyebrow, h2 and supporting metadata.",
+    "url": "../../components/heading/heading.md"
+  },
+  {
+    "id": "hero",
+    "title": "Hero",
+    "description": "Present a large centered heading, explanation and action row.",
+    "url": "../../components/hero/hero.md"
+  },
+  {
+    "id": "icon",
+    "title": "Icon",
+    "description": "Wrap small inline SVG or a consumer-owned sprite with sizing and semantics.",
+    "url": "../../components/icon/icon.md"
+  },
+  {
+    "id": "image",
+    "title": "Image",
+    "description": "Provide a captioned image-frame visual example.",
+    "url": "../../components/image/image.md"
+  },
+  {
+    "id": "label",
+    "title": "Label",
+    "description": "Label an associated native form control.",
+    "url": "../../components/label/label.md"
+  },
+  {
+    "id": "link",
+    "title": "Link",
+    "description": "Style a real navigation anchor with underline and focus.",
+    "url": "../../components/link/link.md"
+  },
+  {
+    "id": "list",
+    "title": "List",
+    "description": "Format a semantic unordered list with spacing.",
+    "url": "../../components/list/list.md"
+  },
+  {
+    "id": "metadata-panel",
+    "title": "Metadata Panel",
+    "description": "Present labeled key/value rows in a definition list.",
+    "url": "../../components/metadata-panel/metadata-panel.md"
+  },
+  {
+    "id": "modal",
+    "title": "Modal",
+    "description": "Open a labeled native dialog with explicit dismissal and opener restoration.",
+    "url": "../../components/modal/modal.md"
+  },
+  {
+    "id": "navigation",
+    "title": "Navigation",
+    "description": "Display a wrapping set of primary navigation links.",
+    "url": "../../components/navigation/navigation.md"
+  },
+  {
+    "id": "newsletter-signup",
+    "title": "Newsletter Signup",
+    "description": "Compose email signup copy and an inline submission form.",
+    "url": "../../components/newsletter-signup/newsletter-signup.md"
+  },
+  {
+    "id": "pagination",
+    "title": "Pagination",
+    "description": "Link between pages and mark the current one.",
+    "url": "../../components/pagination/pagination.md"
+  },
+  {
+    "id": "partners-strip",
+    "title": "Partners Strip",
+    "description": "Lay out partner names or consumer-provided logos in an intrinsic grid.",
+    "url": "../../components/partners-strip/partners-strip.md"
+  },
+  {
+    "id": "popover",
+    "title": "Popover",
+    "description": "Toggle contextual nonmodal content next to a trigger.",
+    "url": "../../components/popover/popover.md"
+  },
+  {
+    "id": "pricing-table",
+    "title": "Pricing Table",
+    "description": "Compare plans in a captioned table with row and column headers.",
+    "url": "../../components/pricing-table/pricing-table.md"
+  },
+  {
+    "id": "product-card",
+    "title": "Product Card",
+    "description": "Present product title, description, price and actions beside media.",
+    "url": "../../components/product-card/product-card.md"
+  },
+  {
+    "id": "product-grid",
+    "title": "Product Grid",
+    "description": "Arrange product summaries in an intrinsic responsive grid.",
+    "url": "../../components/product-grid/product-grid.md"
+  },
+  {
+    "id": "product-showcase",
+    "title": "Product Showcase",
+    "description": "Compose a featured product, media placeholder and supporting offers.",
+    "url": "../../components/product-showcase/product-showcase.md"
+  },
+  {
+    "id": "progress-bar",
+    "title": "Progress Bar",
+    "description": "Draw a horizontal completion fill.",
+    "url": "../../components/progress-bar/progress-bar.md"
+  },
+  {
+    "id": "progress-indicator",
+    "title": "Progress Indicator",
+    "description": "Show an ordered sequence of workflow steps.",
+    "url": "../../components/progress-indicator/progress-indicator.md"
+  },
+  {
+    "id": "promo-banner",
+    "title": "Promo Banner",
+    "description": "Present a promotional message and action cluster.",
+    "url": "../../components/promo-banner/promo-banner.md"
+  },
+  {
+    "id": "quote",
+    "title": "Quote",
+    "description": "Present a quotation with figure attribution.",
+    "url": "../../components/quote/quote.md"
+  },
+  {
+    "id": "radio-button",
+    "title": "Radio Button",
+    "description": "Capture one native choice within a labeled radio group.",
+    "url": "../../components/radio-button/radio-button.md"
+  },
+  {
+    "id": "rating",
+    "title": "Rating",
+    "description": "Render a static star rating with an accessible summary.",
+    "url": "../../components/rating/rating.md"
+  },
+  {
+    "id": "recent-posts",
+    "title": "Recent Posts",
+    "description": "Present authored article cards and metadata.",
+    "url": "../../components/recent-posts/recent-posts.md"
+  },
+  {
+    "id": "resource-links",
+    "title": "Resource Links",
+    "description": "Group descriptive resource links in an intrinsic grid.",
+    "url": "../../components/resource-links/resource-links.md"
+  },
+  {
+    "id": "rich-text-editor",
+    "title": "Rich Text Editor",
+    "description": "Edit a small named text fragment with selected-text bold, italic and safe links.",
+    "url": "../../components/rich-text-editor/rich-text-editor.md"
+  },
+  {
+    "id": "roadmap",
+    "title": "Roadmap",
+    "description": "Display an ordered milestone timeline with dates.",
+    "url": "../../components/roadmap/roadmap.md"
+  },
+  {
+    "id": "search-input",
+    "title": "Search Input",
+    "description": "Provide a labeled native search form.",
+    "url": "../../components/search-input/search-input.md"
+  },
+  {
+    "id": "segmented-control",
+    "title": "Segmented Control",
+    "description": "Choose one mode using mutually exclusive pressed buttons.",
+    "url": "../../components/segmented-control/segmented-control.md"
+  },
+  {
+    "id": "select",
+    "title": "Select",
+    "description": "Capture a choice with a native select.",
+    "url": "../../components/select/select.md"
+  },
+  {
+    "id": "separator",
+    "title": "Separator",
+    "description": "Separate adjacent content with horizontal separator semantics.",
+    "url": "../../components/separator/separator.md"
+  },
+  {
+    "id": "skeleton",
+    "title": "Skeleton",
+    "description": "Show a decorative loading placeholder silhouette.",
+    "url": "../../components/skeleton/skeleton.md"
+  },
+  {
+    "id": "skip-link",
+    "title": "Skip Link",
+    "description": "Let keyboard users jump to the main region.",
+    "url": "../../components/skip-link/skip-link.md"
+  },
+  {
+    "id": "slider",
+    "title": "Slider",
+    "description": "Capture a scalar through a native range control.",
+    "url": "../../components/slider/slider.md"
+  },
+  {
+    "id": "spinner",
+    "title": "Spinner",
+    "description": "Show a nine-cell activity animation with Loading status text.",
+    "url": "../../components/spinner/spinner.md"
+  },
+  {
+    "id": "stack",
+    "title": "Stack",
+    "description": "Display vertically spaced child panels with borders and padding.",
+    "url": "../../components/stack/stack.md"
+  },
+  {
+    "id": "stats-bar",
+    "title": "Stats Bar",
+    "description": "Present metrics as a definition list with strong numeric typography.",
+    "url": "../../components/stats-bar/stats-bar.md"
+  },
+  {
+    "id": "stepper",
+    "title": "Stepper",
+    "description": "Adjust a native number input with bounded increment and decrement controls.",
+    "url": "../../components/stepper/stepper.md"
+  },
+  {
+    "id": "table",
+    "title": "Table",
+    "description": "Display captioned tabular data with scoped headers and overflow wrapper.",
+    "url": "../../components/table/table.md"
+  },
+  {
+    "id": "tabs",
+    "title": "Tabs",
+    "description": "Switch related local panels with automatic or manual keyboard activation.",
+    "url": "../../components/tabs/tabs.md"
+  },
+  {
+    "id": "team-grid",
+    "title": "Team Grid",
+    "description": "Arrange profile summaries in an intrinsic grid.",
+    "url": "../../components/team-grid/team-grid.md"
+  },
+  {
+    "id": "testimonial-rail",
+    "title": "Testimonial Rail",
+    "description": "Present quote figures with attributions in a grid.",
+    "url": "../../components/testimonial-rail/testimonial-rail.md"
+  },
+  {
+    "id": "text-input",
+    "title": "Text Input",
+    "description": "Capture short text with an explicit label.",
+    "url": "../../components/text-input/text-input.md"
+  },
+  {
+    "id": "textarea",
+    "title": "Textarea",
+    "description": "Capture multiline native text with label and minimum height.",
+    "url": "../../components/textarea/textarea.md"
+  },
+  {
+    "id": "toast",
+    "title": "Toast",
+    "description": "Announce application-inserted status in a live region with explicit dismissal.",
+    "url": "../../components/toast/toast.md"
+  },
+  {
+    "id": "toggle",
+    "title": "Toggle",
+    "description": "Capture a native boolean with a square moving indicator.",
+    "url": "../../components/toggle/toggle.md"
+  },
+  {
+    "id": "tooltip",
+    "title": "Tooltip",
+    "description": "Show advisory text on trigger focus/hover with Escape dismissal.",
+    "url": "../../components/tooltip/tooltip.md"
+  },
+  {
+    "id": "tree-view",
+    "title": "Tree View",
+    "description": "Nested navigation with branch disclosure buttons. Tab visits native buttons and links; no ARIA tree widget.",
+    "url": "../../components/tree-view/tree-view.md"
+  },
+  {
+    "id": "trust-strip",
+    "title": "Trust Strip",
+    "description": "Display a compact grid of named trust/delivery claims.",
+    "url": "../../components/trust-strip/trust-strip.md"
+  },
+  {
+    "id": "video",
+    "title": "Video",
+    "description": "Display a captioned 16:9 media placeholder.",
+    "url": "../../components/video/video.md"
+  },
+  {
+    "id": "visually-hidden",
+    "title": "Visually Hidden",
+    "description": "Keep noninteractive descriptive text available to assistive technology.",
+    "url": "../../components/visually-hidden/visually-hidden.md"
+  }
+]

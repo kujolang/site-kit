@@ -4,7 +4,9 @@
   "description": "A semantic map of projects, packages, docs, and relationships.",
   "props": {
     "nodes": "array",
-    "relationships": "array optional"
+    "relationships": "array optional",
+    "label": "string optional",
+    "items": "array optional"
   },
   "variants": [
     "grid",
@@ -24,14 +26,15 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "text.primary",
-    "text.secondary",
+    "border.1",
     "border.default",
+    "component.grid.gap",
+    "focus.offset",
     "focus.ring",
-    "space.4",
-    "radius.1"
+    "focus.width",
+    "radius.0",
+    "space.5",
+    "surface.card"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -47,16 +50,197 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "ecosystem-map-default",
+      "name": "Standalone",
       "props": {
-        "label": "Ecosystem Map",
-        "variant": "grid"
+        "nodes": [
+          {
+            "id": "ecosystem-source",
+            "label": "Source",
+            "content": "Tokens and templates."
+          },
+          {
+            "id": "ecosystem-browser",
+            "label": "Browser",
+            "content": "Native HTML and optional enhancements."
+          }
+        ],
+        "relationships": [
+          {
+            "label": "supplies",
+            "content": "Source supplies the browser.",
+            "from": "ecosystem-source",
+            "to": "ecosystem-browser"
+          }
+        ],
+        "label": "Source and browser ecosystem",
+        "items": [
+          {
+            "id": "ecosystem-source",
+            "label": "Source",
+            "content": "Tokens and templates."
+          },
+          {
+            "id": "ecosystem-browser",
+            "label": "Browser",
+            "content": "Native HTML and optional enhancements."
+          }
+        ]
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "nodes",
     "relationships"
-  ]
+  ],
+  "propertyContracts": {
+    "nodes": {
+      "type": "array",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-ecosystem-map",
+        "html": "article children with heading, content and optional links"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup",
+          "id": "example-item"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content",
+          "id"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string",
+          "id": "string"
+        },
+        "contract": "Authored data structure: label is displayed text; content is escaped text or trusted authored slot markup. Optional href is a consumer-owned safe navigation URL. No automatic renderer."
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-ecosystem-map",
+        "html": "visible prose or list of links identifying node relationships; no graph engine"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup",
+          "from": "source",
+          "to": "browser"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content",
+          "from",
+          "to"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string",
+          "from": "string",
+          "to": "string"
+        },
+        "contract": "Authored data structure: label is displayed text; content is escaped text or trusted authored slot markup. Optional href is a consumer-owned safe navigation URL. No automatic renderer."
+      }
+    },
+    "label": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "label, [aria-label], summary, button, a, span",
+        "html": "textContent or accessible name appropriate to the element"
+      },
+      "stateOwner": "consumer",
+      "example": "Ecosystem Map"
+    },
+    "items": {
+      "type": "array",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-ecosystem-map",
+        "html": "compatible authoring alias of nodes"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string"
+        },
+        "contract": "Consumer data. Render labels as text and content through the documented semantic child/slot structure; never insert untrusted HTML."
+      }
+    }
+  },
+  "variantContracts": {
+    "grid": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "radial": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Legacy alias of the semantic node grid. No radial positioning or graph engine is supplied."
+    },
+    "compact": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Display ecosystem nodes as a responsive grid of authored cards.",
+    "avoid": "A force graph, radial layout engine or relationship visualization."
+  },
+  "slotContracts": {
+    "nodes": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "relationships": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Data Display"
 }

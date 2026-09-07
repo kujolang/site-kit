@@ -1,0 +1,3793 @@
+{
+  "schemaVersion": 2,
+  "core": {
+    "$schema": "../schemas/token.schema.json",
+    "color": {
+      "black": {
+        "value": "#060606"
+      },
+      "white": {
+        "value": "#ffffff"
+      },
+      "paper": {
+        "value": "#f9f9f9"
+      },
+      "ink": {
+        "value": "#060606"
+      },
+      "gray": {
+        "50": {
+          "value": "#f9f9f9"
+        },
+        "100": {
+          "value": "#eeeeee"
+        },
+        "300": {
+          "value": "#b8b8b8"
+        },
+        "500": {
+          "value": "#5d5d5d"
+        },
+        "700": {
+          "value": "#2b2b2b"
+        },
+        "900": {
+          "value": "#111111"
+        }
+      },
+      "blue": {
+        "600": {
+          "value": "#1646d2"
+        }
+      },
+      "green": {
+        "600": {
+          "value": "#0f6b35"
+        }
+      },
+      "yellow": {
+        "500": {
+          "value": "#765000"
+        }
+      },
+      "red": {
+        "600": {
+          "value": "#a31515"
+        }
+      },
+      "cyan": {
+        "600": {
+          "value": "#075d6c"
+        }
+      }
+    },
+    "font": {
+      "sans": {
+        "value": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
+      },
+      "mono": {
+        "value": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
+      }
+    },
+    "type": {
+      "size": {
+        "xs": {
+          "value": "0.75rem"
+        },
+        "sm": {
+          "value": "0.875rem"
+        },
+        "md": {
+          "value": "1rem"
+        },
+        "lg": {
+          "value": "1.125rem"
+        },
+        "xl": {
+          "value": "1.375rem"
+        },
+        "2xl": {
+          "value": "1.75rem"
+        },
+        "3xl": {
+          "value": "2.25rem"
+        },
+        "4xl": {
+          "value": "3rem"
+        },
+        "5xl": {
+          "value": "5.375rem"
+        }
+      },
+      "line": {
+        "tight": {
+          "value": "1.1"
+        },
+        "normal": {
+          "value": "1.5"
+        },
+        "loose": {
+          "value": "1.7"
+        }
+      },
+      "weight": {
+        "regular": {
+          "value": "400"
+        },
+        "medium": {
+          "value": "520"
+        },
+        "bold": {
+          "value": "700"
+        }
+      }
+    },
+    "space": {
+      "0": {
+        "value": "0"
+      },
+      "1": {
+        "value": "0.25rem"
+      },
+      "2": {
+        "value": "0.5rem"
+      },
+      "3": {
+        "value": "0.75rem"
+      },
+      "4": {
+        "value": "1rem"
+      },
+      "5": {
+        "value": "1.25rem"
+      },
+      "6": {
+        "value": "1.5rem"
+      },
+      "8": {
+        "value": "2rem"
+      },
+      "10": {
+        "value": "2.5rem"
+      },
+      "12": {
+        "value": "3rem"
+      },
+      "16": {
+        "value": "4rem"
+      },
+      "20": {
+        "value": "5rem"
+      },
+      "24": {
+        "value": "6rem"
+      }
+    },
+    "size": {
+      "content": {
+        "sm": {
+          "value": "42rem"
+        },
+        "md": {
+          "value": "64rem"
+        },
+        "lg": {
+          "value": "78rem"
+        },
+        "xl": {
+          "value": "92rem"
+        }
+      },
+      "control": {
+        "sm": {
+          "value": "2rem"
+        },
+        "md": {
+          "value": "2.5rem"
+        },
+        "lg": {
+          "value": "3rem"
+        }
+      }
+    },
+    "border": {
+      "0": {
+        "value": "0"
+      },
+      "1": {
+        "value": "1px"
+      },
+      "2": {
+        "value": "2px"
+      },
+      "heavy": {
+        "value": "3px"
+      }
+    },
+    "radius": {
+      "0": {
+        "value": "0"
+      },
+      "1": {
+        "value": "2px"
+      },
+      "2": {
+        "value": "4px"
+      },
+      "3": {
+        "value": "6px"
+      }
+    },
+    "shadow": {
+      "none": {
+        "value": "none"
+      },
+      "hard": {
+        "value": "none"
+      },
+      "hardSm": {
+        "value": "none"
+      }
+    },
+    "motion": {
+      "fast": {
+        "value": "120ms"
+      },
+      "base": {
+        "value": "180ms"
+      },
+      "slow": {
+        "value": "260ms"
+      },
+      "ease": {
+        "value": "cubic-bezier(.2,0,0,1)"
+      }
+    },
+    "z": {
+      "base": {
+        "value": "0"
+      },
+      "dropdown": {
+        "value": "20"
+      },
+      "sticky": {
+        "value": "30"
+      },
+      "modal": {
+        "value": "80"
+      },
+      "toast": {
+        "value": "90"
+      }
+    },
+    "focus": {
+      "width": {
+        "value": "2px"
+      },
+      "offset": {
+        "value": "3px"
+      }
+    },
+    "breakpoint": {
+      "sm": {
+        "value": "36rem"
+      },
+      "md": {
+        "value": "48rem"
+      },
+      "lg": {
+        "value": "64rem"
+      },
+      "xl": {
+        "value": "80rem"
+      }
+    }
+  },
+  "semantic": {
+    "$schema": "../schemas/token.schema.json",
+    "surface": {
+      "page": {
+        "value": "{color.paper}"
+      },
+      "raised": {
+        "value": "{color.white}"
+      },
+      "card": {
+        "value": "{color.white}"
+      },
+      "inverse": {
+        "value": "{color.black}"
+      },
+      "subtle": {
+        "value": "{color.white}"
+      },
+      "accent": {
+        "value": "{color.ink}"
+      }
+    },
+    "text": {
+      "primary": {
+        "value": "{color.black}"
+      },
+      "secondary": {
+        "value": "{color.gray.700}"
+      },
+      "muted": {
+        "value": "{color.gray.500}"
+      },
+      "inverse": {
+        "value": "{color.white}"
+      },
+      "link": {
+        "value": "{color.black}"
+      },
+      "danger": {
+        "value": "{color.red.600}"
+      },
+      "success": {
+        "value": "{color.green.600}"
+      },
+      "warning": {
+        "value": "{color.yellow.500}"
+      }
+    },
+    "action": {
+      "primary": {
+        "value": "{color.black}"
+      },
+      "primaryText": {
+        "value": "{color.white}"
+      },
+      "secondary": {
+        "value": "{color.white}"
+      },
+      "secondaryText": {
+        "value": "{color.black}"
+      },
+      "danger": {
+        "value": "{color.red.600}"
+      },
+      "dangerText": {
+        "value": "{color.white}"
+      },
+      "ghost": {
+        "value": "transparent"
+      }
+    },
+    "border": {
+      "default": {
+        "value": "{color.black}"
+      },
+      "subtle": {
+        "value": "{color.gray.300}"
+      },
+      "strong": {
+        "value": "{color.black}"
+      },
+      "inverse": {
+        "value": "{color.white}"
+      }
+    },
+    "focus": {
+      "ring": {
+        "value": "{color.black}"
+      },
+      "ringOffset": {
+        "value": "{color.paper}"
+      }
+    },
+    "shadow": {
+      "color": {
+        "value": "{color.black}"
+      }
+    },
+    "code": {
+      "surface": {
+        "value": "{color.white}"
+      },
+      "text": {
+        "value": "{color.black}"
+      },
+      "border": {
+        "value": "{color.black}"
+      }
+    },
+    "state": {
+      "success": {
+        "value": "{color.green.600}"
+      },
+      "warning": {
+        "value": "{color.yellow.500}"
+      },
+      "danger": {
+        "value": "{color.red.600}"
+      },
+      "info": {
+        "value": "{color.cyan.600}"
+      }
+    },
+    "component": {
+      "button": {
+        "height": {
+          "value": "{size.control.md}"
+        },
+        "gap": {
+          "value": "{space.2}"
+        }
+      },
+      "card": {
+        "padding": {
+          "value": "{space.5}"
+        },
+        "gap": {
+          "value": "{space.5}"
+        }
+      },
+      "hero": {
+        "paddingBlock": {
+          "value": "{space.6}"
+        },
+        "maxWidth": {
+          "value": "{size.content.lg}"
+        }
+      },
+      "grid": {
+        "gap": {
+          "value": "{space.5}"
+        }
+      }
+    }
+  },
+  "themes": {
+    "bzby": {
+      "name": "bzby",
+      "description": "Compact commercial theme with sharper signal states.",
+      "tokens": {
+        "surface": {
+          "page": {
+            "value": "#fffaf0"
+          },
+          "raised": {
+            "value": "#ffffff"
+          },
+          "card": {
+            "value": "#ffffff"
+          },
+          "inverse": {
+            "value": "#111111"
+          },
+          "subtle": {
+            "value": "#ffffff"
+          },
+          "accent": {
+            "value": "#111111"
+          }
+        },
+        "text": {
+          "primary": {
+            "value": "#111111"
+          },
+          "secondary": {
+            "value": "#403b33"
+          },
+          "muted": {
+            "value": "#766b5f"
+          },
+          "inverse": {
+            "value": "#fffaf0"
+          },
+          "link": {
+            "value": "#085f63"
+          }
+        },
+        "action": {
+          "primary": {
+            "value": "#111111"
+          },
+          "primaryText": {
+            "value": "#fffaf0"
+          },
+          "secondary": {
+            "value": "#ffffff"
+          },
+          "secondaryText": {
+            "value": "#111111"
+          }
+        },
+        "border": {
+          "default": {
+            "value": "#111111"
+          },
+          "subtle": {
+            "value": "#766b5f"
+          }
+        },
+        "focus": {
+          "ring": {
+            "value": "#085f63"
+          },
+          "ringOffset": {
+            "value": "#fffaf0"
+          }
+        },
+        "shadow": {
+          "color": {
+            "value": "#111111"
+          }
+        }
+      }
+    },
+    "kujo-dark": {
+      "name": "kujo-dark",
+      "description": "Dark Kujo technical interface theme.",
+      "tokens": {
+        "surface": {
+          "page": {
+            "value": "{color.black}"
+          },
+          "raised": {
+            "value": "{color.gray.900}"
+          },
+          "card": {
+            "value": "{color.gray.900}"
+          },
+          "inverse": {
+            "value": "{color.white}"
+          },
+          "subtle": {
+            "value": "{color.gray.900}"
+          },
+          "accent": {
+            "value": "{color.white}"
+          }
+        },
+        "text": {
+          "primary": {
+            "value": "{color.white}"
+          },
+          "secondary": {
+            "value": "{color.gray.100}"
+          },
+          "muted": {
+            "value": "{color.gray.300}"
+          },
+          "inverse": {
+            "value": "{color.black}"
+          },
+          "link": {
+            "value": "#7dd3fc"
+          },
+          "danger": {
+            "value": "#ff8c8c"
+          },
+          "success": {
+            "value": "#6fdc8c"
+          },
+          "warning": {
+            "value": "#ffd166"
+          }
+        },
+        "action": {
+          "primary": {
+            "value": "{color.white}"
+          },
+          "primaryText": {
+            "value": "{color.black}"
+          },
+          "secondary": {
+            "value": "{color.gray.900}"
+          },
+          "secondaryText": {
+            "value": "{color.white}"
+          },
+          "danger": {
+            "value": "#ff8c8c"
+          },
+          "dangerText": {
+            "value": "{color.black}"
+          }
+        },
+        "border": {
+          "default": {
+            "value": "{color.white}"
+          },
+          "subtle": {
+            "value": "{color.gray.300}"
+          }
+        },
+        "focus": {
+          "ring": {
+            "value": "#7dd3fc"
+          },
+          "ringOffset": {
+            "value": "{color.black}"
+          }
+        },
+        "shadow": {
+          "color": {
+            "value": "{color.white}"
+          }
+        },
+        "state": {
+          "success": {
+            "value": "#6fdc8c"
+          },
+          "warning": {
+            "value": "#ffd166"
+          },
+          "danger": {
+            "value": "#ff8c8c"
+          },
+          "info": {
+            "value": "#7dd3fc"
+          }
+        }
+      }
+    },
+    "kujo-light": {
+      "name": "kujo-light",
+      "description": "Monochrome Kujo command surface with white panels and hard black structure.",
+      "tokens": {
+        "surface": {
+          "page": {
+            "value": "{color.paper}"
+          },
+          "raised": {
+            "value": "{color.white}"
+          },
+          "card": {
+            "value": "{color.white}"
+          },
+          "inverse": {
+            "value": "{color.black}"
+          },
+          "subtle": {
+            "value": "{color.white}"
+          },
+          "accent": {
+            "value": "{color.black}"
+          }
+        },
+        "text": {
+          "primary": {
+            "value": "{color.black}"
+          },
+          "secondary": {
+            "value": "{color.gray.700}"
+          },
+          "muted": {
+            "value": "{color.gray.500}"
+          },
+          "inverse": {
+            "value": "{color.paper}"
+          },
+          "link": {
+            "value": "{color.black}"
+          }
+        },
+        "action": {
+          "primary": {
+            "value": "{color.black}"
+          },
+          "primaryText": {
+            "value": "{color.white}"
+          },
+          "secondary": {
+            "value": "{color.white}"
+          },
+          "secondaryText": {
+            "value": "{color.black}"
+          }
+        },
+        "border": {
+          "default": {
+            "value": "{color.black}"
+          },
+          "subtle": {
+            "value": "{color.gray.500}"
+          }
+        },
+        "focus": {
+          "ring": {
+            "value": "{color.black}"
+          },
+          "ringOffset": {
+            "value": "{color.paper}"
+          }
+        },
+        "shadow": {
+          "color": {
+            "value": "{color.black}"
+          }
+        }
+      }
+    },
+    "personal-dark": {
+      "name": "personal-dark",
+      "description": "Personal publishing dark theme with restrained contrast.",
+      "tokens": {
+        "surface": {
+          "page": {
+            "value": "#0f1115"
+          },
+          "raised": {
+            "value": "#171a20"
+          },
+          "card": {
+            "value": "#171a20"
+          },
+          "inverse": {
+            "value": "#f7f4ed"
+          },
+          "subtle": {
+            "value": "#171a20"
+          },
+          "accent": {
+            "value": "#f7f4ed"
+          }
+        },
+        "text": {
+          "primary": {
+            "value": "#f7f4ed"
+          },
+          "secondary": {
+            "value": "#d7d2c8"
+          },
+          "muted": {
+            "value": "#a69f94"
+          },
+          "inverse": {
+            "value": "#0f1115"
+          },
+          "link": {
+            "value": "#8cc9ff"
+          }
+        },
+        "action": {
+          "primary": {
+            "value": "#f7f4ed"
+          },
+          "primaryText": {
+            "value": "#0f1115"
+          },
+          "secondary": {
+            "value": "#171a20"
+          },
+          "secondaryText": {
+            "value": "#f7f4ed"
+          }
+        },
+        "border": {
+          "default": {
+            "value": "#f7f4ed"
+          },
+          "subtle": {
+            "value": "#a69f94"
+          }
+        },
+        "focus": {
+          "ring": {
+            "value": "#8cc9ff"
+          },
+          "ringOffset": {
+            "value": "#0f1115"
+          }
+        },
+        "shadow": {
+          "color": {
+            "value": "#f7f4ed"
+          }
+        },
+        "state": {
+          "success": {
+            "value": "#6fdc8c"
+          },
+          "warning": {
+            "value": "#ffd166"
+          },
+          "danger": {
+            "value": "#ff8c8c"
+          },
+          "info": {
+            "value": "#8cc9ff"
+          }
+        }
+      }
+    }
+  },
+  "sourceHashes": {
+    "tokens/core.json": "b8076ddf98995ee8ca6262843ef0cb67045ca9eda3930ad4282dd5e96fd31d50",
+    "tokens/semantic.json": "3e2574684f91a833b866d8f7de215e237e8b25e8af524bcc824b151812f048e7",
+    "tokens/themes/bzby.json": "b04244c6f7a23fb4828fc285a5a7634d7cc54ea26dd44ea46d2920c2d196bd49",
+    "tokens/themes/kujo-dark.json": "56231282b198aba03475ff54e71c0bf1f1ec31614f7ed16cbf5e773b5c30fbb6",
+    "tokens/themes/kujo-light.json": "98038c0a492b2823ae6c5cd43c759a5d8189fcf3dc1270e2acd711504ece4618",
+    "tokens/themes/personal-dark.json": "d9d49cf8dd8ee1a65ecae459484b4217a51dc2b41d4762c4596cec204ebf919a"
+  },
+  "tokens": [
+    {
+      "id": "color.black",
+      "variable": "--sk-color-black",
+      "value": "#060606",
+      "references": [],
+      "resolved": "#060606",
+      "themes": {
+        "bzby": "#060606",
+        "kujo-dark": "#060606",
+        "kujo-light": "#060606",
+        "personal-dark": "#060606"
+      },
+      "consumers": []
+    },
+    {
+      "id": "color.white",
+      "variable": "--sk-color-white",
+      "value": "#ffffff",
+      "references": [],
+      "resolved": "#ffffff",
+      "themes": {
+        "bzby": "#ffffff",
+        "kujo-dark": "#ffffff",
+        "kujo-light": "#ffffff",
+        "personal-dark": "#ffffff"
+      },
+      "consumers": []
+    },
+    {
+      "id": "color.paper",
+      "variable": "--sk-color-paper",
+      "value": "#f9f9f9",
+      "references": [],
+      "resolved": "#f9f9f9",
+      "themes": {
+        "bzby": "#f9f9f9",
+        "kujo-dark": "#f9f9f9",
+        "kujo-light": "#f9f9f9",
+        "personal-dark": "#f9f9f9"
+      },
+      "consumers": []
+    },
+    {
+      "id": "color.ink",
+      "variable": "--sk-color-ink",
+      "value": "#060606",
+      "references": [],
+      "resolved": "#060606",
+      "themes": {
+        "bzby": "#060606",
+        "kujo-dark": "#060606",
+        "kujo-light": "#060606",
+        "personal-dark": "#060606"
+      },
+      "consumers": []
+    },
+    {
+      "id": "color.gray.50",
+      "variable": "--sk-color-gray-50",
+      "value": "#f9f9f9",
+      "references": [],
+      "resolved": "#f9f9f9",
+      "themes": {
+        "bzby": "#f9f9f9",
+        "kujo-dark": "#f9f9f9",
+        "kujo-light": "#f9f9f9",
+        "personal-dark": "#f9f9f9"
+      },
+      "consumers": []
+    },
+    {
+      "id": "color.gray.100",
+      "variable": "--sk-color-gray-100",
+      "value": "#eeeeee",
+      "references": [],
+      "resolved": "#eeeeee",
+      "themes": {
+        "bzby": "#eeeeee",
+        "kujo-dark": "#eeeeee",
+        "kujo-light": "#eeeeee",
+        "personal-dark": "#eeeeee"
+      },
+      "consumers": []
+    },
+    {
+      "id": "color.gray.300",
+      "variable": "--sk-color-gray-300",
+      "value": "#b8b8b8",
+      "references": [],
+      "resolved": "#b8b8b8",
+      "themes": {
+        "bzby": "#b8b8b8",
+        "kujo-dark": "#b8b8b8",
+        "kujo-light": "#b8b8b8",
+        "personal-dark": "#b8b8b8"
+      },
+      "consumers": []
+    },
+    {
+      "id": "color.gray.500",
+      "variable": "--sk-color-gray-500",
+      "value": "#5d5d5d",
+      "references": [],
+      "resolved": "#5d5d5d",
+      "themes": {
+        "bzby": "#5d5d5d",
+        "kujo-dark": "#5d5d5d",
+        "kujo-light": "#5d5d5d",
+        "personal-dark": "#5d5d5d"
+      },
+      "consumers": []
+    },
+    {
+      "id": "color.gray.700",
+      "variable": "--sk-color-gray-700",
+      "value": "#2b2b2b",
+      "references": [],
+      "resolved": "#2b2b2b",
+      "themes": {
+        "bzby": "#2b2b2b",
+        "kujo-dark": "#2b2b2b",
+        "kujo-light": "#2b2b2b",
+        "personal-dark": "#2b2b2b"
+      },
+      "consumers": []
+    },
+    {
+      "id": "color.gray.900",
+      "variable": "--sk-color-gray-900",
+      "value": "#111111",
+      "references": [],
+      "resolved": "#111111",
+      "themes": {
+        "bzby": "#111111",
+        "kujo-dark": "#111111",
+        "kujo-light": "#111111",
+        "personal-dark": "#111111"
+      },
+      "consumers": []
+    },
+    {
+      "id": "color.blue.600",
+      "variable": "--sk-color-blue-600",
+      "value": "#1646d2",
+      "references": [],
+      "resolved": "#1646d2",
+      "themes": {
+        "bzby": "#1646d2",
+        "kujo-dark": "#1646d2",
+        "kujo-light": "#1646d2",
+        "personal-dark": "#1646d2"
+      },
+      "consumers": []
+    },
+    {
+      "id": "color.green.600",
+      "variable": "--sk-color-green-600",
+      "value": "#0f6b35",
+      "references": [],
+      "resolved": "#0f6b35",
+      "themes": {
+        "bzby": "#0f6b35",
+        "kujo-dark": "#0f6b35",
+        "kujo-light": "#0f6b35",
+        "personal-dark": "#0f6b35"
+      },
+      "consumers": []
+    },
+    {
+      "id": "color.yellow.500",
+      "variable": "--sk-color-yellow-500",
+      "value": "#765000",
+      "references": [],
+      "resolved": "#765000",
+      "themes": {
+        "bzby": "#765000",
+        "kujo-dark": "#765000",
+        "kujo-light": "#765000",
+        "personal-dark": "#765000"
+      },
+      "consumers": []
+    },
+    {
+      "id": "color.red.600",
+      "variable": "--sk-color-red-600",
+      "value": "#a31515",
+      "references": [],
+      "resolved": "#a31515",
+      "themes": {
+        "bzby": "#a31515",
+        "kujo-dark": "#a31515",
+        "kujo-light": "#a31515",
+        "personal-dark": "#a31515"
+      },
+      "consumers": []
+    },
+    {
+      "id": "color.cyan.600",
+      "variable": "--sk-color-cyan-600",
+      "value": "#075d6c",
+      "references": [],
+      "resolved": "#075d6c",
+      "themes": {
+        "bzby": "#075d6c",
+        "kujo-dark": "#075d6c",
+        "kujo-light": "#075d6c",
+        "personal-dark": "#075d6c"
+      },
+      "consumers": []
+    },
+    {
+      "id": "font.sans",
+      "variable": "--sk-font-sans",
+      "value": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+      "references": [],
+      "resolved": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+      "themes": {
+        "bzby": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+        "kujo-dark": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+        "kujo-light": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+        "personal-dark": "\"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
+      },
+      "consumers": [
+        "rating"
+      ]
+    },
+    {
+      "id": "font.mono",
+      "variable": "--sk-font-mono",
+      "value": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+      "references": [],
+      "resolved": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+      "themes": {
+        "bzby": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+        "kujo-dark": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+        "kujo-light": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+        "personal-dark": "\"Departure Mono\", \"SFMono-Regular\", \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace"
+      },
+      "consumers": [
+        "accordion",
+        "alert",
+        "badge",
+        "bento-grid",
+        "breadcrumbs",
+        "button",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "generator-panel",
+        "header",
+        "heading",
+        "icon",
+        "image",
+        "label",
+        "link",
+        "metadata-panel",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-indicator",
+        "promo-banner",
+        "quote",
+        "radio-button",
+        "recent-posts",
+        "resource-links",
+        "roadmap",
+        "search-input",
+        "segmented-control",
+        "select",
+        "separator",
+        "skip-link",
+        "slider",
+        "stats-bar",
+        "stepper",
+        "table",
+        "tabs",
+        "team-grid",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "tree-view",
+        "trust-strip",
+        "video"
+      ]
+    },
+    {
+      "id": "type.size.xs",
+      "variable": "--sk-type-size-xs",
+      "value": "0.75rem",
+      "references": [],
+      "resolved": "0.75rem",
+      "themes": {
+        "bzby": "0.75rem",
+        "kujo-dark": "0.75rem",
+        "kujo-light": "0.75rem",
+        "personal-dark": "0.75rem"
+      },
+      "consumers": [
+        "badge",
+        "bento-grid",
+        "breadcrumbs",
+        "checkbox",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "date-input",
+        "date-picker",
+        "error-state",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "header",
+        "heading",
+        "label",
+        "metadata-panel",
+        "navigation",
+        "product-card",
+        "product-grid",
+        "progress-indicator",
+        "quote",
+        "radio-button",
+        "recent-posts",
+        "roadmap",
+        "search-input",
+        "select",
+        "separator",
+        "slider",
+        "stats-bar",
+        "stepper",
+        "text-input",
+        "textarea"
+      ]
+    },
+    {
+      "id": "type.size.sm",
+      "variable": "--sk-type-size-sm",
+      "value": "0.875rem",
+      "references": [],
+      "resolved": "0.875rem",
+      "themes": {
+        "bzby": "0.875rem",
+        "kujo-dark": "0.875rem",
+        "kujo-light": "0.875rem",
+        "personal-dark": "0.875rem"
+      },
+      "consumers": [
+        "button",
+        "code-block",
+        "content-section",
+        "form-field",
+        "generator-panel",
+        "image",
+        "metadata-panel",
+        "newsletter-signup",
+        "pricing-table",
+        "testimonial-rail",
+        "tooltip"
+      ]
+    },
+    {
+      "id": "type.size.md",
+      "variable": "--sk-type-size-md",
+      "value": "1rem",
+      "references": [],
+      "resolved": "1rem",
+      "themes": {
+        "bzby": "1rem",
+        "kujo-dark": "1rem",
+        "kujo-light": "1rem",
+        "personal-dark": "1rem"
+      },
+      "consumers": [
+        "cta",
+        "hero"
+      ]
+    },
+    {
+      "id": "type.size.lg",
+      "variable": "--sk-type-size-lg",
+      "value": "1.125rem",
+      "references": [],
+      "resolved": "1.125rem",
+      "themes": {
+        "bzby": "1.125rem",
+        "kujo-dark": "1.125rem",
+        "kujo-light": "1.125rem",
+        "personal-dark": "1.125rem"
+      },
+      "consumers": [
+        "date-picker",
+        "partners-strip",
+        "promo-banner",
+        "quote",
+        "rating",
+        "trust-strip"
+      ]
+    },
+    {
+      "id": "type.size.xl",
+      "variable": "--sk-type-size-xl",
+      "value": "1.375rem",
+      "references": [],
+      "resolved": "1.375rem",
+      "themes": {
+        "bzby": "1.375rem",
+        "kujo-dark": "1.375rem",
+        "kujo-light": "1.375rem",
+        "personal-dark": "1.375rem"
+      },
+      "consumers": [
+        "cta",
+        "pricing-table",
+        "product-card"
+      ]
+    },
+    {
+      "id": "type.size.2xl",
+      "variable": "--sk-type-size-2xl",
+      "value": "1.75rem",
+      "references": [],
+      "resolved": "1.75rem",
+      "themes": {
+        "bzby": "1.75rem",
+        "kujo-dark": "1.75rem",
+        "kujo-light": "1.75rem",
+        "personal-dark": "1.75rem"
+      },
+      "consumers": []
+    },
+    {
+      "id": "type.size.3xl",
+      "variable": "--sk-type-size-3xl",
+      "value": "2.25rem",
+      "references": [],
+      "resolved": "2.25rem",
+      "themes": {
+        "bzby": "2.25rem",
+        "kujo-dark": "2.25rem",
+        "kujo-light": "2.25rem",
+        "personal-dark": "2.25rem"
+      },
+      "consumers": [
+        "stats-bar"
+      ]
+    },
+    {
+      "id": "type.size.4xl",
+      "variable": "--sk-type-size-4xl",
+      "value": "3rem",
+      "references": [],
+      "resolved": "3rem",
+      "themes": {
+        "bzby": "3rem",
+        "kujo-dark": "3rem",
+        "kujo-light": "3rem",
+        "personal-dark": "3rem"
+      },
+      "consumers": [
+        "hero"
+      ]
+    },
+    {
+      "id": "type.size.5xl",
+      "variable": "--sk-type-size-5xl",
+      "value": "5.375rem",
+      "references": [],
+      "resolved": "5.375rem",
+      "themes": {
+        "bzby": "5.375rem",
+        "kujo-dark": "5.375rem",
+        "kujo-light": "5.375rem",
+        "personal-dark": "5.375rem"
+      },
+      "consumers": [
+        "hero"
+      ]
+    },
+    {
+      "id": "type.line.tight",
+      "variable": "--sk-type-line-tight",
+      "value": "1.1",
+      "references": [],
+      "resolved": "1.1",
+      "themes": {
+        "bzby": "1.1",
+        "kujo-dark": "1.1",
+        "kujo-light": "1.1",
+        "personal-dark": "1.1"
+      },
+      "consumers": [
+        "button",
+        "checkbox",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "cta",
+        "date-input",
+        "fieldset",
+        "file-upload",
+        "footer",
+        "form",
+        "header",
+        "label",
+        "metadata-panel",
+        "radio-button",
+        "search-input",
+        "select",
+        "slider",
+        "stats-bar",
+        "stepper",
+        "text-input",
+        "textarea"
+      ]
+    },
+    {
+      "id": "type.line.normal",
+      "variable": "--sk-type-line-normal",
+      "value": "1.5",
+      "references": [],
+      "resolved": "1.5",
+      "themes": {
+        "bzby": "1.5",
+        "kujo-dark": "1.5",
+        "kujo-light": "1.5",
+        "personal-dark": "1.5"
+      },
+      "consumers": []
+    },
+    {
+      "id": "type.line.loose",
+      "variable": "--sk-type-line-loose",
+      "value": "1.7",
+      "references": [],
+      "resolved": "1.7",
+      "themes": {
+        "bzby": "1.7",
+        "kujo-dark": "1.7",
+        "kujo-light": "1.7",
+        "personal-dark": "1.7"
+      },
+      "consumers": [
+        "cta",
+        "hero"
+      ]
+    },
+    {
+      "id": "type.weight.regular",
+      "variable": "--sk-type-weight-regular",
+      "value": "400",
+      "references": [],
+      "resolved": "400",
+      "themes": {
+        "bzby": "400",
+        "kujo-dark": "400",
+        "kujo-light": "400",
+        "personal-dark": "400"
+      },
+      "consumers": []
+    },
+    {
+      "id": "type.weight.medium",
+      "variable": "--sk-type-weight-medium",
+      "value": "520",
+      "references": [],
+      "resolved": "520",
+      "themes": {
+        "bzby": "520",
+        "kujo-dark": "520",
+        "kujo-light": "520",
+        "personal-dark": "520"
+      },
+      "consumers": []
+    },
+    {
+      "id": "type.weight.bold",
+      "variable": "--sk-type-weight-bold",
+      "value": "700",
+      "references": [],
+      "resolved": "700",
+      "themes": {
+        "bzby": "700",
+        "kujo-dark": "700",
+        "kujo-light": "700",
+        "personal-dark": "700"
+      },
+      "consumers": [
+        "accordion",
+        "alert",
+        "badge",
+        "button",
+        "checkout-summary",
+        "date-picker",
+        "footer",
+        "form-field",
+        "header",
+        "metadata-panel",
+        "pagination",
+        "pricing-table",
+        "product-card",
+        "progress-indicator",
+        "segmented-control",
+        "tabs"
+      ]
+    },
+    {
+      "id": "space.0",
+      "variable": "--sk-space-0",
+      "value": "0",
+      "references": [],
+      "resolved": "0",
+      "themes": {
+        "bzby": "0",
+        "kujo-dark": "0",
+        "kujo-light": "0",
+        "personal-dark": "0"
+      },
+      "consumers": []
+    },
+    {
+      "id": "space.1",
+      "variable": "--sk-space-1",
+      "value": "0.25rem",
+      "references": [],
+      "resolved": "0.25rem",
+      "themes": {
+        "bzby": "0.25rem",
+        "kujo-dark": "0.25rem",
+        "kujo-light": "0.25rem",
+        "personal-dark": "0.25rem"
+      },
+      "consumers": [
+        "color-picker",
+        "error-state",
+        "rating",
+        "spinner",
+        "toggle"
+      ]
+    },
+    {
+      "id": "space.2",
+      "variable": "--sk-space-2",
+      "value": "0.5rem",
+      "references": [],
+      "resolved": "0.5rem",
+      "themes": {
+        "bzby": "0.5rem",
+        "kujo-dark": "0.5rem",
+        "kujo-light": "0.5rem",
+        "personal-dark": "0.5rem"
+      },
+      "consumers": [
+        "badge",
+        "breadcrumbs",
+        "card",
+        "checkbox",
+        "checkout-summary",
+        "color-picker",
+        "combobox",
+        "cta",
+        "date-input",
+        "date-picker",
+        "dropdown-menu",
+        "empty-state",
+        "error-state",
+        "file-upload",
+        "form-field",
+        "generator-panel",
+        "heading",
+        "list",
+        "pagination",
+        "popover",
+        "product-card",
+        "progress-indicator",
+        "promo-banner",
+        "rich-text-editor",
+        "search-input",
+        "segmented-control",
+        "select",
+        "skip-link",
+        "slider",
+        "stepper",
+        "tabs",
+        "text-input",
+        "textarea",
+        "toggle",
+        "tooltip",
+        "tree-view",
+        "trust-strip"
+      ]
+    },
+    {
+      "id": "space.3",
+      "variable": "--sk-space-3",
+      "value": "0.75rem",
+      "references": [],
+      "resolved": "0.75rem",
+      "themes": {
+        "bzby": "0.75rem",
+        "kujo-dark": "0.75rem",
+        "kujo-light": "0.75rem",
+        "personal-dark": "0.75rem"
+      },
+      "consumers": [
+        "accordion",
+        "alert",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "feature-grid",
+        "fieldset",
+        "file-upload",
+        "form",
+        "form-field",
+        "generator-panel",
+        "header",
+        "hero",
+        "image",
+        "metadata-panel",
+        "modal",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-indicator",
+        "promo-banner",
+        "quote",
+        "radio-button",
+        "resource-links",
+        "rich-text-editor",
+        "search-input",
+        "segmented-control",
+        "select",
+        "separator",
+        "skip-link",
+        "slider",
+        "stats-bar",
+        "stepper",
+        "table",
+        "tabs",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "trust-strip",
+        "video"
+      ]
+    },
+    {
+      "id": "space.4",
+      "variable": "--sk-space-4",
+      "value": "1rem",
+      "references": [],
+      "resolved": "1rem",
+      "themes": {
+        "bzby": "1rem",
+        "kujo-dark": "1rem",
+        "kujo-light": "1rem",
+        "personal-dark": "1rem"
+      },
+      "consumers": [
+        "accordion",
+        "alert",
+        "bento-grid",
+        "button",
+        "card",
+        "carousel",
+        "checkout-summary",
+        "code-block",
+        "command-strip",
+        "content-section",
+        "date-picker",
+        "drawer",
+        "empty-state",
+        "error-state",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "generator-panel",
+        "header",
+        "metadata-panel",
+        "modal",
+        "navigation",
+        "newsletter-signup",
+        "partners-strip",
+        "popover",
+        "pricing-table",
+        "product-card",
+        "product-showcase",
+        "progress-bar",
+        "promo-banner",
+        "radio-button",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "select",
+        "skeleton",
+        "spinner",
+        "stack",
+        "stats-bar",
+        "tabs",
+        "team-grid",
+        "testimonial-rail",
+        "toast",
+        "trust-strip"
+      ]
+    },
+    {
+      "id": "space.5",
+      "variable": "--sk-space-5",
+      "value": "1.25rem",
+      "references": [],
+      "resolved": "1.25rem",
+      "themes": {
+        "bzby": "1.25rem",
+        "kujo-dark": "1.25rem",
+        "kujo-light": "1.25rem",
+        "personal-dark": "1.25rem"
+      },
+      "consumers": [
+        "bento-grid",
+        "carousel",
+        "content-section",
+        "cta",
+        "date-picker",
+        "drawer",
+        "ecosystem-map",
+        "feature-grid",
+        "file",
+        "footer",
+        "form",
+        "generator-panel",
+        "header",
+        "hero",
+        "list",
+        "newsletter-signup",
+        "partners-strip",
+        "product-grid",
+        "product-showcase",
+        "quote",
+        "recent-posts",
+        "rich-text-editor",
+        "roadmap",
+        "skeleton",
+        "team-grid",
+        "testimonial-rail",
+        "tree-view"
+      ]
+    },
+    {
+      "id": "space.6",
+      "variable": "--sk-space-6",
+      "value": "1.5rem",
+      "references": [],
+      "resolved": "1.5rem",
+      "themes": {
+        "bzby": "1.5rem",
+        "kujo-dark": "1.5rem",
+        "kujo-light": "1.5rem",
+        "personal-dark": "1.5rem"
+      },
+      "consumers": [
+        "content-section",
+        "modal",
+        "newsletter-signup"
+      ]
+    },
+    {
+      "id": "space.8",
+      "variable": "--sk-space-8",
+      "value": "2rem",
+      "references": [],
+      "resolved": "2rem",
+      "themes": {
+        "bzby": "2rem",
+        "kujo-dark": "2rem",
+        "kujo-light": "2rem",
+        "personal-dark": "2rem"
+      },
+      "consumers": [
+        "file-upload",
+        "generator-panel",
+        "select"
+      ]
+    },
+    {
+      "id": "space.10",
+      "variable": "--sk-space-10",
+      "value": "2.5rem",
+      "references": [],
+      "resolved": "2.5rem",
+      "themes": {
+        "bzby": "2.5rem",
+        "kujo-dark": "2.5rem",
+        "kujo-light": "2.5rem",
+        "personal-dark": "2.5rem"
+      },
+      "consumers": []
+    },
+    {
+      "id": "space.12",
+      "variable": "--sk-space-12",
+      "value": "3rem",
+      "references": [],
+      "resolved": "3rem",
+      "themes": {
+        "bzby": "3rem",
+        "kujo-dark": "3rem",
+        "kujo-light": "3rem",
+        "personal-dark": "3rem"
+      },
+      "consumers": []
+    },
+    {
+      "id": "space.16",
+      "variable": "--sk-space-16",
+      "value": "4rem",
+      "references": [],
+      "resolved": "4rem",
+      "themes": {
+        "bzby": "4rem",
+        "kujo-dark": "4rem",
+        "kujo-light": "4rem",
+        "personal-dark": "4rem"
+      },
+      "consumers": []
+    },
+    {
+      "id": "space.20",
+      "variable": "--sk-space-20",
+      "value": "5rem",
+      "references": [],
+      "resolved": "5rem",
+      "themes": {
+        "bzby": "5rem",
+        "kujo-dark": "5rem",
+        "kujo-light": "5rem",
+        "personal-dark": "5rem"
+      },
+      "consumers": []
+    },
+    {
+      "id": "space.24",
+      "variable": "--sk-space-24",
+      "value": "6rem",
+      "references": [],
+      "resolved": "6rem",
+      "themes": {
+        "bzby": "6rem",
+        "kujo-dark": "6rem",
+        "kujo-light": "6rem",
+        "personal-dark": "6rem"
+      },
+      "consumers": []
+    },
+    {
+      "id": "size.content.sm",
+      "variable": "--sk-size-content-sm",
+      "value": "42rem",
+      "references": [],
+      "resolved": "42rem",
+      "themes": {
+        "bzby": "42rem",
+        "kujo-dark": "42rem",
+        "kujo-light": "42rem",
+        "personal-dark": "42rem"
+      },
+      "consumers": []
+    },
+    {
+      "id": "size.content.md",
+      "variable": "--sk-size-content-md",
+      "value": "64rem",
+      "references": [],
+      "resolved": "64rem",
+      "themes": {
+        "bzby": "64rem",
+        "kujo-dark": "64rem",
+        "kujo-light": "64rem",
+        "personal-dark": "64rem"
+      },
+      "consumers": []
+    },
+    {
+      "id": "size.content.lg",
+      "variable": "--sk-size-content-lg",
+      "value": "78rem",
+      "references": [],
+      "resolved": "78rem",
+      "themes": {
+        "bzby": "78rem",
+        "kujo-dark": "78rem",
+        "kujo-light": "78rem",
+        "personal-dark": "78rem"
+      },
+      "consumers": [
+        "footer",
+        "header"
+      ]
+    },
+    {
+      "id": "size.content.xl",
+      "variable": "--sk-size-content-xl",
+      "value": "92rem",
+      "references": [],
+      "resolved": "92rem",
+      "themes": {
+        "bzby": "92rem",
+        "kujo-dark": "92rem",
+        "kujo-light": "92rem",
+        "personal-dark": "92rem"
+      },
+      "consumers": []
+    },
+    {
+      "id": "size.control.sm",
+      "variable": "--sk-size-control-sm",
+      "value": "2rem",
+      "references": [],
+      "resolved": "2rem",
+      "themes": {
+        "bzby": "2rem",
+        "kujo-dark": "2rem",
+        "kujo-light": "2rem",
+        "personal-dark": "2rem"
+      },
+      "consumers": [
+        "alert",
+        "checkbox",
+        "fieldset",
+        "icon",
+        "radio-button"
+      ]
+    },
+    {
+      "id": "size.control.md",
+      "variable": "--sk-size-control-md",
+      "value": "2.5rem",
+      "references": [],
+      "resolved": "2.5rem",
+      "themes": {
+        "bzby": "2.5rem",
+        "kujo-dark": "2.5rem",
+        "kujo-light": "2.5rem",
+        "personal-dark": "2.5rem"
+      },
+      "consumers": [
+        "code-block",
+        "date-picker",
+        "form-field",
+        "generator-panel",
+        "icon",
+        "newsletter-signup",
+        "stepper",
+        "toast",
+        "toggle"
+      ]
+    },
+    {
+      "id": "size.control.lg",
+      "variable": "--sk-size-control-lg",
+      "value": "3rem",
+      "references": [],
+      "resolved": "3rem",
+      "themes": {
+        "bzby": "3rem",
+        "kujo-dark": "3rem",
+        "kujo-light": "3rem",
+        "personal-dark": "3rem"
+      },
+      "consumers": [
+        "avatar",
+        "color-picker",
+        "empty-state",
+        "feature-grid",
+        "file",
+        "icon",
+        "select",
+        "stepper",
+        "team-grid",
+        "toggle"
+      ]
+    },
+    {
+      "id": "border.0",
+      "variable": "--sk-border-0",
+      "value": "0",
+      "references": [],
+      "resolved": "0",
+      "themes": {
+        "bzby": "0",
+        "kujo-dark": "0",
+        "kujo-light": "0",
+        "personal-dark": "0"
+      },
+      "consumers": []
+    },
+    {
+      "id": "border.1",
+      "variable": "--sk-border-1",
+      "value": "1px",
+      "references": [],
+      "resolved": "1px",
+      "themes": {
+        "bzby": "1px",
+        "kujo-dark": "1px",
+        "kujo-light": "1px",
+        "personal-dark": "1px"
+      },
+      "consumers": [
+        "accordion",
+        "alert",
+        "avatar",
+        "badge",
+        "bento-grid",
+        "button",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "ecosystem-map",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "form-field",
+        "generator-panel",
+        "header",
+        "hero",
+        "icon",
+        "image",
+        "metadata-panel",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "popover",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-bar",
+        "progress-indicator",
+        "promo-banner",
+        "radio-button",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "search-input",
+        "segmented-control",
+        "select",
+        "separator",
+        "skeleton",
+        "skip-link",
+        "slider",
+        "spinner",
+        "stack",
+        "stats-bar",
+        "stepper",
+        "table",
+        "tabs",
+        "team-grid",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "trust-strip",
+        "video"
+      ]
+    },
+    {
+      "id": "border.2",
+      "variable": "--sk-border-2",
+      "value": "2px",
+      "references": [],
+      "resolved": "2px",
+      "themes": {
+        "bzby": "2px",
+        "kujo-dark": "2px",
+        "kujo-light": "2px",
+        "personal-dark": "2px"
+      },
+      "consumers": [
+        "checkout-summary",
+        "error-state",
+        "icon",
+        "link",
+        "modal",
+        "quote"
+      ]
+    },
+    {
+      "id": "border.heavy",
+      "variable": "--sk-border-heavy",
+      "value": "3px",
+      "references": [],
+      "resolved": "3px",
+      "themes": {
+        "bzby": "3px",
+        "kujo-dark": "3px",
+        "kujo-light": "3px",
+        "personal-dark": "3px"
+      },
+      "consumers": [
+        "alert",
+        "error-state",
+        "roadmap"
+      ]
+    },
+    {
+      "id": "radius.0",
+      "variable": "--sk-radius-0",
+      "value": "0",
+      "references": [],
+      "resolved": "0",
+      "themes": {
+        "bzby": "0",
+        "kujo-dark": "0",
+        "kujo-light": "0",
+        "personal-dark": "0"
+      },
+      "consumers": [
+        "alert",
+        "avatar",
+        "badge",
+        "bento-grid",
+        "button",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "ecosystem-map",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "form",
+        "form-field",
+        "generator-panel",
+        "hero",
+        "modal",
+        "newsletter-signup",
+        "product-card",
+        "product-grid",
+        "promo-banner",
+        "radio-button",
+        "rich-text-editor",
+        "search-input",
+        "select",
+        "slider",
+        "stepper",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "trust-strip"
+      ]
+    },
+    {
+      "id": "radius.1",
+      "variable": "--sk-radius-1",
+      "value": "2px",
+      "references": [],
+      "resolved": "2px",
+      "themes": {
+        "bzby": "2px",
+        "kujo-dark": "2px",
+        "kujo-light": "2px",
+        "personal-dark": "2px"
+      },
+      "consumers": []
+    },
+    {
+      "id": "radius.2",
+      "variable": "--sk-radius-2",
+      "value": "4px",
+      "references": [],
+      "resolved": "4px",
+      "themes": {
+        "bzby": "4px",
+        "kujo-dark": "4px",
+        "kujo-light": "4px",
+        "personal-dark": "4px"
+      },
+      "consumers": []
+    },
+    {
+      "id": "radius.3",
+      "variable": "--sk-radius-3",
+      "value": "6px",
+      "references": [],
+      "resolved": "6px",
+      "themes": {
+        "bzby": "6px",
+        "kujo-dark": "6px",
+        "kujo-light": "6px",
+        "personal-dark": "6px"
+      },
+      "consumers": []
+    },
+    {
+      "id": "shadow.none",
+      "variable": "--sk-shadow-none",
+      "value": "none",
+      "references": [],
+      "resolved": "none",
+      "themes": {
+        "bzby": "none",
+        "kujo-dark": "none",
+        "kujo-light": "none",
+        "personal-dark": "none"
+      },
+      "consumers": [
+        "button",
+        "card",
+        "checkout-summary",
+        "drawer",
+        "empty-state",
+        "error-state",
+        "modal",
+        "product-card",
+        "promo-banner",
+        "trust-strip"
+      ]
+    },
+    {
+      "id": "shadow.hard",
+      "variable": "--sk-shadow-hard",
+      "value": "none",
+      "references": [],
+      "resolved": "none",
+      "themes": {
+        "bzby": "none",
+        "kujo-dark": "none",
+        "kujo-light": "none",
+        "personal-dark": "none"
+      },
+      "consumers": []
+    },
+    {
+      "id": "shadow.hardSm",
+      "variable": "--sk-shadow-hard-sm",
+      "value": "none",
+      "references": [],
+      "resolved": "none",
+      "themes": {
+        "bzby": "none",
+        "kujo-dark": "none",
+        "kujo-light": "none",
+        "personal-dark": "none"
+      },
+      "consumers": []
+    },
+    {
+      "id": "motion.fast",
+      "variable": "--sk-motion-fast",
+      "value": "120ms",
+      "references": [],
+      "resolved": "120ms",
+      "themes": {
+        "bzby": "120ms",
+        "kujo-dark": "120ms",
+        "kujo-light": "120ms",
+        "personal-dark": "120ms"
+      },
+      "consumers": [
+        "button"
+      ]
+    },
+    {
+      "id": "motion.base",
+      "variable": "--sk-motion-base",
+      "value": "180ms",
+      "references": [],
+      "resolved": "180ms",
+      "themes": {
+        "bzby": "180ms",
+        "kujo-dark": "180ms",
+        "kujo-light": "180ms",
+        "personal-dark": "180ms"
+      },
+      "consumers": [
+        "popover",
+        "toggle",
+        "tooltip"
+      ]
+    },
+    {
+      "id": "motion.slow",
+      "variable": "--sk-motion-slow",
+      "value": "260ms",
+      "references": [],
+      "resolved": "260ms",
+      "themes": {
+        "bzby": "260ms",
+        "kujo-dark": "260ms",
+        "kujo-light": "260ms",
+        "personal-dark": "260ms"
+      },
+      "consumers": []
+    },
+    {
+      "id": "motion.ease",
+      "variable": "--sk-motion-ease",
+      "value": "cubic-bezier(.2,0,0,1)",
+      "references": [],
+      "resolved": "cubic-bezier(.2,0,0,1)",
+      "themes": {
+        "bzby": "cubic-bezier(.2,0,0,1)",
+        "kujo-dark": "cubic-bezier(.2,0,0,1)",
+        "kujo-light": "cubic-bezier(.2,0,0,1)",
+        "personal-dark": "cubic-bezier(.2,0,0,1)"
+      },
+      "consumers": [
+        "button",
+        "popover",
+        "skeleton",
+        "spinner",
+        "toggle",
+        "tooltip"
+      ]
+    },
+    {
+      "id": "z.base",
+      "variable": "--sk-z-base",
+      "value": "0",
+      "references": [],
+      "resolved": "0",
+      "themes": {
+        "bzby": "0",
+        "kujo-dark": "0",
+        "kujo-light": "0",
+        "personal-dark": "0"
+      },
+      "consumers": []
+    },
+    {
+      "id": "z.dropdown",
+      "variable": "--sk-z-dropdown",
+      "value": "20",
+      "references": [],
+      "resolved": "20",
+      "themes": {
+        "bzby": "20",
+        "kujo-dark": "20",
+        "kujo-light": "20",
+        "personal-dark": "20"
+      },
+      "consumers": [
+        "drawer",
+        "dropdown-menu",
+        "popover",
+        "skip-link",
+        "tooltip"
+      ]
+    },
+    {
+      "id": "z.sticky",
+      "variable": "--sk-z-sticky",
+      "value": "30",
+      "references": [],
+      "resolved": "30",
+      "themes": {
+        "bzby": "30",
+        "kujo-dark": "30",
+        "kujo-light": "30",
+        "personal-dark": "30"
+      },
+      "consumers": []
+    },
+    {
+      "id": "z.modal",
+      "variable": "--sk-z-modal",
+      "value": "80",
+      "references": [],
+      "resolved": "80",
+      "themes": {
+        "bzby": "80",
+        "kujo-dark": "80",
+        "kujo-light": "80",
+        "personal-dark": "80"
+      },
+      "consumers": []
+    },
+    {
+      "id": "z.toast",
+      "variable": "--sk-z-toast",
+      "value": "90",
+      "references": [],
+      "resolved": "90",
+      "themes": {
+        "bzby": "90",
+        "kujo-dark": "90",
+        "kujo-light": "90",
+        "personal-dark": "90"
+      },
+      "consumers": []
+    },
+    {
+      "id": "focus.width",
+      "variable": "--sk-focus-width",
+      "value": "2px",
+      "references": [],
+      "resolved": "2px",
+      "themes": {
+        "bzby": "2px",
+        "kujo-dark": "2px",
+        "kujo-light": "2px",
+        "personal-dark": "2px"
+      },
+      "consumers": [
+        "accordion",
+        "alert",
+        "avatar",
+        "bento-grid",
+        "breadcrumbs",
+        "button",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "ecosystem-map",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "form-field",
+        "generator-panel",
+        "header",
+        "heading",
+        "hero",
+        "icon",
+        "image",
+        "label",
+        "link",
+        "list",
+        "metadata-panel",
+        "modal",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "popover",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-bar",
+        "progress-indicator",
+        "promo-banner",
+        "quote",
+        "radio-button",
+        "rating",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "search-input",
+        "segmented-control",
+        "select",
+        "separator",
+        "skeleton",
+        "skip-link",
+        "slider",
+        "spinner",
+        "stack",
+        "stats-bar",
+        "stepper",
+        "table",
+        "tabs",
+        "team-grid",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "tree-view",
+        "trust-strip",
+        "video",
+        "visually-hidden"
+      ]
+    },
+    {
+      "id": "focus.offset",
+      "variable": "--sk-focus-offset",
+      "value": "3px",
+      "references": [],
+      "resolved": "3px",
+      "themes": {
+        "bzby": "3px",
+        "kujo-dark": "3px",
+        "kujo-light": "3px",
+        "personal-dark": "3px"
+      },
+      "consumers": [
+        "accordion",
+        "alert",
+        "avatar",
+        "bento-grid",
+        "breadcrumbs",
+        "button",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "ecosystem-map",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "form-field",
+        "generator-panel",
+        "header",
+        "heading",
+        "hero",
+        "icon",
+        "image",
+        "label",
+        "link",
+        "list",
+        "metadata-panel",
+        "modal",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "popover",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-bar",
+        "progress-indicator",
+        "promo-banner",
+        "quote",
+        "radio-button",
+        "rating",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "search-input",
+        "segmented-control",
+        "select",
+        "separator",
+        "skeleton",
+        "skip-link",
+        "slider",
+        "spinner",
+        "stack",
+        "stats-bar",
+        "stepper",
+        "table",
+        "tabs",
+        "team-grid",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "tree-view",
+        "trust-strip",
+        "video",
+        "visually-hidden"
+      ]
+    },
+    {
+      "id": "breakpoint.sm",
+      "variable": "--sk-breakpoint-sm",
+      "value": "36rem",
+      "references": [],
+      "resolved": "36rem",
+      "themes": {
+        "bzby": "36rem",
+        "kujo-dark": "36rem",
+        "kujo-light": "36rem",
+        "personal-dark": "36rem"
+      },
+      "consumers": []
+    },
+    {
+      "id": "breakpoint.md",
+      "variable": "--sk-breakpoint-md",
+      "value": "48rem",
+      "references": [],
+      "resolved": "48rem",
+      "themes": {
+        "bzby": "48rem",
+        "kujo-dark": "48rem",
+        "kujo-light": "48rem",
+        "personal-dark": "48rem"
+      },
+      "consumers": []
+    },
+    {
+      "id": "breakpoint.lg",
+      "variable": "--sk-breakpoint-lg",
+      "value": "64rem",
+      "references": [],
+      "resolved": "64rem",
+      "themes": {
+        "bzby": "64rem",
+        "kujo-dark": "64rem",
+        "kujo-light": "64rem",
+        "personal-dark": "64rem"
+      },
+      "consumers": []
+    },
+    {
+      "id": "breakpoint.xl",
+      "variable": "--sk-breakpoint-xl",
+      "value": "80rem",
+      "references": [],
+      "resolved": "80rem",
+      "themes": {
+        "bzby": "80rem",
+        "kujo-dark": "80rem",
+        "kujo-light": "80rem",
+        "personal-dark": "80rem"
+      },
+      "consumers": []
+    },
+    {
+      "id": "surface.page",
+      "variable": "--sk-surface-page",
+      "value": "{color.paper}",
+      "references": [
+        "color.paper"
+      ],
+      "resolved": "#f9f9f9",
+      "themes": {
+        "bzby": "#fffaf0",
+        "kujo-dark": "#060606",
+        "kujo-light": "#f9f9f9",
+        "personal-dark": "#0f1115"
+      },
+      "consumers": [
+        "content-section",
+        "drawer",
+        "empty-state",
+        "footer",
+        "generator-panel",
+        "header",
+        "newsletter-signup",
+        "product-showcase"
+      ]
+    },
+    {
+      "id": "surface.raised",
+      "variable": "--sk-surface-raised",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolved": "#ffffff",
+      "themes": {
+        "bzby": "#ffffff",
+        "kujo-dark": "#111111",
+        "kujo-light": "#ffffff",
+        "personal-dark": "#171a20"
+      },
+      "consumers": [
+        "avatar",
+        "bento-grid",
+        "carousel",
+        "date-picker",
+        "feature-grid",
+        "footer",
+        "form-field",
+        "header",
+        "image",
+        "modal",
+        "popover",
+        "pricing-table",
+        "rich-text-editor",
+        "skeleton",
+        "spinner",
+        "tabs",
+        "toast",
+        "video"
+      ]
+    },
+    {
+      "id": "surface.card",
+      "variable": "--sk-surface-card",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolved": "#ffffff",
+      "themes": {
+        "bzby": "#ffffff",
+        "kujo-dark": "#111111",
+        "kujo-light": "#ffffff",
+        "personal-dark": "#171a20"
+      },
+      "consumers": [
+        "accordion",
+        "alert",
+        "bento-grid",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "ecosystem-map",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "form",
+        "generator-panel",
+        "hero",
+        "icon",
+        "metadata-panel",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-bar",
+        "progress-indicator",
+        "promo-banner",
+        "quote",
+        "radio-button",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "search-input",
+        "segmented-control",
+        "select",
+        "skeleton",
+        "skip-link",
+        "slider",
+        "stack",
+        "stats-bar",
+        "stepper",
+        "table",
+        "team-grid",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "trust-strip"
+      ]
+    },
+    {
+      "id": "surface.inverse",
+      "variable": "--sk-surface-inverse",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolved": "#060606",
+      "themes": {
+        "bzby": "#111111",
+        "kujo-dark": "#ffffff",
+        "kujo-light": "#060606",
+        "personal-dark": "#f7f4ed"
+      },
+      "consumers": [
+        "modal"
+      ]
+    },
+    {
+      "id": "surface.subtle",
+      "variable": "--sk-surface-subtle",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolved": "#ffffff",
+      "themes": {
+        "bzby": "#ffffff",
+        "kujo-dark": "#111111",
+        "kujo-light": "#ffffff",
+        "personal-dark": "#171a20"
+      },
+      "consumers": [
+        "badge",
+        "date-picker",
+        "drawer",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "segmented-control",
+        "skeleton",
+        "spinner",
+        "tabs"
+      ]
+    },
+    {
+      "id": "surface.accent",
+      "variable": "--sk-surface-accent",
+      "value": "{color.ink}",
+      "references": [
+        "color.ink"
+      ],
+      "resolved": "#060606",
+      "themes": {
+        "bzby": "#111111",
+        "kujo-dark": "#ffffff",
+        "kujo-light": "#060606",
+        "personal-dark": "#f7f4ed"
+      },
+      "consumers": []
+    },
+    {
+      "id": "text.primary",
+      "variable": "--sk-text-primary",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolved": "#060606",
+      "themes": {
+        "bzby": "#111111",
+        "kujo-dark": "#ffffff",
+        "kujo-light": "#060606",
+        "personal-dark": "#f7f4ed"
+      },
+      "consumers": [
+        "alert",
+        "avatar",
+        "badge",
+        "breadcrumbs",
+        "button",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "empty-state",
+        "error-state",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "form-field",
+        "generator-panel",
+        "header",
+        "heading",
+        "link",
+        "list",
+        "metadata-panel",
+        "modal",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "popover",
+        "product-card",
+        "progress-bar",
+        "promo-banner",
+        "radio-button",
+        "rating",
+        "resource-links",
+        "rich-text-editor",
+        "search-input",
+        "segmented-control",
+        "select",
+        "skip-link",
+        "slider",
+        "stepper",
+        "tabs",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "tree-view",
+        "trust-strip"
+      ]
+    },
+    {
+      "id": "text.secondary",
+      "variable": "--sk-text-secondary",
+      "value": "{color.gray.700}",
+      "references": [
+        "color.gray.700"
+      ],
+      "resolved": "#2b2b2b",
+      "themes": {
+        "bzby": "#403b33",
+        "kujo-dark": "#eeeeee",
+        "kujo-light": "#2b2b2b",
+        "personal-dark": "#d7d2c8"
+      },
+      "consumers": [
+        "accordion",
+        "alert",
+        "bento-grid",
+        "card",
+        "carousel",
+        "checkout-summary",
+        "content-section",
+        "cta",
+        "date-input",
+        "drawer",
+        "empty-state",
+        "error-state",
+        "file",
+        "file-upload",
+        "heading",
+        "hero",
+        "image",
+        "newsletter-signup",
+        "popover",
+        "product-card",
+        "product-showcase",
+        "promo-banner",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "team-grid",
+        "toast",
+        "trust-strip",
+        "video"
+      ]
+    },
+    {
+      "id": "text.muted",
+      "variable": "--sk-text-muted",
+      "value": "{color.gray.500}",
+      "references": [
+        "color.gray.500"
+      ],
+      "resolved": "#5d5d5d",
+      "themes": {
+        "bzby": "#766b5f",
+        "kujo-dark": "#b8b8b8",
+        "kujo-light": "#5d5d5d",
+        "personal-dark": "#a69f94"
+      },
+      "consumers": [
+        "bento-grid",
+        "breadcrumbs",
+        "checkbox",
+        "color-picker",
+        "combobox",
+        "content-section",
+        "date-input",
+        "date-picker",
+        "fieldset",
+        "file-upload",
+        "form",
+        "form-field",
+        "heading",
+        "image",
+        "label",
+        "list",
+        "metadata-panel",
+        "product-card",
+        "product-grid",
+        "quote",
+        "radio-button",
+        "recent-posts",
+        "roadmap",
+        "search-input",
+        "select",
+        "separator",
+        "slider",
+        "stats-bar",
+        "stepper",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "video"
+      ]
+    },
+    {
+      "id": "text.inverse",
+      "variable": "--sk-text-inverse",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolved": "#ffffff",
+      "themes": {
+        "bzby": "#fffaf0",
+        "kujo-dark": "#060606",
+        "kujo-light": "#f9f9f9",
+        "personal-dark": "#0f1115"
+      },
+      "consumers": []
+    },
+    {
+      "id": "text.link",
+      "variable": "--sk-text-link",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolved": "#060606",
+      "themes": {
+        "bzby": "#085f63",
+        "kujo-dark": "#7dd3fc",
+        "kujo-light": "#060606",
+        "personal-dark": "#8cc9ff"
+      },
+      "consumers": []
+    },
+    {
+      "id": "text.danger",
+      "variable": "--sk-text-danger",
+      "value": "{color.red.600}",
+      "references": [
+        "color.red.600"
+      ],
+      "resolved": "#a31515",
+      "themes": {
+        "bzby": "#a31515",
+        "kujo-dark": "#ff8c8c",
+        "kujo-light": "#a31515",
+        "personal-dark": "#a31515"
+      },
+      "consumers": [
+        "alert",
+        "error-state"
+      ]
+    },
+    {
+      "id": "text.success",
+      "variable": "--sk-text-success",
+      "value": "{color.green.600}",
+      "references": [
+        "color.green.600"
+      ],
+      "resolved": "#0f6b35",
+      "themes": {
+        "bzby": "#0f6b35",
+        "kujo-dark": "#6fdc8c",
+        "kujo-light": "#0f6b35",
+        "personal-dark": "#0f6b35"
+      },
+      "consumers": [
+        "alert"
+      ]
+    },
+    {
+      "id": "text.warning",
+      "variable": "--sk-text-warning",
+      "value": "{color.yellow.500}",
+      "references": [
+        "color.yellow.500"
+      ],
+      "resolved": "#765000",
+      "themes": {
+        "bzby": "#765000",
+        "kujo-dark": "#ffd166",
+        "kujo-light": "#765000",
+        "personal-dark": "#765000"
+      },
+      "consumers": [
+        "alert"
+      ]
+    },
+    {
+      "id": "action.primary",
+      "variable": "--sk-action-primary",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolved": "#060606",
+      "themes": {
+        "bzby": "#111111",
+        "kujo-dark": "#ffffff",
+        "kujo-light": "#060606",
+        "personal-dark": "#f7f4ed"
+      },
+      "consumers": [
+        "button",
+        "checkbox",
+        "code-block",
+        "combobox",
+        "date-picker",
+        "dropdown-menu",
+        "fieldset",
+        "file-upload",
+        "pagination",
+        "radio-button",
+        "segmented-control",
+        "stepper",
+        "toast",
+        "toggle"
+      ]
+    },
+    {
+      "id": "action.primaryText",
+      "variable": "--sk-action-primary-text",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolved": "#ffffff",
+      "themes": {
+        "bzby": "#fffaf0",
+        "kujo-dark": "#060606",
+        "kujo-light": "#ffffff",
+        "personal-dark": "#0f1115"
+      },
+      "consumers": [
+        "button",
+        "code-block",
+        "combobox",
+        "date-picker",
+        "dropdown-menu",
+        "file-upload",
+        "header",
+        "pagination",
+        "segmented-control",
+        "stepper",
+        "toast",
+        "toggle"
+      ]
+    },
+    {
+      "id": "action.secondary",
+      "variable": "--sk-action-secondary",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolved": "#ffffff",
+      "themes": {
+        "bzby": "#ffffff",
+        "kujo-dark": "#111111",
+        "kujo-light": "#ffffff",
+        "personal-dark": "#171a20"
+      },
+      "consumers": [
+        "button",
+        "code-block",
+        "file-upload"
+      ]
+    },
+    {
+      "id": "action.secondaryText",
+      "variable": "--sk-action-secondary-text",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolved": "#060606",
+      "themes": {
+        "bzby": "#111111",
+        "kujo-dark": "#ffffff",
+        "kujo-light": "#060606",
+        "personal-dark": "#f7f4ed"
+      },
+      "consumers": [
+        "button",
+        "code-block",
+        "file-upload",
+        "header"
+      ]
+    },
+    {
+      "id": "action.danger",
+      "variable": "--sk-action-danger",
+      "value": "{color.red.600}",
+      "references": [
+        "color.red.600"
+      ],
+      "resolved": "#a31515",
+      "themes": {
+        "bzby": "#a31515",
+        "kujo-dark": "#ff8c8c",
+        "kujo-light": "#a31515",
+        "personal-dark": "#a31515"
+      },
+      "consumers": [
+        "button"
+      ]
+    },
+    {
+      "id": "action.dangerText",
+      "variable": "--sk-action-danger-text",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolved": "#ffffff",
+      "themes": {
+        "bzby": "#ffffff",
+        "kujo-dark": "#060606",
+        "kujo-light": "#ffffff",
+        "personal-dark": "#ffffff"
+      },
+      "consumers": [
+        "button"
+      ]
+    },
+    {
+      "id": "action.ghost",
+      "variable": "--sk-action-ghost",
+      "value": "transparent",
+      "references": [],
+      "resolved": "transparent",
+      "themes": {
+        "bzby": "transparent",
+        "kujo-dark": "transparent",
+        "kujo-light": "transparent",
+        "personal-dark": "transparent"
+      },
+      "consumers": []
+    },
+    {
+      "id": "border.default",
+      "variable": "--sk-border-default",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolved": "#060606",
+      "themes": {
+        "bzby": "#111111",
+        "kujo-dark": "#ffffff",
+        "kujo-light": "#060606",
+        "personal-dark": "#f7f4ed"
+      },
+      "consumers": [
+        "accordion",
+        "alert",
+        "avatar",
+        "badge",
+        "bento-grid",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "ecosystem-map",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "form-field",
+        "generator-panel",
+        "header",
+        "hero",
+        "icon",
+        "image",
+        "metadata-panel",
+        "modal",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "popover",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-bar",
+        "progress-indicator",
+        "promo-banner",
+        "quote",
+        "radio-button",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "search-input",
+        "segmented-control",
+        "select",
+        "separator",
+        "skeleton",
+        "skip-link",
+        "slider",
+        "spinner",
+        "stack",
+        "stats-bar",
+        "stepper",
+        "table",
+        "tabs",
+        "team-grid",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "trust-strip",
+        "video"
+      ]
+    },
+    {
+      "id": "border.subtle",
+      "variable": "--sk-border-subtle",
+      "value": "{color.gray.300}",
+      "references": [
+        "color.gray.300"
+      ],
+      "resolved": "#b8b8b8",
+      "themes": {
+        "bzby": "#766b5f",
+        "kujo-dark": "#b8b8b8",
+        "kujo-light": "#5d5d5d",
+        "personal-dark": "#a69f94"
+      },
+      "consumers": [
+        "checkout-summary",
+        "content-section",
+        "metadata-panel",
+        "pricing-table",
+        "skeleton",
+        "stats-bar"
+      ]
+    },
+    {
+      "id": "border.strong",
+      "variable": "--sk-border-strong",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolved": "#060606",
+      "themes": {
+        "bzby": "#060606",
+        "kujo-dark": "#060606",
+        "kujo-light": "#060606",
+        "personal-dark": "#060606"
+      },
+      "consumers": [
+        "button"
+      ]
+    },
+    {
+      "id": "border.inverse",
+      "variable": "--sk-border-inverse",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolved": "#ffffff",
+      "themes": {
+        "bzby": "#ffffff",
+        "kujo-dark": "#ffffff",
+        "kujo-light": "#ffffff",
+        "personal-dark": "#ffffff"
+      },
+      "consumers": []
+    },
+    {
+      "id": "focus.ring",
+      "variable": "--sk-focus-ring",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolved": "#060606",
+      "themes": {
+        "bzby": "#085f63",
+        "kujo-dark": "#7dd3fc",
+        "kujo-light": "#060606",
+        "personal-dark": "#8cc9ff"
+      },
+      "consumers": [
+        "accordion",
+        "alert",
+        "avatar",
+        "bento-grid",
+        "breadcrumbs",
+        "button",
+        "card",
+        "carousel",
+        "checkbox",
+        "checkout-summary",
+        "code-block",
+        "color-picker",
+        "combobox",
+        "command-strip",
+        "content-section",
+        "cta",
+        "date-input",
+        "date-picker",
+        "drawer",
+        "dropdown-menu",
+        "ecosystem-map",
+        "empty-state",
+        "error-state",
+        "feature-grid",
+        "fieldset",
+        "file",
+        "file-upload",
+        "footer",
+        "form",
+        "form-field",
+        "generator-panel",
+        "header",
+        "heading",
+        "hero",
+        "icon",
+        "image",
+        "label",
+        "link",
+        "list",
+        "metadata-panel",
+        "modal",
+        "navigation",
+        "newsletter-signup",
+        "pagination",
+        "partners-strip",
+        "popover",
+        "pricing-table",
+        "product-card",
+        "product-grid",
+        "product-showcase",
+        "progress-bar",
+        "progress-indicator",
+        "promo-banner",
+        "quote",
+        "radio-button",
+        "rating",
+        "recent-posts",
+        "resource-links",
+        "rich-text-editor",
+        "roadmap",
+        "search-input",
+        "segmented-control",
+        "select",
+        "separator",
+        "skeleton",
+        "skip-link",
+        "slider",
+        "spinner",
+        "stack",
+        "stats-bar",
+        "stepper",
+        "table",
+        "tabs",
+        "team-grid",
+        "testimonial-rail",
+        "text-input",
+        "textarea",
+        "toast",
+        "toggle",
+        "tooltip",
+        "tree-view",
+        "trust-strip",
+        "video",
+        "visually-hidden"
+      ]
+    },
+    {
+      "id": "focus.ringOffset",
+      "variable": "--sk-focus-ring-offset",
+      "value": "{color.paper}",
+      "references": [
+        "color.paper"
+      ],
+      "resolved": "#f9f9f9",
+      "themes": {
+        "bzby": "#fffaf0",
+        "kujo-dark": "#060606",
+        "kujo-light": "#f9f9f9",
+        "personal-dark": "#0f1115"
+      },
+      "consumers": []
+    },
+    {
+      "id": "shadow.color",
+      "variable": "--sk-shadow-color",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolved": "#060606",
+      "themes": {
+        "bzby": "#111111",
+        "kujo-dark": "#ffffff",
+        "kujo-light": "#060606",
+        "personal-dark": "#f7f4ed"
+      },
+      "consumers": []
+    },
+    {
+      "id": "code.surface",
+      "variable": "--sk-code-surface",
+      "value": "{color.white}",
+      "references": [
+        "color.white"
+      ],
+      "resolved": "#ffffff",
+      "themes": {
+        "bzby": "#ffffff",
+        "kujo-dark": "#ffffff",
+        "kujo-light": "#ffffff",
+        "personal-dark": "#ffffff"
+      },
+      "consumers": [
+        "code-block"
+      ]
+    },
+    {
+      "id": "code.text",
+      "variable": "--sk-code-text",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolved": "#060606",
+      "themes": {
+        "bzby": "#060606",
+        "kujo-dark": "#060606",
+        "kujo-light": "#060606",
+        "personal-dark": "#060606"
+      },
+      "consumers": [
+        "code-block"
+      ]
+    },
+    {
+      "id": "code.border",
+      "variable": "--sk-code-border",
+      "value": "{color.black}",
+      "references": [
+        "color.black"
+      ],
+      "resolved": "#060606",
+      "themes": {
+        "bzby": "#060606",
+        "kujo-dark": "#060606",
+        "kujo-light": "#060606",
+        "personal-dark": "#060606"
+      },
+      "consumers": [
+        "code-block"
+      ]
+    },
+    {
+      "id": "state.success",
+      "variable": "--sk-state-success",
+      "value": "{color.green.600}",
+      "references": [
+        "color.green.600"
+      ],
+      "resolved": "#0f6b35",
+      "themes": {
+        "bzby": "#0f6b35",
+        "kujo-dark": "#6fdc8c",
+        "kujo-light": "#0f6b35",
+        "personal-dark": "#6fdc8c"
+      },
+      "consumers": [
+        "alert",
+        "badge",
+        "spinner"
+      ]
+    },
+    {
+      "id": "state.warning",
+      "variable": "--sk-state-warning",
+      "value": "{color.yellow.500}",
+      "references": [
+        "color.yellow.500"
+      ],
+      "resolved": "#765000",
+      "themes": {
+        "bzby": "#765000",
+        "kujo-dark": "#ffd166",
+        "kujo-light": "#765000",
+        "personal-dark": "#ffd166"
+      },
+      "consumers": [
+        "alert",
+        "badge"
+      ]
+    },
+    {
+      "id": "state.danger",
+      "variable": "--sk-state-danger",
+      "value": "{color.red.600}",
+      "references": [
+        "color.red.600"
+      ],
+      "resolved": "#a31515",
+      "themes": {
+        "bzby": "#a31515",
+        "kujo-dark": "#ff8c8c",
+        "kujo-light": "#a31515",
+        "personal-dark": "#ff8c8c"
+      },
+      "consumers": [
+        "alert",
+        "badge",
+        "card",
+        "checkout-summary",
+        "empty-state",
+        "error-state",
+        "product-card",
+        "promo-banner",
+        "trust-strip"
+      ]
+    },
+    {
+      "id": "state.info",
+      "variable": "--sk-state-info",
+      "value": "{color.cyan.600}",
+      "references": [
+        "color.cyan.600"
+      ],
+      "resolved": "#075d6c",
+      "themes": {
+        "bzby": "#075d6c",
+        "kujo-dark": "#7dd3fc",
+        "kujo-light": "#075d6c",
+        "personal-dark": "#8cc9ff"
+      },
+      "consumers": [
+        "alert"
+      ]
+    },
+    {
+      "id": "component.button.height",
+      "variable": "--sk-component-button-height",
+      "value": "{size.control.md}",
+      "references": [
+        "size.control.md"
+      ],
+      "resolved": "2.5rem",
+      "themes": {
+        "bzby": "2.5rem",
+        "kujo-dark": "2.5rem",
+        "kujo-light": "2.5rem",
+        "personal-dark": "2.5rem"
+      },
+      "consumers": [
+        "button"
+      ]
+    },
+    {
+      "id": "component.button.gap",
+      "variable": "--sk-component-button-gap",
+      "value": "{space.2}",
+      "references": [
+        "space.2"
+      ],
+      "resolved": "0.5rem",
+      "themes": {
+        "bzby": "0.5rem",
+        "kujo-dark": "0.5rem",
+        "kujo-light": "0.5rem",
+        "personal-dark": "0.5rem"
+      },
+      "consumers": [
+        "button"
+      ]
+    },
+    {
+      "id": "component.card.padding",
+      "variable": "--sk-component-card-padding",
+      "value": "{space.5}",
+      "references": [
+        "space.5"
+      ],
+      "resolved": "1.25rem",
+      "themes": {
+        "bzby": "1.25rem",
+        "kujo-dark": "1.25rem",
+        "kujo-light": "1.25rem",
+        "personal-dark": "1.25rem"
+      },
+      "consumers": [
+        "card",
+        "checkout-summary",
+        "empty-state",
+        "error-state",
+        "product-card",
+        "promo-banner",
+        "trust-strip"
+      ]
+    },
+    {
+      "id": "component.card.gap",
+      "variable": "--sk-component-card-gap",
+      "value": "{space.5}",
+      "references": [
+        "space.5"
+      ],
+      "resolved": "1.25rem",
+      "themes": {
+        "bzby": "1.25rem",
+        "kujo-dark": "1.25rem",
+        "kujo-light": "1.25rem",
+        "personal-dark": "1.25rem"
+      },
+      "consumers": [
+        "card",
+        "checkout-summary",
+        "product-card"
+      ]
+    },
+    {
+      "id": "component.hero.paddingBlock",
+      "variable": "--sk-component-hero-padding-block",
+      "value": "{space.6}",
+      "references": [
+        "space.6"
+      ],
+      "resolved": "1.5rem",
+      "themes": {
+        "bzby": "1.5rem",
+        "kujo-dark": "1.5rem",
+        "kujo-light": "1.5rem",
+        "personal-dark": "1.5rem"
+      },
+      "consumers": [
+        "hero"
+      ]
+    },
+    {
+      "id": "component.hero.maxWidth",
+      "variable": "--sk-component-hero-max-width",
+      "value": "{size.content.lg}",
+      "references": [
+        "size.content.lg"
+      ],
+      "resolved": "78rem",
+      "themes": {
+        "bzby": "78rem",
+        "kujo-dark": "78rem",
+        "kujo-light": "78rem",
+        "personal-dark": "78rem"
+      },
+      "consumers": [
+        "hero"
+      ]
+    },
+    {
+      "id": "component.grid.gap",
+      "variable": "--sk-component-grid-gap",
+      "value": "{space.5}",
+      "references": [
+        "space.5"
+      ],
+      "resolved": "1.25rem",
+      "themes": {
+        "bzby": "1.25rem",
+        "kujo-dark": "1.25rem",
+        "kujo-light": "1.25rem",
+        "personal-dark": "1.25rem"
+      },
+      "consumers": [
+        "bento-grid",
+        "ecosystem-map",
+        "feature-grid",
+        "product-grid"
+      ]
+    }
+  ]
+}

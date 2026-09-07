@@ -6,11 +6,11 @@ A responsive video embed frame with caption.
 
 ## When To Use
 
-Use Video when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Display a captioned 16:9 media placeholder.
 
 ## When Not To Use
 
-Do not use Video to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+A working video player, embed or caption-track API.
 
 ## Props
 
@@ -18,8 +18,10 @@ See video.schema.json for the source contract.
 
 ## Variants
 
-- embed
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| embed | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See video.schema.json for the source contract.
 ## Examples
 
 See examples.json and video.html.
+
+## Maintained contract and standalone example
+
+Use: Display a captioned 16:9 media placeholder.
+
+Avoid: A working video player, embed or caption-track API.
+
+See [contract](video.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

@@ -6,11 +6,11 @@ A file metadata row for selected or attached files.
 
 ## When To Use
 
-Use File when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Show a file metadata row and a remove affordance.
 
 ## When Not To Use
 
-Do not use File to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+Uploading, downloading or deleting files automatically.
 
 ## Props
 
@@ -18,8 +18,10 @@ See file.schema.json for the source contract.
 
 ## Variants
 
-- row
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| row | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See file.schema.json for the source contract.
 ## Examples
 
 See examples.json and file.html.
+
+## Maintained contract and standalone example
+
+Use: Show a file metadata row and a remove affordance.
+
+Avoid: Uploading, downloading or deleting files automatically.
+
+See [contract](file.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

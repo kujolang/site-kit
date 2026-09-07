@@ -21,19 +21,22 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
+    "action.primary",
+    "action.primaryText",
+    "border.1",
+    "border.default",
+    "focus.offset",
+    "focus.ring",
+    "focus.width",
+    "font.mono",
+    "radius.0",
+    "size.control.md",
+    "space.3",
+    "space.4",
     "surface.card",
     "surface.raised",
-    "surface.subtle",
     "text.primary",
-    "text.secondary",
-    "text.muted",
-    "border.default",
-    "border.subtle",
-    "focus.ring",
-    "space.4",
-    "radius.0",
-    "font.mono"
+    "text.secondary"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -50,17 +53,82 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "toast-default",
+      "name": "Standalone",
       "props": {
         "label": "Toast",
-        "variant": "default"
+        "variant": "Example"
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "label",
     "content",
     "actions"
-  ]
+  ],
+  "propertyContracts": {
+    "label": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "label, [aria-label], summary, button, a, span",
+        "html": "textContent or accessible name appropriate to the element"
+      },
+      "stateOwner": "consumer",
+      "example": "Toast"
+    },
+    "variant": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-toast",
+        "html": "see variantContracts; names do not imply data-variant support"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    }
+  },
+  "variantContracts": {
+    "default": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "compact": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Announce application-inserted status in a live region with explicit dismissal.",
+    "avoid": "Essential persistent instructions or time-critical information that disappears."
+  },
+  "slotContracts": {
+    "label": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "content": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "actions": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Feedback"
 }

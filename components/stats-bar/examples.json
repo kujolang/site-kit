@@ -1,10 +1,17 @@
 [
   {
-    "name": "Default",
+    "id": "stats-bar-default",
+    "name": "Standalone",
     "props": {
-      "label": "Stats Bar",
-      "variant": "inline"
+      "stats": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "label": "Stats Bar"
     },
-    "notes": "Adapted from old-components into tokenized SiteKit styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

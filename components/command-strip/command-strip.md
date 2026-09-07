@@ -6,11 +6,11 @@ A compact operational metric strip for status, filters, or system state.
 
 ## When To Use
 
-Use Command Strip when a page needs a short row of operational facts or state indicators.
+Display compact single-line metadata cells in a responsive strip.
 
 ## When Not To Use
 
-Do not use Command Strip for long copy, navigation groups, or tabular data.
+A command palette or keyboard launcher.
 
 ## Props
 
@@ -18,9 +18,11 @@ See command-strip.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
-- four-up
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
+| four-up | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -37,3 +39,11 @@ See command-strip.schema.json for the source contract.
 ## Examples
 
 See examples.json and command-strip.html.
+
+## Maintained contract and standalone example
+
+Use: Display compact single-line metadata cells in a responsive strip.
+
+Avoid: A command palette or keyboard launcher.
+
+See [contract](command-strip.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

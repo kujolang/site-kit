@@ -6,11 +6,11 @@ A compact link collection for docs, examples, templates, and external references
 
 ## When To Use
 
-Use Resource Links when the page needs this legacy-informed pattern as a reusable, token-driven SiteKit component.
+Group descriptive resource links in an intrinsic grid.
 
 ## When Not To Use
 
-Do not use Resource Links to bypass semantic structure, heading order, token usage, or accessibility behavior.
+An automatic link crawler or search index.
 
 ## Props
 
@@ -18,9 +18,11 @@ See resource-links.schema.json for the source contract.
 
 ## Variants
 
-- grid
-- stack
-- annotated
+| Name | Contract | Binding |
+| --- | --- | --- |
+| grid | alias | Base style; no switch |
+| stack | alias | Base style; no switch |
+| annotated | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -42,3 +44,11 @@ See resource-links.schema.json for the source contract.
 ## Examples
 
 See examples.json and resource-links.html.
+
+## Maintained contract and standalone example
+
+Use: Group descriptive resource links in an intrinsic grid.
+
+Avoid: An automatic link crawler or search index.
+
+See [contract](resource-links.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

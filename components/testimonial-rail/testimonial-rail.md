@@ -6,11 +6,11 @@ A scroll-safe testimonial layout for customer quotes and builder proof.
 
 ## When To Use
 
-Use Testimonial Rail when the page needs this legacy-informed pattern as a reusable, token-driven SiteKit component.
+Present quote figures with attributions in a grid.
 
 ## When Not To Use
 
-Do not use Testimonial Rail to bypass semantic structure, heading order, token usage, or accessibility behavior.
+An animated testimonial carousel.
 
 ## Props
 
@@ -18,9 +18,11 @@ See testimonial-rail.schema.json for the source contract.
 
 ## Variants
 
-- rail
-- grid
-- featured
+| Name | Contract | Binding |
+| --- | --- | --- |
+| rail | alias | Base style; no switch |
+| grid | alias | Base style; no switch |
+| featured | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -42,3 +44,11 @@ See testimonial-rail.schema.json for the source contract.
 ## Examples
 
 See examples.json and testimonial-rail.html.
+
+## Maintained contract and standalone example
+
+Use: Present quote figures with attributions in a grid.
+
+Avoid: An animated testimonial carousel.
+
+See [contract](testimonial-rail.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

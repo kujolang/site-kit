@@ -1,0 +1,82 @@
+#!/usr/bin/env node
+'use strict';
+const fs = require('node:fs');
+const path = require('node:path');
+const crypto = require('node:crypto');
+const assert = require('node:assert/strict');
+const root = path.resolve(__dirname, '..');
+const read = p => fs.readFileSync(path.join(root,p),'utf8');
+const json = p => JSON.parse(read(p));
+const hash = p => crypto.createHash('sha256').update(read(p)).digest('hex');
+function validateContract(s, examples, css) {
+  assert(typeof s.name === 'string' && s.name.trim());
+  assert(typeof s.description === 'string' && s.description.trim());
+  assert(Array.isArray(s.variants) && new Set(s.variants).size === s.variants.length);
+  assert(Array.isArray(s.slots) && new Set(s.slots).size === s.slots.length);
+  assert.deepEqual(Object.keys(s.slotContracts).sort(), [...s.slots].sort());
+  assert(s.props && !Array.isArray(s.props));
+  assert(Array.isArray(s.requiredFields) && new Set(s.requiredFields).size === s.requiredFields.length);
+  for(const key of s.requiredFields) assert(key in s.props, `required property ${key} missing`);
+  assert.deepEqual(Object.keys(s.propertyContracts).sort(),Object.keys(s.props).sort());
+  for(const [name,p] of Object.entries(s.propertyContracts)) {
+    assert(['string','number','boolean','array','object'].includes(p.type),`invalid type: ${name}`);
+    assert.equal(p.required,s.requiredFields.includes(name),`contradictory required: ${name}`);
+    assert(['consumer','native','sitekit'].includes(p.stateOwner));
+    assert(p.binding.selector && p.binding.html);
+    if(p.allowedValues) assert(Array.isArray(p.allowedValues) && p.allowedValues.length && p.allowedValues.every(v=>typeof v==='string'));
+    if(p.type==='array') assert(p.items && p.items.required.every(k=>k in p.items.properties));
+  }
+  assert.deepEqual(Object.keys(s.variantContracts).sort(),[...s.variants].sort());
+  for(const v of Object.values(s.variantContracts)) {
+    assert(['implemented','alias','composition'].includes(v.kind));
+    if(v.kind==='implemented') assert(v.binding && css.includes(v.binding),'variant selector absent');
+    if(v.kind==='alias') assert(v.aliasOf==='base' || v.aliasOf in s.variantContracts,'broken alias');
+    if(v.kind==='composition') assert(v.example && examples.some(e=>e.id===v.example),'broken composition example');
+  }
+  assert.deepEqual(s.examples,examples,'duplicated example metadata drift');
+  assert.equal(new Set(examples.map(e=>e.id)).size,examples.length);
+  for(const e of examples) {
+    for(const k of s.requiredFields) assert(k in e.props,`example missing ${k}`);
+    for(const [k,v] of Object.entries(e.props)) {
+      const p=s.propertyContracts[k]; assert(p,`unknown example field ${k}`);
+      assert(p.type==='array'?Array.isArray(v):p.type==='object'?v && typeof v==='object'&&!Array.isArray(v):typeof v===p.type,`wrong example type ${k}`);
+      if(p.allowedValues) assert(p.allowedValues.includes(v),`invalid enum ${k}`);
+      if(p.type==='array') for(const item of v) for(const key of p.items.required) assert(typeof item[key]===p.items.properties[key],`invalid item ${k}.${key}`);
+    }
+    assert(e.htmlFile && !e.htmlFile.includes('..'),'invalid example path');
+  }
+}
+function generate() {
+  const components=fs.readdirSync(path.join(root,'components')).sort().map(slug=>{
+    const prefix=`components/${slug}/`,s=json(prefix+slug+'.schema.json'),examples=json(prefix+'examples.json'),css=read(prefix+slug+'.css');
+    validateContract(s,examples,css);
+    const source={schema:prefix+slug+'.schema.json',template:prefix+slug+'.html',css:prefix+slug+'.css',documentation:prefix+slug+'.md',examples:prefix+'examples.json'};
+    const paths=[...Object.values(source),...examples.map(e=>prefix+e.htmlFile)];
+    const records=examples.map(e=>{const html=read(prefix+e.htmlFile);assert(!/\{\{/.test(html));assert(!/<script|\son\w+\s*=|(?:href|src)\s*=\s*["']javascript:/i.test(html));return {...e,path:prefix+e.htmlFile,html};});
+    const template=read(source.template);
+    return {slug,name:s.name,category:s.category,description:s.description,version:json('package.json').version,guidance:s.guidance,source,sourceHashes:Object.fromEntries(paths.map(p=>[p,hash(p)])),properties:s.propertyContracts,variants:s.variantContracts,slots:s.slotContracts,accessibility:s.accessibility,responsive:s.responsive,selectors:[...new Set(css.match(/\.sk-[\w-]+/g)||[])],hooks:[...new Set((template.match(/data-[\w-]+/g)||[]))],nativeAttributes:[...new Set((template.match(/\b(?:disabled|required|readonly|type|name|value|min|max|step|checked|autocomplete|controls)\b/g)||[]))],dependencies:[...new Set((template.match(/\bsk-[a-z][\w-]*/g)||[]).filter(c=>c!=='sk-'+slug && fs.existsSync(path.join(root,'components',c.slice(3)))))],tokenReferences:[...new Set(css.match(/--sk-[\w-]+/g)||[])],examples:records};
+  });
+  const dest='docs/sitekit-gap-closure/';
+  const write=(p,value)=>fs.writeFileSync(path.join(root,p),JSON.stringify(value,null,2)+'\n');
+  write(dest+'component-manifest.json',{schemaVersion:2,libraryVersion:json('package.json').version,sourceIdentity:'SHA-256 sourceHashes per component; commit is recorded in VERIFICATION.md',runtimeSourceHash:hash('scripts/sitekit-behavior.js'),components});
+  write(dest+'token-manifest.json',{schemaVersion:2,core:json('tokens/core.json'),semantic:json('tokens/semantic.json'),themes:Object.fromEntries(fs.readdirSync(path.join(root,'tokens/themes')).sort().map(f=>[f.replace('.json',''),json('tokens/themes/'+f)])),sourceHashes:Object.fromEntries(['tokens/core.json','tokens/semantic.json',...fs.readdirSync(path.join(root,'tokens/themes')).map(f=>'tokens/themes/'+f)].map(p=>[p,hash(p)]))});
+  const flatten = (object, prefix = []) => Object.entries(object).flatMap(([k,v]) => v && typeof v === 'object' && 'value' in v ? [[prefix.concat(k).join('.'),String(v.value)]] : v && typeof v === 'object' ? flatten(v,prefix.concat(k)) : []);
+  const baseTokens = Object.fromEntries([...flatten(json('tokens/core.json')),...flatten(json('tokens/semantic.json'))]);
+  const resolveToken = (key, values, trail = []) => {
+    assert(key in values, `unknown token ${key}`); assert(!trail.includes(key), `token cycle ${trail.concat(key).join(' -> ')}`);
+    return values[key].replace(/\{([^}]+)\}/g,(_,ref)=>resolveToken(ref,values,trail.concat(key)));
+  };
+  const themeTokens = Object.fromEntries(fs.readdirSync(path.join(root,'tokens/themes')).sort().map(f=>[f.replace('.json',''),{...baseTokens,...Object.fromEntries(flatten(json('tokens/themes/'+f).tokens))}]));
+  const tokenDocument = json(dest+'token-manifest.json');
+  tokenDocument.tokens = Object.entries(baseTokens).map(([id,value])=>{
+    const variable='--sk-'+id.replace(/\./g,'-').replace(/([a-z0-9])([A-Z])/g,'$1-$2').toLowerCase();
+    return {id,variable,value,references:[...value.matchAll(/\{([^}]+)\}/g)].map(m=>m[1]),resolved:resolveToken(id,baseTokens),themes:Object.fromEntries(Object.entries(themeTokens).map(([name,values])=>[name,resolveToken(id,values)])),consumers:components.filter(c=>c.tokenReferences.includes(variable)).map(c=>c.slug)};
+  });
+  for(const c of components) for(const ref of c.tokenReferences) assert(tokenDocument.tokens.some(t=>t.variable===ref), `unknown token reference ${c.slug}: ${ref}`);
+  write(dest+'token-manifest.json',tokenDocument);
+  write(dest+'search-records.json',components.map(c=>({id:c.slug,title:c.name,description:c.guidance.use,url:`../../components/${c.slug}/${c.slug}.md`})));
+  fs.writeFileSync(path.join(root,'examples/component-lab/contracts.js'),'/* Generated by scripts/generate-contracts. */\nwindow.SiteKitCatalog = '+JSON.stringify(components.map(c=>({slug:c.slug,name:c.name,category:c.category,description:c.description,variants:Object.keys(c.variants),keyboard:c.accessibility.keyboard,sample:c.examples[0].html})),null,2)+';\n');
+  console.log(`current contracts validated and generated: ${components.length}`);
+}
+if(require.main===module) generate();
+module.exports={generate,validateContract};

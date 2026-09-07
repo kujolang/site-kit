@@ -4,7 +4,9 @@
   "description": "A horizontal progress meter for determinate completion.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "string optional",
+    "value": "number",
+    "max": "number"
   },
   "variants": [
     "determinate",
@@ -21,19 +23,14 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "surface.raised",
-    "surface.subtle",
-    "text.primary",
-    "text.secondary",
-    "text.muted",
+    "border.1",
     "border.default",
-    "border.subtle",
+    "focus.offset",
     "focus.ring",
+    "focus.width",
     "space.4",
-    "radius.0",
-    "font.mono"
+    "surface.card",
+    "text.primary"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -50,17 +47,108 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "progress-bar-default",
+      "name": "Standalone",
       "props": {
         "label": "Progress Bar",
-        "variant": "determinate"
+        "variant": "Example",
+        "value": 1,
+        "max": 1
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "label",
     "content",
     "actions"
-  ]
+  ],
+  "propertyContracts": {
+    "label": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "label",
+        "html": "for points to progress id; visible accessible name"
+      },
+      "stateOwner": "consumer",
+      "example": "Progress Bar"
+    },
+    "variant": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-progress-bar",
+        "html": "see variantContracts; names do not imply data-variant support"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    },
+    "value": {
+      "type": "number",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "progress.sk-progress-bar",
+        "html": "native value, bounded by native max; fill is browser-synchronized"
+      },
+      "stateOwner": "consumer",
+      "example": 1
+    },
+    "max": {
+      "type": "number",
+      "required": false,
+      "default": 100,
+      "allowedValues": null,
+      "binding": {
+        "selector": "progress.sk-progress-bar",
+        "html": "native positive max; template default 100"
+      },
+      "stateOwner": "native",
+      "example": 1
+    }
+  },
+  "variantContracts": {
+    "determinate": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "compact": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Draw a horizontal completion fill.",
+    "avoid": "An accessible progress widget without additional native/ARIA semantics."
+  },
+  "slotContracts": {
+    "label": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "content": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "actions": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Feedback"
 }

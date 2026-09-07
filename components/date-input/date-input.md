@@ -6,11 +6,11 @@ A native date input with label and help text.
 
 ## When To Use
 
-Use Date Input when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Capture a date through the browser-native date input.
 
 ## When Not To Use
 
-Do not use Date Input to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+A date range picker or custom calendar.
 
 ## Props
 
@@ -18,8 +18,10 @@ See date-input.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See date-input.schema.json for the source contract.
 ## Examples
 
 See examples.json and date-input.html.
+
+## Maintained contract and standalone example
+
+Use: Capture a date through the browser-native date input.
+
+Avoid: A date range picker or custom calendar.
+
+See [contract](date-input.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

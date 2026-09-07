@@ -1,23 +1,18 @@
 [
   {
-    "name": "Default",
+    "id": "cta-default",
+    "name": "Standalone",
     "props": {
-      "label": "CTA",
-      "variant": "band"
-    },
-    "notes": "Use semantic landmarks and tokenized styling."
-  },
-  {
-    "name": "Legacy source coverage",
-    "props": {
-      "sources": [
-        "old-components/testing-cta-1.html",
-        "old-components/testing-cta-2.html",
-        "old-components/testing-cta-3.html",
-        "old-components/testing-cta-4.html",
-        "old-components/testing-cta-5.html"
+      "heading": "Build with SiteKit",
+      "body": "Semantic HTML, local assets, and reusable styles.",
+      "actions": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
       ]
     },
-    "notes": "Legacy old-components files reviewed and represented through this SiteKit component contract."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

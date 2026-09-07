@@ -124,7 +124,7 @@ Use a component when its semantics and behavior match the content. Do not use a 
 ## Behavior-enabled composition
 
 - Dropdown Menu + Icon + Button: use a real button with an accessible label; the optional `sitekit.js` layer adds menu focus movement, Escape, outside-click close, and `aria-expanded` state.
-- Drawer + Header/Navigation: use a labeled panel, a real close button, and `data-sk-drawer-open` / `data-sk-drawer-close` hooks for optional focus containment.
+- Drawer + Header/Navigation: use a labeled panel, a real close button, and `data-sk-drawer-open` / `data-sk-drawer-close` hooks for a nonmodal secondary panel; Tab follows normal document order.
 - Modal + Button: use a native `<dialog>` with `data-sk-modal` and a labeled heading; the optional behavior layer restores focus and traps Tab.
 - Popover + Tooltip: use these for contextual information, never for essential content or a replacement for a form label.
 - Header + Navigation + Theme: keep landmarks and use `data-sk-theme-toggle` or `data-sk-theme-select` for optional persistence.

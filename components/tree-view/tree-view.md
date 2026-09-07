@@ -6,11 +6,11 @@ A hierarchical navigation or selection tree.
 
 ## When To Use
 
-Use Tree View when a page or application needs this interface pattern with SiteKit tokens and accessibility defaults.
+Nested navigation with branch disclosure buttons. Tab visits native buttons and links; no ARIA tree widget.
 
 ## When Not To Use
 
-Do not use Tree View to bypass semantic HTML, heading order, token usage, or keyboard accessibility.
+An ARIA tree widget with arrow-key navigation.
 
 ## Props
 
@@ -18,8 +18,10 @@ See tree-view.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -30,3 +32,11 @@ See tree-view.schema.json for the source contract.
 ## Examples
 
 See examples.json and tree-view.html.
+
+## Maintained contract and standalone example
+
+Use: Nested navigation with branch disclosure buttons. Tab visits native buttons and links; no ARIA tree widget.
+
+Avoid: An ARIA tree widget with arrow-key navigation.
+
+See [contract](tree-view.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

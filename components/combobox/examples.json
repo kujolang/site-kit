@@ -1,10 +1,19 @@
 [
   {
-    "name": "Default",
+    "id": "combobox-default",
+    "name": "Standalone",
     "props": {
       "label": "Combobox",
-      "variant": "autocomplete"
+      "variant": "Example",
+      "options": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "value": "Example"
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]

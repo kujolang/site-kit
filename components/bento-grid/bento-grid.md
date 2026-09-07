@@ -6,11 +6,11 @@ A square-cornered modular grid for grouped capabilities, proof points, or portfo
 
 ## When To Use
 
-Use Bento Grid when the page needs this legacy-informed pattern as a reusable, token-driven SiteKit component.
+Arrange an intro and unevenly spanning feature panels.
 
 ## When Not To Use
 
-Do not use Bento Grid to bypass semantic structure, heading order, token usage, or accessibility behavior.
+Arbitrary item counts without testing explicit grid placement.
 
 ## Props
 
@@ -18,10 +18,12 @@ See bento-grid.schema.json for the source contract.
 
 ## Variants
 
-- portfolio
-- balanced
-- showcase
-- dense
+| Name | Contract | Binding |
+| --- | --- | --- |
+| portfolio | alias | Base style; no switch |
+| balanced | alias | Base style; no switch |
+| showcase | alias | Base style; no switch |
+| dense | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -51,3 +53,11 @@ See bento-grid.schema.json for the source contract.
 ## Examples
 
 See examples.json and bento-grid.html.
+
+## Maintained contract and standalone example
+
+Use: Arrange an intro and unevenly spanning feature panels.
+
+Avoid: Arbitrary item counts without testing explicit grid placement.
+
+See [contract](bento-grid.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

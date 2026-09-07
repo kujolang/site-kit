@@ -6,11 +6,11 @@ A clear message for empty collections with optional recovery action.
 
 ## When To Use
 
-Use Empty State when the page needs this pattern as a reusable, token-driven component.
+Explain an empty collection and offer a next action.
 
 ## When Not To Use
 
-Do not use Empty State to bypass semantic structure, heading order, or accessibility behavior.
+A loading indicator or unexplained decorative blank.
 
 ## Props
 
@@ -18,9 +18,11 @@ See empty-state.schema.json for the source contract.
 
 ## Variants
 
-- default
-- compact
-- commerce
+| Name | Contract | Binding |
+| --- | --- | --- |
+| default | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
+| commerce | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -37,3 +39,11 @@ See empty-state.schema.json for the source contract.
 ## Examples
 
 See examples.json and empty-state.html.
+
+## Maintained contract and standalone example
+
+Use: Explain an empty collection and offer a next action.
+
+Avoid: A loading indicator or unexplained decorative blank.
+
+See [contract](empty-state.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

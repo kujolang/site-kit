@@ -6,11 +6,11 @@ A responsive people grid for profiles, roles, and compact bios.
 
 ## When To Use
 
-Use Team Grid when the page needs this legacy-informed pattern as a reusable, token-driven SiteKit component.
+Arrange profile summaries in an intrinsic grid.
 
 ## When Not To Use
 
-Do not use Team Grid to bypass semantic structure, heading order, token usage, or accessibility behavior.
+A directory service or avatar loader.
 
 ## Props
 
@@ -18,9 +18,11 @@ See team-grid.schema.json for the source contract.
 
 ## Variants
 
-- profiles
-- compact
-- leadership
+| Name | Contract | Binding |
+| --- | --- | --- |
+| profiles | alias | Base style; no switch |
+| compact | alias | Base style; no switch |
+| leadership | alias | Base style; no switch |
 
 ## Accessibility Notes
 
@@ -42,3 +44,11 @@ See team-grid.schema.json for the source contract.
 ## Examples
 
 See examples.json and team-grid.html.
+
+## Maintained contract and standalone example
+
+Use: Arrange profile summaries in an intrinsic grid.
+
+Avoid: A directory service or avatar loader.
+
+See [contract](team-grid.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.

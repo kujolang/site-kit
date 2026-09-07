@@ -26,14 +26,19 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "text.primary",
-    "text.secondary",
+    "border.2",
     "border.default",
+    "focus.offset",
     "focus.ring",
+    "focus.width",
+    "radius.0",
+    "shadow.none",
+    "space.3",
     "space.4",
-    "radius.1"
+    "space.6",
+    "surface.inverse",
+    "surface.raised",
+    "text.primary"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -50,12 +55,16 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "modal-default",
+      "name": "Standalone",
       "props": {
-        "label": "Modal Dialog",
-        "variant": "default"
+        "id": "demo-modal",
+        "title": "Review changes",
+        "open": false,
+        "dismissible": false
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
@@ -73,5 +82,98 @@
     ],
     "keyboard": "Native dialog behavior handles focus; the optional layer explicitly restores focus, traps Tab, and handles Escape.",
     "dismissal": "Use a real close button or form method=dialog; do not make the backdrop the only dismissal path."
-  }
+  },
+  "propertyContracts": {
+    "id": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "[id]",
+        "html": "id and all matching IDREFs"
+      },
+      "stateOwner": "consumer",
+      "example": "demo-modal"
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "h2",
+        "html": "textContent"
+      },
+      "stateOwner": "consumer",
+      "example": "Review changes"
+    },
+    "open": {
+      "type": "boolean",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "dialog",
+        "html": "native open for nonmodal; showModal() for modal"
+      },
+      "stateOwner": "native",
+      "example": false
+    },
+    "dismissible": {
+      "type": "boolean",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "button",
+        "html": "include or omit explicit dismissal hook; native dialog Escape remains available"
+      },
+      "stateOwner": "consumer",
+      "example": false
+    }
+  },
+  "variantContracts": {
+    "default": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "danger": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "wide": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Open a labeled native dialog with explicit dismissal and opener restoration.",
+    "avoid": "Persistent page content or a fallback modal for obsolete browsers."
+  },
+  "slotContracts": {
+    "title": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "body": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "actions": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Overlays"
 }

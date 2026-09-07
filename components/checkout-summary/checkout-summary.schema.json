@@ -5,7 +5,8 @@
   "props": {
     "items": "array",
     "subtotal": "string",
-    "total": "string"
+    "total": "string",
+    "totals": "object"
   },
   "variants": [
     "default",
@@ -26,14 +27,26 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
+    "border.1",
+    "border.2",
+    "border.default",
+    "border.subtle",
+    "component.card.gap",
+    "component.card.padding",
+    "focus.offset",
+    "focus.ring",
+    "focus.width",
+    "font.mono",
+    "radius.0",
+    "shadow.none",
+    "space.2",
+    "space.3",
+    "space.4",
+    "state.danger",
     "surface.card",
     "text.primary",
     "text.secondary",
-    "border.default",
-    "focus.ring",
-    "space.4",
-    "radius.1"
+    "type.weight.bold"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -50,17 +63,156 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "checkout-summary-default",
+      "name": "Standalone",
       "props": {
-        "label": "Checkout Summary",
-        "variant": "default"
+        "items": [
+          {
+            "label": "SiteKit Pro license",
+            "content": "$99"
+          },
+          {
+            "label": "Priority support",
+            "content": "$29"
+          }
+        ],
+        "subtotal": "$128",
+        "total": "$136",
+        "totals": {
+          "subtotal": "$128",
+          "tax": "$8",
+          "total": "$136"
+        }
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "items",
     "totals",
     "actions"
-  ]
+  ],
+  "propertyContracts": {
+    "items": {
+      "type": "array",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-checkout-summary__items",
+        "html": "li children with label and formatted price"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string"
+        },
+        "contract": "Consumer data. Render labels as text and content through the documented semantic child/slot structure; never insert untrusted HTML."
+      }
+    },
+    "subtotal": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-checkout-summary dl",
+        "html": "compatible alias of totals.subtotal"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    },
+    "total": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-checkout-summary [data-total] dd",
+        "html": "compatible alias of totals.total"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    },
+    "totals": {
+      "type": "object",
+      "required": true,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-checkout-summary dl",
+        "html": "dt/dd subtotal, tax and total; consumer supplies formatted currency"
+      },
+      "stateOwner": "consumer",
+      "example": {
+        "subtotal": "$128",
+        "total": "$136"
+      },
+      "properties": {
+        "subtotal": "string",
+        "tax": "string",
+        "total": "string"
+      },
+      "requiredFields": [
+        "subtotal",
+        "total"
+      ]
+    }
+  },
+  "variantContracts": {
+    "default": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "compact": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "sticky": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Display items and a definition list of totals with checkout actions.",
+    "avoid": "Payment processing or automatic totals computation."
+  },
+  "slotContracts": {
+    "items": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "totals": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "actions": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Commerce"
 }

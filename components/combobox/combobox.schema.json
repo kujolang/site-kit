@@ -4,7 +4,9 @@
   "description": "An autocomplete text input paired with suggested options.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "string optional",
+    "options": "array",
+    "value": "string optional"
   },
   "variants": [
     "autocomplete",
@@ -21,19 +23,22 @@
     ]
   },
   "tokenDependencies": [
-    "surface.page",
-    "surface.card",
-    "surface.raised",
-    "surface.subtle",
-    "text.primary",
-    "text.secondary",
-    "text.muted",
+    "action.primary",
+    "action.primaryText",
+    "border.1",
     "border.default",
-    "border.subtle",
+    "focus.offset",
     "focus.ring",
-    "space.4",
+    "focus.width",
+    "font.mono",
     "radius.0",
-    "font.mono"
+    "space.2",
+    "space.3",
+    "surface.card",
+    "text.muted",
+    "text.primary",
+    "type.line.tight",
+    "type.size.xs"
   ],
   "responsive": {
     "strategy": "Intrinsic layout with logical properties, responsive grids, and container queries where useful.",
@@ -50,17 +55,130 @@
   ],
   "examples": [
     {
-      "name": "Default",
+      "id": "combobox-default",
+      "name": "Standalone",
       "props": {
         "label": "Combobox",
-        "variant": "autocomplete"
+        "variant": "Example",
+        "options": [
+          {
+            "label": "Example",
+            "content": "Text or trusted authored markup"
+          }
+        ],
+        "value": "Example"
       },
-      "notes": "Use semantic landmarks and tokenized styling."
+      "htmlFile": "example.html",
+      "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
     }
   ],
   "allowedChildren": [
     "label",
     "content",
     "actions"
-  ]
+  ],
+  "propertyContracts": {
+    "label": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "label, [aria-label], summary, button, a, span",
+        "html": "textContent or accessible name appropriate to the element"
+      },
+      "stateOwner": "consumer",
+      "example": "Combobox"
+    },
+    "variant": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-combobox",
+        "html": "see variantContracts; names do not imply data-variant support"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    },
+    "options": {
+      "type": "array",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": ".sk-combobox",
+        "html": "consumer-authored content; no attribute switch or runtime binding; see canonical example"
+      },
+      "stateOwner": "consumer",
+      "example": [
+        {
+          "label": "Example",
+          "content": "Text or trusted authored markup"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "content"
+        ],
+        "properties": {
+          "label": "string",
+          "content": "string"
+        },
+        "contract": "Consumer data. Render labels as text and content through the documented semantic child/slot structure; never insert untrusted HTML."
+      }
+    },
+    "value": {
+      "type": "string",
+      "required": false,
+      "default": null,
+      "allowedValues": null,
+      "binding": {
+        "selector": "input, [role=\"progressbar\"]",
+        "html": "native value; progress aria-valuenow plus matching fill width"
+      },
+      "stateOwner": "consumer",
+      "example": "Example"
+    }
+  },
+  "variantContracts": {
+    "autocomplete": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    },
+    "compact": {
+      "kind": "alias",
+      "binding": null,
+      "aliasOf": "base",
+      "notes": "Compatible legacy name for the base appearance; no distinct attribute behavior."
+    }
+  },
+  "guidance": {
+    "use": "Filter and select one supplied local option using the optional keyboard controller.",
+    "avoid": "Remote loading, multiple selection or an application search service."
+  },
+  "slotContracts": {
+    "label": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "content": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    },
+    "actions": {
+      "owner": "consumer",
+      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "example": "example.html"
+    }
+  },
+  "historicalSources": [],
+  "category": "Forms"
 }

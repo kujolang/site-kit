@@ -30,7 +30,7 @@ The v1 promise does not include npm publication, a hosted component service, uni
 
 ## Optional Behavior
 
-Dropdowns, popovers, drawers, modals, tooltips, theme controls, and icon-button contracts are progressive enhancements. Static HTML remains readable without JavaScript. Behavior hooks are documented in each relevant component and in the generated component index.
+Dropdowns, popovers, drawers, modals, tooltips, tabs, local comboboxes, calendars, basic editors, steppers, segmented controls, copy, carousels, disclosures, dismissal, and theme controls are progressive enhancements. See docs/sitekit-gap-closure/API-AND-MIGRATION.md for bounded contracts and lifecycle. Static HTML remains readable without JavaScript. Behavior hooks are documented in each relevant component and in the generated component index.
 
 ## Visual Identity
 

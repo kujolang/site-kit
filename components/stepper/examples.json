@@ -1,10 +1,16 @@
 [
   {
-    "name": "Default",
+    "id": "stepper-default",
+    "name": "Standalone",
     "props": {
       "label": "Stepper",
-      "variant": "number"
+      "variant": "Example",
+      "value": 1,
+      "min": 1,
+      "max": 1,
+      "step": 1
     },
-    "notes": "Use semantic landmarks and tokenized styling."
+    "htmlFile": "example.html",
+    "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
   }
 ]
