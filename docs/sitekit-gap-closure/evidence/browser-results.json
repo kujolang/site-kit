@@ -1,0 +1,8080 @@
+{
+  "verificationCommit": "9c7da48c2cb4c5af8094be1b29d759cd7d45201d",
+  "command": "npm run browser:test",
+  "environment": "GitHub Actions ubuntu-latest",
+  "runUrl": "https://github.com/kujolang/site-kit/actions/runs/34071120146",
+  "stats": {
+    "startTime": "2026-09-07T00:52:19.401Z",
+    "duration": 303375.11,
+    "expected": 518,
+    "skipped": 58,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "title": "isolated accordion",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 986,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated alert",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 951,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated avatar",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 777,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated badge",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 799,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated bento-grid",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 872,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated breadcrumbs",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 763,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated button",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 744,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated card",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 816,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated carousel",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 729,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated checkbox",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 733,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated checkout-summary",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 804,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated code-block",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 758,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated color-picker",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 742,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated combobox",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 789,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated command-strip",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 751,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated content-section",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 811,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated cta",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 766,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated date-input",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 775,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated date-picker",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1301,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated drawer",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 714,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated dropdown-menu",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 757,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated ecosystem-map",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 780,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated empty-state",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 784,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated error-state",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 790,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated feature-grid",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 750,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated fieldset",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 775,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated file",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 769,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated file-upload",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 777,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated footer",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 804,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated form",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 834,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated form-field",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 757,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated generator-panel",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 821,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated header",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 746,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated heading",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 754,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated hero",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 784,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated icon",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 756,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated image",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 750,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated label",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 768,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated link",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 734,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated list",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 726,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated metadata-panel",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 720,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated modal",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 722,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated navigation",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 720,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated newsletter-signup",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 746,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated pagination",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 737,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated partners-strip",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 727,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated popover",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 730,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated pricing-table",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 780,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated product-card",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 756,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated product-grid",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 760,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated product-showcase",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 770,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated progress-bar",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 714,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated progress-indicator",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 721,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated promo-banner",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 732,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated quote",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 712,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated radio-button",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 730,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated rating",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 726,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated recent-posts",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 787,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated resource-links",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 820,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated rich-text-editor",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 781,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated roadmap",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 754,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated search-input",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 720,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated segmented-control",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 738,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated select",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 783,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated separator",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 768,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated skeleton",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 882,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated skip-link",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 875,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated slider",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 758,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated spinner",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 788,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated stack",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 750,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated stats-bar",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 725,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated stepper",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 732,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated table",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 754,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated tabs",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 768,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated team-grid",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 764,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated testimonial-rail",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 742,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated text-input",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 723,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated textarea",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 717,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated toast",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 725,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated toggle",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 704,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated tooltip",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 711,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated tree-view",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 732,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated trust-strip",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 748,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated video",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 719,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated visually-hidden",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 695,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "drawer lifecycle and nonmodal focus",
+      "file": "gap-closure.spec.mjs",
+      "line": 21,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1105,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "tabs manual automatic vertical and instances",
+      "file": "gap-closure.spec.mjs",
+      "line": 33,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 306,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "combobox filters commits escapes and empty results",
+      "file": "gap-closure.spec.mjs",
+      "line": 40,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 878,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "calendar leap year boundaries keyboard and native value",
+      "file": "gap-closure.spec.mjs",
+      "line": 47,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 344,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "editor selected text formatting paste and safe serialization",
+      "file": "gap-closure.spec.mjs",
+      "line": 52,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 352,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "promoted stepper segmented tree toast and copy",
+      "file": "gap-closure.spec.mjs",
+      "line": 61,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 563,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "button icon inheritance kujo-light",
+      "file": "gap-closure.spec.mjs",
+      "line": 69,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 656,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "button icon inheritance kujo-dark",
+      "file": "gap-closure.spec.mjs",
+      "line": 69,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 677,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "button icon inheritance personal-dark",
+      "file": "gap-closure.spec.mjs",
+      "line": 69,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 685,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "button icon inheritance bzby",
+      "file": "gap-closure.spec.mjs",
+      "line": 69,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 685,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "containment 320",
+      "file": "gap-closure.spec.mjs",
+      "line": 74,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 726,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "containment 390",
+      "file": "gap-closure.spec.mjs",
+      "line": 74,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 800,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "containment 768",
+      "file": "gap-closure.spec.mjs",
+      "line": 74,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 855,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "containment 1440",
+      "file": "gap-closure.spec.mjs",
+      "line": 74,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 832,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "dynamic tabs inserted before repeat enhancement",
+      "file": "gap-closure.spec.mjs",
+      "line": 82,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 321,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "tooltip preserves descriptions, pointer travel and Escape",
+      "file": "gap-closure.spec.mjs",
+      "line": 87,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 394,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "disabled action and native progress synchronization",
+      "file": "gap-closure.spec.mjs",
+      "line": 92,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 240,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "reference forms search media and keyboard",
+      "file": "gap-closure.spec.mjs",
+      "line": 97,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1990,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "all copied examples have unique IDs and complete ARIA references",
+      "file": "gap-closure.spec.mjs",
+      "line": 109,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 817,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "critical visual kujo-light",
+      "file": "gap-closure.spec.mjs",
+      "line": 122,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1938,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "critical visual kujo-dark",
+      "file": "gap-closure.spec.mjs",
+      "line": 122,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1785,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "critical visual personal-dark",
+      "file": "gap-closure.spec.mjs",
+      "line": 122,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1832,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "critical visual bzby",
+      "file": "gap-closure.spec.mjs",
+      "line": 122,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1947,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "independent container text zoom RTL 320",
+      "file": "gap-closure.spec.mjs",
+      "line": 130,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 184,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "independent container text zoom RTL 390",
+      "file": "gap-closure.spec.mjs",
+      "line": 130,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 243,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "independent container text zoom RTL 768",
+      "file": "gap-closure.spec.mjs",
+      "line": 130,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 235,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "independent container text zoom RTL 1440",
+      "file": "gap-closure.spec.mjs",
+      "line": 130,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 233,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "editor link schemes and keyboard toolbar",
+      "file": "gap-closure.spec.mjs",
+      "line": 135,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 331,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "carousel boundaries, dismissal and clipboard failure",
+      "file": "gap-closure.spec.mjs",
+      "line": 141,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 407,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract alert-neutral",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 734,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract alert-danger",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 744,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract alert-warning",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 739,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract alert-success",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 749,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract avatar-initials",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 711,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract badge-success",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 755,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract badge-warning",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 742,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract badge-danger",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 736,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract button-secondary",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 743,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract button-ghost",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 736,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract button-danger",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 730,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract card-interactive",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 773,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract content-section-media-left",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 818,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract feature-grid-dense",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 792,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract form-field-select",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 746,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract form-field-textarea",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 748,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract form-field-checkbox",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 754,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract hero-split",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 773,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract hero-centered",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 775,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract icon-decorative",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 703,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract icon-meaningful",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 707,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract icon-inline",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 717,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract icon-external",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 770,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract newsletter-signup-split",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 815,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "floating panels stay within viewport edges",
+      "file": "gap-closure.spec.mjs",
+      "line": 162,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 255,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "reference composition visual",
+      "file": "gap-closure.spec.mjs",
+      "line": 171,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1546,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "navigation tables forms text stress 320",
+      "file": "gap-closure.spec.mjs",
+      "line": 177,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 634,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "navigation tables forms text stress 390",
+      "file": "gap-closure.spec.mjs",
+      "line": 177,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 569,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "navigation tables forms text stress 768",
+      "file": "gap-closure.spec.mjs",
+      "line": 177,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 871,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "navigation tables forms text stress 1440",
+      "file": "gap-closure.spec.mjs",
+      "line": 177,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 871,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "bounded dates, disabled options and loading geometry",
+      "file": "gap-closure.spec.mjs",
+      "line": 184,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 470,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "editor mixed selection state and relinking",
+      "file": "gap-closure.spec.mjs",
+      "line": 194,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 361,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated accordion",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2885,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated alert",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1435,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated avatar",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1322,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated badge",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2806,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated bento-grid",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1423,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated breadcrumbs",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1453,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated button",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1219,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated card",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1285,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated carousel",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1324,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated checkbox",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1409,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated checkout-summary",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1410,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated code-block",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1314,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated color-picker",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1286,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated combobox",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3076,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated command-strip",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1597,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated content-section",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1168,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated cta",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1278,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated date-input",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1370,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated date-picker",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2173,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated drawer",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1279,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated dropdown-menu",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1214,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated ecosystem-map",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1273,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated empty-state",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1276,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated error-state",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2710,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated feature-grid",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1315,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated fieldset",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1388,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated file",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1346,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated file-upload",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1258,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated footer",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1285,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated form",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1271,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated form-field",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1289,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated generator-panel",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1470,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated header",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1330,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated heading",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3091,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated hero",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1241,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated icon",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1267,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated image",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1308,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated label",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1304,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated link",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1297,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated list",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1283,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated metadata-panel",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1264,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated modal",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1266,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated navigation",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1319,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated newsletter-signup",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3358,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated pagination",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1247,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated partners-strip",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1191,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated popover",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1273,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated pricing-table",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1337,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated product-card",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1282,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated product-grid",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1331,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated product-showcase",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1302,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated progress-bar",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1403,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated progress-indicator",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1258,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated promo-banner",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3115,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated quote",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1203,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated radio-button",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1279,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated rating",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1381,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated recent-posts",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1374,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated resource-links",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1328,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated rich-text-editor",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1337,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated roadmap",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1341,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated search-input",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1400,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated segmented-control",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1295,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated select",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3122,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated separator",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1172,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated skeleton",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1306,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated skip-link",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1245,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated slider",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1284,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated spinner",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1264,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated stack",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1278,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated stats-bar",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1292,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated stepper",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1410,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated table",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1348,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated tabs",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3198,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated team-grid",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1347,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated testimonial-rail",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1262,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated text-input",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1350,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated textarea",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1265,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated toast",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1300,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated toggle",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1291,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated tooltip",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1439,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated tree-view",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1335,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated trust-strip",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1309,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated video",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3119,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated visually-hidden",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1122,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "drawer lifecycle and nonmodal focus",
+      "file": "gap-closure.spec.mjs",
+      "line": 21,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1843,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "tabs manual automatic vertical and instances",
+      "file": "gap-closure.spec.mjs",
+      "line": 33,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 794,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "combobox filters commits escapes and empty results",
+      "file": "gap-closure.spec.mjs",
+      "line": 40,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1514,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "calendar leap year boundaries keyboard and native value",
+      "file": "gap-closure.spec.mjs",
+      "line": 47,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 800,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "editor selected text formatting paste and safe serialization",
+      "file": "gap-closure.spec.mjs",
+      "line": 52,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 692,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "promoted stepper segmented tree toast and copy",
+      "file": "gap-closure.spec.mjs",
+      "line": 61,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1001,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "button icon inheritance kujo-light",
+      "file": "gap-closure.spec.mjs",
+      "line": 69,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1188,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "button icon inheritance kujo-dark",
+      "file": "gap-closure.spec.mjs",
+      "line": 69,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1210,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "button icon inheritance personal-dark",
+      "file": "gap-closure.spec.mjs",
+      "line": 69,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2823,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "button icon inheritance bzby",
+      "file": "gap-closure.spec.mjs",
+      "line": 69,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1087,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "containment 320",
+      "file": "gap-closure.spec.mjs",
+      "line": 74,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1369,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "containment 390",
+      "file": "gap-closure.spec.mjs",
+      "line": 74,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1640,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "containment 768",
+      "file": "gap-closure.spec.mjs",
+      "line": 74,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1473,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "containment 1440",
+      "file": "gap-closure.spec.mjs",
+      "line": 74,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1402,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "dynamic tabs inserted before repeat enhancement",
+      "file": "gap-closure.spec.mjs",
+      "line": 82,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 681,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "tooltip preserves descriptions, pointer travel and Escape",
+      "file": "gap-closure.spec.mjs",
+      "line": 87,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 780,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "disabled action and native progress synchronization",
+      "file": "gap-closure.spec.mjs",
+      "line": 92,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 605,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "reference forms search media and keyboard",
+      "file": "gap-closure.spec.mjs",
+      "line": 97,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4500,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "all copied examples have unique IDs and complete ARIA references",
+      "file": "gap-closure.spec.mjs",
+      "line": 109,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1358,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "critical visual kujo-light",
+      "file": "gap-closure.spec.mjs",
+      "line": 122,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 333,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "critical visual kujo-dark",
+      "file": "gap-closure.spec.mjs",
+      "line": 122,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 345,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "critical visual personal-dark",
+      "file": "gap-closure.spec.mjs",
+      "line": 122,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 350,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "critical visual bzby",
+      "file": "gap-closure.spec.mjs",
+      "line": 122,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 312,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "independent container text zoom RTL 320",
+      "file": "gap-closure.spec.mjs",
+      "line": 130,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 539,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "independent container text zoom RTL 390",
+      "file": "gap-closure.spec.mjs",
+      "line": 130,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1763,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "independent container text zoom RTL 768",
+      "file": "gap-closure.spec.mjs",
+      "line": 130,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 562,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "independent container text zoom RTL 1440",
+      "file": "gap-closure.spec.mjs",
+      "line": 130,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 542,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "editor link schemes and keyboard toolbar",
+      "file": "gap-closure.spec.mjs",
+      "line": 135,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 915,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "carousel boundaries, dismissal and clipboard failure",
+      "file": "gap-closure.spec.mjs",
+      "line": 141,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 789,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract alert-neutral",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 340,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract alert-danger",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 354,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract alert-warning",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 344,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract alert-success",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 330,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract avatar-initials",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 327,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract badge-success",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 330,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract badge-warning",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 333,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract badge-danger",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 335,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract button-secondary",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 334,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract button-ghost",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 323,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract button-danger",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 362,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract card-interactive",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 381,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract content-section-media-left",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 348,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract feature-grid-dense",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 1472,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract form-field-select",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 314,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract form-field-textarea",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 1485,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract form-field-checkbox",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 323,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract hero-split",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 312,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract hero-centered",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 406,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract icon-decorative",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 323,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract icon-meaningful",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 321,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract icon-inline",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 335,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract icon-external",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 338,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract newsletter-signup-split",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 341,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "floating panels stay within viewport edges",
+      "file": "gap-closure.spec.mjs",
+      "line": 162,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 720,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "reference composition visual",
+      "file": "gap-closure.spec.mjs",
+      "line": 171,
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 331,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "navigation tables forms text stress 320",
+      "file": "gap-closure.spec.mjs",
+      "line": 177,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1433,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "navigation tables forms text stress 390",
+      "file": "gap-closure.spec.mjs",
+      "line": 177,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1422,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "navigation tables forms text stress 768",
+      "file": "gap-closure.spec.mjs",
+      "line": 177,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1459,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "navigation tables forms text stress 1440",
+      "file": "gap-closure.spec.mjs",
+      "line": 177,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1439,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "bounded dates, disabled options and loading geometry",
+      "file": "gap-closure.spec.mjs",
+      "line": 184,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 879,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "editor mixed selection state and relinking",
+      "file": "gap-closure.spec.mjs",
+      "line": 194,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 967,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated accordion",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4583,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated alert",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4231,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated avatar",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1316,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated badge",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1354,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated bento-grid",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1364,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated breadcrumbs",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1314,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated button",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1236,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated card",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1343,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated carousel",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1332,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated checkbox",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1300,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated checkout-summary",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1323,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated code-block",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1288,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated color-picker",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1257,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated combobox",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1263,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated command-strip",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1202,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated content-section",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1346,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated cta",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1315,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated date-input",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1307,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated date-picker",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1934,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated drawer",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1259,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated dropdown-menu",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1254,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated ecosystem-map",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1252,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated empty-state",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1338,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated error-state",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1344,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated feature-grid",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1309,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated fieldset",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1249,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated file",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1321,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated file-upload",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1240,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated footer",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1302,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated form",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1305,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated form-field",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1335,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated generator-panel",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1342,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated header",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1286,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated heading",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1272,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated hero",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1310,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated icon",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1199,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated image",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1215,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated label",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1220,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated link",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1231,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated list",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1294,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated metadata-panel",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1270,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated modal",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1234,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated navigation",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1245,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated newsletter-signup",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1333,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated pagination",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1245,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated partners-strip",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1338,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated popover",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1268,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated pricing-table",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1324,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated product-card",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1295,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated product-grid",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1385,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated product-showcase",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1352,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated progress-bar",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1286,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated progress-indicator",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1334,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated promo-banner",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1287,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated quote",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1217,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated radio-button",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1287,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated rating",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1222,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated recent-posts",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1334,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated resource-links",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1329,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated rich-text-editor",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1316,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated roadmap",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1309,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated search-input",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1293,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated segmented-control",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1254,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated select",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1297,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated separator",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1285,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated skeleton",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1593,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated skip-link",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1367,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated slider",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1341,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated spinner",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1516,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated stack",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1368,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated stats-bar",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1263,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated stepper",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1334,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated table",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1331,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated tabs",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1343,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated team-grid",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1336,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated testimonial-rail",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1280,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated text-input",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1269,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated textarea",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1246,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated toast",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1261,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated toggle",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1291,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated tooltip",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1279,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated tree-view",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1313,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated trust-strip",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1296,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated video",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1226,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "isolated visually-hidden",
+      "file": "gap-closure.spec.mjs",
+      "line": 14,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1237,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "drawer lifecycle and nonmodal focus",
+      "file": "gap-closure.spec.mjs",
+      "line": 21,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1845,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "tabs manual automatic vertical and instances",
+      "file": "gap-closure.spec.mjs",
+      "line": 33,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 715,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "combobox filters commits escapes and empty results",
+      "file": "gap-closure.spec.mjs",
+      "line": 40,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1410,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "calendar leap year boundaries keyboard and native value",
+      "file": "gap-closure.spec.mjs",
+      "line": 47,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 820,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "editor selected text formatting paste and safe serialization",
+      "file": "gap-closure.spec.mjs",
+      "line": 52,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 711,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "promoted stepper segmented tree toast and copy",
+      "file": "gap-closure.spec.mjs",
+      "line": 61,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1020,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "button icon inheritance kujo-light",
+      "file": "gap-closure.spec.mjs",
+      "line": 69,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1393,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "button icon inheritance kujo-dark",
+      "file": "gap-closure.spec.mjs",
+      "line": 69,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1366,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "button icon inheritance personal-dark",
+      "file": "gap-closure.spec.mjs",
+      "line": 69,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1386,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "button icon inheritance bzby",
+      "file": "gap-closure.spec.mjs",
+      "line": 69,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1420,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "containment 320",
+      "file": "gap-closure.spec.mjs",
+      "line": 74,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1292,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "containment 390",
+      "file": "gap-closure.spec.mjs",
+      "line": 74,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1355,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "containment 768",
+      "file": "gap-closure.spec.mjs",
+      "line": 74,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1487,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "containment 1440",
+      "file": "gap-closure.spec.mjs",
+      "line": 74,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1873,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "dynamic tabs inserted before repeat enhancement",
+      "file": "gap-closure.spec.mjs",
+      "line": 82,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 654,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "tooltip preserves descriptions, pointer travel and Escape",
+      "file": "gap-closure.spec.mjs",
+      "line": 87,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 838,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "disabled action and native progress synchronization",
+      "file": "gap-closure.spec.mjs",
+      "line": 92,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 666,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "reference forms search media and keyboard",
+      "file": "gap-closure.spec.mjs",
+      "line": 97,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5039,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "all copied examples have unique IDs and complete ARIA references",
+      "file": "gap-closure.spec.mjs",
+      "line": 109,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2028,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "critical visual kujo-light",
+      "file": "gap-closure.spec.mjs",
+      "line": 122,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 530,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "critical visual kujo-dark",
+      "file": "gap-closure.spec.mjs",
+      "line": 122,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 469,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "critical visual personal-dark",
+      "file": "gap-closure.spec.mjs",
+      "line": 122,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 456,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "critical visual bzby",
+      "file": "gap-closure.spec.mjs",
+      "line": 122,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 518,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "independent container text zoom RTL 320",
+      "file": "gap-closure.spec.mjs",
+      "line": 130,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 708,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "independent container text zoom RTL 390",
+      "file": "gap-closure.spec.mjs",
+      "line": 130,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 709,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "independent container text zoom RTL 768",
+      "file": "gap-closure.spec.mjs",
+      "line": 130,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 914,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "independent container text zoom RTL 1440",
+      "file": "gap-closure.spec.mjs",
+      "line": 130,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 948,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "editor link schemes and keyboard toolbar",
+      "file": "gap-closure.spec.mjs",
+      "line": 135,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 703,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "carousel boundaries, dismissal and clipboard failure",
+      "file": "gap-closure.spec.mjs",
+      "line": 141,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 841,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract alert-neutral",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 534,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract alert-danger",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 523,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract alert-warning",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 530,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract alert-success",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 531,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract avatar-initials",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 516,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract badge-success",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 550,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract badge-warning",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 554,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract badge-danger",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 546,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract button-secondary",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 530,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract button-ghost",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 551,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract button-danger",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 549,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract card-interactive",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 575,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract content-section-media-left",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 520,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract feature-grid-dense",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 512,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract form-field-select",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 551,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract form-field-textarea",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 555,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract form-field-checkbox",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 524,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract hero-split",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 513,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract hero-centered",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 540,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract icon-decorative",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 560,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract icon-meaningful",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 483,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract icon-inline",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 581,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract icon-external",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 497,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "variant contract newsletter-signup-split",
+      "file": "gap-closure.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 548,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "floating panels stay within viewport edges",
+      "file": "gap-closure.spec.mjs",
+      "line": 162,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 690,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "reference composition visual",
+      "file": "gap-closure.spec.mjs",
+      "line": 171,
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 569,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "navigation tables forms text stress 320",
+      "file": "gap-closure.spec.mjs",
+      "line": 177,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1433,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "navigation tables forms text stress 390",
+      "file": "gap-closure.spec.mjs",
+      "line": 177,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1389,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "navigation tables forms text stress 768",
+      "file": "gap-closure.spec.mjs",
+      "line": 177,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1706,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "navigation tables forms text stress 1440",
+      "file": "gap-closure.spec.mjs",
+      "line": 177,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1985,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "bounded dates, disabled options and loading geometry",
+      "file": "gap-closure.spec.mjs",
+      "line": 184,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 898,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "editor mixed selection state and relinking",
+      "file": "gap-closure.spec.mjs",
+      "line": 194,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 859,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "CSS-only widget fallbacks remain readable and native controls usable",
+      "file": "progressive-fallback.spec.mjs",
+      "line": 4,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 376,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "CSS-only widget fallbacks remain readable and native controls usable",
+      "file": "progressive-fallback.spec.mjs",
+      "line": 4,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 828,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "CSS-only widget fallbacks remain readable and native controls usable",
+      "file": "progressive-fallback.spec.mjs",
+      "line": 4,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1042,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 501,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1096,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 454,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 997,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 413,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1058,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 260,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 320,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 250,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 329,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 270,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 366,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 290,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 268,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 237,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 275,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 242,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 263,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 279,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 306,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 275,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 270,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 251,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 269,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 301,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 322,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 298,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 272,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 246,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 278,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "automated WCAG A and AA scan",
+      "file": "sitekit.spec.mjs",
+      "line": 54,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 12994,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "dashboard keyboard, focus, state, and dismissal contracts",
+      "file": "sitekit.spec.mjs",
+      "line": 67,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 743,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "dashboard remains readable without optional JavaScript",
+      "file": "sitekit.spec.mjs",
+      "line": 118,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 253,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "reduced motion and 200 percent text scaling stay usable",
+      "file": "sitekit.spec.mjs",
+      "line": 127,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 307,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "clean copied distribution works over HTTP and file URLs",
+      "file": "sitekit.spec.mjs",
+      "line": 138,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 508,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2294,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1388,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2297,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1247,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1182,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1403,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 548,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 579,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 625,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 616,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 613,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 628,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 501,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 562,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 540,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 603,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 522,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 611,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 569,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1946,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 551,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 527,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1966,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 561,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 484,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 527,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 690,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 543,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 536,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 551,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "automated WCAG A and AA scan",
+      "file": "sitekit.spec.mjs",
+      "line": 54,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2900,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "dashboard keyboard, focus, state, and dismissal contracts",
+      "file": "sitekit.spec.mjs",
+      "line": 67,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1447,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "dashboard remains readable without optional JavaScript",
+      "file": "sitekit.spec.mjs",
+      "line": 118,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 574,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "reduced motion and 200 percent text scaling stay usable",
+      "file": "sitekit.spec.mjs",
+      "line": 127,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 599,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "clean copied distribution works over HTTP and file URLs",
+      "file": "sitekit.spec.mjs",
+      "line": 138,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1071,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1512,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1627,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1254,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1638,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1089,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "component-lab / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1476,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 881,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1115,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 899,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 861,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 713,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "consumer-dashboard / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 793,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 805,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 813,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 684,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 840,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 630,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "landing-layout / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 674,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 887,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 836,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 684,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 791,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 611,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "documentation-layout / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 619,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-light / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 907,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-dark / desktop",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 896,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-light / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 717,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-dark / tablet",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 763,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-light / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 609,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ecommerce-layout / kujo-dark / mobile",
+      "file": "sitekit.spec.mjs",
+      "line": 30,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 695,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "automated WCAG A and AA scan",
+      "file": "sitekit.spec.mjs",
+      "line": 54,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3167,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "dashboard keyboard, focus, state, and dismissal contracts",
+      "file": "sitekit.spec.mjs",
+      "line": 67,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2013,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "dashboard remains readable without optional JavaScript",
+      "file": "sitekit.spec.mjs",
+      "line": 118,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 876,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "reduced motion and 200 percent text scaling stay usable",
+      "file": "sitekit.spec.mjs",
+      "line": 127,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1045,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "clean copied distribution works over HTTP and file URLs",
+      "file": "sitekit.spec.mjs",
+      "line": 138,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1566,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "repeated enhancement does not duplicate event handlers",
+      "file": "sitekit.spec.mjs",
+      "line": 153,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 287,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "generated relationship IDs never collide with existing document IDs",
+      "file": "sitekit.spec.mjs",
+      "line": 161,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 244,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "focus traps ignore controls hidden by an ancestor",
+      "file": "sitekit.spec.mjs",
+      "line": 167,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 312,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ArrowUp opens a menu and focuses its last item",
+      "file": "sitekit.spec.mjs",
+      "line": 174,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 329,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "tooltip stays visible while either hover or focus remains active",
+      "file": "sitekit.spec.mjs",
+      "line": 183,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 524,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "every modal opener targeting the same dialog works",
+      "file": "sitekit.spec.mjs",
+      "line": 195,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 387,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "every drawer opener targeting the same drawer works",
+      "file": "sitekit.spec.mjs",
+      "line": 201,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 355,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "each drawer controls the scrim in its own shell",
+      "file": "sitekit.spec.mjs",
+      "line": 210,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 300,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "a valid persisted theme is restored during enhancement",
+      "file": "sitekit.spec.mjs",
+      "line": 217,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 306,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "theme selectors and toggles stay synchronized",
+      "file": "sitekit.spec.mjs",
+      "line": 225,
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 382,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "repeated enhancement does not duplicate event handlers",
+      "file": "sitekit.spec.mjs",
+      "line": 153,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 643,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "generated relationship IDs never collide with existing document IDs",
+      "file": "sitekit.spec.mjs",
+      "line": 161,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2045,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "focus traps ignore controls hidden by an ancestor",
+      "file": "sitekit.spec.mjs",
+      "line": 167,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 629,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ArrowUp opens a menu and focuses its last item",
+      "file": "sitekit.spec.mjs",
+      "line": 174,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 509,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "tooltip stays visible while either hover or focus remains active",
+      "file": "sitekit.spec.mjs",
+      "line": 183,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 758,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "every modal opener targeting the same dialog works",
+      "file": "sitekit.spec.mjs",
+      "line": 195,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 746,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "every drawer opener targeting the same drawer works",
+      "file": "sitekit.spec.mjs",
+      "line": 201,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 683,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "each drawer controls the scrim in its own shell",
+      "file": "sitekit.spec.mjs",
+      "line": 210,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 643,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "a valid persisted theme is restored during enhancement",
+      "file": "sitekit.spec.mjs",
+      "line": 217,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 569,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "theme selectors and toggles stay synchronized",
+      "file": "sitekit.spec.mjs",
+      "line": 225,
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 554,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "repeated enhancement does not duplicate event handlers",
+      "file": "sitekit.spec.mjs",
+      "line": 153,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1029,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "generated relationship IDs never collide with existing document IDs",
+      "file": "sitekit.spec.mjs",
+      "line": 161,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 799,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "focus traps ignore controls hidden by an ancestor",
+      "file": "sitekit.spec.mjs",
+      "line": 167,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 865,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "ArrowUp opens a menu and focuses its last item",
+      "file": "sitekit.spec.mjs",
+      "line": 174,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 839,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "tooltip stays visible while either hover or focus remains active",
+      "file": "sitekit.spec.mjs",
+      "line": 183,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1276,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "every modal opener targeting the same dialog works",
+      "file": "sitekit.spec.mjs",
+      "line": 195,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 817,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "every drawer opener targeting the same drawer works",
+      "file": "sitekit.spec.mjs",
+      "line": 201,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 930,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "each drawer controls the scrim in its own shell",
+      "file": "sitekit.spec.mjs",
+      "line": 210,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 859,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "a valid persisted theme is restored during enhancement",
+      "file": "sitekit.spec.mjs",
+      "line": 217,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 844,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "title": "theme selectors and toggles stay synchronized",
+      "file": "sitekit.spec.mjs",
+      "line": 225,
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 880,
+          "errors": []
+        }
+      ]
+    }
+  ]
+}

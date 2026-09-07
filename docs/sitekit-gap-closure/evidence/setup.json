@@ -1,0 +1,20 @@
+{
+  "commands": [
+    {
+      "command": "npm ci",
+      "exitCode": 0,
+      "result": "Added 6 packages; audited 7; 0 vulnerabilities",
+      "log": "/tmp/sitekit-final-ci.log"
+    },
+    {
+      "command": "npm run browser:install",
+      "exitCode": 0,
+      "engines": [
+        "chromium",
+        "firefox",
+        "webkit"
+      ]
+    }
+  ],
+  "publication": false
+}

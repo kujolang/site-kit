@@ -1,5 +1,7 @@
 # Showcase builder delta
 
+**READY FOR SHOWCASE BUILD.** Required library gaps are closed and verified. The next agent can use current source contracts and examples without repeating the broad audit. Browser/screen-reader coverage limits remain explicit in VERIFICATION.md.
+
 Use the original design, information architecture and build dossier together with this delta. Keep the historical audit evidence intact. The old generator deliberately rejects changed source; do not bypass its guard or regenerate that history.
 
 Use current component schemas, examples and generated manifests for API tables and preview markup. The lab now reads generated source examples and loads the actual optional behavior. Do not carry forward its former tabs, combobox, calendar, copy, stepper, toast or carousel adapters. Use scoped enhancement and dispose before replacing previews, with explicit instance prefixes.

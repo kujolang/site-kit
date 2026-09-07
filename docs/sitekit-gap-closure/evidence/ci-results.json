@@ -1,0 +1,162 @@
+{
+  "runId": 34071120146,
+  "verificationCommit": "9c7da48c2cb4c5af8094be1b29d759cd7d45201d",
+  "jobs": [
+    {
+      "name": "shipcheck",
+      "conclusion": null,
+      "status": "in_progress",
+      "url": "https://github.com/kujolang/site-kit/actions/runs/34071120146/job/101588535037",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Checkout SiteKit",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Checkout Kujo",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Checkout ShipCheck",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Build Kujo",
+          "conclusion": null,
+          "status": "in_progress"
+        },
+        {
+          "name": "Run ShipCheck gate",
+          "conclusion": null,
+          "status": "pending"
+        },
+        {
+          "name": "Post Checkout ShipCheck",
+          "conclusion": null,
+          "status": "pending"
+        },
+        {
+          "name": "Post Checkout Kujo",
+          "conclusion": null,
+          "status": "pending"
+        },
+        {
+          "name": "Post Checkout SiteKit",
+          "conclusion": null,
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "name": "release-gate",
+      "conclusion": "success",
+      "status": "completed",
+      "url": "https://github.com/kujolang/site-kit/actions/runs/34071120146/job/101588535143",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Checkout SiteKit",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Set up Node 20",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Install dependencies",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Install browser engines",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Check formatting",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Build generated outputs",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Lint source contracts",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Validate schemas, semantics, versions, links, and distribution",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Generate component snapshot",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Run static distribution smoke",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Run rendered browser and accessibility matrix",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Verify release package and clean consumer",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Reject generated-output drift",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Reject whitespace errors",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Upload browser evidence",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Post Set up Node 20",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Post Checkout SiteKit",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success",
+          "status": "completed"
+        }
+      ]
+    }
+  ]
+}

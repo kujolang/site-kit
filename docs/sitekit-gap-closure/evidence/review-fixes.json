@@ -20,6 +20,11 @@
       "command": "npm run browser:test -- --grep 'reference forms|carousel boundaries|floating panels|dynamic tabs' --workers=3",
       "result": "12 passed (1.2m)",
       "testCorrections": "Use Option-Tab for macOS WebKit link navigation; explicitly focus Copy before keyboard activation; naturalWidth is density-corrected by srcset, so assert successful loading, declared width and currentSrc."
+    },
+    {
+      "command": "GitHub Actions 34070501094 full browser matrix",
+      "result": "514 passed; 58 intentional skips; one reference screenshot failure",
+      "remedy": "Inspected Linux actual and diff: native text rasterization and search-input metrics differ. Added platform-specific reference baselines without increasing tolerance; four critical screenshots remain shared."
     }
   ],
   "reviewDiscoveries": [

@@ -1,0 +1,12 @@
+{
+  "command": "npm run browser:test -- --config /tmp/sitekit-fallback.config.mjs",
+  "configuration": "Repository projects, one worker; existing fixture server; isolated output; testMatch progressive-fallback.spec.mjs",
+  "stats": {
+    "startTime": "2026-09-07T00:44:03.109Z",
+    "duration": 86189.666,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

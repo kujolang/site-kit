@@ -1,0 +1,23 @@
+[
+  {
+    "name": "chromium",
+    "revision": "1234",
+    "browserVersion": "151.0.7922.34"
+  },
+  {
+    "name": "firefox",
+    "revision": "1538",
+    "browserVersion": "153.0"
+  },
+  {
+    "name": "webkit",
+    "revision": "2336",
+    "browserVersion": "26.5",
+    "revisionOverrides": {
+      "mac14": "2251",
+      "mac14-arm64": "2251",
+      "ubuntu20.04-x64": "2092",
+      "ubuntu20.04-arm64": "2092"
+    }
+  }
+]

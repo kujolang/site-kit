@@ -2,41 +2,41 @@
   {
     "command": "npm run format:check",
     "exitCode": 0,
-    "durationMs": 2465
+    "durationMs": 2351
   },
   {
     "command": "npm run build",
     "exitCode": 0,
-    "durationMs": 1849
+    "durationMs": 1679
   },
   {
     "command": "npm run lint",
     "exitCode": 0,
-    "durationMs": 2195
+    "durationMs": 2005
   },
   {
     "command": "npm run validate",
     "exitCode": 0,
-    "durationMs": 8399
+    "durationMs": 9267
   },
   {
     "command": "npm run snapshot",
     "exitCode": 0,
-    "durationMs": 1235
+    "durationMs": 1309
   },
   {
     "command": "npm run smoke",
     "exitCode": 0,
-    "durationMs": 1914
+    "durationMs": 1510
   },
   {
     "command": "npm run generated:check",
     "exitCode": 0,
-    "durationMs": 6099
+    "durationMs": 9033
   },
   {
     "command": "npm run release:check",
     "exitCode": 0,
-    "durationMs": 3890
+    "durationMs": 5020
   }
 ]

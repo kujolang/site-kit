@@ -1,0 +1,133 @@
+{
+  "checks": [
+    {
+      "detail": "",
+      "message": "Git repository detected",
+      "name": "git-repo",
+      "passed": 1,
+      "severity": "info"
+    },
+    {
+      "detail": "",
+      "message": "README found: README.md",
+      "name": "readme",
+      "passed": 1,
+      "severity": "info"
+    },
+    {
+      "detail": "",
+      "message": "LICENSE found: LICENSE",
+      "name": "license",
+      "passed": 1,
+      "severity": "info"
+    },
+    {
+      "detail": "",
+      "message": "Ignore files found: .gitignore",
+      "name": "ignore-files",
+      "passed": 1,
+      "severity": "info"
+    },
+    {
+      "detail": "",
+      "message": "Test directory found: tests/",
+      "name": "tests-exist",
+      "passed": 1,
+      "severity": "info"
+    },
+    {
+      "detail": "",
+      "message": "package.json scripts reference lint",
+      "name": "lint-command",
+      "passed": 1,
+      "severity": "info"
+    },
+    {
+      "detail": "",
+      "message": "package.json scripts reference format",
+      "name": "format-command",
+      "passed": 1,
+      "severity": "info"
+    },
+    {
+      "detail": "",
+      "message": "CI configuration found: .github/workflows/",
+      "name": "ci-config",
+      "passed": 1,
+      "severity": "info"
+    },
+    {
+      "detail": "",
+      "message": "README has install/quickstart instructions",
+      "name": "readme-install",
+      "passed": 1,
+      "severity": "info"
+    },
+    {
+      "detail": "",
+      "message": "README has usage/examples",
+      "name": "readme-usage",
+      "passed": 1,
+      "severity": "info"
+    },
+    {
+      "detail": "",
+      "message": "Examples directory found with 9 entries",
+      "name": "examples",
+      "passed": 1,
+      "severity": "info"
+    },
+    {
+      "detail": "",
+      "message": "Documentation directory found with 5 entries",
+      "name": "docs",
+      "passed": 1,
+      "severity": "info"
+    },
+    {
+      "detail": "",
+      "message": "package.json found with version field",
+      "name": "version-metadata",
+      "passed": 1,
+      "severity": "info"
+    },
+    {
+      "detail": "",
+      "message": "Changelog found: CHANGELOG.md",
+      "name": "changelog",
+      "passed": 1,
+      "severity": "info"
+    },
+    {
+      "detail": "Add kennel.toml for Kujo package metadata (if this is a Kujo project)",
+      "message": "No kennel.toml found",
+      "name": "kennel-manifest",
+      "passed": 0,
+      "severity": "warning"
+    },
+    {
+      "detail": "Define 'entry' in kennel.toml [kujo] section or add a main .kujo script",
+      "message": "No clear entry point detected",
+      "name": "entry-point",
+      "passed": 0,
+      "severity": "warning"
+    }
+  ],
+  "dir": "../site-kit",
+  "project_type": "node",
+  "summary": {
+    "failed_errors": 0,
+    "gate_passed": 1,
+    "passed": 14,
+    "total_checks": 16,
+    "warnings": 2
+  },
+  "tool": "shipcheck",
+  "version": "1.0.0",
+  "execution": {
+    "command": "../kujo/target/release/kujo run shipcheck.kujo gate --dir ../site-kit --format json",
+    "workingDirectory": "sibling shipcheck repository",
+    "exitCode": 0,
+    "interpretation": "Node package: missing kennel.toml and .kujo entry warnings are inapplicable; no errors."
+  }
+}

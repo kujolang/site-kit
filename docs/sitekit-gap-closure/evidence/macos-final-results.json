@@ -1,0 +1,12 @@
+{
+  "command": "npm run browser:test -- --grep 'reference composition visual|CSS-only|clean copied' --workers=2",
+  "verificationCommit": "9c7da48",
+  "stats": {
+    "startTime": "2026-09-07T00:52:13.974Z",
+    "duration": 28529.693,
+    "expected": 7,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

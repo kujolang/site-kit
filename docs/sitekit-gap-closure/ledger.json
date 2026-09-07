@@ -1,13 +1,23 @@
 [
   {
+    "id": "G1-examples",
+    "workstream": "G1",
+    "affectedSource": "components/*/example.html; components/*/examples.json",
+    "baselineEvidence": "../sitekit-showcase-handoff/evidence/api-discrepancies.json",
+    "chosenContract": "85 valid standalone authoring references and schema example records",
+    "status": "verified",
+    "regressionTest": "isolated component cases; copied examples IDREF test",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
     "id": "G1-fields",
     "workstream": "G1",
     "affectedSource": "components/*/*.schema.json; components/{card,form-field,tabs,ecosystem-map}/*.html",
     "baselineEvidence": "../sitekit-showcase-handoff/evidence/api-discrepancies.json",
     "chosenContract": "Required fields, title/control/panels/totals and native bindings",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "scripts/generate-contracts; tests/contract/component-contracts.cjs",
-    "completionEvidence": "Pending final verification"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
     "id": "G1-variants",
@@ -15,39 +25,9 @@
     "affectedSource": "components/*/*.schema.json",
     "baselineEvidence": "../sitekit-showcase-handoff/evidence/api-discrepancies.json",
     "chosenContract": "Preserved legacy variants as explicit aliases or actual attribute selectors",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "scripts/generate-contracts",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G1-examples",
-    "workstream": "G1",
-    "affectedSource": "components/*/example.html; components/*/examples.json",
-    "baselineEvidence": "../sitekit-showcase-handoff/evidence/api-discrepancies.json",
-    "chosenContract": "85 valid standalone authoring references and schema example records",
-    "status": "implemented",
-    "regressionTest": "isolated component cases; copied examples IDREF test",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G2-drawer",
-    "workstream": "G2",
-    "affectedSource": "components/drawer; scripts/sitekit-behavior.js",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Hidden drawer absent; close, Escape, new opener, reinsertion and focus return",
-    "status": "implemented",
-    "regressionTest": "drawer lifecycle and nonmodal focus",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G2-icon",
-    "workstream": "G2",
-    "affectedSource": "components/icon/icon.css",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Context-safe color inheritance across button variants/themes",
-    "status": "implemented",
-    "regressionTest": "button icon inheritance; critical visual",
-    "completionEvidence": "Pending final verification"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
     "id": "G2-avatar",
@@ -55,19 +35,9 @@
     "affectedSource": "components/avatar",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
     "chosenContract": "Meaningful img alt instead of prohibited generic span label",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "isolated avatar",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G2-progress",
-    "workstream": "G2",
-    "affectedSource": "components/progress-bar",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Labeled native bounded progress, synchronized fill",
-    "status": "implemented",
-    "regressionTest": "isolated progress-bar; disabled action and native progress",
-    "completionEvidence": "Pending final verification"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
     "id": "G2-calendar",
@@ -75,19 +45,9 @@
     "affectedSource": "components/date-picker; scripts/sitekit-behavior.js",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
     "chosenContract": "Named valid row/gridcell calendar structure",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "isolated date-picker; calendar leap year",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G2-editor",
-    "workstream": "G2",
-    "affectedSource": "components/rich-text-editor; scripts/sitekit-behavior.js",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Named editable textbox and toolbar actions",
-    "status": "implemented",
-    "regressionTest": "isolated rich-text-editor; editor formatting paste serialization",
-    "completionEvidence": "Pending final verification"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
     "id": "G2-code",
@@ -95,29 +55,9 @@
     "affectedSource": "scripts/sitekit-behavior.js",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
     "chosenContract": "Keyboard reachability only for scrollable code",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "isolated code-block; promoted copy",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G2-skip",
-    "workstream": "G2",
-    "affectedSource": "components/skip-link; layouts; examples",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Revealing skip links with focusable targets",
-    "status": "implemented",
-    "regressionTest": "reference forms search media and keyboard",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G2-tooltip",
-    "workstream": "G2",
-    "affectedSource": "components/tooltip; scripts/sitekit-behavior.js",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Hover persistence, Escape and preserved descriptions",
-    "status": "implemented",
-    "regressionTest": "tooltip preserves descriptions",
-    "completionEvidence": "Pending final verification"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
     "id": "G2-disabled",
@@ -125,9 +65,39 @@
     "affectedSource": "scripts/sitekit-behavior.js",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
     "chosenContract": "Native disabled and enhanced aria-disabled action suppression",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "disabled action and native progress",
-    "completionEvidence": "Pending final verification"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G2-drawer",
+    "workstream": "G2",
+    "affectedSource": "components/drawer; scripts/sitekit-behavior.js",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Hidden drawer absent; close, Escape, new opener, reinsertion and focus return",
+    "status": "verified",
+    "regressionTest": "drawer lifecycle and nonmodal focus",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G2-editor",
+    "workstream": "G2",
+    "affectedSource": "components/rich-text-editor; scripts/sitekit-behavior.js",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Named editable textbox and toolbar actions",
+    "status": "verified",
+    "regressionTest": "isolated rich-text-editor; editor formatting paste serialization",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G2-icon",
+    "workstream": "G2",
+    "affectedSource": "components/icon/icon.css",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Context-safe color inheritance across button variants/themes",
+    "status": "verified",
+    "regressionTest": "button icon inheritance; critical visual",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
     "id": "G2-ids",
@@ -135,19 +105,39 @@
     "affectedSource": "scripts/sitekit-behavior.js",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
     "chosenContract": "Explicit instance prefix API and synchronized IDREFs",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "all copied examples unique IDs",
-    "completionEvidence": "Pending final verification"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
-    "id": "G3-tabs",
-    "workstream": "G3",
-    "affectedSource": "scripts/sitekit-behavior.js; components/tabs",
+    "id": "G2-progress",
+    "workstream": "G2",
+    "affectedSource": "components/progress-bar",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Automatic/manual oriented tabs with panels and dynamic insertion",
-    "status": "implemented",
-    "regressionTest": "tabs manual automatic vertical; dynamic tabs",
-    "completionEvidence": "Pending final verification"
+    "chosenContract": "Labeled native bounded progress, synchronized fill",
+    "status": "verified",
+    "regressionTest": "isolated progress-bar; disabled action and native progress",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G2-skip",
+    "workstream": "G2",
+    "affectedSource": "components/skip-link; layouts; examples",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Revealing skip links with focusable targets",
+    "status": "verified",
+    "regressionTest": "reference forms search media and keyboard",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G2-tooltip",
+    "workstream": "G2",
+    "affectedSource": "components/tooltip; scripts/sitekit-behavior.js",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Hover persistence, Escape and preserved descriptions",
+    "status": "verified",
+    "regressionTest": "tooltip preserves descriptions",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
     "id": "G3-combobox",
@@ -155,9 +145,9 @@
     "affectedSource": "scripts/sitekit-behavior.js; components/combobox",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
     "chosenContract": "Local single-select autocomplete with active/committed distinction",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "combobox filters commits escapes",
-    "completionEvidence": "Pending final verification"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
     "id": "G3-date",
@@ -165,19 +155,9 @@
     "affectedSource": "scripts/sitekit-behavior.js; components/date-picker",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
     "chosenContract": "Single-date calendar with native input and date-only arithmetic",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "calendar leap year boundaries",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G3-tree",
-    "workstream": "G3",
-    "affectedSource": "scripts/sitekit-behavior.js; components/tree-view",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Bounded navigation/disclosure semantics",
-    "status": "implemented",
-    "regressionTest": "promoted tree; isolated tree-view",
-    "completionEvidence": "Pending final verification"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
     "id": "G3-editor",
@@ -185,49 +165,29 @@
     "affectedSource": "scripts/sitekit-behavior.js; components/rich-text-editor",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
     "chosenContract": "Selected-text bold/italic/safe links, plain paste and allowlisted serialization",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "editor selected text formatting paste and safe serialization",
-    "completionEvidence": "Pending final verification"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
-    "id": "G4-copy",
-    "workstream": "G4",
-    "affectedSource": "scripts/sitekit-behavior.js",
+    "id": "G3-tabs",
+    "workstream": "G3",
+    "affectedSource": "scripts/sitekit-behavior.js; components/tabs",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Exact clipboard text with truthful success/failure announcement",
-    "status": "implemented",
-    "regressionTest": "promoted copy",
-    "completionEvidence": "Pending final verification"
+    "chosenContract": "Automatic/manual oriented tabs with panels and dynamic insertion",
+    "status": "verified",
+    "regressionTest": "tabs manual automatic vertical; dynamic tabs",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
-    "id": "G4-stepper",
-    "workstream": "G4",
-    "affectedSource": "scripts/sitekit-behavior.js; components/stepper",
+    "id": "G3-tree",
+    "workstream": "G3",
+    "affectedSource": "scripts/sitekit-behavior.js; components/tree-view",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Native bounded number stepping and input/change events",
-    "status": "implemented",
-    "regressionTest": "promoted stepper",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G4-segmented",
-    "workstream": "G4",
-    "affectedSource": "scripts/sitekit-behavior.js",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Exclusive pressed buttons with normal Tab order",
-    "status": "implemented",
-    "regressionTest": "promoted segmented",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G4-toast",
-    "workstream": "G4",
-    "affectedSource": "components/toast; scripts/sitekit-behavior.js",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Explicit dismissal and live-region reference",
-    "status": "implemented",
-    "regressionTest": "promoted toast",
-    "completionEvidence": "Pending final verification"
+    "chosenContract": "Bounded navigation/disclosure semantics",
+    "status": "verified",
+    "regressionTest": "promoted tree; isolated tree-view",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
     "id": "G4-carousel",
@@ -235,19 +195,19 @@
     "affectedSource": "scripts/sitekit-behavior.js; components/carousel",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
     "chosenContract": "Controls, boundaries, native scrolling and reduced-motion-safe JS",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "isolated carousel",
-    "completionEvidence": "Pending final verification"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
-    "id": "G4-promo",
+    "id": "G4-copy",
     "workstream": "G4",
-    "affectedSource": "components/promo-banner; scripts/sitekit-behavior.js",
+    "affectedSource": "scripts/sitekit-behavior.js",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Labeled nonpersistent dismissal",
-    "status": "implemented",
-    "regressionTest": "isolated promo-banner",
-    "completionEvidence": "Pending final verification"
+    "chosenContract": "Exact clipboard text with truthful success/failure announcement",
+    "status": "verified",
+    "regressionTest": "promoted copy",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
     "id": "G4-lab",
@@ -255,9 +215,49 @@
     "affectedSource": "examples/component-lab; scripts/generate-contracts",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
     "chosenContract": "Generated examples replace duplicated catalog and competing handlers",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "existing component lab browser matrix",
-    "completionEvidence": "Pending final verification"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G4-promo",
+    "workstream": "G4",
+    "affectedSource": "components/promo-banner; scripts/sitekit-behavior.js",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Labeled nonpersistent dismissal",
+    "status": "verified",
+    "regressionTest": "isolated promo-banner",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G4-segmented",
+    "workstream": "G4",
+    "affectedSource": "scripts/sitekit-behavior.js",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Exclusive pressed buttons with normal Tab order",
+    "status": "verified",
+    "regressionTest": "promoted segmented",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G4-stepper",
+    "workstream": "G4",
+    "affectedSource": "scripts/sitekit-behavior.js; components/stepper",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Native bounded number stepping and input/change events",
+    "status": "verified",
+    "regressionTest": "promoted stepper",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G4-toast",
+    "workstream": "G4",
+    "affectedSource": "components/toast; scripts/sitekit-behavior.js",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Explicit dismissal and live-region reference",
+    "status": "verified",
+    "regressionTest": "promoted toast",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
     "id": "G5-container",
@@ -265,19 +265,9 @@
     "affectedSource": "components/{bento-grid,content-section,generator-panel,newsletter-signup,product-showcase}; css/utilities.css",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
     "chosenContract": "Outer size container and inner component layout in canonical markup",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "containment viewport matrix; independent container text zoom RTL",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G5-slider",
-    "workstream": "G5",
-    "affectedSource": "components/slider",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Native input margin and minimum size prevent isolated overflow",
-    "status": "implemented",
-    "regressionTest": "containment 320/390",
-    "completionEvidence": "Pending final verification"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
     "id": "G5-drawer",
@@ -285,179 +275,9 @@
     "affectedSource": "components/drawer; scripts/sitekit-behavior.js",
     "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
     "chosenContract": "Explicit nonmodal panel versus positioned sheet",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "drawer lifecycle and nonmodal focus",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G5-motion",
-    "workstream": "G5",
-    "affectedSource": "components/toggle; scripts/sitekit-behavior.js",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Reduced motion retains CSS override; JS carousel honors preference; toggle logical position",
-    "status": "implemented",
-    "regressionTest": "existing reduced-motion tests; independent container RTL",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G6-scope",
-    "workstream": "G6",
-    "affectedSource": "scripts/sitekit-behavior.js",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Subtree enhancement and disposal, no global observer",
-    "status": "implemented",
-    "regressionTest": "drawer lifecycle; dynamic tabs",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G6-focus",
-    "workstream": "G6",
-    "affectedSource": "scripts/sitekit-behavior.js",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Detached opener protection and hidden/inert focus filtering",
-    "status": "implemented",
-    "regressionTest": "existing focus regressions; drawer lifecycle",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G6-theme",
-    "workstream": "G6",
-    "affectedSource": "scripts/sitekit-behavior.js",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Safe initial storage and synchronization across supported themes",
-    "status": "implemented",
-    "regressionTest": "existing theme controls regressions",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G7-forms",
-    "workstream": "G7",
-    "affectedSource": "examples/reference-compositions",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Help/error/required/local validation and loading reference",
-    "status": "implemented",
-    "regressionTest": "reference forms search media and keyboard",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G7-media",
-    "workstream": "G7",
-    "affectedSource": "examples/reference-compositions/assets; components/image; components/video",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Native image/video with local licensed fixture and captions",
-    "status": "implemented",
-    "regressionTest": "reference forms search media and keyboard",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G7-docs",
-    "workstream": "G7",
-    "affectedSource": "examples/reference-compositions",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Documentation navigation/TOC, anchors, code and tables",
-    "status": "implemented",
-    "regressionTest": "reference forms search media and keyboard",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G7-search",
-    "workstream": "G7",
-    "affectedSource": "examples/reference-compositions/reference.js",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Labeled fixture search with empty results and native link keyboard navigation",
-    "status": "implemented",
-    "regressionTest": "reference forms search media and keyboard",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G8-metadata",
-    "workstream": "G8",
-    "affectedSource": "scripts/generate-contracts; docs/sitekit-gap-closure/*manifest.json",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Source contracts, hashes, actual selectors/hooks and generated lab/search data",
-    "status": "implemented",
-    "regressionTest": "generated:check; component-contracts.cjs",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G8-docs",
-    "workstream": "G8",
-    "affectedSource": "components/*/*.md; README.md; CHANGELOG.md; scripts/sitekit.js",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Guidance and current example pointers for every component",
-    "status": "implemented",
-    "regressionTest": "validate:links",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G9-isolated",
-    "workstream": "G9",
-    "affectedSource": "tests/browser/gap-closure.spec.mjs",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "All canonical references render using real dist CSS/script/fonts",
-    "status": "implemented",
-    "regressionTest": "isolated tests",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G9-interaction",
-    "workstream": "G9",
-    "affectedSource": "tests/browser/gap-closure.spec.mjs",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "New behavior tested in Chromium Firefox WebKit",
-    "status": "implemented",
-    "regressionTest": "full browser suite",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G9-visual",
-    "workstream": "G9",
-    "affectedSource": "tests/browser/gap-closure.spec.mjs-snapshots",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Critical states across all four themes with PNG baselines",
-    "status": "implemented",
-    "regressionTest": "critical visual tests",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G9-release",
-    "workstream": "G9",
-    "affectedSource": "docs/sitekit-gap-closure/evidence",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Full static and distribution gates plus byte/gzip report",
-    "status": "implemented",
-    "regressionTest": "VERIFICATION.md",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G9-manual",
-    "workstream": "G9",
-    "affectedSource": "docs/sitekit-gap-closure/VERIFICATION.md",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Keyboard/visual inspection; screen-reader coverage explicitly recorded",
-    "status": "implemented",
-    "regressionTest": "manual evidence",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G10-handoff",
-    "workstream": "G10",
-    "affectedSource": "docs/sitekit-gap-closure; docs/sitekit-showcase-handoff/README.md",
-    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
-    "chosenContract": "Current handoff, migration, readiness delta, and conspicuous historical pointer",
-    "status": "implemented",
-    "regressionTest": "validate:links; final review",
-    "completionEvidence": "Pending final verification"
-  },
-  {
-    "id": "G5-stack",
-    "workstream": "G5",
-    "affectedSource": "css/utilities.css; components/code-block/code-block.css",
-    "baselineEvidence": "evidence/reference-search.png (agent-directed review exposed nested width expansion)",
-    "chosenContract": "Zero-minimum Stack grid track and nonshrinking code copy control",
-    "status": "implemented",
-    "regressionTest": "reference forms search media and keyboard; viewport assertion",
-    "completionEvidence": "evidence/reference-current.png"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   },
   {
     "id": "G5-floating",
@@ -465,8 +285,198 @@
     "affectedSource": "scripts/sitekit-behavior.js",
     "baselineEvidence": "Source absolute placement at trigger inline-start could exceed viewport",
     "chosenContract": "Viewport-clamped nonmodal floating panels with scroll/resize positioning",
-    "status": "implemented",
+    "status": "verified",
     "regressionTest": "floating panels stay within viewport edges",
-    "completionEvidence": "Pending final browser result"
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G5-motion",
+    "workstream": "G5",
+    "affectedSource": "components/toggle; scripts/sitekit-behavior.js",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Reduced motion retains CSS override; JS carousel honors preference; toggle logical position",
+    "status": "verified",
+    "regressionTest": "existing reduced-motion tests; independent container RTL",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G5-slider",
+    "workstream": "G5",
+    "affectedSource": "components/slider",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Native input margin and minimum size prevent isolated overflow",
+    "status": "verified",
+    "regressionTest": "containment 320/390",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G5-stack",
+    "workstream": "G5",
+    "affectedSource": "css/utilities.css; components/code-block/code-block.css",
+    "baselineEvidence": "evidence/reference-search.png (agent-directed review exposed nested width expansion)",
+    "chosenContract": "Zero-minimum Stack grid track and nonshrinking code copy control",
+    "status": "verified",
+    "regressionTest": "reference forms search media and keyboard; viewport assertion",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G5-text-stress",
+    "workstream": "G5",
+    "affectedSource": "css/base.css; components/header/header.css",
+    "baselineEvidence": "320px doubled-text regression: fixture heading produced 367px document width",
+    "chosenContract": "Heading emergency wrapping; shrinkable header navigation items; long-content stress across header/footer/table/pricing/form controls",
+    "status": "verified",
+    "regressionTest": "navigation tables forms text stress 320/390/768/1440",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G6-focus",
+    "workstream": "G6",
+    "affectedSource": "scripts/sitekit-behavior.js",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Detached opener protection and hidden/inert focus filtering",
+    "status": "verified",
+    "regressionTest": "existing focus regressions; drawer lifecycle",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G6-scope",
+    "workstream": "G6",
+    "affectedSource": "scripts/sitekit-behavior.js",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Subtree enhancement and disposal, no global observer",
+    "status": "verified",
+    "regressionTest": "drawer lifecycle; dynamic tabs",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G6-theme",
+    "workstream": "G6",
+    "affectedSource": "scripts/sitekit-behavior.js",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Safe initial storage and synchronization across supported themes",
+    "status": "verified",
+    "regressionTest": "existing theme controls regressions",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G7-docs",
+    "workstream": "G7",
+    "affectedSource": "examples/reference-compositions",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Documentation navigation/TOC, anchors, code and tables",
+    "status": "verified",
+    "regressionTest": "reference forms search media and keyboard",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G7-forms",
+    "workstream": "G7",
+    "affectedSource": "examples/reference-compositions",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Help/error/required/local validation and loading reference",
+    "status": "verified",
+    "regressionTest": "reference forms search media and keyboard",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G7-media",
+    "workstream": "G7",
+    "affectedSource": "examples/reference-compositions/assets; components/image; components/video",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Native image/video with local licensed fixture and captions",
+    "status": "verified",
+    "regressionTest": "reference forms search media and keyboard",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G7-search",
+    "workstream": "G7",
+    "affectedSource": "examples/reference-compositions/reference.js",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Labeled fixture search with empty results and native link keyboard navigation",
+    "status": "verified",
+    "regressionTest": "reference forms search media and keyboard",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G8-docs",
+    "workstream": "G8",
+    "affectedSource": "components/*/*.md; README.md; CHANGELOG.md; scripts/sitekit.js",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Guidance and current example pointers for every component",
+    "status": "verified",
+    "regressionTest": "validate:links",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G8-metadata",
+    "workstream": "G8",
+    "affectedSource": "scripts/generate-contracts; docs/sitekit-gap-closure/*manifest.json",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Source contracts, hashes, actual selectors/hooks and generated lab/search data",
+    "status": "verified",
+    "regressionTest": "generated:check; component-contracts.cjs",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G9-interaction",
+    "workstream": "G9",
+    "affectedSource": "tests/browser/gap-closure.spec.mjs",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "New behavior tested in Chromium Firefox WebKit",
+    "status": "verified",
+    "regressionTest": "full browser suite",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G9-isolated",
+    "workstream": "G9",
+    "affectedSource": "tests/browser/gap-closure.spec.mjs",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "All canonical references render using real dist CSS/script/fonts",
+    "status": "verified",
+    "regressionTest": "isolated tests",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G9-manual",
+    "workstream": "G9",
+    "affectedSource": "docs/sitekit-gap-closure/VERIFICATION.md",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Keyboard/visual inspection; screen-reader coverage explicitly recorded",
+    "status": "verified",
+    "regressionTest": "manual evidence",
+    "completionEvidence": "evidence/keyboard-review.json; reviewed PNG baselines; VERIFICATION.md records no screen-reader session"
+  },
+  {
+    "id": "G9-release",
+    "workstream": "G9",
+    "affectedSource": "docs/sitekit-gap-closure/evidence",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Full static and distribution gates plus byte/gzip report",
+    "status": "verified",
+    "regressionTest": "VERIFICATION.md",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G9-visual",
+    "workstream": "G9",
+    "affectedSource": "tests/browser/gap-closure.spec.mjs-snapshots",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Critical states across all four themes with PNG baselines",
+    "status": "verified",
+    "regressionTest": "critical visual tests",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
+  },
+  {
+    "id": "G10-handoff",
+    "workstream": "G10",
+    "affectedSource": "docs/sitekit-gap-closure; docs/sitekit-showcase-handoff/README.md",
+    "baselineEvidence": "../sitekit-showcase-handoff/08-SITEKIT-GAPS.md",
+    "chosenContract": "Current handoff, migration, readiness delta, and conspicuous historical pointer",
+    "status": "verified",
+    "regressionTest": "validate:links; final review",
+    "completionEvidence": "evidence/browser-results.json (518 passed, 58 intentional skips); evidence/gates.json; VERIFICATION.md"
   }
 ]
