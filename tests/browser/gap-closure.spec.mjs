@@ -8,6 +8,7 @@ async function fixture(page, html, width = 390) {
   await page.setContent(`<!doctype html><html lang="en" data-theme="kujo-light"><head><title>Component reference</title><link rel="stylesheet" href="/dist/sitekit.css"></head><body><main id="main"><h1>Component reference</h1>${html}</main></body></html>`);
   await page.addScriptTag({ url: '/dist/sitekit.js' });
   await page.evaluate(() => document.fonts.ready);
+  expect(await page.evaluate(() => document.fonts.check('16px "Departure Mono"'))).toBe(true);
 }
 for (const slug of fs.readdirSync('components').filter(s => fs.existsSync(`components/${s}/example.html`))) {
   test(`isolated ${slug}`, async ({ page }) => {
@@ -169,6 +170,30 @@ test('floating panels stay within viewport edges',async({page})=>{
 
 test('reference composition visual',async({page,browserName})=>{
   test.skip(browserName!=='chromium','Representative composition visual; behavior runs all engines.');
-  await page.setViewportSize({width:390,height:844});await page.goto('/examples/reference-compositions/index.html');await page.evaluate(()=>document.fonts.ready);
+  await page.setViewportSize({width:390,height:844});await page.goto('/examples/reference-compositions/index.html');await page.evaluate(async()=>{document.querySelector('main').style.fontFamily='Departure Mono';await document.fonts.ready;});
   await expect(page.locator('main')).toHaveScreenshot('reference-composition.png',{animations:'disabled',mask:[page.locator('video')],maxDiffPixelRatio:0.01});
+});
+
+for(const width of [320,390,768,1440])test(`navigation tables forms text stress ${width}`,async({page})=>{
+  for(const slug of ['header','footer','table','pricing-table','form','form-field']){
+    await fixture(page,example(slug),width);
+    await page.evaluate(()=>{document.documentElement.style.fontSize='200%';document.querySelectorAll('p,a,td,th').forEach(e=>{e.append(document.createTextNode(' Additional descriptive content for a narrow reusable layout.'));});});
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth),slug).toBeLessThanOrEqual(width+1);
+  }
+});
+test('bounded dates, disabled options and loading geometry',async({page})=>{
+  await page.clock.setFixedTime(new Date('2026-07-10T12:00:00'));
+  await fixture(page,example('date-picker')+example('combobox')+'<button class="sk-button" aria-busy="false"><span class="sk-button__label">Save changes</span><span class="sk-button__status">Saving…</span></button>');
+  await expect(page.locator('[data-date="2026-07-09"]')).not.toHaveAttribute('aria-current','date');await expect(page.locator('[data-date="2026-07-10"]')).toHaveAttribute('aria-current','date');
+  await page.locator('input[type=date]').evaluate(e=>{e.min='2026-07-09';e.max='2026-07-10';e.dispatchEvent(new Event('change',{bubbles:true}));});
+  await expect(page.locator('[data-date="2026-07-08"]')).toBeDisabled();await expect(page.locator('[data-date="2026-07-11"]')).toBeDisabled();await page.locator('[data-date="2026-07-09"]').focus();await page.keyboard.press('ArrowLeft');await expect(page.locator('[data-date="2026-07-09"]')).toBeFocused();
+  await page.locator('[role=option]').filter({hasText:'Card'}).evaluate(e=>e.setAttribute('aria-disabled','true'));await page.getByRole('combobox').fill('Ca');await page.keyboard.press('ArrowDown');await expect(page.getByRole('combobox')).not.toHaveAttribute('aria-activedescendant',/.+/);
+  const loading=page.locator('button[aria-busy]');const before=await loading.boundingBox();await loading.evaluate(e=>{e.setAttribute('aria-busy','true');e.disabled=true;});expect((await loading.boundingBox()).width).toBe(before.width);await expect(loading).toBeDisabled();
+});
+
+test('editor mixed selection state and relinking',async({page})=>{
+  await fixture(page,example('rich-text-editor'));
+  await page.locator('[contenteditable]').evaluate(e=>{e.innerHTML='<strong>Bold</strong> plain';e.focus();let r=document.createRange();r.selectNodeContents(e);getSelection().removeAllRanges();getSelection().addRange(r);});
+  await expect(page.getByRole('button',{name:'Bold',exact:true})).toHaveAttribute('aria-pressed','mixed');await page.getByRole('button',{name:'Bold',exact:true}).click();await expect(page.getByRole('button',{name:'Bold',exact:true})).toHaveAttribute('aria-pressed','true');
+  page.once('dialog',d=>d.accept('https://example.com/first'));await page.getByRole('button',{name:'Insert link'}).click();page.once('dialog',d=>d.accept('https://example.com/second'));await page.getByRole('button',{name:'Insert link'}).click();await expect(page.locator('[contenteditable] a')).toHaveCount(1);await expect(page.locator('[contenteditable] a')).toHaveAttribute('href','https://example.com/second');
 });

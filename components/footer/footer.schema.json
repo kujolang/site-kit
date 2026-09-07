@@ -125,7 +125,7 @@
         "html": "consumer-authored content; no attribute switch or runtime binding; see canonical example"
       },
       "stateOwner": "consumer",
-      "example": "SiteKit \u00b7 MIT"
+      "example": "SiteKit · MIT"
     }
   },
   "variantContracts": {

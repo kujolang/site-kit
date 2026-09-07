@@ -466,7 +466,18 @@
     function save() { var s = window.getSelection(); if (s.rangeCount && editor.contains(s.anchorNode) && editor.contains(s.focusNode)) selection = s.getRangeAt(0).cloneRange(); }
     function update() {
       save(); var s = window.getSelection(), node = s.anchorNode && (s.anchorNode.nodeType === 1 ? s.anchorNode : s.anchorNode.parentElement);
-      buttons.forEach(function (b, i) { b.setAttribute('aria-pressed', String(!!(node && editor.contains(node) && node.closest(i === 0 ? 'b,strong' : i === 1 ? 'i,em' : 'a')))); });
+      buttons.forEach(function (b, i) {
+        var selector = i === 0 ? 'b,strong' : i === 1 ? 'i,em' : 'a';
+        var states = [];
+        if (s.rangeCount && !s.isCollapsed && editor.contains(s.getRangeAt(0).commonAncestorContainer)) {
+          var range = s.getRangeAt(0), walker = document.createTreeWalker(editor, NodeFilter.SHOW_TEXT), text;
+          while ((text = walker.nextNode())) {
+            if (!text.length || !range.intersectsNode(text) || (range.startContainer === text && range.startOffset === text.length) || (range.endContainer === text && range.endOffset === 0)) continue;
+            states.push(!!text.parentElement.closest(selector));
+          }
+        } else states.push(!!(node && editor.contains(node) && node.closest(selector)));
+        b.setAttribute('aria-pressed', states.length && states.every(Boolean) ? 'true' : states.some(Boolean) ? 'mixed' : 'false');
+      });
     }
     buttons.forEach(function (b, i) { b.setAttribute('aria-label', names[i] === 'link' ? 'Insert link' : names[i][0].toUpperCase() + names[i].slice(1)); b.dataset.skFormat = names[i]; });
     listen(document, 'selectionchange', update);
@@ -479,8 +490,9 @@
       if (!s.rangeCount || s.isCollapsed || !editor.contains(s.getRangeAt(0).commonAncestorContainer)) { status(root).textContent = 'Select text to format.'; return; }
       var range = s.getRangeAt(0), wrapper = document.createElement({ bold: 'strong', italic: 'em', link: 'a' }[b.dataset.skFormat]);
       var ancestor = (range.startContainer.nodeType === 1 ? range.startContainer : range.startContainer.parentElement).closest(wrapper.tagName.toLowerCase());
-      if (ancestor && editor.contains(ancestor) && b.dataset.skFormat !== 'link') { var parent = ancestor.parentNode; while (ancestor.firstChild) parent.insertBefore(ancestor.firstChild, ancestor); ancestor.remove(); }
-      else { if (url) wrapper.href = safeLink(url); wrapper.append(range.extractContents()); range.insertNode(wrapper); range.selectNodeContents(wrapper); s.removeAllRanges(); s.addRange(range); }
+      if (ancestor && editor.contains(ancestor) && ancestor.contains(range.commonAncestorContainer) && b.dataset.skFormat === 'link') { ancestor.href = safeLink(url); }
+      else if (ancestor && editor.contains(ancestor) && ancestor.contains(range.commonAncestorContainer) && b.dataset.skFormat !== 'link') { var parent = ancestor.parentNode; while (ancestor.firstChild) parent.insertBefore(ancestor.firstChild, ancestor); ancestor.remove(); }
+      else { if (url) wrapper.href = safeLink(url); var fragment = range.extractContents(); if (url) fragment.querySelectorAll('a').forEach(function (a) { a.replaceWith(...a.childNodes); }); wrapper.append(fragment); range.insertNode(wrapper); range.selectNodeContents(wrapper); s.removeAllRanges(); s.addRange(range); }
       update(); editor.dispatchEvent(new Event('input', { bubbles: true }));
     });
     function insertText(text) {

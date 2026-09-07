@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "libraryVersion": "1.0.0",
   "sourceIdentity": "SHA-256 sourceHashes per component; commit is recorded in VERIFICATION.md",
-  "runtimeSourceHash": "60277dcad559b5e1d4ff8393c2e0206893a2e49d54bb5bf1cb096c9811e1670e",
+  "runtimeSourceHash": "d86dd4d2a727a27e670634b896ee080213557098f84603e28baa545fcc0a1a8d",
   "components": [
     {
       "slug": "accordion",
@@ -4940,7 +4940,7 @@
         "examples": "components/footer/examples.json"
       },
       "sourceHashes": {
-        "components/footer/footer.schema.json": "17c28769e2698b78e57e53f7493de453a43baa00b86bafebb26b9c676ca73b81",
+        "components/footer/footer.schema.json": "4c426371e551d75cb7b3422dbc909d668179321a4f2b22f402b5a577a1424d6e",
         "components/footer/footer.html": "cc0400f3fdbe2df3de5f5a3bc1154e2b3167343d34ad530a140d1b025c52aff5",
         "components/footer/footer.css": "f461e64886adb0fdc8601e94e4cc972f5dbb3ba05bde4df127236cee2faa852d",
         "components/footer/footer.md": "14e3238d6b8c8c79d323f1da8b53872580b57ded3bda4c01af26296cc8c2cabc",
@@ -5752,7 +5752,7 @@
       "sourceHashes": {
         "components/header/header.schema.json": "7700744bfe7c9a665502c04034dedee0b30d432b6a2e2f196a7a028fe4cca8ec",
         "components/header/header.html": "e03cc8e40cf1a9b18940b7a2d9b971767cc0693501371fdb7525849d8cf1bbe9",
-        "components/header/header.css": "66eb5d58dd531a41b5513e6a1d1975f3169bab6ed339d041fae4f2c07c788c73",
+        "components/header/header.css": "4ebb9bada31728044ccdb2fd0e5bdff8de6282b3347c67f8043bc0d652dabe3b",
         "components/header/header.md": "c388f30769e440c0951b31b357acff9d0405b489350f8d064653444fc9f9d3d0",
         "components/header/examples.json": "a4d45a65668edc990f5e509e5efb7b41a9fc58a8214baad4a78a20996a007d4b",
         "components/header/example.html": "a76cbe183f851e335aedd27fd1e09f311260974bd2f7396389f04b196b827125"

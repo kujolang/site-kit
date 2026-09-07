@@ -53,6 +53,13 @@
     background: var(--sk-surface-raised);
   }
 
+  .sk-header .sk-header__inner > *,
+  .sk-header nav > * {
+    min-inline-size: 0;
+    max-inline-size: 100%;
+    overflow-wrap: anywhere;
+  }
+
   .sk-header nav {
     display: flex;
     flex-wrap: wrap;
