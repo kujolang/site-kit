@@ -17,9 +17,12 @@
       "name": "Alert",
       "variants": [
         "neutral",
-        "compact"
+        "compact",
+        "danger",
+        "warning",
+        "success"
       ],
-      "examples": 1
+      "examples": 5
     },
     {
       "slug": "avatar",
@@ -28,7 +31,7 @@
         "initials",
         "compact"
       ],
-      "examples": 1
+      "examples": 2
     },
     {
       "slug": "badge",
@@ -40,7 +43,7 @@
         "danger",
         "outline"
       ],
-      "examples": 1
+      "examples": 4
     },
     {
       "slug": "bento-grid",
@@ -71,7 +74,7 @@
         "ghost",
         "danger"
       ],
-      "examples": 2
+      "examples": 4
     },
     {
       "slug": "card",
@@ -81,7 +84,7 @@
         "interactive",
         "dense"
       ],
-      "examples": 1
+      "examples": 3
     },
     {
       "slug": "carousel",
@@ -158,7 +161,7 @@
         "centered",
         "compact"
       ],
-      "examples": 1
+      "examples": 2
     },
     {
       "slug": "cta",
@@ -168,7 +171,7 @@
         "inline",
         "stacked"
       ],
-      "examples": 2
+      "examples": 1
     },
     {
       "slug": "date-input",
@@ -281,7 +284,7 @@
         "columns",
         "product"
       ],
-      "examples": 2
+      "examples": 1
     },
     {
       "slug": "form",
@@ -301,7 +304,7 @@
         "textarea",
         "checkbox"
       ],
-      "examples": 1
+      "examples": 4
     },
     {
       "slug": "generator-panel",
@@ -321,7 +324,7 @@
         "docs",
         "commerce"
       ],
-      "examples": 2
+      "examples": 1
     },
     {
       "slug": "heading",
@@ -340,7 +343,7 @@
         "centered",
         "technical"
       ],
-      "examples": 2
+      "examples": 3
     },
     {
       "slug": "icon",
@@ -353,7 +356,7 @@
         "inline",
         "external"
       ],
-      "examples": 4
+      "examples": 5
     },
     {
       "slug": "image",
@@ -429,7 +432,7 @@
         "modal",
         "split"
       ],
-      "examples": 1
+      "examples": 2
     },
     {
       "slug": "pagination",
@@ -467,7 +470,7 @@
         "annual",
         "comparison"
       ],
-      "examples": 2
+      "examples": 1
     },
     {
       "slug": "product-card",

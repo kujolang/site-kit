@@ -3,6 +3,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests/browser',
   testMatch: '**/*.spec.mjs',
+  snapshotPathTemplate: '{testDir}/{testFilePath}-snapshots/{arg}{ext}',
   globalSetup: './tests/browser/global-setup.mjs',
   fullyParallel: true,
   forbidOnly: true,

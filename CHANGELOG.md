@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Repair isolated hidden Drawer, inherited Icon color, Avatar/Progress semantics, keyboard code overflow, tooltip persistence, skip links and containment.
+- Ship bounded tabs, local combobox, single-date calendar, navigation disclosure, basic safe editor and promoted copy/stepper/segmented/dismissal/carousel behavior.
+- Add subtree lifecycle/disposal, instance ID prefixing, current source contracts, standalone examples, reference compositions and browser regressions.
+
+## Unreleased
+
 ## [1.0.0] - 2026-08-08
 
 - Declared the stable source-vendored contract for tokens, themes, schemas, semantic templates, generated CSS, layout recipes, documented accessibility and responsive behavior, and representative static consumers.

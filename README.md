@@ -111,3 +111,7 @@ Patch releases may fix defects without changing documented v1 contracts. Minor r
 ## Explicit non-goals
 
 SiteKit v1 does not promise npm publication, a hosted component service, universal compatibility with every framework, accessibility certification for arbitrary downstream compositions, visual parity in unsupported browsers, or automatic behavior for markup that omits documented hooks.
+
+## Current implementation contracts
+
+See [gap-closure handoff](docs/sitekit-gap-closure/README.md) for scoped enhancement, bounded widgets, compatibility aliases, current metadata and verification. [Reference compositions](examples/reference-compositions/index.html) demonstrate forms, native media, documentation navigation and local fixture search.

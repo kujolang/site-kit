@@ -33,7 +33,7 @@
     "lint": "node scripts/lint",
     "format": "node scripts/format-repository",
     "format:check": "node scripts/format-repository --check",
-    "validate": "npm run validate:components && npm run validate:contract && npm run validate:version && npm run validate:links",
+    "validate": "npm run validate:components && npm run validate:contract && npm run validate:version && npm run validate:links && npm run validate:metadata",
     "validate:components": "node scripts/validate-components",
     "validate:contract": "node tests/contract/release-contract.mjs",
     "validate:version": "node tests/contract/version-consistency.mjs",
@@ -48,7 +48,8 @@
     "release:archive": "node scripts/release-archive",
     "release:check": "node tests/release/package-content.mjs",
     "test:static": "npm run format:check && npm run build && npm run lint && npm run validate && npm run snapshot && npm run smoke && npm run release:check",
-    "test": "npm run test:static && npm run browser:test"
+    "test": "npm run test:static && npm run browser:test",
+    "validate:metadata": "node tests/contract/component-contracts.cjs"
   },
   "license": "MIT",
   "devDependencies": {

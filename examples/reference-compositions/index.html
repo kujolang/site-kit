@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-theme="kujo-light">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SiteKit reference compositions</title><link rel="stylesheet" href="../../dist/sitekit.css"><script src="../../dist/sitekit.js" defer></script><script src="reference.js" defer></script></head>
+<body>
+<a class="sk-skip-link" href="#main">Skip to reference content</a>
+<header class="sk-header"><div class="sk-header__inner"><a href="#main">SiteKit references</a><nav aria-label="Reference navigation"><a href="#forms" aria-current="page">Forms</a><a href="#media">Media</a></nav></div></header>
+<div class="sk-container sk-stack">
+<details class="sk-accordion"><summary>On this page</summary><nav aria-label="Table of contents"><ul><li><a href="#forms">Forms</a></li><li><a href="#media">Media</a></li><li><a href="#search">Local search</a></li><li><a href="#code">Code</a></li></ul></nav></details>
+<main id="main" tabindex="-1" class="sk-stack">
+<h1>Library reference compositions</h1><p>These are local examples for consumers. Submission, saved state and media sources belong to the application.</p>
+<section id="forms" class="sk-stack"><h2>Forms and loading</h2>
+<form class="sk-form" data-reference-form>
+<div class="sk-form-field"><label for="contact-email">Email (required)</label><input id="contact-email" name="email" type="email" required autocomplete="email" aria-describedby="email-help email-error"><p id="email-help">Use a work address. This reference sends no data.</p><p id="email-error" hidden>Enter a valid email address.</p></div>
+<div class="sk-form-field"><label for="project-name">Project name</label><input id="project-name" name="project" type="text" aria-describedby="project-success"><p id="project-success">You can change this name later.</p></div>
+<button class="sk-button" type="submit">Validate locally</button><p role="status" data-form-status></p>
+</form>
+<button class="sk-button" type="button" disabled aria-busy="true"><span class="sk-button__label">Save changes</span><span class="sk-button__status">Saving…</span></button><p role="status">Saving example: the application restores the button when its operation finishes.</p>
+<p>Keep the same button label box width during loading. Native disabled prevents duplicate activation. Use aria-busy for the operation and a separate status region.</p>
+</section>
+<section id="media" class="sk-stack"><h2>Native media</h2>
+<figure class="sk-image"><img src="assets/diagram.svg" srcset="assets/diagram.svg 640w" sizes="(max-width: 640px) 100vw, 640px" width="640" height="360" alt="Source files connect to the browser"><figcaption>Local original diagram, MIT under the repository license.</figcaption></figure>
+<figure class="sk-video"><video controls preload="metadata" width="640" height="360" poster="assets/diagram.svg"><source src="assets/diagram.webm" type="video/webm"><track kind="captions" src="assets/captions.vtt" srclang="en" label="English" default><p>Read the caption: source files connect to the browser.</p></video><figcaption>A two-second silent fixture with captions. Replace the sources and tracks with application-owned media.</figcaption></figure>
+</section>
+<section id="search"><h2>Local record search</h2><label for="reference-search">Search reference records</label><input class="sk-search-input" id="reference-search" type="search" aria-describedby="search-help"><p id="search-help">Type to filter; Tab reaches matching links. Arrow Down moves to the first result.</p><p role="status" data-search-status></p><ul data-search-results><li><a href="#forms">Forms and validation</a></li><li><a href="#media">Native image and video</a></li><li><a href="#code">Readable code</a></li></ul></section>
+<section id="code"><h2>Code and data</h2><figure class="sk-code-block"><figcaption><span>Source-vendored consumption</span><button type="button" data-copy-code>Copy</button></figcaption><pre><code>&lt;link rel="stylesheet" href="./dist/sitekit.css"&gt;
+&lt;script src="./dist/sitekit.js" defer&gt;&lt;/script&gt;</code></pre></figure><div class="sk-table" tabindex="0" role="region" aria-label="Reference ownership"><table><caption>Ownership</caption><thead><tr><th scope="col">Surface</th><th scope="col">Owner</th></tr></thead><tbody><tr><th scope="row">Submission</th><td>Application</td></tr><tr><th scope="row">Calendar</th><td>Optional SiteKit enhancement</td></tr></tbody></table></div></section>
+</main>
+</div>
+</body></html>

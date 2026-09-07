@@ -43,7 +43,7 @@ jobs:
       - name: Verify release package and clean consumer
         run: npm run release:check
       - name: Reject generated-output drift
-        run: git diff --exit-code -- css/generated DESIGN.md docs/components.md dist tests/visual/component-snapshot.json
+        run: npm run generated:check
       - name: Reject whitespace errors
         run: git diff --check
       - name: Upload browser evidence
