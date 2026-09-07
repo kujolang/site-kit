@@ -3,7 +3,6 @@
     "id": "recent-posts-default",
     "name": "Standalone",
     "props": {
-      "heading": "Build with SiteKit",
       "posts": [
         {
           "label": "Example",

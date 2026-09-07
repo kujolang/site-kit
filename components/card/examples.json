@@ -3,16 +3,8 @@
     "id": "card-default",
     "name": "Standalone",
     "props": {
-      "title": "Review changes",
       "body": "Semantic HTML, local assets, and reusable styles.",
-      "href": "Example",
-      "heading": "Build with SiteKit",
-      "actions": [
-        {
-          "label": "Example",
-          "content": "Text or trusted authored markup"
-        }
-      ]
+      "title": "Review changes"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -21,16 +13,8 @@
     "id": "card-interactive",
     "name": "interactive",
     "props": {
-      "title": "Review changes",
       "body": "Semantic HTML, local assets, and reusable styles.",
-      "href": "Example",
-      "heading": "Build with SiteKit",
-      "actions": [
-        {
-          "label": "Example",
-          "content": "Text or trusted authored markup"
-        }
-      ]
+      "title": "Project details"
     },
     "htmlFile": "example-interactive.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

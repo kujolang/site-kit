@@ -4,7 +4,7 @@
   "description": "A grouped media or content sequence with explicit navigation controls.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "cards|compact"
   },
   "variants": [
     "cards",
@@ -54,8 +54,8 @@
       "id": "carousel-default",
       "name": "Standalone",
       "props": {
-        "label": "Carousel",
-        "variant": "Example"
+        "label": "Prev",
+        "variant": "cards"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -83,13 +83,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "cards",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-carousel",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "cards"
     }
   },
   "variantContracts": {

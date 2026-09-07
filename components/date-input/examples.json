@@ -3,8 +3,8 @@
     "id": "date-input-default",
     "name": "Standalone",
     "props": {
-      "label": "Date Input",
-      "variant": "Example"
+      "label": "Publish date",
+      "variant": "default"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

@@ -4,7 +4,7 @@
   "description": "A semantic navigation region for primary or secondary links.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "primary|compact"
   },
   "variants": [
     "primary",
@@ -50,8 +50,8 @@
       "id": "navigation-default",
       "name": "Standalone",
       "props": {
-        "label": "Navigation",
-        "variant": "Example"
+        "label": "Primary",
+        "variant": "primary"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -79,13 +79,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "primary",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-navigation",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "primary"
     }
   },
   "variantContracts": {

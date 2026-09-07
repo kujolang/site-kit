@@ -3,8 +3,8 @@
     "id": "dropdown-menu-default",
     "name": "Standalone",
     "props": {
-      "label": "Dropdown Menu",
-      "variant": "Example"
+      "label": "Actions",
+      "variant": "default"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

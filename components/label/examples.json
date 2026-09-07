@@ -3,8 +3,8 @@
     "id": "label-default",
     "name": "Standalone",
     "props": {
-      "label": "Label",
-      "variant": "Example"
+      "label": "Project name",
+      "variant": "field"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

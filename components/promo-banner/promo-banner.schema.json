@@ -60,12 +60,7 @@
       "id": "promo-banner-default",
       "name": "Standalone",
       "props": {
-        "message": "Example",
-        "action": {
-          "label": "Example",
-          "content": "Text or trusted authored markup"
-        },
-        "dismissible": false
+        "message": "Example"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

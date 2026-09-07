@@ -4,7 +4,7 @@
   "description": "A native color control with an accessible label.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "default|compact"
   },
   "variants": [
     "default",
@@ -56,8 +56,8 @@
       "id": "color-picker-default",
       "name": "Standalone",
       "props": {
-        "label": "Color Picker",
-        "variant": "Example"
+        "label": "Accent color",
+        "variant": "default"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -85,13 +85,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "default",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-color-picker",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "default"
     }
   },
   "variantContracts": {

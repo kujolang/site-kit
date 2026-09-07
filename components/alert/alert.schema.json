@@ -4,7 +4,7 @@
   "description": "A status message for success, warning, error, or neutral feedback.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "neutral|compact|danger|warning|success"
   },
   "variants": [
     "neutral",
@@ -65,8 +65,7 @@
       "id": "alert-default",
       "name": "Standalone",
       "props": {
-        "label": "Alert",
-        "variant": "Example"
+        "variant": "warning"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -75,7 +74,6 @@
       "id": "alert-neutral",
       "name": "neutral",
       "props": {
-        "label": "Alert",
         "variant": "neutral"
       },
       "htmlFile": "example-neutral.html",
@@ -85,7 +83,6 @@
       "id": "alert-danger",
       "name": "danger",
       "props": {
-        "label": "Alert",
         "variant": "danger"
       },
       "htmlFile": "example-danger.html",
@@ -95,7 +92,6 @@
       "id": "alert-warning",
       "name": "warning",
       "props": {
-        "label": "Alert",
         "variant": "warning"
       },
       "htmlFile": "example-warning.html",
@@ -105,7 +101,6 @@
       "id": "alert-success",
       "name": "success",
       "props": {
-        "label": "Alert",
         "variant": "success"
       },
       "htmlFile": "example-success.html",
@@ -134,13 +129,19 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "neutral",
+        "compact",
+        "danger",
+        "warning",
+        "success"
+      ],
       "binding": {
         "selector": ".sk-alert",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "warning"
     }
   },
   "variantContracts": {

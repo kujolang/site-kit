@@ -4,7 +4,7 @@
   "description": "A single-line text input with a visible label.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "default|compact"
   },
   "variants": [
     "default",
@@ -54,8 +54,8 @@
       "id": "text-input-default",
       "name": "Standalone",
       "props": {
-        "label": "Text Input",
-        "variant": "Example"
+        "label": "Project",
+        "variant": "default"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -83,13 +83,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "default",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-text-input",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "default"
     }
   },
   "variantContracts": {

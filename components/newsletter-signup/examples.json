@@ -4,7 +4,6 @@
     "name": "Standalone",
     "props": {
       "heading": "Build with SiteKit",
-      "body": "Semantic HTML, local assets, and reusable styles.",
       "fields": [
         {
           "label": "Example",
@@ -13,8 +12,7 @@
           "name": "project",
           "type": "text"
         }
-      ],
-      "consent": "Example"
+      ]
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -24,7 +22,6 @@
     "name": "split",
     "props": {
       "heading": "Build with SiteKit",
-      "body": "Semantic HTML, local assets, and reusable styles.",
       "fields": [
         {
           "label": "Example",
@@ -33,8 +30,7 @@
           "name": "project",
           "type": "text"
         }
-      ],
-      "consent": "Example"
+      ]
     },
     "htmlFile": "example-split.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

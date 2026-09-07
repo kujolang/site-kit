@@ -3,7 +3,6 @@
     "id": "resource-links-default",
     "name": "Standalone",
     "props": {
-      "heading": "Build with SiteKit",
       "links": [
         {
           "label": "Example",

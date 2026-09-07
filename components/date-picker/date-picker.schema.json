@@ -4,7 +4,7 @@
   "description": "A compact date-picker surface with a visible calendar grid.",
   "props": {
     "label": "string optional",
-    "variant": "string optional",
+    "variant": "calendar|compact",
     "value": "string optional",
     "min": "string optional",
     "max": "string optional"
@@ -65,11 +65,8 @@
       "id": "date-picker-default",
       "name": "Standalone",
       "props": {
-        "label": "Date Picker",
-        "variant": "Example",
-        "value": "Example",
-        "min": "Example",
-        "max": "Example"
+        "label": "Date (YYYY-MM-DD)",
+        "variant": "calendar"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -97,13 +94,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "calendar",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-date-picker",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "calendar"
     },
     "value": {
       "type": "string",

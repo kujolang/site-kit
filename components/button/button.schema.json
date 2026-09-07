@@ -73,10 +73,7 @@
       "props": {
         "label": "Button",
         "variant": "primary",
-        "href": "Example",
-        "type": "button",
-        "disabled": false,
-        "loading": false
+        "type": "button"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -87,10 +84,7 @@
       "props": {
         "label": "Button",
         "variant": "secondary",
-        "href": "Example",
-        "type": "button",
-        "disabled": false,
-        "loading": false
+        "type": "button"
       },
       "htmlFile": "example-secondary.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -101,10 +95,7 @@
       "props": {
         "label": "Button",
         "variant": "ghost",
-        "href": "Example",
-        "type": "button",
-        "disabled": false,
-        "loading": false
+        "type": "button"
       },
       "htmlFile": "example-ghost.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -115,10 +106,7 @@
       "props": {
         "label": "Button",
         "variant": "danger",
-        "href": "Example",
-        "type": "button",
-        "disabled": false,
-        "loading": false
+        "type": "button"
       },
       "htmlFile": "example-danger.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

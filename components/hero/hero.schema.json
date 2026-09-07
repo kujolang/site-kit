@@ -63,15 +63,7 @@
       "id": "hero-default",
       "name": "Standalone",
       "props": {
-        "eyebrow": "Example",
-        "heading": "Build with SiteKit",
-        "body": "Semantic HTML, local assets, and reusable styles.",
-        "actions": [
-          {
-            "label": "Example",
-            "content": "Text or trusted authored markup"
-          }
-        ]
+        "heading": "Build with SiteKit"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -80,15 +72,7 @@
       "id": "hero-split",
       "name": "split",
       "props": {
-        "eyebrow": "Example",
-        "heading": "Build with SiteKit",
-        "body": "Semantic HTML, local assets, and reusable styles.",
-        "actions": [
-          {
-            "label": "Example",
-            "content": "Text or trusted authored markup"
-          }
-        ]
+        "heading": "Build with SiteKit"
       },
       "htmlFile": "example-split.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -97,15 +81,7 @@
       "id": "hero-centered",
       "name": "centered",
       "props": {
-        "eyebrow": "Example",
-        "heading": "Build with SiteKit",
-        "body": "Semantic HTML, local assets, and reusable styles.",
-        "actions": [
-          {
-            "label": "Example",
-            "content": "Text or trusted authored markup"
-          }
-        ]
+        "heading": "Build with SiteKit"
       },
       "htmlFile": "example-centered.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

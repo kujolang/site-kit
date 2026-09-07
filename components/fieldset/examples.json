@@ -3,8 +3,8 @@
     "id": "fieldset-default",
     "name": "Standalone",
     "props": {
-      "label": "Fieldset",
-      "variant": "Example"
+      "label": "Email",
+      "variant": "default"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

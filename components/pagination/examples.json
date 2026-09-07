@@ -4,7 +4,7 @@
     "name": "Standalone",
     "props": {
       "label": "Pagination",
-      "variant": "Example"
+      "variant": "default"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

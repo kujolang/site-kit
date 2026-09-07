@@ -3,7 +3,6 @@
     "id": "partners-strip-default",
     "name": "Standalone",
     "props": {
-      "heading": "Build with SiteKit",
       "partners": [
         {
           "label": "Example",

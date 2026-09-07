@@ -3,12 +3,8 @@
     "id": "icon-default",
     "name": "Standalone",
     "props": {
-      "label": "Icon",
-      "variant": "decorative",
-      "name": "project",
-      "size": "sm",
-      "source": "Example",
-      "boxed": false
+      "label": "Confirmed",
+      "variant": "meaningful"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -17,12 +13,7 @@
     "id": "icon-decorative",
     "name": "decorative",
     "props": {
-      "label": "Icon",
-      "variant": "decorative",
-      "name": "project",
-      "size": "sm",
-      "source": "Example",
-      "boxed": false
+      "variant": "decorative"
     },
     "htmlFile": "example-decorative.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -31,12 +22,8 @@
     "id": "icon-meaningful",
     "name": "meaningful",
     "props": {
-      "label": "Icon",
-      "variant": "meaningful",
-      "name": "project",
-      "size": "sm",
-      "source": "Example",
-      "boxed": false
+      "label": "Confirmed",
+      "variant": "meaningful"
     },
     "htmlFile": "example-meaningful.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -45,12 +32,8 @@
     "id": "icon-inline",
     "name": "inline",
     "props": {
-      "label": "Icon",
-      "variant": "inline",
-      "name": "project",
-      "size": "sm",
-      "source": "Example",
-      "boxed": false
+      "label": "Confirmed",
+      "variant": "inline"
     },
     "htmlFile": "example-inline.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -59,12 +42,8 @@
     "id": "icon-external",
     "name": "external",
     "props": {
-      "label": "Icon",
-      "variant": "external",
-      "name": "project",
-      "size": "sm",
-      "source": "Example",
-      "boxed": false
+      "label": "Confirmed",
+      "variant": "external"
     },
     "htmlFile": "example-external.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

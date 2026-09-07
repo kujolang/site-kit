@@ -3,15 +3,8 @@
     "id": "combobox-default",
     "name": "Standalone",
     "props": {
-      "label": "Combobox",
-      "variant": "Example",
-      "options": [
-        {
-          "label": "Example",
-          "content": "Text or trusted authored markup"
-        }
-      ],
-      "value": "Example"
+      "label": "Component",
+      "variant": "autocomplete"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

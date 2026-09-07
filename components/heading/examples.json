@@ -3,8 +3,7 @@
     "id": "heading-default",
     "name": "Standalone",
     "props": {
-      "label": "Heading",
-      "variant": "Example"
+      "variant": "section"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

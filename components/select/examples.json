@@ -3,8 +3,8 @@
     "id": "select-default",
     "name": "Standalone",
     "props": {
-      "label": "Select",
-      "variant": "Example"
+      "label": "Theme",
+      "variant": "default"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

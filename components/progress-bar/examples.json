@@ -3,10 +3,10 @@
     "id": "progress-bar-default",
     "name": "Standalone",
     "props": {
-      "label": "Progress Bar",
-      "variant": "Example",
-      "value": 1,
-      "max": 1
+      "label": "Build progress",
+      "variant": "determinate",
+      "value": 64,
+      "max": 100
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

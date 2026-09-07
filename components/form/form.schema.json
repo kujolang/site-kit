@@ -4,7 +4,7 @@
   "description": "A semantic form layout for labeled controls and actions.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "stacked|compact"
   },
   "variants": [
     "stacked",
@@ -54,8 +54,8 @@
       "id": "form-default",
       "name": "Standalone",
       "props": {
-        "label": "Form",
-        "variant": "Example"
+        "label": "Email",
+        "variant": "stacked"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -83,13 +83,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "stacked",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-form",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "stacked"
     }
   },
   "variantContracts": {

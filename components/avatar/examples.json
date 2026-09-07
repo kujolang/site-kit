@@ -3,8 +3,7 @@
     "id": "avatar-default",
     "name": "Standalone",
     "props": {
-      "label": "Avatar",
-      "variant": "Example"
+      "variant": "compact"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -13,7 +12,7 @@
     "id": "avatar-initials",
     "name": "initials",
     "props": {
-      "label": "Avatar",
+      "label": "Alex Morgan",
       "variant": "initials"
     },
     "htmlFile": "example-initials.html",

@@ -4,7 +4,7 @@
   "description": "An autocomplete text input paired with suggested options.",
   "props": {
     "label": "string optional",
-    "variant": "string optional",
+    "variant": "autocomplete|compact",
     "options": "array",
     "value": "string optional"
   },
@@ -58,15 +58,8 @@
       "id": "combobox-default",
       "name": "Standalone",
       "props": {
-        "label": "Combobox",
-        "variant": "Example",
-        "options": [
-          {
-            "label": "Example",
-            "content": "Text or trusted authored markup"
-          }
-        ],
-        "value": "Example"
+        "label": "Component",
+        "variant": "autocomplete"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -94,13 +87,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "autocomplete",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-combobox",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "autocomplete"
     },
     "options": {
       "type": "array",

@@ -4,9 +4,7 @@
     "name": "Standalone",
     "props": {
       "name": "project",
-      "price": "Example",
-      "imageAlt": "Example",
-      "availability": "Example"
+      "price": "Example"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

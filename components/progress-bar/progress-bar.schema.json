@@ -4,7 +4,7 @@
   "description": "A horizontal progress meter for determinate completion.",
   "props": {
     "label": "string optional",
-    "variant": "string optional",
+    "variant": "determinate|compact",
     "value": "number",
     "max": "number"
   },
@@ -50,10 +50,10 @@
       "id": "progress-bar-default",
       "name": "Standalone",
       "props": {
-        "label": "Progress Bar",
-        "variant": "Example",
-        "value": 1,
-        "max": 1
+        "label": "Build progress",
+        "variant": "determinate",
+        "value": 64,
+        "max": 100
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -81,13 +81,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "determinate",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-progress-bar",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "determinate"
     },
     "value": {
       "type": "number",

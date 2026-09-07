@@ -3,8 +3,8 @@
     "id": "popover-default",
     "name": "Standalone",
     "props": {
-      "label": "Popover",
-      "variant": "Example"
+      "label": "Details popover",
+      "variant": "default"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

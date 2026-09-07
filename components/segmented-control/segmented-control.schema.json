@@ -4,7 +4,7 @@
   "description": "A compact grouped control for switching modes.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "single-select|compact"
   },
   "variants": [
     "single-select",
@@ -54,8 +54,8 @@
       "id": "segmented-control-default",
       "name": "Standalone",
       "props": {
-        "label": "Segmented Control",
-        "variant": "Example"
+        "label": "View mode",
+        "variant": "single-select"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -83,13 +83,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "single-select",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-segmented-control",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "single-select"
     }
   },
   "variantContracts": {

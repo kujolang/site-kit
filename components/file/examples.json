@@ -3,8 +3,8 @@
     "id": "file-default",
     "name": "Standalone",
     "props": {
-      "label": "File",
-      "variant": "Example"
+      "label": "Remove",
+      "variant": "row"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

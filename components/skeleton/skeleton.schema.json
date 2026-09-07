@@ -4,7 +4,7 @@
   "description": "A placeholder surface that indicates loading content.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "text|compact"
   },
   "variants": [
     "text",
@@ -52,8 +52,7 @@
       "id": "skeleton-default",
       "name": "Standalone",
       "props": {
-        "label": "Skeleton",
-        "variant": "Example"
+        "variant": "text"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -81,13 +80,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "text",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-skeleton",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "text"
     }
   },
   "variantContracts": {

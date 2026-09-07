@@ -4,7 +4,7 @@
   "description": "A compact text label for form fields or metadata.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "field|compact"
   },
   "variants": [
     "field",
@@ -47,8 +47,8 @@
       "id": "label-default",
       "name": "Standalone",
       "props": {
-        "label": "Label",
-        "variant": "Example"
+        "label": "Project name",
+        "variant": "field"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -76,13 +76,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "field",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-label",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "field"
     }
   },
   "variantContracts": {

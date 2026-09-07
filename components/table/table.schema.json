@@ -4,7 +4,7 @@
   "description": "A semantic table for structured comparison or tabular data.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "default|compact"
   },
   "variants": [
     "default",
@@ -48,8 +48,7 @@
       "id": "table-default",
       "name": "Standalone",
       "props": {
-        "label": "Table",
-        "variant": "Example"
+        "variant": "default"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -77,13 +76,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "default",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-table",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "default"
     }
   },
   "variantContracts": {

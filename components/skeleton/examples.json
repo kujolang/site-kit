@@ -3,8 +3,7 @@
     "id": "skeleton-default",
     "name": "Standalone",
     "props": {
-      "label": "Skeleton",
-      "variant": "Example"
+      "variant": "text"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

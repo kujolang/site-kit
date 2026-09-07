@@ -15,27 +15,7 @@
           "content": "Native HTML and optional enhancements."
         }
       ],
-      "relationships": [
-        {
-          "label": "supplies",
-          "content": "Source supplies the browser.",
-          "from": "ecosystem-source",
-          "to": "ecosystem-browser"
-        }
-      ],
-      "label": "Source and browser ecosystem",
-      "items": [
-        {
-          "id": "ecosystem-source",
-          "label": "Source",
-          "content": "Tokens and templates."
-        },
-        {
-          "id": "ecosystem-browser",
-          "label": "Browser",
-          "content": "Native HTML and optional enhancements."
-        }
-      ]
+      "label": "Source and browser ecosystem"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

@@ -4,7 +4,7 @@
   "description": "A short contextual text hint for an adjacent control.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "default|compact"
   },
   "variants": [
     "default",
@@ -53,8 +53,8 @@
       "id": "tooltip-default",
       "name": "Standalone",
       "props": {
-        "label": "Tooltip",
-        "variant": "Example"
+        "label": "Info",
+        "variant": "default"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -91,13 +91,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "default",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-tooltip",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "default"
     }
   },
   "variantContracts": {

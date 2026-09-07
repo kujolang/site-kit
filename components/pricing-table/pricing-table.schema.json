@@ -63,9 +63,7 @@
             "content": "Text or trusted authored markup",
             "price": "$49"
           }
-        ],
-        "currency": "Example",
-        "cadence": "Example"
+        ]
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

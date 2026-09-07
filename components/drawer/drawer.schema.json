@@ -4,7 +4,7 @@
   "description": "A side panel for secondary navigation or contextual actions.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "right|compact"
   },
   "variants": [
     "right",
@@ -56,8 +56,8 @@
       "id": "drawer-default",
       "name": "Standalone",
       "props": {
-        "label": "Drawer",
-        "variant": "Example"
+        "label": "Close drawer",
+        "variant": "right"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -96,13 +96,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "right",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-drawer",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "right"
     }
   },
   "variantContracts": {

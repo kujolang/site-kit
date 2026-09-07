@@ -22,11 +22,11 @@
         "examples": "components/accordion/examples.json"
       },
       "sourceHashes": {
-        "components/accordion/accordion.schema.json": "ef75dad235c91f8f22454a8c4879dccbcf2589b7a0adaae48f0d75d0fce2fd46",
+        "components/accordion/accordion.schema.json": "70a91ce36e9d13147ab54705b2a3ab24e278d72c175e537e1875cd214c691fe9",
         "components/accordion/accordion.html": "d584ad53dd8a6aaa1e89a3bed323d2b6e1c75e741f689a890b4a2f265c47ff4a",
         "components/accordion/accordion.css": "9f739cf4b34efbf07a9c244310fa450f0f9bb758369dd8b3dabd932b7bc2a4fb",
         "components/accordion/accordion.md": "06783cc0eb53cd000e4e21a056a8aea319bb70bb4f29d3afd8b7ce9795580609",
-        "components/accordion/examples.json": "425f1200119acf4320430783669abfc21cb0cbcccfb87e450aaf832ad69d7bd0",
+        "components/accordion/examples.json": "454a4dcae73d6f3d068d08cae846907f9194d8c30dee754b08b8a6bba561d6c1",
         "components/accordion/example.html": "d584ad53dd8a6aaa1e89a3bed323d2b6e1c75e741f689a890b4a2f265c47ff4a"
       },
       "properties": {
@@ -46,13 +46,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "faq",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-accordion",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "faq"
         }
       },
       "variants": {
@@ -128,7 +131,7 @@
           "name": "Standalone",
           "props": {
             "label": "Accordion",
-            "variant": "Example"
+            "variant": "faq"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -155,11 +158,11 @@
         "examples": "components/alert/examples.json"
       },
       "sourceHashes": {
-        "components/alert/alert.schema.json": "dc89857715247d1922db0e4e99c0fd8d33cb5bba9b82e536b7e3905690b22cd8",
+        "components/alert/alert.schema.json": "1cd4c9d0bb25ec1dc9be32e618f0a86e6d4e5c9dabe548267f1fe39cca749ba1",
         "components/alert/alert.html": "e78a14a44d14897c4d5671cd0a85d24021adfcf5b4a472739ffc6bd0c5b346d7",
         "components/alert/alert.css": "eb0d0ff694cb3077a98c18dc073426443302bffb6863cb6f03ba999888c942f2",
         "components/alert/alert.md": "6c8faae5367a1749623a6dc637d5ad651e41261e3a2d454bb5275c36e3a003fd",
-        "components/alert/examples.json": "667e7848fce5ce094f086bfc8b715e6c2237ac4d0bf16c2a368b773f342433d4",
+        "components/alert/examples.json": "eee45582ed2736947f8236b2346ee2c59157d07d9727e18713db1469419cc0d7",
         "components/alert/example.html": "e78a14a44d14897c4d5671cd0a85d24021adfcf5b4a472739ffc6bd0c5b346d7",
         "components/alert/example-neutral.html": "b413aec49f3f61f6f42680c955b5f9ef00a9a78079bdfd840a355f4a599c21fd",
         "components/alert/example-danger.html": "d2b7da00869fc6c49655ec13fc1c1d532e6d7ebc932faad14dbb087018550185",
@@ -183,13 +186,19 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "neutral",
+            "compact",
+            "danger",
+            "warning",
+            "success"
+          ],
           "binding": {
             "selector": ".sk-alert",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "warning"
         }
       },
       "variants": {
@@ -299,8 +308,7 @@
           "id": "alert-default",
           "name": "Standalone",
           "props": {
-            "label": "Alert",
-            "variant": "Example"
+            "variant": "warning"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -311,7 +319,6 @@
           "id": "alert-neutral",
           "name": "neutral",
           "props": {
-            "label": "Alert",
             "variant": "neutral"
           },
           "htmlFile": "example-neutral.html",
@@ -323,7 +330,6 @@
           "id": "alert-danger",
           "name": "danger",
           "props": {
-            "label": "Alert",
             "variant": "danger"
           },
           "htmlFile": "example-danger.html",
@@ -335,7 +341,6 @@
           "id": "alert-warning",
           "name": "warning",
           "props": {
-            "label": "Alert",
             "variant": "warning"
           },
           "htmlFile": "example-warning.html",
@@ -347,7 +352,6 @@
           "id": "alert-success",
           "name": "success",
           "props": {
-            "label": "Alert",
             "variant": "success"
           },
           "htmlFile": "example-success.html",
@@ -375,11 +379,11 @@
         "examples": "components/avatar/examples.json"
       },
       "sourceHashes": {
-        "components/avatar/avatar.schema.json": "5d16a915a39840339025c4bca16a677b817b451aebdd00416d734bcb367e8b7d",
+        "components/avatar/avatar.schema.json": "7bc99f9475453ac16bacc17cf25b0b54e566fbfbb16b796b3bc9bacab8a8a054",
         "components/avatar/avatar.html": "b2c956a19e1dbff0ad16204026c855ba21afcb783a72b63e567f75bd2dccf7d5",
         "components/avatar/avatar.css": "c5f00bfe3cefce6f13d9326929ec2540fc0a937b688456e6d8cce1b5644b13a9",
         "components/avatar/avatar.md": "5221956be4a9150bc8fe7414f824191643e4949a9c165c3de17745374fee1d6d",
-        "components/avatar/examples.json": "366b385ca941bd5eb97b069747de34f8d6ba5e0c12906ec26cc27ac0f97f5b91",
+        "components/avatar/examples.json": "2bca09651010410bc2a8d96dc202531a76ed4a36568b20c6822662627c14f489",
         "components/avatar/example.html": "b2c956a19e1dbff0ad16204026c855ba21afcb783a72b63e567f75bd2dccf7d5",
         "components/avatar/example-initials.html": "44146f317527dcb76e50d4ce562804491bf8ccbc353e1bd62295c0a41e86971d"
       },
@@ -400,13 +404,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "initials",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-avatar",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "compact"
         }
       },
       "variants": {
@@ -480,8 +487,7 @@
           "id": "avatar-default",
           "name": "Standalone",
           "props": {
-            "label": "Avatar",
-            "variant": "Example"
+            "variant": "compact"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -492,7 +498,7 @@
           "id": "avatar-initials",
           "name": "initials",
           "props": {
-            "label": "Avatar",
+            "label": "Alex Morgan",
             "variant": "initials"
           },
           "htmlFile": "example-initials.html",
@@ -712,11 +718,11 @@
         "examples": "components/bento-grid/examples.json"
       },
       "sourceHashes": {
-        "components/bento-grid/bento-grid.schema.json": "dba666afa8bd9121a464d7b0eb390e0c290bde3b15c322ed0b2430280a571cd8",
+        "components/bento-grid/bento-grid.schema.json": "5519a23bfeb6885dd55c04f39d467727e011777f01e642c3bd4cd0733c9e5d4e",
         "components/bento-grid/bento-grid.html": "26bc6efe94d2f8127a01c587499f812f0a68e077a9f1ca418f89c37c8a87744b",
         "components/bento-grid/bento-grid.css": "2a1ce56e2deacc70933698334c7f99fecad181f67ce7670e4c5a59df6b5f6466",
         "components/bento-grid/bento-grid.md": "a79e6f2d1039e776c3ac36d31d1cebafd619fde0d955ebcd1c8aa1248cfe0f03",
-        "components/bento-grid/examples.json": "c0288f71339edc63234eecf59f6d732f79a435f26b9fbaf2d382fdeebb4ce506",
+        "components/bento-grid/examples.json": "d0c83ca42f696966f24174fba39d83d6d83a311f42b168ba0d59227859e86a07",
         "components/bento-grid/example.html": "26bc6efe94d2f8127a01c587499f812f0a68e077a9f1ca418f89c37c8a87744b"
       },
       "properties": {
@@ -873,14 +879,12 @@
           "id": "bento-grid-default",
           "name": "Standalone",
           "props": {
-            "heading": "Build with SiteKit",
             "items": [
               {
                 "label": "Example",
                 "content": "Text or trusted authored markup"
               }
-            ],
-            "emphasis": "Example"
+            ]
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -907,11 +911,11 @@
         "examples": "components/breadcrumbs/examples.json"
       },
       "sourceHashes": {
-        "components/breadcrumbs/breadcrumbs.schema.json": "7dd0b23a9a7fd91412c317e7070cf4af0a2fc4f41357ba6f77a424263393e220",
+        "components/breadcrumbs/breadcrumbs.schema.json": "7784737a012a3d560e468bd01853e2a94ce16b6cd3ccfbfdd3175980341c562c",
         "components/breadcrumbs/breadcrumbs.html": "086740fbcaa7044e372afa490dbdbceddf445378b3108616d2e03c071e007d8b",
         "components/breadcrumbs/breadcrumbs.css": "c278edacfd8fa76f7897dc26b1b3b7fac75169ad0b3735c06e693808d1c0dcda",
         "components/breadcrumbs/breadcrumbs.md": "8aba4c1c0a253c8532d965ca571ce3f2b05e2dbbc2a10ea8edff07190898ec54",
-        "components/breadcrumbs/examples.json": "0dd5d0d7faa3b1e2a64efa453ec4f9285547c158e99f0bf2ddd74462b0863e54",
+        "components/breadcrumbs/examples.json": "05e4de9471136253bab94e4311e76a9ada2104ff1db32a18fadfcb8f83c8f206",
         "components/breadcrumbs/example.html": "086740fbcaa7044e372afa490dbdbceddf445378b3108616d2e03c071e007d8b"
       },
       "properties": {
@@ -931,13 +935,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-breadcrumbs",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -1010,7 +1017,7 @@
           "name": "Standalone",
           "props": {
             "label": "Breadcrumbs",
-            "variant": "Example"
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -1037,11 +1044,11 @@
         "examples": "components/button/examples.json"
       },
       "sourceHashes": {
-        "components/button/button.schema.json": "ea53046ecfc399fdfcfb0b35856f8fa8343808af2b378d036363203cc8a527bb",
+        "components/button/button.schema.json": "c08dca31784c0daf77bdcb791dc1d350c5fe956c84dbd7549f775cf1eefb3a7b",
         "components/button/button.html": "f9d8a510de8bf46280e43469feb99714b4dd52bce7e68e88cf34ed8a7eee493c",
         "components/button/button.css": "59ddc2948906d458fec2f98c407ef16284768e30d1fc3a56cb0d45c6ebbc60cf",
         "components/button/button.md": "8173abaf5a0bd9e18003d620e1eddf9f8505cbdd0cea329a6f5f9016b01f5e0e",
-        "components/button/examples.json": "4f5dc68c4bf40c948beb3872f8482f8aaae96ea65deebd99b6bb818b7106e141",
+        "components/button/examples.json": "71de348ce21558d5ad80165f01183923c576f7a6503d28164679031250a26a23",
         "components/button/example.html": "72c245ed4eb9b6c177dd5e072bbbbb209050ae998e109496d83f7a8d4bfd34f1",
         "components/button/example-secondary.html": "a7b845835c6145b4f795a3b7cf1f5e8013cb9bb7a9140b3659ac68b707cf3039",
         "components/button/example-ghost.html": "2fe37705bf6844c474d5eb7d674a2246111c258689b7f587b50fc0fba21defcb",
@@ -1237,10 +1244,7 @@
           "props": {
             "label": "Button",
             "variant": "primary",
-            "href": "Example",
-            "type": "button",
-            "disabled": false,
-            "loading": false
+            "type": "button"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -1253,10 +1257,7 @@
           "props": {
             "label": "Button",
             "variant": "secondary",
-            "href": "Example",
-            "type": "button",
-            "disabled": false,
-            "loading": false
+            "type": "button"
           },
           "htmlFile": "example-secondary.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -1269,10 +1270,7 @@
           "props": {
             "label": "Button",
             "variant": "ghost",
-            "href": "Example",
-            "type": "button",
-            "disabled": false,
-            "loading": false
+            "type": "button"
           },
           "htmlFile": "example-ghost.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -1285,10 +1283,7 @@
           "props": {
             "label": "Button",
             "variant": "danger",
-            "href": "Example",
-            "type": "button",
-            "disabled": false,
-            "loading": false
+            "type": "button"
           },
           "htmlFile": "example-danger.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -1315,11 +1310,11 @@
         "examples": "components/card/examples.json"
       },
       "sourceHashes": {
-        "components/card/card.schema.json": "7760adfe750687a0e26920b2238d54b73b4f9563eb304e26ecc7ff8cfb232348",
+        "components/card/card.schema.json": "d89ada013ebb7130a079fcaa098678df1842118abc8196fb64f7e4c4a535c2f9",
         "components/card/card.html": "4c5d22a69598dae1e74b72b5d2f2799a418085469b3ef33f78e87d134d5c5f5e",
         "components/card/card.css": "c0dab49ca7199547b9f66dafc6c743cbcd0b2ddd2810742988a7351b42551719",
         "components/card/card.md": "4075c1cbccb2e6cc809cfafbd91d0537b14400b2ea100488b998b3151f8350d2",
-        "components/card/examples.json": "b502971b7de21669cd2803fba55bfcc2a996dc0bb9274dee112629bb44b6bd67",
+        "components/card/examples.json": "4276ed97cb6f4000c2215704174c6e54bc31b04e34a16598d4d156c69bdb3811",
         "components/card/example.html": "35036b38feab848aaf0dffda4d7e6d859c4e48f4b6050180288e86bd37417954",
         "components/card/example-interactive.html": "83be85fd64d21d3de330e982106a35e7d8871c83d20f82aaf50e685a47b85237",
         "components/card/example-body-only.html": "c248680d6ae65bb03887ada6b809631327cd57f9b1c48766f6d2d5a0c4db6281"
@@ -1489,16 +1484,8 @@
           "id": "card-default",
           "name": "Standalone",
           "props": {
-            "title": "Review changes",
             "body": "Semantic HTML, local assets, and reusable styles.",
-            "href": "Example",
-            "heading": "Build with SiteKit",
-            "actions": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup"
-              }
-            ]
+            "title": "Review changes"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -1509,16 +1496,8 @@
           "id": "card-interactive",
           "name": "interactive",
           "props": {
-            "title": "Review changes",
             "body": "Semantic HTML, local assets, and reusable styles.",
-            "href": "Example",
-            "heading": "Build with SiteKit",
-            "actions": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup"
-              }
-            ]
+            "title": "Project details"
           },
           "htmlFile": "example-interactive.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -1556,11 +1535,11 @@
         "examples": "components/carousel/examples.json"
       },
       "sourceHashes": {
-        "components/carousel/carousel.schema.json": "9ac17ae3afd4deeacafd9ceb62a46e50c9e635f5a5c0bfc47f2c2c1b7c9a6de0",
+        "components/carousel/carousel.schema.json": "df393ea1b5288df725ae88c5bbaca22f9bd8f4bff8d02274368cb1e77f63db22",
         "components/carousel/carousel.html": "de8c8182eaa2147ea5db1cbfbb2a45762b27b5085da77e9e16643587cec0dea7",
         "components/carousel/carousel.css": "c2fcdedbaa0e8f8594baab1151e28430637b0fb3319b4892f0b7823433529f47",
         "components/carousel/carousel.md": "84488091a230047794fc93bc70d3b568283b72e6bcddcbec772d4f6f165846e5",
-        "components/carousel/examples.json": "a7d00ffed29ae333eadc8857d96da7cc4433d13acb7214e6a22884200db97b3f",
+        "components/carousel/examples.json": "e11b19f9a419e5aa25c624a6b3c89e4fce8f9a5e72ce6de4e0b267f3af9360db",
         "components/carousel/example.html": "de8c8182eaa2147ea5db1cbfbb2a45762b27b5085da77e9e16643587cec0dea7"
       },
       "properties": {
@@ -1580,13 +1559,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "cards",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-carousel",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "cards"
         }
       },
       "variants": {
@@ -1675,8 +1657,8 @@
           "id": "carousel-default",
           "name": "Standalone",
           "props": {
-            "label": "Carousel",
-            "variant": "Example"
+            "label": "Prev",
+            "variant": "cards"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -1703,11 +1685,11 @@
         "examples": "components/checkbox/examples.json"
       },
       "sourceHashes": {
-        "components/checkbox/checkbox.schema.json": "c0d774f7a22c79fa3bb076860f69a361c99964be09efe1b9e66bfb0fed249cd6",
+        "components/checkbox/checkbox.schema.json": "f8f83e53ff68890585de292ddbea41e9274413d82c74f82c4b9b4256e8ce9624",
         "components/checkbox/checkbox.html": "71a393ea5b0749e9ed072a9ca4c9a3a134cee00ca356fe9ecb79096c08b66003",
         "components/checkbox/checkbox.css": "12558bc5c7db37ea7c98c9c98dce9f6371411d6c3b80cf569d94cf9d05219ec0",
         "components/checkbox/checkbox.md": "2a7f6ded6dc74dc1972e3a3ef2444fead55cc13fdfda194c6286a65bac756256",
-        "components/checkbox/examples.json": "34892efdcbd3a713a68d3a309066ef037e0e74e0b0effb2d22065bbcf57afd3d",
+        "components/checkbox/examples.json": "38930b164b04a1ae1c4d393fc2d5ae905214c9cd268f6ad49ed0046602db990a",
         "components/checkbox/example.html": "71a393ea5b0749e9ed072a9ca4c9a3a134cee00ca356fe9ecb79096c08b66003"
       },
       "properties": {
@@ -1727,13 +1709,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-checkbox",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -1817,8 +1802,8 @@
           "id": "checkbox-default",
           "name": "Standalone",
           "props": {
-            "label": "Checkbox",
-            "variant": "Example"
+            "label": "Receive release notes",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -1845,11 +1830,11 @@
         "examples": "components/checkout-summary/examples.json"
       },
       "sourceHashes": {
-        "components/checkout-summary/checkout-summary.schema.json": "127ac7f5b1574bb37cc34d18df70512606309f9c1634bf471b83188edf6505c0",
+        "components/checkout-summary/checkout-summary.schema.json": "2aa87c5feb7f2532449490862ae4b16a564b1265914b7d2a814f47a87a019866",
         "components/checkout-summary/checkout-summary.html": "1ac1f7ddc31f06010194caad1b756575900facfd9c283f65fa2fd0ef8c6df70c",
         "components/checkout-summary/checkout-summary.css": "7962cde2fa3dde30f315f147c5f67ac418d07541e1e52632a9bbb1a4582e62c2",
         "components/checkout-summary/checkout-summary.md": "18d1acb8f80b8682357a853b1155df813cb591106af750cbf796beca39846729",
-        "components/checkout-summary/examples.json": "7b827d8a73a2ef5aac7b19aa8d42d292557cd380db2ba6884dcef0dcfbee5a89",
+        "components/checkout-summary/examples.json": "f411f2b880cecd8d02ff7acd0b09c5976d315943588ead77dc99db5995f9e8c2",
         "components/checkout-summary/example.html": "1ac1f7ddc31f06010194caad1b756575900facfd9c283f65fa2fd0ef8c6df70c"
       },
       "properties": {
@@ -2037,8 +2022,6 @@
                 "content": "$29"
               }
             ],
-            "subtotal": "$128",
-            "total": "$136",
             "totals": {
               "subtotal": "$128",
               "tax": "$8",
@@ -2070,11 +2053,11 @@
         "examples": "components/code-block/examples.json"
       },
       "sourceHashes": {
-        "components/code-block/code-block.schema.json": "33cdf655c42867bd31d43edecb6c46c7c9d8ead3671d8f5373d5a1569f64a8e8",
+        "components/code-block/code-block.schema.json": "55ce87e0acd497d6c2326ee6ebe0463cdc8c741a943de220cbe48f732209ceaa",
         "components/code-block/code-block.html": "c9596cd2de5bf1be7183e45846834bb11cbdc72fff0ab68d4a1f81d70c01f428",
         "components/code-block/code-block.css": "dbfac6910457dfb8f0df12777fdc1ccc192fe53d0708482c5a25b4f365dea95c",
         "components/code-block/code-block.md": "8d110e0dbe6439d46a0998210f12657eb3ea663ca742f763ac4fdf7312e50cc0",
-        "components/code-block/examples.json": "2ca9e6f98ef9fb9b0a51131cb78f428111bff6a8f8efbe2c11aa42ce69de5d9e",
+        "components/code-block/examples.json": "1c7d37322e240031bb3d63e31f54205407c8e7afc1bc785879e3568f2ab6730b",
         "components/code-block/example.html": "66cbf1e9f24f443fc095f4d4b165f3c901ce66de9b73bb7f4b4bd246ad576d53"
       },
       "properties": {
@@ -2204,9 +2187,7 @@
           "id": "code-block-default",
           "name": "Standalone",
           "props": {
-            "language": "Example",
-            "code": "<button class=\"sk-button\" type=\"button\">Save</button>",
-            "caption": "HTML example"
+            "code": "<button class=\"sk-button\" type=\"button\">Save</button>"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -2233,11 +2214,11 @@
         "examples": "components/color-picker/examples.json"
       },
       "sourceHashes": {
-        "components/color-picker/color-picker.schema.json": "555781b2db14cde2703756c0db39c7784cef290e223db4ba844902f5cad12926",
+        "components/color-picker/color-picker.schema.json": "215f7048020f55a0c85d8bb6f38ec5e6e9f689d1311f8c8cc5981360c7bd1cd6",
         "components/color-picker/color-picker.html": "378f0b0674d5f2a5a833f01447d1c206d3f5bebf4bd904b7829b0a8081cf84e2",
         "components/color-picker/color-picker.css": "5603152d2dafb2d994ae465c02412b024de11f56d60924b790c348e065718910",
         "components/color-picker/color-picker.md": "cc91d5e3dea1d1a2a234658fea77b2bfc21c2c662a9079f1d25bc57c2e3d4a98",
-        "components/color-picker/examples.json": "26fa388c0b1184c8f0607b7d625b2d53d894fb0165f06019fb0709082340a56d",
+        "components/color-picker/examples.json": "f7ed7eac8cb479ae1b119904426702e5c63340eb56f7891b7243c58b2b008b71",
         "components/color-picker/example.html": "378f0b0674d5f2a5a833f01447d1c206d3f5bebf4bd904b7829b0a8081cf84e2"
       },
       "properties": {
@@ -2257,13 +2238,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-color-picker",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -2347,8 +2331,8 @@
           "id": "color-picker-default",
           "name": "Standalone",
           "props": {
-            "label": "Color Picker",
-            "variant": "Example"
+            "label": "Accent color",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -2375,11 +2359,11 @@
         "examples": "components/combobox/examples.json"
       },
       "sourceHashes": {
-        "components/combobox/combobox.schema.json": "1ba17790b1deb38e03c64a1b79277628be2b1af3673320949290f810b384188d",
+        "components/combobox/combobox.schema.json": "3c2715385a5791d4d6e1c74b8a6335a7cca812db24c1588c87860d37fc0bc696",
         "components/combobox/combobox.html": "68aad710164cfb13e988c6e48c566aac71a3bb826449e66c137dd7af5450113d",
         "components/combobox/combobox.css": "d4eca4db9248afd1b21dc8b07657d923b67dde375392341a6f83488d5cf48e01",
         "components/combobox/combobox.md": "5c22b28de5f1193c9a7d372dbf03f8716c38092059fb64875536e2857dc330cb",
-        "components/combobox/examples.json": "ebcf72e8097d5df84d4b8b5a86d6649d2c66353c01511d76c77e88b98abc5fac",
+        "components/combobox/examples.json": "cd0fdccd1f91cb5565e064fccaab4ebb9cb52573b3d5b8a54ee1a143812fe579",
         "components/combobox/example.html": "68aad710164cfb13e988c6e48c566aac71a3bb826449e66c137dd7af5450113d"
       },
       "properties": {
@@ -2399,13 +2383,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "autocomplete",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-combobox",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "autocomplete"
         },
         "options": {
           "type": "array",
@@ -2532,15 +2519,8 @@
           "id": "combobox-default",
           "name": "Standalone",
           "props": {
-            "label": "Combobox",
-            "variant": "Example",
-            "options": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup"
-              }
-            ],
-            "value": "Example"
+            "label": "Component",
+            "variant": "autocomplete"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -2719,11 +2699,11 @@
         "examples": "components/content-section/examples.json"
       },
       "sourceHashes": {
-        "components/content-section/content-section.schema.json": "28dc00a799b9d3f7a875d4b8c1276bf93dccf3941f103db56ac4a85140e0da16",
+        "components/content-section/content-section.schema.json": "1910aa301ff45000b7aa560e0c41da87720ac596bed6856f879b392be1ff781b",
         "components/content-section/content-section.html": "c97958ca66d4c69423b1e860b0aca2eca9a5ad3e931db5658fd2790779a4bfaa",
         "components/content-section/content-section.css": "c15670e9f935f8d99100af1888e2ae81e4fd54b7f9f992066fe759c33c12cf3b",
         "components/content-section/content-section.md": "d80828dd34abeb7c2488132674d0948560a24636b03ed022c0d2b35ff1d8207b",
-        "components/content-section/examples.json": "4551f144f8bdab00b4fd6871334aaaea3b7c1ce1bc781a8d70297bc5f776794c",
+        "components/content-section/examples.json": "4652f3c4b6fc64f47a814222ba54527b4cbee7af215b387728df56c4a7f81a86",
         "components/content-section/example.html": "c97958ca66d4c69423b1e860b0aca2eca9a5ad3e931db5658fd2790779a4bfaa",
         "components/content-section/example-media-left.html": "e8e72cc07c8e072adf972f487a32af83117209d602fa165b692cff182f68030a"
       },
@@ -2917,19 +2897,7 @@
           "id": "content-section-default",
           "name": "Standalone",
           "props": {
-            "eyebrow": "Example",
-            "heading": "Build with SiteKit",
-            "body": "Semantic HTML, local assets, and reusable styles.",
-            "media": {
-              "label": "Example",
-              "content": "Text or trusted authored markup"
-            },
-            "actions": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup"
-              }
-            ]
+            "heading": "Build with SiteKit"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -2940,19 +2908,7 @@
           "id": "content-section-media-left",
           "name": "media-left",
           "props": {
-            "eyebrow": "Example",
-            "heading": "Build with SiteKit",
-            "body": "Semantic HTML, local assets, and reusable styles.",
-            "media": {
-              "label": "Example",
-              "content": "Text or trusted authored markup"
-            },
-            "actions": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup"
-              }
-            ]
+            "heading": "Build with SiteKit"
           },
           "htmlFile": "example-media-left.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -2979,11 +2935,11 @@
         "examples": "components/cta/examples.json"
       },
       "sourceHashes": {
-        "components/cta/cta.schema.json": "b8bbe4f3178093501af94cd28047d11a7d1c5084767fbfc630849d77105b6cde",
+        "components/cta/cta.schema.json": "e52a67a30c59f8150be1c4081e63cb7f1f29dd2a6d36fa481bc37a6dd7612399",
         "components/cta/cta.html": "b2a9de2e5ba2bc0102d12ede84bcbc60523c513286f579891474894f40565b24",
         "components/cta/cta.css": "6a766b929be23a48799101f1ef7d55226bdb88e7494f0a6e3ec090872fd8c5b6",
         "components/cta/cta.md": "ebf3e1eb23273ba9bd6d336f5121c5657a3be225f436804e42c32fda4192eefb",
-        "components/cta/examples.json": "022edb0b5cc09477d67b3514da595baa508f8eb3b88cb366a91327b83fc1260b",
+        "components/cta/examples.json": "6e6313d8d4a00c17182b22af52275015db16621a0d3b85f1e45538ea8759e63c",
         "components/cta/example.html": "b19bda5856dd42ce506beb69fd3be1ba247b08113f228b81c315eb518510ce12"
       },
       "properties": {
@@ -3129,7 +3085,6 @@
           "name": "Standalone",
           "props": {
             "heading": "Build with SiteKit",
-            "body": "Semantic HTML, local assets, and reusable styles.",
             "actions": [
               {
                 "label": "Example",
@@ -3162,11 +3117,11 @@
         "examples": "components/date-input/examples.json"
       },
       "sourceHashes": {
-        "components/date-input/date-input.schema.json": "ef93d748c780826d08e3f329065801f6e658b748e177938294a0b574e821aff5",
+        "components/date-input/date-input.schema.json": "0c9a73ffdacc9dee80aa5524dfab17639b371ce4c48f6f4cbf45b0d8db2703f6",
         "components/date-input/date-input.html": "a3b54d8be0b107d6b26748d9f3cc52baa297a7f6e4925a8e61ed5b69da81da9a",
         "components/date-input/date-input.css": "9d5e9e25dcd68ec04ee4af59ebc21258a2fe9368ae23bcc3038481e9e5b8baf6",
         "components/date-input/date-input.md": "28589b0e4027bb16743b1b3e6e2153f003ee94e0e139e0552eee9246b9336efc",
-        "components/date-input/examples.json": "7d1ae1813c4f20fbf1a462449f5eaef6ce92547569b0cca71b1a032946705b57",
+        "components/date-input/examples.json": "ef5114bd4a4f8b05acf30579571f0f52c1910c908dda5f2c1e17ebc35d0ad8be",
         "components/date-input/example.html": "a3b54d8be0b107d6b26748d9f3cc52baa297a7f6e4925a8e61ed5b69da81da9a"
       },
       "properties": {
@@ -3186,13 +3141,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-date-input",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -3275,8 +3233,8 @@
           "id": "date-input-default",
           "name": "Standalone",
           "props": {
-            "label": "Date Input",
-            "variant": "Example"
+            "label": "Publish date",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -3303,11 +3261,11 @@
         "examples": "components/date-picker/examples.json"
       },
       "sourceHashes": {
-        "components/date-picker/date-picker.schema.json": "c819ccf496616e41492a438bf9c11ded7aa1f5539bd243c1782237c6be38135a",
+        "components/date-picker/date-picker.schema.json": "c0a2a1babefdadd5e22499b48ab72f2d4940a266681113e8d8edfa468c80c6b0",
         "components/date-picker/date-picker.html": "8de8bc18b96214149fad95305733e8977e9552aaaf3e21b9c26a4a560d3ee5e1",
         "components/date-picker/date-picker.css": "6a8cad3e5fac8a08881cdaa31cf3b10c5996bf79a2439efff9ea3aabd37871a4",
         "components/date-picker/date-picker.md": "57ec1e11d0fbfc3c61409437bf23690762d389c60d3d041c4655d49f4540c306",
-        "components/date-picker/examples.json": "8681aca01b67ddcd8fc95b20a033f63391e4f302903c0cfaffd089d5286a312d",
+        "components/date-picker/examples.json": "2b5582d5d3b8261aaa93e76d0d176861529063be1a8a594aae1a26e12a66b09d",
         "components/date-picker/example.html": "8de8bc18b96214149fad95305733e8977e9552aaaf3e21b9c26a4a560d3ee5e1"
       },
       "properties": {
@@ -3327,13 +3285,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "calendar",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-date-picker",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "calendar"
         },
         "value": {
           "type": "string",
@@ -3461,11 +3422,8 @@
           "id": "date-picker-default",
           "name": "Standalone",
           "props": {
-            "label": "Date Picker",
-            "variant": "Example",
-            "value": "Example",
-            "min": "Example",
-            "max": "Example"
+            "label": "Date (YYYY-MM-DD)",
+            "variant": "calendar"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -3492,11 +3450,11 @@
         "examples": "components/drawer/examples.json"
       },
       "sourceHashes": {
-        "components/drawer/drawer.schema.json": "05c1b3db0b81aae675773d9c30cf99ad3bb3d521a4c00b0556dd1e70b5cf4279",
+        "components/drawer/drawer.schema.json": "9cbca508ed8cbd14e2e2d3d15e3390efcd454f76c6a8f6744210da656a9e6734",
         "components/drawer/drawer.html": "93c6160111030b33cbfd6f8a79fae4f3e530d5c35ead6f198cf90b8d7a422dfa",
         "components/drawer/drawer.css": "706973f8172c6d4a17369a5ca2ab09a2c2a82d194645d7bdfb038c9cf6230009",
         "components/drawer/drawer.md": "82165c9df851aee8d5e3e226e6768cc59897c3714e205dbd68b1a9fc32d29b2e",
-        "components/drawer/examples.json": "6ec24be75aea7368d8f45b6feb6da00f939a862d1841f7d878721123327ef03e",
+        "components/drawer/examples.json": "1b7e7ed5fbdb72c3b5ed1e05f3cf617538e17c896911753c5ed57773704e8136",
         "components/drawer/example.html": "93c6160111030b33cbfd6f8a79fae4f3e530d5c35ead6f198cf90b8d7a422dfa"
       },
       "properties": {
@@ -3516,13 +3474,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "right",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-drawer",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "right"
         }
       },
       "variants": {
@@ -3613,8 +3574,8 @@
           "id": "drawer-default",
           "name": "Standalone",
           "props": {
-            "label": "Drawer",
-            "variant": "Example"
+            "label": "Close drawer",
+            "variant": "right"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -3641,11 +3602,11 @@
         "examples": "components/dropdown-menu/examples.json"
       },
       "sourceHashes": {
-        "components/dropdown-menu/dropdown-menu.schema.json": "d02c2827a046f02e95c3dbd38b9eb9aa4f9dbf282930ba11c9c267d7be4b5d5b",
+        "components/dropdown-menu/dropdown-menu.schema.json": "2f294f26f5023f76e8c3b52fa4958d6e81eb4a32ec90fbbfcb02454a585a1523",
         "components/dropdown-menu/dropdown-menu.html": "4c7e65a32b9929bc69c7b13a8e388c8e2c865bd140d0c704c9c429be8c9cad16",
         "components/dropdown-menu/dropdown-menu.css": "9aa503c98ce5fcc299a2b64c9e113dc31210b1217ac95fe38584f528d02ce291",
         "components/dropdown-menu/dropdown-menu.md": "b7c178a356d3ed6e53434df987b50a3576cb3599cdf21d0e4bcb73a95b0e42e3",
-        "components/dropdown-menu/examples.json": "76a3d817a54579ad1f9fae9575d3da5f46e9c81f488a6338cff32d0c91532e84",
+        "components/dropdown-menu/examples.json": "8b89ba9e3cfb6fa8df9951ae57d0b56b6940b325e37ce825a45d173623547276",
         "components/dropdown-menu/example.html": "4c7e65a32b9929bc69c7b13a8e388c8e2c865bd140d0c704c9c429be8c9cad16"
       },
       "properties": {
@@ -3665,13 +3626,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-dropdown-menu",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -3751,8 +3715,8 @@
           "id": "dropdown-menu-default",
           "name": "Standalone",
           "props": {
-            "label": "Dropdown Menu",
-            "variant": "Example"
+            "label": "Actions",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -3779,11 +3743,11 @@
         "examples": "components/ecosystem-map/examples.json"
       },
       "sourceHashes": {
-        "components/ecosystem-map/ecosystem-map.schema.json": "327447ce29227db9fb285d586de4e355979be570a6e4d7985d99e3c3f7fa5388",
+        "components/ecosystem-map/ecosystem-map.schema.json": "e025ca9b54442cede757085ab9a58eacb34e97b63b0ccda377597b3e7d7ecc12",
         "components/ecosystem-map/ecosystem-map.html": "e8027ce30f212c3e0325eb46637416a85d1d1ac653cd13a25ce94aaee450f359",
         "components/ecosystem-map/ecosystem-map.css": "c0f6b675e4725560769fb42a6e0799270268e8890f9a7cfcd29421a7f12591f8",
         "components/ecosystem-map/ecosystem-map.md": "8ab774fd1d39d25e8861f13b3bb29b7a05a289a8a08eb5e2084abc825a2f6142",
-        "components/ecosystem-map/examples.json": "9bda169d780269dbafcce2ffd025e4c4685d1ad8e6a29359ebd11c2e39c43beb",
+        "components/ecosystem-map/examples.json": "5f8592afb06c7fbb1d83d7624a5225819e3126977fd6b24b0f277ef7c5f18e25",
         "components/ecosystem-map/example.html": "a5f93ae51ba6ec0650ffcf272230697611b8b3cc9046a680043c4a919afb833c"
       },
       "properties": {
@@ -3979,27 +3943,7 @@
                 "content": "Native HTML and optional enhancements."
               }
             ],
-            "relationships": [
-              {
-                "label": "supplies",
-                "content": "Source supplies the browser.",
-                "from": "ecosystem-source",
-                "to": "ecosystem-browser"
-              }
-            ],
-            "label": "Source and browser ecosystem",
-            "items": [
-              {
-                "id": "ecosystem-source",
-                "label": "Source",
-                "content": "Tokens and templates."
-              },
-              {
-                "id": "ecosystem-browser",
-                "label": "Browser",
-                "content": "Native HTML and optional enhancements."
-              }
-            ]
+            "label": "Source and browser ecosystem"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -4026,11 +3970,11 @@
         "examples": "components/empty-state/examples.json"
       },
       "sourceHashes": {
-        "components/empty-state/empty-state.schema.json": "16187fa119b3bb99d681450e01aca1a07c278f97b0326d3c2ea0183786047ef6",
+        "components/empty-state/empty-state.schema.json": "ae8a17bfb6bacb8d28ed3f87b54c610863e321cb11de06aa7c55fc2b728310e1",
         "components/empty-state/empty-state.html": "affd277222980edd72222dc99653ebe47468ccbe17dc4fe377194b2e06acb07c",
         "components/empty-state/empty-state.css": "d379544b0e57c698c989ab47165835b2bce80d218f77fec50412613ad3bfe287",
         "components/empty-state/empty-state.md": "177f032bbbc176f911621ae85b922ab02f8a3850c3ac16008762907be0e35584",
-        "components/empty-state/examples.json": "436f5dd0dedda32c6890dfb314562d492f65255bcc91db33d902df42c8d18b73",
+        "components/empty-state/examples.json": "98c3e2dc0b1a5c1a6a6135ef597dd1f277246c923568bb174df0ade71cc9542a",
         "components/empty-state/example.html": "8742d4e96bd512cef439a7aab39035df7e3a748c1ce831e9426215307616622f"
       },
       "properties": {
@@ -4174,14 +4118,7 @@
           "id": "empty-state-default",
           "name": "Standalone",
           "props": {
-            "heading": "Build with SiteKit",
-            "body": "Semantic HTML, local assets, and reusable styles.",
-            "actions": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup"
-              }
-            ]
+            "heading": "Build with SiteKit"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -4208,11 +4145,11 @@
         "examples": "components/error-state/examples.json"
       },
       "sourceHashes": {
-        "components/error-state/error-state.schema.json": "b0ce2d249c3303936a423b2646b05a5c2ab81c25887ada520821fa1ceabc7ae3",
+        "components/error-state/error-state.schema.json": "39060a887e29395af5b5bd8da8e9f2130fa64d4bb6028998536a67a9c1bd2611",
         "components/error-state/error-state.html": "6567acb9a90e21ef96849e64a6f99ed2c04c649de04fa9d96239a5759d617471",
         "components/error-state/error-state.css": "fcdedee18c6b37e2e02e0f9b2a3612501acb8d7c50b4a2eaa24569b631c21089",
         "components/error-state/error-state.md": "8d78ea253ef4d2c6f9984914787952b89e4af1bbf785f1734c74805eab9c4061",
-        "components/error-state/examples.json": "c3bc86354f50a49fee7483ff955539f9485f4211e091b74a928d67a451cf8fda",
+        "components/error-state/examples.json": "333d31d01f3c27fb94e391bb0300dda200766655e5584237f9eb6ac3891ae3b8",
         "components/error-state/example.html": "88f5b2e618664c713830121b49d925700977273df20980df0305dbec5e1a4f91"
       },
       "properties": {
@@ -4360,14 +4297,7 @@
           "id": "error-state-default",
           "name": "Standalone",
           "props": {
-            "heading": "Build with SiteKit",
-            "body": "Semantic HTML, local assets, and reusable styles.",
-            "actions": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup"
-              }
-            ]
+            "heading": "Build with SiteKit"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -4394,11 +4324,11 @@
         "examples": "components/feature-grid/examples.json"
       },
       "sourceHashes": {
-        "components/feature-grid/feature-grid.schema.json": "a1dd9307fff3383facca85c4586910327e6f2be818bddc40ff54b9898379b751",
+        "components/feature-grid/feature-grid.schema.json": "57aeec6904b943d65c4aec8c01d0dd2f3f765f1a5282a66da2cdfec13201a30f",
         "components/feature-grid/feature-grid.html": "080d3174f82ed154d5ec8c2bb81008829567585390e872c5e4fc6f19b89faabd",
         "components/feature-grid/feature-grid.css": "7ab5682e1143dd6c377ec3a389b9b7683a0edd5e168424ec6fe06f636f0d8a47",
         "components/feature-grid/feature-grid.md": "e12d087ea34272b9f95032f2377ba8cfdce27e444182e1a62fb8f36b0207e220",
-        "components/feature-grid/examples.json": "9193f6e06f08e8cb08fa11b40ed7222f397e493421d2a7844670121e1aaa4f60",
+        "components/feature-grid/examples.json": "48f306042bfbbde738d93482732513e170d428d8a51fa2510384bf9af12c5c51",
         "components/feature-grid/example.html": "0be4bf0212bbd0241107f57af68a421a1f0a90c4149bc757d01c2f28cd973dea",
         "components/feature-grid/example-dense.html": "beb3d9cc617bfbe53dd1fb3586411c70ba5fe57b5db01ade20699816d139f6d5"
       },
@@ -4527,8 +4457,7 @@
                 "label": "Example",
                 "content": "Text or trusted authored markup"
               }
-            ],
-            "columns": "2"
+            ]
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -4544,8 +4473,7 @@
                 "label": "Example",
                 "content": "Text or trusted authored markup"
               }
-            ],
-            "columns": "2"
+            ]
           },
           "htmlFile": "example-dense.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -4572,11 +4500,11 @@
         "examples": "components/fieldset/examples.json"
       },
       "sourceHashes": {
-        "components/fieldset/fieldset.schema.json": "510f1d7f67ccab6638b7054c66c1f4ab6c81a30f58f6e448c228358479259476",
+        "components/fieldset/fieldset.schema.json": "d1ffc0985a67e9b501ed8926a72d5d31f05524d5097778dc622cce91239dc943",
         "components/fieldset/fieldset.html": "904beb44ed325177261e547308bb2efe55d37d058ac0850964218e69472c302c",
         "components/fieldset/fieldset.css": "b62bc429c5ae5b695068ab658f08b96e3bbdf2f83395ba535cd752a39a755198",
         "components/fieldset/fieldset.md": "baed0a9d97895e463ab3654ae0761784c820d559ea619d2c1f88dfd1311bc157",
-        "components/fieldset/examples.json": "2dfe797a94f3042f1a48c4d71246e94da5ab7807c0344f382bd95e5edda1195d",
+        "components/fieldset/examples.json": "f2a5cb5927560575f9486852a463ac3b4f28935c8f177662cefa94b9550c68a3",
         "components/fieldset/example.html": "904beb44ed325177261e547308bb2efe55d37d058ac0850964218e69472c302c"
       },
       "properties": {
@@ -4596,13 +4524,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-fieldset",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -4687,8 +4618,8 @@
           "id": "fieldset-default",
           "name": "Standalone",
           "props": {
-            "label": "Fieldset",
-            "variant": "Example"
+            "label": "Email",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -4715,11 +4646,11 @@
         "examples": "components/file/examples.json"
       },
       "sourceHashes": {
-        "components/file/file.schema.json": "24543038c4bf5b0fcd6a721ad08c3204963ea36393e41e23a084c0c914a0e1e2",
+        "components/file/file.schema.json": "f6605ef9a8a3a666cbd14d18be8cdc1ecc82eda1be3aa24990363f0452bf109f",
         "components/file/file.html": "5a006c0c0da5268672f577e9b1930cc70e4b6924d79c099ec4e5e6d3bb9dd5f0",
         "components/file/file.css": "d5219d11b21bb5d677baf1887a8117bfe2bc99fc75cd526f417a1108dc78ebc2",
         "components/file/file.md": "5f591d7fc9be3a767ae29269478984f794590bbb3a8f4a27e9d9013f8178f1b2",
-        "components/file/examples.json": "a724eb224f1f6054f0d47b879bafd26b05fd2ad6da1d0167d94ed5028ffc1f37",
+        "components/file/examples.json": "df1359d68f1268b393f1645727d174ae8dd8a56a7687d8523510409db6bbfc8c",
         "components/file/example.html": "5a006c0c0da5268672f577e9b1930cc70e4b6924d79c099ec4e5e6d3bb9dd5f0"
       },
       "properties": {
@@ -4739,13 +4670,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "row",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-file",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "row"
         }
       },
       "variants": {
@@ -4829,8 +4763,8 @@
           "id": "file-default",
           "name": "Standalone",
           "props": {
-            "label": "File",
-            "variant": "Example"
+            "label": "Remove",
+            "variant": "row"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -4857,11 +4791,11 @@
         "examples": "components/file-upload/examples.json"
       },
       "sourceHashes": {
-        "components/file-upload/file-upload.schema.json": "a8eeefc8d3f41580c14f3034a305afe14de8a21762cd4f420f26dc555bd1a39d",
+        "components/file-upload/file-upload.schema.json": "dd8a76d0486e58612b66d714207fa1024f3fcba2bb977be30e8b23ddf5494042",
         "components/file-upload/file-upload.html": "5fd45df6885d44578e2a73cce712d11fddc601ae6911be08a120d7461420432d",
         "components/file-upload/file-upload.css": "563ff36291ef8df83dde14468ad56acadfac37f156a1353a8582b589f6f147cd",
         "components/file-upload/file-upload.md": "879e0eed0003d792b2c6ad9c890c927dd85c5808e0377642b91aeab43fca143b",
-        "components/file-upload/examples.json": "eed315a905af7e2a32fb4ca38155c32005e334957b4d6c1a868fc3c2a531b95a",
+        "components/file-upload/examples.json": "b763d9495c9766b213523b71a2c750ad04ba46f6b66e70a5f017b3f3515362c1",
         "components/file-upload/example.html": "5fd45df6885d44578e2a73cce712d11fddc601ae6911be08a120d7461420432d"
       },
       "properties": {
@@ -4881,13 +4815,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "dropzone",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-file-upload",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "dropzone"
         }
       },
       "variants": {
@@ -4975,8 +4912,8 @@
           "id": "file-upload-default",
           "name": "Standalone",
           "props": {
-            "label": "File Upload",
-            "variant": "Example"
+            "label": "Upload files",
+            "variant": "dropzone"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -5003,11 +4940,11 @@
         "examples": "components/footer/examples.json"
       },
       "sourceHashes": {
-        "components/footer/footer.schema.json": "80d76ce5d15602cb1d36f67fc4c11f92d2689be86b23d69860d8103572ed1779",
+        "components/footer/footer.schema.json": "17c28769e2698b78e57e53f7493de453a43baa00b86bafebb26b9c676ca73b81",
         "components/footer/footer.html": "cc0400f3fdbe2df3de5f5a3bc1154e2b3167343d34ad530a140d1b025c52aff5",
         "components/footer/footer.css": "f461e64886adb0fdc8601e94e4cc972f5dbb3ba05bde4df127236cee2faa852d",
         "components/footer/footer.md": "14e3238d6b8c8c79d323f1da8b53872580b57ded3bda4c01af26296cc8c2cabc",
-        "components/footer/examples.json": "2846b2cd116bf3d3ee03ca284c39009db378979519bb9798f81c794b64d52cad",
+        "components/footer/examples.json": "363da9c0263603d648c6fb436e377f27215d79e71dd88a4796992e7dfbf8c1df",
         "components/footer/example.html": "e67180a3f0da6b57f5c139cfac0bf4da23e4eb4f1b00b3659e470965e421d3b6"
       },
       "properties": {
@@ -5151,15 +5088,7 @@
           "id": "footer-default",
           "name": "Standalone",
           "props": {
-            "brand": "SiteKit",
-            "links": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup",
-                "href": "#main"
-              }
-            ],
-            "legal": "SiteKit · MIT"
+            "brand": "SiteKit"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -5186,11 +5115,11 @@
         "examples": "components/form/examples.json"
       },
       "sourceHashes": {
-        "components/form/form.schema.json": "8707404c7bb5a1d3905201e189a5c732e0e180e439f55268e8de222ae1e4614f",
+        "components/form/form.schema.json": "0e838e65a878f52693396e7c01802676f846dae053001ec253672519dc00fb5f",
         "components/form/form.html": "e682ff38d3139fc2fada89a4275a42a5b942ad27cc696fe321de0f7f319970fc",
         "components/form/form.css": "150e5614e02a1dadcacd08d6ba8d60a5098755f21622dc3c61e9be7c84925204",
         "components/form/form.md": "bfd16c8e3e6b56df4d6be8f4dda363aaf7e9e6d757da810352e21d5f58600d4d",
-        "components/form/examples.json": "e4a832754b3a400929a2b4d3ac9a9646eeacd61fdf44a614e74b79f83bf2496d",
+        "components/form/examples.json": "17f3c7242757cc3c58bfecaffc34a331b3debdcb54a125538e3051b49d209d76",
         "components/form/example.html": "e682ff38d3139fc2fada89a4275a42a5b942ad27cc696fe321de0f7f319970fc"
       },
       "properties": {
@@ -5210,13 +5139,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "stacked",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-form",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "stacked"
         }
       },
       "variants": {
@@ -5302,8 +5234,8 @@
           "id": "form-default",
           "name": "Standalone",
           "props": {
-            "label": "Form",
-            "variant": "Example"
+            "label": "Email",
+            "variant": "stacked"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -5330,11 +5262,11 @@
         "examples": "components/form-field/examples.json"
       },
       "sourceHashes": {
-        "components/form-field/form-field.schema.json": "91034c1eb959209129546986b09cd243fd3b0082e59b65ddae879461af75f34c",
+        "components/form-field/form-field.schema.json": "cabb73e24f8351ecc1541f3211b50d70778fc51440d65c1bc834a40675d96578",
         "components/form-field/form-field.html": "0faf31a820d46de80fb1db8f3f6c6a141bb1f6d55bdb3f552f9cf5e74c752069",
         "components/form-field/form-field.css": "8220aaad1af8c986729eb1b4588c11aff93f9a1c56781a4b1ca5d77381ff8a81",
         "components/form-field/form-field.md": "3da4e50a4fc67e42a498c44fbead9cc0faa24f03b34d72ec9c51aab417c2390f",
-        "components/form-field/examples.json": "bccbc72a0f1399d13b3d345285542a1047e2350820dc19382534d1e29033e477",
+        "components/form-field/examples.json": "bb91a14fa8e1304faedeb9efde238d0e3f402e25985832cef3ec772bc3d397d7",
         "components/form-field/example.html": "be201ea5764c162c8a63fa97d11eff04abaf58827960ce8457f278a6873d63e8",
         "components/form-field/example-select.html": "ce86ecdad9540d90db9f1bb4b734265c81fe9ec65f6b6c8f72808a3d8f421654",
         "components/form-field/example-textarea.html": "0b4c122e5d60fa4bc8a9e19fda9848d03a207547f79fa957a1f851e043e16d33",
@@ -5553,15 +5485,8 @@
           "id": "form-field-default",
           "name": "Standalone",
           "props": {
-            "id": "demo-form-field",
             "label": "Form Field",
-            "type": "text",
-            "required": false,
-            "autocomplete": "Example",
-            "error": "Example",
-            "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
-            "help": "Use a short project name.",
-            "name": "project"
+            "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -5572,15 +5497,8 @@
           "id": "form-field-select",
           "name": "select",
           "props": {
-            "id": "demo-form-field",
-            "label": "Form Field",
-            "type": "text",
-            "required": false,
-            "autocomplete": "Example",
-            "error": "Example",
-            "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
-            "help": "Use a short project name.",
-            "name": "project"
+            "label": "Workspace",
+            "control": "<select id=\"field-select\" name=\"workspace\" aria-describedby=\"field-select-help\"><option>Personal</option><option>Team</option></select>"
           },
           "htmlFile": "example-select.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -5591,15 +5509,8 @@
           "id": "form-field-textarea",
           "name": "textarea",
           "props": {
-            "id": "demo-form-field",
-            "label": "Form Field",
-            "type": "text",
-            "required": false,
-            "autocomplete": "Example",
-            "error": "Example",
-            "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
-            "help": "Use a short project name.",
-            "name": "project"
+            "label": "Description",
+            "control": "<textarea id=\"field-textarea\" name=\"description\" aria-describedby=\"field-textarea-help\"></textarea>"
           },
           "htmlFile": "example-textarea.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -5610,15 +5521,8 @@
           "id": "form-field-checkbox",
           "name": "checkbox",
           "props": {
-            "id": "demo-form-field",
-            "label": "Form Field",
-            "type": "text",
-            "required": false,
-            "autocomplete": "Example",
-            "error": "Example",
-            "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
-            "help": "Use a short project name.",
-            "name": "project"
+            "label": "Receive updates",
+            "control": "<input id=\"field-checkbox\" name=\"updates\" type=\"checkbox\">"
           },
           "htmlFile": "example-checkbox.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -5645,11 +5549,11 @@
         "examples": "components/generator-panel/examples.json"
       },
       "sourceHashes": {
-        "components/generator-panel/generator-panel.schema.json": "d05993b1249dd80caf8005ad30c359dd912747108b4da187e02d0b7e9325c5ed",
+        "components/generator-panel/generator-panel.schema.json": "c62db330bda2a63b0123d77f1763f1908644baf177fcd55a3ba06b2f71ad7e40",
         "components/generator-panel/generator-panel.html": "3d1a366fc66a1b59ba9cbf5c4ebcb6ae084a120b4860de1ee3bbd532a84dbbde",
         "components/generator-panel/generator-panel.css": "7eebc5ce0123a670b9eaa269b144e955313d85d6962aeac6989d3fa13cf4d941",
         "components/generator-panel/generator-panel.md": "2a60a4dd107f220f97ae87657bee631fe552326b748c16153f30ba1b6784728e",
-        "components/generator-panel/examples.json": "1cea55f83dbd76bd86ba7df439e0732dabb59bfa2c593a06f2f559dce45f8220",
+        "components/generator-panel/examples.json": "bf5661e9db057a1bd35335a436d7b8ed0a166b2912f969facc6899a484da8596",
         "components/generator-panel/example.html": "3d1a366fc66a1b59ba9cbf5c4ebcb6ae084a120b4860de1ee3bbd532a84dbbde"
       },
       "properties": {
@@ -5819,11 +5723,7 @@
                 "name": "project",
                 "type": "text"
               }
-            ],
-            "preview": {
-              "label": "Example",
-              "content": "Text or trusted authored markup"
-            }
+            ]
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -5850,11 +5750,11 @@
         "examples": "components/header/examples.json"
       },
       "sourceHashes": {
-        "components/header/header.schema.json": "65f58552d31c6b6af55f6133d34d799dde48c342d41632c8be43ec04a8686f61",
+        "components/header/header.schema.json": "7700744bfe7c9a665502c04034dedee0b30d432b6a2e2f196a7a028fe4cca8ec",
         "components/header/header.html": "e03cc8e40cf1a9b18940b7a2d9b971767cc0693501371fdb7525849d8cf1bbe9",
         "components/header/header.css": "66eb5d58dd531a41b5513e6a1d1975f3169bab6ed339d041fae4f2c07c788c73",
         "components/header/header.md": "c388f30769e440c0951b31b357acff9d0405b489350f8d064653444fc9f9d3d0",
-        "components/header/examples.json": "b3f1f64666df16164171881dc0fad6d55798ebe55f99c2d678e56a9acd01a00e",
+        "components/header/examples.json": "a4d45a65668edc990f5e509e5efb7b41a9fc58a8214baad4a78a20996a007d4b",
         "components/header/example.html": "a76cbe183f851e335aedd27fd1e09f311260974bd2f7396389f04b196b827125"
       },
       "properties": {
@@ -6021,20 +5921,7 @@
           "id": "header-default",
           "name": "Standalone",
           "props": {
-            "brand": "SiteKit",
-            "nav": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup",
-                "href": "#main"
-              }
-            ],
-            "actions": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup"
-              }
-            ]
+            "brand": "SiteKit"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -6061,11 +5948,11 @@
         "examples": "components/heading/examples.json"
       },
       "sourceHashes": {
-        "components/heading/heading.schema.json": "8f8f15b5d72ea09c1a08837dc3357dc1d10fec6c3f929731b1f8ddaf2c132ccd",
+        "components/heading/heading.schema.json": "9fb730931dac0da954cfb76864d20905dc7ebbf93e83bab4712233281f665cea",
         "components/heading/heading.html": "5e25d8f6e5482a79ade2007793e53a90a3f84958109a1739d34ff2e3be70cbaa",
         "components/heading/heading.css": "459c977cd9b7d385ea3d41d5fc4265909b6699d7c255dba06633a96e174a089b",
         "components/heading/heading.md": "31e23eacd10d3fba78334b8c98542c0d4847ba81eb718e6fca84d9aafdd6ff8a",
-        "components/heading/examples.json": "1ab80e6d829c232d7113d8aa51af4f671b45f170dab8b9da20831dfe55ad9c04",
+        "components/heading/examples.json": "5471503727e1800630174a5d36b43b56e36db09146cbc1c55b69026a5416c339",
         "components/heading/example.html": "5e25d8f6e5482a79ade2007793e53a90a3f84958109a1739d34ff2e3be70cbaa"
       },
       "properties": {
@@ -6085,13 +5972,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "section",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-heading",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "section"
         }
       },
       "variants": {
@@ -6164,8 +6054,7 @@
           "id": "heading-default",
           "name": "Standalone",
           "props": {
-            "label": "Heading",
-            "variant": "Example"
+            "variant": "section"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -6192,11 +6081,11 @@
         "examples": "components/hero/examples.json"
       },
       "sourceHashes": {
-        "components/hero/hero.schema.json": "cf0fe2c86eb94e9548bdd2a00c29907a8bcf72f8108f8e84b5be3f3aa18d8558",
+        "components/hero/hero.schema.json": "147a5e2302b6def8c30c4970d5cf806fa63752f6fe6925be5677756650399f3b",
         "components/hero/hero.html": "024f4de0119bd2dade81a90556e3ff589352646e772b152d4734dad51c1f9e0d",
         "components/hero/hero.css": "7ceb966533290b004caa974068beed626439281193d213f2ce14faec43b440ea",
         "components/hero/hero.md": "d0c39d187b2538c84055a629a166166a2f8162375da8da66ebebb86b5220d22e",
-        "components/hero/examples.json": "20aa9ee41b274c92956041c7b8090b9e1642341280a2522413c4e25cafa0a7c6",
+        "components/hero/examples.json": "3feeff4f24e96ceb0da6c988334a25fa7fc4209e09a972062df27df4f9b8f17f",
         "components/hero/example.html": "e24f7136668c22c36654dbbc9365eaa354673714e3e65597e3c709d3db24e292",
         "components/hero/example-split.html": "d12fce1d8ea134791b9dbd5a535204ba23795b312904d0dd7941cde10cb9177e",
         "components/hero/example-centered.html": "84f794673c40a9919fb1e3a4435f34af29c59cf9099a7b50cbf26f395a8225a4"
@@ -6367,15 +6256,7 @@
           "id": "hero-default",
           "name": "Standalone",
           "props": {
-            "eyebrow": "Example",
-            "heading": "Build with SiteKit",
-            "body": "Semantic HTML, local assets, and reusable styles.",
-            "actions": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup"
-              }
-            ]
+            "heading": "Build with SiteKit"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -6386,15 +6267,7 @@
           "id": "hero-split",
           "name": "split",
           "props": {
-            "eyebrow": "Example",
-            "heading": "Build with SiteKit",
-            "body": "Semantic HTML, local assets, and reusable styles.",
-            "actions": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup"
-              }
-            ]
+            "heading": "Build with SiteKit"
           },
           "htmlFile": "example-split.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -6405,15 +6278,7 @@
           "id": "hero-centered",
           "name": "centered",
           "props": {
-            "eyebrow": "Example",
-            "heading": "Build with SiteKit",
-            "body": "Semantic HTML, local assets, and reusable styles.",
-            "actions": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup"
-              }
-            ]
+            "heading": "Build with SiteKit"
           },
           "htmlFile": "example-centered.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -6440,11 +6305,11 @@
         "examples": "components/icon/examples.json"
       },
       "sourceHashes": {
-        "components/icon/icon.schema.json": "7e90faae4299a1f8ee121ceed18b11360d686da511663a3d7679b3523c7bd0c4",
+        "components/icon/icon.schema.json": "30cd30d54f290174fcdead4f5f8c8d70b59440ffd77d23d3c7ebcaa40190291e",
         "components/icon/icon.html": "20c2de2a789668b6bdcea2661060a9b24b8830aabc310b924ef56061e1a75d46",
         "components/icon/icon.css": "a99157f3043371e4fbe2ff068f68d7170b5276d61832012341e83843c213baa5",
         "components/icon/icon.md": "b1ba35ea568a67256ccd4f55a24425e3ccf331c69d6dc1ed09ec2012173a2d73",
-        "components/icon/examples.json": "7f8704ce5b7feeaf7bd7fad8680a1bf55e85629537ff24585d058cc3d568a5ff",
+        "components/icon/examples.json": "f0460a374fe747bb5720ecb330fb6e6fc7cab995a6dd3e15ca4e90b0fc4fa986",
         "components/icon/example.html": "20c2de2a789668b6bdcea2661060a9b24b8830aabc310b924ef56061e1a75d46",
         "components/icon/example-decorative.html": "030be6c168948f4f6758fa148ab81ac28c2d5e015422dfb6c659dbe574d746ce",
         "components/icon/example-meaningful.html": "56aa8c3f2a2b1f4527f3f1b63ef710c525337fd686a08fff73ba50ee8355fecc",
@@ -6469,6 +6334,8 @@
           "required": false,
           "default": null,
           "allowedValues": [
+            "line",
+            "compact",
             "decorative",
             "meaningful",
             "inline",
@@ -6479,7 +6346,7 @@
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "decorative"
+          "example": "meaningful"
         },
         "name": {
           "type": "string",
@@ -6643,12 +6510,8 @@
           "id": "icon-default",
           "name": "Standalone",
           "props": {
-            "label": "Icon",
-            "variant": "decorative",
-            "name": "project",
-            "size": "sm",
-            "source": "Example",
-            "boxed": false
+            "label": "Confirmed",
+            "variant": "meaningful"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -6659,12 +6522,7 @@
           "id": "icon-decorative",
           "name": "decorative",
           "props": {
-            "label": "Icon",
-            "variant": "decorative",
-            "name": "project",
-            "size": "sm",
-            "source": "Example",
-            "boxed": false
+            "variant": "decorative"
           },
           "htmlFile": "example-decorative.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -6675,12 +6533,8 @@
           "id": "icon-meaningful",
           "name": "meaningful",
           "props": {
-            "label": "Icon",
-            "variant": "meaningful",
-            "name": "project",
-            "size": "sm",
-            "source": "Example",
-            "boxed": false
+            "label": "Confirmed",
+            "variant": "meaningful"
           },
           "htmlFile": "example-meaningful.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -6691,12 +6545,8 @@
           "id": "icon-inline",
           "name": "inline",
           "props": {
-            "label": "Icon",
-            "variant": "inline",
-            "name": "project",
-            "size": "sm",
-            "source": "Example",
-            "boxed": false
+            "label": "Confirmed",
+            "variant": "inline"
           },
           "htmlFile": "example-inline.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -6707,12 +6557,8 @@
           "id": "icon-external",
           "name": "external",
           "props": {
-            "label": "Icon",
-            "variant": "external",
-            "name": "project",
-            "size": "sm",
-            "source": "Example",
-            "boxed": false
+            "label": "Confirmed",
+            "variant": "external"
           },
           "htmlFile": "example-external.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -6739,11 +6585,11 @@
         "examples": "components/image/examples.json"
       },
       "sourceHashes": {
-        "components/image/image.schema.json": "52440d18651dbda20851b4192553b06d258ae8dfd8d183de614f9b09f8f2708d",
+        "components/image/image.schema.json": "f48cae5203812fb1d59dd85d259526fcdbda0ad4a0dbdad8017d14c744c5d11d",
         "components/image/image.html": "2efc38778e6d56e50d78b33d77a336208eb11cec6dc4a2e2581254bb39f6cbff",
         "components/image/image.css": "7c930900baa782b26a386c6648ce2a15a84a482e994d85ce8097ae657b6d73ca",
         "components/image/image.md": "7dc6bf8e2273b6dd6c85ab910e22d6f749f72eb9e2f53bf14da1fa72493a32cf",
-        "components/image/examples.json": "a9035db29d504bc96549ace4c1d726bc259ad5f0c8a958cbd34c1558c367d3a2",
+        "components/image/examples.json": "612ea42496ee5befdebe1362b62f8a272f1c58bc9dc8a54eb5c578aeec7593f7",
         "components/image/example.html": "2efc38778e6d56e50d78b33d77a336208eb11cec6dc4a2e2581254bb39f6cbff"
       },
       "properties": {
@@ -6763,13 +6609,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "figure",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-image",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "figure"
         }
       },
       "variants": {
@@ -6844,8 +6693,8 @@
           "id": "image-default",
           "name": "Standalone",
           "props": {
-            "label": "Image",
-            "variant": "Example"
+            "label": "SiteKit placeholder image",
+            "variant": "figure"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -6872,11 +6721,11 @@
         "examples": "components/label/examples.json"
       },
       "sourceHashes": {
-        "components/label/label.schema.json": "1fca8df74bf6653b4e9c04efb76b1614b20468a40ee9a0b4ac7fee644c049027",
+        "components/label/label.schema.json": "cf393236c753b3cd7c38705f3e03ab40c148de74ff3f0c4cddcedad8e504cd7a",
         "components/label/label.html": "7336e191a3317af8b2b0e29b4ab5585bd5ff92c1d75ed1c20d75d81058867668",
         "components/label/label.css": "e7b8c88141d613aaa09226e1c56731b0d36e87788f55fb7444c6b83bd6a6b8dd",
         "components/label/label.md": "b020d9aa158ca9a955f1a549a6b59ed5bc5debb5f9fae9d52ceac540aa037753",
-        "components/label/examples.json": "49a945e14606127818286f2d457418e978fa96e8f36ca97c88da3230418548d7",
+        "components/label/examples.json": "d23c98b59802d521395fcbf3c4e8539098c97a2207bc64ac9f408961ba6bfe0f",
         "components/label/example.html": "dc9b7cc01b01c7894e394525bd3b88cd54348f52803e98d29ed1c1f25fc3626f"
       },
       "properties": {
@@ -6896,13 +6745,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "field",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-label",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "field"
         }
       },
       "variants": {
@@ -6975,8 +6827,8 @@
           "id": "label-default",
           "name": "Standalone",
           "props": {
-            "label": "Label",
-            "variant": "Example"
+            "label": "Project name",
+            "variant": "field"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -7003,11 +6855,11 @@
         "examples": "components/link/examples.json"
       },
       "sourceHashes": {
-        "components/link/link.schema.json": "898be71168f9f268374ba49c0d7d5a87513dc454c0e6df1c8235b492d318c2aa",
+        "components/link/link.schema.json": "a1374c1fe5bdb15073653287cc4942aea382c5af5804bc1c6a8acee6f877dab8",
         "components/link/link.html": "94ec9f48a7bd14c10f48cebe994c08875806d50180662b30aa0fab2ccc679723",
         "components/link/link.css": "b7da9b89475931d91e86fdcfe4d2c4c594b197b88d823837963713909d8057a3",
         "components/link/link.md": "f28a9351da8aa798e0a742100c9164b879f1669b103a779764fca56361649517",
-        "components/link/examples.json": "938bf84cece67d2e6926a41d00110676adf19bebc976b3b5bca008c59c8082ca",
+        "components/link/examples.json": "ba3f94b110b19ea71a978fcae386f989f7b7c825717a677aa80bcb114a2280e8",
         "components/link/example.html": "94ec9f48a7bd14c10f48cebe994c08875806d50180662b30aa0fab2ccc679723"
       },
       "properties": {
@@ -7027,13 +6879,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "inline",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-link",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "inline"
         }
       },
       "variants": {
@@ -7103,8 +6958,8 @@
           "id": "link-default",
           "name": "Standalone",
           "props": {
-            "label": "Link",
-            "variant": "Example"
+            "label": "Read component docs",
+            "variant": "inline"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -7131,11 +6986,11 @@
         "examples": "components/list/examples.json"
       },
       "sourceHashes": {
-        "components/list/list.schema.json": "5691d87ddce02b4014cf2dbb543ce61534cbdcf54e111416b42131f53874299b",
+        "components/list/list.schema.json": "f2042c73bad6e2a2faff3d78075e8a37a6112e1d61d98be14def8cd68643ca3d",
         "components/list/list.html": "656fb5179145ff9599d697c07b751f66826c8ec6b0bbf4871f12c9c3e03f89eb",
         "components/list/list.css": "5bce831ab7cfb41cb2bbc3a8206e94175a51c31489eb4f6424ae4ad5335c7ad7",
         "components/list/list.md": "6377a237f220d91e1939b07c3262816669c60e8fb4ec367526940d47975e7c38",
-        "components/list/examples.json": "3846e5e5b4996cf12348b1bc2fd40d380c43d10b9b97d00c0d0511ff47df82ee",
+        "components/list/examples.json": "0c5790e533d0389f69b2d4ecef9fb575fd1ce1cdc2160baeef407535e7da8e19",
         "components/list/example.html": "656fb5179145ff9599d697c07b751f66826c8ec6b0bbf4871f12c9c3e03f89eb"
       },
       "properties": {
@@ -7155,13 +7010,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "unordered",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-list",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "unordered"
         }
       },
       "variants": {
@@ -7232,8 +7090,7 @@
           "id": "list-default",
           "name": "Standalone",
           "props": {
-            "label": "List",
-            "variant": "Example"
+            "variant": "unordered"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -7260,11 +7117,11 @@
         "examples": "components/metadata-panel/examples.json"
       },
       "sourceHashes": {
-        "components/metadata-panel/metadata-panel.schema.json": "7b49afb1a70ab616d75561e978c5f5a68a8d8154b19c54d5489ac04ae282863d",
+        "components/metadata-panel/metadata-panel.schema.json": "4b81b2e4767cbf6b07d22ca6f2f750c8df24bc833e70f64597bf77d26017d24f",
         "components/metadata-panel/metadata-panel.html": "57bdf21105ebc9cf3281cf99dc075111bf671c361f42ace1fcddb0392bf58a88",
         "components/metadata-panel/metadata-panel.css": "6969c5f2636c68db2cef504d14cf08922abaf816b1c1a08ddb71aa18cb21383d",
         "components/metadata-panel/metadata-panel.md": "17db01a06622d3a343ba7dffb3bd0605ad59dae5f9e02e027211cc644f5e229b",
-        "components/metadata-panel/examples.json": "3385cd05f46833dbfd60ef57359dc90ea3a520d59742c429b207069426d9d9f0",
+        "components/metadata-panel/examples.json": "5cb0313823b26224a2e15d506413dabd421909ac7228263bdc2513575ed6fbf7",
         "components/metadata-panel/example.html": "14b4c6a9bf640342dff99dc61fda4ee0fbd4fd4268c6f6e32ec89a847a6d21f7"
       },
       "properties": {
@@ -7385,13 +7242,13 @@
           "id": "metadata-panel-default",
           "name": "Standalone",
           "props": {
-            "label": "Metadata Panel",
             "rows": [
               {
                 "label": "Example",
                 "content": "Text or trusted authored markup"
               }
-            ]
+            ],
+            "label": "Metadata Panel"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -7418,11 +7275,11 @@
         "examples": "components/modal/examples.json"
       },
       "sourceHashes": {
-        "components/modal/modal.schema.json": "554b8b08d9020f9a031d8045c36ebdb5b75d75258c96fc719d72908595eef7ef",
+        "components/modal/modal.schema.json": "535ecb9810e9aa4fe38e681e8dab834462c71c6b117ab110aae4ce2385701d5a",
         "components/modal/modal.html": "ad0c219b409690029d1408a231f4a635aa2f2f34448480f778ea2664b042630b",
         "components/modal/modal.css": "39c9495d2bd290b55b672b949694881368248ee906bb928db5ec68d59c2d6290",
         "components/modal/modal.md": "f69cd4a9ab86d01f757112e5051fb1a4b32e3bcf7af179f35c6f54741909b22e",
-        "components/modal/examples.json": "ea214a281798f2e0612adab6e2cd74c3b8db04efee86d535167d29ba32eae7bd",
+        "components/modal/examples.json": "ceb160ee7233de787648d7dde0359e1400eb7619c44bd4f6f0665e84c58037e8",
         "components/modal/example.html": "dc469e2fa80740e27a10bf7de5ac090aa707159df17fe394f9b198a440323564"
       },
       "properties": {
@@ -7565,10 +7422,7 @@
           "id": "modal-default",
           "name": "Standalone",
           "props": {
-            "id": "demo-modal",
-            "title": "Review changes",
-            "open": false,
-            "dismissible": false
+            "title": "Review changes"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -7595,11 +7449,11 @@
         "examples": "components/navigation/examples.json"
       },
       "sourceHashes": {
-        "components/navigation/navigation.schema.json": "4b8c2b009b4c4cd44933fc309d4f4681a54d2fbb7b304078e573a2a27aae0848",
+        "components/navigation/navigation.schema.json": "a24dcdd38c000e7345a08eb266b2342530ceab7e3c0d2922d25b5c582a215580",
         "components/navigation/navigation.html": "22f509b49927569a778ec2ccc8f175ee60376ae12994c420d6e0e3c931bc7e87",
         "components/navigation/navigation.css": "27f283e256911de844fba1617547c4a74cf5213cafe5a0c860c8c11c8861ee8c",
         "components/navigation/navigation.md": "feec41ea56fc549315f90629a0c0791eb2f527d9d0a97436f103a5815a802a32",
-        "components/navigation/examples.json": "fb3297b2e5f39e7cbf2d294e5422f3b04062f284ab8cc86ae02384003a54b714",
+        "components/navigation/examples.json": "272854d424f6fe1263980d40cd6d84f986174ad715574fea4e9d8cbc617db603",
         "components/navigation/example.html": "22f509b49927569a778ec2ccc8f175ee60376ae12994c420d6e0e3c931bc7e87"
       },
       "properties": {
@@ -7619,13 +7473,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "primary",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-navigation",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "primary"
         }
       },
       "variants": {
@@ -7699,8 +7556,8 @@
           "id": "navigation-default",
           "name": "Standalone",
           "props": {
-            "label": "Navigation",
-            "variant": "Example"
+            "label": "Primary",
+            "variant": "primary"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -7727,11 +7584,11 @@
         "examples": "components/newsletter-signup/examples.json"
       },
       "sourceHashes": {
-        "components/newsletter-signup/newsletter-signup.schema.json": "15b36b25d2651aa3e8a671865fe202282c31e11eb47f9254e8bc0745ed790a5a",
+        "components/newsletter-signup/newsletter-signup.schema.json": "84c77663f5dbc7d707a90afacfa87320ecb067b0005f9ba250b2ab8862f54f7f",
         "components/newsletter-signup/newsletter-signup.html": "3c9b3e78f82722bd99605b3fb5f94267897d63aec539c5c8c8dac29779a98a7b",
         "components/newsletter-signup/newsletter-signup.css": "86da4c74976d70e68b5fb68639ff21c985528c7c26fb197ad7a21687797b50b9",
         "components/newsletter-signup/newsletter-signup.md": "49df41aeed3f0f3d504fe715155ce1f3c1ad20ea488755eb4c17d3b6c6b87692",
-        "components/newsletter-signup/examples.json": "d18e1e6bfdf274e4e16a7d0bf9f5b831e011ff816d2173db35815802171ab552",
+        "components/newsletter-signup/examples.json": "ff7f21b1b80ff6fd0dc537ae88f4dab4f290818d3ad0beaac9ab4da680c59373",
         "components/newsletter-signup/example.html": "3c9b3e78f82722bd99605b3fb5f94267897d63aec539c5c8c8dac29779a98a7b",
         "components/newsletter-signup/example-split.html": "bee1c7d26d5949b338a3193b6ec270860fa7afab8fa2ad6ba5e66daeef6a94e9"
       },
@@ -7919,7 +7776,6 @@
           "name": "Standalone",
           "props": {
             "heading": "Build with SiteKit",
-            "body": "Semantic HTML, local assets, and reusable styles.",
             "fields": [
               {
                 "label": "Example",
@@ -7928,8 +7784,7 @@
                 "name": "project",
                 "type": "text"
               }
-            ],
-            "consent": "Example"
+            ]
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -7941,7 +7796,6 @@
           "name": "split",
           "props": {
             "heading": "Build with SiteKit",
-            "body": "Semantic HTML, local assets, and reusable styles.",
             "fields": [
               {
                 "label": "Example",
@@ -7950,8 +7804,7 @@
                 "name": "project",
                 "type": "text"
               }
-            ],
-            "consent": "Example"
+            ]
           },
           "htmlFile": "example-split.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -7978,11 +7831,11 @@
         "examples": "components/pagination/examples.json"
       },
       "sourceHashes": {
-        "components/pagination/pagination.schema.json": "04088967310417c7fa4f8d1aa5faf58a5a8a8a2e69c74ca3811bf7fc14a513ad",
+        "components/pagination/pagination.schema.json": "156e4bf4b2b30cddb04ca9f62619f6ed86bff3376b8844b2266928937609a505",
         "components/pagination/pagination.html": "39cfdd3c1c5b958610bc66dc4420f5bf29cbd4bc2f224ed16071bf2884e53fed",
         "components/pagination/pagination.css": "5f77d8bb4b5fbffa04be67e787840094663026ab461c48e4550bc6c389a8499e",
         "components/pagination/pagination.md": "30e16a8ce7c94bb828ef71f700bfa8ed93df0ef7f06a4ce3f31ff527e6c27d0f",
-        "components/pagination/examples.json": "d070727b461b7a09f899767a2258016f2bdf5917dbf8a4bd12286c73d6c577f1",
+        "components/pagination/examples.json": "990d5cd4a445b9baf594ddbff82dedc24678d02874a3d2a827af9188d7014cdd",
         "components/pagination/example.html": "39cfdd3c1c5b958610bc66dc4420f5bf29cbd4bc2f224ed16071bf2884e53fed"
       },
       "properties": {
@@ -8002,13 +7855,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-pagination",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -8086,7 +7942,7 @@
           "name": "Standalone",
           "props": {
             "label": "Pagination",
-            "variant": "Example"
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -8113,11 +7969,11 @@
         "examples": "components/partners-strip/examples.json"
       },
       "sourceHashes": {
-        "components/partners-strip/partners-strip.schema.json": "5a5da7cf11742a978b525e1fee49ce9075dc9d9c4b2f64227fcbaecf25555313",
+        "components/partners-strip/partners-strip.schema.json": "595ccabea3d3b7987b85ed06f356f59e7e6d91f776a2939a81c29afd2f4cb650",
         "components/partners-strip/partners-strip.html": "5db7866c5bf49a8868114eaefa0d1c67b7ad5aa5c36b1bf63a97f7bdd299ded1",
         "components/partners-strip/partners-strip.css": "faf58095f490427dbe14beebc0c6a0ec323c28dddf5e9e5cd94e865e774e9933",
         "components/partners-strip/partners-strip.md": "e9632f3301fa4771d699bcbdc0b8a137834051864e6d5cdf47e95fdb63102a0c",
-        "components/partners-strip/examples.json": "e43d5e3ceea699891364a4a02996bbd9a73db4e0fda0002975b10b24663bcfab",
+        "components/partners-strip/examples.json": "6aba0fb8ed9054e249a26896a975b26b75815c75ec3b4de0bd10a5744d4e6065",
         "components/partners-strip/example.html": "5db7866c5bf49a8868114eaefa0d1c67b7ad5aa5c36b1bf63a97f7bdd299ded1"
       },
       "properties": {
@@ -8236,7 +8092,6 @@
           "id": "partners-strip-default",
           "name": "Standalone",
           "props": {
-            "heading": "Build with SiteKit",
             "partners": [
               {
                 "label": "Example",
@@ -8269,11 +8124,11 @@
         "examples": "components/popover/examples.json"
       },
       "sourceHashes": {
-        "components/popover/popover.schema.json": "a9d742edd9443b794883974e74c01e2ddbea0b7007dc5a6698df01b4c8761206",
+        "components/popover/popover.schema.json": "88da38d25a103d9a6339f1de8e3560afda36e229bc3a81a86de41688e122f150",
         "components/popover/popover.html": "12f2e3bc9bd49a33ada53f03527da64c559729ed507dd85bdb0bc8912729e99e",
         "components/popover/popover.css": "aabe4123799535ebfe6c942cecb543535b49384b38f569ce6bba47e367dbed5b",
         "components/popover/popover.md": "1301c2c8b53ff227b6dfb69cdc0333818df80ce124a227a2c9a34faf1d680712",
-        "components/popover/examples.json": "ba3c43a8be96d3fa4f700d536db090441091af249b5286db24dd858ceecc9778",
+        "components/popover/examples.json": "bc72af38da20fa42677c95dffa3902bfb2f1935d0187a7a09f8afcabf1905a0b",
         "components/popover/example.html": "12f2e3bc9bd49a33ada53f03527da64c559729ed507dd85bdb0bc8912729e99e"
       },
       "properties": {
@@ -8293,13 +8148,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-popover",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -8380,8 +8238,8 @@
           "id": "popover-default",
           "name": "Standalone",
           "props": {
-            "label": "Popover",
-            "variant": "Example"
+            "label": "Details popover",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -8408,11 +8266,11 @@
         "examples": "components/pricing-table/examples.json"
       },
       "sourceHashes": {
-        "components/pricing-table/pricing-table.schema.json": "2e00abbfea25212ad55f814e2337a78b063f1ead0df139e44340b864c7d60db1",
+        "components/pricing-table/pricing-table.schema.json": "69e0f7752b1c8bb53a83920a31f16461ccdc17de8a3d52ba7546abb50900ee3f",
         "components/pricing-table/pricing-table.html": "8b66362e6f6fc591ef81072810477aad22224cea7d46132a8cb48da866eaab2b",
         "components/pricing-table/pricing-table.css": "c050f6b2da4fa39a8a12721bc7780c925f99788cfc278ee8bacd17e4f5fb490d",
         "components/pricing-table/pricing-table.md": "6184bc9649ceae14b8da1007b3c27f1beb764ca222eec4861943eb082522698c",
-        "components/pricing-table/examples.json": "c05a345993b5f589374bd2bd0cee4f07a918db81b4465ccb6977b310d9f65763",
+        "components/pricing-table/examples.json": "07f69b2cc8296ef0bb538ebd6582aa147f4293eba926eea2fd7dbc2de6cb094c",
         "components/pricing-table/example.html": "8b66362e6f6fc591ef81072810477aad22224cea7d46132a8cb48da866eaab2b"
       },
       "properties": {
@@ -8558,9 +8416,7 @@
                 "content": "Text or trusted authored markup",
                 "price": "$49"
               }
-            ],
-            "currency": "Example",
-            "cadence": "Example"
+            ]
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -8587,11 +8443,11 @@
         "examples": "components/product-card/examples.json"
       },
       "sourceHashes": {
-        "components/product-card/product-card.schema.json": "3e53cc8b3f5d2e6d8dab72e7b99e017c3dae4fbd01318f1934ea782e0958f349",
+        "components/product-card/product-card.schema.json": "2e8ee43f92a231e38c3dce0604ae67087fcbb986fb09f1be07e97eaa35cfccd8",
         "components/product-card/product-card.html": "f873575691e10c7842ebceb04c1dda734cae3f032a68ad642d266d61e860f3f9",
         "components/product-card/product-card.css": "def1c09c682fa87e49c1d2ebd776b62f36e36c4fa28bf82b7d86d805576fcff9",
         "components/product-card/product-card.md": "b8628afdb98563e4d10d8d65630382740c16b2c081773b2dfd5423b07dc3c3e0",
-        "components/product-card/examples.json": "cb7d4f4c73163964aa5738182b2b890bc4001e932a3b39cf5c8811dbcb721f3a",
+        "components/product-card/examples.json": "b13ec00d5a4285d20d59291c2a9e92789ade3a2c2c8a60a798ad3aee111474f9",
         "components/product-card/example.html": "8a71b3d48542bb41bab2f319366c7a6a4537ff5c96cbe7725c2a7d0c53c0eeef"
       },
       "properties": {
@@ -8739,9 +8595,7 @@
           "name": "Standalone",
           "props": {
             "name": "project",
-            "price": "Example",
-            "imageAlt": "Example",
-            "availability": "Example"
+            "price": "Example"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -8768,11 +8622,11 @@
         "examples": "components/product-grid/examples.json"
       },
       "sourceHashes": {
-        "components/product-grid/product-grid.schema.json": "b4312e80d3f6b2535ce00a51b772aee2a6f5d8d8c81b2928ae091aeba7b043d1",
+        "components/product-grid/product-grid.schema.json": "9df5a31dff0da8adaebed3a4e9de9eb3030f9c295a77f93dbe04e92396097068",
         "components/product-grid/product-grid.html": "2c8c78ee8a00c8f1ad8075b039d4fe902c2f97c0f86492bbe1e1d16c14e40a5c",
         "components/product-grid/product-grid.css": "b2eb6012fa90adb95cb50ff366dcdaff9f13fc7cef7abcd08a49cf4b65d4a237",
         "components/product-grid/product-grid.md": "8b5aefe671140bb40587b9fbeac32109508ac28c567332a4a5378af231bd9f70",
-        "components/product-grid/examples.json": "ade4819294227a1d485e037fa4c071087e743cb682b5d9797941ec9336b9a80b",
+        "components/product-grid/examples.json": "ef63f7669d6161e37055d78ed2bb330cd50e7c1ef2cd93ee010495c3a0d13427",
         "components/product-grid/example.html": "2c8c78ee8a00c8f1ad8075b039d4fe902c2f97c0f86492bbe1e1d16c14e40a5c"
       },
       "properties": {
@@ -8927,12 +8781,6 @@
                 "content": "Text or trusted authored markup",
                 "price": "$49"
               }
-            ],
-            "filters": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup"
-              }
             ]
           },
           "htmlFile": "example.html",
@@ -8960,11 +8808,11 @@
         "examples": "components/product-showcase/examples.json"
       },
       "sourceHashes": {
-        "components/product-showcase/product-showcase.schema.json": "358cb31d7fa30770100dc0b2c7c4a72798ffeec7bc3a7b6f23edf9a1e0948ed4",
+        "components/product-showcase/product-showcase.schema.json": "2e729a510801453073529253e2adea513f648dccf645ad35025f46b6880820e9",
         "components/product-showcase/product-showcase.html": "475ff44dd7cab2e2231a1f7701c7cfc46e2aa8a0ccbdc709e8cec32f6f5fc750",
         "components/product-showcase/product-showcase.css": "56e561f328b25d1631e5d7d5459e25c02928cbc1488c7c13e44f641c696d42d6",
         "components/product-showcase/product-showcase.md": "b60a6a05344dd3b3c674191103c50761a1e24efbdfd1e3143255c469f85c2a75",
-        "components/product-showcase/examples.json": "a12903002862196e800caaedf384fc381ae793922719d955363d7f3e1e2529b0",
+        "components/product-showcase/examples.json": "b92badf943a1b8e8bd40e432dec27a3aa756e3fd9faa0149fc99157ccfb84de6",
         "components/product-showcase/example.html": "475ff44dd7cab2e2231a1f7701c7cfc46e2aa8a0ccbdc709e8cec32f6f5fc750"
       },
       "properties": {
@@ -9139,12 +8987,6 @@
                 "content": "Text or trusted authored markup",
                 "price": "$49"
               }
-            ],
-            "actions": [
-              {
-                "label": "Example",
-                "content": "Text or trusted authored markup"
-              }
             ]
           },
           "htmlFile": "example.html",
@@ -9172,11 +9014,11 @@
         "examples": "components/progress-bar/examples.json"
       },
       "sourceHashes": {
-        "components/progress-bar/progress-bar.schema.json": "dca85963d2da8fefbce91a73cd3ca1eb82754b96e3d5a3a20e2dda86a485d356",
+        "components/progress-bar/progress-bar.schema.json": "e9a05ebb5287eb245272ae68d4065c99d14c41677266feb549fe0698aa80685b",
         "components/progress-bar/progress-bar.html": "d9e1631b9b8df94c0c483d9f06f6f8ee24ad65899c246743b8dbc238f8ed6943",
         "components/progress-bar/progress-bar.css": "a2b83387854ff287fe90ba1b91d2b6b86458767b6bc361cca96a8b905e049478",
         "components/progress-bar/progress-bar.md": "dc05252e893b101bb4ded2d1e1e47a9c1221967722d0d93f3c821f476a8f5836",
-        "components/progress-bar/examples.json": "150a7eff19d0134e83f716c683a71dfa617cdc36c3f76c2171569388b73eac48",
+        "components/progress-bar/examples.json": "42bb5a61c3bdfc5b335a48df2d87c062e1cb1e960f306fafc44953b593cb8e1a",
         "components/progress-bar/example.html": "d9e1631b9b8df94c0c483d9f06f6f8ee24ad65899c246743b8dbc238f8ed6943"
       },
       "properties": {
@@ -9196,13 +9038,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "determinate",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-progress-bar",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "determinate"
         },
         "value": {
           "type": "number",
@@ -9301,10 +9146,10 @@
           "id": "progress-bar-default",
           "name": "Standalone",
           "props": {
-            "label": "Progress Bar",
-            "variant": "Example",
-            "value": 1,
-            "max": 1
+            "label": "Build progress",
+            "variant": "determinate",
+            "value": 64,
+            "max": 100
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -9331,11 +9176,11 @@
         "examples": "components/progress-indicator/examples.json"
       },
       "sourceHashes": {
-        "components/progress-indicator/progress-indicator.schema.json": "9582eb31cf2362c4656292f48377da74fd273e188bbd2a59278f9a4436850815",
+        "components/progress-indicator/progress-indicator.schema.json": "93a3c2bcefd68eeb15a0b3df36201d3e1ae81ba662f57d63e390d16bf1e904d7",
         "components/progress-indicator/progress-indicator.html": "aa37a34ec5852fc798eddce08445946f7b91dbf2d4c526da2c9c7d5f98a3ab4d",
         "components/progress-indicator/progress-indicator.css": "c89782a028c386e0079d1d05578afa3dfb2ed448de4f7ec8a17b591e55b31787",
         "components/progress-indicator/progress-indicator.md": "3c92650892cd5a667d8a115457bfea2967cf035d3da04646a23ebf8c5a6f5e99",
-        "components/progress-indicator/examples.json": "11648fd21ba2ff20d69e2c8821186dbdd66b2cb7488bc4872d0f9993871093e7",
+        "components/progress-indicator/examples.json": "97d28dcaed5f59fc13aa4bc048643250368c84dee8f69b37405b9be9812d5550",
         "components/progress-indicator/example.html": "aa37a34ec5852fc798eddce08445946f7b91dbf2d4c526da2c9c7d5f98a3ab4d"
       },
       "properties": {
@@ -9355,13 +9200,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "steps",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-progress-indicator",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "steps"
         }
       },
       "variants": {
@@ -9439,8 +9287,8 @@
           "id": "progress-indicator-default",
           "name": "Standalone",
           "props": {
-            "label": "Progress Indicator",
-            "variant": "Example"
+            "label": "Progress",
+            "variant": "steps"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -9467,11 +9315,11 @@
         "examples": "components/promo-banner/examples.json"
       },
       "sourceHashes": {
-        "components/promo-banner/promo-banner.schema.json": "896fbfc1f9c2ea06673cd12309b184fc595cc9f0de57a3e7e7b4a4dc7484b65b",
+        "components/promo-banner/promo-banner.schema.json": "e9848207c088cb0b565ce456d3f1f6aa093cdc8e1aed2f13eb8ebd714ec7ce1a",
         "components/promo-banner/promo-banner.html": "0e034501074475e8979ed38691e324aff980f62f903d21ff8cd422406fcd6a81",
         "components/promo-banner/promo-banner.css": "77b4ef563833b071a7eef75c2fd6485cab0ef87976d48287bc5fa1206a3525e3",
         "components/promo-banner/promo-banner.md": "88c0414e6ba7be8e819e519e22e5afdec807bd58b6c5257b7ecaf68fcd808398",
-        "components/promo-banner/examples.json": "75ae7a13f0580c155a3c6bf0706c5da141b58b14da16d0b26e3905e9890d015e",
+        "components/promo-banner/examples.json": "c118f0cc80c302333bf76a3435edc8b36213078be52430f3d8be4923495ecd98",
         "components/promo-banner/example.html": "1f5b4fc603dc26c097831b416d70454e8cb6d0659361de511939025f3a16cf0f"
       },
       "properties": {
@@ -9600,12 +9448,7 @@
           "id": "promo-banner-default",
           "name": "Standalone",
           "props": {
-            "message": "Example",
-            "action": {
-              "label": "Example",
-              "content": "Text or trusted authored markup"
-            },
-            "dismissible": false
+            "message": "Example"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -9632,11 +9475,11 @@
         "examples": "components/quote/examples.json"
       },
       "sourceHashes": {
-        "components/quote/quote.schema.json": "64c5b1bca4909c8fa52c571cf3395f670466d839e321be0560850427a359042d",
+        "components/quote/quote.schema.json": "a9b14c5acc355171e43cb60047b2fd5bd5ba3d2c36a5025bed170e6de5c41af1",
         "components/quote/quote.html": "d41d933a41af6e34cacbdf9e5d21241f234c4ea812364135178ee0fe7fd9ad99",
         "components/quote/quote.css": "8ec7e2be8dbb0fa0bec0e661e51c03f426c8cbe3ae8309563e32f3a8b78ffa98",
         "components/quote/quote.md": "348a56cc6e57ebdc69975abd3cdeaa4a455993e098d5c020abfafba63c1b1ffc",
-        "components/quote/examples.json": "c68069c3f76eb82b2a50450f725d9a15868a68697a4ed19f1994a906f0a7869a",
+        "components/quote/examples.json": "e5f61023db361ff8ebb3ad8a65c7fe3a0f53f7ba495483356b9e6407cf991423",
         "components/quote/example.html": "d41d933a41af6e34cacbdf9e5d21241f234c4ea812364135178ee0fe7fd9ad99"
       },
       "properties": {
@@ -9656,13 +9499,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "pull",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-quote",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "pull"
         }
       },
       "variants": {
@@ -9738,8 +9584,7 @@
           "id": "quote-default",
           "name": "Standalone",
           "props": {
-            "label": "Quote",
-            "variant": "Example"
+            "variant": "pull"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -9766,11 +9611,11 @@
         "examples": "components/radio-button/examples.json"
       },
       "sourceHashes": {
-        "components/radio-button/radio-button.schema.json": "8001e4adbcb2d9bacb1a9b40b05141c8a4d8a846b827f864263fc5429d6fde13",
+        "components/radio-button/radio-button.schema.json": "17acc411b727fd8017e33dace4dac67b7570c206b4ddaad910f1b7a2af978b3a",
         "components/radio-button/radio-button.html": "585eecd79bcf0a638cdede38398211db0e3f374eda3a6b0aecbe2d95b354b233",
         "components/radio-button/radio-button.css": "c6a9380fb41f298a0a090a251084f724f34a5c70e4b4a24ab317a68f7290298a",
         "components/radio-button/radio-button.md": "e183fac02f3e0e25cf757277e07ced8e6c64663ac73b9268260fe0c777494bfe",
-        "components/radio-button/examples.json": "c6aa97933be877092f78f2664dd172840d4e52b00f2b972882e49e339dfeeea5",
+        "components/radio-button/examples.json": "120efcad076056888d3db79ec78f3f51595bc22db3931a0578ea9c28e14c9df1",
         "components/radio-button/example.html": "585eecd79bcf0a638cdede38398211db0e3f374eda3a6b0aecbe2d95b354b233"
       },
       "properties": {
@@ -9790,13 +9635,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-radio-button",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -9881,8 +9729,8 @@
           "id": "radio-button-default",
           "name": "Standalone",
           "props": {
-            "label": "Radio Button",
-            "variant": "Example"
+            "label": "Starter",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -9909,11 +9757,11 @@
         "examples": "components/rating/examples.json"
       },
       "sourceHashes": {
-        "components/rating/rating.schema.json": "94985bc585e1d55029bd6640641a8ac40dae51eb380964012a6ae194b0f64cf9",
+        "components/rating/rating.schema.json": "ef3511fbabe45aecb618481a8d52c738bbf414fdafdf2ebdb1c04e81a3a49f8e",
         "components/rating/rating.html": "6935bdd526f38ee94ac41e8076a05a12a46192ba027852c9b04470c0a5f96ef7",
         "components/rating/rating.css": "6c9b985ce0ff4e72ab88413e0867059a90742732a424fadd533e9a6ea9ef966f",
         "components/rating/rating.md": "2ff24b505349328861e0cb2365cfc676e53a8867eb3cd90f996c505fc002ded9",
-        "components/rating/examples.json": "3e00e73c99382ab1c9323fd817981d882d52363a14909880411f28dd3cb2a24a",
+        "components/rating/examples.json": "5a99fed7b7c3d40993dbd2c6306e188eef0a823f56685247fe9cfe07a729c20a",
         "components/rating/example.html": "6935bdd526f38ee94ac41e8076a05a12a46192ba027852c9b04470c0a5f96ef7"
       },
       "properties": {
@@ -9933,13 +9781,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "five-point",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-rating",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "five-point"
         }
       },
       "variants": {
@@ -10010,8 +9861,8 @@
           "id": "rating-default",
           "name": "Standalone",
           "props": {
-            "label": "Rating",
-            "variant": "Example"
+            "label": "4 out of 5 stars",
+            "variant": "five-point"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -10038,11 +9889,11 @@
         "examples": "components/recent-posts/examples.json"
       },
       "sourceHashes": {
-        "components/recent-posts/recent-posts.schema.json": "3850acd2cf23655125ca5db462bac953dca9c1a5278ec94f0bdd682678c05859",
+        "components/recent-posts/recent-posts.schema.json": "7152953acdf4e077136016558dade431bff9522037934d7fa41afa644cf6c3e2",
         "components/recent-posts/recent-posts.html": "6a89d57af1c2a852b5977a05185da53278458c9fc0dbaa42731bd8d53e898b3d",
         "components/recent-posts/recent-posts.css": "8356798c3126a443b009b85b72ecf230639df889cbe7c0568dbc08510895cce5",
         "components/recent-posts/recent-posts.md": "45de4b821fd91723453c611795059adc77dc36c7ef104798eb51e0a2577b7a0b",
-        "components/recent-posts/examples.json": "18bc22adae90f1e04d690fa089cf99a64b3ab92b8ba7066154d3a52d167e913c",
+        "components/recent-posts/examples.json": "3b8c221607cea036816cff1fffb40f0fb75232866af2ed332e3153d2bb78deb8",
         "components/recent-posts/example.html": "6a89d57af1c2a852b5977a05185da53278458c9fc0dbaa42731bd8d53e898b3d"
       },
       "properties": {
@@ -10167,7 +10018,6 @@
           "id": "recent-posts-default",
           "name": "Standalone",
           "props": {
-            "heading": "Build with SiteKit",
             "posts": [
               {
                 "label": "Example",
@@ -10201,11 +10051,11 @@
         "examples": "components/resource-links/examples.json"
       },
       "sourceHashes": {
-        "components/resource-links/resource-links.schema.json": "a930f4e1d41127cf2bd98ec5ba70cc0dfe8718034cda5fd209ab8fe9217d5647",
+        "components/resource-links/resource-links.schema.json": "7021ce5d51c135f476ff5fa912c46f2b75c1dbc6b0a55b50e74e5d609b53b38e",
         "components/resource-links/resource-links.html": "75bfb6fae14c4dea19e4a29ae38f06642b0d3b9fa6dc2b509b935363a20745ba",
         "components/resource-links/resource-links.css": "3c4f5383e83ddd2a4ea2e0f45d6e051313696d7bce4c30938c8d2414484c87ad",
         "components/resource-links/resource-links.md": "504291a88a27f717b486a5c5549f3c8738f0e9532e7143834b5cd6ba8279dc6a",
-        "components/resource-links/examples.json": "f216208755c19e3cfbbb2c140ffc8ee632e319d4f09840716f4b9b68d027fc83",
+        "components/resource-links/examples.json": "2700d139971ce3503d794cf93c11c6c42a5fde6eaa6f6820a97b79ce329e823a",
         "components/resource-links/example.html": "75bfb6fae14c4dea19e4a29ae38f06642b0d3b9fa6dc2b509b935363a20745ba"
       },
       "properties": {
@@ -10327,7 +10177,6 @@
           "id": "resource-links-default",
           "name": "Standalone",
           "props": {
-            "heading": "Build with SiteKit",
             "links": [
               {
                 "label": "Example",
@@ -10361,11 +10210,11 @@
         "examples": "components/rich-text-editor/examples.json"
       },
       "sourceHashes": {
-        "components/rich-text-editor/rich-text-editor.schema.json": "39648db7689556680bd36a958af750717685433ec69bb9ec066c2540d9484500",
+        "components/rich-text-editor/rich-text-editor.schema.json": "60ebb880562cd2f2c8bea0301fe0b890f361a34d7f1064d4cad7c25344122ef6",
         "components/rich-text-editor/rich-text-editor.html": "609d9a3026ddba6c5af96087e515b39e1260ff8f15178bb8900d4388102fc38d",
         "components/rich-text-editor/rich-text-editor.css": "6379188c34c2eaa08ea561d67b31f3f4e1c7cb78d3f2b7b179e69efc5f459609",
         "components/rich-text-editor/rich-text-editor.md": "ae4fb542cae729c7593a794fc4e242981cafe849881379ebe8b808f2e630f469",
-        "components/rich-text-editor/examples.json": "20e96fbb7163bd522b50b65be9804e9ca823509b78a074a74b55df1d2f548679",
+        "components/rich-text-editor/examples.json": "fcfadcd4b8b1bf6235a4e7bf4d662803eabe2d987e77d8f6a2321a23c5d798cd",
         "components/rich-text-editor/example.html": "609d9a3026ddba6c5af96087e515b39e1260ff8f15178bb8900d4388102fc38d"
       },
       "properties": {
@@ -10375,8 +10224,8 @@
           "default": null,
           "allowedValues": null,
           "binding": {
-            "selector": "label, [aria-label], summary, button, a, span",
-            "html": "textContent or accessible name appropriate to the element"
+            "selector": "[contenteditable]",
+            "html": "aria-label or aria-labelledby on the editable textbox"
           },
           "stateOwner": "consumer",
           "example": "Rich Text Editor"
@@ -10385,13 +10234,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "basic",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-rich-text-editor",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "basic"
         }
       },
       "variants": {
@@ -10471,8 +10323,8 @@
           "id": "rich-text-editor-default",
           "name": "Standalone",
           "props": {
-            "label": "Rich Text Editor",
-            "variant": "Example"
+            "label": "Content",
+            "variant": "basic"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -10499,11 +10351,11 @@
         "examples": "components/roadmap/examples.json"
       },
       "sourceHashes": {
-        "components/roadmap/roadmap.schema.json": "2f98ff5998dad29015b5b00922bb2b1d06aae5a7e67f7401f1c5a8dfbff6c0d9",
+        "components/roadmap/roadmap.schema.json": "6dd1507ada9d9741d7aff02081482a5529412212d615b66c46dcba4d22f15ea4",
         "components/roadmap/roadmap.html": "7c4763c547c2908e26492a5142f886b76c45a0d0f356b0bb32ff993d6e99ae52",
         "components/roadmap/roadmap.css": "bec678beeb836009a15214622c0f9268c45f440d57d4efaa562f99ac51324858",
         "components/roadmap/roadmap.md": "e1d576b682eaf6beb4770fdd18e4fe57f0d9b2e837d0967c8b5393d7391a3501",
-        "components/roadmap/examples.json": "cdf49a69fa3d6341d90d9eff3a6d799a6ccddeeba8a798a85e9c850995907beb",
+        "components/roadmap/examples.json": "984c9c9bd3245efc636fd3a7c11bf3af88ace17d8c7037d52d472875516b1586",
         "components/roadmap/example.html": "7c4763c547c2908e26492a5142f886b76c45a0d0f356b0bb32ff993d6e99ae52"
       },
       "properties": {
@@ -10627,7 +10479,6 @@
           "id": "roadmap-default",
           "name": "Standalone",
           "props": {
-            "heading": "Build with SiteKit",
             "milestones": [
               {
                 "label": "Example",
@@ -10661,11 +10512,11 @@
         "examples": "components/search-input/examples.json"
       },
       "sourceHashes": {
-        "components/search-input/search-input.schema.json": "928ae36b45a605ed335a0c2188c1cdad4f7a0593cf200fedfa9bf70a2300acac",
+        "components/search-input/search-input.schema.json": "a285dcb91113d9b5d2b876fd301e8467ef4ae0b87d9f450c7467321ad2934025",
         "components/search-input/search-input.html": "e419d68465a38053e563eea89ee82f26a0332b8c0cd1e22e63584954065f5462",
         "components/search-input/search-input.css": "17e9e5b458563c07f59c19d863a0846d8263d4683aa556f04bb7afc2106fc0d5",
         "components/search-input/search-input.md": "57f7183540b2b6580602235455c5f38fc26d61385d302b05ce4ca6af721a94bd",
-        "components/search-input/examples.json": "33168ae60978861926fafc5f3145c5fe363c109e2bf470e9637bd5e2d7e6ab6b",
+        "components/search-input/examples.json": "ede743b529093b939410fe030851f053789640f605424b28c5321b71e6c07945",
         "components/search-input/example.html": "e419d68465a38053e563eea89ee82f26a0332b8c0cd1e22e63584954065f5462"
       },
       "properties": {
@@ -10685,13 +10536,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-search-input",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -10775,8 +10629,8 @@
           "id": "search-input-default",
           "name": "Standalone",
           "props": {
-            "label": "Search Input",
-            "variant": "Example"
+            "label": "Search",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -10803,11 +10657,11 @@
         "examples": "components/segmented-control/examples.json"
       },
       "sourceHashes": {
-        "components/segmented-control/segmented-control.schema.json": "28f94572c4db4d6e1973067664a355e1154b902a41d797df1a036ede6b320817",
+        "components/segmented-control/segmented-control.schema.json": "c5aadb088cf372a99098849550349d3b1cf4539e47ed2e8bbfb1f9b053def473",
         "components/segmented-control/segmented-control.html": "5195d59e8c51a69838c9c1871f2cffea9be817b1b9fdbacd9a221b659e948e10",
         "components/segmented-control/segmented-control.css": "61368bb2a5c5f4f57b2d0a042ce5b844a39a5900e0c830778d5bd2d94b529266",
         "components/segmented-control/segmented-control.md": "9ccddab05cde42adfa54fd273fe5b1f0df65fdd3dbb283bc71390d6a26c3fe35",
-        "components/segmented-control/examples.json": "4627d9365adb94d6312311d26d1e7cf03071dfa5da525b1f6e9aee6017fb8a1e",
+        "components/segmented-control/examples.json": "96ebf568f3434384f74a9101530800357a6228d90b580b92fd9085afdc2f2aff",
         "components/segmented-control/example.html": "5195d59e8c51a69838c9c1871f2cffea9be817b1b9fdbacd9a221b659e948e10"
       },
       "properties": {
@@ -10827,13 +10681,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "single-select",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-segmented-control",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "single-select"
         }
       },
       "variants": {
@@ -10913,8 +10770,8 @@
           "id": "segmented-control-default",
           "name": "Standalone",
           "props": {
-            "label": "Segmented Control",
-            "variant": "Example"
+            "label": "View mode",
+            "variant": "single-select"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -10941,11 +10798,11 @@
         "examples": "components/select/examples.json"
       },
       "sourceHashes": {
-        "components/select/select.schema.json": "8f2302735780cc0c62e5bd00f4854c6c26164da79c053a87dfcd7f013c189384",
+        "components/select/select.schema.json": "92ce3813287858f3eda475165d0f87ddc655c82e274b35584cffd26ce995bcdc",
         "components/select/select.html": "60fbf505cdb9744d949ebd7ff91a5af79cb2bb31db71daecabbc3b2a16388c6b",
         "components/select/select.css": "7928136211b47a62641fa2a6ba2e1eba3f928880d85cb2a3e00a38ca34604491",
         "components/select/select.md": "9762af61515e1b830c3b751e454ffa654b417e6da0c22babc577c2e655e65f5d",
-        "components/select/examples.json": "9fc985b40712a80834bd74b32548fa1713baf761c98d287338bf795ea518159e",
+        "components/select/examples.json": "69205b9a603ba5e718f695bcbf6fa4f50584a5bcf5820899ab48d4341e11512e",
         "components/select/example.html": "60fbf505cdb9744d949ebd7ff91a5af79cb2bb31db71daecabbc3b2a16388c6b"
       },
       "properties": {
@@ -10965,13 +10822,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-select",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -11053,8 +10913,8 @@
           "id": "select-default",
           "name": "Standalone",
           "props": {
-            "label": "Select",
-            "variant": "Example"
+            "label": "Theme",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -11081,11 +10941,11 @@
         "examples": "components/separator/examples.json"
       },
       "sourceHashes": {
-        "components/separator/separator.schema.json": "a72b4f754e479f890a42db4c59e724138d7c2083885a2954db42ff707edfbdde",
+        "components/separator/separator.schema.json": "1f06e6990999a9730ccbf821f466f83733bf17d6017e7f714a7be2eb66b472e1",
         "components/separator/separator.html": "e0a066a43a63d7320ac43e8a6501eca12f8301cc635820aee99826c13df9d733",
         "components/separator/separator.css": "ad977db83109b8a8225b2bfe12096181f5db117420e3b774d71477e0aefbc158",
         "components/separator/separator.md": "e808065b475c97881726ae65eaa11a805d3e33188ac23b04b9064cdb80c2fd27",
-        "components/separator/examples.json": "3d49e6b6dd210f3238a025a293db63e5514f323484c1066108200cd3c6e633ea",
+        "components/separator/examples.json": "949f3d95eea2becc083b7c1667265f670f679027648480e41d20165c9f704503",
         "components/separator/example.html": "e0a066a43a63d7320ac43e8a6501eca12f8301cc635820aee99826c13df9d733"
       },
       "properties": {
@@ -11105,13 +10965,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "horizontal",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-separator",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "horizontal"
         }
       },
       "variants": {
@@ -11184,8 +11047,7 @@
           "id": "separator-default",
           "name": "Standalone",
           "props": {
-            "label": "Separator",
-            "variant": "Example"
+            "variant": "horizontal"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -11212,11 +11074,11 @@
         "examples": "components/skeleton/examples.json"
       },
       "sourceHashes": {
-        "components/skeleton/skeleton.schema.json": "dd11b6d4b92a2b5de83d3d827fcb44ffdc2f99c8c7fd013111384a9d0eac43a0",
+        "components/skeleton/skeleton.schema.json": "774ef6587dd31ec8626a72ba70a57783538a195e28bfb70529683aa27d3d368d",
         "components/skeleton/skeleton.html": "0d5cac132907cbbd93b0621fb020c083b41d665e96e031cbaebd8451867eb379",
         "components/skeleton/skeleton.css": "da22330ecdbf28066d0e0f6e016e2dbb5bbc8b84e77644bd265496193777ed8c",
         "components/skeleton/skeleton.md": "d1ed6feda20dcf42d8bafca063b5bb0f4956e822dcb3b00fbd9f25ef5ff909ba",
-        "components/skeleton/examples.json": "a65fe83e2252446c9a5dce881758b691eb8ab46ce9cac2dcc0bd584543fe8b71",
+        "components/skeleton/examples.json": "c9ca68f27fae30028ae1de36e4421733e68f2e5e954b7e64c5b3f100d845c665",
         "components/skeleton/example.html": "0d5cac132907cbbd93b0621fb020c083b41d665e96e031cbaebd8451867eb379"
       },
       "properties": {
@@ -11236,13 +11098,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "text",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-skeleton",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "text"
         }
       },
       "variants": {
@@ -11319,8 +11184,7 @@
           "id": "skeleton-default",
           "name": "Standalone",
           "props": {
-            "label": "Skeleton",
-            "variant": "Example"
+            "variant": "text"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -11347,11 +11211,11 @@
         "examples": "components/skip-link/examples.json"
       },
       "sourceHashes": {
-        "components/skip-link/skip-link.schema.json": "4b8ba79bf83e9aec3135a9efaea5d107b851f753282de70e9f01a0d24423d611",
+        "components/skip-link/skip-link.schema.json": "c43680bf999e81e59762ce0355ffe0124ffc062ec7cc82a2dfb0d447bbf4f43a",
         "components/skip-link/skip-link.html": "7854668f2588823b5aae8f216cb912fbc18e8f2d01e33cef6a253eb6da04efc0",
         "components/skip-link/skip-link.css": "d200d42429650d47b6e664c7d53ab3f05d8efc73d7320c73ad2a1823f5f0fbcb",
         "components/skip-link/skip-link.md": "25447301ed5bd8e3baeb4d06462ad3f22824859dcdd968f6f550512806eac06a",
-        "components/skip-link/examples.json": "e2aed1fe87e283576b0f702e353e910ce5601fd3ff594b0641178ebcf5ed6bbf",
+        "components/skip-link/examples.json": "d76ab0c5d3496f0a812f7faa730fc24599a54ad830f1ce9dc5d83a84c79edc61",
         "components/skip-link/example.html": "7777391425eddec1b84ac4385353643dc212d77f9f3d0c4070672d0ea7ebc297"
       },
       "properties": {
@@ -11371,13 +11235,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-skip-link",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -11452,8 +11319,8 @@
           "id": "skip-link-default",
           "name": "Standalone",
           "props": {
-            "label": "Skip Link",
-            "variant": "Example"
+            "label": "Skip to main content",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -11480,11 +11347,11 @@
         "examples": "components/slider/examples.json"
       },
       "sourceHashes": {
-        "components/slider/slider.schema.json": "15e365031ed256b217c3eeea42afb4db339cdbd39476681575858056aa781f1c",
+        "components/slider/slider.schema.json": "33d132cd2048512729572dcda7fa29f99fe96e44ae5bb2edce52c769b7cfcff4",
         "components/slider/slider.html": "9837241e3bacdab9380908a61706c063a4f3605eff1a7ba9d2d839e12ea3dd16",
         "components/slider/slider.css": "535dd14c6a2681eccd181a516774d4326aa888f473af8aa00272a60f95b34a5c",
         "components/slider/slider.md": "7e18cc125edef77d6fe78b01f847cadb5dc6a83dc0c74e5adc0333d457840149",
-        "components/slider/examples.json": "7f82efc15e420b7f6dddd3b47e570fa24f4607829a141e7c6cd4dc42f99cfb12",
+        "components/slider/examples.json": "7ebd7ef14a00c2fce732712f69dd5c97aaba80d0168665d70eae5d78939c0e36",
         "components/slider/example.html": "9837241e3bacdab9380908a61706c063a4f3605eff1a7ba9d2d839e12ea3dd16"
       },
       "properties": {
@@ -11504,13 +11371,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-slider",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -11594,8 +11464,8 @@
           "id": "slider-default",
           "name": "Standalone",
           "props": {
-            "label": "Slider",
-            "variant": "Example"
+            "label": "Intensity",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -11622,11 +11492,11 @@
         "examples": "components/spinner/examples.json"
       },
       "sourceHashes": {
-        "components/spinner/spinner.schema.json": "41428f18c944e520b20469248f86f368fa09ef42e7120c619acc50042610aac2",
+        "components/spinner/spinner.schema.json": "db49d370e00f0396c653cb979d930d409c52ae67e310f55bd2b15858029fd11b",
         "components/spinner/spinner.html": "9dbc0056315286a8690d0553648bea46ac1b32c84b9f1ae2e83b86cfe2adaa92",
         "components/spinner/spinner.css": "125fb1812bd005df8e128efca549994ad4bd26bea04c7a642beeb0d0f0b247c2",
         "components/spinner/spinner.md": "e123293e2dcc100ed57713092bd0bced66fef5e388f0633bcac6cfeb5ebf49a2",
-        "components/spinner/examples.json": "9ec4e30a10863c842d0845e17853581c2f9698db77d0e43fa1baa77f7d7d0e76",
+        "components/spinner/examples.json": "d635ece50d9d569395d0e25689eca5ac630100dda857bd22a9ea3c53f9db50e3",
         "components/spinner/example.html": "9dbc0056315286a8690d0553648bea46ac1b32c84b9f1ae2e83b86cfe2adaa92"
       },
       "properties": {
@@ -11646,13 +11516,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-spinner",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -11728,8 +11601,7 @@
           "id": "spinner-default",
           "name": "Standalone",
           "props": {
-            "label": "Spinner",
-            "variant": "Example"
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -11756,11 +11628,11 @@
         "examples": "components/stack/examples.json"
       },
       "sourceHashes": {
-        "components/stack/stack.schema.json": "eecc1f2d4bc3dbbb22041ab0138095e1dbac392975764cc032be64411707167f",
+        "components/stack/stack.schema.json": "430c4252a1f189c1d7b84fab13f69a2b94ac1fad342297ca09b7b9a1677e2987",
         "components/stack/stack.html": "9088c11a520a944c21be9fd79525753b08bd0e1fd4d1646cef0296ad9a4847e3",
         "components/stack/stack.css": "df0e18374fb57c75143319e268e91fcc237a7bb5a390c3a5ea2e239542c5c3f9",
         "components/stack/stack.md": "73df6319fa55baa67a5bacea9287c46938aa3e7e38c971de5c5c363f3196ceb0",
-        "components/stack/examples.json": "0ecfcd416c090d0fca0f97b1d8bf9e0b4785767955cf38b3190108b7c551ba58",
+        "components/stack/examples.json": "60ed2e41f5c5e56fa0c678c00658e8fc3c0fccdba84fd966fc145255bf9f7ccb",
         "components/stack/example.html": "9088c11a520a944c21be9fd79525753b08bd0e1fd4d1646cef0296ad9a4847e3"
       },
       "properties": {
@@ -11780,13 +11652,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-stack",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -11858,8 +11733,7 @@
           "id": "stack-default",
           "name": "Standalone",
           "props": {
-            "label": "Stack",
-            "variant": "Example"
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -11886,11 +11760,11 @@
         "examples": "components/stats-bar/examples.json"
       },
       "sourceHashes": {
-        "components/stats-bar/stats-bar.schema.json": "e4b779d0d5e531a3e845473ccd8415e3655081ca10dac009c61c24b4c5f8fe83",
+        "components/stats-bar/stats-bar.schema.json": "2cfe1de4c5fba5c39b1718ed29051a72f01d49ce0738a73c8866c17557f074a0",
         "components/stats-bar/stats-bar.html": "242c41b8fbe359cbecd00e79f094829bec6db7ff4f3b1cf5671d5f1e0a4e1ee3",
         "components/stats-bar/stats-bar.css": "3467e06eef006199878b4d09cd902cb04432934256c42b2a3cfd388c110b712c",
         "components/stats-bar/stats-bar.md": "07d008fbde590959bb53743325a6b1cb3275010fca3a24b85986a1af07d8f6e8",
-        "components/stats-bar/examples.json": "ac9392b0489817f5111353f56b7819972f2fd2fdfcf19e4678d0446ab6675c56",
+        "components/stats-bar/examples.json": "ffb5d1c9b24533f547ad853b249bded9c7393f40fde73feb1a615d7f96e1d1c0",
         "components/stats-bar/example.html": "242c41b8fbe359cbecd00e79f094829bec6db7ff4f3b1cf5671d5f1e0a4e1ee3"
       },
       "properties": {
@@ -12013,7 +11887,7 @@
                 "content": "Text or trusted authored markup"
               }
             ],
-            "label": "Stats Bar"
+            "label": "Project stats"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -12040,11 +11914,11 @@
         "examples": "components/stepper/examples.json"
       },
       "sourceHashes": {
-        "components/stepper/stepper.schema.json": "3a0792a345d40fce28e3656e156b17ee650f90fd688e3c8f08511e7632713c04",
+        "components/stepper/stepper.schema.json": "bf80ccd3feff95e9078471f731e8a830576001077d761dc1b13ec895896c074f",
         "components/stepper/stepper.html": "338355ac69c932a38c71cb0ff8ec64a8cdbad963b2ffbf16646e30aa0ee73b18",
         "components/stepper/stepper.css": "4face79e78f354f96bfc751c90da26490ef28024323a55663cce9e8cd0763180",
         "components/stepper/stepper.md": "5dabb148a4cab049be4d2443a315b65153169ba4de6238b670d13b575995a618",
-        "components/stepper/examples.json": "389843ac8b68eba132fafa5758b9ccd37037a089e1dfe33799c71d93d80a2fc9",
+        "components/stepper/examples.json": "4d8c3baed4460312ac0fffe035e85dd8f5f26b6b1cb0f66ddbc3f5e67118a338",
         "components/stepper/example.html": "338355ac69c932a38c71cb0ff8ec64a8cdbad963b2ffbf16646e30aa0ee73b18"
       },
       "properties": {
@@ -12064,13 +11938,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "number",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-stepper",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "number"
         },
         "value": {
           "type": "number",
@@ -12204,12 +12081,8 @@
           "id": "stepper-default",
           "name": "Standalone",
           "props": {
-            "label": "Stepper",
-            "variant": "Example",
-            "value": 1,
-            "min": 1,
-            "max": 1,
-            "step": 1
+            "label": "Seats",
+            "variant": "number"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -12236,11 +12109,11 @@
         "examples": "components/table/examples.json"
       },
       "sourceHashes": {
-        "components/table/table.schema.json": "bf40416748f8ef3322b2059b7ee970de3db2457796a69b89e206066c49da727a",
+        "components/table/table.schema.json": "88e8e620c203621b60bb53f86c36ae980e31cbb76dc690a8da6b23b2cc3036e0",
         "components/table/table.html": "4381b53ff40122c2fff50237622912da9c36c41ceb44d1951170d1580afedd39",
         "components/table/table.css": "688bc51014e2d1f7692cbd124fcf12179c544e872950254cb22536bfd3aeccf1",
         "components/table/table.md": "fa58a83072e42c1b71d0866dfcb719400c5df75978bdcd18bdd1733f5a24989c",
-        "components/table/examples.json": "cf36a6b225c30608b7b63b32b77b13dfd258c370c4b34eb4d2a57b5b5407ac7f",
+        "components/table/examples.json": "4b1c1aaa65021969ed01c6680d7e49e6e2b0e82b8bdc38b67063f790c84fb789",
         "components/table/example.html": "4381b53ff40122c2fff50237622912da9c36c41ceb44d1951170d1580afedd39"
       },
       "properties": {
@@ -12260,13 +12133,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-table",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -12338,8 +12214,7 @@
           "id": "table-default",
           "name": "Standalone",
           "props": {
-            "label": "Table",
-            "variant": "Example"
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -12366,11 +12241,11 @@
         "examples": "components/tabs/examples.json"
       },
       "sourceHashes": {
-        "components/tabs/tabs.schema.json": "7ae4a0e37a3a41793bee2a70147653a3efed963af9ddeeb8c04259651c360593",
+        "components/tabs/tabs.schema.json": "3aa6a6e71627ae57c04f2fd865f3fe20e0e2c48ab66ce43ca29af9e64a88bfc3",
         "components/tabs/tabs.html": "fcb00d4db6e5788c287b07d8525729f99f4e00642a96d97196deffebcb047dc9",
         "components/tabs/tabs.css": "1eaf884137ca568a0fea1cadc5ecf99e0dfad2c2eed8eac0b64535453834a0c9",
         "components/tabs/tabs.md": "93db533aece3cbd6c0fdb64097d2334bb52108e078d67dd6df2b661e19273ecd",
-        "components/tabs/examples.json": "add4f8eacdfa94671ac6b8d0b8adb04d33f9a094424e56eab90a053534b5409f",
+        "components/tabs/examples.json": "9deb0c22e5d0b67957c195cc01cd5b659ce97f4fa4f0f148084b9fc7a41a123a",
         "components/tabs/example.html": "cdf3b6f6998d31192c3dc350b73998896939b0a2fe34769db4931e8a0e6fc33e"
       },
       "properties": {
@@ -12582,7 +12457,6 @@
                 "controls": "demo-tabs-panel-1"
               }
             ],
-            "selected": "Example",
             "panels": [
               {
                 "id": "demo-tabs-panel-0",
@@ -12597,9 +12471,7 @@
                 "labelledby": "demo-tabs-1"
               }
             ],
-            "label": "Tabs",
-            "activation": "automatic",
-            "orientation": "horizontal"
+            "label": "Tabs"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -12626,11 +12498,11 @@
         "examples": "components/team-grid/examples.json"
       },
       "sourceHashes": {
-        "components/team-grid/team-grid.schema.json": "461ab64407ec6b70a29cd1b6f8d6a61de31f8ae791632766456a6ee98be7b697",
+        "components/team-grid/team-grid.schema.json": "cc6e9cecbde6d7729bf63cf5bc592d525341f6e8199be40ef8628ebcdbfdf4ee",
         "components/team-grid/team-grid.html": "2b14e3f995e2c55cedb86c6f75c30947dd24d145d9b58dd1e29150efa92fc9fa",
         "components/team-grid/team-grid.css": "efd6af120d58e252c06cbba08feae8e621c983dafb51b25ff1bdb40c856c2594",
         "components/team-grid/team-grid.md": "6817ca1a805f67765452e485490cb952b632f138fe7f754ec32fe4dcc84316d4",
-        "components/team-grid/examples.json": "814379d2bb02a016f646f9fe797e0a93c84d5c59ab96650ef7bff3f45cf29008",
+        "components/team-grid/examples.json": "863b5b929071a30762114b0927c512833ac6e5e156777a8cb53ddfd57de0c660",
         "components/team-grid/example.html": "2b14e3f995e2c55cedb86c6f75c30947dd24d145d9b58dd1e29150efa92fc9fa"
       },
       "properties": {
@@ -12753,7 +12625,6 @@
           "id": "team-grid-default",
           "name": "Standalone",
           "props": {
-            "heading": "Build with SiteKit",
             "people": [
               {
                 "label": "Example",
@@ -12787,11 +12658,11 @@
         "examples": "components/testimonial-rail/examples.json"
       },
       "sourceHashes": {
-        "components/testimonial-rail/testimonial-rail.schema.json": "ae6294b4254ce8becc8a74a7611032c981f182fdf4f104e7762768a416059c8a",
+        "components/testimonial-rail/testimonial-rail.schema.json": "5a19c48be8d8fa6908c31ac25478d2943fa132e2ca61b611dc494ad75412a603",
         "components/testimonial-rail/testimonial-rail.html": "d76aee424bbc7fc19de4faabc409a014788b205948c845e9dd0a533e66730e38",
         "components/testimonial-rail/testimonial-rail.css": "e567e2c40c42329e111e3e79e74981a1aecbc45d91315b5aa1f106dfe8cea6f3",
         "components/testimonial-rail/testimonial-rail.md": "838f3d0604b1b8b839f971eec7b30a1dcbeea97b254f853edb661283d948416d",
-        "components/testimonial-rail/examples.json": "8a575faacf629114f35a69ceb627bc2948847576706348628e711158049bd9ac",
+        "components/testimonial-rail/examples.json": "9135075957875f5a23081afa1184092cd873d7a7c2f14089dd3c10a188d5be72",
         "components/testimonial-rail/example.html": "d76aee424bbc7fc19de4faabc409a014788b205948c845e9dd0a533e66730e38"
       },
       "properties": {
@@ -12914,7 +12785,6 @@
           "id": "testimonial-rail-default",
           "name": "Standalone",
           "props": {
-            "heading": "Build with SiteKit",
             "quotes": [
               {
                 "label": "Example",
@@ -12948,11 +12818,11 @@
         "examples": "components/text-input/examples.json"
       },
       "sourceHashes": {
-        "components/text-input/text-input.schema.json": "d8ee84229bb775cf698f45caaff66d62080d01361a8c4c9f69fd033f31f94d33",
+        "components/text-input/text-input.schema.json": "fb52e073ffe75bd8d1e5f7fd42c3dfbea33ad09b33214a6f10ba64925c5104c5",
         "components/text-input/text-input.html": "551e23a9807bc00c6ee60d6b8912eb51ed368df73ac9496aeaeb49f6a4e305f2",
         "components/text-input/text-input.css": "9c35d84d88ad08fe85246281b112f317b824915d8e9812a83057e853607e23f5",
         "components/text-input/text-input.md": "1cc90118f7636f6e0e9d619ce87ef36a45ce276a4bd7fd59241033d4908b26c1",
-        "components/text-input/examples.json": "a4180f8804dba883dbe32cacf7554c50564c6f061a0b1d7c5dd8786085dbf384",
+        "components/text-input/examples.json": "37b734f8280178a2740a7f6d2b175678031db1eb15a7e0036eb0c9c61ccf7b94",
         "components/text-input/example.html": "551e23a9807bc00c6ee60d6b8912eb51ed368df73ac9496aeaeb49f6a4e305f2"
       },
       "properties": {
@@ -12972,13 +12842,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-text-input",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -13060,8 +12933,8 @@
           "id": "text-input-default",
           "name": "Standalone",
           "props": {
-            "label": "Text Input",
-            "variant": "Example"
+            "label": "Project",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -13088,11 +12961,11 @@
         "examples": "components/textarea/examples.json"
       },
       "sourceHashes": {
-        "components/textarea/textarea.schema.json": "f780f22880888d2648c2a93579672c427618803a6b5d5b9810b1b09d99e3960c",
+        "components/textarea/textarea.schema.json": "838f9501e811f554a66b4ab6991130264f285100ed58decdd1ab7437e1a7eac2",
         "components/textarea/textarea.html": "968f96c752550492443e029bf4d5b2bb113b38b10500c66f8d176047624befd8",
         "components/textarea/textarea.css": "9eace4eb2b865494b8fb4654982330842fb4a9704ef2c33e4e1335feaa1f871f",
         "components/textarea/textarea.md": "f9ec87003e0b6a1aef4d7b1e01de223df6279ae088b281023aaaeb2e3ea81b77",
-        "components/textarea/examples.json": "94a24b970ece663c97a65261df0bbf216091f279880ca8efcd396b0fa01233d9",
+        "components/textarea/examples.json": "d9c294710f38fa83be642d98e1733b36193f2a1b1dc1f0c4a8b1329d4ac6fce1",
         "components/textarea/example.html": "968f96c752550492443e029bf4d5b2bb113b38b10500c66f8d176047624befd8"
       },
       "properties": {
@@ -13112,13 +12985,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-textarea",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -13197,8 +13073,8 @@
           "id": "textarea-default",
           "name": "Standalone",
           "props": {
-            "label": "Textarea",
-            "variant": "Example"
+            "label": "Notes",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -13225,11 +13101,11 @@
         "examples": "components/toast/examples.json"
       },
       "sourceHashes": {
-        "components/toast/toast.schema.json": "5ada258bbcc53516b0629e62bc3d95c4616d1329e3a1e9d044be4d8d22bea73c",
+        "components/toast/toast.schema.json": "cebeb319059a7ba99aa005aa5443b1b4d1eae9149bde1346ddd171c1abcfbdcc",
         "components/toast/toast.html": "b97f061f156e7b7c2000a113053b6febc52eefdf0c5183b0dfd4b4cf711e9b43",
         "components/toast/toast.css": "a3a766c65403ba8b48cd33fb205cb0e30f135e1349f358163624db82db542461",
         "components/toast/toast.md": "ff6534a0b177a028a4a22006c99a2489a29051b8a48a50c2c1b810ab623d6533",
-        "components/toast/examples.json": "cc5a36d43beaa4ba94b99a67d833b1fbbc3e8b210fb190a221bae4e968c2ddb0",
+        "components/toast/examples.json": "187cb5749f81018f65c8d9123c896847225e8c44de1875797f32952133423ca3",
         "components/toast/example.html": "b97f061f156e7b7c2000a113053b6febc52eefdf0c5183b0dfd4b4cf711e9b43"
       },
       "properties": {
@@ -13249,13 +13125,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-toast",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -13339,8 +13218,8 @@
           "id": "toast-default",
           "name": "Standalone",
           "props": {
-            "label": "Toast",
-            "variant": "Example"
+            "label": "Dismiss",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -13367,11 +13246,11 @@
         "examples": "components/toggle/examples.json"
       },
       "sourceHashes": {
-        "components/toggle/toggle.schema.json": "450d548d4eb0eaa0aa95bdc3bc5534ba92b70b036db723bfbb087efeaba3cd54",
+        "components/toggle/toggle.schema.json": "a51bbe0efe33deaaa7e8b0dbf92b848a684cdad09ba538f4e999ba5ac68fe0db",
         "components/toggle/toggle.html": "5f6cb8f6950e344c1c6bb1ace1d7dd6875c353f07249d261b741b2cd43ae03e5",
         "components/toggle/toggle.css": "1cade9f795811f4c7f0585eb972942cb71525aae4cc0c1093e7d2deddc4160f2",
         "components/toggle/toggle.md": "e2c5fbda1b886790f0b28505ddb41e8330a4eb7f91f2131113c4f7ecc02fd48e",
-        "components/toggle/examples.json": "eef5b01d859890f34dd2fea671e85f1f63279d8d3bb7e0141da324627f259213",
+        "components/toggle/examples.json": "2292c12e3fee6bd8e4c77c55e644f6e47468e9382b13d51b2b21667336eda7b3",
         "components/toggle/example.html": "5f6cb8f6950e344c1c6bb1ace1d7dd6875c353f07249d261b741b2cd43ae03e5"
       },
       "properties": {
@@ -13391,13 +13270,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-toggle",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -13481,8 +13363,8 @@
           "id": "toggle-default",
           "name": "Standalone",
           "props": {
-            "label": "Toggle",
-            "variant": "Example"
+            "label": "Enable notifications",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -13509,11 +13391,11 @@
         "examples": "components/tooltip/examples.json"
       },
       "sourceHashes": {
-        "components/tooltip/tooltip.schema.json": "81fa4c6032cc5902fdc59ea2b7b563931d7029ee6ebbf0fc4e3cec4f916b77a9",
+        "components/tooltip/tooltip.schema.json": "6b91ca78aade947da14ae72466fd675fde35709982489a8112d887f4d2e51254",
         "components/tooltip/tooltip.html": "3ce14e939b2f8c98ec90171bed310b689231787577dbee5a08c7b7671c39fa35",
         "components/tooltip/tooltip.css": "d3ba3c817a88764050415308c3c4ecb415ee9df717f2e69bfbc2d3bd50acc6f5",
         "components/tooltip/tooltip.md": "15b15cd4dffb7497f125e4cd4f96740c04949c7f5e43e4c9374b81c6ef807ad6",
-        "components/tooltip/examples.json": "cecce3d11b93fc6bf0dd2c548a1cd1bc56015cc3fc1eea97be3f31346fb00b8b",
+        "components/tooltip/examples.json": "5db4c6134fde70ee0a930e7ed9a1d8c1cfd0f94cb71b1beb93a9d4579bf6a25b",
         "components/tooltip/example.html": "3ce14e939b2f8c98ec90171bed310b689231787577dbee5a08c7b7671c39fa35"
       },
       "properties": {
@@ -13533,13 +13415,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-tooltip",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -13620,8 +13505,8 @@
           "id": "tooltip-default",
           "name": "Standalone",
           "props": {
-            "label": "Tooltip",
-            "variant": "Example"
+            "label": "Info",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -13648,11 +13533,11 @@
         "examples": "components/tree-view/examples.json"
       },
       "sourceHashes": {
-        "components/tree-view/tree-view.schema.json": "9eae7c47556780abda6c80e7c91c8262620eb24962238743d0f30d6dc9827243",
+        "components/tree-view/tree-view.schema.json": "8cbc4bd5a619af417008b6ae7ce3dade5a45247dd668451b3298f82e6a2b81eb",
         "components/tree-view/tree-view.html": "49a1c578e1b609d82a515cc56813317ad8f95de8068c71e746594fe77896edfd",
         "components/tree-view/tree-view.css": "b1a7946f0afe0a98defa3c97eeca08d33ff313d9c8a46c2827ab10bf057593ef",
         "components/tree-view/tree-view.md": "2774099316f6d9465086df5ee2a6aa06c22602a843281272054e142093af0063",
-        "components/tree-view/examples.json": "1fd27c732bb4fd8da96c71f084f5b33da8c6a323b5852d817160d663d0d4fdec",
+        "components/tree-view/examples.json": "9ea37895d211be1b35aec607528a7c55cd294f917d48cbef343fb8544f3eba43",
         "components/tree-view/example.html": "49a1c578e1b609d82a515cc56813317ad8f95de8068c71e746594fe77896edfd"
       },
       "properties": {
@@ -13672,13 +13557,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-tree-view",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -13751,8 +13639,8 @@
           "id": "tree-view-default",
           "name": "Standalone",
           "props": {
-            "label": "Tree View",
-            "variant": "Example"
+            "label": "Component tree",
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -13923,11 +13811,11 @@
         "examples": "components/video/examples.json"
       },
       "sourceHashes": {
-        "components/video/video.schema.json": "b0b76cbf9144cd6a108c05258bd1980a26106dc76b71e6b54277d0a6dc5e49d0",
+        "components/video/video.schema.json": "eb173d80e6b7a6ec87a69d4c3096f96435d4521e738e38ed04e8aef83226ff7a",
         "components/video/video.html": "18b8a4a3326ccaf02f4ca7c5f3b4baed9a9767b197ae364532f55d4fa0f5f547",
         "components/video/video.css": "3a43c9fe063a6927ee15bf7aca711f6e5f37ca0234c31333eef912dbceae1727",
         "components/video/video.md": "8c0ebf32e3de1033dddb547f289315e6e7ec5b429e190a133daded4b9976a19e",
-        "components/video/examples.json": "4d063a2a54f7cf47625b55f2dbe0bfc8a3c89ee0611de1239128a338d8d208f1",
+        "components/video/examples.json": "01a62ab8c58c9d8f614c769d380a903df83c3e8c967564011548a830d6783c64",
         "components/video/example.html": "18b8a4a3326ccaf02f4ca7c5f3b4baed9a9767b197ae364532f55d4fa0f5f547"
       },
       "properties": {
@@ -13947,13 +13835,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "embed",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-video",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "embed"
         }
       },
       "variants": {
@@ -14027,8 +13918,8 @@
           "id": "video-default",
           "name": "Standalone",
           "props": {
-            "label": "Video",
-            "variant": "Example"
+            "label": "Video preview",
+            "variant": "embed"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",
@@ -14055,11 +13946,11 @@
         "examples": "components/visually-hidden/examples.json"
       },
       "sourceHashes": {
-        "components/visually-hidden/visually-hidden.schema.json": "781a96516547b72d18dd1bd0478b3f31592e08586a9b0ae885871275be48e141",
+        "components/visually-hidden/visually-hidden.schema.json": "6b85894f7e2f4c56cd0743b02037b399e511e7e09edc0625746742af4ddf7151",
         "components/visually-hidden/visually-hidden.html": "bb14b35318e3692639aefe305c379fae5ce2c3947a9da5b4b1ec33178b2d8163",
         "components/visually-hidden/visually-hidden.css": "fcf5591f2b8e88b78f33016d41e2c42739304572b31f568ab6cae9ed065626ee",
         "components/visually-hidden/visually-hidden.md": "c4862469ab6ed144e1ea44e0a2f430d726a4f24bb3c6c675f330fa918b9d8e9f",
-        "components/visually-hidden/examples.json": "f8e597d8123ef61047b0279e5620cd28f4657adbfb8ca36c41dbd87c4b01f1f6",
+        "components/visually-hidden/examples.json": "5b602d4685e518dbee36c66aead3c040032994bd192290364cae82dc58a17ba6",
         "components/visually-hidden/example.html": "bb14b35318e3692639aefe305c379fae5ce2c3947a9da5b4b1ec33178b2d8163"
       },
       "properties": {
@@ -14079,13 +13970,16 @@
           "type": "string",
           "required": false,
           "default": null,
-          "allowedValues": null,
+          "allowedValues": [
+            "default",
+            "compact"
+          ],
           "binding": {
             "selector": ".sk-visually-hidden",
             "html": "see variantContracts; names do not imply data-variant support"
           },
           "stateOwner": "consumer",
-          "example": "Example"
+          "example": "default"
         }
       },
       "variants": {
@@ -14152,8 +14046,7 @@
           "id": "visually-hidden-default",
           "name": "Standalone",
           "props": {
-            "label": "Visually Hidden",
-            "variant": "Example"
+            "variant": "default"
           },
           "htmlFile": "example.html",
           "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating.",

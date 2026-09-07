@@ -3,8 +3,8 @@
     "id": "image-default",
     "name": "Standalone",
     "props": {
-      "label": "Image",
-      "variant": "Example"
+      "label": "SiteKit placeholder image",
+      "variant": "figure"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

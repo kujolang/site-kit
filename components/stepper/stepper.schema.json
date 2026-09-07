@@ -4,7 +4,7 @@
   "description": "A numeric input with increment and decrement actions.",
   "props": {
     "label": "string optional",
-    "variant": "string optional",
+    "variant": "number|compact",
     "value": "number",
     "min": "number optional",
     "max": "number optional",
@@ -62,12 +62,8 @@
       "id": "stepper-default",
       "name": "Standalone",
       "props": {
-        "label": "Stepper",
-        "variant": "Example",
-        "value": 1,
-        "min": 1,
-        "max": 1,
-        "step": 1
+        "label": "Seats",
+        "variant": "number"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -95,13 +91,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "number",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-stepper",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "number"
     },
     "value": {
       "type": "number",

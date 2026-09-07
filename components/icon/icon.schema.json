@@ -4,7 +4,7 @@
   "description": "A small symbolic marker with an accessible name when meaningful.",
   "props": {
     "label": "string optional",
-    "variant": "decorative|meaningful|inline|external",
+    "variant": "line|compact|decorative|meaningful|inline|external",
     "name": "string optional",
     "size": "sm|md|lg optional",
     "source": "inline SVG markup or external SVG reference optional",
@@ -60,12 +60,8 @@
       "id": "icon-default",
       "name": "Standalone",
       "props": {
-        "label": "Icon",
-        "variant": "decorative",
-        "name": "project",
-        "size": "sm",
-        "source": "Example",
-        "boxed": false
+        "label": "Confirmed",
+        "variant": "meaningful"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -74,12 +70,7 @@
       "id": "icon-decorative",
       "name": "decorative",
       "props": {
-        "label": "Icon",
-        "variant": "decorative",
-        "name": "project",
-        "size": "sm",
-        "source": "Example",
-        "boxed": false
+        "variant": "decorative"
       },
       "htmlFile": "example-decorative.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -88,12 +79,8 @@
       "id": "icon-meaningful",
       "name": "meaningful",
       "props": {
-        "label": "Icon",
-        "variant": "meaningful",
-        "name": "project",
-        "size": "sm",
-        "source": "Example",
-        "boxed": false
+        "label": "Confirmed",
+        "variant": "meaningful"
       },
       "htmlFile": "example-meaningful.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -102,12 +89,8 @@
       "id": "icon-inline",
       "name": "inline",
       "props": {
-        "label": "Icon",
-        "variant": "inline",
-        "name": "project",
-        "size": "sm",
-        "source": "Example",
-        "boxed": false
+        "label": "Confirmed",
+        "variant": "inline"
       },
       "htmlFile": "example-inline.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -116,12 +99,8 @@
       "id": "icon-external",
       "name": "external",
       "props": {
-        "label": "Icon",
-        "variant": "external",
-        "name": "project",
-        "size": "sm",
-        "source": "Example",
-        "boxed": false
+        "label": "Confirmed",
+        "variant": "external"
       },
       "htmlFile": "example-external.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -151,6 +130,8 @@
       "required": false,
       "default": null,
       "allowedValues": [
+        "line",
+        "compact",
         "decorative",
         "meaningful",
         "inline",
@@ -161,7 +142,7 @@
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "decorative"
+      "example": "meaningful"
     },
     "name": {
       "type": "string",

@@ -4,7 +4,7 @@
   "description": "A menu button with grouped actions.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "default|compact"
   },
   "variants": [
     "default",
@@ -52,8 +52,8 @@
       "id": "dropdown-menu-default",
       "name": "Standalone",
       "props": {
-        "label": "Dropdown Menu",
-        "variant": "Example"
+        "label": "Actions",
+        "variant": "default"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -92,13 +92,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "default",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-dropdown-menu",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "default"
     }
   },
   "variantContracts": {

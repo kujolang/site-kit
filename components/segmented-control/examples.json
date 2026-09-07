@@ -3,8 +3,8 @@
     "id": "segmented-control-default",
     "name": "Standalone",
     "props": {
-      "label": "Segmented Control",
-      "variant": "Example"
+      "label": "View mode",
+      "variant": "single-select"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

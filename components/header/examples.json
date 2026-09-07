@@ -3,20 +3,7 @@
     "id": "header-default",
     "name": "Standalone",
     "props": {
-      "brand": "SiteKit",
-      "nav": [
-        {
-          "label": "Example",
-          "content": "Text or trusted authored markup",
-          "href": "#main"
-        }
-      ],
-      "actions": [
-        {
-          "label": "Example",
-          "content": "Text or trusted authored markup"
-        }
-      ]
+      "brand": "SiteKit"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

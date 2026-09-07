@@ -3,7 +3,6 @@
     "id": "roadmap-default",
     "name": "Standalone",
     "props": {
-      "heading": "Build with SiteKit",
       "milestones": [
         {
           "label": "Example",

@@ -3,8 +3,8 @@
     "id": "radio-button-default",
     "name": "Standalone",
     "props": {
-      "label": "Radio Button",
-      "variant": "Example"
+      "label": "Starter",
+      "variant": "default"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

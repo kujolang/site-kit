@@ -8,8 +8,7 @@
           "label": "Example",
           "content": "Text or trusted authored markup"
         }
-      ],
-      "columns": "2"
+      ]
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -23,8 +22,7 @@
           "label": "Example",
           "content": "Text or trusted authored markup"
         }
-      ],
-      "columns": "2"
+      ]
     },
     "htmlFile": "example-dense.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

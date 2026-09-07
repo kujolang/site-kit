@@ -23,7 +23,7 @@ function validateContract(s, examples, css) {
     assert.equal(p.required,s.requiredFields.includes(name),`contradictory required: ${name}`);
     assert(['consumer','native','sitekit'].includes(p.stateOwner));
     assert(p.binding.selector && p.binding.html);
-    if(p.allowedValues) assert(Array.isArray(p.allowedValues) && p.allowedValues.length && p.allowedValues.every(v=>typeof v==='string'));
+    if(p.allowedValues) { assert(Array.isArray(p.allowedValues) && p.allowedValues.length && p.allowedValues.every(v=>typeof v==='string')); assert(p.allowedValues.includes(p.example), `invalid property example ${name}`); }
     if(p.type==='array') assert(p.items && p.items.required.every(k=>k in p.items.properties));
   }
   assert.deepEqual(Object.keys(s.variantContracts).sort(),[...s.variants].sort());

@@ -3,8 +3,8 @@
     "id": "navigation-default",
     "name": "Standalone",
     "props": {
-      "label": "Navigation",
-      "variant": "Example"
+      "label": "Primary",
+      "variant": "primary"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

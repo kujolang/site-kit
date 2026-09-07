@@ -4,7 +4,7 @@
   "description": "A file input drop area with a clear label.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "dropzone|compact"
   },
   "variants": [
     "dropzone",
@@ -61,8 +61,8 @@
       "id": "file-upload-default",
       "name": "Standalone",
       "props": {
-        "label": "File Upload",
-        "variant": "Example"
+        "label": "Upload files",
+        "variant": "dropzone"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -90,13 +90,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "dropzone",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-file-upload",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "dropzone"
     }
   },
   "variantContracts": {

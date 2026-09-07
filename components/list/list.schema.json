@@ -4,7 +4,7 @@
   "description": "A semantic ordered or unordered list with consistent spacing.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "unordered|compact"
   },
   "variants": [
     "unordered",
@@ -47,8 +47,7 @@
       "id": "list-default",
       "name": "Standalone",
       "props": {
-        "label": "List",
-        "variant": "Example"
+        "variant": "unordered"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -76,13 +75,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "unordered",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-list",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "unordered"
     }
   },
   "variantContracts": {

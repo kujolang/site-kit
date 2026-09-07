@@ -4,7 +4,7 @@
   "description": "A file metadata row for selected or attached files.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "row|compact"
   },
   "variants": [
     "row",
@@ -54,8 +54,8 @@
       "id": "file-default",
       "name": "Standalone",
       "props": {
-        "label": "File",
-        "variant": "Example"
+        "label": "Remove",
+        "variant": "row"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -83,13 +83,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "row",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-file",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "row"
     }
   },
   "variantContracts": {

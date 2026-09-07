@@ -3,8 +3,8 @@
     "id": "color-picker-default",
     "name": "Standalone",
     "props": {
-      "label": "Color Picker",
-      "variant": "Example"
+      "label": "Accent color",
+      "variant": "default"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

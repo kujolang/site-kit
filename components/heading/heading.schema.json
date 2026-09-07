@@ -4,7 +4,7 @@
   "description": "A typographic heading pattern with optional supporting text.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "section|compact"
   },
   "variants": [
     "section",
@@ -49,8 +49,7 @@
       "id": "heading-default",
       "name": "Standalone",
       "props": {
-        "label": "Heading",
-        "variant": "Example"
+        "variant": "section"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -78,13 +77,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "section",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-heading",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "section"
     }
   },
   "variantContracts": {

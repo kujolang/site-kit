@@ -3,8 +3,8 @@
     "id": "drawer-default",
     "name": "Standalone",
     "props": {
-      "label": "Drawer",
-      "variant": "Example"
+      "label": "Close drawer",
+      "variant": "right"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

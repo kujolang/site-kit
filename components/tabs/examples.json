@@ -17,7 +17,6 @@
           "controls": "demo-tabs-panel-1"
         }
       ],
-      "selected": "Example",
       "panels": [
         {
           "id": "demo-tabs-panel-0",
@@ -32,9 +31,7 @@
           "labelledby": "demo-tabs-1"
         }
       ],
-      "label": "Tabs",
-      "activation": "automatic",
-      "orientation": "horizontal"
+      "label": "Tabs"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

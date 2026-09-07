@@ -53,7 +53,6 @@
       "id": "team-grid-default",
       "name": "Standalone",
       "props": {
-        "heading": "Build with SiteKit",
         "people": [
           {
             "label": "Example",

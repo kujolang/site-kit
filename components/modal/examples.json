@@ -3,10 +3,7 @@
     "id": "modal-default",
     "name": "Standalone",
     "props": {
-      "id": "demo-modal",
-      "title": "Review changes",
-      "open": false,
-      "dismissible": false
+      "title": "Review changes"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

@@ -4,7 +4,7 @@
   "description": "A text editing surface with formatting controls.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "basic|compact"
   },
   "variants": [
     "basic",
@@ -54,8 +54,8 @@
       "id": "rich-text-editor-default",
       "name": "Standalone",
       "props": {
-        "label": "Rich Text Editor",
-        "variant": "Example"
+        "label": "Content",
+        "variant": "basic"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -73,8 +73,8 @@
       "default": null,
       "allowedValues": null,
       "binding": {
-        "selector": "label, [aria-label], summary, button, a, span",
-        "html": "textContent or accessible name appropriate to the element"
+        "selector": "[contenteditable]",
+        "html": "aria-label or aria-labelledby on the editable textbox"
       },
       "stateOwner": "consumer",
       "example": "Rich Text Editor"
@@ -83,13 +83,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "basic",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-rich-text-editor",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "basic"
     }
   },
   "variantContracts": {

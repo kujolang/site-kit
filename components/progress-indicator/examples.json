@@ -3,8 +3,8 @@
     "id": "progress-indicator-default",
     "name": "Standalone",
     "props": {
-      "label": "Progress Indicator",
-      "variant": "Example"
+      "label": "Progress",
+      "variant": "steps"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

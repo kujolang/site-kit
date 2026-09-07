@@ -3,14 +3,12 @@
     "id": "bento-grid-default",
     "name": "Standalone",
     "props": {
-      "heading": "Build with SiteKit",
       "items": [
         {
           "label": "Example",
           "content": "Text or trusted authored markup"
         }
-      ],
-      "emphasis": "Example"
+      ]
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

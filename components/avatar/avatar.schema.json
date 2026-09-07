@@ -4,7 +4,7 @@
   "description": "A compact visual identity marker for a person, team, or object.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "initials|compact"
   },
   "variants": [
     "initials",
@@ -49,8 +49,7 @@
       "id": "avatar-default",
       "name": "Standalone",
       "props": {
-        "label": "Avatar",
-        "variant": "Example"
+        "variant": "compact"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -59,7 +58,7 @@
       "id": "avatar-initials",
       "name": "initials",
       "props": {
-        "label": "Avatar",
+        "label": "Alex Morgan",
         "variant": "initials"
       },
       "htmlFile": "example-initials.html",
@@ -88,13 +87,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "initials",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-avatar",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "compact"
     }
   },
   "variantContracts": {

@@ -3,7 +3,6 @@
     "id": "testimonial-rail-default",
     "name": "Standalone",
     "props": {
-      "heading": "Build with SiteKit",
       "quotes": [
         {
           "label": "Example",

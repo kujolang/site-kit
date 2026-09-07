@@ -71,11 +71,7 @@
             "name": "project",
             "type": "text"
           }
-        ],
-        "preview": {
-          "label": "Example",
-          "content": "Text or trusted authored markup"
-        }
+        ]
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

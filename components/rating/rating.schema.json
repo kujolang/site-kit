@@ -4,7 +4,7 @@
   "description": "A rating display or input for qualitative feedback.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "five-point|compact"
   },
   "variants": [
     "five-point",
@@ -47,8 +47,8 @@
       "id": "rating-default",
       "name": "Standalone",
       "props": {
-        "label": "Rating",
-        "variant": "Example"
+        "label": "4 out of 5 stars",
+        "variant": "five-point"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -76,13 +76,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "five-point",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-rating",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "five-point"
     }
   },
   "variantContracts": {

@@ -61,7 +61,7 @@
             "content": "Text or trusted authored markup"
           }
         ],
-        "label": "Stats Bar"
+        "label": "Project stats"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

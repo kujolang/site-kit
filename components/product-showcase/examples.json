@@ -10,12 +10,6 @@
           "content": "Text or trusted authored markup",
           "price": "$49"
         }
-      ],
-      "actions": [
-        {
-          "label": "Example",
-          "content": "Text or trusted authored markup"
-        }
       ]
     },
     "htmlFile": "example.html",

@@ -3,8 +3,8 @@
     "id": "link-default",
     "name": "Standalone",
     "props": {
-      "label": "Link",
-      "variant": "Example"
+      "label": "Read component docs",
+      "variant": "inline"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

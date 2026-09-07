@@ -4,7 +4,6 @@
     "name": "Standalone",
     "props": {
       "heading": "Build with SiteKit",
-      "body": "Semantic HTML, local assets, and reusable styles.",
       "actions": [
         {
           "label": "Example",

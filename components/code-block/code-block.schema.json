@@ -62,9 +62,7 @@
       "id": "code-block-default",
       "name": "Standalone",
       "props": {
-        "language": "Example",
-        "code": "<button class=\"sk-button\" type=\"button\">Save</button>",
-        "caption": "HTML example"
+        "code": "<button class=\"sk-button\" type=\"button\">Save</button>"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

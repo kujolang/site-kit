@@ -3,8 +3,8 @@
     "id": "tooltip-default",
     "name": "Standalone",
     "props": {
-      "label": "Tooltip",
-      "variant": "Example"
+      "label": "Info",
+      "variant": "default"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

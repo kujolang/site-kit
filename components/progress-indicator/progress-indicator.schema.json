@@ -4,7 +4,7 @@
   "description": "A compact step or status indicator for multi-step flows.",
   "props": {
     "label": "string optional",
-    "variant": "string optional"
+    "variant": "steps|compact"
   },
   "variants": [
     "steps",
@@ -51,8 +51,8 @@
       "id": "progress-indicator-default",
       "name": "Standalone",
       "props": {
-        "label": "Progress Indicator",
-        "variant": "Example"
+        "label": "Progress",
+        "variant": "steps"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -80,13 +80,16 @@
       "type": "string",
       "required": false,
       "default": null,
-      "allowedValues": null,
+      "allowedValues": [
+        "steps",
+        "compact"
+      ],
       "binding": {
         "selector": ".sk-progress-indicator",
         "html": "see variantContracts; names do not imply data-variant support"
       },
       "stateOwner": "consumer",
-      "example": "Example"
+      "example": "steps"
     }
   },
   "variantContracts": {

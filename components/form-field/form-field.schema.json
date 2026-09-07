@@ -67,15 +67,8 @@
       "id": "form-field-default",
       "name": "Standalone",
       "props": {
-        "id": "demo-form-field",
         "label": "Form Field",
-        "type": "text",
-        "required": false,
-        "autocomplete": "Example",
-        "error": "Example",
-        "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
-        "help": "Use a short project name.",
-        "name": "project"
+        "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">"
       },
       "htmlFile": "example.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -84,15 +77,8 @@
       "id": "form-field-select",
       "name": "select",
       "props": {
-        "id": "demo-form-field",
-        "label": "Form Field",
-        "type": "text",
-        "required": false,
-        "autocomplete": "Example",
-        "error": "Example",
-        "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
-        "help": "Use a short project name.",
-        "name": "project"
+        "label": "Workspace",
+        "control": "<select id=\"field-select\" name=\"workspace\" aria-describedby=\"field-select-help\"><option>Personal</option><option>Team</option></select>"
       },
       "htmlFile": "example-select.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -101,15 +87,8 @@
       "id": "form-field-textarea",
       "name": "textarea",
       "props": {
-        "id": "demo-form-field",
-        "label": "Form Field",
-        "type": "text",
-        "required": false,
-        "autocomplete": "Example",
-        "error": "Example",
-        "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
-        "help": "Use a short project name.",
-        "name": "project"
+        "label": "Description",
+        "control": "<textarea id=\"field-textarea\" name=\"description\" aria-describedby=\"field-textarea-help\"></textarea>"
       },
       "htmlFile": "example-textarea.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
@@ -118,15 +97,8 @@
       "id": "form-field-checkbox",
       "name": "checkbox",
       "props": {
-        "id": "demo-form-field",
-        "label": "Form Field",
-        "type": "text",
-        "required": false,
-        "autocomplete": "Example",
-        "error": "Example",
-        "control": "<input id=\"demo-form-field\" name=\"project\" type=\"text\" aria-describedby=\"demo-form-field-help\">",
-        "help": "Use a short project name.",
-        "name": "project"
+        "label": "Receive updates",
+        "control": "<input id=\"field-checkbox\" name=\"updates\" type=\"checkbox\">"
       },
       "htmlFile": "example-checkbox.html",
       "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."

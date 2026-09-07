@@ -3,8 +3,8 @@
     "id": "search-input-default",
     "name": "Standalone",
     "props": {
-      "label": "Search Input",
-      "variant": "Example"
+      "label": "Search",
+      "variant": "default"
     },
     "htmlFile": "example.html",
     "notes": "Consumer-authored reference, no automatic prop binding. Prefix IDs before repeating."
