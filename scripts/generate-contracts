@@ -5,9 +5,6 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const assert = require('node:assert/strict');
 const root = path.resolve(__dirname, '..');
-const read = p => fs.readFileSync(path.join(root,p),'utf8');
-const json = p => JSON.parse(read(p));
-const hash = p => crypto.createHash('sha256').update(read(p)).digest('hex');
 function validateContract(s, examples, css) {
   assert(typeof s.name === 'string' && s.name.trim());
   assert(typeof s.description === 'string' && s.description.trim());
@@ -47,6 +44,17 @@ function validateContract(s, examples, css) {
   }
 }
 function generate() {
+  // One invocation owns one source snapshot. Never retain it across rebuilds.
+  const sources = new Map(), parsed = new Map();
+  const read = p => {
+    if (!sources.has(p)) sources.set(p, fs.readFileSync(path.join(root, p), 'utf8'));
+    return sources.get(p);
+  };
+  const json = p => {
+    if (!parsed.has(p)) parsed.set(p, JSON.parse(read(p)));
+    return parsed.get(p);
+  };
+  const hash = p => crypto.createHash('sha256').update(read(p)).digest('hex');
   const components=fs.readdirSync(path.join(root,'components')).sort().map(slug=>{
     const prefix=`components/${slug}/`,s=json(prefix+slug+'.schema.json'),examples=json(prefix+'examples.json'),css=read(prefix+slug+'.css');
     validateContract(s,examples,css);
@@ -59,7 +67,7 @@ function generate() {
   const dest='docs/sitekit-gap-closure/';
   const write=(p,value)=>fs.writeFileSync(path.join(root,p),JSON.stringify(value,null,2)+'\n');
   write(dest+'component-manifest.json',{schemaVersion:2,libraryVersion:json('package.json').version,sourceIdentity:'SHA-256 sourceHashes per component; commit is recorded in VERIFICATION.md',runtimeSourceHash:hash('scripts/sitekit-behavior.js'),components});
-  write(dest+'token-manifest.json',{schemaVersion:2,core:json('tokens/core.json'),semantic:json('tokens/semantic.json'),themes:Object.fromEntries(fs.readdirSync(path.join(root,'tokens/themes')).sort().map(f=>[f.replace('.json',''),json('tokens/themes/'+f)])),sourceHashes:Object.fromEntries(['tokens/core.json','tokens/semantic.json',...fs.readdirSync(path.join(root,'tokens/themes')).map(f=>'tokens/themes/'+f)].map(p=>[p,hash(p)]))});
+  const tokenDocument = {schemaVersion:2,core:json('tokens/core.json'),semantic:json('tokens/semantic.json'),themes:Object.fromEntries(fs.readdirSync(path.join(root,'tokens/themes')).sort().map(f=>[f.replace('.json',''),json('tokens/themes/'+f)])),sourceHashes:Object.fromEntries(['tokens/core.json','tokens/semantic.json',...fs.readdirSync(path.join(root,'tokens/themes')).map(f=>'tokens/themes/'+f)].map(p=>[p,hash(p)]))};
   const flatten = (object, prefix = []) => Object.entries(object).flatMap(([k,v]) => v && typeof v === 'object' && 'value' in v ? [[prefix.concat(k).join('.'),String(v.value)]] : v && typeof v === 'object' ? flatten(v,prefix.concat(k)) : []);
   const baseTokens = Object.fromEntries([...flatten(json('tokens/core.json')),...flatten(json('tokens/semantic.json'))]);
   const resolveToken = (key, values, trail = []) => {
@@ -67,7 +75,6 @@ function generate() {
     return values[key].replace(/\{([^}]+)\}/g,(_,ref)=>resolveToken(ref,values,trail.concat(key)));
   };
   const themeTokens = Object.fromEntries(fs.readdirSync(path.join(root,'tokens/themes')).sort().map(f=>[f.replace('.json',''),{...baseTokens,...Object.fromEntries(flatten(json('tokens/themes/'+f).tokens))}]));
-  const tokenDocument = json(dest+'token-manifest.json');
   tokenDocument.tokens = Object.entries(baseTokens).map(([id,value])=>{
     const variable='--sk-'+id.replace(/\./g,'-').replace(/([a-z0-9])([A-Z])/g,'$1-$2').toLowerCase();
     return {id,variable,value,references:[...value.matchAll(/\{([^}]+)\}/g)].map(m=>m[1]),resolved:resolveToken(id,baseTokens),themes:Object.fromEntries(Object.entries(themeTokens).map(([name,values])=>[name,resolveToken(id,values)])),consumers:components.filter(c=>c.tokenReferences.includes(variable)).map(c=>c.slug)};
