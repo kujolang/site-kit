@@ -201,10 +201,8 @@
   function enhanceModal(modal) {
     if (enhancedModals.has(modal)) return;
     enhancedModals.add(modal); owner = modal;
-    var openers = modal.id ? controlsTargeting('data-sk-modal-open', modal.id) : [];
-    var closeButtons = modal.querySelectorAll('[data-sk-modal-close], [data-sk-modal-dismiss]');
     var previous = null;
-    var updateOpeners = function () { openers.forEach(function (opener) { opener.setAttribute("aria-expanded", String(modal.open)); }); };
+    var updateOpeners = function () { (modal.id ? controlsTargeting('data-sk-modal-open', modal.id) : []).forEach(function (opener) { opener.setAttribute("aria-expanded", String(modal.open)); }); };
     updateOpeners();
     var close = function () {
       if (typeof modal.close === 'function') modal.close(); else modal.hidden = true;
@@ -230,8 +228,6 @@
       enhancedDrawers.add(drawer); owner = drawer;
       var id = drawer.id || nextId('sk-drawer');
       drawer.id = id;
-      var openers = controlsTargeting('data-sk-drawer-open', id);
-      var closeButtons = drawer.querySelectorAll('[data-sk-drawer-close], [data-sk-drawer-dismiss]');
       var previous = null;
       var shell = drawer.closest('.sk-drawer-shell');
       var scrim = shell ? shell.querySelector('.sk-drawer-scrim, [data-sk-drawer-scrim]') : null;
@@ -393,10 +389,15 @@
     listen(input, 'blur', function () { input.value = committed; close(); });
   }
   function dateValue(date) { return String(date.getFullYear()).padStart(4, '0') + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'); }
+  function calendarDate(year, month, day) {
+    var date = new Date(0);
+    date.setFullYear(year, month, day); date.setHours(12, 0, 0, 0);
+    return date;
+  }
   function parseDate(value) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(value || '')) return null;
-    var parts = value.split('-').map(Number), date = new Date(0); date.setFullYear(parts[0], parts[1] - 1, parts[2]); date.setHours(12, 0, 0, 0);
-    return dateValue(date) === value ? date : null;
+    var parts = value.split('-').map(Number), date = calendarDate(parts[0], parts[1] - 1, parts[2]);
+    return date.getFullYear() >= 1 && dateValue(date) === value ? date : null;
   }
   function setupDate(root) {
     var input = root.querySelector('input[type="date"]');
@@ -407,17 +408,20 @@
     if (root.querySelector('[data-weekdays]')) root.querySelector('[data-weekdays]').hidden = false;
     var today = new Date(), cursor = parseDate(input.value) || today;
     header.setAttribute('aria-live', 'polite');
-    function allowed(d) { var v = dateValue(d); return (!input.min || v >= input.min) && (!input.max || v <= input.max); }
+    function editable() { return !input.matches(':disabled') && !input.readOnly; }
+    function inRange(d) { return d.getFullYear() >= 1 && d.getFullYear() <= 9999; }
+    function allowed(d) { var v = dateValue(d); return inRange(d) && (!parseDate(input.min) || v >= input.min) && (!parseDate(input.max) || v <= input.max); }
     function render(focus) {
       var year = cursor.getFullYear(), month = cursor.getMonth();
       header.textContent = cursor.toLocaleDateString('en-US', { month: 'long', year: 'numeric' }); grid.setAttribute('aria-label', header.textContent);
-      grid.replaceChildren(); var first = new Date(year, month, 1), count = new Date(year, month + 1, 0).getDate(), row;
+      controls.forEach(function (b, i) { b.disabled = !editable() || !inRange(calendarDate(year, month + (i ? 1 : -1), 1)); });
+      grid.replaceChildren(); var first = calendarDate(year, month, 1), count = calendarDate(year, month + 1, 0).getDate(), row;
       for (var slot = 0; slot < Math.ceil((first.getDay() + count) / 7) * 7; slot++) {
         if (slot % 7 === 0) { row = document.createElement('div'); row.setAttribute('role', 'row'); grid.append(row); }
         var cell = document.createElement('div'); cell.setAttribute('role', 'gridcell'); row.append(cell);
         var day = slot - first.getDay() + 1; if (day < 1 || day > count) continue;
-        var d = new Date(year, month, day, 12), key = dateValue(d), button = document.createElement('button');
-        button.type = 'button'; button.textContent = String(day); button.dataset.date = key; button.disabled = !allowed(d);
+        var d = calendarDate(year, month, day), key = dateValue(d), button = document.createElement('button');
+        button.type = 'button'; button.textContent = String(day); button.dataset.date = key; button.disabled = !editable() || !allowed(d);
         button.setAttribute('aria-label', d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
         cell.setAttribute('aria-selected', String(input.value === key));
         if (dateValue(today) === key) button.setAttribute('aria-current', 'date');
@@ -426,11 +430,11 @@
       var target = grid.querySelector('button[tabindex="0"]') || grid.querySelector('button:not([disabled])');
       if (target) { target.tabIndex = 0; if (focus) target.focus(); }
     }
-    controls.forEach(function (b, i) { listen(b, 'click', function () { cursor = new Date(cursor.getFullYear(), cursor.getMonth() + (i ? 1 : -1), 1, 12); render(false); }); });
-    listen(grid, 'click', function (e) { var b = e.target.closest('button[data-date]'); if (!b || b.disabled) return; input.value = b.dataset.date; cursor = parseDate(input.value); input.dispatchEvent(new Event('input', { bubbles: true })); input.dispatchEvent(new Event('change', { bubbles: true })); render(true); });
+    controls.forEach(function (b, i) { listen(b, 'click', function () { var next = calendarDate(cursor.getFullYear(), cursor.getMonth() + (i ? 1 : -1), 1); if (!editable() || !inRange(next)) return; cursor = next; render(false); }); });
+    listen(grid, 'click', function (e) { var b = e.target.closest('button[data-date]'); if (!b || b.disabled || !editable() || !allowed(parseDate(b.dataset.date))) return; input.value = b.dataset.date; cursor = parseDate(input.value); input.dispatchEvent(new Event('input', { bubbles: true })); input.dispatchEvent(new Event('change', { bubbles: true })); render(true); });
     listen(input, 'change', function () { cursor = parseDate(input.value) || today; render(false); });
     listen(grid, 'keydown', function (e) {
-      var b = e.target.closest('[data-date]'); if (!b) return; var d = parseDate(b.dataset.date), delta;
+      var b = e.target.closest('[data-date]'); if (!b || !editable()) return; var d = parseDate(b.dataset.date), delta;
       var rtl = getComputedStyle(root).direction === 'rtl';
       if (e.key === 'ArrowRight') delta = rtl ? -1 : 1;
       else if (e.key === 'ArrowLeft') delta = rtl ? 1 : -1;
@@ -438,7 +442,7 @@
       else if (e.key === 'ArrowUp') delta = -7;
       else if (e.key === 'Home') delta = -d.getDay();
       else if (e.key === 'End') delta = 6 - d.getDay();
-      else if (e.key === 'PageDown' || e.key === 'PageUp') { var month = d.getMonth() + (e.key === 'PageDown' ? 1 : -1), day = d.getDate(); d.setDate(1); d.setMonth(month); d.setDate(Math.min(day, new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate())); }
+      else if (e.key === 'PageDown' || e.key === 'PageUp') { var month = d.getMonth() + (e.key === 'PageDown' ? 1 : -1), day = d.getDate(); d.setDate(1); d.setMonth(month); d.setDate(Math.min(day, calendarDate(d.getFullYear(), d.getMonth() + 1, 0).getDate())); }
       else return;
       e.preventDefault(); if (delta !== undefined) d.setDate(d.getDate() + delta); if (!allowed(d)) return; cursor = d; render(true);
     });
