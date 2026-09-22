@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 import fs from 'node:fs';
-import http from 'node:http';
+import { createStaticServer } from '../helpers/static-server.mjs';
 import os from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -56,19 +56,18 @@ try {
   assert.equal(pathToFileURL(path.join(consumer, 'index.html')).protocol, 'file:');
   const css = fs.readFileSync(path.join(consumer, 'sitekit', 'sitekit.css'), 'utf8');
   assert.match(css, /\.\/fonts\/DepartureMono-Regular\.woff2/);
-  const server = http.createServer((request, response) => {
-    const pathname = decodeURIComponent(new URL(request.url, 'http://127.0.0.1').pathname).replace(/^\//, '');
-    const file = path.resolve(consumer, pathname || 'index.html');
-    if (!file.startsWith(consumer) || !fs.existsSync(file)) { response.writeHead(404).end(); return; }
-    response.writeHead(200).end(fs.readFileSync(file));
-  });
-  await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
-  const port = server.address().port;
-  for (const resource of ['index.html', 'sitekit/sitekit.css', 'sitekit/sitekit.js', 'sitekit/fonts/DepartureMono-Regular.woff2']) {
-    const response = await fetch(`http://127.0.0.1:${port}/${resource}`);
-    assert.equal(response.status, 200, `clean HTTP consumer failed: ${resource}`);
+  const server = await createStaticServer(consumer);
+  try {
+    await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+    const port = server.address().port;
+    for (const resource of ['index.html', 'sitekit/sitekit.css', 'sitekit/sitekit.js', 'sitekit/fonts/DepartureMono-Regular.woff2']) {
+      const response = await fetch(`http://127.0.0.1:${port}/${resource}`);
+      assert.equal(response.status, 200, `clean HTTP consumer failed: ${resource}`);
+      await response.arrayBuffer();
+    }
+  } finally {
+    await new Promise((resolve) => server.close(resolve));
   }
-  await new Promise((resolve) => server.close(resolve));
 } finally {
   fs.rmSync(temporary, { recursive: true, force: true });
 }
