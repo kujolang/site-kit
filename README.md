@@ -33,7 +33,7 @@ npm run build
 cp -R dist /path/to/consumer/sitekit
 ```
 
-Alternatively, download the GitHub release archive and copy its `dist/` directory. Do not flatten it: the font URLs in `sitekit.css` require `fonts/` to remain beside the CSS file. The archive and distribution include the SiteKit MIT license and the separate Departure Mono license.
+Alternatively, copy `dist/` from a published release archive when available. The tag workflow prepares archives as GitHub Actions artifacts; publishing them as a GitHub Release is a separate maintainer step. Do not flatten it: the font URLs in `sitekit.css` require `fonts/` to remain beside the CSS file. The archive and distribution include the SiteKit MIT license and the separate Departure Mono license.
 
 ## Quick Start
 
@@ -114,3 +114,11 @@ SiteKit v1 does not promise npm publication, a hosted component service, univers
 ## Current implementation contracts
 
 See [gap-closure handoff](docs/sitekit-gap-closure/README.md) for scoped enhancement, bounded widgets, compatibility aliases, current metadata and verification. [Reference compositions](examples/reference-compositions/index.html) demonstrate forms, native media, documentation navigation and local fixture search.
+
+## Hardening verification
+
+`npm run test:tooling` checks fixture-server failure boundaries, generation cache lifetime, and generated drift detection. `npm run generated:check` rejects staged, unstaged, and untracked generated changes against HEAD after two deterministic builds. Commit intended regenerated outputs before running that gate.
+
+`node tests/bench/generation.cjs` measures five contract-generation runs (file reads, bytes read, elapsed time, and peak RSS). Timing is diagnostic; CI enforces one read per source per invocation, not a machine-dependent latency threshold. See [the repository audit](docs/audits/repository-hardening.md).
+
+The ShipCheck CI job pins Kujo and ShipCheck revisions and uses Cargo’s lockfile. Advance those refs together with a successful local ShipCheck gate against SiteKit; do not silently follow moving default branches.

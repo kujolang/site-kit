@@ -1,0 +1,5 @@
+{
+  "request": "GET /%",
+  "exitCode": 1,
+  "uncaughtURIError": true
+}

@@ -1,0 +1,4 @@
+generated css
+current contracts validated and generated: 86
+generated DESIGN.md and docs/components.md
+generated dist/sitekit.css and dist/sitekit.js

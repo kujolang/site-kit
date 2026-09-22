@@ -1,0 +1,16 @@
+{
+  "@axe-core/playwright": {
+    "current": "4.12.1",
+    "wanted": "4.12.1",
+    "latest": "4.13.0",
+    "dependent": "site-kit",
+    "location": "/Users/robertdevore/2026/Kujolang/kujo-repos/site-kit/node_modules/@axe-core/playwright"
+  },
+  "@playwright/test": {
+    "current": "1.62.1",
+    "wanted": "1.62.1",
+    "latest": "1.63.0",
+    "dependent": "site-kit",
+    "location": "/Users/robertdevore/2026/Kujolang/kujo-repos/site-kit/node_modules/@playwright/test"
+  }
+}

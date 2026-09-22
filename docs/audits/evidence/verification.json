@@ -1,0 +1,39 @@
+{
+  "repository": "kujolang/site-kit",
+  "branch": "main",
+  "startingSHA": "9629c4cb2a42f62f80be6159c9d63a141ccbb696",
+  "verifiedImplementationSHA": "789c5f32d6fb8e4d8ba3a299120ee908d0d58e86",
+  "node": "v26.7.0",
+  "baselineBrowser": {
+    "passed": 529,
+    "skipped": 56,
+    "failed": 3,
+    "failures": "aggregate accessibility/mobile-menu timeouts"
+  },
+  "finalBrowser": {
+    "startTime": "2026-09-22T18:56:14.066Z",
+    "duration": 843580.043,
+    "expected": 585,
+    "skipped": 72,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "newBrowserRegressions": {
+    "passed": 18,
+    "engines": [
+      "chromium",
+      "firefox",
+      "webkit"
+    ]
+  },
+  "toolingGroupsPassed": 3,
+  "syntaxFilesPassed": 38,
+  "generatedDigest": "b844acf683df6ecd25b6aa2d741d69b91a28cde7606af473b9abf406a664af97",
+  "npmTestExitCode": 0,
+  "generatedCheckExitCode": 0,
+  "shipcheckGateExitCode": 0,
+  "dependencyAdvisories": 0,
+  "cssBytes": 127533,
+  "javascriptBytesBefore": 39818,
+  "javascriptBytesAfter": 40158
+}

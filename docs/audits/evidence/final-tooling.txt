@@ -1,0 +1,11 @@
+✔ generated check catches untracked, staged, modified and nondeterministic output (7524.254405ms)
+✔ generation reads each source once, preserves bytes, and reloads between invocations (1120.638133ms)
+✔ fixture server rejects malformed and escaped paths without losing availability (157.53924ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7795.986156

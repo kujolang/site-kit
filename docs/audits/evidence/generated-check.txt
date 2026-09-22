@@ -1,0 +1,16 @@
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.0.0 generated:check
+> node scripts/check-generated
+
+generated css
+current contracts validated and generated: 86
+generated DESIGN.md and docs/components.md
+generated dist/sitekit.css and dist/sitekit.js
+snapshot written: 86 components
+generated css
+current contracts validated and generated: 86
+generated DESIGN.md and docs/components.md
+generated dist/sitekit.css and dist/sitekit.js
+snapshot written: 86 components
+generated output check passed: b844acf683df6ecd25b6aa2d741d69b91a28cde7606af473b9abf406a664af97

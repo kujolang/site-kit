@@ -1,0 +1,3 @@
+@kujolang/sitekit@1.0.0 /Users/robertdevore/2026/Kujolang/kujo-repos/site-kit
+├── @axe-core/playwright@4.12.1
+└── @playwright/test@1.62.1

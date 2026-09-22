@@ -134,6 +134,7 @@ old-components/
 /artifacts/security/
 /artifacts/release/
 /artifacts/browser/
+/artifacts/audit/
 
 # Local test outputs commonly emitted by Kujo tool repos
 /tests/tmp/
