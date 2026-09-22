@@ -7,7 +7,7 @@ const { execFileSync } = require('child_process');
 
 const root = path.resolve(__dirname, '..');
 const check = process.argv.includes('--check');
-const supported = new Set(['.css', '.html', '.js', '.json', '.md', '.mjs', '.toml', '.yaml', '.yml']);
+const supported = new Set(['.cjs', '.css', '.html', '.js', '.json', '.md', '.mjs', '.toml', '.yaml', '.yml']);
 const excluded = new Set(['.git', '.lens', '.workcell', 'artifacts', 'node_modules', 'playwright-report', 'test-results']);
 
 function walk(directory = root) {

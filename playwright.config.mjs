@@ -10,7 +10,7 @@ export default defineConfig({
   retries: 0,
   timeout: 60_000,
   reporter: [
-    ['line'],
+    ['dot'],
     ['html', { outputFolder: 'artifacts/browser/playwright-report', open: 'never' }],
     ['json', { outputFile: 'artifacts/browser/playwright-report.json' }],
   ],

@@ -30,6 +30,8 @@ jobs:
         run: npm run format:check
       - name: Build generated outputs
         run: npm run build
+      - name: Verify tooling failure paths and generation efficiency
+        run: npm run test:tooling
       - name: Lint source contracts
         run: npm run lint
       - name: Validate schemas, semantics, versions, links, and distribution
@@ -65,14 +67,16 @@ jobs:
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           repository: kujolang/kujo
+          ref: cf785c0a7953717af16b657cda05b85d628144c5
           path: kujo
       - name: Checkout ShipCheck
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           repository: kujolang/shipcheck
+          ref: 111bfc83c832050877cb9d4fd82908aaf6d14749
           path: shipcheck
       - name: Build Kujo
-        run: cargo build --manifest-path kujo/Cargo.toml --release
+        run: cargo build --manifest-path kujo/Cargo.toml --release --locked
       - name: Run ShipCheck gate
         working-directory: shipcheck
         run: ../kujo/target/release/kujo run shipcheck.kujo gate --dir ../site-kit --format json

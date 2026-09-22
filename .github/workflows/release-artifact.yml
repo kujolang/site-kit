@@ -33,7 +33,7 @@ jobs:
       - name: Run rendered browser and accessibility matrix
         run: npm run browser:test
       - name: Reject generated-output drift
-        run: git diff --exit-code -- css/generated DESIGN.md docs/components.md dist tests/visual/component-snapshot.json
+        run: npm run generated:check
       - name: Build deterministic archive and checksum
         run: npm run release:archive
       - name: Upload inert release assets

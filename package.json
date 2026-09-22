@@ -48,9 +48,10 @@
     "generated:check": "node scripts/check-generated",
     "release:archive": "node scripts/release-archive",
     "release:check": "node tests/release/package-content.mjs",
-    "test:static": "npm run format:check && npm run build && npm run lint && npm run validate && npm run snapshot && npm run smoke && npm run release:check",
+    "test:static": "npm run format:check && npm run build && npm run test:tooling && npm run lint && npm run validate && npm run snapshot && npm run smoke && npm run release:check",
     "test": "npm run test:static && npm run browser:test",
-    "validate:metadata": "node tests/contract/component-contracts.cjs"
+    "validate:metadata": "node tests/contract/component-contracts.cjs",
+    "test:tooling": "node --test tests/tooling/*.test.*"
   },
   "license": "MIT",
   "devDependencies": {

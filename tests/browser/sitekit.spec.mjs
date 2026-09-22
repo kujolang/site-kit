@@ -51,18 +51,17 @@ for (const fixture of pages) {
   }
 }
 
-test('automated WCAG A and AA scan', async ({ page, browserName }) => {
-  test.setTimeout(120_000);
-  const scanPages = browserName === 'chromium' ? pages : pages.filter((fixture) => fixture.name === 'consumer-dashboard');
-  for (const fixture of scanPages) {
-    for (const theme of themes) {
+for (const fixture of pages) {
+  for (const theme of themes) {
+    test(`automated WCAG A and AA / ${fixture.name} / ${theme}`, async ({ page, browserName }) => {
+      test.skip(browserName !== 'chromium' && fixture.name !== 'consumer-dashboard', 'Same representative engine coverage as the original accessibility matrix.');
       await page.goto(fixture.path);
       await page.evaluate((selectedTheme) => { document.documentElement.dataset.theme = selectedTheme; }, theme);
       const accessibility = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
       expect(accessibility.violations, `${fixture.name} / ${theme}`).toEqual([]);
-    }
+    });
   }
-});
+}
 
 test('dashboard keyboard, focus, state, and dismissal contracts', async ({ page }) => {
   await page.goto('/examples/consumer-dashboard/index.html');

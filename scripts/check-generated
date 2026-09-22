@@ -37,12 +37,13 @@ function digest() {
   return sum.digest('hex');
 }
 
-run('npm', ['run', 'build']);
-run('npm', ['run', 'snapshot']);
+run(process.execPath, ['scripts/build']);
+run(process.execPath, ['scripts/snapshot-components']);
 const first = digest();
-run('npm', ['run', 'build']);
-run('npm', ['run', 'snapshot']);
+run(process.execPath, ['scripts/build']);
+run(process.execPath, ['scripts/snapshot-components']);
 const second = digest();
 if (first !== second) throw new Error(`generation is not deterministic: ${first} != ${second}`);
-run('git', ['diff', '--exit-code', '--', ...outputs]);
+const changes = execFileSync('git', ['status', '--porcelain', '--untracked-files=all', '--ignored=matching', '--', ...outputs], { cwd: root, encoding: 'utf8' }).trim();
+if (changes) throw new Error(`generated output differs from HEAD:\n${changes}`);
 console.log(`generated output check passed: ${first}`);
