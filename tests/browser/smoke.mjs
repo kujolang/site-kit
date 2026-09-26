@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import http from 'node:http';
+import { createStaticServer } from '../helpers/static-server.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -40,18 +40,17 @@ required(!/<div[^>]+role=["']button/.test(dashboard), 'consumer example must not
 required(/<h1[\s>]/.test(dashboard), 'consumer example must have an h1');
 required(new URL(`file://${path.join(root, 'examples/consumer-dashboard/index.html')}`).protocol === 'file:', 'file URL must resolve');
 
-const server = http.createServer((request, response) => {
-  const pathname = new URL(request.url, 'http://127.0.0.1').pathname;
-  const file = pathname === '/sitekit.css' ? path.join(root, 'dist/sitekit.css') : pathname === '/icons.svg' ? path.join(root, 'examples/icons.svg') : pathname.startsWith('/fonts/') ? path.join(root, 'dist', pathname.slice(1)) : null;
-  if (!file || !fs.existsSync(file)) { response.writeHead(404); response.end(); return; }
-  response.writeHead(200); response.end(fs.readFileSync(file));
-});
-await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
-const { port } = server.address();
-for (const resource of ['/sitekit.css', '/fonts/DepartureMono-Regular.woff2', '/icons.svg']) {
-  const response = await fetch(`http://127.0.0.1:${port}${resource}`);
-  required(response.status === 200, `HTTP consumer asset failed: ${resource}`);
+const server = await createStaticServer(root);
+try {
+  await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+  const { port } = server.address();
+  for (const resource of ['/dist/sitekit.css', '/dist/fonts/DepartureMono-Regular.woff2', '/examples/icons.svg']) {
+    const response = await fetch(`http://127.0.0.1:${port}${resource}`);
+    required(response.status === 200, `HTTP consumer asset failed: ${resource}`);
+    await response.arrayBuffer();
+  }
+} finally {
+  await new Promise((resolve) => server.close(resolve));
 }
-await new Promise((resolve) => server.close(resolve));
 
 console.log('browser smoke passed: distribution, file:// contract, HTTP assets, themes, keyboard hooks, semantics, and reduced motion');
