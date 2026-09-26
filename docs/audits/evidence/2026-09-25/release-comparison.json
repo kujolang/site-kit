@@ -1,0 +1,20 @@
+{
+  "command": "node tests/bench/release.cjs",
+  "comparison": "Archive-only code change against identical baseline payload; before runtime rebuild",
+  "before": {
+    "reads": 24,
+    "uniqueFiles": 12,
+    "maxReads": 2,
+    "bytes": 459486,
+    "archiveBytes": 79087,
+    "sha256": "c0f55b31396b050f4fa811464a1f01684d94b46af3099157c3612aea7e7ab628"
+  },
+  "after": {
+    "reads": 12,
+    "uniqueFiles": 12,
+    "maxReads": 1,
+    "bytes": 229743,
+    "archiveBytes": 79087,
+    "sha256": "c0f55b31396b050f4fa811464a1f01684d94b46af3099157c3612aea7e7ab628"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "repository": "kujolang/site-kit",
+  "branch": "main",
+  "startingSha": "fd6a9d5c8cfdadbb6f73c670f45fde1459cce8f9",
+  "endingImplementationSha": "562ab4cde6ef87d44982e36c7aa850d17db5937b",
+  "fullSuite": {
+    "command": "npm test",
+    "exitCode": 0,
+    "browserPassed": 624,
+    "browserSkipped": 72,
+    "browserUnexpected": 0,
+    "toolingGroups": 4
+  },
+  "generated": {
+    "command": "npm run generated:check",
+    "exitCode": 0,
+    "digest": "1e8c671cbb2af44b40b3e814201bfbda33007cf5c9775687828b280286ce2925"
+  },
+  "shipcheck": {
+    "exitCode": 0,
+    "gatePassed": true,
+    "warnings": [
+      "kennel-manifest",
+      "entry-point"
+    ],
+    "failedErrors": 0
+  },
+  "syntaxFilesPassed": 41,
+  "securityAdvisories": 0
+}

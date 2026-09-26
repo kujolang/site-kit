@@ -1,5 +1,7 @@
 # Verification record
 
+This is the historical gap-closure verification record for the revisions below. For the current hardening revision, distribution changes and verification receipt, see the [repository audit](../audits/repository-hardening.md).
+
 Final Linux browser matrix passed against verification commit `9c7da48` (implementation source `83cf23e`): **518 passed, 58 intentional skips, zero failures and zero flakes**, in 303,375.11 ms. See [case results](evidence/browser-results.json) and [CI steps](evidence/ci-results.json). See [tested source](evidence/tested-source.json) for the full commit, distribution hashes, runtime and Playwright versions. The package remains private, version 1.0.0, source-vendored and unpublished.
 
 ## Executed gates

@@ -1,0 +1,13 @@
+{
+  "command": "node node_modules/@playwright/test/cli.js test -c artifacts/audit/2026-09-25/regression.config.mjs",
+  "bundleRevision": "fd6a9d5c8cfdadbb6f73c670f45fde1459cce8f9",
+  "tests": 39,
+  "passed": 5,
+  "assertionFailures": 34,
+  "testTimeouts": 0,
+  "engines": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ]
+}

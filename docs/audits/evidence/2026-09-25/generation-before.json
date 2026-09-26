@@ -1,0 +1,46 @@
+{
+  "node": "v26.7.0",
+  "runs": [
+    {
+      "milliseconds": 816.122743,
+      "reads": 547,
+      "uniqueFiles": 547,
+      "bytes": 719453,
+      "maxReads": 1,
+      "maxRSS": 54852
+    },
+    {
+      "milliseconds": 359.845481,
+      "reads": 547,
+      "uniqueFiles": 547,
+      "bytes": 719453,
+      "maxReads": 1,
+      "maxRSS": 54812
+    },
+    {
+      "milliseconds": 536.799164,
+      "reads": 547,
+      "uniqueFiles": 547,
+      "bytes": 719453,
+      "maxReads": 1,
+      "maxRSS": 55192
+    },
+    {
+      "milliseconds": 758.0312220000001,
+      "reads": 547,
+      "uniqueFiles": 547,
+      "bytes": 719453,
+      "maxReads": 1,
+      "maxRSS": 55452
+    },
+    {
+      "milliseconds": 634.390003,
+      "reads": 547,
+      "uniqueFiles": 547,
+      "bytes": 719453,
+      "maxReads": 1,
+      "maxRSS": 55356
+    }
+  ],
+  "medianMilliseconds": 634.390003
+}

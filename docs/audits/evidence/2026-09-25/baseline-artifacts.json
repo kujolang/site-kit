@@ -1,0 +1,26 @@
+{
+  "dist/sitekit.css": {
+    "bytes": 127533,
+    "sha256": "3567315c051de1770d71ef823e9b127d951ef571c249c8222eaea9e9ec31b6de"
+  },
+  "dist/sitekit.js": {
+    "bytes": 40158,
+    "sha256": "f9776b2822a545bad7ef36380f204bf97020c1dd7b6431d40e2f009e498a9f62"
+  },
+  "DESIGN.md": {
+    "bytes": 11111,
+    "sha256": "790f40b2b5b75a542cb9bbd2b9b27c64fb19eab519d12fd2d79c8d30e714aa48"
+  },
+  "AGENTS.md": {
+    "bytes": 1394,
+    "sha256": "c1788302b04b3dcc6c0c7e9b06e603544f13e54fba609159c21d54a90a7aca0f"
+  },
+  "docs/components.md": {
+    "bytes": 10708,
+    "sha256": "036716f8d1958bb4a85d2976ee7b797e1f6e336bae96294dde72484079564b11"
+  },
+  "docs/sitekit-gap-closure/component-manifest.json": {
+    "bytes": 546909,
+    "sha256": "11492ef68a506da4f51a58137adc9e0fe2eb705c5c87ec309bdea9a28b216409"
+  }
+}

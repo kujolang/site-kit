@@ -1,117 +1,115 @@
-# SiteKit repository hardening — 2026-09-22
+# SiteKit repository hardening — 2026-09-25
 
-## Repository and scope
+## Repository
 
-- Repository: `kujolang/site-kit` (SiteKit 1.0.0); branch: `main`.
-- Starting SHA: `9629c4cb2a42f62f80be6159c9d63a141ccbb696`; working tree initially clean.
-- Ending audited implementation SHA: `789c5f32d6fb8e4d8ba3a299120ee908d0d58e86`. The following audit-publication commit changes documentation/evidence and the local audit-artifact ignore rule only; its own hash is available through `git log -1 -- docs/audits/repository-hardening.md`.
-- Purpose: source-vendored semantic HTML/CSS design system, 86 components, optional browser enhancement. `dist/` is the public artifact; preserve sibling fonts and icons. No backend, authentication service, hosted renderer, model provider, or MCP server.
-- Dependencies: no runtime npm dependencies; pinned development Playwright 1.62.1 and axe-core Playwright 4.12.1. Bundled Departure Mono and Tabler icons retain licenses. Kujo/ShipCheck are CI-only integrations. Known consumers include sitekit.kujolang.ai, sitekit-docs-template, docs.kujolang.ai, and other Kujo sites that vendor assets; no sibling repository was changed.
+- Repository: `kujolang/site-kit`, SiteKit 1.0.0; branch `main`.
+- Starting SHA: `fd6a9d5c8cfdadbb6f73c670f45fde1459cce8f9`; initially clean.
+- Ending implementation SHA: `562ab4cde6ef87d44982e36c7aa850d17db5937b`. The subsequent audit-publication commit contains this report and evidence; locate its exact SHA with `git log -1 -- docs/audits/repository-hardening.md`.
+- Purpose: 86 source-authored semantic HTML/CSS components, tokens, recipes, layouts and optional browser enhancements, shipped as a private source-vendored `dist/` artifact.
+- Public interfaces: `SiteKit.enhance`, `dispose`, `prefixIds`, `serializeEditor`; CSS/classes/data hooks, component metadata, package subpath exports, bundled fonts and icons. No public server, provider, MCP service or model workflow.
+- Dependencies/integrations: no runtime npm dependencies; pinned Playwright 1.62.1 and axe Playwright 4.12.1 for development. Existing CI pins Kujo and ShipCheck revisions. Known vendored consumers include sitekit.kujolang.ai and sitekit-docs-template; consumer instructions were inspected read-only.
+- The [previous audit](repository-hardening-2026-09-22.md) is preserved as historical evidence. This pass independently inspected current implementation and did not claim its prior improvements as new work.
 
 ## Baseline
 
-`npm test` passed static formatting, build, lint, schema/metadata/version/link/distribution validation, snapshot, smoke, and deterministic package-content checks. Browser launch then failed because pinned Chromium binaries were absent; that run was interrupted after repeated equivalent launch failures. `npm run browser:install` installed the exact package-pinned engines. The subsequent browser baseline used unchanged distribution bytes, with the hardened test server and byte-equivalent generator. It is therefore a runtime baseline, not an untouched-tooling rerun. Result: 529 passed, 56 existing skips, three aggregated-test timeouts (16.8 minutes). New defect regressions run against the original bundle failed in all 18 cases; two cases also exhausted their temporary runner’s 30-second deadline under concurrent load. Separate probes confirmed year remapping, disabled-input mutation, stale opener state, and the server crash.
+`npm test` started before edits, including static validation, distribution build, tooling, release and full Chromium/Firefox/WebKit checks. Baseline result: exit 0, all static gates and 585 browser cases passed, 72 expected skips, zero failures (9.4 minutes for the browser matrix). Browser cases use the original distribution throughout this run; source edits were not rebuilt until it finished. The additional defect probes ran against the same unchanged bundle using a separate configuration without global setup.
 
-Baseline measurements: `node artifacts/audit/measure-generation.cjs`, five runs through its benchmark wrapper, and SHA-256 capture of generated files. Reusable measurement code is now in `tests/bench/`. The standalone generator-only source measurement excluded scripts/module loads consistently. Full logs remain locally in `docs/audits/evidence/*.log` (ignored); small JSON receipts are versioned. Node v26.7.0, npm 11.19.0, macOS. Concurrent host/browser work affected wall-clock samples; no speedup or memory-saving claim is made.
+New native-state regression baseline: 34 assertion failures and five passes across 39 cases (4.8 minutes). Three failures exhausted the existing five-second assertion deadline while waiting for a readonly popup to stay closed; there were no test-level timeouts. The five passing cases include three native first-legend controls and two engine-specific fieldset/keyboard paths. The new archive tooling regression failed against the original script because `LICENSE` was read twice. The repaired script passed its isolated test before other changes were built.
 
-`npm audit --json` returned zero known advisories. This is an advisory-database result, not proof that dependencies contain no vulnerabilities. Package lock integrity, pinned actions, archive allowlist, private package boundary and license copying were inspected. `npm outdated --json` found newer development releases (axe Playwright 4.13.0 and Playwright 1.63.0); current/wanted versions still match the exact pins. No advisory or required behavior justified changing browser engines and visual baselines in this pass.
+`npm audit --json` reports zero known advisories; `npm ls --depth=0` matches both pins. This is not a vulnerability-free certification. Lockfile integrity, the optional macOS fsevents install script, private package boundary, third-party licenses and pinned CI actions were inspected. No dependency upgrade was needed for these changes.
+
+Five generator samples used the existing `tests/bench/generation.cjs`. Baseline: 547 reads of 547 distinct source files, maximum one read per source, 719,453 bytes. Median 634.390003 ms; browser contention means these timings are descriptive, not a reliable comparison. Node v26.7.0, macOS; exact Node 20 and remote Linux CI were not run here.
 
 ## Findings
 
-| ID | Priority | Area | Finding and evidence | Action | Status |
-| --- | --- | --- | --- | --- | --- |
-| SK-01 | P1 | Correctness | Calendar year `0096` rendered dates in `1996`; multi-argument Date construction remaps years 0–99. Baseline probe and browser regressions reproduce it. | Use explicit full-year local-noon construction throughout month/day arithmetic; constrain navigation to documented years 0001–9999. | Fixed; verified |
-| SK-02 | P1 | Native state | Calendar clicks changed disabled, readonly, and disabled-fieldset date inputs and emitted change events. | Guard selection/navigation against current native state; disable generated controls when rendering. | Fixed; verified |
-| SK-03 | P2 | Accessibility | Dynamically inserted modal opener opened its dialog but had no `aria-expanded`; captured opener array became stale. | Resolve current targeting controls whenever state synchronizes; remove unused opener/close-control snapshots. | Fixed; verified |
-| SK-04 | P2 | Security/reliability | Uncaught percent decoding on `GET /%` terminates the loopback fixture server (CWE-248, low severity). Lexical-only file containment also lacked symlink/hidden-path hardening. | Shared fixture server validates requests and real paths, rejects hidden/escaped/non-file targets, handles stream failures and disconnects; release test closes server in finally. | Fixed; verified |
-| SK-05 | P2 | Efficiency | Contract generation made 1,099 reads of 548 distinct files; package.json was read 87 times; token manifest was written then immediately reparsed. | Invocation-local source/JSON reuse; build token document in memory; no cache survives a generation call. | Fixed; verified |
-| SK-06 | P1 | Regression gates | `git diff` missed untracked and staged generated drift. Tagged workflow checked a narrower output list. | Check generated status against HEAD after two builds; reuse the full gate for tagged releases; isolated failure-path tests. | Fixed; verified |
-| SK-07 | P2 | CI reproducibility | Kujo/ShipCheck checkouts followed mutable default branches. | Pin remote-verified current commits; Cargo --locked; document updates. | Fixed; verified |
-| SK-08 | P2 | Verification | A 120-second test aggregated ten accessibility scans; the mobile-menu test aggregated nine viewport/theme scans under 60 seconds. Baseline timed out once in Chromium and twice in Firefox/WebKit. | Split both matrices into separately identifiable cases with unchanged engine/fixture/theme coverage and assertions. | Fixed; verified |
-| SK-09 | P2 | Documentation | README implied automated GitHub Release availability; workflow prepares Actions artifacts only. | State that publication is a separate maintainer step. | Fixed; verified |
+| ID | Priority | Area | Finding | Evidence | Action | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| SK-10 | P1 | Native state/correctness | Combobox commits and blur could overwrite readonly/disabled inputs and associated hidden values; readonly arrows opened options. | New browser regressions exercise click, keyboard, blur, disabled input, readonly and disabled fieldset. | Validate effective native editability at interaction boundaries, close pending interactions, preserve locked values and event silence. | Fixed; full matrix passed |
+| SK-11 | P1 | Native state/correctness | Stepper checked the `disabled` property, missing inherited fieldset disability when controls remain outside the fieldset. | Initial and dynamic fieldset regression cases. | Reuse `:disabled` plus readonly predicate, including native first-legend exception. | Fixed; full matrix passed |
+| SK-12 | P2 | I/O/integrity | Release payload read twice, separately for manifest hashing and tar content. | Instrumented 24 reads, 459,486 bytes; regression failed on second LICENSE read. | Read each payload once; hash and archive identical invocation-local buffers. | Verified with identical archive bytes |
+| SK-13 | P2 | Cleanup/resources | Smoke script retained a separate synchronous HTTP file server and closed it only on success. | `tests/browser/smoke.mjs` server and fetch loop. | Reuse tested streaming fixture server; consume responses; close in finally. | Targeted smoke passed |
 
-## Changes and compatibility
+## Changes implemented
 
-- `scripts/generate-contracts`: file contents and parsed JSON live only inside `generate()`. The first optimized generation produced byte-identical CSS, documentation, manifests, catalog and distribution. `tests/tooling/generation.test.cjs` compares output bytes, limits reads to one per source, observes changed version metadata in a second call, and rejects newly invalid JSON. Sources must remain stable during one build; this is not an atomic filesystem snapshot.
-- `scripts/check-generated`, CI and release workflows: direct Node child processes replace four nested npm launches. Child failures remain fatal. Drift errors name files rather than printing full generated diffs. The gate intentionally rejects staged changes too; commit intentional generated updates before running it. Tooling tests cover clean output, unrelated changes, staged/untracked/ignored/modified output, nondeterminism and generator failure.
-- `tests/helpers/static-server.mjs`, browser fixture and release-content test: shared asynchronous file resolution and streaming remove duplicate server logic. GET/HEAD are supported; malformed requests return 400, unsupported methods 405, missing/hidden/outside targets 404, unexpected read errors 500. Stream errors remain diagnostic and disconnected clients release streams. This is a trusted-checkout loopback fixture, not a production hardened web host or protection against a concurrent malicious filesystem writer.
-- `scripts/sitekit-behavior.js`: preserves date-only local arithmetic, leap years, min/max and native input/change events; prevents mutations of unavailable native inputs and repairs dynamic opener state. Browser regressions cover years 0096/0100/2000, endpoint navigation, disabled/readonly/fieldset state, modal close/focus restoration. Shipped runtime and manifest hashes are regenerated from source, never edited manually.
-- Browser reporting uses compact dots; HTML/JSON reports, failure traces and screenshots remain configured. Existing accessibility assertions are retained when split into independent tests.
-- Public API signatures (`enhance`, `dispose`, `prefixIds`, `serializeEditor`), exports, CSS/classes, component schemas, file-format versions, consumer configuration and environment variables are unchanged. Date interaction and modal state changes fix bugs within existing contracts. No consumer migration or sibling change is required; vendored consumers receive fixes when they next copy the complete `dist/` artifact.
-
-| Contract | Result |
-| --- | --- |
-| Public browser API and package exports | Unchanged signatures and paths. |
-| CLI behavior | Additive `test:tooling`; generated check now rejects staged/untracked/ignored output drift. |
-| Serialization/file formats and component schemas | No schema/version change; runtime hash updates are expected. |
-| Consumer config/environment variables | Unchanged. |
-| Development configuration | Compact Playwright reporter; stronger CI gates and pinned external revisions. |
-| External consumers | No migration; copy the rebuilt distribution as a unit to receive fixes. |
+- `scripts/sitekit-behavior.js`: shared `editableInput()` uses native `:disabled` semantics and readonly. Combobox opening, input, keyboard, option commit and blur honor current input state. The stepper uses the same predicate for buttons and mutations; calendar delegates its existing equivalent check to it. No observer, polling, new cache or dependency. Changes to native attributes are checked at interaction time; attributes alone do not trigger a global rerender.
+- `tests/browser/native-state.spec.mjs`: 13 cases per engine cover locked label/hidden-value preservation, event silence, closed popup state, re-enabling, initial/dynamic fieldsets and the first-legend exception. Existing date-picker, stepper, combobox and accessibility tests remain intact. CI already runs every browser spec, so these are regression gates without new workflow machinery.
+- `scripts/release-archive`: a 12-entry invocation-local buffer map replaces duplicate reads. The buffers are released when the CLI exits. This guarantees each manifest hash describes its archived bytes; it does not promise a coherent multi-file snapshot under concurrent source mutation. Builds/releases still require exclusive checkout access.
+- `tests/tooling/release-archive.test.cjs`: isolated fixture enforces one read per payload, extracts the archive and verifies every manifest hash and payload byte, then removes a required input and verifies a nonzero actionable failure without overwriting the previous archive/checksum. Existing release checks retain exact allowlists and deterministic double-build coverage. `tests/bench/release.cjs` preserves the repeatable measurement command. Intentional payload additions must update the archive allowlist, exact entries in `tests/release/package-content.mjs`, and the payload-count assertions in the tooling test together; the one-read rule and extracted-hash checks must remain intact.
+- `tests/browser/smoke.mjs`: uses the existing shared server and actual repository resource URLs; always closes server and fully consumes fetched asset bodies. Existing server tests cover malformed requests, methods, hidden paths and symlink escapes.
+- `docs/sitekit-gap-closure/API-AND-MIGRATION.md`: documents native locked-state behavior. Generated distribution and runtime hash are rebuilt from source, never manually patched. The historical gap-closure verification record now points readers to this current audit instead of implying that its old pinned revision verifies the latest bundle.
 
 ## Performance and efficiency
 
 | Measurement | Before | After | Interpretation |
 | --- | ---: | ---: | --- |
-| Contract generation file reads | 1,099 | 547 | Instrumented repository data reads; script/module loads excluded in both runs. |
-| Maximum reads of one source | 87 | 1 | Stable CI regression gate. |
-| Bytes read, identical-source optimization probe | 1,543,231 | 719,371 | Exact pre/post generator-only measurement; later package metadata edits change byte totals slightly. |
-| Generated bytes after generator-only change | Baseline SHA-256 set | Identical | `baseline-hashes.json` and `generation-hashes-after.json`. |
-| Nested npm launches in generated check | 4 | 0 | Direct Node preserves the same two build/snapshot rounds. |
-| Runtime npm dependencies | 0 | 0 | No dependency added. |
-| CSS distribution | 127,533 bytes | 127,533 bytes | No visual redesign intended. |
-| JavaScript distribution | 39,818 bytes | 40,158 bytes | Correctness guards add a small amount of code; no runtime latency improvement claimed. |
+| Release payload reads | 24 | 12 | Same 12 payload files; exact instrumentation. |
+| Release payload bytes read | 459,486 | 229,743 | Same source bytes in isolated archive-only comparison. |
+| Archive size, identical inputs | 79,087 bytes | 79,087 bytes | SHA-256 `c0f55b31396b050f4fa811464a1f01684d94b46af3099157c3612aea7e7ab628`; `cmp` passed. |
+| Contract generation reads | 547 | 547 | Retains prior one-read-per-source regression gate. |
+| Shipped CSS | 127,533 bytes | 127,533 bytes | No visual changes intended. |
+| Shipped JavaScript | 40,158 bytes | 40,406 bytes | Native-state guards are an intentional correctness cost. |
+| Runtime dependencies | 0 | 0 | No added dependency. |
 
-Timing and peak RSS samples are retained in `baseline-generation.json` and `after-generation.json`. The source cache trades bounded build-lifetime memory for fewer reads; RSS samples do not establish a memory improvement. The entire release payload is small (baseline dist disk usage about 256 KiB); streaming archive generation or runtime caching would add complexity without measured need.
+Generator after-median was 731.991355 ms with unchanged source reads/bytes; concurrent browser work makes a latency comparison inconclusive. No runtime speedup, RSS improvement, build-time improvement or token-saving claim. Archive payload buffering remains bounded by the small fixed release allowlist and trades brief buffer retention for fewer reads. Compression and tar construction remain synchronous because this is an offline build CLI, not a request path. Existing invocation-local generator caching has a correct invalidation lifetime; no cache redesign justified.
 
-Agent/context review: AGENTS.md is 1,394 bytes; DESIGN.md 11,111 bytes; the detailed component manifest 546,909 bytes. Existing instructions direct readers to relevant schemas. Keep the manifest as detailed evidence and use the component index plus selected schema for normal work. There are no model prompts, tool schemas, retries or conversation replays to optimize. No tokenizer measurement or token-saving claim is made.
+Agent/context review: AGENTS.md 1,394 bytes, DESIGN.md 11,111 bytes, component index 10,708 bytes, detailed manifest 546,909 bytes at baseline. Existing guidance already selects relevant schemas instead of loading all contracts. Preserve authoritative detailed artifacts and use the index for discovery. No prompts, model requests, MCP schemas, retry replay, or token budgets exist here. Byte counts are not token measurements. Logs retain full evidence locally; default gates already emit concise receipts and compact browser progress.
 
-## Security and resource review
+## Security, state and scope review
 
-Independent baseline and architecture reviews covered the browser runtime, build/generation/release tools, schemas, local fixture server and CI boundaries. Parent review included browser tests, example scripts, metadata validators and source consumers. Canonical security evidence is local under `artifacts/security/sitekit-hardening-20260922/`, bound to the starting revision; the sealed finding is `csf_f2287d906327366947b09f20`. Its low severity reflects loopback-only developer tooling exposure. The baseline security bundle is not rewritten to erase the fixed finding.
+| Boundary | Evidence/review | Conclusion |
+| --- | --- | --- |
+| Browser authoring/input | Entire browser controller; editor serializer, URL protocol allowlist, paste/drop, native form state, ID prefixing and dynamic hooks. | New fixes preserve native state; no arbitrary HTML sanitizer or backend authorization guarantee claimed. Editor executable content/protocol restrictions remain tested. |
+| Filesystem/HTTP | Shared fixture server, smoke and release callers; path/method/error/stream handling and tooling tests. | Loopback-only trusted checkout hosting; smoke now shares hardened handling. Concurrent malicious filesystem writers remain outside fixture-server contract. |
+| Generated/release artifacts | CSS/design/contract generators, archive writer, validators and deterministic drift gate. | Trusted repository inputs, fixed outputs and payload allowlist, hash coverage. Nontransactional local generated outputs are rebuildable; do not publish during a build. |
+| Resource lifetime | WeakMap/WeakSet ownership, listener/ResizeObserver disposal, short UI timers, clipboard failure handling, local storage denial. | No unbounded queues, retained network bodies, global polling or persistent runtime cache identified. Consumers must dispose detached components as documented. |
+| Concurrency/retries | Single-process generators, browser event callbacks, CI jobs. | No application workers, database, retry orchestration or lock graph. No new synchronization/caching needed. |
+| Dependencies/supply chain | package and lock, CI/release/artifact guard, licenses. | Exact dev pins retained; no runtime packages, new install hooks or mutable workflow references introduced. |
+| Compatibility/integration | README, DESIGN, schemas, recipes, examples, exports, release and browser contracts; downstream source-vendoring instructions. | Existing public boundaries preserved; no ecosystem-wide migration needed. |
 
-Editor serialization reconstructs allowed HTML and safe absolute http/https/mailto links; plain-text paste and rejected drops remain covered. Theme persistence uses a fixed allowlist and tolerates storage denial. Clipboard writes remain user-triggered with failure guidance. Repository-owned HTML/templates are trusted build inputs; the generator's source checks are not an arbitrary HTML sanitizer. Downstream applications still own server-side validation and content insertion.
+Complexity/dead-weight review found one worthwhile duplicate server to remove and one repeated release read to eliminate. Existing component abstractions, legacy aliases, source-vendored files, optional Lens fixtures and historical dossiers have documented consumers/verification roles; no speculative deletion. Bulk non-executable assets were covered by schema/hash/semantic/browser gates rather than described as individually audited executable code. No separate typed compiler or lint dependency is present; the repository's `lint` performs source validation.
 
-WeakMap/WeakSet lifecycle state and explicit dispose release listeners/ResizeObservers. There is no global polling, unbounded network retry, runtime cache, database, shared queue or backend persistence. Detached DOM must be disposed by the consumer as documented. Fixed build destinations and archive payload lists remain intact; builds assume exclusive checkout access. No architectural rewrite or extra runtime abstraction was justified.
+## Compatibility
 
-Bulk non-executable assets were checked through schema, semantic, hash, source-validation and browser gates rather than claimed as individually security-audited code. No dead-code deletion beyond demonstrably unused control snapshots; ignored historical `old-components/` is outside shipped/generated inputs and was preserved.
+| Contract | Result |
+| --- | --- |
+| Public API/package exports | No signatures or paths changed. |
+| Browser behavior | Bug fixes prevent mutations that contradict native disabled/readonly state; enabled commits, labels, hidden values and event contracts remain supported. |
+| CLI/exit codes | Existing commands and success receipts unchanged; missing release inputs still fail with the established diagnostic. New benchmark/test files only. |
+| Files/formats/schemas | Same archive allowlist and manifest versions; runtime hashes update normally. No component schema changes. |
+| Configuration/environment | No new variables, flags or config requirements. |
+| Consumers | Copy `dist/` as a unit to adopt fixes; existing consumers do not require source changes. |
 
 ## Cross-repository follow-ups and remaining work
 
-No required cross-repository change. Kujo `cf785c0a7953717af16b657cda05b85d628144c5` and ShipCheck `111bfc83c832050877cb9d4fd82908aaf6d14749` matched remote main when inspected and the local gate was exercised. ShipCheck reports two non-blocking warnings for absent kennel metadata and a Kujo entry point; SiteKit is deliberately a private Node-built browser distribution, so adding fake Kujo metadata would be incorrect.
+No required cross-repository change and no sibling writes. ShipCheck scan/gate passed with two existing inapplicable warnings (no kennel manifest or Kujo entry point in this private Node/browser library). Local ShipCheck revision matches the CI pin `111bfc83c832050877cb9d4fd82908aaf6d14749`; the available Kujo checkout is `6798c10eb49a37b0a9da5b236bcf6d7cbc23c491`, so its prebuilt binary run does not establish execution with the exact CI-pinned compiler.
 
-- P0/P1: none remain.
-- P2/P3: no accepted unresolved product findings.
-- Needs more evidence: browser/OS accessibility certification and hosted consumer security are outside repository tests; no such certification is claimed. Remote CI execution and exact Node 20 coverage are distinct from local Node 26 verification.
-- Not worth changing: small in-memory deterministic tar payload, established source schemas and compatibility aliases, concise agent instructions, source-vendored dependency-free runtime.
+- P0/P1/P2/P3: no accepted unresolved product finding.
+- Needs more evidence: exact Node 20/Linux CI and manual assistive-technology certification are not claimed. Host contention prevents useful latency/RSS conclusions.
+- Not worth changing: dependency-free runtime, source-vendoring, current schema/compatibility aliases, small offline buffered archive and existing instruction hierarchy.
+- SignalBox: no captures warranted; these findings are resolved within this repository.
 
 ## Verification receipt
 
-Commands below ran from SiteKit unless an alternate working directory is stated. Logs/receipts are in `docs/audits/evidence/`; large browser traces/screenshots are local under `artifacts/browser/` and preserved baseline copies under `artifacts/audit/`.
+Evidence lives in `docs/audits/evidence/2026-09-25/`. Verbose `.log` files are local and ignored; compact JSON receipts are committed. Browser HTML/JSON reports and retained failure evidence live under `artifacts/browser/`; baseline report is copied under `artifacts/audit/2026-09-25/` before final runs.
 
 | Exact command | Result |
 | --- | --- |
-| `npm test` (starting checkout) | Static gates passed; browser launch failed for absent pinned binaries; interrupted equivalent launch failures. |
-| `npm run browser:install` | Passed; installed pinned Chromium, Firefox and WebKit. |
-| `node node_modules/@playwright/test/cli.js test --reporter=dot` | Baseline: 529 passed, 56 skipped, 3 timeouts; no assertion weakened to accommodate them. |
-| `node node_modules/@playwright/test/cli.js test -c artifacts/audit/runtime.config.mjs` | Original bundle: 18 failed (including two timeout cases); rebuilt bundle: 18 passed in 21.2 seconds. |
-| `node artifacts/audit/server-probe.cjs` | Reproduced baseline GET /% → exit 1 with URIError. Probe only changed original fixture port to an ephemeral port. |
-| `node artifacts/audit/measure-generation.cjs` and `node artifacts/audit/benchmark-generation.cjs` | Baseline instrumented reads and five samples recorded. |
-| `node tests/bench/generation.cjs` | Five after samples recorded; no timing threshold or speedup claimed. |
-| `node artifacts/audit/baseline-hashes.cjs` and `diff -u docs/audits/evidence/baseline-hashes.json docs/audits/evidence/generation-hashes-after.json` | Generator-only output hashes identical. |
-| `node artifacts/audit/runtime-probes.cjs` | Original 1996/null state changed to expected 0096/true. |
-| `npm ci` | Passed with existing npm configuration/optional fsevents install-script warnings; no lockfile change. |
-| `npm ls --depth=0` | Installed direct dependencies match pins. |
-| `npm audit --json` | Passed; zero known advisories. |
-| `npm outdated --json` | Exit 1 indicates the two newer dev versions recorded above, not a test failure. |
-| `node --test tests/tooling/*.test.*` | Three groups passed: source cache/byte equivalence, generated failure/drift, fixture request boundaries. |
-| `node --check <file>` for every tracked JS/MJS/CJS and Node-shebang script | All 38 files passed; receipt in syntax.txt. |
-| `../kujo/target/release/kujo run shipcheck.kujo scan --dir /Users/robertdevore/2026/Kujolang/kujo-repos/site-kit --format json` (cwd `../shipcheck`) | Exit 0, 14/16 passed; two inapplicable metadata warnings. Bare `kujo` was absent from PATH, so the existing local binary was used. |
-| `../kujo/target/release/kujo run shipcheck.kujo gate --dir /Users/robertdevore/2026/Kujolang/kujo-repos/site-kit --format json` (cwd `../shipcheck`) | Gate passed, exit 0, highest severity warning, zero failed errors. |
-| `npm test` (final) | Passed, exit 0: all static gates plus 585 browser cases passed, 72 expected coverage skips, zero failures (14.1 minutes for browser matrix). |
-| `npm run generated:check` | Passed: two deterministic build/snapshot rounds and clean generated outputs against HEAD; digest b844acf683df6ecd25b6aa2d741d69b91a28cde7606af473b9abf406a664af97. |
-| `git diff --check` and `git diff --cached --check` | Passed for working and staged changes. |
-| `bash .github/scripts/check-kujo-tool-artifacts.sh 9629c4cb2a42f62f80be6159c9d63a141ccbb696 HEAD` | Passed for the committed implementation range; no ignored tool evidence admitted to commits. |
+| `npm test` (baseline) | Passed; static gates and 585 browser cases, 72 expected skips. |
+| `node node_modules/@playwright/test/cli.js test -c artifacts/audit/2026-09-25/regression.config.mjs` (unchanged bundle) | 34 assertion failures, five passes; establishes defects before rebuild. |
+| `node --test tests/tooling/release-archive.test.cjs` (original/fixed) | Failed on duplicate read before; passed after. |
+| `node tests/bench/release.cjs` (before/after archive-only edit) | 24 → 12 payload reads; equal SHA-256 and archive size. |
+| `cmp artifacts/audit/2026-09-25/baseline.tar.gz artifacts/release/sitekit-v1.0.0.tar.gz` | Passed before runtime rebuild. |
+| `node tests/bench/generation.cjs` (before/after) | Five samples each; 547 reads, 719,453 bytes, maximum one read per source throughout. |
+| `npm audit --json` | Passed; zero advisories. |
+| `npm ls --depth=0` | Both exact direct pins installed. |
+| `node tests/browser/smoke.mjs` | Passed with shared server. |
+| `npm test` (final) | Exit 0; all static gates, four tooling groups, 624 browser cases passed, 72 unchanged expected skips, zero failures/flakes (8.3 minutes). All 39 new native-state cases passed. |
+| `npm run generated:check` | Passed; two builds/snapshots, no generated drift against HEAD; digest `1e8c671cbb2af44b40b3e814201bfbda33007cf5c9775687828b280286ce2925`. |
+| `../kujo/target/release/kujo run shipcheck.kujo scan --dir /Users/robertdevore/2026/Kujolang/kujo-repos/site-kit --format json` (cwd `../shipcheck`) | Exit 0; 14/16 passed, two warnings. |
+| `../kujo/target/release/kujo run shipcheck.kujo gate --dir /Users/robertdevore/2026/Kujolang/kujo-repos/site-kit --format json` (cwd `../shipcheck`) | Exit 0, gate passed, highest severity warning, zero failed errors. |
+| `node --check <file>` for all tracked JS/MJS/CJS and Node scripts plus the three new test/benchmark files | 41 passed; file list retained in syntax.log. |
+| `git diff --check` and `git diff --cached --check` | Passed. |
 
-No separate type checker or compiler gate exists for this untyped browser/Node JavaScript repository. Lens is an optional alternative evidence workflow; the repository's required Playwright matrix already runs the semantic, responsive, screenshot and axe assertions. No manual assistive-technology certification or remote CI success is claimed.
+Final documentation/evidence updates also passed `npm run format:check` and `npm run validate:links`; the committed range passed `bash .github/scripts/check-kujo-tool-artifacts.sh fd6a9d5c8cfdadbb6f73c670f45fde1459cce8f9 HEAD`.
 
-The three baseline aggregate-test timeouts are resolved by independently scheduled cases, with no increased timeout, added retry, removed assertion, or refreshed visual baseline. SignalBox: no captures warranted; fixed findings and routine dependency availability do not warrant open-action captures.
+No skipped assertion, timeout increase, retry addition, visual snapshot refresh, security relaxation or hidden error was used to pass tests.

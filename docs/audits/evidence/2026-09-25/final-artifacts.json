@@ -1,0 +1,10 @@
+{
+  "dist/sitekit.css": {
+    "bytes": 127533,
+    "sha256": "3567315c051de1770d71ef823e9b127d951ef571c249c8222eaea9e9ec31b6de"
+  },
+  "dist/sitekit.js": {
+    "bytes": 40406,
+    "sha256": "86cd7cf0a611d4e4ee59b297b3342588601e675901a41692e43baeb9c1fe219d"
+  }
+}
