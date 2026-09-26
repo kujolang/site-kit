@@ -348,6 +348,7 @@
       else { select(tabs[i], true); emit(root, 'sk:change', { value: tabs[i].id }); }
     });
   }
+  function editableInput(input) { return !input.matches(':disabled') && !input.readOnly; }
   function setupCombobox(root) {
     var input = root.querySelector('input[role="combobox"]'), list = root.querySelector('[role="listbox"]');
     if (!input || !list) return;
@@ -360,12 +361,14 @@
     options().forEach(function (o) { if (!o.id) o.id = nextId('sk-option'); o.setAttribute('aria-selected', String(o.textContent.trim() === committed)); });
     function close() { list.hidden = true; input.setAttribute('aria-expanded', 'false'); input.removeAttribute('aria-activedescendant'); options().forEach(function (o) { o.removeAttribute('data-active'); }); active = null; }
     function open() {
+      if (!editableInput(input)) { close(); return; }
       list.hidden = false; input.setAttribute('aria-expanded', 'true');
       var query = input.value.toLocaleLowerCase();
       options().forEach(function (o) { o.hidden = !o.textContent.toLocaleLowerCase().includes(query); });
       notice.textContent = options().some(function (o) { return !o.hidden; }) ? '' : 'No results';
     }
     function choose(o) {
+      if (!editableInput(input)) { close(); return; }
       if (!o || o.getAttribute('aria-disabled') === 'true') return;
       committed = o.textContent.trim(); input.value = committed;
       if (value) { value.value = o.dataset.value || committed; value.dispatchEvent(new Event('change', { bubbles: true })); }
@@ -373,8 +376,9 @@
       input.dispatchEvent(new Event('change', { bubbles: true })); emit(root, 'sk:change', { value: o.dataset.value || committed });
     }
     close();
-    listen(input, 'input', function () { close(); open(); if (!input.value) { committed = ''; if (value) value.value = ''; options().forEach(function (o) { o.setAttribute('aria-selected', 'false'); }); } });
+    listen(input, 'input', function () { close(); if (!editableInput(input)) return; open(); if (!input.value) { committed = ''; if (value) value.value = ''; options().forEach(function (o) { o.setAttribute('aria-selected', 'false'); }); } });
     listen(input, 'keydown', function (e) {
+      if (!editableInput(input)) { close(); return; }
       if (e.key === 'Escape') { e.preventDefault(); input.value = committed; close(); return; }
       if (e.key === 'Enter' && active && !list.hidden) { e.preventDefault(); choose(active); return; }
       if (!['ArrowDown', 'ArrowUp'].includes(e.key)) return;
@@ -386,7 +390,7 @@
     });
     listen(list, 'mousedown', function (e) { e.preventDefault(); });
     listen(list, 'click', function (e) { choose(e.target.closest('[role="option"]')); });
-    listen(input, 'blur', function () { input.value = committed; close(); });
+    listen(input, 'blur', function () { if (editableInput(input)) input.value = committed; close(); });
   }
   function dateValue(date) { return String(date.getFullYear()).padStart(4, '0') + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'); }
   function calendarDate(year, month, day) {
@@ -408,20 +412,19 @@
     if (root.querySelector('[data-weekdays]')) root.querySelector('[data-weekdays]').hidden = false;
     var today = new Date(), cursor = parseDate(input.value) || today;
     header.setAttribute('aria-live', 'polite');
-    function editable() { return !input.matches(':disabled') && !input.readOnly; }
     function inRange(d) { return d.getFullYear() >= 1 && d.getFullYear() <= 9999; }
     function allowed(d) { var v = dateValue(d); return inRange(d) && (!parseDate(input.min) || v >= input.min) && (!parseDate(input.max) || v <= input.max); }
     function render(focus) {
       var year = cursor.getFullYear(), month = cursor.getMonth();
       header.textContent = cursor.toLocaleDateString('en-US', { month: 'long', year: 'numeric' }); grid.setAttribute('aria-label', header.textContent);
-      controls.forEach(function (b, i) { b.disabled = !editable() || !inRange(calendarDate(year, month + (i ? 1 : -1), 1)); });
+      controls.forEach(function (b, i) { b.disabled = !editableInput(input) || !inRange(calendarDate(year, month + (i ? 1 : -1), 1)); });
       grid.replaceChildren(); var first = calendarDate(year, month, 1), count = calendarDate(year, month + 1, 0).getDate(), row;
       for (var slot = 0; slot < Math.ceil((first.getDay() + count) / 7) * 7; slot++) {
         if (slot % 7 === 0) { row = document.createElement('div'); row.setAttribute('role', 'row'); grid.append(row); }
         var cell = document.createElement('div'); cell.setAttribute('role', 'gridcell'); row.append(cell);
         var day = slot - first.getDay() + 1; if (day < 1 || day > count) continue;
         var d = calendarDate(year, month, day), key = dateValue(d), button = document.createElement('button');
-        button.type = 'button'; button.textContent = String(day); button.dataset.date = key; button.disabled = !editable() || !allowed(d);
+        button.type = 'button'; button.textContent = String(day); button.dataset.date = key; button.disabled = !editableInput(input) || !allowed(d);
         button.setAttribute('aria-label', d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
         cell.setAttribute('aria-selected', String(input.value === key));
         if (dateValue(today) === key) button.setAttribute('aria-current', 'date');
@@ -430,11 +433,11 @@
       var target = grid.querySelector('button[tabindex="0"]') || grid.querySelector('button:not([disabled])');
       if (target) { target.tabIndex = 0; if (focus) target.focus(); }
     }
-    controls.forEach(function (b, i) { listen(b, 'click', function () { var next = calendarDate(cursor.getFullYear(), cursor.getMonth() + (i ? 1 : -1), 1); if (!editable() || !inRange(next)) return; cursor = next; render(false); }); });
-    listen(grid, 'click', function (e) { var b = e.target.closest('button[data-date]'); if (!b || b.disabled || !editable() || !allowed(parseDate(b.dataset.date))) return; input.value = b.dataset.date; cursor = parseDate(input.value); input.dispatchEvent(new Event('input', { bubbles: true })); input.dispatchEvent(new Event('change', { bubbles: true })); render(true); });
+    controls.forEach(function (b, i) { listen(b, 'click', function () { var next = calendarDate(cursor.getFullYear(), cursor.getMonth() + (i ? 1 : -1), 1); if (!editableInput(input) || !inRange(next)) return; cursor = next; render(false); }); });
+    listen(grid, 'click', function (e) { var b = e.target.closest('button[data-date]'); if (!b || b.disabled || !editableInput(input) || !allowed(parseDate(b.dataset.date))) return; input.value = b.dataset.date; cursor = parseDate(input.value); input.dispatchEvent(new Event('input', { bubbles: true })); input.dispatchEvent(new Event('change', { bubbles: true })); render(true); });
     listen(input, 'change', function () { cursor = parseDate(input.value) || today; render(false); });
     listen(grid, 'keydown', function (e) {
-      var b = e.target.closest('[data-date]'); if (!b || !editable()) return; var d = parseDate(b.dataset.date), delta;
+      var b = e.target.closest('[data-date]'); if (!b || !editableInput(input)) return; var d = parseDate(b.dataset.date), delta;
       var rtl = getComputedStyle(root).direction === 'rtl';
       if (e.key === 'ArrowRight') delta = rtl ? -1 : 1;
       else if (e.key === 'ArrowLeft') delta = rtl ? 1 : -1;
@@ -514,9 +517,9 @@
   }
   function setupStepper(root) {
     var input = root.querySelector('input[type="number"]'), buttons = root.querySelectorAll('button'); if (!input || buttons.length < 2) return;
-    function sync() { buttons[0].disabled = input.disabled || input.readOnly || (input.min !== '' && input.value !== '' && input.valueAsNumber <= Number(input.min)); buttons[1].disabled = input.disabled || input.readOnly || (input.max !== '' && input.value !== '' && input.valueAsNumber >= Number(input.max)); }
+    function sync() { buttons[0].disabled = !editableInput(input) || (input.min !== '' && input.value !== '' && input.valueAsNumber <= Number(input.min)); buttons[1].disabled = !editableInput(input) || (input.max !== '' && input.value !== '' && input.valueAsNumber >= Number(input.max)); }
     buttons.forEach(function (b, i) { b.setAttribute('aria-label', i ? 'Increase value' : 'Decrease value'); listen(b, 'click', function () {
-      if (input.disabled || input.readOnly) return; var before = input.value;
+      if (!editableInput(input)) return; var before = input.value;
       if (input.value === '' || !Number.isFinite(input.valueAsNumber)) input.value = input.min || String(input.max !== '' && Number(input.max) < 0 ? Number(input.max) : 0);
       else { try { if (i) input.stepUp(); else input.stepDown(); } catch (e) { return; } }
       sync(); if (before !== input.value) { input.dispatchEvent(new Event('input', { bubbles: true })); input.dispatchEvent(new Event('change', { bubbles: true })); }
