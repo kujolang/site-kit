@@ -27,3 +27,7 @@ SiteKit v1 is a stable source-vendored distribution. Keep `private: true`, treat
 - Do not create inaccessible modals.
 - Do not add decorative motion without reduced-motion fallback.
 - Do not introduce unrelated visual language.
+
+## Public project boundary
+
+Keep unrelated customer, client, brand, personal-site and course-project identities out of Kujo source, documentation, fixtures, commit messages and published artifacts. Generalize requirements and use synthetic examples. Do not copy private repository links, chat identifiers, memory IDs or customer-specific evidence into public work. Keep necessary private provenance in local memory only.

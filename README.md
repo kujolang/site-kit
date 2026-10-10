@@ -128,3 +128,7 @@ The ShipCheck CI job pins Kujo and ShipCheck revisions and uses Cargo’s lockfi
 ## Optional standalone upgrade CLI
 
 The [SiteKit CLI](packages/sitekit-cli/README.md) adopts, verifies, upgrades and rolls back copied SiteKit distributions in any website using Node 20+. Kujo users can install an optional `kujo sitekit` adapter. The CLI has its own package version and does not change the source-vendored asset contract. See its README for local npm installation while registry publication is pending.
+
+## Improvement roadmap
+
+The [SiteKit improvement roadmap](docs/roadmap.md) organizes the original 82-item consumer review into completed work, upcoming composition and integration batches, historical regression coverage, and cross-project coordination. The [full inventory](docs/roadmap-inventory.md) preserves every original ID and its acceptance criteria or disposition.
