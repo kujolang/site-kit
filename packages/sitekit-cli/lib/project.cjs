@@ -53,7 +53,7 @@ function discover(root) {
     if (exists(path.join(dir, 'sitekit-manifest.json'))) { candidates.push(path.relative(root, dir).split(path.sep).join('/')); return; }
     if (depth >= 5) return;
     for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
-      if (item.isDirectory() && !item.name.startsWith('.') && !['node_modules', 'vendor', 'coverage'].includes(item.name)) walk(path.join(dir, item.name), depth + 1);
+      if (item.isDirectory() && !item.name.startsWith('.') && !['node_modules', 'coverage'].includes(item.name)) walk(path.join(dir, item.name), depth + 1);
     }
   }
   walk(root, 0);

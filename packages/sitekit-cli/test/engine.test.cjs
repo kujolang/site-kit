@@ -147,3 +147,10 @@ test('recovery after process exit clears stale lock and restores absent target',
   assert.equal(engine.status(root).version, '1.1.0');
   assert.equal(fs.existsSync(path.join(root, '.sitekit/busy.json')), false);
 });
+
+test('automatic adoption discovers the common public/vendor directory', t => {
+  const { root, dir } = fixture(t);
+  fs.mkdirSync(path.join(root, 'public/vendor'));
+  fs.renameSync(dir, path.join(root, 'public/vendor/sitekit'));
+  assert.equal(engine.init(root).directory, 'public/vendor/sitekit');
+});
