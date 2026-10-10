@@ -54,7 +54,7 @@
     "validate:metadata": "node tests/contract/component-contracts.cjs",
     "test:tooling": "node --test tests/tooling/*.test.* && npm run test:cli",
     "consumer:audit": "node scripts/consumer-audit",
-    "test:cli": "node --test packages/sitekit-cli/test/*.test.cjs"
+    "test:cli": "node --test packages/sitekit-cli/test/engine.test.cjs packages/sitekit-cli/test/release.test.cjs"
   },
   "license": "MIT",
   "devDependencies": {

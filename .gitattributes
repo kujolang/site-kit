@@ -1,0 +1,2 @@
+# Distribution manifests hash exact bytes; never convert their line endings.
+dist/** -text
