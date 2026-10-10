@@ -108,8 +108,9 @@ jobs:
         env:
           KUJO: ${{ steps.kujo.outputs.kujo-path }}
         run: |
-          ../workcell/bin/workcell run --file docs/workcell-launch-gate.json --repo . --no-pull --json > workcell-result.json
-          run_dir=$(python3 -c 'import json; print(json.load(open("workcell-result.json"))["output_dir"])')
+          mkdir -p .workcell
+          ../workcell/bin/workcell run --file docs/workcell-launch-gate.json --repo . --no-pull --json > .workcell/result.json
+          run_dir=$(python3 -c 'import json; print(json.load(open(".workcell/result.json"))["output_dir"])')
           ../workcell/bin/workcell verify --run "$run_dir" --json
       - name: Upload Workcell evidence
         if: always()
@@ -117,7 +118,7 @@ jobs:
         with:
           name: sitekit-workcell-evidence
           path: |
-            site-kit/workcell-result.json
+            site-kit/.workcell/result.json
             site-kit/.workcell/runs/
           include-hidden-files: true
           if-no-files-found: warn
