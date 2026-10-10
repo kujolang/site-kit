@@ -124,3 +124,7 @@ See [gap-closure handoff](docs/sitekit-gap-closure/README.md) for scoped enhance
 `node tests/bench/generation.cjs` measures five contract-generation runs (file reads, bytes read, elapsed time, and peak RSS). Timing is diagnostic; CI enforces one read per source per invocation, not a machine-dependent latency threshold. See [the repository audit](docs/audits/repository-hardening.md).
 
 The ShipCheck CI job pins Kujo and ShipCheck revisions and uses Cargo’s lockfile. Advance those refs together with a successful local ShipCheck gate against SiteKit; do not silently follow moving default branches.
+
+## Optional standalone upgrade CLI
+
+The [SiteKit CLI](packages/sitekit-cli/README.md) adopts, verifies, upgrades and rolls back copied SiteKit distributions in any website using Node 20+. Kujo users can install an optional `kujo sitekit` adapter. The CLI has its own package version and does not change the source-vendored asset contract. See its README for local npm installation while registry publication is pending.

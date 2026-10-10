@@ -2,7 +2,7 @@
 
 SiteKit is source-driven. Treat tokens, schemas, templates, component CSS, recipes, and standards as authoritative. DESIGN.md is generated or generator-ready guidance, not the only source of truth.
 
-SiteKit v1 is a stable source-vendored distribution. Keep `private: true`, treat `dist/` as the supported consumer artifact, preserve the sibling `fonts/` relationship, and do not hand-edit generated outputs. npm publication and hosted component services are outside the v1 contract.
+SiteKit v1 is a stable source-vendored distribution. Keep `private: true`, treat `dist/` as the supported consumer artifact, preserve the sibling `fonts/` relationship, and do not hand-edit generated outputs. npm publication of the root asset package and hosted component services are outside the v1 contract. The separately versioned `packages/sitekit-cli` package is the authorized optional npm developer tool; keep its releases independent of asset releases and Kujo core.
 
 ## Before Creating Or Editing UI
 

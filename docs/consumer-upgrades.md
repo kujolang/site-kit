@@ -61,3 +61,7 @@ Preload only the actual above-the-fold font that will be used, and use the exact
 ```
 
 Do not preload every format, weight or family. Keep WOFF fallback available, preserve `font-display`, and check network requests for duplicate downloads and layout shift under a cold cache. Font subsetting is optional consumer build work: confirm the license allows it, include all required languages, punctuation, symbols and dynamic content, and verify rendered glyphs. Keep subset files outside the vendor directory, name them by content, record the source/font-tool versions, and keep the original licensed font available for rollback. SiteKit does not ship a font subsetter.
+
+## Optional CLI
+
+The [standalone CLI](../packages/sitekit-cli/README.md) automates verified whole-directory upgrades with backups and recovery. It requires a complete manifest-bearing installation and Node 20+, but no Kujo runtime. Its registry publication is separate from the SiteKit asset release. Follow its README for current installation instructions.
