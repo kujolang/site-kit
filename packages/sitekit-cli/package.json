@@ -1,0 +1,30 @@
+{
+  "name": "@kujolang/sitekit-cli",
+  "version": "0.1.0",
+  "description": "Adopt, inspect and safely upgrade source-vendored SiteKit assets in any website.",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "sitekit": "bin/sitekit.cjs"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kujolang/site-kit.git",
+    "directory": "packages/sitekit-cli"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

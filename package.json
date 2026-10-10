@@ -52,8 +52,9 @@
     "test:static": "npm run format:check && npm run build && npm run test:tooling && npm run lint && npm run validate && npm run snapshot && npm run smoke && npm run release:check",
     "test": "npm run test:static && npm run browser:test",
     "validate:metadata": "node tests/contract/component-contracts.cjs",
-    "test:tooling": "node --test tests/tooling/*.test.*",
-    "consumer:audit": "node scripts/consumer-audit"
+    "test:tooling": "node --test tests/tooling/*.test.* && npm run test:cli",
+    "consumer:audit": "node scripts/consumer-audit",
+    "test:cli": "node --test packages/sitekit-cli/test/*.test.cjs"
   },
   "license": "MIT",
   "devDependencies": {
