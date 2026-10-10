@@ -26,6 +26,8 @@ This checklist prepares one exact commit for human-approved tagging and a GitHub
    ../workcell/bin/workcell verify --run .workcell/runs/<run-id> --json
    ```
 
+   Workcell's rootful Docker backend requires seccomp and AppArmor. Docker Desktop on macOS may not advertise AppArmor; use the pinned Linux `workcell` job in SiteKit CI for the exact candidate instead of weakening its isolation policy. Download `sitekit-workcell-evidence` to inspect the receipt and verification output.
+
 9. Run ShipCheck from the sibling repository:
 
    ```bash

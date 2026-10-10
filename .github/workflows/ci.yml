@@ -80,3 +80,44 @@ jobs:
       - name: Run ShipCheck gate
         working-directory: shipcheck
         run: ../kujo/target/release/kujo run shipcheck.kujo gate --dir ../site-kit --format json
+
+  workcell:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout SiteKit
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          path: site-kit
+          fetch-depth: 0
+      - name: Checkout Workcell
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          repository: kujolang/workcell
+          ref: a276a92c6bac9279a8cb36ace9687ade34d5128f
+          path: workcell
+      - name: Install released Kujo runtime
+        id: kujo
+        uses: kujolang/kujo/.github/actions/setup-kujo@fc53093f35e4236682bbbf5ab1ccc8d2b4df990c
+        with:
+          version: v1.6.0
+      - name: Pull pinned Node image
+        run: docker pull node:20.19.5-bookworm@sha256:ba36e9b2705008e63e354214f0e3011c528af9df2ca13ac2bd2c0114650302e6
+      - name: Run and verify contained release proof
+        working-directory: site-kit
+        env:
+          KUJO: ${{ steps.kujo.outputs.kujo-path }}
+        run: |
+          ../workcell/bin/workcell run --file docs/workcell-launch-gate.json --repo . --no-pull --json > workcell-result.json
+          run_dir=$(python3 -c 'import json; print(json.load(open("workcell-result.json"))["output_dir"])')
+          ../workcell/bin/workcell verify --run "$run_dir" --json
+      - name: Upload Workcell evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: sitekit-workcell-evidence
+          path: |
+            site-kit/workcell-result.json
+            site-kit/.workcell/runs/
+          include-hidden-files: true
+          if-no-files-found: warn
