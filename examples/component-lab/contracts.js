@@ -445,7 +445,7 @@ window.SiteKitCatalog = [
       "technical"
     ],
     "keyboard": "No keyboard behavior required unless interactive content is slotted.",
-    "sample": "<section class=\"sk-hero\" aria-labelledby=\"hero-title\"><div class=\"sk-hero__inner\"><h2 id=\"hero-title\">Build with SiteKit</h2><p>Semantic HTML, local assets, and reusable styles.</p><div class=\"sk-hero__actions\"><button class=\"sk-button\" type=\"button\">Continue</button></div></div></section>\n"
+    "sample": "<section class=\"sk-hero\" data-sk-hero-slots=\"explicit\" aria-labelledby=\"hero-title\"><div class=\"sk-hero__inner\"><h2 id=\"hero-title\">Build with SiteKit</h2><p>Semantic HTML, local assets, and reusable styles.</p><div class=\"sk-hero__actions\"><button class=\"sk-button\" type=\"button\">Continue</button></div></div></section>\n"
   },
   {
     "slug": "icon",

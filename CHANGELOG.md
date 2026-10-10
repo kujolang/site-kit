@@ -1,35 +1,20 @@
 # Changelog
 
-## Unreleased
+## [1.1.0] - 2026-10-10
 
+- Add explicit hero action slots while retaining the legacy structural fallback.
+- Add a read-only distribution integrity and upgrade comparison command.
+- Restore the v1.0 bzby palette through an optional stylesheet and explicit behavior opt-in.
+- Document intact, content-addressed asset upgrades, provenance, optional CSS bundles and local font budgets.
 - Switch inverse button colors atomically to avoid transient low contrast during hover and theme changes.
-
 - Bundle a licensed Tabler outline sprite and lightweight glyph styling.
 - Theme all native scrollbars with SiteKit tokens and preserve system forced-color fallback.
-
 - Add reusable full-screen Mobile Menu navigation with native dialog focus, scroll locking, navigation dismissal and reduced-motion support.
 - Retire the commercial color scheme; Kujo light, Kujo dark and personal dark remain.
-
-
-## Unreleased
-
-- Switch inverse button colors atomically to avoid transient low contrast during hover and theme changes.
-
-- Bundle a licensed Tabler outline sprite and lightweight glyph styling.
-- Theme all native scrollbars with SiteKit tokens and preserve system forced-color fallback.
-
 - Match personal-dark severity text to its existing readable state palette for alerts and other status text.
-
 - Repair isolated hidden Drawer, inherited Icon color, Avatar/Progress semantics, keyboard code overflow, tooltip persistence, skip links and containment.
 - Ship bounded tabs, local combobox, single-date calendar, navigation disclosure, basic safe editor and promoted copy/stepper/segmented/dismissal/carousel behavior.
 - Add subtree lifecycle/disposal, instance ID prefixing, current source contracts, standalone examples, reference compositions and browser regressions.
-
-## Unreleased
-
-- Switch inverse button colors atomically to avoid transient low contrast during hover and theme changes.
-
-- Bundle a licensed Tabler outline sprite and lightweight glyph styling.
-- Theme all native scrollbars with SiteKit tokens and preserve system forced-color fallback.
 
 ## [1.0.0] - 2026-08-08
 
@@ -42,3 +27,5 @@
 - Added clean `file://` and local HTTP consumer checks plus current Chromium, Firefox, and WebKit coverage at desktop, tablet, and mobile widths in light and dark themes.
 
 [1.0.0]: https://github.com/kujolang/site-kit/releases/tag/v1.0.0
+
+[1.1.0]: https://github.com/kujolang/site-kit/releases/tag/v1.1.0

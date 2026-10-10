@@ -9,7 +9,9 @@ const json = (file) => JSON.parse(read(file));
 const pkg = json('package.json');
 const version = pkg.version;
 
-assert.equal(version, '1.0.0', 'package.json must be the canonical SiteKit 1.0.0 version');
+assert.match(version, /^1\.\d+\.\d+$/, 'package.json must define a stable v1 version');
+assert.equal(json('package-lock.json').version, version, 'lockfile version is inconsistent');
+assert.equal(json('package-lock.json').packages[''].version, version, 'lockfile root version is inconsistent');
 assert.match(read('README.md'), new RegExp(`version-${version.replaceAll('.', '\\.')}-`), 'README version badge is inconsistent');
 assert.match(read('CHANGELOG.md'), new RegExp(`^## \\[${version.replaceAll('.', '\\.')}\\] - \\d{4}-\\d{2}-\\d{2}$`, 'm'), 'CHANGELOG release entry is inconsistent');
 assert.match(read('layouts/changelog.html'), new RegExp(`<h2>${version.replaceAll('.', '\\.')}</h2>`), 'changelog layout is inconsistent');

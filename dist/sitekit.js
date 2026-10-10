@@ -37,6 +37,7 @@
   var enhancedThemeControls = new WeakSet();
   var themeInitialized = false;
   var supportedThemes = ['kujo-light', 'kujo-dark', 'personal-dark'];
+  if (document.documentElement.hasAttribute('data-sk-legacy-bzby')) supportedThemes.push('bzby');
 
   function nextId(prefix) {
     var id;

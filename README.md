@@ -1,12 +1,12 @@
 # SiteKit
 
-[![Version](https://img.shields.io/badge/version-1.0.0-black)](https://github.com/kujolang/site-kit/releases/tag/v1.0.0)
+[![Version](https://img.shields.io/badge/version-1.1.0-black)](https://github.com/kujolang/site-kit/releases/tag/v1.1.0)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![built for Kujo](https://img.shields.io/badge/built%20for-Kujo-white.svg)](https://github.com/kujolang/kujo)
 [![CI](https://github.com/kujolang/site-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/kujolang/site-kit/actions/workflows/ci.yml)
 [![node](https://img.shields.io/badge/node-%E2%89%A520-black.svg?logo=node.js&logoColor=white)](#install-or-vendor)
 
-SiteKit 1.0 is a stable, source-driven design system for accessible, semantic, token-based static websites and web interfaces. Its supported consumer artifact is the generated `dist/` directory, copied or vendored into a project. SiteKit remains `private: true`; npm registry publication is not part of v1.
+SiteKit 1.1 is a stable, source-driven design system for accessible, semantic, token-based static websites and web interfaces. Its supported consumer artifact is the generated `dist/` directory, copied or vendored into a project. SiteKit remains `private: true`; npm registry publication is not part of v1.
 
 ## Stable v1 contract
 
@@ -59,6 +59,8 @@ Alternatively, copy `dist/` from a published release archive when available. The
 
 ## Themes
 
+The default themes are Kujo light, Kujo dark and personal dark. The retired `bzby` palette is available as an explicit compatibility opt-in. See [consumer upgrades and asset recipes](docs/consumer-upgrades.md) for compatibility, integrity checks, cache-safe vending and optional CSS/font optimization.
+
 
 ## Fonts, icons, and licenses
 
@@ -99,7 +101,7 @@ npm run release:check
 npm test
 ```
 
-`npm run format` deterministically formats repository JSON and normalizes supported text files. `npm run generated:check` generates twice, compares outputs, and rejects tracked drift in `css/generated/`, `DESIGN.md`, `docs/components.md`, `dist/`, and the component snapshot. `npm run release:archive` creates deterministic `artifacts/release/sitekit-v1.0.0.tar.gz` plus a SHA-256 checksum without publishing anything.
+`npm run format` deterministically formats repository JSON and normalizes supported text files. `npm run generated:check` generates twice, compares outputs, and rejects tracked drift in `css/generated/`, `DESIGN.md`, `docs/components.md`, `dist/`, and the component snapshot. `npm run release:archive` creates deterministic `artifacts/release/sitekit-v1.1.0.tar.gz` plus a SHA-256 checksum without publishing anything.
 
 See the [launch checklist](docs/launch-checklist.md) for Workcell, Lens, ShipCheck, hosted CI, tagging, rollback, and clean-consumer procedures.
 

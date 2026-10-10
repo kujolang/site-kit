@@ -206,7 +206,7 @@
     },
     "actions": {
       "owner": "consumer",
-      "content": "Trusted authored semantic HTML; preserve child structure in example.html. Text data must be escaped.",
+      "content": "Use .sk-hero__actions inside a hero with data-sk-hero-slots=\"explicit\". Legacy unmarked heroes retain last-child action styling.",
       "example": "example.html"
     },
     "visual": {

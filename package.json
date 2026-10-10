@@ -1,6 +1,6 @@
 {
   "name": "@kujolang/sitekit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "Stable source-vendored design system and component library for Kujo and semantic websites.",
   "type": "commonjs",
@@ -18,7 +18,8 @@
     "./sitekit.js": "./dist/sitekit.js",
     "./fonts/*": "./dist/fonts/*",
     "./package.json": "./package.json",
-    "./icons/*": "./dist/icons/*"
+    "./icons/*": "./dist/icons/*",
+    "./compat/*": "./dist/compat/*"
   },
   "style": "dist/sitekit.css",
   "repository": {
@@ -51,7 +52,8 @@
     "test:static": "npm run format:check && npm run build && npm run test:tooling && npm run lint && npm run validate && npm run snapshot && npm run smoke && npm run release:check",
     "test": "npm run test:static && npm run browser:test",
     "validate:metadata": "node tests/contract/component-contracts.cjs",
-    "test:tooling": "node --test tests/tooling/*.test.*"
+    "test:tooling": "node --test tests/tooling/*.test.*",
+    "consumer:audit": "node scripts/consumer-audit"
   },
   "license": "MIT",
   "devDependencies": {

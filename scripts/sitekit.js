@@ -67,8 +67,13 @@ function generateDistribution() {
 This directory is the supported SiteKit v1 source-vendored artifact. Copy it as a unit, load \`sitekit.css\`, and optionally load \`sitekit.js\` for progressive behavior. Keep \`fonts/\` beside the CSS file because the relative font URLs are part of the contract.
 
 The bundle order is reset, tokens, themes, base, components, and utilities. \`LICENSE\` covers SiteKit; \`fonts/DepartureMono-LICENSE.txt\` covers the bundled Departure Mono assets. The curated Tabler sprite is in icons/tabler.svg; preserve icons/LICENSE.txt. Theme-aware scrollbars apply throughout the bundle, with forced-color system fallback. npm publication is not part of SiteKit v1.
+
+The optional \`compat/bzby.css\` palette requires an explicit consumer opt-in. See the [upgrade, integrity and asset guide](https://github.com/kujolang/site-kit/blob/v${packageInfo.version}/docs/consumer-upgrades.md) before replacing existing assets.
 `);
-  const files = ['icons/tabler.svg', 'icons/LICENSE.txt', 'icons/README.md', 'LICENSE', 'README.md', 'sitekit.css', 'sitekit.js', 'fonts/DepartureMono-LICENSE.txt', 'fonts/DepartureMono-Regular.woff', 'fonts/DepartureMono-Regular.woff2'];
+  const legacy = read('tokens/compat/bzby.json');
+  fs.mkdirSync(path.join(dist, 'compat'), { recursive: true });
+  fs.writeFileSync(path.join(dist, 'compat/bzby.css'), `@layer tokens {\n  [data-theme="bzby"] {\n${flat(legacy.tokens).map(([key, value]) => `    --sk-${key}: ${resolve(value)};`).join('\n')}\n  }\n}\n`);
+  const files = ['compat/bzby.css', 'icons/tabler.svg', 'icons/LICENSE.txt', 'icons/README.md', 'LICENSE', 'README.md', 'sitekit.css', 'sitekit.js', 'fonts/DepartureMono-LICENSE.txt', 'fonts/DepartureMono-Regular.woff', 'fonts/DepartureMono-Regular.woff2'];
   const manifest = {
     schemaVersion: 1,
     product: 'SiteKit',

@@ -1,6 +1,6 @@
 # SiteKit Design System
 
-Generated for SiteKit 1.0.0 by scripts/generate-design-md. Edit tokens, components, recipes, and standards first.
+Generated for SiteKit 1.1.0 by scripts/generate-design-md. Edit tokens, components, recipes, and standards first.
 
 ## Purpose
 

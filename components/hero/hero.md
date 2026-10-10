@@ -58,3 +58,7 @@ Use: Present a large centered heading, explanation and action row.
 Avoid: A complete responsive marketing page or rich media renderer.
 
 See [contract](hero.schema.json) for field types, ownership, slots and explicit legacy aliases. [Copyable HTML](example.html) is the current standalone reference. Prefix every ID and IDREF when repeating it; see [lifecycle and migration](../../docs/sitekit-gap-closure/API-AND-MIGRATION.md). These are source authoring contracts, not JavaScript props.
+
+## Explicit slots (1.1)
+
+New markup uses `data-sk-hero-slots="explicit"` on `.sk-hero`. Only `.sk-hero__actions` receives action-row flex styling; arbitrary final children such as terminals keep their own layout. Existing markup without this attribute retains the legacy last-child rule. Add the attribute and name action rows explicitly when migrating. Keep site-specific terminal widths and responsive layout in the consumer.

@@ -25,7 +25,7 @@ test('release hashes the exact payload buffers, reads once, and fails before pub
         return original.call(this, file, ...args);
       };
       require('./scripts/release-archive');
-      assert.equal(reads.size, 12);
+      assert.equal(reads.size, 13);
     `], { cwd: temporary, stdio: 'pipe' });
     const version = JSON.parse(fs.readFileSync(path.join(temporary, 'package.json'))).version;
     const prefix = `sitekit-v${version}`, archive = path.join(temporary, 'artifacts/release', `${prefix}.tar.gz`);
@@ -33,7 +33,7 @@ test('release hashes the exact payload buffers, reads once, and fails before pub
     execFileSync('tar', ['-xzf', archive, '-C', temporary]);
     const extracted = path.join(temporary, prefix);
     const manifest = JSON.parse(fs.readFileSync(path.join(extracted, 'release-manifest.json')));
-    assert.equal(Object.keys(manifest.files).length, 12);
+    assert.equal(Object.keys(manifest.files).length, 13);
     for (const [file, expected] of Object.entries(manifest.files)) {
       const data = fs.readFileSync(path.join(extracted, file));
       assert.equal(crypto.createHash('sha256').update(data).digest('hex'), expected, file);
