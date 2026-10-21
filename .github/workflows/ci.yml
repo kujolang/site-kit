@@ -12,15 +12,19 @@ permissions:
 jobs:
   release-gate:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22.23.4, 24.22.1, 26.12.1]
     steps:
       - name: Checkout SiteKit
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 0
-      - name: Set up Node 20
+      - name: Set up patched Node
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: 22.23.4
+          node-version: ${{ matrix.node }}
           cache: npm
       - name: Install dependencies
         run: npm ci
@@ -52,7 +56,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: sitekit-browser-evidence
+          name: sitekit-browser-evidence-${{ matrix.node }}
           path: artifacts/browser/
           if-no-files-found: warn
 
@@ -102,7 +106,7 @@ jobs:
         with:
           version: v1.6.0
       - name: Pull pinned Node image
-        run: docker pull node:20.19.5-bookworm@sha256:ba36e9b2705008e63e354214f0e3011c528af9df2ca13ac2bd2c0114650302e6
+        run: docker pull node:26.12.1-bookworm@sha256:dc5ba49acad07ed5c0defe487a0f14726a8882064683460bcb8168e03e2f74f3
       - name: Run and verify contained release proof
         working-directory: site-kit
         env:
