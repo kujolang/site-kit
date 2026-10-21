@@ -102,7 +102,7 @@ jobs:
         with:
           version: v1.6.0
       - name: Pull pinned Node image
-        run: docker pull node:20.19.5-bookworm@sha256:ba36e9b2705008e63e354214f0e3011c528af9df2ca13ac2bd2c0114650302e6
+        run: docker pull node:26.12.1-bookworm@sha256:dc5ba49acad07ed5c0defe487a0f14726a8882064683460bcb8168e03e2f74f3
       - name: Run and verify contained release proof
         working-directory: site-kit
         env:
