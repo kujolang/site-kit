@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "libraryVersion": "1.1.0",
+  "libraryVersion": "1.1.1",
   "sourceIdentity": "SHA-256 sourceHashes per component; commit is recorded in VERIFICATION.md",
   "runtimeSourceHash": "5a2605cd878a320014b7712759ad3d8c90091a65220a1203f30dee83562e1f16",
   "components": [
@@ -9,7 +9,7 @@
       "name": "Accordion",
       "category": "Feedback",
       "description": "A stacked disclosure control for expandable sections.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Group native details/summary disclosures for FAQs.",
         "avoid": "Essential information hidden by default or a scripted tree."
@@ -145,7 +145,7 @@
       "name": "Alert",
       "category": "Feedback",
       "description": "A status message for success, warning, error, or neutral feedback.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Show a status notice with an exclamation marker and optional severity colors.",
         "avoid": "A blocking dialog or automatically dismissing notification."
@@ -366,7 +366,7 @@
       "name": "Avatar",
       "category": "Data Display",
       "description": "A compact visual identity marker for a person, team, or object.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Frame an image or manually authored initials in a square.",
         "avoid": "A guaranteed initials generator or image fallback service."
@@ -513,7 +513,7 @@
       "name": "Badge",
       "category": "Data Display",
       "description": "A compact status, category, or metadata label.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Add compact text status labels.",
         "avoid": "An interactive control or status conveyed only by color."
@@ -705,7 +705,7 @@
       "name": "Bento Grid",
       "category": "Content",
       "description": "A square-cornered modular grid for grouped capabilities, proof points, or portfolio services.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Arrange an intro and unevenly spanning feature panels.",
         "avoid": "Arbitrary item counts without testing explicit grid placement."
@@ -898,7 +898,7 @@
       "name": "Breadcrumbs",
       "category": "Navigation",
       "description": "A navigational trail that shows the current page location.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Represent a hierarchy as an ordered navigation trail.",
         "avoid": "Primary navigation or an automatically generated router trail."
@@ -1031,7 +1031,7 @@
       "name": "Button",
       "category": "Actions",
       "description": "A semantic action control for links, form submits, and interface commands.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Trigger an action using a native button, or style a navigation anchor.",
         "avoid": "A div acting as a button or an aria-disabled anchor assumed inert."
@@ -1295,7 +1295,7 @@
       "name": "Card",
       "category": "Content",
       "description": "A bounded content region for a single object, summary, or grouped action.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Group a heading, explanatory body and actions in a framed section.",
         "avoid": "A clickable whole-card interaction without a real link."
@@ -1520,7 +1520,7 @@
       "name": "Carousel",
       "category": "Data Display",
       "description": "A grouped media or content sequence with explicit navigation controls.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Browse a scrollable card series with optional previous/next controls.",
         "avoid": "Forced autoplay, virtualized slides or a media-player service."
@@ -1670,7 +1670,7 @@
       "name": "Checkbox",
       "category": "Forms",
       "description": "A binary input that can be checked or unchecked.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Capture a native boolean choice with a wrapping label.",
         "avoid": "A radio group or custom tri-state widget."
@@ -1815,7 +1815,7 @@
       "name": "Checkout Summary",
       "category": "Commerce",
       "description": "A commerce order summary with totals, taxes, discounts, and trust metadata.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Display items and a definition list of totals with checkout actions.",
         "avoid": "Payment processing or automatic totals computation."
@@ -2038,7 +2038,7 @@
       "name": "Code Block",
       "category": "Data Display",
       "description": "A readable code or command block with caption and copy action.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Present readable source text with optional exact-text copy and keyboard scrolling.",
         "avoid": "A syntax highlighter, editor or arbitrary-code runner."
@@ -2199,7 +2199,7 @@
       "name": "Color Picker",
       "category": "Forms",
       "description": "A native color control with an accessible label.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Use a labeled native color input.",
         "avoid": "An alpha-channel, eyedropper or palette editor supplied by SiteKit."
@@ -2344,7 +2344,7 @@
       "name": "Combobox",
       "category": "Forms",
       "description": "An autocomplete text input paired with suggested options.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Filter and select one supplied local option using the optional keyboard controller.",
         "avoid": "Remote loading, multiple selection or an application search service."
@@ -2532,7 +2532,7 @@
       "name": "Command Strip",
       "category": "Data Display",
       "description": "A compact operational metric strip for status, filters, or system state.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Display compact single-line metadata cells in a responsive strip.",
         "avoid": "A command palette or keyboard launcher."
@@ -2684,7 +2684,7 @@
       "name": "Content Section",
       "category": "Content",
       "description": "A responsive editorial section with copy, actions, and an optional media or proof panel.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Compose supporting copy, action and a metadata/media panel.",
         "avoid": "Assuming schema media objects automatically render."
@@ -2920,7 +2920,7 @@
       "name": "CTA",
       "category": "Content",
       "description": "A conversion block with a clear next action.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Group a call-to-action headline, supporting copy and action row.",
         "avoid": "A form submission service or automatic action renderer."
@@ -3102,7 +3102,7 @@
       "name": "Date Input",
       "category": "Forms",
       "description": "A native date input with label and help text.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Capture a date through the browser-native date input.",
         "avoid": "A date range picker or custom calendar."
@@ -3246,7 +3246,7 @@
       "name": "Date Picker",
       "category": "Forms",
       "description": "A compact date-picker surface with a visible calendar grid.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Choose one date in a Sunday-first en-US calendar with a native input fallback.",
         "avoid": "Date ranges, bookings or a localization framework."
@@ -3435,7 +3435,7 @@
       "name": "Drawer",
       "category": "Overlays",
       "description": "A side panel for secondary navigation or contextual actions.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Show a nonmodal secondary panel with open/close, initial focus and focus restoration; Tab remains in normal document order.",
         "avoid": "Assuming it is a complete modal sheet with inert background."
@@ -3587,7 +3587,7 @@
       "name": "Dropdown Menu",
       "category": "Actions",
       "description": "A menu button with grouped actions.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Offer a button-triggered menu of commands with keyboard movement.",
         "avoid": "Navigation lists or a complete nested/typeahead menu system."
@@ -3728,7 +3728,7 @@
       "name": "Ecosystem Map",
       "category": "Data Display",
       "description": "A semantic map of projects, packages, docs, and relationships.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Display ecosystem nodes as a responsive grid of authored cards.",
         "avoid": "A force graph, radial layout engine or relationship visualization."
@@ -3955,7 +3955,7 @@
       "name": "Empty State",
       "category": "Feedback",
       "description": "A clear message for empty collections with optional recovery action.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Explain an empty collection and offer a next action.",
         "avoid": "A loading indicator or unexplained decorative blank."
@@ -4130,7 +4130,7 @@
       "name": "Error State",
       "category": "Feedback",
       "description": "A recoverable error message with next steps and support context.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Explain a recoverable failure and show retry/review actions.",
         "avoid": "An automatic error boundary or network retry implementation."
@@ -4309,7 +4309,7 @@
       "name": "Feature Grid",
       "category": "Content",
       "description": "A responsive list of capabilities or benefits.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Arrange feature articles with marker boxes in an intrinsic grid.",
         "avoid": "An enforced two/three-column prop runtime."
@@ -4485,7 +4485,7 @@
       "name": "Fieldset",
       "category": "Forms",
       "description": "A grouped set of form controls with a legend.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Group native related form controls with a legend.",
         "avoid": "A generic visual card without grouped form meaning."
@@ -4631,7 +4631,7 @@
       "name": "File",
       "category": "Forms",
       "description": "A file metadata row for selected or attached files.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Show a file metadata row and a remove affordance.",
         "avoid": "Uploading, downloading or deleting files automatically."
@@ -4776,7 +4776,7 @@
       "name": "File Upload",
       "category": "Forms",
       "description": "A file input drop area with a clear label.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Expose a native file chooser in a dashed frame.",
         "avoid": "A built-in upload client, dropzone or validation pipeline."
@@ -4925,7 +4925,7 @@
       "name": "Footer",
       "category": "Content",
       "description": "A semantic page footer for navigation, metadata, and legal links.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Compose brand, links and legal text in a wrapping footer.",
         "avoid": "An automatic multi-column sitemap renderer."
@@ -5100,7 +5100,7 @@
       "name": "Form",
       "category": "Forms",
       "description": "A semantic form layout for labeled controls and actions.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Compose labeled native email and message controls with submit.",
         "avoid": "A schema-driven form builder or backend integration."
@@ -5247,7 +5247,7 @@
       "name": "Form Field",
       "category": "Forms",
       "description": "A labeled input group with help, validation, and autocomplete support.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Associate a label, native control and help description.",
         "avoid": "Automatic validation or rendering a control prop."
@@ -5534,7 +5534,7 @@
       "name": "Generator Panel",
       "category": "Tools",
       "description": "A form-forward tool panel for small generators, prompts, and preview controls.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Arrange a form next to a preview placeholder.",
         "avoid": "An AI generator or API-backed tool."
@@ -5735,7 +5735,7 @@
       "name": "Header",
       "category": "Navigation",
       "description": "A top-level site header with navigation and primary action.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Build a branded wrapping header with primary links and actions.",
         "avoid": "A ready-made mobile hamburger or sticky sidebar shell."
@@ -5933,7 +5933,7 @@
       "name": "Heading",
       "category": "Foundations",
       "description": "A typographic heading pattern with optional supporting text.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Group an eyebrow, h2 and supporting metadata.",
         "avoid": "An automatic level/size heading API."
@@ -6066,7 +6066,7 @@
       "name": "Hero",
       "category": "Content",
       "description": "A first-viewport introduction for product, documentation, and launch pages.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Present a large centered heading, explanation and action row.",
         "avoid": "A complete responsive marketing page or rich media renderer."
@@ -6292,7 +6292,7 @@
       "name": "Icon",
       "category": "Foundations",
       "description": "A small symbolic marker with an accessible name when meaningful.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Wrap small inline SVG or a consumer-owned sprite with sizing and semantics.",
         "avoid": "An icon package, registry service or label for an otherwise unnamed button."
@@ -6574,7 +6574,7 @@
       "name": "Image",
       "category": "Data Display",
       "description": "A responsive image frame with optional caption.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Provide a captioned image-frame visual example.",
         "avoid": "An image optimizer, responsive image loader or implemented img API."
@@ -6710,7 +6710,7 @@
       "name": "Label",
       "category": "Forms",
       "description": "A compact text label for form fields or metadata.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Label an associated native form control.",
         "avoid": "A generic caption or label with no target control."
@@ -6844,7 +6844,7 @@
       "name": "Link",
       "category": "Foundations",
       "description": "A text link with visible focus and hover states.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Style a real navigation anchor with underline and focus.",
         "avoid": "A command action that should use button."
@@ -6975,7 +6975,7 @@
       "name": "List",
       "category": "Data Display",
       "description": "A semantic ordered or unordered list with consistent spacing.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Format a semantic unordered list with spacing.",
         "avoid": "A virtualized list or interactive listbox."
@@ -7106,7 +7106,7 @@
       "name": "Metadata Panel",
       "category": "Data Display",
       "description": "A compact key-value panel for operational metadata and object facts.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Present labeled key/value rows in a definition list.",
         "avoid": "A JSON parser or automatically generated inspector."
@@ -7264,7 +7264,7 @@
       "name": "Mobile Menu",
       "category": "Navigation",
       "description": "A full-screen modal navigation flyout with native dialog focus and explicit dismissal.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Use a full-screen navigation flyout for compact site headers. Supply ordinary links and an explicit close button.",
         "avoid": "Context menus, nonmodal side panels, or application dialogs that are not navigation."
@@ -7412,7 +7412,7 @@
       "name": "Modal",
       "category": "Overlays",
       "description": "An interruptive dialog that requires deliberate focus management.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Open a labeled native dialog with explicit dismissal and opener restoration.",
         "avoid": "Persistent page content or a fallback modal for obsolete browsers."
@@ -7586,7 +7586,7 @@
       "name": "Navigation",
       "category": "Navigation",
       "description": "A semantic navigation region for primary or secondary links.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Display a wrapping set of primary navigation links.",
         "avoid": "A router, sidebar manager or mobile menu controller."
@@ -7721,7 +7721,7 @@
       "name": "Newsletter Signup",
       "category": "Content",
       "description": "A focused email capture block with semantic form controls and compact supporting copy.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Compose email signup copy and an inline submission form.",
         "avoid": "A working email subscription or consent service."
@@ -7968,7 +7968,7 @@
       "name": "Pagination",
       "category": "Actions",
       "description": "A page navigation control for long result sets.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Link between pages and mark the current one.",
         "avoid": "Client-side data pagination, item slicing or total-page computation."
@@ -8106,7 +8106,7 @@
       "name": "Partners Strip",
       "category": "Content",
       "description": "A logo or partner proof row with semantic list structure and theme-safe styling.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Lay out partner names or consumer-provided logos in an intrinsic grid.",
         "avoid": "Evidence of actual endorsements or a bundled logo collection."
@@ -8261,7 +8261,7 @@
       "name": "Popover",
       "category": "Overlays",
       "description": "A small contextual surface anchored to a trigger.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Toggle contextual nonmodal content next to a trigger.",
         "avoid": "A modal form or collision-aware floating positioning library."
@@ -8403,7 +8403,7 @@
       "name": "Pricing Table",
       "category": "Commerce",
       "description": "A commercial pricing comparison layout with plans and features.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Compare plans in a captioned table with row and column headers.",
         "avoid": "Billing logic, plan selection or cadence switching."
@@ -8580,7 +8580,7 @@
       "name": "Product Card",
       "category": "Commerce",
       "description": "A semantic commerce product summary with media, price, and actions.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Present product title, description, price and actions beside media.",
         "avoid": "A cart item, inventory model or automatic media renderer."
@@ -8759,7 +8759,7 @@
       "name": "Product Grid",
       "category": "Commerce",
       "description": "A responsive product listing surface.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Arrange product summaries in an intrinsic responsive grid.",
         "avoid": "A catalog service, filter engine or cart."
@@ -8945,7 +8945,7 @@
       "name": "Product Showcase",
       "category": "Commerce",
       "description": "A compact commerce or template showcase adapted from legacy landing-page demos.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Compose a featured product, media placeholder and supporting offers.",
         "avoid": "A product gallery or interactive commerce backend."
@@ -9151,7 +9151,7 @@
       "name": "Progress Bar",
       "category": "Feedback",
       "description": "A horizontal progress meter for determinate completion.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Draw a horizontal completion fill.",
         "avoid": "An accessible progress widget without additional native/ARIA semantics."
@@ -9313,7 +9313,7 @@
       "name": "Progress Indicator",
       "category": "Feedback",
       "description": "A compact step or status indicator for multi-step flows.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Show an ordered sequence of workflow steps.",
         "avoid": "Automatic step validation or navigation."
@@ -9452,7 +9452,7 @@
       "name": "Promo Banner",
       "category": "Commerce",
       "description": "A dismissible commercial or release announcement banner.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Present a promotional message and action cluster.",
         "avoid": "A dismissible announcement system out of the box."
@@ -9612,7 +9612,7 @@
       "name": "Quote",
       "category": "Content",
       "description": "A pull quote or testimonial block with citation.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Present a quotation with figure attribution.",
         "avoid": "A testimonial service or unsupported claims about actual users."
@@ -9748,7 +9748,7 @@
       "name": "Radio Button",
       "category": "Forms",
       "description": "A single-choice input within a related option group.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Capture one native choice within a labeled radio group.",
         "avoid": "Independent multiple choices or an ARIA-only custom radio widget."
@@ -9894,7 +9894,7 @@
       "name": "Rating",
       "category": "Data Display",
       "description": "A rating display or input for qualitative feedback.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Render a static star rating with an accessible summary.",
         "avoid": "An editable rating input."
@@ -10026,7 +10026,7 @@
       "name": "Recent Posts",
       "category": "Content",
       "description": "A semantic article-list component for blog previews and latest insights.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Present authored article cards and metadata.",
         "avoid": "Fetching posts or automatic blog generation."
@@ -10188,7 +10188,7 @@
       "name": "Resource Links",
       "category": "Content",
       "description": "A compact link collection for docs, examples, templates, and external references.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Group descriptive resource links in an intrinsic grid.",
         "avoid": "An automatic link crawler or search index."
@@ -10347,7 +10347,7 @@
       "name": "Rich Text Editor",
       "category": "Forms",
       "description": "A text editing surface with formatting controls.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Edit a small named text fragment with selected-text bold, italic and safe links.",
         "avoid": "A full document editor, rich HTML paste, media embeds or collaborative editing."
@@ -10488,7 +10488,7 @@
       "name": "Roadmap",
       "category": "Data Display",
       "description": "A chronological product timeline for milestones, launches, and upcoming work.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Display an ordered milestone timeline with dates.",
         "avoid": "A scheduling engine or current release plan."
@@ -10649,7 +10649,7 @@
       "name": "Search Input",
       "category": "Forms",
       "description": "A search field with a visible submit action.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Provide a labeled native search form.",
         "avoid": "A search index or instant filtering supplied by SiteKit."
@@ -10794,7 +10794,7 @@
       "name": "Segmented Control",
       "category": "Actions",
       "description": "A compact grouped control for switching modes.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Choose one mode using mutually exclusive pressed buttons.",
         "avoid": "Tab panels or a menu with independent actions."
@@ -10935,7 +10935,7 @@
       "name": "Select",
       "category": "Forms",
       "description": "A native select control with label and options.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Capture a choice with a native select.",
         "avoid": "An async combobox or custom select listbox."
@@ -11078,7 +11078,7 @@
       "name": "Separator",
       "category": "Foundations",
       "description": "A semantic visual divider between related sections.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Separate adjacent content with horizontal separator semantics.",
         "avoid": "Vertical orientation without new styles/markup."
@@ -11211,7 +11211,7 @@
       "name": "Skeleton",
       "category": "Feedback",
       "description": "A placeholder surface that indicates loading content.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Show a decorative loading placeholder silhouette.",
         "avoid": "A loading announcement on its own."
@@ -11348,7 +11348,7 @@
       "name": "Skip Link",
       "category": "Foundations",
       "description": "An accessible link for skipping directly to page content.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Let keyboard users jump to the main region.",
         "avoid": "A hidden link whose target is missing or not useful."
@@ -11484,7 +11484,7 @@
       "name": "Slider",
       "category": "Forms",
       "description": "A range input for selecting a numeric value.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Capture a scalar through a native range control.",
         "avoid": "A multi-thumb slider or labeled value display supplied by SiteKit."
@@ -11629,7 +11629,7 @@
       "name": "Spinner",
       "category": "Feedback",
       "description": "A compact indeterminate loading indicator.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Show a nine-cell activity animation with Loading status text.",
         "avoid": "Determinate progress or decorative motion without status meaning."
@@ -11765,7 +11765,7 @@
       "name": "Stack",
       "category": "Content",
       "description": "A vertical layout primitive for consistent spacing.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Display vertically spaced child panels with borders and padding.",
         "avoid": "Assuming sk-stack and sk-stack-component are identical."
@@ -11897,7 +11897,7 @@
       "name": "Stats Bar",
       "category": "Data Display",
       "description": "A semantic metric strip for proof points, performance numbers, or portfolio counters.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Present metrics as a definition list with strong numeric typography.",
         "avoid": "Live analytics or verified product statistics."
@@ -12051,7 +12051,7 @@
       "name": "Stepper",
       "category": "Forms",
       "description": "A numeric input with increment and decrement actions.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Adjust a native number input with bounded increment and decrement controls.",
         "avoid": "Arbitrary numeric expressions or multi-value input."
@@ -12246,7 +12246,7 @@
       "name": "Table",
       "category": "Data Display",
       "description": "A semantic table for structured comparison or tabular data.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Display captioned tabular data with scoped headers and overflow wrapper.",
         "avoid": "A sortable, filterable, virtualized data grid."
@@ -12378,7 +12378,7 @@
       "name": "Tabs",
       "category": "Navigation",
       "description": "A keyboard navigable view switcher for related panels.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Switch related local panels with automatic or manual keyboard activation.",
         "avoid": "Navigation to unrelated pages or panels without associated tabs."
@@ -12635,7 +12635,7 @@
       "name": "Team Grid",
       "category": "Content",
       "description": "A responsive people grid for profiles, roles, and compact bios.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Arrange profile summaries in an intrinsic grid.",
         "avoid": "A directory service or avatar loader."
@@ -12795,7 +12795,7 @@
       "name": "Testimonial Rail",
       "category": "Content",
       "description": "A scroll-safe testimonial layout for customer quotes and builder proof.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Present quote figures with attributions in a grid.",
         "avoid": "An animated testimonial carousel."
@@ -12955,7 +12955,7 @@
       "name": "Text Input",
       "category": "Forms",
       "description": "A single-line text input with a visible label.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Capture short text with an explicit label.",
         "avoid": "An autocomplete, validator or form-state manager."
@@ -13098,7 +13098,7 @@
       "name": "Textarea",
       "category": "Forms",
       "description": "A multi-line text input with label and help text.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Capture multiline native text with label and minimum height.",
         "avoid": "Rich-text formatting or autoresize behavior."
@@ -13238,7 +13238,7 @@
       "name": "Toast",
       "category": "Feedback",
       "description": "A non-modal notification for transient feedback.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Announce application-inserted status in a live region with explicit dismissal.",
         "avoid": "Essential persistent instructions or time-critical information that disappears."
@@ -13383,7 +13383,7 @@
       "name": "Toggle",
       "category": "Forms",
       "description": "A binary switch-style control using a native checkbox.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Capture a native boolean with a square moving indicator.",
         "avoid": "An automatically persisted setting or role=switch controller."
@@ -13528,7 +13528,7 @@
       "name": "Tooltip",
       "category": "Overlays",
       "description": "A short contextual text hint for an adjacent control.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Show advisory text on trigger focus/hover with Escape dismissal.",
         "avoid": "Essential content, interactive tooltip content or collision-aware positioning."
@@ -13670,7 +13670,7 @@
       "name": "Tree View",
       "category": "Navigation",
       "description": "A hierarchical navigation or selection tree.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Nested navigation with branch disclosure buttons. Tab visits native buttons and links; no ARIA tree widget.",
         "avoid": "An ARIA tree widget with arrow-key navigation."
@@ -13804,7 +13804,7 @@
       "name": "Trust Strip",
       "category": "Commerce",
       "description": "A compact proof row for security, shipping, warranties, or social proof.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Display a compact grid of named trust/delivery claims.",
         "avoid": "Real compliance, uptime or refund evidence."
@@ -13948,7 +13948,7 @@
       "name": "Video",
       "category": "Data Display",
       "description": "A responsive video embed frame with caption.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Display a captioned 16:9 media placeholder.",
         "avoid": "A working video player, embed or caption-track API."
@@ -14083,7 +14083,7 @@
       "name": "Visually Hidden",
       "category": "Foundations",
       "description": "A utility wrapper for content available to assistive technology only.",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "guidance": {
         "use": "Keep noninteractive descriptive text available to assistive technology.",
         "avoid": "Hiding focusable controls that must become visible on focus."

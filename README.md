@@ -1,10 +1,10 @@
 # SiteKit
 
-[![Version](https://img.shields.io/badge/version-1.1.0-black)](https://github.com/kujolang/site-kit/releases/tag/v1.1.0)
+[![Version](https://img.shields.io/badge/version-1.1.1-black)](https://github.com/kujolang/site-kit/releases/tag/v1.1.1)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![built for Kujo](https://img.shields.io/badge/built%20for-Kujo-white.svg)](https://github.com/kujolang/kujo)
 [![CI](https://github.com/kujolang/site-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/kujolang/site-kit/actions/workflows/ci.yml)
-[![node](https://img.shields.io/badge/node-%E2%89%A520-black.svg?logo=node.js&logoColor=white)](#install-or-vendor)
+[![node](https://img.shields.io/badge/node-26.12.1-black.svg?logo=node.js&logoColor=white)](#install-or-vendor)
 
 SiteKit 1.1 is a stable, source-driven design system for accessible, semantic, token-based static websites and web interfaces. Its supported consumer artifact is the generated `dist/` directory, copied or vendored into a project. SiteKit remains `private: true`; npm registry publication is not part of v1.
 
@@ -25,7 +25,7 @@ Tokens, schemas, templates, component CSS, recipes, and standards are authoritat
 
 ## Install or vendor
 
-Build from a clean checkout with Node 20 or newer:
+Build from a clean checkout with Node 22.23.4+, 24.22.1+, or 26.12.1+ on the supported branches:
 
 ```bash
 npm ci

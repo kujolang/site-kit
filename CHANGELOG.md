@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.1] - 2026-10-21
+
+- Update supported Node.js versions and verify release gates on the patched runtime branches.
+- Include optional, independently versioned SiteKit CLI source with verified adoption, upgrade and recovery workflows.
+- Improve CLI discovery of common vendor asset directories without changing distribution bytes.
+
 ## [1.1.0] - 2026-10-10
 
 - Add explicit hero action slots while retaining the legacy structural fallback.

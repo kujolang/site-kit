@@ -1,6 +1,6 @@
 # SiteKit component index
 
-Generated from all 86 component schemas by `npm run build` for SiteKit 1.1.0. Use this index to choose an existing contract before creating a new pattern.
+Generated from all 86 component schemas by `npm run build` for SiteKit 1.1.1. Use this index to choose an existing contract before creating a new pattern.
 
 ## Selection guidance
 

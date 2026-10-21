@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "product": "SiteKit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "distribution": "source-vendored",
   "entrypoints": {
     "css": "sitekit.css",
@@ -14,7 +14,7 @@
     "icons/LICENSE.txt": "b740a1d46122672da62833e97f7e7c8a13fa85cbc7445b584b297cc00dde93db",
     "icons/README.md": "c4c2651a66188f3815695e7754dda5e760019a2d6e079191fac03ed0efdde004",
     "LICENSE": "9c6cac5c32d816ad842f9a412ba4c5c862611e5df7816f9bf0d0780beea00e79",
-    "README.md": "d687e6eb48be395cb1b15f0cd16bae5ca0974344bc7a1aacd0e1609fdf891f51",
+    "README.md": "960be8b353a2620d276628b8e96bd7a227d8b6820fd0b6c45348a4fb6e1f2e69",
     "sitekit.css": "80b156fd08d6df9adebd65ce45d8ba4e2a26785f2bb1678fe88954571f622dec",
     "sitekit.js": "5a2605cd878a320014b7712759ad3d8c90091a65220a1203f30dee83562e1f16",
     "fonts/DepartureMono-LICENSE.txt": "b65e42750f3cb65437a97f4dfd781c58f199259949db2341012be60e32500e83",
