@@ -12,7 +12,7 @@ const pkg = json('package.json');
 
 assert.equal(pkg.private, true, 'SiteKit v1 must remain private on npm');
 assert.equal(pkg.license, 'MIT');
-assert.equal(pkg.engines.node, '>=20');
+assert.equal(pkg.engines.node, '>=22.23.4 <23 || >=24.22.1 <25 || >=26.12.1');
 assert.equal(pkg.style, 'dist/sitekit.css');
 assert.equal(pkg.exports['./sitekit.css'], './dist/sitekit.css');
 assert.equal(pkg.exports['./sitekit.js'], './dist/sitekit.js');
