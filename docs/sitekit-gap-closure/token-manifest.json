@@ -383,13 +383,13 @@
     },
     "code": {
       "surface": {
-        "value": "{color.white}"
+        "value": "{surface.card}"
       },
       "text": {
-        "value": "{color.black}"
+        "value": "{text.primary}"
       },
       "border": {
-        "value": "{color.black}"
+        "value": "{border.default}"
       }
     },
     "state": {
@@ -728,7 +728,7 @@
   },
   "sourceHashes": {
     "tokens/core.json": "b8076ddf98995ee8ca6262843ef0cb67045ca9eda3930ad4282dd5e96fd31d50",
-    "tokens/semantic.json": "3e2574684f91a833b866d8f7de215e237e8b25e8af524bcc824b151812f048e7",
+    "tokens/semantic.json": "ebfc29427080275a1545ce5d0ba9db47a9d8b4e56dfb70e11328df096c014418",
     "tokens/themes/kujo-dark.json": "56231282b198aba03475ff54e71c0bf1f1ec31614f7ed16cbf5e773b5c30fbb6",
     "tokens/themes/kujo-light.json": "98038c0a492b2823ae6c5cd43c759a5d8189fcf3dc1270e2acd711504ece4618",
     "tokens/themes/personal-dark.json": "4aee1e14912af21909c9539b6d9ec29a78b1f21fa690395c9ddec87462aad9c2"
@@ -3358,15 +3358,15 @@
     {
       "id": "code.surface",
       "variable": "--sk-code-surface",
-      "value": "{color.white}",
+      "value": "{surface.card}",
       "references": [
-        "color.white"
+        "surface.card"
       ],
       "resolved": "#ffffff",
       "themes": {
-        "kujo-dark": "#ffffff",
+        "kujo-dark": "#111111",
         "kujo-light": "#ffffff",
-        "personal-dark": "#ffffff"
+        "personal-dark": "#171a20"
       },
       "consumers": [
         "code-block"
@@ -3375,15 +3375,15 @@
     {
       "id": "code.text",
       "variable": "--sk-code-text",
-      "value": "{color.black}",
+      "value": "{text.primary}",
       "references": [
-        "color.black"
+        "text.primary"
       ],
       "resolved": "#060606",
       "themes": {
-        "kujo-dark": "#060606",
+        "kujo-dark": "#ffffff",
         "kujo-light": "#060606",
-        "personal-dark": "#060606"
+        "personal-dark": "#f7f4ed"
       },
       "consumers": [
         "code-block"
@@ -3392,15 +3392,15 @@
     {
       "id": "code.border",
       "variable": "--sk-code-border",
-      "value": "{color.black}",
+      "value": "{border.default}",
       "references": [
-        "color.black"
+        "border.default"
       ],
       "resolved": "#060606",
       "themes": {
-        "kujo-dark": "#060606",
+        "kujo-dark": "#ffffff",
         "kujo-light": "#060606",
-        "personal-dark": "#060606"
+        "personal-dark": "#f7f4ed"
       },
       "consumers": [
         "code-block"

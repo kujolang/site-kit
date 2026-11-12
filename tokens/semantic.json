@@ -98,13 +98,13 @@
   },
   "code": {
     "surface": {
-      "value": "{color.white}"
+      "value": "{surface.card}"
     },
     "text": {
-      "value": "{color.black}"
+      "value": "{text.primary}"
     },
     "border": {
-      "value": "{color.black}"
+      "value": "{border.default}"
     }
   },
   "state": {

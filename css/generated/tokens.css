@@ -106,9 +106,9 @@
     --sk-focus-ring: var(--sk-color-black);
     --sk-focus-ring-offset: var(--sk-color-paper);
     --sk-shadow-color: var(--sk-color-black);
-    --sk-code-surface: var(--sk-color-white);
-    --sk-code-text: var(--sk-color-black);
-    --sk-code-border: var(--sk-color-black);
+    --sk-code-surface: var(--sk-surface-card);
+    --sk-code-text: var(--sk-text-primary);
+    --sk-code-border: var(--sk-border-default);
     --sk-state-success: var(--sk-color-green-600);
     --sk-state-warning: var(--sk-color-yellow-500);
     --sk-state-danger: var(--sk-color-red-600);
