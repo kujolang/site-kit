@@ -2957,6 +2957,7 @@
         "pagination",
         "radio-button",
         "segmented-control",
+        "slider",
         "stepper",
         "toast",
         "toggle"

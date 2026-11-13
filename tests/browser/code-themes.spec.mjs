@@ -15,3 +15,15 @@ for (const theme of ['kujo-light', 'kujo-dark', 'personal-dark']) {
     expect((await new AxeBuilder({ page }).withRules(['color-contrast']).analyze()).violations).toEqual([]);
   });
 }
+for (const theme of ['kujo-light', 'kujo-dark', 'personal-dark']) {
+  test(`Slider uses the theme accent and native keyboard behavior ${theme}`, async ({ page }) => {
+    await page.goto('/health');
+    await page.setContent(`<!doctype html><html lang="en" data-theme="${theme}"><head><title>Slider theme</title><link rel="stylesheet" href="/dist/sitekit.css"></head><body><main><h1>Slider theme</h1><div class="sk-slider"><label for="range">Intensity</label><input id="range" type="range" min="0" max="100" value="50"></div><button class="sk-button" id="reference">Action</button></main></body></html>`);
+    const slider = page.getByRole('slider');
+    const colors = await page.evaluate(() => ({ accent: getComputedStyle(document.querySelector('#range')).accentColor, action: getComputedStyle(document.querySelector('#reference')).backgroundColor }));
+    expect(colors.accent).toBe(colors.action);
+    await slider.focus();
+    await page.keyboard.press('ArrowRight');
+    await expect(slider).toHaveValue('51');
+  });
+}

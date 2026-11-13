@@ -11497,9 +11497,9 @@
         "examples": "components/slider/examples.json"
       },
       "sourceHashes": {
-        "components/slider/slider.schema.json": "33d132cd2048512729572dcda7fa29f99fe96e44ae5bb2edce52c769b7cfcff4",
+        "components/slider/slider.schema.json": "a91f64e7ce3e6324add2761225829a6a6b9e5e2173ff283c59529bbd8dffacf8",
         "components/slider/slider.html": "9837241e3bacdab9380908a61706c063a4f3605eff1a7ba9d2d839e12ea3dd16",
-        "components/slider/slider.css": "535dd14c6a2681eccd181a516774d4326aa888f473af8aa00272a60f95b34a5c",
+        "components/slider/slider.css": "ae451376a2e9e6683425dd3b41f8a22eb0f787ad9dba21623ecba8677fe0f573",
         "components/slider/slider.md": "7e18cc125edef77d6fe78b01f847cadb5dc6a83dc0c74e5adc0333d457840149",
         "components/slider/examples.json": "7ebd7ef14a00c2fce732712f69dd5c97aaba80d0168665d70eae5d78939c0e36",
         "components/slider/example.html": "9837241e3bacdab9380908a61706c063a4f3605eff1a7ba9d2d839e12ea3dd16"
@@ -11594,6 +11594,7 @@
       ],
       "dependencies": [],
       "tokenReferences": [
+        "--sk-action-primary",
         "--sk-space-2",
         "--sk-text-primary",
         "--sk-text-muted",

@@ -21,6 +21,7 @@
     ]
   },
   "tokenDependencies": [
+    "action.primary",
     "border.1",
     "border.default",
     "focus.offset",

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Theme native Slider accents with the existing primary action token instead of the browser default blue.
+
 - Resolve Code Block surface, text and border tokens through their semantic roles so dark themes render readable code panels without changing the public token names or light-theme colors.
 
 ## [1.1.1] - 2026-10-21
