@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add opt-in source-vendored documentation code-panel, catalog-filtering, workspace and token-reference recipes with runnable examples, isolated behavior, canonical copying and lifecycle guidance. Include them in distribution integrity manifests and release archives without changing core component APIs.
+
 - Theme native Slider accents with the existing primary action token instead of the browser default blue.
 
 - Resolve Code Block surface, text and border tokens through their semantic roles so dark themes render readable code panels without changing the public token names or light-theme colors.

@@ -146,13 +146,17 @@ Tokens are split into primitive tokens in tokens/core.json, semantic tokens in t
 ## Layout Recipes
 
 - Blog Index: Composable blog index recipe.
+- Catalog Filtering: Optional source-vendored catalog filtering composition with readable static HTML.
 - Source of Truth Dashboard: Composable operational dashboard recipe for repository metadata, status, filters, and source links.
 - Docs Home: Composable documentation home recipe.
+- Documentation Code Panel: Optional source-vendored documentation code panel composition with readable static HTML.
+- Documentation Workspace: Optional source-vendored documentation workspace composition with readable static HTML.
 - Ecommerce Page: Composable ecommerce recipe.
 - Ecosystem Page: Composable ecosystem map recipe.
 - Launch Page: Composable launch page recipe using SiteKit components.
 - Pricing Page: Composable pricing page recipe.
 - Product Page: Composable product page recipe.
+- Token Reference: Optional source-vendored token reference composition with readable static HTML.
 
 ## Agent Rules
 

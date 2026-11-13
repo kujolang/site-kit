@@ -12,7 +12,7 @@ test('release hashes the exact payload buffers, reads once, and fails before pub
   try {
     for (const name of ['dist', 'LICENSE', 'package.json']) fs.cpSync(path.join(root, name), path.join(temporary, name), { recursive: true });
     fs.mkdirSync(path.join(temporary, 'scripts'));
-    fs.copyFileSync(path.join(root, 'scripts/release-archive'), path.join(temporary, 'scripts/release-archive'));
+    for (const file of ['release-archive', 'recipe-files.cjs']) fs.copyFileSync(path.join(root, 'scripts', file), path.join(temporary, 'scripts', file));
     execFileSync(process.execPath, ['-e', `
       const fs = require('node:fs'), path = require('node:path'), assert = require('node:assert/strict');
       const original = fs.readFileSync, reads = new Map();
@@ -25,7 +25,7 @@ test('release hashes the exact payload buffers, reads once, and fails before pub
         return original.call(this, file, ...args);
       };
       require('./scripts/release-archive');
-      assert.equal(reads.size, 13);
+      assert.equal(reads.size, 23);
     `], { cwd: temporary, stdio: 'pipe' });
     const version = JSON.parse(fs.readFileSync(path.join(temporary, 'package.json'))).version;
     const prefix = `sitekit-v${version}`, archive = path.join(temporary, 'artifacts/release', `${prefix}.tar.gz`);
@@ -33,7 +33,7 @@ test('release hashes the exact payload buffers, reads once, and fails before pub
     execFileSync('tar', ['-xzf', archive, '-C', temporary]);
     const extracted = path.join(temporary, prefix);
     const manifest = JSON.parse(fs.readFileSync(path.join(extracted, 'release-manifest.json')));
-    assert.equal(Object.keys(manifest.files).length, 13);
+    assert.equal(Object.keys(manifest.files).length, 23);
     for (const [file, expected] of Object.entries(manifest.files)) {
       const data = fs.readFileSync(path.join(extracted, file));
       assert.equal(crypto.createHash('sha256').update(data).digest('hex'), expected, file);

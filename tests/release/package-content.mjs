@@ -21,6 +21,7 @@ assert.equal(digest(archive), first, 'release archive is not byte-for-byte deter
 const prefix = `sitekit-v${pkg.version}`;
 const expectedArchiveEntries = [
   `${prefix}/LICENSE`,
+  ...['recipes.css', 'recipes.js', 'example.js', 'url-adapter.js', 'code-panel.html', 'catalog-filtering.html', 'documentation-workspace.html', 'documentation-reference.html', 'token-reference.html', 'README.md'].map(file => `${prefix}/dist/recipes/${file}`),
   `${prefix}/dist/LICENSE`,
   `${prefix}/dist/compat/bzby.css`,
   `${prefix}/dist/icons/tabler.svg`,
@@ -61,7 +62,7 @@ try {
   try {
     await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
     const port = server.address().port;
-    for (const resource of ['index.html', 'sitekit/sitekit.css', 'sitekit/sitekit.js', 'sitekit/fonts/DepartureMono-Regular.woff2']) {
+    for (const resource of ['index.html', 'sitekit/sitekit.css', 'sitekit/sitekit.js', 'sitekit/fonts/DepartureMono-Regular.woff2', 'sitekit/recipes/code-panel.html', 'sitekit/recipes/recipes.js', 'sitekit/recipes/token-reference.html']) {
       const response = await fetch(`http://127.0.0.1:${port}/${resource}`);
       assert.equal(response.status, 200, `clean HTTP consumer failed: ${resource}`);
       await response.arrayBuffer();

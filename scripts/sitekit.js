@@ -68,12 +68,20 @@ This directory is the supported SiteKit v1 source-vendored artifact. Copy it as 
 
 The bundle order is reset, tokens, themes, base, components, and utilities. \`LICENSE\` covers SiteKit; \`fonts/DepartureMono-LICENSE.txt\` covers the bundled Departure Mono assets. The curated Tabler sprite is in icons/tabler.svg; preserve icons/LICENSE.txt. Theme-aware scrollbars apply throughout the bundle, with forced-color system fallback. npm publication is not part of SiteKit v1.
 
+Optional documentation compositions are in \`recipes/\`; open \`recipes/code-panel.html\` for runnable examples and read \`recipes/README.md\`. Their CSS and behavior are explicit opt-ins, separate from core components.
+
 The optional \`compat/bzby.css\` palette requires an explicit consumer opt-in. See the [upgrade, integrity and asset guide](https://github.com/kujolang/site-kit/blob/v${packageInfo.version}/docs/consumer-upgrades.md) before replacing existing assets.
 `);
   const legacy = read('tokens/compat/bzby.json');
   fs.mkdirSync(path.join(dist, 'compat'), { recursive: true });
   fs.writeFileSync(path.join(dist, 'compat/bzby.css'), `@layer tokens {\n  [data-theme="bzby"] {\n${flat(legacy.tokens).map(([key, value]) => `    --sk-${key}: ${resolve(value)};`).join('\n')}\n  }\n}\n`);
   const files = ['compat/bzby.css', 'icons/tabler.svg', 'icons/LICENSE.txt', 'icons/README.md', 'LICENSE', 'README.md', 'sitekit.css', 'sitekit.js', 'fonts/DepartureMono-LICENSE.txt', 'fonts/DepartureMono-Regular.woff', 'fonts/DepartureMono-Regular.woff2'];
+  fs.mkdirSync(path.join(dist, 'recipes'), { recursive: true });
+  for (const file of require('./recipe-files.cjs')) {
+    const source = text(`recipes/documentation/${file}`);
+    fs.writeFileSync(path.join(dist, 'recipes', file), file === 'token-reference.html' ? require('./render-token-recipe.cjs')(source) : source);
+    files.push(`recipes/${file}`);
+  }
   const manifest = {
     schemaVersion: 1,
     product: 'SiteKit',
@@ -83,6 +91,7 @@ The optional \`compat/bzby.css\` palette requires an explicit consumer opt-in. S
       css: 'sitekit.css',
       javascript: 'sitekit.js',
       fonts: 'fonts/',
+      recipes: 'recipes/',
     },
     files: Object.fromEntries(files.map((file) => [file, hash(fs.readFileSync(path.join(dist, file)))])),
   };

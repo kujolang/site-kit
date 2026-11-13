@@ -1,0 +1,50 @@
+/* Explicit opt-in compositions; core component CSS and tokens remain unchanged. */
+.recipe-page { overflow-wrap: anywhere; max-inline-size: var(--sk-size-content-lg); margin-inline: auto; padding: var(--sk-space-5); }
+.recipe-page > * + * { margin-block-start: var(--sk-space-6); }
+.recipe-header, .recipe-toolbar, .recipe-controls { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sk-space-3); }
+.recipe-header { justify-content: space-between; }
+.recipe-header nav { display: flex; flex-wrap: wrap; gap: var(--sk-space-4); }
+.recipe-controls { margin-block-end: var(--sk-space-4); }
+.recipe-controls label { display: grid; gap: var(--sk-space-2); min-inline-size: 0; }
+.recipe-controls input, .recipe-controls select { inline-size: 100%; min-block-size: var(--sk-size-control-md); padding: var(--sk-space-2); border: var(--sk-border-1) solid var(--sk-border-default); background: var(--sk-surface-card); color: var(--sk-text-primary); }
+.recipe-code { min-inline-size: 0; margin: 0; border: var(--sk-border-1) solid var(--sk-border-subtle); background: var(--sk-code-surface); color: var(--sk-code-text); }
+.recipe-code figcaption { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sk-space-3); padding: var(--sk-space-3); }
+.recipe-code figcaption button { margin-inline-start: auto; }
+.recipe-code pre { margin: 0; padding: var(--sk-space-4); white-space: pre-wrap; overflow-wrap: anywhere; overflow: auto; font-family: var(--sk-font-mono); }
+.recipe-code summary { cursor: pointer; padding: var(--sk-space-3); }
+.recipe-code summary > * { cursor: pointer; }
+.recipe-syntax-keyword, .recipe-syntax-attribute { color: var(--sk-text-link); }
+.recipe-syntax-string { color: var(--sk-text-success); }
+.recipe-syntax-comment { color: var(--sk-text-muted); }
+.recipe-syntax-number { color: var(--sk-text-primary); }
+.recipe-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(var(--sk-space-24) * 3)), 1fr)); gap: var(--sk-space-4); padding: 0; list-style: none; }
+.recipe-workspace { display: grid; grid-template-columns: minmax(calc(var(--sk-space-24) * 2), 1fr) minmax(0, 3fr); gap: var(--sk-space-6); align-items: start; }
+.recipe-workspace[data-with-outline] { grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr); }
+.recipe-workspace > *, .recipe-article { min-inline-size: 0; }
+.recipe-workspace aside { border-inline-end: var(--sk-border-1) solid var(--sk-border-subtle); padding-inline-end: var(--sk-space-4); }
+.recipe-workspace nav ul { padding-inline-start: var(--sk-space-5); }
+.recipe-workspace nav li + li { margin-block-start: var(--sk-space-3); }
+.recipe-article > * + * { margin-block-start: var(--sk-space-6); }
+.recipe-table { max-inline-size: 100%; overflow: auto; }
+.recipe-table table { inline-size: 100%; }
+.recipe-table th, .recipe-table td { vertical-align: top; }
+.recipe-copy { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sk-space-2); }
+.recipe-copy code { overflow-wrap: anywhere; }
+.recipe-swatch { display: inline-block; inline-size: var(--sk-space-5); block-size: var(--sk-space-5); border: var(--sk-border-1) solid var(--sk-border-default); vertical-align: middle; }
+.recipe-copy [role="status"] { flex-basis: 100%; }
+.recipe-status { color: var(--sk-text-secondary); }
+@media (max-width: 48rem) {
+  .recipe-workspace, .recipe-workspace[data-with-outline] { grid-template-columns: minmax(0, 1fr); }
+  .recipe-workspace aside { border-inline-end: 0; border-block-end: var(--sk-border-1) solid var(--sk-border-subtle); padding-block-end: var(--sk-space-4); }
+}
+/* Author styles must not override the native hidden attribute. */
+[data-recipe-controls][hidden], [data-recipe-code-copy][hidden],
+[data-recipe-copy] button[hidden], [data-recipe-item][hidden],
+[data-recipe-empty][hidden] { display: none; }
+
+.recipe-reference-source { white-space: pre-wrap; overflow-wrap: anywhere; overflow: auto; padding: var(--sk-space-4); background: var(--sk-code-surface); color: var(--sk-code-text); }
+
+.recipe-page main > * + * { margin-block-start: var(--sk-space-6); }
+.recipe-article h2:not(:first-child) { margin-block-start: var(--sk-space-6); }
+.recipe-article nav { display: flex; flex-wrap: wrap; gap: var(--sk-space-4); }
+.recipe-table code { overflow-wrap: normal; }

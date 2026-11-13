@@ -1,0 +1,69 @@
+<!doctype html><html lang="en" data-theme="kujo-light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Documentation template recipe consumer</title><link rel="stylesheet" href="../../dist/sitekit.css"><link rel="stylesheet" href="../../dist/recipes/recipes.css"></head><body><a class="sk-skip-link" href="#main-content">Skip to content</a><div class="recipe-page"><main class="recipe-workspace" data-with-outline id="main-content">
+	<aside class="docs-sidebar" aria-label="Documentation sections">
+		<p class="docs-sidebar-label">Browse</p>
+		<ul><li><a href="/" class="text-primary hover:underline">Home</a></li><li><a href="/blog/" class="text-primary hover:underline">Blog</a></li><li><a href="/start-here/" class="text-primary hover:underline">Start here</a></li><li><a href="/concepts/" class="text-primary hover:underline">Concepts</a></li><li><a href="/guides/" class="text-primary hover:underline">Guides</a></li><li><a href="/reference/" class="text-primary hover:underline">Reference</a></li></ul>
+	</aside>
+	<article class="recipe-article">
+		<p class="docs-eyebrow">Reference</p>
+		<h1>Site configuration</h1>
+		<p class="docs-description">Reference for the starter's most important Kujo SSG settings and build overrides.</p>
+
+		<section class="docs-prerequisites" aria-label="Prerequisites"><h2>Prerequisites</h2></section>
+		<div class="docs-body"><p>The root <code>kujo-ssg.yml</code> file controls the site identity and build directories.</p>
+<h2 id="core-settings">Core settings</h2>
+<div class="sk-table recipe-table" tabindex="0" role="region" aria-label="Configuration settings"><table><caption>Configuration settings</caption><thead><tr>
+<th scope="col">Setting</th>
+<th scope="col">Purpose</th>
+<th scope="col">Starter value</th>
+</tr></thead><tbody>
+<tr>
+<td><code>site_url</code></td>
+<td>Absolute production origin used for canonical URLs and feeds</td>
+<td><code>http://127.0.0.1:4178</code></td>
+</tr>
+<tr>
+<td><code>site_title</code></td>
+<td>Brand text and metadata name</td>
+<td><code>Your Project Docs</code></td>
+</tr>
+<tr>
+<td><code>site_tagline</code></td>
+<td>Default description and footer copy</td>
+<td>Generic starter copy</td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>Markdown source root</td>
+<td><code>content</code></td>
+</tr>
+<tr>
+<td><code>templates</code></td>
+<td>HTML template root</td>
+<td><code>templates</code></td>
+</tr>
+<tr>
+<td><code>assets</code></td>
+<td>Static asset root</td>
+<td><code>assets</code></td>
+</tr>
+<tr>
+<td><code>output</code></td>
+<td>Disposable generated site</td>
+<td><code>output</code></td>
+</tr>
+<tr>
+<td><code>sort_by</code></td>
+<td>Ordering for posts and collection items</td>
+<td><code>order</code></td>
+</tr>
+</tbody></table></div>
+<h2 id="publication-settings">Publication settings</h2>
+<p>The starter uses <code>robots: private</code> so an unchanged example is not intentionally indexed. Change it to <code>public</code> when the site is ready. <code>llms: public</code> emits a machine-readable documentation index when <code>site_url</code> is set.</p>
+<h2 id="one-build-url-override">One-build URL override</h2>
+<p>Use the environment variable supported by the wrapper:</p>
+<pre class="recipe-reference-source" tabindex="0" aria-label="Shell source"><code class="language-bash">SITE_URL=https://docs.example.com ./scripts/build.sh</code></pre>
+<p>Any additional arguments passed to <code>scripts/build.sh</code> are forwarded to the vendored SSG entrypoint.</p></div>
+		<nav class="docs-prev-next" aria-label="Previous and next pages"><a class="docs-pagination-link docs-pagination-prev" href="/concepts/documentation-structure/" rel="prev"><span>Previous</span></a><a class="docs-pagination-link docs-pagination-next" href="/customize/" rel="next"><span>Next</span></a></nav>
+	</article>
+	<nav class="docs-toc" aria-label="On this page"><h2>On this page</h2><ol><li class="toc-level-2"><a href="#core-settings">Core settings</a></li><li class="toc-level-2"><a href="#publication-settings">Publication settings</a></li><li class="toc-level-2"><a href="#one-build-url-override">One-build URL override</a></li></ol></nav>
+</main></div></body></html>

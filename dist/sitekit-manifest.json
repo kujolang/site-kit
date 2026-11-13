@@ -6,7 +6,8 @@
   "entrypoints": {
     "css": "sitekit.css",
     "javascript": "sitekit.js",
-    "fonts": "fonts/"
+    "fonts": "fonts/",
+    "recipes": "recipes/"
   },
   "files": {
     "compat/bzby.css": "7849fc12bb0c6f35d24bba7bcaa46bc0741c679cd443ffc706d79896ca81da8d",
@@ -14,11 +15,21 @@
     "icons/LICENSE.txt": "b740a1d46122672da62833e97f7e7c8a13fa85cbc7445b584b297cc00dde93db",
     "icons/README.md": "c4c2651a66188f3815695e7754dda5e760019a2d6e079191fac03ed0efdde004",
     "LICENSE": "9c6cac5c32d816ad842f9a412ba4c5c862611e5df7816f9bf0d0780beea00e79",
-    "README.md": "960be8b353a2620d276628b8e96bd7a227d8b6820fd0b6c45348a4fb6e1f2e69",
+    "README.md": "697ea1542d64fb2ebe33ddfa94393ebd1534a67fdc557746cf45feda045a718a",
     "sitekit.css": "5fe3724b982f029f6488d0e20bd58a10ff8a9155557c505cf156415cbaa4335d",
     "sitekit.js": "5a2605cd878a320014b7712759ad3d8c90091a65220a1203f30dee83562e1f16",
     "fonts/DepartureMono-LICENSE.txt": "b65e42750f3cb65437a97f4dfd781c58f199259949db2341012be60e32500e83",
     "fonts/DepartureMono-Regular.woff": "8ede4e8a40475d440389d1bb44201bd3067129a62c718158921b111ceb52fca5",
-    "fonts/DepartureMono-Regular.woff2": "5b4fed1daa90708aa9c6ee1190abca9dc22164a1c1def0020386e46b61038cfb"
+    "fonts/DepartureMono-Regular.woff2": "5b4fed1daa90708aa9c6ee1190abca9dc22164a1c1def0020386e46b61038cfb",
+    "recipes/recipes.css": "969ca0095460f6939cac92c36c6bb8c3bdd89b9ad653667541a07c105e2415e2",
+    "recipes/recipes.js": "fe1b3a246ee2034989d7f2de3348621fcb3b50c956525c728ac390732e2b619a",
+    "recipes/example.js": "a14cdb7e9546877b1106e8d048984c99c03438a1eabd3ad3b9bd0fe77b3349f7",
+    "recipes/url-adapter.js": "637c2d2f67c449a31eb7ccd9f5c2f357ef09f1894e5a7e631beeafd60dc31de2",
+    "recipes/code-panel.html": "56ea449142a83d2f8240d84702968a859b1bbf8052319b0afe7dbf9d46322280",
+    "recipes/catalog-filtering.html": "de69b263badbd0ff2291f0ed9d484bbaa0aa32f3a839c791c352e4a15d17f0a0",
+    "recipes/documentation-workspace.html": "cd03e206589f330beb931a7916ae439dc8d904a9cd44996a77c1ed473b8db9ab",
+    "recipes/documentation-reference.html": "8c49b02a1be52578a3bd32007e80d689998c18c6bb68cde561048bb130602fc6",
+    "recipes/token-reference.html": "f94fcd6d486e720998d2547f7867fcc9053e878dfaaf2c9257b0d8eee15a92a8",
+    "recipes/README.md": "04471445826a1d2351c313ebc7b3aaa67b60e5eae234150f13358bdda5ccf64d"
   }
 }

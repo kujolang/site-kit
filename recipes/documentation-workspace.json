@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/recipe.schema.json",
+  "name": "Documentation Workspace",
+  "description": "Optional source-vendored documentation workspace composition with readable static HTML.",
+  "layout": "docs.html",
+  "components": [
+    "navigation",
+    "search-input",
+    "code-block",
+    "table",
+    "link"
+  ],
+  "accessibility": [
+    "Preserve landmarks, labels and native semantics.",
+    "Keep content available without JavaScript; announce result and copy status.",
+    "Verify keyboard navigation, both themes and 320px layouts."
+  ],
+  "example": "dist/recipes/documentation-workspace.html",
+  "documentation": "docs/documentation-recipes.md"
+}

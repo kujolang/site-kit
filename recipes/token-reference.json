@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/recipe.schema.json",
+  "name": "Token Reference",
+  "description": "Optional source-vendored token reference composition with readable static HTML.",
+  "layout": "docs.html",
+  "components": [
+    "table",
+    "button",
+    "search-input"
+  ],
+  "accessibility": [
+    "Preserve landmarks, labels and native semantics.",
+    "Keep content available without JavaScript; announce result and copy status.",
+    "Verify keyboard navigation, both themes and 320px layouts."
+  ],
+  "example": "dist/recipes/token-reference.html",
+  "documentation": "docs/documentation-recipes.md"
+}

@@ -132,3 +132,7 @@ The [SiteKit CLI](packages/sitekit-cli/README.md) adopts, verifies, upgrades and
 ## Improvement roadmap
 
 The [SiteKit improvement roadmap](docs/roadmap.md) organizes the original 82-item consumer review into completed work, upcoming composition and integration batches, historical regression coverage, and cross-project coordination. The [full inventory](docs/roadmap-inventory.md) preserves every original ID and its acceptance criteria or disposition.
+
+## Optional documentation recipes
+
+Copyable [code-panel, catalog-filtering, documentation-workspace and token-reference recipes](docs/documentation-recipes.md) are included under `dist/recipes/`. Their stylesheet and script are explicit opt-ins; existing component APIs and the core bundle remain unchanged. Open `dist/recipes/code-panel.html` locally to explore the runnable examples.

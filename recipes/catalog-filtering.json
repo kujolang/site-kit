@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/recipe.schema.json",
+  "name": "Catalog Filtering",
+  "description": "Optional source-vendored catalog filtering composition with readable static HTML.",
+  "layout": "docs.html",
+  "components": [
+    "search-input",
+    "select",
+    "button",
+    "card",
+    "empty-state"
+  ],
+  "accessibility": [
+    "Preserve landmarks, labels and native semantics.",
+    "Keep content available without JavaScript; announce result and copy status.",
+    "Verify keyboard navigation, both themes and 320px layouts."
+  ],
+  "example": "dist/recipes/catalog-filtering.html",
+  "documentation": "docs/documentation-recipes.md"
+}

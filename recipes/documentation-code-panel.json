@@ -1,0 +1,17 @@
+{
+  "$schema": "../schemas/recipe.schema.json",
+  "name": "Documentation Code Panel",
+  "description": "Optional source-vendored documentation code panel composition with readable static HTML.",
+  "layout": "docs.html",
+  "components": [
+    "code-block",
+    "button"
+  ],
+  "accessibility": [
+    "Preserve landmarks, labels and native semantics.",
+    "Keep content available without JavaScript; announce result and copy status.",
+    "Verify keyboard navigation, both themes and 320px layouts."
+  ],
+  "example": "dist/recipes/code-panel.html",
+  "documentation": "docs/documentation-recipes.md"
+}

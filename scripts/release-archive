@@ -14,6 +14,7 @@ const archivePath = path.join(outputDir, `${releaseRoot}.tar.gz`);
 const checksumPath = `${archivePath}.sha256`;
 const payload = [
   'LICENSE',
+  ...require('./recipe-files.cjs').map(file => `dist/recipes/${file}`),
   'dist/LICENSE',
   'dist/compat/bzby.css',
   'dist/icons/tabler.svg',
