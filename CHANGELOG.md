@@ -2,7 +2,12 @@
 
 ## Unreleased
 
+## [1.2.0] - 2026-11-12
+
 - Add opt-in source-vendored documentation code-panel, catalog-filtering, workspace and token-reference recipes with runnable examples, isolated behavior, canonical copying and lifecycle guidance. Include them in distribution integrity manifests and release archives without changing core component APIs.
+
+- Preserve canonical encoded source line endings when copying; improve recipe disclosures, token-table sizing and theme swatches.
+- Add three-engine recipe, accessibility, responsive and second-consumer verification with distribution integrity coverage.
 
 - Theme native Slider accents with the existing primary action token instead of the browser default blue.
 
@@ -43,3 +48,5 @@
 [1.0.0]: https://github.com/kujolang/site-kit/releases/tag/v1.0.0
 
 [1.1.0]: https://github.com/kujolang/site-kit/releases/tag/v1.1.0
+
+[1.2.0]: https://github.com/kujolang/site-kit/releases/tag/v1.2.0

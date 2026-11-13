@@ -1,6 +1,6 @@
 # SiteKit
 
-[![Version](https://img.shields.io/badge/version-1.1.1-black)](https://github.com/kujolang/site-kit/releases/tag/v1.1.1)
+[![Version](https://img.shields.io/badge/version-1.2.0-black)](https://github.com/kujolang/site-kit/releases/tag/v1.2.0)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![built for Kujo](https://img.shields.io/badge/built%20for-Kujo-white.svg)](https://github.com/kujolang/kujo)
 [![CI](https://github.com/kujolang/site-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/kujolang/site-kit/actions/workflows/ci.yml)
@@ -101,7 +101,7 @@ npm run release:check
 npm test
 ```
 
-`npm run format` deterministically formats repository JSON and normalizes supported text files. `npm run generated:check` generates twice, compares outputs, and rejects tracked drift in `css/generated/`, `DESIGN.md`, `docs/components.md`, `dist/`, and the component snapshot. `npm run release:archive` creates deterministic `artifacts/release/sitekit-v1.1.0.tar.gz` plus a SHA-256 checksum without publishing anything.
+`npm run format` deterministically formats repository JSON and normalizes supported text files. `npm run generated:check` generates twice, compares outputs, and rejects tracked drift in `css/generated/`, `DESIGN.md`, `docs/components.md`, `dist/`, and the component snapshot. `npm run release:archive` creates deterministic `artifacts/release/sitekit-v1.2.0.tar.gz` plus a SHA-256 checksum without publishing anything.
 
 See the [launch checklist](docs/launch-checklist.md) for Workcell, Lens, ShipCheck, hosted CI, tagging, rollback, and clean-consumer procedures.
 
