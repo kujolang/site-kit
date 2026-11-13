@@ -6,7 +6,7 @@ These are compositions of existing components. Nothing is automatically added to
 
 ## Code panel
 
-Use the markup in `code-panel.html`. `data-source` contains the HTML-escaped canonical string, decoded by the browser. It is optional and falls back to the original code text. Copy always uses that canonical string, even when the display is formatted. Never use `data-copy-code` on the recipe button: that core hook copies display text and has a different contract.
+Use the markup in `code-panel.html`. `data-source` contains the HTML-escaped canonical string, decoded by the browser. It is optional and falls back to the original code text. HTML parsing normalizes literal carriage returns; encode them as `&#13;` (and line feeds as `&#10;`) when preserving CRLF exactly, or set `code.dataset.source` programmatically before enhancement. Copy always uses that canonical string, even when the display is formatted. Never use `data-copy-code` on the recipe button: that core hook copies display text and has a different contract.
 
 `enhance(root, { format(source, language), tokenize(display, language) })` accepts optional synchronous or asynchronous adapters. `format` returns a string. `tokenize` returns `{text, kind}` records whose text must concatenate exactly to the display. Allowed kinds: keyword, string, comment, number, attribute. Unknown kinds render as plain text. All tokens are inserted with textContent; HTML is never executed. Failure retains authored content and announces the fallback. `example.js` demonstrates JSON-only formatting/highlighting without dependencies. It preserves HTML, shell, Kujo and whitespace-sensitive source unchanged. Consumers may provide their own formatter; keep it outside the core Code Block contract.
 
@@ -27,3 +27,5 @@ Token tables retain captions, scoped headers, explicit light/dark values and a k
 `enhance` returns a cleanup function for the elements that invocation mounted. Repeated enhancement is idempotent. Call cleanup before replacing source or removing a mounted subtree, then enhance the replacement. Cleanup restores original code, visibility and result status. A late asynchronous formatter/copy result cannot mutate a disposed instance. Controls and markup are consumer-owned; malformed/incomplete recipe roots are skipped. Add unique IDs when copying examples. Recipes never invoke network requests, execute code, submit forms to services or persist data themselves.
 
 Verify keyboard navigation, both themes, reduced motion, 320px layouts, 200% text, no-JavaScript reading, exact copying and clipboard denial. Test independent instances and browser history when adopting the optional URL adapter.
+
+Disclosure chevrons embed the existing curated Tabler chevron-down path so they also render from local files. Preserve the parent distribution’s `icons/LICENSE.txt`; no remote icon service is used.

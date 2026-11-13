@@ -30,11 +30,11 @@ module.exports = function render(template) {
     const variable = `--sk-${name.replaceAll('.', '-')}`;
     const values = Object.keys(themes).map(theme => {
       const value = resolve(name, theme);
-      const swatch = value.startsWith('#') ? `<span class="recipe-swatch" data-theme="${theme}" style="background:${escape(value)}" aria-hidden="true"></span> ` : '';
+      const swatch = value.startsWith('#') ? `<span class="recipe-swatch" data-value-theme="${theme}" style="background:${escape(value)}" aria-hidden="true"></span> ` : '';
       return `<td>${swatch}<code>${escape(value)}</code></td>`;
     }).join('');
     const consumers = components.filter(c => c.tokenDependencies.includes(name)).map(c => c.name);
-    return `<tr data-recipe-item data-search="${escape(name + ' ' + variable + ' ' + consumers.join(' '))}"><th scope="row">${escape(name)}</th><td><div class="recipe-copy" data-recipe-copy><code data-recipe-value>${variable}</code><button class="sk-button" type="button" hidden aria-label="Copy ${variable}">Copy</button><span role="status" data-recipe-status></span></div></td>${values}<td><details><summary>${consumers.length} direct consumers</summary><ul>${consumers.map(c => `<li>${escape(c)}</li>`).join('')}</ul></details></td></tr>`;
+    return `<tr data-recipe-item data-search="${escape(name + ' ' + variable + ' ' + consumers.join(' '))}"><th scope="row">${escape(name)}</th><td><div class="recipe-copy" data-recipe-copy><code data-recipe-value>${variable}</code><button class="sk-button" type="button" hidden aria-label="Copy ${variable}">Copy</button><span role="status" data-recipe-status></span></div></td>${values}<td><details class="recipe-disclosure"><summary><svg class="recipe-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6l6 -6"></path></svg>${consumers.length} direct consumer${consumers.length === 1 ? '' : 's'}</summary><ul>${consumers.map(c => `<li>${escape(c)}</li>`).join('')}</ul></details></td></tr>`;
   }).join('\n');
   return template.replace('<!-- TOKEN_ROWS -->', rows);
 };

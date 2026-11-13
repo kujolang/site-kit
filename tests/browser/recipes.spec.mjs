@@ -159,3 +159,17 @@ test('recipe workspace adapts a second built documentation consumer', async ({ p
   await expect(page).toHaveURL(/#core-settings$/);
   await expect(page.locator('#core-settings')).toBeInViewport();
 });
+
+test('recipe canonical source retains encoded CRLF and entities', async ({ page }) => {
+  await page.goto(base + 'code-panel.html');
+  await clipboard(page);
+  await page.evaluate(() => {
+    const host = document.createElement('section');
+    host.id = 'encoded-source';
+    host.innerHTML = '<figure data-recipe-code><figcaption><span role="status" data-recipe-status></span><button data-recipe-code-copy hidden>Copy encoded</button></figcaption><pre><code data-source="&lt;pre&gt;A&#13;&#10;  B &amp;amp; C&lt;/pre&gt;">readable fallback</code></pre></figure>';
+    document.querySelector('main').append(host);
+    SiteKitRecipes.enhance(host);
+  });
+  await page.getByRole('button', { name: 'Copy encoded', exact: true }).click();
+  expect(await page.evaluate(() => window.copied)).toBe('<pre>A\r\n  B &amp; C</pre>');
+});

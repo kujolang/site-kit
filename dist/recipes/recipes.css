@@ -27,7 +27,7 @@
 .recipe-article > * + * { margin-block-start: var(--sk-space-6); }
 .recipe-table { max-inline-size: 100%; overflow: auto; }
 .recipe-table table { inline-size: 100%; }
-.recipe-table th, .recipe-table td { vertical-align: top; }
+.recipe-table th, .recipe-table td { vertical-align: top; min-inline-size: calc(var(--sk-space-24) * 2); overflow-wrap: normal; }
 .recipe-copy { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sk-space-2); }
 .recipe-copy code { overflow-wrap: anywhere; }
 .recipe-swatch { display: inline-block; inline-size: var(--sk-space-5); block-size: var(--sk-space-5); border: var(--sk-border-1) solid var(--sk-border-default); vertical-align: middle; }
@@ -48,3 +48,9 @@
 .recipe-article h2:not(:first-child) { margin-block-start: var(--sk-space-6); }
 .recipe-article nav { display: flex; flex-wrap: wrap; gap: var(--sk-space-4); }
 .recipe-table code { overflow-wrap: normal; }
+
+.recipe-disclosure > summary { display: flex; align-items: center; gap: var(--sk-space-2); list-style: none; cursor: pointer; }
+.recipe-disclosure > summary::-webkit-details-marker { display: none; }
+.recipe-disclosure > summary > * { cursor: pointer; }
+.recipe-chevron { inline-size: var(--sk-space-4); block-size: var(--sk-space-4); flex-shrink: 0; }
+.recipe-disclosure:not([open]) > summary .recipe-chevron { transform: rotate(-90deg); }

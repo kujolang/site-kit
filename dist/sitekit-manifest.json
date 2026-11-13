@@ -21,15 +21,15 @@
     "fonts/DepartureMono-LICENSE.txt": "b65e42750f3cb65437a97f4dfd781c58f199259949db2341012be60e32500e83",
     "fonts/DepartureMono-Regular.woff": "8ede4e8a40475d440389d1bb44201bd3067129a62c718158921b111ceb52fca5",
     "fonts/DepartureMono-Regular.woff2": "5b4fed1daa90708aa9c6ee1190abca9dc22164a1c1def0020386e46b61038cfb",
-    "recipes/recipes.css": "969ca0095460f6939cac92c36c6bb8c3bdd89b9ad653667541a07c105e2415e2",
+    "recipes/recipes.css": "c89672146d1a9afab15130e5268811a194ddf0c774e0392eec2b8b813074f4a4",
     "recipes/recipes.js": "fe1b3a246ee2034989d7f2de3348621fcb3b50c956525c728ac390732e2b619a",
     "recipes/example.js": "a14cdb7e9546877b1106e8d048984c99c03438a1eabd3ad3b9bd0fe77b3349f7",
     "recipes/url-adapter.js": "637c2d2f67c449a31eb7ccd9f5c2f357ef09f1894e5a7e631beeafd60dc31de2",
-    "recipes/code-panel.html": "56ea449142a83d2f8240d84702968a859b1bbf8052319b0afe7dbf9d46322280",
+    "recipes/code-panel.html": "7e840d3f758cf4ff74be564b94c92d56995c89f8048ad9552753c0ff2dd0119e",
     "recipes/catalog-filtering.html": "de69b263badbd0ff2291f0ed9d484bbaa0aa32f3a839c791c352e4a15d17f0a0",
     "recipes/documentation-workspace.html": "cd03e206589f330beb931a7916ae439dc8d904a9cd44996a77c1ed473b8db9ab",
     "recipes/documentation-reference.html": "8c49b02a1be52578a3bd32007e80d689998c18c6bb68cde561048bb130602fc6",
-    "recipes/token-reference.html": "f94fcd6d486e720998d2547f7867fcc9053e878dfaaf2c9257b0d8eee15a92a8",
-    "recipes/README.md": "04471445826a1d2351c313ebc7b3aaa67b60e5eae234150f13358bdda5ccf64d"
+    "recipes/token-reference.html": "e0ee4fc6a2cf7f09b3b8d5273a69fe52eb7672fb63ec6018888d35a0fb64488c",
+    "recipes/README.md": "e613c0d10d1bfbee2755cb0f588184558aadc40fc31059cedf4a0987966fa1aa"
   }
 }
