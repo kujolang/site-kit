@@ -1,0 +1,153 @@
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 test:static
+> npm run format:check && npm run build && npm run test:tooling && npm run lint && npm run validate && npm run snapshot && npm run smoke && npm run release:check
+
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 format:check
+> node scripts/format-repository --check
+
+format check passed: 870 files
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 build
+> node scripts/build
+
+generated css
+current contracts validated and generated: 86
+generated DESIGN.md and docs/components.md
+generated dist/sitekit.css and dist/sitekit.js
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 test:tooling
+> node --test tests/tooling/*.test.* && npm run test:cli
+
+✔ consumer audit detects incomplete, modified and mixed distributions without writing (76.166576ms)
+✔ consumer comparison reports changed, added and removed files and rejects linked assets (161.923645ms)
+✔ generated check catches untracked, staged, modified and nondeterministic output (3159.101255ms)
+✔ generation reads each source once, preserves bytes, and reloads between invocations (603.863038ms)
+✔ release hashes the exact payload buffers, reads once, and fails before publishing incomplete input (326.508673ms)
+✔ fixture server rejects malformed and escaped paths without losing availability (106.138325ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3299.367252
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 test:cli
+> node --test packages/sitekit-cli/test/engine.test.cjs packages/sitekit-cli/test/release.test.cjs
+
+✔ adoption, nested status and read-only latest/exact checks (13.793474ms)
+✔ upgrade preserves HTML and fonts, rollback retains both versions (25.344579ms)
+✔ modified, missing, extra files and empty directories are never replaced (31.362048ms)
+✔ version policies and same-version identity (24.343285ms)
+✔ recovery after interruption at staged (12.053861ms)
+✔ recovery after interruption at backed-up (12.93836ms)
+✔ recovery after interruption at promoted (13.954852ms)
+✔ recovery after interruption at locked (14.094634ms)
+✔ recovery preserves edits made after interrupted promotion (11.625977ms)
+✔ concurrent asset edits are detected before moving the original (8.505395ms)
+✔ exclusive process lock and recovery reject a live owner (5.05304ms)
+✔ init refuses ambiguous discovery and traversal (5.197025ms)
+✔ symlink installations and metadata are refused (4.524074ms)
+✔ CLI errors are machine readable and optional pack invokes shared engine (459.744971ms)
+✔ recovery after process exit clears stale lock and restores absent target (99.591149ms)
+✔ automatic adoption discovers the common public/vendor directory (4.247896ms)
+✔ real SiteKit release archive verifies both manifests (8.296392ms)
+✔ reject traversal, absolute paths, links, corrupt headers and wrong versions (65.971613ms)
+✔ reject truncation, duplicate paths and manifest tampering (21.281561ms)
+✔ exact stable versions only (0.411182ms)
+✔ published release selection, checksums, missing assets, prereleases and HTTP failures (34.428348ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 871.241587
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 lint
+> node scripts/lint
+
+generated css
+current contracts validated and generated: 86
+generated DESIGN.md and docs/components.md
+component validation passed: 86 components
+sitekit lint passed
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 validate
+> npm run validate:components && npm run validate:contract && npm run validate:version && npm run validate:links && npm run validate:metadata
+
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 validate:components
+> node scripts/validate-components
+
+component validation passed: 86 components
+current contracts validated and generated: 86
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 validate:contract
+> node tests/contract/release-contract.mjs
+
+release contract passed: 86 schemas, 5 representative pages, distribution hashes and semantics verified
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 validate:version
+> node tests/contract/version-consistency.mjs
+
+version consistency passed: 1.1.1
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 validate:links
+> node tests/contract/markdown-links.mjs
+
+Markdown link audit passed: 230 files, zero broken local links
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 validate:metadata
+> node tests/contract/component-contracts.cjs
+
+contradictory fields, invalid examples/items/types and broken variant references rejected
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 snapshot
+> node scripts/snapshot-components
+
+snapshot written: 86 components
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 smoke
+> node tests/browser/smoke.mjs
+
+browser smoke passed: distribution, file:// contract, HTTP assets, themes, keyboard hooks, semantics, and reduced motion
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @kujolang/sitekit@1.1.1 release:check
+> node tests/release/package-content.mjs
+
+npm warn Unknown env config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+package content passed: 24 archive files, 26 npm-pack files, deterministic SHA-256 bf19903df4deee8795b8a81a7d95bc0aac96986467b6e382995df905b9bd3f09

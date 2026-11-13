@@ -1,0 +1,16 @@
+Docs search index generated
+  Output: assets/js/docs-search-index.json
+  Items: 6
+╔════════════════════════════════════════════════╗
+║        Kujo Static Site Generator              ║
+╚════════════════════════════════════════════════╝
+
+Loaded configuration from kujo-ssg.yml
+Build complete
+  Posts generated: 1
+  Pages generated: 2
+  Output directory: output
+  Build time: 22.558021247999996s
+Checked HTML files: 22
+Validation passed
+Template contract passed
