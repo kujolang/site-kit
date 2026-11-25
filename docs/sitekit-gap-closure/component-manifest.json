@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "libraryVersion": "1.2.0",
   "sourceIdentity": "SHA-256 sourceHashes per component; commit is recorded in VERIFICATION.md",
-  "runtimeSourceHash": "5a2605cd878a320014b7712759ad3d8c90091a65220a1203f30dee83562e1f16",
+  "runtimeSourceHash": "5536ed9ad974b09ba39fcfd7462a8a571e81e439290c0fd3632c9e8edf2f23c1",
   "components": [
     {
       "slug": "accordion",

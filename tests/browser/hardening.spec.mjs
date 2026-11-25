@@ -58,3 +58,105 @@ test('dynamic modal openers synchronize state and restore focus after close', as
   await expect(page.locator('#dynamic-opener')).toHaveAttribute('aria-expanded', 'false');
   await expect(page.locator('#dynamic-opener')).toBeFocused();
 });
+
+test('tabs resolve current panel IDs and write only state that changes', async ({ page }) => {
+  await fixture(page, 'tabs');
+  const result = await page.evaluate(() => {
+    const root = document.createElement('div');
+    root.className = 'sk-tabs';
+    root.innerHTML = `<div role="tablist" aria-label="Settings">
+      <button role="tab" aria-controls="late-panel">First</button>
+      <button role="tab">Second</button>
+      <button role="tab" aria-controls="early-panel" disabled>Unavailable</button>
+    </div>
+    <section role="tabpanel" id="early-panel">Unavailable panel</section>
+    <section role="tabpanel">Generated ID panel</section>
+    <section role="tabpanel" id="late-panel">First panel</section>`;
+    document.body.append(root);
+    SiteKit.enhance(root);
+    const tabs = root.querySelectorAll('[role=tab]');
+    const generatedId = tabs[1].getAttribute('aria-controls');
+    const generatedPanel = document.getElementById(generatedId);
+    const association = generatedPanel.getAttribute('aria-labelledby');
+    const changes = [];
+    root.addEventListener('sk:change', event => changes.push(event.detail.value));
+    const observer = new MutationObserver(() => {});
+    observer.observe(root, { subtree: true, attributes: true });
+    tabs[0].dispatchEvent(new KeyboardEvent('keydown', { bubbles: true, key: 'x' }));
+    const unrelatedWrites = observer.takeRecords().length;
+    tabs[0].dispatchEvent(new KeyboardEvent('keydown', { bubbles: true, key: 'ArrowRight' }));
+    const writes = observer.takeRecords().map(record => record.attributeName).sort();
+    observer.disconnect();
+    const selected = root.querySelector('[aria-selected=true]');
+    const focused = document.activeElement;
+    const visiblePanel = root.querySelector('[role=tabpanel]:not([hidden])');
+    const newTab = document.createElement('button');
+    newTab.setAttribute('role', 'tab');
+    newTab.setAttribute('aria-controls', 'new-settings-panel');
+    newTab.textContent = 'New';
+    root.querySelector('[role=tablist]').append(newTab);
+    root.insertAdjacentHTML('beforeend', '<section role="tabpanel" id="new-settings-panel">New panel</section>');
+    SiteKit.enhance(root);
+    newTab.click();
+
+    return {
+      generatedAssociation: Boolean(generatedId) && association === tabs[1].id,
+      unrelatedWrites, writes,
+      selectedAndFocused: selected === tabs[1] && focused === tabs[1] && visiblePanel === generatedPanel,
+      changeEvents: changes.length === 2 && changes[0] === tabs[1].id && changes[1] === newTab.id,
+      newPanel: root.querySelector('[role=tabpanel]:not([hidden])').id,
+    };
+  });
+  expect(result).toEqual({
+    generatedAssociation: true,
+    unrelatedWrites: 0,
+    writes: ['aria-selected', 'aria-selected', 'hidden', 'hidden', 'tabindex', 'tabindex'],
+    selectedAndFocused: true,
+    changeEvents: true,
+    newPanel: 'new-settings-panel',
+  });
+});
+
+test('combobox reuses filtered visibility while honoring current option labels and disabled state', async ({ page }) => {
+  await fixture(page, 'combobox');
+  const result = await page.evaluate(() => {
+    const root = document.querySelector('.sk-combobox');
+    const input = root.querySelector('[role=combobox]');
+    const list = root.querySelector('[role=listbox]');
+    list.innerHTML = `<li role="option" data-value="card">Card</li>
+      <li role="option" data-value="cash">Cash</li>
+      <li role="option" data-value="bank">Bank</li>`;
+    root.insertAdjacentHTML('beforeend', '<input type="hidden" data-sk-value>');
+    SiteKit.dispose(root);
+    SiteKit.enhance(root);
+    const [card, cash, bank] = list.querySelectorAll('[role=option]');
+    const type = value => {
+      input.value = value;
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+    };
+    const press = key => input.dispatchEvent(new KeyboardEvent('keydown', { key, bubbles: true }));
+    type('unmatched');
+    const emptyMessage = root.querySelector('[role=status]').textContent;
+    type('ca');
+    const observer = new MutationObserver(() => {});
+    observer.observe(list, { subtree: true, attributes: true, attributeFilter: ['hidden'] });
+    press('ArrowDown');
+    const firstActive = input.getAttribute('aria-activedescendant') === card.id;
+    const redundantVisibilityWrites = observer.takeRecords().length;
+    observer.disconnect();
+    cash.setAttribute('aria-disabled', 'true');
+    bank.textContent = 'Cash transfer';
+    press('ArrowDown');
+    const nextActive = input.getAttribute('aria-activedescendant') === bank.id && !bank.hidden;
+    press('Enter');
+    return {
+      emptyMessage, firstActive, redundantVisibilityWrites, nextActive,
+      committed: input.value, selected: bank.getAttribute('aria-selected'),
+      value: root.querySelector('[data-sk-value]').value, closed: list.hidden,
+    };
+  });
+  expect(result).toEqual({
+    emptyMessage: 'No results', firstActive: true, redundantVisibilityWrites: 0, nextActive: true,
+    committed: 'Cash transfer', selected: 'true', value: 'bank', closed: true,
+  });
+});

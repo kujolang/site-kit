@@ -28,6 +28,8 @@ SiteKit.enhance(host);
 
 `SiteKit.serializeEditor(root)` returns an allowed HTML fragment from an editor root or editable element. Treat this as the supported editor output rather than reading arbitrary `innerHTML`.
 
+Tabs resolve panel IDs within the current widget and use panel order for tabs without a matching reference. Combobox filtering uses current option labels, and keyboard navigation checks current disabled state.
+
 ## Bounded interaction contracts
 
 | Component | Markup and behavior | Ownership and boundary |

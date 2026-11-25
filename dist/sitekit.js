@@ -314,39 +314,56 @@
     if (!list) return;
     function pairs() {
       var panels = Array.from(root.querySelectorAll('[role="tabpanel"]')).filter(function (p) { return p.closest('.sk-tabs') === root; });
+      var panelsById = new Map();
+      panels.forEach(function (panel) {
+        if (panel.id && !panelsById.has(panel.id)) panelsById.set(panel.id, panel);
+      });
       return Array.from(list.querySelectorAll('[role="tab"]')).map(function (tab, i) {
-        var panel = panels.find(function (p) { return p.id && p.id === tab.getAttribute('aria-controls'); }) || panels[i];
+        var controls = tab.getAttribute('aria-controls');
+        var panel = panelsById.get(controls) || panels[i];
         if (!panel) return null;
         if (!tab.id) tab.id = nextId('sk-tab');
-        if (!panel.id) panel.id = nextId('sk-panel');
-        tab.setAttribute('aria-controls', panel.id); panel.setAttribute('aria-labelledby', tab.id); panel.tabIndex = 0;
+        if (!panel.id) {
+          panel.id = nextId('sk-panel');
+          panelsById.set(panel.id, panel);
+        }
+        if (controls !== panel.id) tab.setAttribute('aria-controls', panel.id);
+        if (panel.getAttribute('aria-labelledby') !== tab.id) panel.setAttribute('aria-labelledby', tab.id);
+        if (panel.getAttribute('tabindex') !== '0') panel.tabIndex = 0;
         return { tab: tab, panel: panel };
       }).filter(Boolean);
     }
-    function select(tab, focus) {
-      pairs().forEach(function (p) { var yes = p.tab === tab; p.tab.setAttribute('aria-selected', String(yes)); p.tab.tabIndex = yes ? 0 : -1; p.panel.hidden = !yes; });
+    function select(entries, tab, focus) {
+      entries.forEach(function (p) {
+        var selected = p.tab === tab, ariaSelected = String(selected), tabIndex = selected ? '0' : '-1';
+        if (p.tab.getAttribute('aria-selected') !== ariaSelected) p.tab.setAttribute('aria-selected', ariaSelected);
+        if (p.tab.getAttribute('tabindex') !== tabIndex) p.tab.setAttribute('tabindex', tabIndex);
+        var hidden = !selected;
+        if (p.panel.hidden !== hidden) p.panel.hidden = hidden;
+      });
       if (focus) tab.focus();
     }
     function refresh() {
       var entries = pairs();
       var selected = entries.find(function (p) { return p.tab.getAttribute('aria-selected') === 'true' && !p.tab.matches(':disabled, [aria-disabled="true"]'); }) || entries.find(function (p) { return !p.tab.matches(':disabled, [aria-disabled="true"]'); });
-      if (selected) select(selected.tab, false);
+      if (selected) select(entries, selected.tab, false);
     }
     refreshWidgets.set(root, refresh); refresh();
-    listen(list, 'click', function (e) { var tab = e.target.closest('[role="tab"]'); if (tab && !tab.matches(':disabled, [aria-disabled="true"]')) { select(tab, false); emit(root, 'sk:change', { value: tab.id }); } });
+    listen(list, 'click', function (e) { var tab = e.target.closest('[role="tab"]'); if (tab && !tab.matches(':disabled, [aria-disabled="true"]')) { select(pairs(), tab, false); emit(root, 'sk:change', { value: tab.id }); } });
     listen(list, 'keydown', function (e) {
-      var tabs = pairs().map(function (p) { return p.tab; }).filter(function (t) { return !t.matches(':disabled, [aria-disabled="true"]'); });
-      var i = tabs.indexOf(e.target); if (i < 0) return;
       var vertical = list.getAttribute('aria-orientation') === 'vertical';
       var next = vertical ? 'ArrowDown' : 'ArrowRight', prev = vertical ? 'ArrowUp' : 'ArrowLeft';
+      if (e.key !== next && e.key !== prev && e.key !== 'Home' && e.key !== 'End') return;
+      var entries = pairs();
+      var tabs = entries.map(function (p) { return p.tab; }).filter(function (t) { return !t.matches(':disabled, [aria-disabled="true"]'); });
+      var i = tabs.indexOf(e.target); if (i < 0) return;
       if (e.key === next) i = (i + 1) % tabs.length;
       else if (e.key === prev) i = (i + tabs.length - 1) % tabs.length;
       else if (e.key === 'Home') i = 0;
-      else if (e.key === 'End') i = tabs.length - 1;
-      else return;
+      else i = tabs.length - 1;
       e.preventDefault();
       if (root.dataset.activation === 'manual') { tabs.forEach(function (t) { t.tabIndex = t === tabs[i] ? 0 : -1; }); tabs[i].focus(); }
-      else { select(tabs[i], true); emit(root, 'sk:change', { value: tabs[i].id }); }
+      else { select(entries, tabs[i], true); emit(root, 'sk:change', { value: tabs[i].id }); }
     });
   }
   function editableInput(input) { return !input.matches(':disabled') && !input.readOnly; }
@@ -362,11 +379,16 @@
     options().forEach(function (o) { if (!o.id) o.id = nextId('sk-option'); o.setAttribute('aria-selected', String(o.textContent.trim() === committed)); });
     function close() { list.hidden = true; input.setAttribute('aria-expanded', 'false'); input.removeAttribute('aria-activedescendant'); options().forEach(function (o) { o.removeAttribute('data-active'); }); active = null; }
     function open() {
-      if (!editableInput(input)) { close(); return; }
-      list.hidden = false; input.setAttribute('aria-expanded', 'true');
-      var query = input.value.toLocaleLowerCase();
-      options().forEach(function (o) { o.hidden = !o.textContent.toLocaleLowerCase().includes(query); });
-      notice.textContent = options().some(function (o) { return !o.hidden; }) ? '' : 'No results';
+      if (list.hidden) list.hidden = false;
+      if (input.getAttribute('aria-expanded') !== 'true') input.setAttribute('aria-expanded', 'true');
+      var query = input.value.toLocaleLowerCase(), items = options(), hasResults = false;
+      items.forEach(function (o) {
+        var hidden = !o.textContent.toLocaleLowerCase().includes(query);
+        if (o.hidden !== hidden) o.hidden = hidden;
+        if (!hidden) hasResults = true;
+      });
+      notice.textContent = hasResults ? '' : 'No results';
+      return items;
     }
     function choose(o) {
       if (!editableInput(input)) { close(); return; }
@@ -383,11 +405,13 @@
       if (e.key === 'Escape') { e.preventDefault(); input.value = committed; close(); return; }
       if (e.key === 'Enter' && active && !list.hidden) { e.preventDefault(); choose(active); return; }
       if (!['ArrowDown', 'ArrowUp'].includes(e.key)) return;
-      e.preventDefault(); open(); var opts = options().filter(function (o) { return !o.hidden && o.getAttribute('aria-disabled') !== 'true'; });
+      e.preventDefault();
+      var items = open();
+      var opts = items.filter(function (o) { return !o.hidden && o.getAttribute('aria-disabled') !== 'true'; });
       if (!opts.length) return;
       var i = opts.indexOf(active), delta = e.key === 'ArrowDown' ? 1 : -1;
       active = opts[i < 0 ? (delta > 0 ? 0 : opts.length - 1) : (i + delta + opts.length) % opts.length];
-      options().forEach(function (o) { o.toggleAttribute('data-active', o === active); }); input.setAttribute('aria-activedescendant', active.id); active.scrollIntoView({ block: 'nearest' });
+      items.forEach(function (o) { o.toggleAttribute('data-active', o === active); }); input.setAttribute('aria-activedescendant', active.id); active.scrollIntoView({ block: 'nearest' });
     });
     listen(list, 'mousedown', function (e) { e.preventDefault(); });
     listen(list, 'click', function (e) { choose(e.target.closest('[role="option"]')); });
