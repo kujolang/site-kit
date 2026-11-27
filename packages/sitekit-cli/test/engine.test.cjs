@@ -4,7 +4,8 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
-const { execFileSync, spawnSync } = require('node:child_process');
+const { execFile, execFileSync, spawnSync } = require('node:child_process');
+const { promisify } = require('node:util');
 const engine = require('../lib/project.cjs');
 const { hash } = require('../lib/release.cjs');
 const { inspect } = require('../lib/audit.cjs');
@@ -96,9 +97,14 @@ test('concurrent asset edits are detected before moving the original', async t =
 test('exclusive process lock and recovery reject a live owner', async t => {
   const { root } = fixture(t); engine.init(root);
   fs.mkdirSync(path.join(root, '.sitekit'));
-  fs.writeFileSync(path.join(root, '.sitekit/busy.json'), JSON.stringify({ pid: process.pid, host: os.hostname() }));
+  const busy = path.join(root, '.sitekit/busy.json');
+  fs.writeFileSync(busy, JSON.stringify({ pid: process.pid, host: os.hostname() }));
   await assert.rejects(engine.upgrade(root, {}, async () => payload('1.2.0')), /EEXIST/);
   assert.throws(() => engine.recover(root), /still running/);
+  const exited = Number(execFileSync(process.execPath, ['-p', 'process.pid'], { encoding: 'utf8' }));
+  fs.writeFileSync(busy, JSON.stringify({ pid: exited, host: os.hostname() }));
+  assert.equal(engine.recover(root).action, 'recovered');
+  assert.equal(fs.existsSync(busy), false);
 });
 test('init refuses ambiguous discovery and traversal', t => {
   const { root, dir } = fixture(t);
@@ -135,7 +141,7 @@ test('CLI errors are machine readable and optional pack invokes shared engine', 
     assert.match(human, /SiteKit|sitekit/);
   }
 });
-test('recovery after process exit clears stale lock and restores absent target', t => {
+test('concurrent recovery after process exit restores the absent target exactly once', async t => {
   const { root } = fixture(t); engine.init(root);
   const candidate = payload('1.2.0');
   const encoded = { ...candidate, files: [...candidate.files].map(([name, bytes]) => [name, bytes.toString('base64')]) };
@@ -143,7 +149,17 @@ test('recovery after process exit clears stale lock and restores absent target',
   const child = spawnSync(process.execPath, ['-e', script]);
   assert.equal(child.status, 99);
   assert.equal(fs.existsSync(path.join(root, '.sitekit/busy.json')), true);
-  engine.recover(root);
+  const recover = `const engine = require(${JSON.stringify(require.resolve('../lib/project.cjs'))}); try { console.log(JSON.stringify(engine.recover(process.cwd()))); } catch (error) { console.log(JSON.stringify({ error: error.message })); }`;
+  const run = promisify(execFile);
+  const outcomes = await Promise.all(Array.from({ length: 8 }, async () => {
+    const result = await run(process.execPath, ['-e', recover], { cwd: root, timeout: 5000 });
+    return JSON.parse(result.stdout);
+  }));
+  assert.equal(outcomes.filter(result => result.version === '1.1.0').length, 1);
+  for (const outcome of outcomes) {
+    if (outcome.error) assert.match(outcome.error, /still running|EEXIST|ENOENT|ENOTEMPTY|EPERM/);
+    else assert.equal(outcome.action, 'recovered');
+  }
   assert.equal(engine.status(root).version, '1.1.0');
   assert.equal(fs.existsSync(path.join(root, '.sitekit/busy.json')), false);
 });

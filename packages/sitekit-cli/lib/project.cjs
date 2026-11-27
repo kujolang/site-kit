@@ -16,14 +16,18 @@ function safePath(root, relative) {
   }
   return current;
 }
-const read = file => JSON.parse(fs.readFileSync(file, 'utf8'));
+function read(file) {
+  const info = fs.lstatSync(file);
+  if (!info.isFile() || info.size > 1024 * 1024) throw new Error(`Invalid SiteKit metadata file: ${file}`);
+  return JSON.parse(fs.readFileSync(file, 'utf8'));
+}
 function write(file, value, exclusive = false) {
   const bytes = JSON.stringify(value, null, 2) + '\n';
-  if (exclusive) { fs.writeFileSync(file, bytes, { flag: 'wx' }); return; }
   const tmp = file + '.' + randomUUID() + '.tmp';
   try {
     fs.writeFileSync(tmp, bytes, { flag: 'wx' });
-    fs.renameSync(tmp, file);
+    if (exclusive) fs.linkSync(tmp, file);
+    else fs.renameSync(tmp, file);
   } finally { if (exists(tmp)) fs.unlinkSync(tmp); }
 }
 function project(cwd) {
@@ -82,18 +86,72 @@ function status(cwd) {
   const { installed, lock } = snapshot(p);
   return { action: 'status', directory: p.config.directory, version: installed.version, valid: true, source: lock.source, recoveryRequired: exists(path.join(p.state, 'transaction.json')) || exists(path.join(p.state, 'busy.json')) };
 }
+function stopped(file) {
+  const owner = read(file);
+  if (owner.host !== os.hostname() || !Number.isSafeInteger(owner.pid) || owner.pid < 1) {
+    throw new Error('Cannot prove prior updater stopped; inspect .sitekit/busy.json');
+  }
+  try {
+    process.kill(owner.pid, 0);
+    throw new Error('An updater is still running');
+  } catch (error) {
+    if (error.code !== 'ESRCH') throw error;
+  }
+}
+function removeEmptyLock(directory) {
+  try { fs.rmdirSync(directory); }
+  catch (error) {
+    if (!['ENOENT', 'ENOTEMPTY', 'EEXIST'].includes(error.code)) throw error;
+  }
+}
+function acquireDirectory(directory, recovering) {
+  const lock = fs.lstatSync(directory, { throwIfNoEntry: false });
+  if (lock) {
+    if (!lock.isDirectory()) throw new Error('EEXIST: An updater lock is already present');
+    if (recovering) {
+      const owners = fs.readdirSync(directory);
+      if (owners.length > 1 || (owners.length === 1 && !/^owner-[0-9a-f-]{36}\.json$/.test(owners[0]))) {
+        throw new Error('Invalid updater lock');
+      }
+      if (owners.length) {
+        const owner = path.join(directory, owners[0]);
+        try { stopped(owner); fs.unlinkSync(owner); }
+        catch (error) { if (error.code !== 'ENOENT') throw error; }
+      }
+    }
+    removeEmptyLock(directory);
+  }
+  // Publish only nonempty locks. A reaper can remove only the recorded owner
+  // filename, then remove the directory only if no owner has replaced it.
+  const staging = fs.mkdtempSync(directory + '.');
+  const marker = 'owner-' + randomUUID() + '.json';
+  const stagedOwner = path.join(staging, marker);
+  try {
+    fs.writeFileSync(stagedOwner, JSON.stringify({ pid: process.pid, host: os.hostname() }), { flag: 'wx' });
+    fs.renameSync(staging, directory);
+  } finally {
+    if (exists(stagedOwner)) fs.unlinkSync(stagedOwner);
+    removeEmptyLock(staging);
+  }
+  return () => {
+    fs.unlinkSync(path.join(directory, marker));
+    removeEmptyLock(directory);
+  };
+}
 function acquire(p, recovering = false) {
   fs.mkdirSync(p.state, { recursive: true });
   const busy = safePath(p.root, '.sitekit/busy.json');
-  if (recovering && exists(busy)) {
-    const owner = read(busy);
-    if (owner.host !== os.hostname() || !Number.isSafeInteger(owner.pid) || owner.pid < 1) throw new Error('Cannot prove prior updater stopped; inspect .sitekit/busy.json');
-    try { process.kill(owner.pid, 0); throw new Error('An updater is still running'); }
-    catch (error) { if (error.code !== 'ESRCH') throw error; }
-    fs.unlinkSync(busy);
-  }
-  write(busy, { pid: process.pid, host: os.hostname() }, true);
-  return () => fs.unlinkSync(busy);
+  if (!recovering || !exists(busy) || !fs.lstatSync(busy).isFile()) return acquireDirectory(busy, recovering);
+  // Earlier CLI versions used one regular file. Serialize its removal while
+  // still honoring live owners from installations using the earlier format.
+  const unlockMigration = acquireDirectory(safePath(p.root, '.sitekit/legacy-recovery'), true);
+  try {
+    if (exists(busy) && fs.lstatSync(busy).isFile()) {
+      stopped(busy);
+      fs.unlinkSync(busy);
+    }
+    return acquireDirectory(busy, true);
+  } finally { unlockMigration(); }
 }
 function same(p, before) {
   safePath(p.root, p.config.directory);
