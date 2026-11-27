@@ -3,7 +3,10 @@
 const { parseArgs } = require('node:util');
 const engine = require('../lib/project.cjs');
 const kujo = require('../lib/kujo.cjs');
-const help = `SiteKit CLI — Node 20+, no Kujo required
+const help = `SiteKit CLI
+
+Supported Node versions: ${require('../package.json').engines.node}
+Kujo is optional.
 
 sitekit init [asset-directory]     Adopt a complete, unmodified installation
 sitekit status                     Verify installed version and local integrity

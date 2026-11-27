@@ -3,7 +3,7 @@
   "name": "site-kit-launch-gate",
   "runtime": {
     "backend": "docker",
-    "image": "node:26.12.1-bookworm@sha256:dc5ba49acad07ed5c0defe487a0f14726a8882064683460bcb8168e03e2f74f3",
+    "image": "node:26.13.1-bookworm@sha256:893ea48106e988a5f91e69629d6472600daa9d0494adf7db87eb0b886ce82255",
     "build_context": ""
   },
   "workspace": {

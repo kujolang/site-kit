@@ -4,9 +4,9 @@
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![built for Kujo](https://img.shields.io/badge/built%20for-Kujo-white.svg)](https://github.com/kujolang/kujo)
 [![CI](https://github.com/kujolang/site-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/kujolang/site-kit/actions/workflows/ci.yml)
-[![node](https://img.shields.io/badge/node-26.12.1-black.svg?logo=node.js&logoColor=white)](#install-or-vendor)
+[![node](https://img.shields.io/badge/node-26.13.1-black.svg?logo=node.js&logoColor=white)](#install-or-vendor)
 
-SiteKit 1.1 is a stable, source-driven design system for accessible, semantic, token-based static websites and web interfaces. Its supported consumer artifact is the generated `dist/` directory, copied or vendored into a project. SiteKit remains `private: true`; npm registry publication is not part of v1.
+SiteKit is a stable, source-driven design system for accessible, semantic, token-based static websites and web interfaces. Its supported consumer artifact is the generated `dist/` directory, copied or vendored into a project. SiteKit remains `private: true`; npm registry publication is not part of v1.
 
 ## Stable v1 contract
 
@@ -25,7 +25,7 @@ Tokens, schemas, templates, component CSS, recipes, and standards are authoritat
 
 ## Install or vendor
 
-Build from a clean checkout with Node 22.23.4+, 24.22.1+, or 26.12.1+ on the supported branches:
+Build from a clean checkout with Node 22.23.5+, 24.22.3+, or 26.13.1+ on the supported branches:
 
 ```bash
 npm ci
@@ -127,7 +127,7 @@ The ShipCheck CI job pins Kujo and ShipCheck revisions and uses Cargo’s lockfi
 
 ## Optional standalone upgrade CLI
 
-The [SiteKit CLI](packages/sitekit-cli/README.md) adopts, verifies, upgrades and rolls back copied SiteKit distributions in any website using Node 20+. Kujo users can install an optional `kujo sitekit` adapter. The CLI has its own package version and does not change the source-vendored asset contract. See its README for local npm installation while registry publication is pending.
+The [SiteKit CLI](packages/sitekit-cli/README.md) adopts, verifies, upgrades and rolls back copied SiteKit distributions using the patched Node versions above. Kujo users can install an optional `kujo sitekit` adapter. The CLI has its own package version and does not change the source-vendored asset contract. See its README for local npm installation while registry publication is pending.
 
 ## Improvement roadmap
 

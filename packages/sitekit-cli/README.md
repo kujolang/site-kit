@@ -1,6 +1,6 @@
 # SiteKit CLI
 
-Manage source-vendored SiteKit assets in any website using Node 20 or newer. Kujo is optional. The website itself needs no Node runtime.
+Manage source-vendored SiteKit assets using Node 22.23.5+, 24.22.3+, or 26.13.1+ on the supported branches in `package.json`. Kujo is optional. The website itself needs no Node runtime.
 
 This is CLI version **0.1.0**, independent of the SiteKit asset version. Installing or updating this package never changes your website automatically. The SiteKit asset distribution remains version 1.1.0.
 
