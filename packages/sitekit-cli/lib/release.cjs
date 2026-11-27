@@ -14,7 +14,7 @@ function safeName(name) {
 // No filesystem writes occur until the entire archive and both manifests pass.
 function unpack(archive, expectedVersion) {
   const bytes = zlib.gunzipSync(archive, { maxOutputLength: 64 * 1024 * 1024 });
-  const files = new Map(), folded = new Set();
+  const files = new Map(), folded = new Set(), directories = new Set();
   let offset = 0, ended = false;
   while (offset + 512 <= bytes.length) {
     const block = bytes.subarray(offset, offset + 512);
@@ -32,8 +32,13 @@ function unpack(archive, expectedVersion) {
     if (octal(148, 8) !== checksum || field(257, 6) !== 'ustar' || field(345, 155) || ![0, 48].includes(block[156])) throw new Error('Unsupported or corrupt tar header');
     const name = field(0, 100), prefix = `sitekit-v${expectedVersion}/`;
     if (!safeName(name) || !name.startsWith(prefix)) throw new Error('Unsafe archive path');
-    const relative = name.slice(prefix.length), key = relative.toLowerCase();
-    if (folded.has(key) || [...folded].some(n => n.startsWith(key + '/') || key.startsWith(n + '/'))) throw new Error('Duplicate or conflicting archive path');
+    const relative = name.slice(prefix.length), key = relative.normalize('NFC').toLowerCase();
+    if (folded.has(key) || directories.has(key)) throw new Error('Duplicate or conflicting archive path');
+    for (let slash = key.lastIndexOf('/'); slash > 0; slash = key.lastIndexOf('/', slash - 1)) {
+      const parent = key.slice(0, slash);
+      if (folded.has(parent)) throw new Error('Duplicate or conflicting archive path');
+      directories.add(parent);
+    }
     folded.add(key);
     const size = octal(124, 12);
     offset += 512;
@@ -66,8 +71,12 @@ function unpack(archive, expectedVersion) {
 }
 async function download(url, limit, signal, fetcher = fetch) {
   const response = await fetcher(url, { signal, headers: { 'User-Agent': 'sitekit-cli', Accept: 'application/vnd.github+json' } });
-  if (!response.ok) throw new Error(`Download failed (${response.status}): ${url}`);
-  if (Number(response.headers.get('content-length')) > limit) throw new Error('Download exceeds size limit');
+  if (!response.ok || Number(response.headers.get('content-length')) > limit) {
+    void response.body?.cancel().catch(() => {});
+    if (!response.ok) throw new Error(`Download failed (${response.status}): ${url}`);
+    throw new Error('Download exceeds size limit');
+  }
+  if (!response.body) throw new Error('Download response has no body');
   const chunks = []; let size = 0;
   for await (const chunk of response.body) {
     size += chunk.length;

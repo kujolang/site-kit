@@ -62,3 +62,10 @@ test('published release selection, checksums, missing assets, prereleases and HT
   await assert.rejects(getRelease(v, async () => new Response('failure', { status: 403 })), /403/);
   await assert.rejects(download('fixture', 2, undefined, async () => new Response('three')), /size limit/);
 });
+test('a rejected download cancels its response stream', async () => {
+  let cancelled = false;
+  const stream = new ReadableStream({ cancel() { cancelled = true; } });
+  const fetcher = async () => new Response(stream, { headers: { 'Content-Length': '3' } });
+  await assert.rejects(download('fixture', 2, undefined, fetcher), /size limit/);
+  assert.equal(cancelled, true);
+});
